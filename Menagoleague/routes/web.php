@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/home/account', [App\Http\Controllers\AccountController::class, 'index'])->name('user.account');
+Route::post('/home/account/update/{id}', [App\Http\Controllers\AccountController::class, 'update'])->name('account.update');
