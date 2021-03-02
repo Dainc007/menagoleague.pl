@@ -57,4 +57,9 @@ class User extends Authenticatable
     {
         return ($keys) ? array_keys(self::AVAILABLE_DEVICES) : array_values(self::AVAILABLE_DEVICES);
     }
+
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class);
+    }
 }

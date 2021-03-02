@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\AccountRequest;
+use App\Models\User;
 use App\Services\AccountService;
-use Exception;
-use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 
 class AccountController extends Controller
 {
@@ -29,7 +28,10 @@ class AccountController extends Controller
 
     public function index()
     {
-        return view('user.account', ['personal_data' => auth()->user()]);
+        return view('user.account', [
+            'personal_data' => auth()->user(),
+            'permision' => auth()->user()->roles,
+        ]);
     }
 
     public function update(AccountRequest $request)
@@ -38,5 +40,4 @@ class AccountController extends Controller
 
         return back();
     }
-
 }
