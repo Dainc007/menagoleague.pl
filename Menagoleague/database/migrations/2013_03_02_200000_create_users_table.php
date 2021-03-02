@@ -25,6 +25,7 @@ class CreateUsersTable extends Migration
             $table->enum('device', User::getDevices());
             $table->rememberToken();
             $table->timestamps();
+
         });
     }
 
