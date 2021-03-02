@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->integer('discord')->unique()->nullable();
+            $table->string('discord')->unique()->nullable();
             $table->string('facebook')->nullable();
             $table->enum('device', User::getDevices());
             $table->rememberToken();

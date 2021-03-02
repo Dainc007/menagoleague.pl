@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\AccountRequest;
 use App\Services\AccountService;
 use Exception;
 use Illuminate\Http\Request;
@@ -31,27 +32,11 @@ class AccountController extends Controller
         return view('user.account', ['personal_data' => auth()->user()]);
     }
 
-    public function update(Request $request, $id)
+    public function update(AccountRequest $request, $id)
     {
-        $data = $request->only([
-            'facebook',
-            'discord'
-        ]);
+        $this->accountService->updateAccount($request->validated(), $id);
 
-        $result = ['status' => 200];
-
-        try {
-            $result['data'] = $this->accountService->updateAccount($data, $id);
-
-        } catch (Exception $e) {
-            $result = [
-                'status' => 500,
-                'error' => $e->getMessage()
-            ];
-        }
-
-        return response()->json($result, $result['status']);
-
+        return back();
     }
 
 }

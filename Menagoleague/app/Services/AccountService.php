@@ -28,7 +28,7 @@ class AccountService
     }
 
     /**
-     * Update post data
+     * Update account data
      * Store to DB if there are no errors.
      *
      * @param array $data
@@ -36,19 +36,11 @@ class AccountService
      */
     public function updateAccount($data, $id)
     {
-        $validator = Validator::make($data, [
-            'discord' => ['integer', 'unique:users'],
-            'facebook' => ['string', 'max:255'],
-        ]);
-
-        if ($validator->fails()) {
-            throw new InvalidArgumentException($validator->errors()->first());
-        }
-
+        
         DB::beginTransaction();
 
         try {
-            $user = $this->accountRepository->update($data, $id);
+            $user = $this->accountRepository->updateAccount($data, $id);
 
         } catch (Exception $e) {
             DB::rollBack();

@@ -49,9 +49,9 @@
                     </table>
                     
 
-                    <form method="POST" action="{{route('account.update', ['id' => 1])}}">
+                    <form method="POST" action="{{route('account.update', ['id' => $personal_data->id])}}">
                         @csrf
-                        <input type="number" name="discord" id="discord">
+                        <input type="text" maxlength="4" name="discord" id="discord">
                         <input type="submit">
                     </form>
                 </div>

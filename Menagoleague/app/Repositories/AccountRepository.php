@@ -27,16 +27,22 @@ class AccountRepository
      * @param $data
      * @return User
      */
-    public function update($data, $id)
+    public function updateAccount($data, $id)
     {
             
         $user = $this->user->find($id);
 
-        $user->discord = $data['discord'];
-        $user->facebook = $data['facebook'];
-        $user->device = $data['device'];
+        if(!empty($data['discord']))
+        {
+            $user->discord = $data['discord'];
+        }
 
-        $user->update();
+        if(!empty($data['facebook']))
+        {
+            $user->discord = $data['facebook'];
+        }
+
+        $user->save();
 
         return $user;
     }
