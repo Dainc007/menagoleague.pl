@@ -32,9 +32,9 @@ class AccountController extends Controller
         return view('user.account', ['personal_data' => auth()->user()]);
     }
 
-    public function update(AccountRequest $request, $id)
+    public function update(AccountRequest $request)
     {
-        $this->accountService->updateAccount($request->validated(), $id);
+        $this->accountService->updateAccount($request->validated());
 
         return back();
     }

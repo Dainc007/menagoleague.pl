@@ -27,10 +27,10 @@ class AccountRepository
      * @param $data
      * @return User
      */
-    public function updateAccount($data, $id)
+    public function updateAccount($data)
     {
             
-        $user = $this->user->find($id);
+        $user = $this->user->find($data['id']);
 
         if(!empty($data['discord']))
         {
