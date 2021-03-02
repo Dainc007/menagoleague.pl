@@ -15,10 +15,16 @@ class CreatePlayersTable extends Migration
     {
         Schema::create('players', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('name');
             $table->unsignedBigInteger('team_id');
+            $table->string('nationality');
+            $table->string('position');
+            $table->integer('overall');
+            $table->integer('age');
+            $table->string('real_team');
+            $table->timestamps();
 
-            $table->foreign('team_id')->references('id')->on('teams')->onDelete('CASCADE');
+            $table->foreign('team_id')->references('id')->on('teams')->onDelete('CASCADE')->nullable();
         });
     }
 

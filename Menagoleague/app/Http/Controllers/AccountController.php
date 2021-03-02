@@ -29,9 +29,10 @@ class AccountController extends Controller
     public function index()
     {
         return view('user.account', [
-            'personal_data' => auth()->user(),
-            'permision' => auth()->user()->roles,
-        ]);
+            'personal_data' => auth()->user()
+        ]); 
+
+       
     }
 
     public function update(AccountRequest $request)

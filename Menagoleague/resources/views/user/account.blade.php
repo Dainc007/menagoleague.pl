@@ -47,7 +47,7 @@
                             </tr>
                         </tbody>
                     </table>
-                    
+                    {{$personal_data->team->players}}
                     <form method="POST" action="{{route('account.update')}}">
                         @csrf
                         <input type="text" maxlength="4" name="discord" id="discord">
