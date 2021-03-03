@@ -6,4 +6,6 @@
 
 @include('inc.scoreline')
 
+@include('inc.slideshow')
+
 @endsection
