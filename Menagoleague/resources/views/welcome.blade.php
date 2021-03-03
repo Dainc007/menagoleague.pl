@@ -4,4 +4,6 @@
 
 @include('inc.mainNav')
 
+@include('inc.scoreline')
+
 @endsection
