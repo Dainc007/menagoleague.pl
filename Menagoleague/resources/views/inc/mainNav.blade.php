@@ -13,21 +13,24 @@
             <ul class="navbar-nav mr-auto">
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">{{ __('Czym jest Menagoleague?') }}</a>
+                    <a class="nav-link" href="{{ route('login') }}">{{ __('Czym jesteśmy?') }}</a>
                 </li>
 
                 <!-- Dropdown -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                        Pomoc
+                        Tabela i Terminarz
                     </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Regulamin</a>
-                        <a class="dropdown-item" href="#">Jak przejąć klub?</a>
-                        <a class="dropdown-item" href="#">Jak grać?</a>
+                    <div class="dropdown-menu" id="">
+                        <a class="dropdown-item" href="#">Anglia</a>
+                        <a class="dropdown-item" href="#">Hiszpania</a>
+                        <a class="dropdown-item" href="#">Polska</a>
+                        <a class="dropdown-item" href="#">Włochy</a>
+                        <a class="dropdown-item disabled" href="#">Liga Mistrzów</a>
+                        <a class="dropdown-item disabled" href="#">Liga Europy</a>
+
                     </div>
                 </li>
-
                 <!-- Dropdown -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -50,6 +53,17 @@
                         <a class="dropdown-item" href="#">Link 1</a>
                         <a class="dropdown-item" href="#">Link 2</a>
                         <a class="dropdown-item" href="#">Link 3</a>
+                    </div>
+                </li>
+
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Pomoc
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Regulamin</a>
+                        <a class="dropdown-item" href="#">FAQ</a>
                     </div>
                 </li>
             </ul>
