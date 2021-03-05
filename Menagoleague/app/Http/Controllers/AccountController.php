@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\AccountRequest;
 use App\Models\User;
 use App\Services\AccountService;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class AccountController extends Controller
@@ -26,10 +27,11 @@ class AccountController extends Controller
         $this->accountService = $accountService;
     }
 
-    public function index()
+    public function index(Request $request)
     {
         return view('user.account', [
-            'personal_data' => auth()->user()
+            'personal_data' => auth()->user(),
+            'data' => $request
         ]); 
 
        
@@ -39,6 +41,6 @@ class AccountController extends Controller
     {
         $this->accountService->updateAccount($request->validated());
 
-        return back();
+        return redirect(route('user.account'));
     }
 }

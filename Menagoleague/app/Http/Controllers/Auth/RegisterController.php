@@ -55,8 +55,6 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'discord' => ['integer', 'unique:users'],
-            'facebook' => ['string', 'max:255'],
             'device' => ['string']
         ]);
     }

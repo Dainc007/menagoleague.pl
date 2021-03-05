@@ -39,7 +39,7 @@ class AccountRepository
 
         if(!empty($data['facebook']))
         {
-            $user->discord = $data['facebook'];
+            $user->facebook = $data['facebook'];
         }
 
         $user->save();
