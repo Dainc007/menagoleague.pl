@@ -91,7 +91,7 @@
                         <label for="discord" class="col-md-4 col-form-label text-md-right">{{ __('Discord') }}</label>
 
                         <div class="col-md-6">
-                            <input id="discord" type="number" class="form-control @error('discord') is-invalid @enderror" name="discord" value="{{ old('discord') }}" autocomplete="discord" autofocus>
+                            <input id="discord" type="text" class="form-control @error('discord') is-invalid @enderror" name="discord" value="{{ old('discord') }}" placeholder="np: SnaggyDainc#3572" autocomplete="discord" autofocus>
                         </div>
                     </div>
 

@@ -37,7 +37,7 @@ class AccountService
     public function updateAccount($data)
     {
         
-        DB::beginTransaction();
+       // DB::beginTransaction();
 
         try {
             $user = $this->accountRepository->updateAccount($data);
@@ -49,7 +49,7 @@ class AccountService
             throw new InvalidArgumentException('Unable to update user data');
         }
 
-        DB::commit();
+        //DB::commit();
 
         return $user;
 
