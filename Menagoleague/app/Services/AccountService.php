@@ -34,13 +34,13 @@ class AccountService
      * @param array $data
      * @return String
      */
-    public function updateAccount($data)
+    public function updateAccount($data, int $id)
     {
-        
+
         DB::beginTransaction();
 
         try {
-            $user = $this->accountRepository->updateAccount($data);
+            $user = $this->accountRepository->updateAccount($data, $id);
 
         } catch (Exception $e) {
             DB::rollBack();

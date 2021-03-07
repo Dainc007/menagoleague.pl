@@ -37,10 +37,12 @@ class AccountController extends Controller
        
     }
 
-    public function update(AccountRequest $request)
+    public function update(AccountRequest $request, int $id)
     {
-        $this->accountService->updateAccount($request->validated());
+        
+        $this->accountService->updateAccount($request->validated(), $id);
 
         return redirect(route('user.account'));
+
     }
 }

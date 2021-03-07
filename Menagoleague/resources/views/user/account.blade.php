@@ -44,12 +44,6 @@
                             </tr>
                         </tbody>
                     </table>
-                    <form method="POST" action="{{route('account.update')}}">
-                        @csrf
-                        <input type="text" maxlength="4" name="discord" id="discord">
-                        <input hidden type="number" name="id" value="{{$personal_data->id}}">
-                        <input type="submit">
-                    </form>
                 </div>
             </div>
             @endif

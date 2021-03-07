@@ -24,8 +24,8 @@ class AccountRequest extends FormRequest
     public function rules()
     {
         return [
-            'discord' => ['string', 'unique:users',],
-            'facebook' => ['string', 'max:255'],
+            'discord' => ['string', 'max:100'],
+            'facebook' => ['string', 'max:100'],
             'id' => ['integer']
         ];
     }
