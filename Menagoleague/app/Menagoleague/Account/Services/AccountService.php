@@ -1,13 +1,12 @@
 <?php
 
-namespace App\Services;
+namespace App\Menagoleague\Account\Services;
 
-use App\Models\User;
-use App\Repositories\AccountRepository;
+
+use App\Menagoleague\Account\Repositories\AccountRepository;
 use Exception;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Validator;
 use InvalidArgumentException;
 
 class AccountService

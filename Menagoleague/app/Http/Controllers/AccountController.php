@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\AccountRequest;
-use App\Models\User;
-use App\Services\AccountService;
+use App\Menagoleague\Account\Services\AccountService;
+use App\Menagoleague\Account\Requests\AccountRequest;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class AccountController extends Controller
 {
