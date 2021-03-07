@@ -22,5 +22,11 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/home/account', [App\Http\Controllers\AccountController::class, 'index'])->name('user.account');
-Route::PUT('/home/account/update/{id}', [App\Http\Controllers\AccountController::class, 'update'])->name('account.update');
+Route::prefix('/account')->group(function () {
+
+    Route::get('/', [App\Http\Controllers\AccountController::class, 'index'])
+        ->name('user.account');
+
+    Route::PUT('/{id}', [App\Http\Controllers\AccountController::class, 'update'])
+        ->name('account.update');
+});
