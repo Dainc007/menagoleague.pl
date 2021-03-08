@@ -24,4 +24,9 @@ class Team extends Model
         return $this->belongsTo(League::class);
     }
 
+    public function competitions()
+    {
+        return $this->belongsToMany(Competition::class);
+    }
+
 }

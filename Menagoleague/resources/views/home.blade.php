@@ -73,9 +73,13 @@
                         {{$player->nationality}}
                     </p>
                     @endforeach
+                    {{$personal_data->team->league}}
+                    {{$personal_data->roles}}
+                    {{$personal_data->team->competitions}}
+                    
                     @endif
 
-                    {{$personal_data->team->league}}
+
                 </div>
             </div>
         </div>
