@@ -25,7 +25,8 @@ class TeamFactory extends Factory
         return [
             'name' => $this->faker->sentence(2,4),
             'device' => $this->faker->randomElement(User::AVAILABLE_DEVICES),
-            'user_id' => $this->faker->unique()->numberBetween(1,User::count())
+            'user_id' => $this->faker->unique()->numberBetween(1,User::count()),
+            'league' => $this->faker->randomElement(Team::AVAILABLE_LEAGUES),
         ];
     }
 }
