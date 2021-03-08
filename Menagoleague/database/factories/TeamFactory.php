@@ -2,8 +2,9 @@
 
 namespace Database\Factories;
 
-use App\Models\Team;
+use App\Models\League;
 use App\Models\User;
+use App\Models\Team;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class TeamFactory extends Factory
@@ -26,7 +27,7 @@ class TeamFactory extends Factory
             'name' => $this->faker->sentence(2,4),
             'device' => $this->faker->randomElement(User::AVAILABLE_DEVICES),
             'user_id' => $this->faker->unique()->numberBetween(1,User::count()),
-            'league' => $this->faker->randomElement(Team::AVAILABLE_LEAGUES),
+            'league_id' => $this->faker->numberBetween(1,League::count())
         ];
     }
 }

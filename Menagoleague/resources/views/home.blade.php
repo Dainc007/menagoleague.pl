@@ -74,6 +74,8 @@
                     </p>
                     @endforeach
                     @endif
+
+                    {{$personal_data->team->league}}
                 </div>
             </div>
         </div>
