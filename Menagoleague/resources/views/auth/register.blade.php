@@ -12,19 +12,20 @@
                         @csrf
 
                         <div class="form-group row">
+                        <label for="device" class="col-md-4 col-form-label text-md-right">{{ __('Wybierz Urządzenie*') }}</label>
                             
-                            <div class="col-md-6">
+                            <div class="col-md-6 justify-content-center d-flex">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="device" id="xbox" value="xbox">
-                                    <label class="form-check-label" for="xbox">Xbox</label>
+                                    <input checked class="form-check-input" type="radio" name="device" id="xbox" value="xbox">
+                                    <label class="form-check-label" for="xbox"><i class="fab fa-xbox"></i></label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="device" id="playstation" value="playstation">
-                                    <label class="form-check-label" for="playstation">Playstation</label>
+                                    <label class="form-check-label" for="playstation"><i class="fab fa-playstation"></i></label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="device" id="pc" value="pc">
-                                    <label class="form-check-label" for="pc">PC</label>
+                                    <label class="form-check-label" for="pc"><i class="fas fa-laptop"></i></label>
                                 </div>
                             </div>
                         </div>
@@ -90,12 +91,12 @@
                         <label for="discord" class="col-md-4 col-form-label text-md-right">{{ __('Discord') }}</label>
 
                         <div class="col-md-6">
-                            <input id="discord" type="number" class="form-control @error('discord') is-invalid @enderror" name="discord" value="{{ old('discord') }}" autocomplete="discord" autofocus>
+                            <input id="discord" type="text" class="form-control @error('discord') is-invalid @enderror" name="discord" value="{{ old('discord') }}" placeholder="np: SnaggyDainc#3572" autocomplete="discord" autofocus>
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Facebook') }}</label>
+                        <label for="name" class="col-md-4 col-form-label text-md-right"><i>{{ __('www.facebook.com/') }}</i></label>
 
                         <div class="col-md-6">
                             <input id="name" type="text" class="form-control @error('facebook') is-invalid @enderror" name="facebook" value="{{ old('facebook') }}" autocomplete="facebook">
