@@ -1,88 +1,70 @@
 @extends('layouts.app')
 
+@section('title', 'Centrala')
+
 @section('content')
 
 <style>
-    .user-info-wrapper {
-        padding: calc(1.5vw + 10px);
-        display: flex;
+    /* .gray-room-bg {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("../pictures/grayRoom.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+} */
+    .user-info__logo img {
+        max-width: 80px;
+        background-color: rgba(218, 221, 251, 0.5);
     }
 
-    .user-info {
-        display: flex;
-        background-color: white;
-
-        padding: 8px;
-
-    }
-
-    img {
-        width: 70px;
-        height: 70px;
-    }
-
-    .team-and-name {
+    .user-info__team-and-name {
         font-size: 18px;
-        padding: 0 10px;
-        display: flex;
-        flex-direction: column;
+        -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
         justify-content: space-evenly;
-        align-items: flex-start;
+        /* color */
+        color: #5079A3;
+        background-color: rgba(218, 221, 251, 0.5);
     }
-
 
     .user-morale {
-        display: flex;
-        justify-content: center;
-        padding: 0 5px;
-        align-items: center;
         font-size: 2.6rem;
-        background-color: gray;
-        color: white;
+        border-radius: 0px 50px 50px 0px;
+
+        /* color */
+        background-color: rgba(157, 158, 175, 0.5);
+        color: #FFFFFF;
+    }
+
+    .home-nav {
+        background-color: #5079A3;
+    }
+    
+    .main-nav__item.active {
+        background-color: lightblue;
+        border-bottom: 2px solid #EE6677;
+    }
+
+    .main-nav__item.active:hover span {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
     }
 </style>
+
+<div class="container-fluid">
+    @include('inc.userShield')
+</div>
 
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-
-            <!--             <div class="bg-dark d-flex" style="width:400px; height:120px;">
-                <div class="bg-success my-auto" style="width:100px; height:100px;">
-                    <span><img class="img-fluid" src="{{ asset('storage/shields/5.png') }}"></span>
-                </div>
-                <div class="d-flex flex-column my-auto">
-                    <div class="bg-primary d-flex" style="width:100px; height:50px;"><span class="align-middle">OK</span> </div>
-                    <div class="bg-warning" style="width:100px; height:50px;"> <span>Manager</span> </div>
-                </div>
-                <div class="bg-success my-auto" style="width:100px; height:100px;"> </div>
-            </div> -->
-
-            <div class="user-info-wrapper">
-                <div class="user-info">
-                    <div class="user-info logo">
-                        <img src="{{ asset('storage/shields/5.png') }}" alt="herb">
-                    </div>
-                    <div class="user-info__team-and-name">
-                        <span class="user-name">
-                            SnaggyDainc </span>
-                        <span class="team-name">
-                            Arsenal </span>
-                    </div>
-                </div>
-                <div class="user-morale" title="ogólno rozumiany poziom zadowolenia panujący w klubie">
-                    100 </div>
-
-            </div>
-
-            <div class="card">
+            <div class="card my-3">
                 <div class="card-header">
-                @if($personal_data->team)
-                    {{$personal_data->team->name}}
-                @endif
+                    @include('inc.homeNav')
                 </div>
 
                 <div class="card-body">
-                @if($personal_data->team)
+                    @if($personal_data->team)
                     @foreach($personal_data->team->players as $player)
                     <p> {{$player->name}}
                         {{$player->overall}}
@@ -91,7 +73,7 @@
                         {{$player->nationality}}
                     </p>
                     @endforeach
-                @endif
+                    @endif
                 </div>
             </div>
         </div>
