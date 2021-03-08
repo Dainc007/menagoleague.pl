@@ -1,27 +1,3 @@
-<!--                     <div class="w-100">
-                        <nav class="main-nav d-flex align-items-center">
-                            <a class="main-nav__item" href="">
-                                <span>Centrala</span>
-                            </a>
-                            <a class="main-nav__item" href="">
-                                <span>Drużyna</span>
-                            </a>
-                            <a class="main-nav__item" href="">
-                                <span>Transfery</span>
-                            </a>
-                            <a class="main-nav__item" href="">
-                                <span class="gotMessage">
-
-                                    Masz Wiadomość<img src="../CSS/pictures/email.png" title="Icon made by Smartline from flaticon.com">
-
-                                </span>
-                            </a>
-                            <a class="main-nav__item" href="../season/season">
-                                <span>Sezon</span>
-                            </a>
-                        </nav>
-                    </div> -->
-
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm w-75">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/home') }}">
