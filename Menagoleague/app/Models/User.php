@@ -14,7 +14,7 @@ class User extends Authenticatable
     /**
      * User available devices.
      */
-    protected const AVAILABLE_DEVICES = [
+    public const AVAILABLE_DEVICES = [
         'Xbox'   => 'Xbox',
         'Playstation' => 'Playstation',
         'PC' => 'PC'
