@@ -18,4 +18,14 @@ class Competition extends Model
     {
         return $this->belongsToMany(Team::class);
     }
+
+    public function leagueTable()
+    {
+        return $this->hasOne(LeagueTable::class);
+    }
+
+    public function fixtures()
+    {
+        return $this->hasMany(Fixture::class);
+    }
 }
