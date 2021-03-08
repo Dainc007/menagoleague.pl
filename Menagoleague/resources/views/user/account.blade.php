@@ -33,8 +33,8 @@
                             </tr>
                             <tr>
                                 @if($personal_data->device == 'Xbox')
-                                <td>Xboxdvr:</td>
-                                <td><a onclick="confirm('przechodzisz teraz do portalu Xboxdvr')" target="_blank" href="https://gamerdvr.com/gamer/{{{$personal_data->name}}}">{{{$personal_data->name}}}</a></td>
+                                <td>Klipy:</td>
+                                <td><a onclick="confirm('przechodzisz teraz do portalu Xboxdvr')" target="_blank" href="{{env('Xboxdvr')}}{{{$personal_data->name}}}">{{{$personal_data->name}}}</a></td>
 
 
                                 @else
