@@ -19,6 +19,7 @@ class CreateTeamsTable extends Migration
             $table->string('name');
             $table->unsignedBigInteger('user_id')->nullable()->unique();
             $table->enum('device', User::AVAILABLE_DEVICES);
+            $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('CASCADE');
         });
