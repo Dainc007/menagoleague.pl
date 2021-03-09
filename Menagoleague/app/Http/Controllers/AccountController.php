@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Menagoleague\Account\Services\AccountService;
 use App\Menagoleague\Account\Requests\AccountRequest;
+use App\Models\Competition;
 use Illuminate\Http\Request;
 
 class AccountController extends Controller
@@ -25,15 +26,18 @@ class AccountController extends Controller
         $this->accountService = $accountService;
     }
 
-    public function index(Request $request)
+/*      public function index(Request $request)
     {
         return view('user.account', [
             'personal_data' => auth()->user(),
             'data' => $request
         ]); 
+    }  */
 
-       
-    }
+      public function index(Request $request)
+    {
+        return  auth()->user()->team->competitions; 
+    }  
 
     public function update(AccountRequest $request, int $id)
     {

@@ -29,4 +29,9 @@ class Team extends Model
         return $this->belongsToMany(Competition::class);
     }
 
+    public function fixtures()
+    {
+        return $this->hasMany(Fixture::class);
+    }
+
 }

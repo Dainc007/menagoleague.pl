@@ -16,9 +16,17 @@ class CreateFixturesTable extends Migration
         Schema::create('fixtures', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('competition_id');
+            $table->unsignedBigInteger('host_id');
+            $table->unsignedBigInteger('visitor_id');
+            $table->integer('host_goals')->nullable();
+            $table->integer('visitor_goals')->nullable();
+            $table->date('date')->nullable();
             $table->timestamps();
 
             $table->foreign('competition_id')->references('id')->on('competitions')->onDelete('CASCADE');
+            $table->foreign('host_id')->references('id')->on('teams')->onDelete('CASCADE');
+            $table->foreign('visitor_id')->references('id')->on('teams')->onDelete('CASCADE');
+
         });
     }
 
@@ -32,3 +40,4 @@ class CreateFixturesTable extends Migration
         Schema::dropIfExists('fixtures');
     }
 }
+
