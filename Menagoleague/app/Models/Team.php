@@ -18,4 +18,20 @@ class Team extends Model
     {
         return $this->hasMany(Player::class);
     }
+
+    public function league()
+    {
+        return $this->belongsTo(League::class);
+    }
+
+    public function competitions()
+    {
+        return $this->belongsToMany(Competition::class);
+    }
+
+    public function fixtures()
+    {
+        return $this->hasMany(Fixture::class);
+    }
+
 }

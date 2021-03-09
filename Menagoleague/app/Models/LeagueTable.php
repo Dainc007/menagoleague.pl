@@ -5,15 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Player extends Model
+class LeagueTable extends Model
 {
-
-    const WAGE = 5000;
-
     use HasFactory;
 
-    public function team()
+    public function competition()
     {
-        return $this->belongsTo(Team::class);
+        return $this->belongsTo(Competition::class);
     }
 }

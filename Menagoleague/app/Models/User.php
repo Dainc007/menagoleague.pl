@@ -14,7 +14,7 @@ class User extends Authenticatable
     /**
      * User available devices.
      */
-    protected const AVAILABLE_DEVICES = [
+    public const AVAILABLE_DEVICES = [
         'Xbox'   => 'Xbox',
         'Playstation' => 'Playstation',
         'PC' => 'PC'
@@ -69,6 +69,6 @@ class User extends Authenticatable
     }
 
     public function isAdministrator() {
-        return $this->roles()->where('id', 3)->exists();
+        return $this->roles()->where('name', 'admin')->exists();
      }
 }
