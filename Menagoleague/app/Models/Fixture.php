@@ -16,6 +16,6 @@ class Fixture extends Model
 
     public function teams()
     {
-        return $this->hasMany(Team::class);
+        return $this->belongsToMany(Team::class);
     }
 }

@@ -26,17 +26,12 @@ class AccountController extends Controller
         $this->accountService = $accountService;
     }
 
-/*      public function index(Request $request)
+     public function index(Request $request)
     {
         return view('user.account', [
             'personal_data' => auth()->user(),
             'data' => $request
         ]); 
-    }  */
-
-      public function index(Request $request)
-    {
-        return  auth()->user()->team->competitions; 
     }  
 
     public function update(AccountRequest $request, int $id)

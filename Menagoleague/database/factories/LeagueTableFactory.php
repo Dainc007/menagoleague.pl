@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Competition;
 use App\Models\LeagueTable;
+use App\Models\Team;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class LeagueTableFactory extends Factory
@@ -23,7 +24,8 @@ class LeagueTableFactory extends Factory
     public function definition()
     {
         return [
-            'competition_id' => $this->faker->numberBetween(1, Competition::count())
+            'competition_id' => $this->faker->numberBetween(1, Competition::count()),
+            'team_id' => $this->faker->numberBetween(1, Team::count())
         ];
     }
 }
