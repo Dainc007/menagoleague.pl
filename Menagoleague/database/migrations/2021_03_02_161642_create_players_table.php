@@ -27,6 +27,7 @@ class CreatePlayersTable extends Migration
             $table->integer('overall');
             $table->integer('age');
             $table->string('real_team');
+            $table->unique(['name', 'device']);
             
             $table->timestamps();
 

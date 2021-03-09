@@ -27,6 +27,8 @@ class CreateLeagueTables extends Migration
             $table->unsignedBigInteger('competition_id');
             $table->timestamps();
 
+            $table->unique(['team_id', 'competition_id']);
+
             $table->foreign('competition_id')->references('id')->on('competitions')->onDelete('CASCADE');
             $table->foreign('team_id')->references('id')->on('teams')->onDelete('CASCADE');
         });

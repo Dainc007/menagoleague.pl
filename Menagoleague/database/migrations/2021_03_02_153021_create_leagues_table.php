@@ -18,6 +18,7 @@ class CreateLeaguesTable extends Migration
             $table->id();
             $table->enum('country', League::AVAILABLE_COUNTRIES);
             $table->enum('level', League::AVAILABLE_LEVELS);
+            $table->unique(['country', 'level']);
             $table->timestamps();
         });
     }
