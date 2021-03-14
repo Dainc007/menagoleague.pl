@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm w-75">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/home') }}">
-            @if($personal_data->team)
-            {{$personal_data->team->name}}
+            @if(auth()->user()->team)
+            {{auth()->user()->team->name}}
             @endif
         </a>
 
