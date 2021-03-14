@@ -1,9 +1,13 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm w-75">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/home') }}">
+
             @if(auth()->user()->team)
             {{auth()->user()->team->name}}
+            @else
+            Menago League
             @endif
+
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -36,6 +40,7 @@
                     <a class="nav-link" href="#">
                         {{ __('Biuro') }}
                     </a>
+
                 </li>
 
 

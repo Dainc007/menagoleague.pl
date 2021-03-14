@@ -74,18 +74,22 @@
 
         @include('inc.mainNav')
         <main class="py-4">
-
-             <div class="container-fluid">
+            @if(Auth::check())
+            <div class="container-fluid">
                 @include('inc.userShield')
             </div>
+            @endif
+   
 
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-12">
                         <div class="card my-3">
                             <div class="card-header">
+                            @if(Auth::check())
                                 @include('inc.homeNav')
-                            </div> 
+                            @endif
+                            </div>
 
                             <div class="card-body">
                                 @yield('content')

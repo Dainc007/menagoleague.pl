@@ -4,7 +4,7 @@
             <img class="img-fluid p-2" style="max-height:100px;" src="{{ asset('storage/shields/5.png') }}" alt="herb">
         </div>
         <div class="user-info__team-and-name d-flex flex-column px-3">
-            <span class="user-name">
+            <span class="user-name">     
                 {{auth()->user()->name}}
             </span>
             <span class="team-name">
@@ -13,6 +13,7 @@
                 @else
                 Bez Klubu
                 @endif
+                
             </span>
         </div>
         <div class="user-morale d-flex align-items-center bg-secondary" title="ogólno rozumiany poziom zadowolenia panujący w klubie">

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Team;
+
 use Illuminate\Http\Request;
 
 class OfficeController extends Controller
@@ -19,7 +21,11 @@ class OfficeController extends Controller
      */
     public function index()
     {
-        return view('office.office');
+        return view('office.office',[
+            'jobOffers' => Team::where('device', '=', auth()->user()->device)
+            ->where('user_id', null)
+            ->get(),
+        ]);
     }
 
     /**
