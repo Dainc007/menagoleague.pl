@@ -7,13 +7,15 @@ use Illuminate\Support\Facades\DB;
 
 class UserObserver
 {
-    public function creating(User $user)
+    public function created(User $user)
     {
 
-        DB::table('board_messages')->insert([
+         DB::table('board_messages')->insert([
             'content' => 'Witamy na pokładzie' . $user->name . '!',
             'user_id' => $user->id
-        ]);
+        ]); 
+
+    
     }
 
     public function updating(User $user)
