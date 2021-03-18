@@ -9,13 +9,14 @@ class League extends Model
 {
     use HasFactory;
 
-    public const AVAILABLE_COUNTRIES = [
+    public const AVAILABLE_REGIONS = [
         'England'   => 'England',
         'Germany' => 'Germany',
         'France' => 'France',
         'Italy' => 'Italy',
         'Spain' => 'Spain',
         'Poland' => 'Poland',
+        'Europe' => 'Europe',
     ];
 
     public const AVAILABLE_LEVELS = [
