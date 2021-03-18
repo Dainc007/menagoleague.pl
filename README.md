@@ -23,12 +23,19 @@ Project is created with:
 * PHP 8
 	
 ## Setup
-To run this project, install it locally using npm:
+To run this project, install it locally using via composer:
 
 ```
-$ cd ../lorem
+$ composer global require laravel/installer
+$ laravel new Menagoleague.pl
+
+Then clone this repository
+$ git clone https://github.com/Dainc007/Menagoleague.pl.git
+$ php artisan serve
+$ composer require laravel/ui:^2.4
+$ php artisan ui bootstrap
+$ php artisan ui vue
 $ npm install
-$ npm start
 ```
 
 
