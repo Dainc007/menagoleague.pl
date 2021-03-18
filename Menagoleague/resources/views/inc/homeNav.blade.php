@@ -23,7 +23,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="{{route('team')}}">
                         {{ __('Drużyna') }}
                     </a>
                 </li>
@@ -37,7 +37,7 @@
 
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="{{route('office')}}">
                         {{ __('Biuro') }}
                     </a>
 

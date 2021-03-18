@@ -37,3 +37,10 @@ Route::prefix('/office')->group(function () {
         ->name('office');
 
 });
+
+Route::prefix('/team')->group(function () {
+
+    Route::get('/', [App\Http\Controllers\TeamController::class, 'index'])
+        ->name('team');
+
+});

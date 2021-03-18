@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Centrala')
+@section('title', 'Biuro')
 
 @section('content')
 <p>Dostępne oferty pracy</p>
