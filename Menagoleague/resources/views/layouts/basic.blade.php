@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,10 +16,12 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <title>@yield('title', 'Menagoleague')</title>
 </head>
+
 <body>
     <main>
         @yield('content')
     </main>
-@include('inc.footer')
+    @include('inc.footer')
 </body>
+
 </html>

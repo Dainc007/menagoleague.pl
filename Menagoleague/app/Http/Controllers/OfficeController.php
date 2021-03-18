@@ -3,10 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Models\Team;
+
 use Illuminate\Http\Request;
 
-class TeamController extends Controller
+class OfficeController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +21,11 @@ class TeamController extends Controller
      */
     public function index()
     {
-        return view('team.team');
+        return view('office.office',[
+            'jobOffers' => Team::where('device', '=', auth()->user()->device)
+            ->where('user_id', null)
+            ->get(),
+        ]);
     }
 
     /**
@@ -41,10 +52,10 @@ class TeamController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Team  $team
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Team $team)
+    public function show($id)
     {
         //
     }
@@ -52,10 +63,10 @@ class TeamController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Team  $team
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Team $team)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +75,10 @@ class TeamController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Team  $team
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Team $team)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +86,10 @@ class TeamController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Team  $team
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Team $team)
+    public function destroy($id)
     {
         //
     }

@@ -16,6 +16,7 @@ class CreateCompetitionTeamTable extends Migration
         Schema::create('competition_team', function (Blueprint $table) {
             $table->unsignedBigInteger('team_id');
             $table->unsignedBigInteger('competition_id');
+            $table->unique(['team_id', 'competition_id']);
 
             $table->foreign('team_id')->references('id')->on('teams')->onDelete('CASCADE');
             $table->foreign('competition_id')->references('id')->on('competitions')->onDelete('CASCADE');

@@ -30,3 +30,17 @@ Route::prefix('/account')->group(function () {
     Route::PUT('/{id}', [App\Http\Controllers\AccountController::class, 'update'])
         ->name('account.update');
 });
+
+Route::prefix('/office')->group(function () {
+
+    Route::get('/', [App\Http\Controllers\OfficeController::class, 'index'])
+        ->name('office');
+
+});
+
+Route::prefix('/team')->group(function () {
+
+    Route::get('/', [App\Http\Controllers\TeamController::class, 'index'])
+        ->name('team');
+
+});

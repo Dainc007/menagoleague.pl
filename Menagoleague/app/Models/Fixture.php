@@ -18,4 +18,9 @@ class Fixture extends Model
     {
         return $this->belongsToMany(Team::class);
     }
+
+    public function gameStats()
+    {
+        return $this->hasMany(GameStats::class);
+    }
 }

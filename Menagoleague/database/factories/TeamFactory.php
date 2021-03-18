@@ -24,7 +24,7 @@ class TeamFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->sentence(2,4),
+            'name' => $this->faker->company,
             'device' => $this->faker->randomElement(User::AVAILABLE_DEVICES),
             'user_id' => $this->faker->unique()->numberBetween(1,User::count()),
             'league_id' => $this->faker->numberBetween(1,League::count())

@@ -21,6 +21,7 @@ class CreateTeamsTable extends Migration
             $table->unsignedBigInteger('user_id')->nullable()->unique();
             $table->unsignedBigInteger('league_id');
             $table->enum('device', User::AVAILABLE_DEVICES);
+            $table->unique(['name', 'device']);
             $table->timestamps();
 
 
