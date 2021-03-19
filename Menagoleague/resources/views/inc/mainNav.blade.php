@@ -7,47 +7,47 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
         </button>
-@if(!empty($mainNav))
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">{{ $mainNav['whatAreWe'] }}</a>
+                    <a class="nav-link" href="{{ route('login') }}"> {{ __('nav.mainNav.whatAreWe') }}</a>
                 </li>
 
                 <!-- Dropdown -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                    {{ $mainNav['tablesAndFixtures'] }}
+                    {{ __('nav.mainNav.tablesAndFixtures') }}
                     </a>
                     <div class="dropdown-menu" id="">
-                        <a class="dropdown-item" href="#">{{$mainNav['england']}}</a>
-                        <a class="dropdown-item" href="#">{{$mainNav['spain']}}</a>
-                        <a class="dropdown-item" href="#">{{$mainNav['poland']}}</a>
-                        <a class="dropdown-item" href="#">{{$mainNav['italy']}}</a>
-                        <a class="dropdown-item disabled" href="#">{{$mainNav['champions']}}</a>
-                        <a class="dropdown-item disabled" href="#">{{$mainNav['europe']}}</a>
+                        <a class="dropdown-item" href="#">{{ __('nav.mainNav.england') }}</a>
+                        <a class="dropdown-item" href="#">{{ __('nav.mainNav.spain') }}</a>
+                        <a class="dropdown-item" href="#">{{ __('nav.mainNav.poland') }}</a>
+                        <a class="dropdown-item" href="#">{{ __('nav.mainNav.italy') }}</a>
+                        <a class="dropdown-item disabled" href="#">{{ __('nav.mainNav.champions') }}</a>
+                        <a class="dropdown-item disabled" href="#">{{ __('nav.mainNav.europe') }}</a>
 
                     </div>
                 </li>
                 <!-- Dropdown -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                    {{$mainNav['society']}}
+                    {{ __('nav.mainNav.society') }}
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">{{$mainNav['fbFanPage']}}</a>
-                        <a class="dropdown-item" href="#">{{$mainNav['fbGroup']}}</a>
-                        <a class="dropdown-item" href="#">{{$mainNav['discord']}}</a>
-                        <a class="dropdown-item" href="#">{{$mainNav['admin']}}</a>
+                        <a class="dropdown-item" href="#">{{ __('nav.mainNav.fbFanPage') }}</a>
+                        <a class="dropdown-item" href="#">{{ __('nav.mainNav.fbGroup') }}</a>
+                        <a class="dropdown-item" href="#">{{ __('nav.mainNav.discord') }}</a>
+                        <a class="dropdown-item" href="#">{{ __('nav.mainNav.admin') }}</a>
                     </div>
                 </li>
 
                 <!-- Dropdown -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                        {{$mainNav['leaderboards']}}
+                    {{ __('nav.mainNav.leaderboards') }}
                     </a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="#">Link 1</a>
@@ -59,14 +59,14 @@
                 <!-- Dropdown -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                    {{$mainNav['help']}}
+                    {{ __('nav.mainNav.help') }}
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">    {{$mainNav['rules']}}</a>
-                        <a class="dropdown-item" href="#">    {{$mainNav['FAQ']}}</a>
+                        <a class="dropdown-item" href="#">    {{ __('nav.mainNav.rules') }}</a>
+                        <a class="dropdown-item" href="#">    {{ __('nav.mainNav.FAQ') }}</a>
                     </div>
                 </li>
-            @endif
+         
             </ul>
 
             <!-- Right Side Of Navbar -->

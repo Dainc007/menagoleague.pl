@@ -11,8 +11,8 @@ class UserObserver
     public function created(User $user)
     {   
         Message::insert([
-            'title' => 'Witaj!',
-            'content' => 'Witamy na pokładzie' . $user->name . '!',
+            'title' => __('messages.boardMessages.accountCreated.title'),
+            'content' => __('messages.boardMessages.accountCreated.content'),
             'from' => 1,
             'to' => $user->id
         ]);

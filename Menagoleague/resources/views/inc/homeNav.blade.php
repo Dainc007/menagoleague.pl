@@ -19,26 +19,26 @@
             <ul class="navbar-nav mr-auto">
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">{{ $homeNav['central'] }}</a>
+                    <a class="nav-link" href="{{ route('login') }}">  {{ __('nav.homeNav.central') }}</a>
                 </li>
 
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('team')}}">
-                    {{ $homeNav['team'] }}
+                    {{ __('nav.homeNav.team') }}
                     </a>
                 </li>
 
 
                 <li class="nav-item">
                     <a class="nav-link" href="#">
-                    {{ $homeNav['transfers'] }}
+                    {{ __('nav.homeNav.transfers') }}
                     </a>
                 </li>
 
 
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('office')}}">
-                    {{ $homeNav['office'] }}
+                    {{ __('nav.homeNav.office') }}
                     </a>
 
                 </li>
@@ -46,7 +46,7 @@
 
                 <li class="nav-item">
                     <a class="nav-link" href="#">
-                    {{ $homeNav['season'] }}
+                    {{ __('nav.homeNav.season') }}
                     </a>
                 </li>
 
