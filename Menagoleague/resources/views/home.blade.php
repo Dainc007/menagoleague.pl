@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Centrala')
+@section('title', config('app.name', 'Menago League'))
+
 
 @section('content')
 

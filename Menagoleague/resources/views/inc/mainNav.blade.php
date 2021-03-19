@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
-            {{ config('app.name', 'Laravel') }}
+            {{ config('app.name', 'Menago League') }}
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -13,41 +13,41 @@
             <ul class="navbar-nav mr-auto">
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">{{ __('Czym jesteśmy?') }}</a>
+                    <a class="nav-link" href="{{ route('login') }}">{{ $mainNav['whatAreWe'] }}</a>
                 </li>
 
                 <!-- Dropdown -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                        Tabela i Terminarz
+                    {{ $mainNav['tablesAndFixtures'] }}
                     </a>
                     <div class="dropdown-menu" id="">
-                        <a class="dropdown-item" href="#">Anglia</a>
-                        <a class="dropdown-item" href="#">Hiszpania</a>
-                        <a class="dropdown-item" href="#">Polska</a>
-                        <a class="dropdown-item" href="#">Włochy</a>
-                        <a class="dropdown-item disabled" href="#">Liga Mistrzów</a>
-                        <a class="dropdown-item disabled" href="#">Liga Europy</a>
+                        <a class="dropdown-item" href="#">{{$mainNav['england']}}</a>
+                        <a class="dropdown-item" href="#">{{$mainNav['spain']}}</a>
+                        <a class="dropdown-item" href="#">{{$mainNav['poland']}}</a>
+                        <a class="dropdown-item" href="#">{{$mainNav['italy']}}</a>
+                        <a class="dropdown-item disabled" href="#">{{$mainNav['champions']}}</a>
+                        <a class="dropdown-item disabled" href="#">{{$mainNav['europe']}}</a>
 
                     </div>
                 </li>
                 <!-- Dropdown -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                        Społeczność
+                    {{$mainNav['society']}}
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Facebook Fanpage</a>
-                        <a class="dropdown-item" href="#">Facebook - Grupa</a>
-                        <a class="dropdown-item" href="#">Discord</a>
-                        <a class="dropdown-item" href="#">Administracja</a>
+                        <a class="dropdown-item" href="#">{{$mainNav['fbFanPage']}}</a>
+                        <a class="dropdown-item" href="#">{{$mainNav['fbGroup']}}</a>
+                        <a class="dropdown-item" href="#">{{$mainNav['discord']}}</a>
+                        <a class="dropdown-item" href="#">{{$mainNav['admin']}}</a>
                     </div>
                 </li>
 
                 <!-- Dropdown -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                        Rankingi
+                        {{$mainNav['leaderboards']}}
                     </a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="#">Link 1</a>
@@ -59,11 +59,11 @@
                 <!-- Dropdown -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                        Pomoc
+                    {{$mainNav['help']}}
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Regulamin</a>
-                        <a class="dropdown-item" href="#">FAQ</a>
+                        <a class="dropdown-item" href="#">    {{$mainNav['rules']}}</a>
+                        <a class="dropdown-item" href="#">    {{$mainNav['FAQ']}}</a>
                     </div>
                 </li>
             </ul>

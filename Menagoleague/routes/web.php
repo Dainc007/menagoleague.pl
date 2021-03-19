@@ -15,7 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome', [
+        'mainNav' => __('mainNav.mainNav'),
+    ]);
 });
 
 Auth::routes();
@@ -35,12 +37,10 @@ Route::prefix('/office')->group(function () {
 
     Route::get('/', [App\Http\Controllers\OfficeController::class, 'index'])
         ->name('office');
-
 });
 
 Route::prefix('/team')->group(function () {
 
     Route::get('/', [App\Http\Controllers\TeamController::class, 'index'])
         ->name('team');
-
 });
