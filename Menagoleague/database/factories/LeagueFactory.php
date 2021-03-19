@@ -22,7 +22,7 @@ class LeagueFactory extends Factory
     public function definition()
     {
         return [
-            'country' => $this->faker->unique()->randomElement(League::AVAILABLE_COUNTRIES),
+            'region' => $this->faker->unique()->randomElement(League::AVAILABLE_REGIONS),
             'level' => 1/* $this->faker->randomElement(League::AVAILABLE_LEVELS) */,
         ];
     }
