@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome', [
-        'mainNav' => __('mainNav.mainNav'),
+        'mainNav' => __('nav.mainNav'),
     ]);
 });
 

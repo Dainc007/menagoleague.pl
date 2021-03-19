@@ -20,7 +20,14 @@ return [
         'leaderboards'      => 'Rankingi',
         'help'              => 'Pomoc',
         'rules'             => 'Regulamin',
-        'FAQ'               => 'FAQ'
+        'FAQ'               => 'FAQ',
+    ],
 
+    'homeNav' => [
+        'central' => 'Centrala',
+        'team'    => 'Drużyna',
+        'transfers' => 'Transfery',
+        'office' => 'Biuro',
+        'season' => 'Sezon',
     ]
 ];

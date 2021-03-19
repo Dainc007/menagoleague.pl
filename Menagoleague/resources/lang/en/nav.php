@@ -22,5 +22,13 @@ return [
         'rules'             => 'Rules',
         'FAQ'               => 'FAQ'
 
+    ],
+
+    'homeNav' => [
+        'central' => 'Central',
+        'team'    => 'Team',
+        'transfers' => 'Transfers',
+        'office' => 'Office',
+        'season' => 'Season',
     ]
 ];

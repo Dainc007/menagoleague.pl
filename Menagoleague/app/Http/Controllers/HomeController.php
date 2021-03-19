@@ -24,7 +24,8 @@ class HomeController extends Controller
     public function index()
     {
         return view('home', [
-            'mainNav' => __('mainNav.mainNav') 
+            'mainNav' => __('nav.mainNav'),
+            'homeNav' => __('nav.homeNav'),
         ]);
     }
 }

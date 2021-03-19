@@ -21,13 +21,6 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <style>
-        /* .gray-room-bg {
-  min-height: 100vh;
-  width: 100%;
-  background-image: url("../pictures/grayRoom.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-} */
         .user-info__logo img {
             max-width: 80px;
             background-color: rgba(218, 221, 251, 0.5);
@@ -71,8 +64,7 @@
 
 <body>
     <div id="app">
-
-        @include('inc.mainNav')
+    @include('inc.mainNav')
         <main class="py-4">
             @if(Auth::check())
             <div class="container-fluid">
