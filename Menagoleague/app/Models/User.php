@@ -69,6 +69,11 @@ class User extends Authenticatable
         return $this->hasOne(Team::class);
     }
 
+    public function messages()
+    {
+        return $this->hasMany(Message::class);
+    }
+
     public function isAdministrator() {
         return $this->roles()->where('name', 'admin')->exists();
      }
