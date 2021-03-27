@@ -26,16 +26,11 @@ Project is created with:
 To run this project, install it locally using via composer:
 
 ```
-$ composer global require laravel/installer
-$ laravel new Menagoleague.pl
-
-Then clone this repository
 $ git clone https://github.com/Dainc007/Menagoleague.pl.git
+$ composer install
+
 $ php artisan serve
-$ composer require laravel/ui:^2.4
-$ php artisan ui bootstrap
-$ php artisan ui vue
-$ npm install
+
 ```
 
 
