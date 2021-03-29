@@ -20,42 +20,11 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <style>
-        .user-info__logo img {
-            max-width: 80px;
-            background-color: rgba(218, 221, 251, 0.5);
-        }
+        body{
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.882) 71.99%, rgba(206, 234, 211, 0.855) 87.12%, rgba(62, 73, 64, 0.9) 98.93%), url('/images/background.jpg');
 
-        .user-info__team-and-name {
-            font-size: 18px;
-            -webkit-box-pack: space-evenly;
-            -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-            /* color */
-            color: #5079A3;
-            background-color: rgba(218, 221, 251, 0.5);
-        }
-
-        .user-morale {
-            font-size: 2.6rem;
-            border-radius: 0px 60px 60px 0px;
-
-            /* color */
-            background-color: rgba(157, 158, 175, 0.5);
-            color: #FFFFFF;
-        }
-
-        .home-nav {
-            background-color: #5079A3;
-        }
-
-        .main-nav__item.active {
-            background-color: lightblue;
-            border-bottom: 2px solid #EE6677;
-        }
-
-        .main-nav__item.active:hover span {
-            -webkit-transform: translateY(0);
-            transform: translateY(0);
+            background-size: cover;
+            min-height: 100vh;
         }
     </style>
 
