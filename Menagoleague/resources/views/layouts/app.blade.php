@@ -70,7 +70,6 @@
                 @include('inc.userShield')
             </div>
             @endif
-   
 
             <div class="container">
                 <div class="row justify-content-center">
@@ -89,7 +88,6 @@
                     </div>
                 </div>
             </div>
-            <example-component/>
         </main>
     </div>
 
