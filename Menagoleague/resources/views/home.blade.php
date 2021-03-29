@@ -13,7 +13,9 @@
     {{$player->age}}
     {{$player->nationality}}
 </p>
+
 @endforeach
+
 {{auth()->user()->team->league}}
 {{auth()->user()->roles}}
 {{auth()->user()->team->competitions}}
