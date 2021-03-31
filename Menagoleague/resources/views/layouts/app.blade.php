@@ -26,6 +26,18 @@
             background-size: cover;
             min-height: 100vh;
         }
+
+        .top-bar{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        @media (max-width: 1024px){
+            .top-bar{
+                flex-direction: column;
+            }
+        }
     </style>
 
 </head>
@@ -35,24 +47,24 @@
     @include('inc.mainNav')
         <main class="py-4">
             @if(Auth::check())
-            <div class="container-fluid">
-                @include('inc.userShield')
-            </div>
+                <div class="container-fluid top-bar">
+                    <div>
+                        @include('inc.userShield')
+                    </div>
+                    <div>
+                        @include('inc.userOptionsBar')
+                    </div>
+                </div>
             @endif
 
-            <div class="container">
-                <div class="row justify-content-center">
+            <div class="container-fluid">
+                <div class="row">
                     <div class="col-md-12">
+                    @if(Auth::check())
+                        @include('inc.homeNav')
+                    @endif
                         <div class="card my-3">
-                            <div class="card-header">
-                            @if(Auth::check())
-                                @include('inc.homeNav')
-                            @endif
-                            </div>
-
-                            <div class="card-body">
-                                @yield('content')
-                            </div>
+                            @yield('content')
                         </div>
                     </div>
                 </div>
