@@ -19,6 +19,7 @@
 
 <script>
 export default {
+  name: "UserOptions",
   props: {
     lvl: Number,
     exp: Number,

@@ -21,6 +21,7 @@
 
 <script>
 export default {
+  name: "UserShield",
   props: {
     team: String,
     image: String,

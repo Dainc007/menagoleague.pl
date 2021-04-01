@@ -14,6 +14,7 @@
 
 <script>
 export default {
+  name: "HomeNav",
   props: {
     items: Array
   }
