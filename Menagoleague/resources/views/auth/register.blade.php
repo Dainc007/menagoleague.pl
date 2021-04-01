@@ -96,10 +96,10 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="name" class="col-md-4 col-form-label text-md-right"><i>{{ __('www.facebook.com/') }}</i></label>
+                        <label for="nam" class="col-md-4 col-form-label text-md-right"><i>{{ __('www.facebook.com/') }}</i></label>
 
                         <div class="col-md-6">
-                            <input id="name" type="text" class="form-control @error('facebook') is-invalid @enderror" name="facebook" value="{{ old('facebook') }}" autocomplete="facebook">
+                            <input id="nam" type="text" class="form-control @error('facebook') is-invalid @enderror" name="facebook" value="{{ old('facebook') }}" autocomplete="facebook">
                         </div>
                     </div>
 
