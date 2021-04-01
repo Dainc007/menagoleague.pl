@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,23 +21,36 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <style>
-        body{
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.882) 71.99%, rgba(206, 234, 211, 0.855) 87.12%, rgba(62, 73, 64, 0.9) 98.93%), url('/images/background.jpg');
-
-            background-size: cover;
-            min-height: 100vh;
+        .user-info__logo img {
+            max-width: 80px;
+            background-color: rgba(218, 221, 251, 0.5);
         }
-
-        .top-bar{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+        .user-info__team-and-name {
+            font-size: 18px;
+            -webkit-box-pack: space-evenly;
+            -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+            /* color */
+            color: #5079A3;
+            background-color: rgba(218, 221, 251, 0.5);
         }
-
-        @media (max-width: 1024px){
-            .top-bar{
-                flex-direction: column;
-            }
+        .user-morale {
+            font-size: 2.6rem;
+            border-radius: 0px 60px 60px 0px;
+            /* color */
+            background-color: rgba(157, 158, 175, 0.5);
+            color: #FFFFFF;
+        }
+        .home-nav {
+            background-color: #5079A3;
+        }
+        .main-nav__item.active {
+            background-color: lightblue;
+            border-bottom: 2px solid #EE6677;
+        }
+        .main-nav__item.active:hover span {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
         }
     </style>
 
@@ -47,25 +61,30 @@
     @include('inc.mainNav')
         <main class="py-4">
             @if(Auth::check())
-                <div class="container-fluid top-bar">
-                    <div>
-                        @include('inc.userShield')
-                    </div>
-                    <div>
-                        @include('inc.userOptionsBar')
-                    </div>
-                </div>
-            @endif
-
             <div class="container-fluid">
-                <div class="row">
+                @include('inc.userShield')
+            </div>
+            @endif
+   
+
+            <div class="container">
+                <div class="row justify-content-center">
                     <div class="col-md-12">
-                    @if(Auth::check())
-                        @include('inc.homeNav')
-                    @endif
+                        <div class="card my-3">
+                            <div class="card-header">
+                            @if(Auth::check())
+                                @include('inc.homeNav')
+                            @endif
+                            </div>
+
+                            <div class="card-body">
+                                @yield('content')
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </main>
     </div>
 

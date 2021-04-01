@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.homeLayout')
 
 @section('title', config('app.name', 'Menago League'))
 
