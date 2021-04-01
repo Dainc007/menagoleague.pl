@@ -63,9 +63,6 @@
                     @if(Auth::check())
                         @include('inc.homeNav')
                     @endif
-                        <div class="card my-3">
-                            @yield('content')
-                        </div>
                     </div>
                 </div>
             </div>

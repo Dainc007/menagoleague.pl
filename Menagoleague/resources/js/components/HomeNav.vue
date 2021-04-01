@@ -21,6 +21,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$component-bg: rgba(255, 253, 253, 0.7);
+
 * {
   padding: 0;
   margin: 0;
@@ -31,6 +33,7 @@ nav{
   padding: 0;
   margin-top: 20px;
   align-self: flex-start;
+  background-color: $component-bg;
 }
 
 .nav-container{

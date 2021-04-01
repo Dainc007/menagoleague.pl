@@ -1,14 +1,19 @@
 <template>
   <div class="user-options">
-    <p class="user-options__lvl user__option">LVL: {{lvl}}</p>
-    <p class="user-options__exp user__option">{{exp}} XP</p>
-    <p class="user-options__cash user__option">{{cash}} M$</p>
-    <a class="user-options__cart" href="#">
-      <img :src="cartimage" alt="Shop">
-    </a>
-    <a class="user-options__profile" href="#">
-      <img :src="profileimage" alt="Profile">
-    </a>
+    <div class="user-options__info">
+      <p class="user-options__lvl user__option">LVL: {{lvl}}</p>
+      <p class="user-options__exp user__option">{{exp}} XP</p>
+      <p class="user-options__cash user__option">{{cash}} M$</p>
+    </div>
+    <div class="user-options__links-container">
+      <a class="user-options__cart  user__option" href="#">
+        <img :src="cartimage" alt="Shop">
+      </a>
+      <a class="user-options__profile  user__option" href="#">
+        <img :src="profileimage" alt="Profile">
+      </a>
+    </div>
+    
   </div>
 </template>
 
@@ -50,6 +55,11 @@ $component-bg: rgba(255, 253, 253, 0.7);
   }
 }
 
+.user-options__info{
+  display: flex;
+  flex-direction: row;
+}
+
 .user__option{
   display: flex;
   flex-direction: column;
@@ -68,17 +78,79 @@ $component-bg: rgba(255, 253, 253, 0.7);
 }
 
 .user-options__profile{
-  background-color: rgba(64, 64, 64, 1);;
+  background-color: rgba(64, 64, 64, 1);
 }
 
 .user-options__cart{
   background-color: $component-bg;
 }
 
-@media (max-width: 1200px){
+.user-options__links-container{
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 1440px){
   .user-options{
-    transform: scale(0.8);
-    transform-origin: 100% 0%;
+    height: 50px;
+
+    font-size: 14px;
+
+    &::before{
+      content: '';
+      border-bottom: 50px solid $component-bg;
+      border-left: 25px solid transparent;
+    }
+  }
+
+  .user__option{
+    width: 100px;
+  }
+
+  .user-options__profile, .user-options__cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+  }
+
+  img{
+    width: 25px;
+    height: auto;
   }
 }
+
+@media (max-width: 1024px) {
+  .user-options{
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .user-options{
+    height: 70px;
+    font-size: 12px;
+    flex-direction: column;
+
+    &::before{
+      all: unset
+    }
+  }
+
+  .user__option{
+    width: calc(100% / 3);
+    height: 35px;
+  }
+
+  .user-options__cart, .user-options__profile {
+    width: 50%;
+  }
+
+
+  img{
+    width: 20px;
+    height: auto;
+  }
+}
+
 </style>
