@@ -4,11 +4,11 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+        <form method="POST" action="{{ route('register') }}">
             <div class="card">
                 <div class="card-header">{{ __('Rejestracja') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
                         @csrf
 
                         <div class="form-group row">
@@ -110,10 +110,10 @@
                                 </button>
                             </div>
                         </div>
-
-                    </form>
                 </div>
             </div>
+        </form>
         </div>
     </div>
-    @endsection
+</div>
+@endsection
