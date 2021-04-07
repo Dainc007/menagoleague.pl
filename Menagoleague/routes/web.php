@@ -34,12 +34,6 @@ Route::prefix('/account')->group(function () {
         ->name('account.update');
 });
 
-Route::prefix('/office')->group(function () {
-
-    Route::get('/', [App\Http\Controllers\OfficeController::class, 'index'])
-        ->name('office');
-});
-
 Route::prefix('/teams')->group(function () {
 
     Route::get('/', [App\Http\Controllers\TeamController::class, 'index'])
@@ -47,6 +41,26 @@ Route::prefix('/teams')->group(function () {
 
     Route::get('/{team}', [App\Http\Controllers\TeamController::class, 'show'])
         ->name('teams.show');
+});
+
+Route::prefix('/transfers')->group(function () {
+
+    Route::get('/', [App\Http\Controllers\SeasonController::class, 'index'])
+        ->name('transfers');
+
+});
+
+Route::prefix('/office')->group(function () {
+
+    Route::get('/', [App\Http\Controllers\OfficeController::class, 'index'])
+        ->name('office');
+});
+
+Route::prefix('/seasons')->group(function () {
+
+    Route::get('/', [App\Http\Controllers\SeasonController::class, 'index'])
+        ->name('season');
+
 });
 
 Route::prefix('/players')->group(function () {
