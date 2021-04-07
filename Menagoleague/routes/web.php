@@ -45,7 +45,7 @@ Route::prefix('/teams')->group(function () {
 
 Route::prefix('/transfers')->group(function () {
 
-    Route::get('/', [App\Http\Controllers\SeasonController::class, 'index'])
+    Route::get('/', [App\Http\Controllers\TransferController::class, 'index'])
         ->name('transfers');
 
 });
