@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Player extends Model
 {
-
+    
     const WAGE = 5000;
 
     use HasFactory;
