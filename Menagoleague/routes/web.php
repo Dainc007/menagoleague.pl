@@ -71,12 +71,13 @@ Route::prefix('/players')->group(function () {
 
 Route::prefix('/articles')->group(function () {
 
+    Route::get('/create', [App\Http\Controllers\ArticleController::class, 'create'])
+        ->name('article.create');
+
     Route::get('/{article}', [App\Http\Controllers\ArticleController::class, 'show'])
         ->name('article.show');
 
     Route::PUT('/{article}', [App\Http\Controllers\ArticleController::class, 'edit'])
         ->name('article.edit');
-    
-    Route::get('/', [App\Http\Controllers\ArticleController::class, 'create'])
-        ->name('article.create');
 });
+
