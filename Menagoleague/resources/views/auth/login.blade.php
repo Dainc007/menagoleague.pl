@@ -15,7 +15,7 @@
 
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Login') }}</label>
                             <div class="col-md-6">
-                                <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="GamerTag, PSN lub nick Origin" required autocomplete="name" autofocus>
+                                <input id="name" type="text" class="form-control @error('email') is-invalid @enderror" name="name" value="{{ old('email') }}" placeholder="GamerTag, PSN lub nick Origin" required autocomplete="name" autofocus>
 
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
