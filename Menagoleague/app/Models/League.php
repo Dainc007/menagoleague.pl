@@ -22,6 +22,7 @@ class League extends Model
     public const AVAILABLE_LEVELS = [
         '1'   => 1,
         '2' => 2,
+        '3' => 3,
     ];
 
     public const AVAILABLE_TYPES = [
