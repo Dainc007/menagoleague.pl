@@ -2,13 +2,13 @@
 
 @section('content')
 <div class="container">
-
     <div class="row justify-content-center">
         <div class="col-md-8">
+
             <div class="card">
                 <div class="card-header">{{ __('Rejestracja') }}</div>
-
                 <div class="card-body">
+
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
@@ -16,18 +16,24 @@
                             <label for="device" class="col-md-4 col-form-label text-md-right">{{ __('Wybierz Urządzenie*') }}</label>
 
                             <div class="col-md-6 justify-content-center d-flex">
+
                                 <div class="form-check form-check-inline">
                                     <input checked class="form-check-input" type="radio" name="device" id="xbox" value="xbox">
                                     <label class="form-check-label" for="xbox"><i class="fab fa-xbox"></i></label>
                                 </div>
+
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="device" id="playstation" value="playstation">
                                     <label class="form-check-label" for="playstation"><i class="fab fa-playstation"></i></label>
                                 </div>
+
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="device" id="pc" value="pc">
                                     <label class="form-check-label" for="pc"><i class="fas fa-laptop"></i></label>
                                 </div>
+
+
+
                             </div>
                         </div>
 
@@ -80,43 +86,42 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
-                </div>
-            </div>
 
-            <div class="card my-3">
-                <div class="card-header">{{ __('Dane Kontaktowe') }}</div>
+                        <div class="form-group row">
+                            <label for="discord" class="col-md-4 col-form-label text-md-right">{{ __('Discord') }}</label>
 
-                <div class="card-body">
-
-                    <div class="form-group row">
-                        <label for="discord" class="col-md-4 col-form-label text-md-right">{{ __('Discord') }}</label>
-
-                        <div class="col-md-6">
-                            <input id="discord" type="text" class="form-control @error('discord') is-invalid @enderror" name="discord" value="{{ old('discord') }}" placeholder="np: SnaggyDainc#3572" autocomplete="discord" autofocus>
+                            <div class="col-md-6">
+                                <input id="discord" type="text" class="form-control @error('discord') is-invalid @enderror" name="discord" value="{{ old('discord') }}" placeholder="np: SnaggyDainc#3572" autocomplete="discord" autofocus>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="form-group row">
-                        <label for="name" class="col-md-4 col-form-label text-md-right"><i>{{ __('www.facebook.com/') }}</i></label>
+                        <div class="form-group row">
+                            <label for="facebook" class="col-md-4 col-form-label text-md-right"><i>{{ __('www.facebook.com/') }}</i></label>
 
-                        <div class="col-md-6">
-                            <input id="name" type="text" class="form-control @error('facebook') is-invalid @enderror" name="facebook" value="{{ old('facebook') }}" autocomplete="facebook">
+                            <div class="col-md-6">
+                                <input id="facebook" type="text" class="form-control @error('facebook') is-invalid @enderror" name="facebook" value="{{ old('facebook') }}" autocomplete="facebook">
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="form-group row mb-0">
-                        <div class="col-md-6 offset-md-4">
-                            <button type="submit" class="btn btn-primary">
-                                {{ __('Dołącz') }}
-                            </button>
+                        <div class="form-group row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    {{ __('Dołącz') }}
+                                </button>
+                            </div>
                         </div>
-                    </div>
+
+
 
                     </form>
+
                 </div>
             </div>
+
+
         </div>
-        
     </div>
+
+</div>
 </div>
 @endsection
