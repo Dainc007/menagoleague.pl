@@ -1,11 +1,11 @@
 @if(!empty($jobOffers))
 <h6>Dostępne oferty pracy</h6>
 
-@foreach($jobOffers as $row)
+@foreach($jobOffers as $team)
 
-<p>{{$row->name}}{{$row->device}}
-{{$row->league->region}}
-{{$row->league->level}}<button class="btn btn-sm btn-danger">Aplikuj</button></p>
+<p><a href="{{route('teams.show',['team' => $team])}}">{{$team->name}}</a>{{$team->device}}
+{{$team->league->region}}
+{{$team->league->level}}<button class="btn btn-sm btn-danger">Aplikuj</button></p>
 
 @endforeach
 

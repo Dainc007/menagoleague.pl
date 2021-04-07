@@ -1,9 +1,11 @@
 @if(!empty(auth()->user()->team->players))
 
 @foreach(auth()->user()->team->players as $player)
-<p>{{$player->name}}
-{{$player->position}}
-{{$player->overall}}
+<p> <a href="{{route('players.show', [ 'player' => $player ])}}">
+        {{$player->name}}
+        {{$player->position}}
+        {{$player->overall}}
+    </a>
 </p>
 
 @endforeach

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Menagoleague\Account\Services\AccountService;
 use App\Menagoleague\Account\Requests\AccountRequest;
 use App\Models\Competition;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AccountController extends Controller
@@ -41,5 +42,12 @@ class AccountController extends Controller
 
         return redirect(route('user.account'));
 
+    }
+
+    public function show(User $user)
+    {
+        return view('user.show', [
+            'user' => $user
+        ]);
     }
 }

@@ -27,6 +27,9 @@ Route::prefix('/account')->group(function () {
     Route::get('/', [App\Http\Controllers\AccountController::class, 'index'])
         ->name('user.account');
 
+    Route::get('/{user}', [App\Http\Controllers\AccountController::class, 'show'])
+        ->name('user.show');
+
     Route::PUT('/{id}', [App\Http\Controllers\AccountController::class, 'update'])
         ->name('account.update');
 });
@@ -37,8 +40,17 @@ Route::prefix('/office')->group(function () {
         ->name('office');
 });
 
-Route::prefix('/team')->group(function () {
+Route::prefix('/teams')->group(function () {
 
     Route::get('/', [App\Http\Controllers\TeamController::class, 'index'])
         ->name('team');
+
+    Route::get('/{team}', [App\Http\Controllers\TeamController::class, 'show'])
+        ->name('teams.show');
+});
+
+Route::prefix('/players')->group(function () {
+
+    Route::get('/{player}', [App\Http\Controllers\PlayerController::class, 'show'])
+        ->name('players.show');
 });

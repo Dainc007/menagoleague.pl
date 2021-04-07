@@ -1,0 +1,9 @@
+{{$player->name}}
+{{$player->device}}
+{{$player->nationality}}
+{{$player->contract_lenght}}
+{{$player->position}}
+{{$player->overall}}
+{{$player->age}}
+{{$player->wage}}
+{{$player->team->name}}

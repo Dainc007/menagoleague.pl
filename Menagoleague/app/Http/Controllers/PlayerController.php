@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Player;
 use Illuminate\Http\Request;
 
 class PlayerController extends Controller
@@ -43,9 +44,11 @@ class PlayerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Player $player)
     {
-        //
+        return view('player.show', [
+            'player' => $player
+        ]);
     }
 
     /**
