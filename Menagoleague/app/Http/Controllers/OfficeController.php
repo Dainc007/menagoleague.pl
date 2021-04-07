@@ -24,6 +24,8 @@ class OfficeController extends Controller
         return view('office.office',[
             'jobOffers' => Team::where('device', '=', auth()->user()->device)
             ->where('user_id', null)
+            ->orderBy('league_id', 'ASC')
+            ->orderBy('name', 'ASC')
             ->get(),
         ]);
     }
