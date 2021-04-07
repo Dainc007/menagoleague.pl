@@ -68,3 +68,15 @@ Route::prefix('/players')->group(function () {
     Route::get('/{player}', [App\Http\Controllers\PlayerController::class, 'show'])
         ->name('players.show');
 });
+
+Route::prefix('/articles')->group(function () {
+
+    Route::get('/{article}', [App\Http\Controllers\ArticleController::class, 'show'])
+        ->name('article.show');
+
+    Route::PUT('/{article}', [App\Http\Controllers\ArticleController::class, 'edit'])
+        ->name('article.edit');
+    
+    Route::get('/', [App\Http\Controllers\ArticleController::class, 'create'])
+        ->name('article.create');
+});
