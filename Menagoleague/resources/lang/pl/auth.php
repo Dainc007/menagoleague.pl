@@ -18,5 +18,6 @@ return [
     'confirm'  => 'Potwierdź hasło',
     'discord'  => 'Discord',
     'fb'       => 'www.facebook.com/',
+    'join'     => 'Dołącz',
 
 ];

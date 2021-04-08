@@ -29,6 +29,7 @@ return [
     'confirm'  => 'Confirm Your Password',
     'discord'  => 'Discord',
     'fb'       => 'www.facebook.com/',
+    'join'     => 'Join'
     
 
 ];
