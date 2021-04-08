@@ -7,7 +7,7 @@
     />
 @else
     <user-shield 
-        :team="'Bez klubu'"
+        :team=" '{{__('home.noTeam')}}' "
         :image="'{{ asset('storage/shields/5.png') }}'"
         :username="'{{ auth()->user()->name }}'"
         :overall="100"
