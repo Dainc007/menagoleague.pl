@@ -24,7 +24,7 @@ class LeagueTableFactory extends Factory
     public function definition()
     {
         return [
-            'competition_id' => $this->faker->numberBetween(1, 4),
+            'competition_id' => $this->faker->numberBetween(1, 15),
             'team_id' => $this->faker->numberBetween(1, Team::count())
         ];
     }
