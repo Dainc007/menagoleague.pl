@@ -37,10 +37,10 @@
                     {{ __('nav.mainNav.society') }}
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">{{ __('nav.mainNav.fbFanPage') }}</a>
-                        <a class="dropdown-item" href="#">{{ __('nav.mainNav.fbGroup') }}</a>
-                        <a class="dropdown-item" href="#">{{ __('nav.mainNav.discord') }}</a>
-                        <a class="dropdown-item" href="#">{{ __('nav.mainNav.admin') }}</a>
+                        <a class="dropdown-item" href="https://www.facebook.com/groups/230246767524306" target="_blank">{{ __('nav.mainNav.fbFanPage') }}</a>
+                        <a class="dropdown-item" href="https://www.facebook.com/MenagoLeague" target="_blank">{{ __('nav.mainNav.fbGroup') }}</a>
+                        <a class="dropdown-item" href="https://discord.gg/w73uDUjse8">{{ __('nav.mainNav.discord') }} </a>
+                        <a class="dropdown-item" href="#admin" target="_blank">{{ __('nav.mainNav.admin') }}</a>
                     </div>
                 </li>
 
