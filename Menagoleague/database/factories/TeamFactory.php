@@ -23,11 +23,18 @@ class TeamFactory extends Factory
      */
     public function definition()
     {
+        Team::insert([
+            'name' => $this->faker->company,
+            'device' => $this->faker->randomElement(User::AVAILABLE_DEVICES),
+            'user_id' => null,
+            'league_id' => rand(1, 3)
+        ]);
+
         return [
             'name' => $this->faker->company,
             'device' => $this->faker->randomElement(User::AVAILABLE_DEVICES),
-            'user_id' => $this->faker->unique()->numberBetween(1,User::count()),
-            'league_id' => $this->faker->numberBetween(1,League::count())
+            'user_id' => $this->faker->unique()->numberBetween(1, User::count()),
+            'league_id' => $this->faker->numberBetween(1, League::count())
         ];
     }
 }

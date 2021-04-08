@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\League;
 use App\Models\Role;
+use App\Models\Team;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
