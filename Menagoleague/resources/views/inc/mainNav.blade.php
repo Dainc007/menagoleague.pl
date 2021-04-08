@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
     <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}">
+        <a class="navbar-brand" href="{{ route('home') }}">
             {{ config('app.name', 'Menago League') }}
         </a>
 
@@ -13,7 +13,7 @@
             <ul class="navbar-nav mr-auto">
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}"> {{ __('nav.mainNav.whatAreWe') }}</a>
+                    <a class="nav-link" href="{{ route('welcome') }}"> {{ __('nav.mainNav.whatAreWe') }}</a>
                 </li>
 
                 <!-- Dropdown -->
