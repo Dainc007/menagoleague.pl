@@ -6,14 +6,14 @@
         <div class="col-md-8">
 
             <div class="card">
-                <div class="card-header">{{ __('Rejestracja') }}</div>
+                <div class="card-header">{{ __('auth.register') }}</div>
                 <div class="card-body">
 
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
                         <div class="form-group row">
-                            <label for="device" class="col-md-4 col-form-label text-md-right">{{ __('Wybierz Urządzenie*') }}</label>
+                            <label for="device" class="col-md-4 col-form-label text-md-right">{{ __('auth.device') }}</label>
 
                             <div class="col-md-6 justify-content-center d-flex">
 
@@ -38,7 +38,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nazwa uzytkownika*') }}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('auth.username') }}</label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" placeholder="GamerTag, PSN lub nick Origin" autofocus>
@@ -52,7 +52,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Adres E-Mail*') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('auth.email') }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
@@ -66,7 +66,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Hasło*') }}</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('auth.pass') }}</label>
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
@@ -80,7 +80,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Potwierdź hasło*') }}</label>
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('auth.confirm') }}</label>
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
@@ -88,7 +88,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="discord" class="col-md-4 col-form-label text-md-right">{{ __('Discord') }}</label>
+                            <label for="discord" class="col-md-4 col-form-label text-md-right">{{ __('auth.discord') }}</label>
 
                             <div class="col-md-6">
                                 <input id="discord" type="text" class="form-control @error('discord') is-invalid @enderror" name="discord" value="{{ old('discord') }}" placeholder="np: SnaggyDainc#3572" autocomplete="discord" autofocus>
@@ -96,7 +96,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="facebook" class="col-md-4 col-form-label text-md-right"><i>{{ __('www.facebook.com/') }}</i></label>
+                            <label for="facebook" class="col-md-4 col-form-label text-md-right"><i>{{ __('auth.fb') }}</i></label>
 
                             <div class="col-md-6">
                                 <input id="facebook" type="text" class="form-control @error('facebook') is-invalid @enderror" name="facebook" value="{{ old('facebook') }}" autocomplete="facebook">
@@ -106,7 +106,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Dołącz') }}
+                                    {{ __('auth.join') }}
                                 </button>
                             </div>
                         </div>
