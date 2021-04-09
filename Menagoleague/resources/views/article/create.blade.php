@@ -57,6 +57,12 @@
                 <label for="img">{{ __('articles.create.img') }}</label>
                 <input type="file" class="form-control-file" id="img" name="img">
             </div>
+
+            <div class="col-10 offset-1 py-1">
+                <label for="img">{{ __('articles.create.img') }}</label>
+                <input type="text" class="form-control" id="img" name="img" placeholder="link z chmury, np xboxdvr">
+            </div>
+
             <div class="col-10 offset-1 py-1">
                 <input type="submit" class="btn btn-success">
             </div>
