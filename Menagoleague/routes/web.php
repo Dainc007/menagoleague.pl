@@ -78,6 +78,12 @@ Route::prefix('/articles')->group(function () {
         ->name('article.show');
 
     Route::PUT('/{article}', [App\Http\Controllers\ArticleController::class, 'edit'])
-        ->name('article.edit')->middleware('administrator');;
+        ->name('article.edit')->middleware('administrator');
+    
+    Route::POST('/store', [App\Http\Controllers\ArticleController::class, 'store'])
+        ->name('article.store')->middleware('administrator');
+
+    Route::DELETE('/{article}', [App\Http\Controllers\ArticleController::class, 'delete'])
+        ->name('article.delete')->middleware('administrator');
 });
 

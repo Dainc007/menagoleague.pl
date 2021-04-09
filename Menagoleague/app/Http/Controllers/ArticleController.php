@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreArticleRequest;
 use App\Models\Article;
 use Illuminate\Http\Request;
 
@@ -33,9 +34,30 @@ class ArticleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreArticleRequest $request)
     {
-        //
+        if ($request->hasFile('img')) {
+
+                $imgName = $request['img']->getClientOriginalName();
+
+                $imgPath = $$request['img']->storeAs('/articles/images/', $imgName);
+
+                /* $img = new img;
+
+                $model->name = $photoName;
+                $model->galleryName = $galleryName;
+                $model->path = $path;
+                $model->save(); */    
+        }
+
+        return redirect(
+            route(
+                'article.show',
+                [
+                    'article' => Article::create($request->validated())
+                ]
+            )
+        );
     }
 
     /**

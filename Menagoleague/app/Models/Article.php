@@ -10,7 +10,7 @@ class Article extends Model
     use HasFactory;
 
     protected $fillable = [
-        'title', 'content', 'photoPath'
+        'title', 'content', 'img', 'device'
     ];
 }
 
