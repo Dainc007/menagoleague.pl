@@ -40,6 +40,7 @@ class DatabaseSeeder extends Seeder
             }
         }
 
+        \App\Models\Article::factory(10)->create();
         \App\Models\Team::factory(100)->create();
         \App\Models\Competition::factory(15)->create();
         \App\Models\LeagueTable::factory(10)->create();

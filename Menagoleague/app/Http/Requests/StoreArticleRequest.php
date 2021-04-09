@@ -26,7 +26,6 @@ class StoreArticleRequest extends FormRequest
         return [
             'title'     => 'required|string|min:3|max:100',
             'content'   => 'nullable|string|max:1000',
-            'img'       => 'required',
             'device'    => 'nullable',
         ];
     }
