@@ -1,7 +1,7 @@
 @if(auth()->user()->team)
     <user-shield 
         :team="'{{auth()->user()->team->name}}'"
-        :image='"{{ asset("storage/shields/ml.png") }} "'
+        :image='" {{ asset("storage/shields/" . auth()->user()->team->name . ".png")}}"'
         :username="'{{ auth()->user()->name }}'"
         :overall="100"
     />
