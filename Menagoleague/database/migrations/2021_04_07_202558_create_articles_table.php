@@ -17,6 +17,9 @@ class CreateArticlesTable extends Migration
             $table->id();
             $table->string('title', 100);
             $table->text('content');
+            $table->unsignedBigInteger('device_id')->nullable();
+
+            $table->foreign('device_id')->references('id')->on('device')->onDelete('CASCADE');
             $table->timestamps();
         });
     }

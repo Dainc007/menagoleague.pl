@@ -12,15 +12,6 @@ class User extends Authenticatable
     use HasFactory, Notifiable;
 
     /**
-     * User available devices.
-     */
-    public const AVAILABLE_DEVICES = [
-        'Xbox'   => 'Xbox',
-        'Playstation' => 'Playstation',
-        'PC' => 'PC'
-    ];
-
-    /**
      * The attributes that are mass assignable.
      *
      * @var array
@@ -53,11 +44,6 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
-    public static function getDevices(bool $keys = false)
-    {
-        return ($keys) ? array_keys(self::AVAILABLE_DEVICES) : array_values(self::AVAILABLE_DEVICES);
-    }
 
     public function roles()
     {

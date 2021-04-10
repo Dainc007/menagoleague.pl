@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Device;
 use App\Models\Player;
 use App\Models\User;
 use Illuminate\Database\Migrations\Migration;
@@ -17,7 +18,8 @@ class CreatePlayersTable extends Migration
     {
         Schema::create('players', function (Blueprint $table) {
             $table->id();
-            $table->enum('device', User::AVAILABLE_DEVICES);
+            $table->unsignedBigInteger('device_id')->nullable();
+            
             $table->string('name');
             $table->unsignedBigInteger('team_id')->nullable();
             $table->string('nationality');
@@ -31,6 +33,7 @@ class CreatePlayersTable extends Migration
             
             $table->timestamps();
 
+            $table->foreign('device_id')->references('id')->on('device')->onDelete('CASCADE');
             $table->foreign('team_id')->references('id')->on('teams')->onDelete('CASCADE')->nullable();
         });
     }
