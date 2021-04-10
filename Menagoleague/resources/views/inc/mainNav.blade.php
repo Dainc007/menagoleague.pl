@@ -94,12 +94,12 @@
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 
                         <a class="dropdown-item" href="{{ route('user.account') }}">
-                            {{ __('Ustawienia Konta') }}
+                            {{ __('nav.mainNav.settings') }}
                         </a>
 
                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                            {{ __('Wyloguj') }}
+                            {{ __('nav.mainNav.logout') }}
                         </a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
