@@ -17,7 +17,7 @@ class IsAdministrator
      */
     public function handle($request, Closure $next)
 {
-     if (Auth::user() &&  Auth::user()->administrator == 1) {
+     if (Auth::user() &&  Auth::user()->isAdministrator) {
             return $next($request);
      }
 

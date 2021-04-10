@@ -16,7 +16,6 @@
                             <label for="device" class="col-md-4 col-form-label text-md-right">{{ __('auth.device') }}</label>
 
                             <div class="col-md-6 justify-content-center d-flex">
-
                                 <div class="form-check form-check-inline">
                                     <input checked class="form-check-input" type="radio" name="device" id="xbox" value="xbox">
                                     <label class="form-check-label" for="xbox"><i class="fab fa-xbox"></i></label>
@@ -31,9 +30,6 @@
                                     <input class="form-check-input" type="radio" name="device" id="pc" value="pc">
                                     <label class="form-check-label" for="pc"><i class="fas fa-laptop"></i></label>
                                 </div>
-
-
-
                             </div>
                         </div>
 
