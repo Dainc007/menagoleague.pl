@@ -31,6 +31,13 @@ $ composer install
 
 $ php artisan serve
 
+1. Sklonowałem repozytorium na nowo
+2. rename env-example file to .env and set your local database name, password etc.
+3. php artisan generate:key
+4. php artisan storage:link
+
+5. You're good to go!
+
 ```
 
 
