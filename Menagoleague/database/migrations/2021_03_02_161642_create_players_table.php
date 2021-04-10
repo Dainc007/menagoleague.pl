@@ -18,10 +18,10 @@ class CreatePlayersTable extends Migration
     {
         Schema::create('players', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('device_id')->nullable();
             
             $table->string('name');
             $table->unsignedBigInteger('team_id')->nullable();
+            $table->unsignedBigInteger('device_id')->nullable();
             $table->string('nationality');
             $table->integer('wage')->default(Player::WAGE);
             $table->integer('contract_lenght')->default(0);
@@ -29,11 +29,11 @@ class CreatePlayersTable extends Migration
             $table->integer('overall');
             $table->integer('age');
             $table->string('real_team');
-            $table->unique(['name', 'device']);
+            $table->unique(['name', 'device_id']);
             
             $table->timestamps();
 
-            $table->foreign('device_id')->references('id')->on('device')->onDelete('CASCADE');
+            $table->foreign('device_id')->references('id')->on('devices')->onDelete('CASCADE');
             $table->foreign('team_id')->references('id')->on('teams')->onDelete('CASCADE')->nullable();
         });
     }

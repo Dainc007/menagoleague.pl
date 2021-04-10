@@ -22,9 +22,12 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('discord')->unique()->nullable();
             $table->string('facebook')->nullable();
-            $table->enum('device', User::getDevices());
+            $table->unsignedBigInteger('device_id')->nullable();
+    
             $table->rememberToken();
             $table->timestamps();
+
+            $table->foreign('device_id')->references('id')->on('devices')->onDelete('CASCADE');
 
         });
     }

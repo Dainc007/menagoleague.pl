@@ -9,6 +9,11 @@ class Device extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'id',
+        'device',
+    ];
+
     /**
      *  available devices.
      */
