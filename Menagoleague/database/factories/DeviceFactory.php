@@ -22,11 +22,7 @@ class DeviceFactory extends Factory
     public function definition()
     {
         return [
-            Device::insert([
-                ['name' => 'Xbox'],
-                ['name' => 'PC'],
-                ['name' => 'Playstation'],
-            ])
+
         ];
     }
 }

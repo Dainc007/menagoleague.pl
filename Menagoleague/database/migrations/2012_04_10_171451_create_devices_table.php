@@ -17,6 +17,7 @@ class CreateDevicesTable extends Migration
         Schema::create('devices', function (Blueprint $table) {
             $table->id();
             $table->enum('device', Device::AVAILABLE_DEVICES);
+            $table->timestamps();
         });
     }
 
