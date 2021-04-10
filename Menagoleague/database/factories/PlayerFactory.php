@@ -25,7 +25,7 @@ class PlayerFactory extends Factory
     {
         return [
             'name' => $this->faker->name,
-            'device' => $this->faker->randomElement(User::AVAILABLE_DEVICES),
+            'device_id' => $this->faker->numberBetween(1,3),
             'team_id' => $this->faker->numberBetween(1,Team::count()),
             'nationality' => $this->faker->country,
             'wage' => $this->faker->randomElement([5000,10000,3000,4000,7000,15000]),

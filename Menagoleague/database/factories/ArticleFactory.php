@@ -24,6 +24,7 @@ class ArticleFactory extends Factory
         return [
             'title' => $this->faker->sentence($this->faker->numberBetween(3, 6)),
             'content' => $this->faker->text($this->faker->numberBetween(250, 1000)),
+            'device_id' => $this->faker->numberBetween(1,3),
         ];
     }
 }
