@@ -21,7 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'device',
+        'device_id',
         'discord',
         'facebook',
     ];

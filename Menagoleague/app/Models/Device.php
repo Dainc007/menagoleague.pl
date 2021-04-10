@@ -23,8 +23,11 @@ class Device extends Model
         'PC' => 'PC'
     ];
 
-    public static function getDevices(bool $keys = false)
-    {
-        return ($keys) ? array_keys(self::AVAILABLE_DEVICES) : array_values(self::AVAILABLE_DEVICES);
+    public static function getDeviceId(string $device){
+
+        $userDevice = Device::where('device', $device)->first('id');
+
+        return $userDevice->id;
     }
+    
 }
