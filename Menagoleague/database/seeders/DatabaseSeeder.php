@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
     {
         \App\Models\User::factory(100)->create();
         \App\Models\Role::factory(4)->create();
+        \App\Models\Device::factory(1)->create();
 
         foreach (User::all() as $user) {
             DB::table('role_user')->insert([
