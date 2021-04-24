@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/test', [App\Http\Controllers\FixtureController::class, 'create'])->name('create');
+Route::get('/test', [App\Http\Controllers\PlayerController::class, 'import'])
+        ->name('players.import');
 
 Route::get('/', function () {
     return view('welcome', [
@@ -52,7 +53,6 @@ Route::prefix('/transfers')->group(function () {
 
     Route::get('/', [App\Http\Controllers\TransferController::class, 'index'])
         ->name('transfers');
-
 });
 
 Route::prefix('/office')->group(function () {
@@ -65,7 +65,6 @@ Route::prefix('/seasons')->group(function () {
 
     Route::get('/', [App\Http\Controllers\SeasonController::class, 'index'])
         ->name('season');
-
 });
 
 Route::prefix('/players')->group(function () {
@@ -84,11 +83,10 @@ Route::prefix('/articles')->group(function () {
 
     Route::PUT('/{article}', [App\Http\Controllers\ArticleController::class, 'edit'])
         ->name('article.edit')->middleware('administrator');
-    
+
     Route::POST('/store', [App\Http\Controllers\ArticleController::class, 'store'])
         ->name('article.store')->middleware('administrator');
 
     Route::DELETE('/{article}', [App\Http\Controllers\ArticleController::class, 'delete'])
         ->name('article.delete')->middleware('administrator');
 });
-

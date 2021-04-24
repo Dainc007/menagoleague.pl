@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Player extends Model
 {
-    
-    const WAGE = 5000;
-
     use HasFactory;
+
+    const WAGE = 5000;
+    const CONTRACT_LENGHT = 10;
 
     public function team()
     {

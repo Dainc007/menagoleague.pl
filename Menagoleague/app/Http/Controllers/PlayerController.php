@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Imports\PlayersImport;
 use App\Models\Player;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Maatwebsite\Excel\Facades\Excel;
 
 class PlayerController extends Controller
 {
@@ -84,4 +87,18 @@ class PlayerController extends Controller
     {
         //
     }
+
+        /**
+     * Import players from CSV file.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function import()
+    {
+        Excel::import(new PlayersImport, Storage::path('public/CSV/playersXbox.csv'));
+        return back();
+    }
+
+
 }
