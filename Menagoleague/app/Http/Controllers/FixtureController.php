@@ -3,17 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Team;
-
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 
-class OfficeController extends Controller
+class FixtureController extends Controller
 {
-
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -21,13 +15,7 @@ class OfficeController extends Controller
      */
     public function index()
     {
-        return view('office.office',[
-            'jobOffers' => Team::where('device_id', '=', auth()->user()->device)
-            ->where('user_id', null)
-            ->orderBy('league_id', 'ASC')
-            ->orderBy('name', 'ASC')
-            ->get(),
-        ]);
+        //
     }
 
     /**
@@ -37,7 +25,14 @@ class OfficeController extends Controller
      */
     public function create()
     {
-        //
+        $teams = Team::where('id', '<', 5)->get('name');
+
+        $pairs = Arr::crossJoin($teams, $teams);
+
+        $sorted = Arr::sort($pairs);
+
+        return $sorted;
+
     }
 
     /**

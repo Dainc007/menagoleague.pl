@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/test', [App\Http\Controllers\FixtureController::class, 'create'])->name('create');
+
 Route::get('/', function () {
     return view('welcome', [
         'articles' => Article::all()
