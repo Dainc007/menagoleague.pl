@@ -12,6 +12,20 @@ class Player extends Model
     const WAGE = 5000;
     const CONTRACT_LENGHT = 10;
 
+    protected $fillable = [
+        'id',
+        'name',
+        'nationality',
+        'age',
+        'team_id',
+        'device_id',
+        'wage',
+        'contract_lenght',
+        'position',
+        'overall',
+        'real_team',
+    ];
+
     public function team()
     {
         return $this->belongsTo(Team::class);
