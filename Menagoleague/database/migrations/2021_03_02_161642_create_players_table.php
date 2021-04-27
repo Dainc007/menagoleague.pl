@@ -18,7 +18,7 @@ class CreatePlayersTable extends Migration
     {
         Schema::create('players', function (Blueprint $table) {
             $table->id();
-            
+
             $table->string('name');
             $table->unsignedBigInteger('team_id')->nullable();
             $table->unsignedBigInteger('device_id')->nullable();
@@ -29,8 +29,7 @@ class CreatePlayersTable extends Migration
             $table->integer('overall');
             $table->integer('age');
             $table->string('real_team');
-            $table->unique(['name', 'device_id']);
-            
+            $table->unique(['name', 'real_team', 'overall', 'age', 'device_id']);
             $table->timestamps();
 
             $table->foreign('device_id')->references('id')->on('devices')->onDelete('CASCADE');

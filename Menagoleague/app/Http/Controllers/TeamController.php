@@ -84,4 +84,11 @@ class TeamController extends Controller
     {
         //
     }
+
+    public function import(int $deviceId = 1)
+    {
+        Excel::import(new PlayersImport, Storage::path('public/CSV/playersXbox.csv'));
+        Excel::import(new PlayersImport, Storage::path('public/CSV/playersPlaystation.csv'));
+        Excel::import(new PlayersImport, Storage::path('public/CSV/playersPC.csv'));
+    }
 }

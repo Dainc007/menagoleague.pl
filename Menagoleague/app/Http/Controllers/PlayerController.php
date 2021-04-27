@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Imports\PlayersImport;
+use App\Models\Device;
 use App\Models\Player;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -88,17 +89,16 @@ class PlayerController extends Controller
         //
     }
 
-        /**
+    /**
      * Import players from CSV file.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function import()
+    public function import(int $deviceId = 1)
     {
         Excel::import(new PlayersImport, Storage::path('public/CSV/playersXbox.csv'));
-        return back();
+        Excel::import(new PlayersImport, Storage::path('public/CSV/playersPlaystation.csv'));
+        Excel::import(new PlayersImport, Storage::path('public/CSV/playersPC.csv'));
     }
-
-
 }

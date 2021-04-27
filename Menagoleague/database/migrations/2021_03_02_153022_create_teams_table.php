@@ -19,9 +19,9 @@ class CreateTeamsTable extends Migration
             $table->id();
             $table->string('name');
             $table->unsignedBigInteger('user_id')->nullable()->unique();
-            $table->unsignedBigInteger('league_id');
+            $table->unsignedBigInteger('league_id')->nullable();
             $table->unsignedBigInteger('device_id')->nullable();
-            
+
             $table->unique(['name', 'device_id']);
             $table->timestamps();
 
