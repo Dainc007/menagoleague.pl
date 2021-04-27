@@ -1,0 +1,731 @@
+ID;Name;device_id
+1;Arsenal;3
+2;Aston Villa;3
+1808;Brighton & Hove Albion;3
+1796;Burnley;3
+5;Chelsea;3
+1799;Crystal Palace;3
+7;Everton;3
+144;Fulham;3
+8;Leeds United;3
+95;Leicester City;3
+9;Liverpool;3
+10;Manchester City;3
+11;Manchester United;3
+13;Newcastle United;3
+1794;Sheffield United;3
+17;Southampton;3
+18;Tottenham Hotspur;3
+109;West Bromwich Albion;3
+19;West Ham United;3
+110;Wolverhampton Wanderers;3
+69;AS Monaco;3
+1819;AS Saint-Étienne;3
+1530;Angers SCO;3
+110569;Dijon FCO;3
+59;FC Girondins de Bordeaux;3
+217;FC Lorient;3
+68;FC Metz;3
+71;FC Nantes;3
+65;LOSC Lille;3
+70;Montpellier HSC;3
+224;Nîmes Olympique;3
+72;OGC Nice;3
+66;Olympique Lyonnais;3
+219;Olympique de Marseille;3
+73;Paris Saint-Germain;3
+76;RC Strasbourg Alsace;3
+64;Racing Club de Lens;3
+378;Stade Brestois 29;3
+74;Stade Rennais FC;3
+379;Stade de Reims;3
+31;1. FC Köln;3
+1831;1. FC Union Berlin;3
+169;1. FSV Mainz 05;3
+32;Bayer 04 Leverkusen;3
+22;Borussia Dortmund;3
+23;Borussia Mönchengladbach;3
+159;DSC Arminia Bielefeld;3
+1824;Eintracht Frankfurt;3
+100409;FC Augsburg;3
+21;FC Bayern München;3
+34;FC Schalke 04;3
+166;Hertha BSC;3
+112172;RB Leipzig;3
+25;SC Freiburg;3
+38;SV Werder Bremen;3
+10029;TSG 1899 Hoffenheim;3
+36;VfB Stuttgart;3
+175;VfL Wolfsburg;3
+39;Atalanta;3
+112026;Benevento;3
+189;Bologna;3
+1842;Cagliari;3
+110734;Crotone;3
+110374;Fiorentina;3
+110556;Genoa;3
+206;Hellas Verona;3
+44;Inter;3
+45;Juventus;3
+46;Lazio;3
+47;Milan;3
+48;Napoli;3
+50;Parma;3
+52;Roma;3
+1837;Sampdoria;3
+111974;Sassuolo;3
+110741;Spezia;3
+54;Torino;3
+55;Udinese;3
+448;Athletic Club de Bilbao;3
+240;Atlético Madrid;3
+479;CA Osasuna;3
+1968;Cádiz CF;3
+463;Deportivo Alavés;3
+468;Elche CF;3
+241;FC Barcelona;3
+1860;Getafe CF;3
+110832;Granada CF;3
+1853;Levante UD;3
+450;RC Celta;3
+449;Real Betis;3
+243;Real Madrid;3
+457;Real Sociedad;3
+462;Real Valladolid CF;3
+467;SD Eibar;3
+110839;SD Huesca;3
+481;Sevilla FC;3
+461;Valencia CF;3
+483;Villarreal CF;3
+111019;Argentinos Juniors;3
+110394;Arsenal de Sarandí;3
+111708;Atlético Tucumán;3
+1877;Boca Juniors;3
+112965;Central Córdoba;3
+111707;Club Atlético Aldosivi;3
+110404;Club Atlético Banfield;3
+110406;Club Atlético Colón;3
+111711;Club Atlético Huracán;3
+110395;Club Atlético Lanús;3
+112670;Club Atlético Talleres;3
+111715;Club Atlético Tigre;3
+111710;Defensa y Justicia;3
+101083;Estudiantes de La Plata;3
+101084;Gimnasia y Esgrima La Plata;3
+111706;Godoy Cruz;3
+110093;Independiente;3
+110396;Newell's Old Boys;3
+110581;Patronato;3
+101085;Racing Club;3
+1876;River Plate;3
+110580;Rosario Central;3
+1013;San Lorenzo de Almagro;3
+111716;Unión de Santa Fe;3
+101088;Vélez Sarsfield;3
+111393;Adelaide United;3
+111395;Brisbane Roar;3
+111396;Central Coast Mariners;3
+114604;Macarthur FC;3
+112224;Melbourne City FC;3
+111397;Melbourne Victory;3
+111398;Newcastle Jets;3
+111399;Perth Glory;3
+111400;Sydney FC;3
+111766;Wellington Phoenix;3
+112427;Western Sydney Wanderers;3
+114023;Western United FC;3
+111821;FC Admira Wacker Mödling;3
+191;FC Red Bull Salzburg;3
+256;FK Austria Wien;3
+252;LASK Linz;3
+15009;SCR Altach;3
+254;SK Rapid Wien;3
+209;SK Sturm Graz;3
+112075;SKN St. Pölten;3
+780;SV Ried;3
+2017;TSV Hartberg;3
+15040;WSG Tirol;3
+111822;Wolfsberger AC;3
+675;Beerschot AC;3
+231;Club Brugge KV;3
+674;KAA Gent;3
+2013;KAS Eupen;3
+673;KRC Genk;3
+1750;KSV Cercle Brugge;3
+100081;KV Kortrijk;3
+110724;KV Mechelen;3
+682;KV Oostende;3
+100087;Oud-Heverlee Leuven;3
+229;RSC Anderlecht;3
+230;Royal Antwerp FC;3
+111560;Royal Excel Mouscron;3
+15005;SV Zulte-Waregem;3
+680;Sint-Truidense VV;3
+670;Sporting de Charleroi;3
+232;Standard de Liège;3
+110913;Waasland-Beveren;3
+112119;Atlético Clube Goianiense;3
+1035;Atlético Mineiro;3
+1598;Bahia;3
+517;Botafogo;3
+111059;Ceará Sporting Club;3
+1039;Club Athletico Paranaense;3
+111044;Coritiba;3
+1043;Flamengo;3
+567;Fluminense;3
+111052;Fortaleza;3
+111042;Goiás;3
+1629;Grêmio;3
+1048;Internacional;3
+115199;Oceânico FC;3
+383;Palmeiras;3
+1053;Santos;3
+598;São Paulo;3
+569;Vasco da Gama;3
+101097;Audax Italiano;3
+111327;CD Huachipato;3
+110980;Colo-Colo;3
+112705;Coquimbo Unido;3
+110975;Universidad Católica;3
+112535;Unión La Calera;3
+111768;Beijing Sinobo Guoan FC;3
+112165;Chongqing Dangdai Lifan FC SWM Team;3
+112378;Dalian YiFang FC;3
+111839;Guangzhou Evergrande Taobao FC;3
+112429;Guangzhou R&F FC;3
+112978;Hebei China Fortune FC;3
+111779;Henan Jianye FC;3
+112162;Jiangsu Suning FC;3
+112961;Qingdao Huanghai F.C.;3
+111724;Shandong Luneng TaiShan FC;3
+110955;Shanghai Greenland Shenhua FC;3
+112540;Shanghai SIPG FC;3
+111773;Shenzhen FC;3
+112985;Shijiazhuang Ever Bright F.C.;3
+111774;Tianjin TEDA FC;3
+112541;Wuhan Zall;3
+101099;América de Cali;3
+101100;Atlético Nacional;3
+101102;Deportivo Cali;3
+111723;Deportivo Pasto;3
+101103;Independiente Medellín;3
+101101;Junior FC;3
+101105;Millonarios FC;3
+211;Dinamo Zagreb;3
+266;SK Slavia Praha;3
+267;Sparta Praha;3
+110468;Viktoria Plzeň;3
+1446;AC Horsens;3
+820;Aalborg BK;3
+271;Aarhus GF;3
+269;Brøndby IF;3
+819;FC København;3
+1516;FC Midtjylland;3
+1788;FC Nordsjælland;3
+15001;Lyngby BK;3
+272;Odense Boldklub;3
+1786;Randers FC;3
+1447;SønderjyskE;3
+822;Vejle Boldklub;3
+110981;Barcelona Sporting Club;3
+114580;Delfín SC;3
+111331;El Nacional;3
+110984;Emelec;3
+112908;Independiente del Valle;3
+110986;LDU Quito;3
+110987;SD Aucas;3
+114581;Universidad Católica del Ecuador;3
+1932;Barnsley;3
+88;Birmingham City;3
+3;Blackburn Rovers;3
+1943;Bournemouth;3
+1925;Brentford;3
+1919;Bristol City;3
+1961;Cardiff City;3
+1800;Coventry City;3
+91;Derby County;3
+1939;Huddersfield Town;3
+1923;Luton Town;3
+12;Middlesbrough;3
+97;Millwall;3
+1792;Norwich City;3
+14;Nottingham Forest;3
+1801;Preston North End;3
+15;Queens Park Rangers;3
+1793;Reading;3
+1797;Rotherham United;3
+1807;Sheffield Wednesday;3
+1806;Stoke City;3
+1960;Swansea City;3
+1795;Watford;3
+1933;Wycombe Wanderers;3
+112259;AFC Wimbledon;3
+110313;Accrington Stanley;3
+1926;Blackpool;3
+1962;Bristol Rovers;3
+15015;Burton Albion;3
+89;Charlton Athletic;3
+121;Crewe Alexandra;3
+142;Doncaster Rovers;3
+112260;Fleetwood Town;3
+1802;Gillingham;3
+1952;Hull City;3
+94;Ipswich Town;3
+149;Lincoln City;3
+1798;Milton Keynes Dons;3
+1930;Northampton Town;3
+1951;Oxford United;3
+1938;Peterborough United;3
+1929;Plymouth Argyle;3
+1790;Portsmouth;3
+1955;Rochdale;3
+127;Shrewsbury;3
+106;Sunderland;3
+1934;Swindon Town;3
+1917;Wigan Athletic;3
+381;Barrow;3
+4;Bolton Wanderers;3
+1804;Bradford City;3
+1944;Cambridge United;3
+1480;Carlisle United;3
+1936;Cheltenham Town;3
+1935;Colchester United;3
+110890;Crawley Town;3
+143;Exeter City;3
+561;Forest Green Rovers;3
+92;Grimsby Town;3
+112222;Harrogate Town;3
+1958;Leyton Orient;3
+1940;Mansfield Town;3
+357;Morecambe;3
+112254;Newport County;3
+1920;Oldham Athletic;3
+1928;Port Vale;3
+113926;Salford City;3
+1949;Scunthorpe United;3
+1954;Southend United;3
+361;Stevenage;3
+15048;Tranmere Rovers;3
+1803;Walsall;3
+100325;HJK Helsinki;3
+614;AC Ajaccio;3
+57;AJ Auxerre;3
+1823;AS Nancy Lorraine;3
+1816;Amiens SC;3
+1813;Chamois Niortais Football Club;3
+1815;Clermont Foot 63;3
+294;ESTAC Troyes;3
+62;En Avant de Guingamp;3
+112627;FC Chambly Oise;3
+226;FC Sochaux-Montbéliard;3
+1805;Grenoble Foot 38;3
+212;La Berrichonne de Châteauroux;3
+1738;Le Havre AC;3
+111817;Paris FC;3
+110321;Pau FC;3
+111659;Rodez Aveyron Football;3
+210;Stade Malherbe Caen;3
+1809;Toulouse Football Club;3
+111276;USL Dunkerque;3
+110456;Valenciennes FC;3
+111235;1. FC Heidenheim 1846;3
+171;1. FC Nürnberg;3
+110500;Eintracht Braunschweig;3
+506;FC Erzgebirge Aue;3
+110329;FC St. Pauli;3
+110197;FC Würzburger Kickers;3
+110636;Fortuna Düsseldorf;3
+28;Hamburger SV;3
+485;Hannover 96;3
+576;Holstein Kiel;3
+1832;Karlsruher SC;3
+10030;SC Paderborn 07;3
+543;SSV Jahn Regensburg;3
+110502;SV Darmstadt 98;3
+110178;SV Sandhausen;3
+165;SpVgg Greuther Fürth;3
+160;VfL Bochum 1848;3
+487;VfL Osnabrück;3
+29;1. FC Kaiserslautern;3
+110588;1. FC Magdeburg;3
+523;1. FC Saarbrücken;3
+110679;Bayern München II;3
+27;FC Hansa Rostock;3
+111239;FC Ingolstadt 04;3
+110592;FSV Zwickau;3
+110482;Hallescher FC;3
+167;KFC Uerdingen 05;3
+1825;MSV Duisburg;3
+110501;SC Verl;3
+503;SG Dynamo Dresden;3
+110597;SV Meppen;3
+110532;SV Waldhof Mannheim;3
+492;SV Wehen Wiesbaden;3
+172;SpVgg Unterhaching;3
+33;TSV 1860 München;3
+114398;Türkgücü München;3
+1829;VfB Lübeck;3
+110645;Viktoria Köln;3
+278;AEK Athens;3
+280;Olympiacos CFP;3
+393;PAOK;3
+1884;Panathinaikos FC;3
+650;ADO Den Haag;3
+1906;AZ Alkmaar;3
+245;Ajax;3
+100628;FC Emmen;3
+1915;FC Groningen;3
+1908;FC Twente;3
+1903;FC Utrecht;3
+246;Feyenoord;3
+634;Fortuna Sittard;3
+100634;Heracles Almelo;3
+1914;PEC Zwolle;3
+247;PSV;3
+1905;RKC Waalwijk;3
+1913;SC Heerenveen;3
+100646;Sparta Rotterdam;3
+100651;VVV-Venlo;3
+1909;Vitesse;3
+1907;Willem II;3
+1369;Argentina;3
+1415;Australia;3
+1322;Austria;3
+1325;Belgium;3
+111451;Bolivia;3
+1370;Brazil;3
+1327;Bulgaria;3
+1395;Cameroon;3
+111455;Canada;3
+111459;Chile;3
+1413;China PR;3
+111109;Colombia;3
+1330;Czech Republic;3
+111112;Côte d'Ivoire;3
+1331;Denmark;3
+111465;Ecuador;3
+111130;Egypt;3
+1318;England;3
+1334;Finland;3
+1335;France;3
+1337;Germany;3
+1338;Greece;3
+1886;Hungary;3
+1341;Iceland;3
+111466;India;3
+1343;Italy;3
+1386;Mexico;3
+105035;Netherlands;3
+111473;New Zealand;3
+110081;Northern Ireland;3
+1352;Norway;3
+1375;Paraguay;3
+111108;Peru;3
+1353;Poland;3
+1354;Portugal;3
+1355;Republic of Ireland;3
+1356;Romania;3
+1357;Russia;3
+1359;Scotland;3
+1361;Slovenia;3
+111099;South Africa;3
+1362;Spain;3
+1363;Sweden;3
+1364;Switzerland;3
+1365;Turkey;3
+1387;United States;3
+1377;Uruguay;3
+111487;Venezuela;3
+1367;Wales;3
+111811;AC Monza;3
+190;Brescia;3
+192;Chievo Verona;3
+1746;Empoli;3
+347;Lecce;3
+112791;SPAL;3
+101148;Cerezo Osaka;3
+101150;FC Tokyo;3
+112093;Gamba Osaka;3
+112444;Hokkaido Consadole Sapporo;3
+101147;Kashima Antlers;3
+101145;Kashiwa Reysol;3
+111730;Kawasaki Frontale;3
+112092;Nagoya Grampus;3
+113183;Oita Trinita;3
+113160;Sagan Tosu;3
+113157;Sanfrecce Hiroshima;3
+101149;Shimizu S-Pulse;3
+113161;Shonan Bellmare;3
+111575;Urawa Red Diamonds;3
+112836;Vegalta Sendai;3
+101146;Vissel Kobe;3
+101151;Yokohama F. Marinos;3
+113197;Yokohama FC;3
+1476;Busan IPark;3
+2056;Daegu FC;3
+982;FC Seoul;3
+112115;Gangwon FC;3
+112258;GwangJu FC;3
+110765;Incheon United FC;3
+1477;Jeonbuk Hyundai Motors;3
+1474;Pohang Steelers;3
+2055;Sangju Sangmu FC;3
+981;Seongnam FC;3
+983;Suwon Samsung Bluewings;3
+1473;Ulsan Hyundai FC;3
+114577;Always Ready;3
+110967;Club Blooming;3
+110968;Club Bolívar;3
+110974;Jorge Wilstermann;3
+112667;Nacional Potosí;3
+110970;Oriente Petrolero;3
+112678;Atlético de San Luis;3
+1879;Club América;3
+101114;Club Atlas;3
+110781;Club León;3
+101121;Club Necaxa;3
+111678;Club Tijuana;3
+1878;Cruz Azul;3
+1882;Deportivo Toluca;3
+113134;FC Juárez;3
+1880;Guadalajara;3
+114899;Mazatlán FC;3
+1032;Monterrey;3
+110147;Pachuca;3
+110152;Puebla FC;3
+110150;Querétaro;3
+110144;Santos Laguna;3
+1970;Tigres U.A.N.L.;3
+1881;U.N.A.M.;3
+1755;Aalesunds FK;3
+918;FK Bodø/Glimt;3
+1463;FK Haugesund;3
+1524;IK Start;3
+113459;Kristiansund BK;3
+112420;Mjøndalen IF;3
+417;Molde FK;3
+1456;Odds BK;3
+298;Rosenborg BK;3
+919;SK Brann;3
+1757;Sandefjord Fotball;3
+112199;Sarpsborg 08 FF;3
+917;Stabæk Fotball;3
+922;Strømsgodset IF;3
+300;Viking FK;3
+920;Vålerenga Fotball;3
+111329;Club Guaraní;3
+111008;Club Libertad;3
+112671;Nacional Asunción;3
+101108;Olimpia Asunción;3
+114575;River Plate Asunción;3
+112080;Sol de América;3
+111006;Sportivo Luqueño;3
+111010;Alianza Lima;3
+114598;Club Atlético Grau;3
+112659;Cusco FC;3
+114582;Deportivo Binacional;3
+111334;Melgar FBC;3
+114511;Sport Huancayo;3
+110747;Cracovia;3
+420;Górnik Zabrze;3
+110745;Jagiellonia Białystok;3
+873;Lech Poznań;3
+111091;Lechia Gdańsk;3
+1871;Legia Warszawa;3
+111086;Piast Gliwice;3
+111087;Podbeskidzie Bielsko-Biała;3
+110746;Pogoń Szczecin;3
+114326;Raków Częstochowa;3
+114004;Stal Mielec;3
+112511;Warta Poznań;3
+1873;Wisła Kraków;3
+1569;Wisła Płock;3
+110749;Zagłębie Lubin;3
+111092;Śląsk Wrocław;3
+1898;Boavista FC;3
+1891;CD Nacional;3
+112516;CD Tondela;3
+1893;Clube Sport Marítimo;3
+1892;FC Paços de Ferreira;3
+236;FC Porto;3
+112809;Famalicão;3
+489;Farense;3
+1888;Gil Vicente FC;3
+1900;Moreirense FC;3
+1889;Os Belenenses;3
+10031;Portimonense SC;3
+744;Rio Ave FC;3
+1896;SC Braga;3
+234;SL Benfica;3
+1438;Santa Clara;3
+237;Sporting CP;3
+1887;Vitória Guimarães;3
+305;Bohemian FC;3
+422;Cork City;3
+445;Derry City;3
+837;Dundalk;3
+111131;Finn Harps;3
+306;Shamrock Rovers;3
+834;Shelbourne FC;3
+563;Sligo Rovers;3
+423;St. Patrick's Athletic;3
+753;Waterford FC;3
+113391;Academica Clinceni;3
+112847;Astra Giurgiu;3
+110816;CFR Cluj;3
+113387;Chindia Târgovişte;3
+100757;Dinamo Bucureşti;3
+100759;FC Argeș;3
+110752;FC Botoşani;3
+114147;FC Hermannstadt;3
+113180;FC Viitorul;3
+113182;FC Voluntari;3
+100761;FCSB (Steaua);3
+112637;Gaz Metan Mediaş;3
+110815;Politehnica Iaşi;3
+113378;Sepsi OSK;3
+110750;UTA Arad;3
+308;Universitatea Craiova;3
+100765;Lokomotiv Moscow;3
+315;PFC CSKA Moscow;3
+100767;Spartak Moscow;3
+113058;Abha Club;3
+113345;Al Adalah;3
+112387;Al Ahli;3
+112389;Al Faisaly;3
+112390;Al Fateh;3
+113057;Al Fayha;3
+113222;Al Hazem;3
+605;Al Hilal;3
+607;Al Ittihad;3
+112139;Al Nassr;3
+112392;Al Raed;3
+111674;Al Shabab;3
+112393;Al Taawoun;3
+112408;Al Wehda;3
+113217;Damac FC;3
+112096;Ettifaq FC;3
+77;Aberdeen;3
+78;Celtic;3
+181;Dundee United;3
+184;Hamilton Academical FC;3
+81;Hibernian;3
+82;Kilmarnock;3
+621;Livingston FC;3
+83;Motherwell;3
+86;Rangers FC;3
+631;Ross County FC;3
+100804;St. Johnstone FC;3
+100805;St. Mirren;3
+110929;Kaizer Chiefs;3
+110930;Orlando Pirates;3
+100831;AD Alcorcón;3
+1854;Albacete BP;3
+100852;C.D. Castellón;3
+100888;CD Leganés;3
+110831;CD Lugo;3
+110069;CD Mirandés;3
+260;CD Tenerife;3
+15021;CE Sabadell FC;3
+110065;CF Fuenlabrada;3
+100851;FC Cartagena;3
+110062;Girona FC;3
+573;Málaga CF;3
+452;RCD Espanyol;3
+453;RCD Mallorca;3
+480;Rayo Vallecano;3
+110827;Real Oviedo;3
+459;Real Sporting de Gijón;3
+244;Real Zaragoza;3
+2023;SD Ponferradina;3
+1861;UD Almería;3
+472;UD Las Palmas;3
+476;UD Logroñés;3
+433;AIK;3
+711;BK Häcken;3
+710;Djurgårdens IF;3
+112169;Falkenbergs FF;3
+708;Hammarby IF;3
+432;Helsingborgs IF;3
+700;IF Elfsborg;3
+319;IFK Göteborg;3
+702;IFK Norrköping;3
+113458;IK Sirius;3
+1439;Kalmar FF;3
+320;Malmö FF;3
+112072;Mjällby AIF;3
+113743;Varbergs BoIS;3
+705;Örebro SK;3
+113173;Östersunds FK;3
+900;BSC Young Boys;3
+896;FC Basel 1893;3
+1862;FC Lausanne-Sport;3
+10032;FC Lugano;3
+897;FC Luzern;3
+110770;FC Sion;3
+898;FC St. Gallen;3
+286;FC Vaduz;3
+894;FC Zürich;3
+324;Servette FC;3
+113142;Alanyaspor;3
+741;Antalyaspor;3
+101033;Atiker Konyaspor;3
+749;BB Erzurumspor;3
+327;Beşiktaş JK;3
+1457;Denizlispor;3
+111117;Fatih Karagümrük S.K.;3
+326;Fenerbahçe SK;3
+325;Galatasaray SK;3
+110776;Gazişehir Gaziantep F.K.;3
+101025;Gençlerbirliği SK;3
+101026;Göztepe SK;3
+101028;Hatayspor;3
+111339;Kasimpaşa SK;3
+101020;Kayserispor;3
+101007;MKE Ankaragücü;3
+101014;Medipol Başakşehir FK;3
+101041;Sivasspor;3
+436;Trabzonspor;3
+113259;Yeni Malatyaspor;3
+101037;Çaykur Rizespor;3
+111701;Al Ain FC;3
+112885;Atlanta United;3
+693;Chicago Fire;3
+694;Colorado Rapids;3
+687;Columbus Crew SC;3
+688;DC United;3
+113149;FC Cincinnati;3
+695;FC Dallas;3
+698;Houston Dynamo;3
+112893;Inter Miami;3
+697;LA Galaxy;3
+112996;Los Angeles FC;3
+111138;Minnesota United FC;3
+111139;Montreal Impact;3
+114162;Nashville SC;3
+691;New England Revolution;3
+112828;New York City FC;3
+689;New York Red Bulls;3
+112606;Orlando City SC;3
+112134;Philadelphia Union;3
+111140;Portland Timbers;3
+111065;Real Salt Lake;3
+111928;San Jose Earthquakes;3
+111144;Seattle Sounders FC;3
+696;Sporting Kansas City;3
+111651;Toronto FC;3
+101112;Vancouver Whitecaps FC;3
+101047;Dynamo Kyiv;3
+101059;Shakhtar Donetsk;3
+111002;Centro Atlético Fénix;3
+114024;Club Plaza Colonia;3
+111326;Liverpool Fútbol Club;3
+111325;Nacional de Montevideo;3
+101110;Peñarol;3
+112184;River Plate Montevideo;3
+110992;AC Mineros de Guayana;3
+112916;Aragua FC;3
+110989;Caracas FC;3
+111332;Estudiantes de Mérida;3
+114623;Llaneros de Guanare;3
+112912;Zamora FC;3

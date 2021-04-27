@@ -2,13 +2,15 @@
 
 namespace Database\Seeders;
 
+use App\Imports\PlayersImport;
+use App\Imports\TeamsImport;
 use App\Models\Device;
 use App\Models\League;
-use App\Models\Role;
-use App\Models\Team;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
+use Maatwebsite\Excel\Facades\Excel;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,14 +20,14 @@ class DatabaseSeeder extends Seeder
      * @return void
      */
     public function run()
-    {   
-        foreach(Device::AVAILABLE_DEVICES as $device) {
+    {
+        foreach (Device::AVAILABLE_DEVICES as $device) {
             Device::insert(['device' => $device]);
         }
 
         \App\Models\User::factory(100)->create();
         \App\Models\Role::factory(4)->create();
-        
+
         foreach (User::all() as $user) {
             DB::table('role_user')->insert([
                 'user_id' => $user->id,
@@ -46,11 +48,19 @@ class DatabaseSeeder extends Seeder
         }
 
         \App\Models\Article::factory(10)->create();
-        \App\Models\Team::factory(100)->create();
+
+        Excel::import(new TeamsImport, Storage::path('public/CSV/teamsXbox.csv'));
+        Excel::import(new TeamsImport, Storage::path('public/CSV/teamsPlaystation.csv'));
+        Excel::import(new TeamsImport, Storage::path('public/CSV/teamsPC.csv'));
+
         \App\Models\Competition::factory(15)->create();
         \App\Models\LeagueTable::factory(10)->create();
         \App\Models\Fixture::factory(100)->create();
-        \App\Models\Player::factory(1000)->create();
+
+        Excel::import(new PlayersImport, Storage::path('public/CSV/playersXbox.csv'));
+        Excel::import(new PlayersImport, Storage::path('public/CSV/playersPlaystation.csv'));
+        Excel::import(new PlayersImport, Storage::path('public/CSV/playersPC.csv'));
+
         \App\Models\GameStats::factory(100)->create();
     }
 }

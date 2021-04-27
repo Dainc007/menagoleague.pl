@@ -25,14 +25,14 @@ class TeamFactory extends Factory
     {
         Team::insert([
             'name' => $this->faker->company,
-            'device_id' => $this->faker->numberBetween(1,3),
+            'device_id' => $this->faker->numberBetween(1, 3),
             'user_id' => null,
             'league_id' => rand(1, 3)
         ]);
 
         return [
             'name' => $this->faker->company,
-            'device_id' => $this->faker->numberBetween(1,3),
+            'device_id' => $this->faker->numberBetween(1, 3),
             'user_id' => $this->faker->unique()->numberBetween(1, User::count()),
             'league_id' => $this->faker->numberBetween(1, League::count())
         ];

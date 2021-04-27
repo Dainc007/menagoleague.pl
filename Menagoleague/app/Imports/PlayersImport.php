@@ -2,12 +2,10 @@
 
 namespace App\Imports;
 
-use App\Models\Device;
 use App\Models\Player;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithCustomCsvSettings;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
-use Maatwebsite\Excel\Imports\HeadingRowFormatter;
 
 class PlayersImport implements ToModel, WithHeadingRow, WithCustomCsvSettings
 {

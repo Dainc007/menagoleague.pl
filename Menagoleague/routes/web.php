@@ -15,9 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/test', [App\Http\Controllers\PlayerController::class, 'import'])
-        ->name('players.import');
-
 Route::get('/', function () {
     return view('welcome', [
         'articles' => Article::all()

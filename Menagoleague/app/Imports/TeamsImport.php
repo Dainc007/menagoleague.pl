@@ -2,7 +2,6 @@
 
 namespace App\Imports;
 
-use App\Models\Device;
 use App\Models\Team;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithCustomCsvSettings;
