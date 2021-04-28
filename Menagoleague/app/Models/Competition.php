@@ -14,17 +14,17 @@ class Competition extends Model
         'Completed' => 'completed',
     ];
 
-    public function teams()
+    public function getTeams()
     {
         return $this->belongsToMany(Team::class);
     }
 
-    public function leagueTable()
+    public function getLeagueTable()
     {
         return $this->hasOne(LeagueTable::class);
     }
 
-    public function fixtures()
+    public function getFixtures()
     {
         return $this->hasMany(Fixture::class);
     }

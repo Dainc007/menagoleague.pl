@@ -9,12 +9,12 @@ class GameStats extends Model
 {
     use HasFactory;
 
-    public function fixture()
+    public function getFixture()
     {
         return $this->belongsTo(Fixture::class);
     }
 
-    public function player()
+    public function getPlayer()
     {
         return $this->belongsTo(Player::class);
     }

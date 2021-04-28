@@ -13,5 +13,3 @@ class Article extends Model
         'title', 'content', 'img', 'device'
     ];
 }
-
-

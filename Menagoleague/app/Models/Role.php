@@ -18,7 +18,7 @@ class Role extends Model
         'User', 'Manager', 'Moderator', 'Administrator'
     ];
 
-    public function user()
+    public function getUsers()
     {
         return $this->belongsToMany(User::class);
     }

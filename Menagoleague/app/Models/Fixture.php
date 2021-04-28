@@ -9,17 +9,17 @@ class Fixture extends Model
 {
     use HasFactory;
 
-    public function competition()
+    public function getCompetition()
     {
         return $this->belongsTo(Competition::class);
     }
 
-    public function teams()
+    public function getTeams()
     {
         return $this->belongsToMany(Team::class);
     }
 
-    public function gameStats()
+    public function getGameStats()
     {
         return $this->hasMany(GameStats::class);
     }

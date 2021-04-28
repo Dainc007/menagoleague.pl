@@ -9,7 +9,7 @@ class LeagueTable extends Model
 {
     use HasFactory;
 
-    public function competition()
+    public function getCompetition()
     {
         return $this->belongsTo(Competition::class);
     }

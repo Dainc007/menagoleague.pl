@@ -23,11 +23,10 @@ class Device extends Model
         'PC' => 'PC'
     ];
 
-    public static function getDeviceId(string $device){
-
+    public static function getDeviceId(string $device)
+    {
         $userDevice = Device::where('device', $device)->first('id');
 
         return $userDevice->id;
     }
-    
 }

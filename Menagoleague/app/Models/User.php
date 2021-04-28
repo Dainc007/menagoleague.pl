@@ -2,14 +2,14 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable;
+    use HasFactory;
+    use Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -45,26 +45,28 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function roles()
+    public function getRoles()
     {
         return $this->belongsToMany(Role::class);
     }
 
-    public function team()
+    public function getTeam()
     {
         return $this->hasOne(Team::class);
     }
 
-    public function messages()
+    public function getMessages()
     {
         return $this->hasMany(Message::class);
     }
 
-    public function isAdministrator() {
+    public function isAdministrator()
+    {
         return $this->roles()->where('name', 'Administrator');
-     }
+    }
 
-     public function isManager() {
+    public function isManager()
+    {
         return $this->roles()->where('name', 'Manager')->exists();
-     }
+    }
 }

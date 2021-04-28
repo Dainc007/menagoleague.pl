@@ -9,29 +9,28 @@ class Team extends Model
 {
     use HasFactory;
 
-    public function user()
+    public function getManager()
     {
         return $this->belongsTo(User::class);
     }
 
-    public function players()
+    public function getPlayers()
     {
         return $this->hasMany(Player::class);
     }
 
-    public function league()
+    public function getLeague()
     {
         return $this->belongsTo(League::class);
     }
 
-    public function competitions()
+    public function getCompetitions()
     {
         return $this->belongsToMany(Competition::class);
     }
 
-    public function fixtures()
+    public function getFixtures()
     {
         return $this->hasMany(Fixture::class);
     }
-
 }
