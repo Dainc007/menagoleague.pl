@@ -7,3 +7,7 @@
 {{$player->age}}
 {{$player->wage}}
 {{$player->team->name}}
+{{$player->personality->fame}}
+{{$player->personality->greed}}
+{{$player->personality->satisfaction}}
+{{$player->personality->leadership}}

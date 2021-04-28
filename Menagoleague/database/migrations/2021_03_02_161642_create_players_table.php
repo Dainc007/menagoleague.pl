@@ -22,6 +22,7 @@ class CreatePlayersTable extends Migration
             $table->string('name');
             $table->unsignedBigInteger('team_id')->nullable();
             $table->unsignedBigInteger('device_id')->nullable();
+            $table->unsignedBigInteger('personality_id')->nullable();
             $table->string('nationality');
             $table->integer('wage')->default(Player::WAGE);
             $table->integer('contract_lenght')->default(0);
@@ -33,6 +34,7 @@ class CreatePlayersTable extends Migration
             $table->timestamps();
 
             $table->foreign('device_id')->references('id')->on('devices')->onDelete('CASCADE');
+            $table->foreign('personality_id')->references('id')->on('personalities')->onDelete('CASCADE');
             $table->foreign('team_id')->references('id')->on('teams')->onDelete('CASCADE')->nullable();
         });
     }

@@ -31,6 +31,11 @@ class Player extends Model
         return $this->belongsTo(Team::class);
     }
 
+    public function personality()
+    {
+        return $this->belongsTo(Personality::class);
+    }
+
     public function gameStats()
     {
         return $this->hasMany(GameStats::class);
