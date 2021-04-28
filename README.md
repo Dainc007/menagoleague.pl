@@ -33,7 +33,7 @@ $ php artisan serve
 
 1. clone repository
 2. rename env-example file to .env and set your local database name, password etc.
-3. php artisan generate:key
+3. php artisan key:generate
 4. php artisan storage:link
 5. php artisan migrate:fresh --seed
 
