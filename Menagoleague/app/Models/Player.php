@@ -9,8 +9,8 @@ class Player extends Model
 {
     use HasFactory;
 
-    public const WAGE = 5000;
-    public const CONTRACT_LENGHT = 10;
+    const WAGE = 5000;
+    const CONTRACT_LENGHT = 10;
 
     protected $fillable = [
         'id',
@@ -26,12 +26,12 @@ class Player extends Model
         'real_team',
     ];
 
-    public function getTeam()
+    public function team()
     {
         return $this->belongsTo(Team::class);
     }
 
-    public function getGameStats()
+    public function gameStats()
     {
         return $this->hasMany(GameStats::class);
     }

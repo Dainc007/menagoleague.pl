@@ -31,7 +31,7 @@ class League extends Model
         'league&cup', 'league$cup',
     ];
 
-    public function getTeams()
+    public function teams()
     {
         return $this->hasMany(Team::class);
     }

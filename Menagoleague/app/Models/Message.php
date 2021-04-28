@@ -10,9 +10,8 @@ class Message extends Model
     use HasFactory;
 
     public const AVAILABLE_STATUSES = [
-        'Sent'    => 'sent',
-        'Read'    => 'read',
-        'Recived' => 'recived'
+        'Sent'   => 'sent',
+        'Read' => 'read',
     ];
 
     protected $fillable = [
@@ -21,15 +20,14 @@ class Message extends Model
         'title',
         'from',
         'to',
-        'status',
     ];
 
-    public function getSentMessages()
+    public function fromUser()
     {
-        return $this->belongsTo(User::class, 'from');
+        return $this->belongsTo(User::class , 'from');
     }
 
-    public function getRecivedMessages()
+    public function ToUser()
     {
         return $this->belongsTo(User::class, 'to');
     }
