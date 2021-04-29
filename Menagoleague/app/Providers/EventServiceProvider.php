@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Models\Player;
 use App\Models\User;
+use App\Observers\PlayerObserver;
 use App\Observers\UserObserver;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
@@ -32,9 +34,13 @@ class EventServiceProvider extends ServiceProvider
         $this->observeModels();
     }
 
-    protected function observeModels() {
+    protected function observeModels()
+    {
         User::observe(
             UserObserver::class
+        );
+        Player::observe(
+            PlayerObserver::class
         );
     }
 }
