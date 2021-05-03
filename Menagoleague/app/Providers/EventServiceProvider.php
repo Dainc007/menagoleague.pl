@@ -39,6 +39,7 @@ class EventServiceProvider extends ServiceProvider
         User::observe(
             UserObserver::class
         );
+
         Player::observe(
             PlayerObserver::class
         );

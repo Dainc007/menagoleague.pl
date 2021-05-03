@@ -33,7 +33,7 @@ class Player extends Model
 
     public function personality()
     {
-        return $this->belongsTo(Personality::class);
+        return $this->belongsTo(Personality::class, 'id');
     }
 
     public function gameStats()

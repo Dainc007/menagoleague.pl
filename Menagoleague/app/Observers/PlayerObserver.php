@@ -7,7 +7,7 @@ use App\Models\Personality;
 
 class PlayerObserver
 {
-    public function created(Player $player)
+    public function creating(Player $player)
     {
         Personality::insert([
             'satisfaction'  => Personality::PLAYER_SATISFACTION,
