@@ -9,7 +9,8 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable;
+    use HasFactory;
+    use Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -60,11 +61,13 @@ class User extends Authenticatable
         return $this->hasMany(Message::class);
     }
 
-    public function isAdministrator() {
+    public function isAdministrator()
+    {
         return $this->roles()->where('name', 'Administrator');
-     }
+    }
 
-     public function isManager() {
+    public function isManager()
+    {
         return $this->roles()->where('name', 'Manager')->exists();
-     }
+    }
 }

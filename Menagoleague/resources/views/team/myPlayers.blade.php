@@ -5,9 +5,9 @@
         {{$player->name}}
         {{$player->position}}
         {{$player->overall}}
+        {{$player->pivot->contract_expires}}
     </a>
 </p>
-
 @endforeach
 
 @else
