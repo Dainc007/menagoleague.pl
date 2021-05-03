@@ -31,7 +31,7 @@ class Player extends Model
         return $this->belongsTo(Team::class);
     }
 
-    public function contracts()
+    public function teams()
     {
         return $this->belongsToMany(Team::class)->withPivot('contract_expires', 'contract_sign_at');
     }

@@ -25,9 +25,9 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::prefix('/account')->group(function () {
+Route::prefix('/users')->group(function () {
 
-    Route::get('/', [App\Http\Controllers\AccountController::class, 'index'])
+    Route::get('/account', [App\Http\Controllers\AccountController::class, 'index'])
         ->name('user.account');
 
     Route::get('/{user}', [App\Http\Controllers\AccountController::class, 'show'])

@@ -5,6 +5,7 @@
         {{$player->name}}
         {{$player->position}}
         {{$player->overall}}
+        {{$player->pivot->contract_sign_at}}
         {{$player->pivot->contract_expires}}
     </a>
 </p>

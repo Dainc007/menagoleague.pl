@@ -56,6 +56,11 @@ class User extends Authenticatable
         return $this->hasOne(Team::class);
     }
 
+    public function teams()
+    {
+        return $this->belongsToMany(Team::class)->withPivot('contract_sign_at', 'contract_expires');
+    }
+
     public function messages()
     {
         return $this->hasMany(Message::class);

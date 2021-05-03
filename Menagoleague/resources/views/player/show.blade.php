@@ -19,6 +19,6 @@
 @endif
 
 Kontrakty:
-@foreach($player->contracts as $team)
+@foreach($player->teams as $team)
 <p>{{$team->name}} {{$team->pivot->contract_sign_at}} - {{$team->pivot->contract_expires}}</p>
 @endforeach
