@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\League;
 use App\Models\Team;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
@@ -15,7 +16,7 @@ class FixtureController extends Controller
      */
     public function index()
     {
-        //
+        return League::all('region');
     }
 
     /**
@@ -32,7 +33,6 @@ class FixtureController extends Controller
         $sorted = Arr::sort($pairs);
 
         return $sorted;
-
     }
 
     /**

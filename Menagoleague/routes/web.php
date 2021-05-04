@@ -87,3 +87,9 @@ Route::prefix('/articles')->group(function () {
     Route::DELETE('/{article}', [App\Http\Controllers\ArticleController::class, 'delete'])
         ->name('article.delete')->middleware('administrator');
 });
+
+Route::prefix('/admin')->group(function () {
+
+    Route::get('/', [App\Http\Controllers\FixtureController::class, 'index'])
+        ->name('fixture');
+});

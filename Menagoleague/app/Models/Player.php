@@ -27,10 +27,10 @@ class Player extends Model
         'real_team',
     ];
 
-    /*     public function team()
+    public function team()
     {
         return $this->belongsTo(Team::class);
-    } */
+    }
 
     public function teams()
     {
