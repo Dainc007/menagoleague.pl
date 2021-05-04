@@ -9,8 +9,9 @@ class Player extends Model
 {
     use HasFactory;
 
-    const WAGE = 5000;
-    const CONTRACT_LENGHT = 10;
+    public const WAGE = 5000;
+    public const CONTRACT_LENGHT = 10;
+    public const AVAILABLE_ROLES = ['future_first_11', 'bench', 'important', 'key'];
 
     protected $fillable = [
         'id',
@@ -26,14 +27,19 @@ class Player extends Model
         'real_team',
     ];
 
-    public function team()
+    /*     public function team()
     {
         return $this->belongsTo(Team::class);
-    }
+    } */
 
     public function teams()
     {
-        return $this->belongsToMany(Team::class)->withPivot('contract_expires', 'contract_sign_at');
+        return $this->belongsToMany(Team::class)->withPivot(
+            'contract_expires',
+            'contract_sign_at',
+            'player_role',
+            'wage',
+        )->orderByPivot('contract_expires', 'DESC');
     }
 
     public function personality()

@@ -16,7 +16,12 @@ class Team extends Model
 
     public function players()
     {
-        return $this->belongsToMany(Player::class)->withPivot('contract_expires', 'contract_sign_at');
+        return $this->belongsToMany(Player::class)->withPivot(
+            'contract_expires',
+            'contract_sign_at',
+            'player_role',
+            'wage',
+        )->wherePivot('contract_expires', '>', now());
     }
 
     public function league()

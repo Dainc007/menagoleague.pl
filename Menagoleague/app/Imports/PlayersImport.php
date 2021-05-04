@@ -24,8 +24,6 @@ class PlayersImport implements ToModel, WithHeadingRow, WithCustomCsvSettings
                 'age' => $row['age'],
                 'real_team' => $row['real_team'],
                 'device_id' => $row['device'],
-                'wage' => Player::WAGE,
-                'contract_lenght' => Player::CONTRACT_LENGHT,
             ]);
     }
 
