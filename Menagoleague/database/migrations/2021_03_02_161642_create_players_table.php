@@ -21,8 +21,6 @@ class CreatePlayersTable extends Migration
             $table->unsignedBigInteger('team_id')->nullable();
             $table->unsignedBigInteger('device_id')->nullable();
             $table->string('nationality');
-            $table->integer('wage')->default(Player::WAGE);
-            $table->integer('contract_lenght')->default(0);
             $table->string('position');
             $table->integer('overall');
             $table->integer('age');
