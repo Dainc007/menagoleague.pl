@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Team;
-
 use Illuminate\Http\Request;
 
 class OfficeController extends Controller
@@ -21,12 +20,12 @@ class OfficeController extends Controller
      */
     public function index()
     {
-        return view('office.office',[
-            'jobOffers' => Team::where('device_id', '=', auth()->user()->device)
-            ->where('user_id', null)
-            ->orderBy('league_id', 'ASC')
-            ->orderBy('name', 'ASC')
-            ->get(),
+        return view('office.office', [
+            'jobOffers' => Team::where('device_id', '=', auth()->user()->device_id)
+                ->where('user_id', null)
+                ->orderBy('league_id', 'ASC')
+                ->orderBy('name', 'ASC')
+                ->simplePaginate(10),
         ]);
     }
 
