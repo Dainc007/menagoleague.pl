@@ -9,6 +9,10 @@ class Competition extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'id', 'status', 'league_id'
+    ];
+
     public const AVAILABLE_STATUSES = [
         'Active'   => 'active',
         'Completed' => 'completed',
@@ -19,13 +23,18 @@ class Competition extends Model
         return $this->belongsToMany(Team::class);
     }
 
-    public function leagueTable()
+    public function leagueTables()
     {
-        return $this->hasOne(LeagueTable::class);
+        return $this->hasMany(LeagueTable::class);
     }
 
     public function fixtures()
     {
         return $this->hasMany(Fixture::class);
+    }
+
+    public function league()
+    {
+        return $this->belongsTo(League::class);
     }
 }

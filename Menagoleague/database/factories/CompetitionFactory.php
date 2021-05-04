@@ -23,6 +23,7 @@ class CompetitionFactory extends Factory
     {
         return [
             'status' => $this->faker->randomElement(Competition::AVAILABLE_STATUSES),
+            'league_id' => $this->faker->numberBetween(1, 5),
         ];
     }
 }

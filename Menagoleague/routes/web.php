@@ -93,3 +93,15 @@ Route::prefix('/admin')->group(function () {
     Route::get('/', [App\Http\Controllers\FixtureController::class, 'index'])
         ->name('fixture');
 });
+
+Route::prefix('/leagues')->group(function () {
+
+    Route::get('/{league}', [App\Http\Controllers\LeagueController::class, 'show'])
+        ->name('league.show');
+});
+
+Route::prefix('/competitions')->group(function () {
+
+    Route::get('/{competition}', [App\Http\Controllers\CompetitionController::class, 'show'])
+        ->name('competition.show');
+});

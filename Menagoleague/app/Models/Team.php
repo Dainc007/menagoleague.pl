@@ -24,13 +24,8 @@ class Team extends Model
         return $this->belongsTo(League::class);
     }
 
-    public function competitions()
+    public function leagueTables()
     {
-        return $this->belongsToMany(Competition::class);
-    }
-
-    public function fixtures()
-    {
-        return $this->hasMany(Fixture::class);
+        return $this->hasMany(League::class);
     }
 }

@@ -11,6 +11,11 @@ class LeagueTable extends Model
 
     public function competition()
     {
-        return $this->belongsTo(Competition::class);
+        return $this->hasOne(Competition::class);
+    }
+
+    public function teams()
+    {
+        return $this->belongsToMany(Team::class);
     }
 }
