@@ -10,7 +10,7 @@ class Competition extends Model
     use HasFactory;
 
     protected $fillable = [
-        'id', 'status', 'league_id'
+        'id', 'status', 'league_id', 'start', 'end'
     ];
 
     public const AVAILABLE_STATUSES = [

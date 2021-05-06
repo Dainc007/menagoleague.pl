@@ -16,7 +16,7 @@ class CreateCompetitionsTable extends Migration
     {
         Schema::create('competitions', function (Blueprint $table) {
             $table->id();
-            $table->enum('status', Competition::AVAILABLE_STATUSES);
+            $table->enum('status', Competition::AVAILABLE_STATUSES)->default('active');
             $table->foreignId('league_id')->constrained();
             $table->timestamp('start')->nullable();
             $table->timestamp('end')->nullable();

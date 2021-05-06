@@ -90,8 +90,8 @@ Route::prefix('/articles')->group(function () {
 
 Route::prefix('/admin')->group(function () {
 
-    Route::get('/', [App\Http\Controllers\FixtureController::class, 'index'])
-        ->name('fixture');
+    Route::get('/', [App\Http\Controllers\AdminController::class, 'index'])
+        ->name('admin.index');
 });
 
 Route::prefix('/leagues')->group(function () {
@@ -102,6 +102,15 @@ Route::prefix('/leagues')->group(function () {
 
 Route::prefix('/competitions')->group(function () {
 
+    Route::get('/', [App\Http\Controllers\CompetitionController::class, 'index'])
+        ->name('competition.index');
+
+    Route::get('/create', [App\Http\Controllers\CompetitionController::class, 'create'])
+        ->name('competition.create')->middleware('administrator');
+
     Route::get('/{competition}', [App\Http\Controllers\CompetitionController::class, 'show'])
         ->name('competition.show');
+
+    Route::post('/store', [App\Http\Controllers\CompetitionController::class, 'store'])
+        ->name('competition.store');
 });

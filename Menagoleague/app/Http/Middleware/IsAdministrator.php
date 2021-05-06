@@ -16,11 +16,11 @@ class IsAdministrator
      * @return mixed
      */
     public function handle($request, Closure $next)
-{
-     if (Auth::user() &&  Auth::user()->isAdministrator) {
+    {
+        if (Auth::user() &&  Auth::user()->isAdministrator()) {
             return $next($request);
-     }
+        }
 
-    return redirect('/');
-}
+        return redirect('/');
+    }
 }

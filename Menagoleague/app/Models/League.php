@@ -28,7 +28,7 @@ class League extends Model
     public const AVAILABLE_TYPES = [
         'league'   => 'league',
         'cup' => 'cup',
-        'league&cup', 'league$cup',
+        'league&cup' => 'league&cup',
     ];
 
     public function teams()
@@ -38,6 +38,6 @@ class League extends Model
 
     public function competitions()
     {
-        return $this->belongsToMany(Competition::class);
+        return $this->hasMany(Competition::class);
     }
 }
