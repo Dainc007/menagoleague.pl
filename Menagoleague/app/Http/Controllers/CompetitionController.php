@@ -54,7 +54,7 @@ class CompetitionController extends Controller
         $competition->league_id = $leagueId;
         $competition->save();
 
-        return back(200);
+        return back();
     }
 
     /**

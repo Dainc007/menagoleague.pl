@@ -19,7 +19,11 @@ oraz od kiedy do kiedy trwały -->
 </p>
 
 <p>Terminarz:
+    @if(count($competition->fixtures) > 0)
     @foreach($competition->fixtures as $row)
     {{$row}}
     @endforeach
+    @else
+    Nie został jeszcze wygenerowany
+    @endif
 </p>

@@ -2,8 +2,10 @@
 
 namespace App\Providers;
 
+use App\Models\Competition;
 use App\Models\Player;
 use App\Models\User;
+use App\Observers\CompetitionObserver;
 use App\Observers\PlayerObserver;
 use App\Observers\UserObserver;
 use Illuminate\Auth\Events\Registered;
@@ -42,6 +44,10 @@ class EventServiceProvider extends ServiceProvider
 
         Player::observe(
             PlayerObserver::class
+        );
+
+        Competition::observe(
+            CompetitionObserver::class
         );
     }
 }

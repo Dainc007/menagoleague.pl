@@ -16,7 +16,7 @@ class FixtureController extends Controller
      */
     public function index()
     {
-        return League::all('region');
+        
     }
 
     /**
