@@ -1,7 +1,3 @@
-<!-- Co powinienem widzieć wchodząc na widok rozgrywek? -->
-<!-- Na pewno tabelę rozgrywek i terminarz rozgrywek, oraz co to za rozgrywki, jaka liga
-oraz od kiedy do kiedy trwały -->
-
 <h6>Liga:
     {{$competition->league->region}}
     {{$competition->league->type}}
@@ -23,6 +19,8 @@ oraz od kiedy do kiedy trwały -->
     @foreach($competition->fixtures as $row)
     {{$row}}
     @endforeach
+    @elseif(auth()->user() && auth()->user()->isAdministrator())
+    @include('fixture.create')
     @else
     Nie został jeszcze wygenerowany
     @endif

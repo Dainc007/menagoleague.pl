@@ -113,4 +113,13 @@ Route::prefix('/competitions')->group(function () {
 
     Route::post('/store', [App\Http\Controllers\CompetitionController::class, 'store'])
         ->name('competition.store');
+
+    Route::prefix('/fixtures')->group(function () {
+
+        Route::get('/create/{competition}', [App\Http\Controllers\FixtureController::class, 'create'])
+        ->name('fixture.create');
+
+        Route::post('/store', [App\Http\Controllers\FixtureController::class, 'store'])
+        ->name('fixture.store');
+    });
 });
