@@ -10,13 +10,15 @@ class CompetitionObserver
 {
     public function created(Competition $competition)
     {
-        $teams = Team::where('league_id', $competition->league_id)->pluck('id');
+        if ($competition->league->type === 'league') {
+            $teams = Team::where('league_id', $competition->league_id)->pluck('id');
 
-        foreach ($teams as $team) {
-            $leagueTable = new LeagueTable();
-            $leagueTable->competition_id = $competition->id;
-            $leagueTable->team_id = $team;
-            $leagueTable->save();
+            foreach ($teams as $team) {
+                $leagueTable = new LeagueTable();
+                $leagueTable->competition_id = $competition->id;
+                $leagueTable->team_id = $team;
+                $leagueTable->save();
+            }
         }
     }
 }
