@@ -119,7 +119,7 @@ Route::prefix('/competitions')->group(function () {
         Route::get('/create/{competition}', [App\Http\Controllers\FixtureController::class, 'create'])
         ->name('fixture.create');
 
-        Route::post('/store', [App\Http\Controllers\FixtureController::class, 'store'])
+        Route::post('/store/{competition}', [App\Http\Controllers\FixtureController::class, 'store'])
         ->name('fixture.store');
     });
 });

@@ -9,6 +9,18 @@ class Fixture extends Model
 {
     use HasFactory;
 
+    public const HOUR = '22:00';
+
+    protected $fillable = [
+        'id',
+        'competition_id',
+        'host_id',
+        'visitor_id',
+        'host_goals',
+        'visitor_goals',
+        'hour'
+    ];
+
     public function competition()
     {
         return $this->belongsTo(Competition::class);

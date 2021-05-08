@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Competition;
+use App\Models\Fixture;
 use App\Models\League;
 use App\Models\Team;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 
@@ -26,12 +28,22 @@ class FixtureController extends Controller
      */
     public function create(Competition $competition)
     {
-        header('Content-Type: text/plain');
+    }
 
-        $totalTeams = 10;
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Competition $competition, Request $request)
+    {
+        /* header('Content-Type: text/plain'); */
+
         $maxTrials = 10_000_000;
         $start = time();
-
+        $startingDate = $request['start'];
+        $date = Carbon::createFromFormat('Y-m-d', $startingDate);
         $teams = Team::where('league_id', $competition->league_id)->pluck('id');
         $teams = $teams->all();
 
@@ -108,31 +120,31 @@ class FixtureController extends Controller
             $meetings
         );
 
-        echo "```\n";
-        printf('Liczba prób: %d%s', $trial, "\n");
-        echo "\n";
-        printf('Czas: %ds%s', time() - $start, "<br>");
-        echo "\n";
+        Competition::where('id', $competition->id)->update(['start' => $date]);
+
         foreach ($meetings as $round => $matches) {
-            printf('Kolejka #%d%s', $round + 1, "<br>");
+            if ($date->dayOfWeek == 0) {
+                $date->next('Wednesday');
+            } else {
+                $date->next('Sunday');
+            }
+
             foreach ($matches as $index => $teams) {
                 [$teamA, $teamB] = $teams;
-                printf('%d. %s vs. %s%s', $index + 1, $teamA, $teamB, "<br>");
-            }
-            echo "\n";
-        }
-        echo "```\n";
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
+                $fixture = new Fixture();
+                $fixture->date = $date;
+                $fixture->competition_id = $competition->id;
+                $fixture->host_id =  $teamA;
+                $fixture->visitor_id = $teamB;
+                $fixture->date = $date;
+                $fixture->save();
+            }
+        }
+
+        Competition::where('id', $competition->id)->update(['end' => $date]);
+
+        return back();
     }
 
     /**
