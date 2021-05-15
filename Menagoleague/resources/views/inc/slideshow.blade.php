@@ -11,7 +11,7 @@
         </div>
 
         <div class="col-lg-4 bg-success">
-            <img src="{{ asset('storage/shields/20.png') }}">
+            <iframe src="https://discord.com/widget?id=785081091710517268&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
         </div>
     </div>
 </div>
