@@ -38,8 +38,6 @@ class FixtureController extends Controller
      */
     public function store(Competition $competition, Request $request)
     {
-        /* header('Content-Type: text/plain'); */
-
         $maxTrials = 10_000_000;
         $start = time();
         $startingDate = $request['start'];
