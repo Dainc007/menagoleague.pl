@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Team;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class OfficeController extends Controller
 {
@@ -26,6 +27,7 @@ class OfficeController extends Controller
                 ->orderBy('league_id', 'ASC')
                 ->orderBy('name', 'ASC')
                 ->simplePaginate(10),
+            'user' => Auth::user(),
         ]);
     }
 

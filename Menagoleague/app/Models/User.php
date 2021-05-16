@@ -6,11 +6,19 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class User extends Authenticatable
 {
     use HasFactory;
     use Notifiable;
+
+    public const RIVAL_STATUSES = [
+        'sent', 'accepted', 'rejected'
+    ];
+
+    public const MAX_USER_RIVALS = 5;
 
     /**
      * The attributes that are mass assignable.
@@ -61,6 +69,18 @@ class User extends Authenticatable
         return $this->belongsToMany(Team::class)->withPivot('contract_sign_at', 'contract_expires');
     }
 
+    public function rivals()
+    {
+        return  $this->belongsToMany(User::class, 'rival_user', 'user_id', 'rival_id')
+            ->wherePivot('status', 'accepted')
+            ->withTimestamps();
+    }
+
+    public function addRival(User $user)
+    {
+        return $this->rivals()->attach($user->id);
+    }
+
     public function messages()
     {
         return $this->hasMany(Message::class);
@@ -74,5 +94,11 @@ class User extends Authenticatable
     public function isManager()
     {
         return $this->roles()->where('name', 'Manager')->exists();
+    }
+
+    public function getUsersByDeviceId(): array
+    {
+        $allUsers = User::where('device_id', Auth::user()->device_id)->pluck('name')->toArray();
+        return $allUsers;
     }
 }
