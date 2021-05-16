@@ -3,17 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class TutorialController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+
+    public function invite(Request $request)
     {
-        //
+        DB::table('tutorials')->insert([
+            'user_id'  => Auth::user()->id,
+            'rival_id' => $request['rival'],
+        ]);
+
+        return back()->with('message', 'Zaproszenie zostało wysłane');
     }
 
     /**

@@ -5,7 +5,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRivalUserTable extends Migration
+class CreateTutorialsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,11 +14,14 @@ class CreateRivalUserTable extends Migration
      */
     public function up()
     {
-        Schema::create('rival_user', function (Blueprint $table) {
+        Schema::create('tutorials', function (Blueprint $table) {
+            $table->id();
             $table->foreignId('user_id')->constrained();
             $table->unsignedBigInteger('rival_id');
-            $table->enum('status', USER::AVAILABLE_STATUSES);
+            $table->enum('status', User::AVAILABLE_STATUSES)->default('sent');
             $table->unique(['user_id', 'rival_id']);
+            $table->string('message')->nullable();
+            $table->unsignedBigInteger('raport')->nullable();
 
             $table->foreign('rival_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
@@ -32,6 +35,6 @@ class CreateRivalUserTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rival_user');
+        Schema::dropIfExists('tutorials');
     }
 }

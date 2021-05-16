@@ -14,7 +14,7 @@ class User extends Authenticatable
     use HasFactory;
     use Notifiable;
 
-    public const RIVAL_STATUSES = [
+    public const AVAILABLE_STATUSES = [
         'sent', 'accepted', 'rejected'
     ];
 
@@ -96,9 +96,16 @@ class User extends Authenticatable
         return $this->roles()->where('name', 'Manager')->exists();
     }
 
-    public function getUsersByDeviceId(): array
+    public function getUsersByDeviceId()
     {
-        $allUsers = User::where('device_id', Auth::user()->device_id)->pluck('name')->toArray();
+        $allUsers = User::where('device_id', Auth::user()->device_id)->select('name', 'id')
+            ->orderBy('name', 'ASC')
+            ->get();
         return $allUsers;
+    }
+
+    public function isTutorial()
+    {
+        return  $this->belongsTo(User::class);
     }
 }

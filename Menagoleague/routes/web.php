@@ -122,4 +122,10 @@ Route::prefix('/competitions')->group(function () {
         Route::post('/store/{competition}', [App\Http\Controllers\FixtureController::class, 'store'])
         ->name('fixture.store');
     });
+
+    Route::prefix('/tutorial')->group(function () {
+
+        Route::post('/invite', [App\Http\Controllers\TutorialController::class, 'invite'])
+        ->name('tutorial.invite');
+    });
 });
