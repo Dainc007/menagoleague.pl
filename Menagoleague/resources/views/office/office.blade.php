@@ -4,6 +4,7 @@
 
 @section('content')
 
+@include('office.userRivals')
 @include('office.jobOffers')
 
 @endsection
