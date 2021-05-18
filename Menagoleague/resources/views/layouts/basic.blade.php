@@ -19,10 +19,10 @@
 
 <body>
     <main>
-        @include('sweetalert::alert')
         @yield('content')
     </main>
     @include('inc.footer')
+    @include('sweetalert::alert')
 </body>
 
 </html>

@@ -1,4 +1,11 @@
 {{ session()->get('message') ?? '' }}
+
+<h6>Rywale</h6>
+
+@foreach($user->rivals as $userRvial)
+{{$userRvial->name}}
+@endforeach
+
 <form action="{{route('rival.invite') }}" method="POST">
     <select name="rivalId" class="custom-select">
         @foreach($user->getUsersByDeviceId() as $username)
@@ -10,10 +17,6 @@
     @csrf
     @method('POST')
 </form>
-<h6>Rywale</h6>
-@foreach($user->rivals as $userRvial)
-{{$userRvial->name}}
-@endforeach
 
 <h6>Otrzymane Zaproszenia</h6>
 @foreach($user->rivalsInvitations as $invitation)
