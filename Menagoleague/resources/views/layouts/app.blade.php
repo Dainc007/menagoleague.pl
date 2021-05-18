@@ -19,7 +19,6 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
     <style>
         .user-info__logo img {
             max-width: 80px;
@@ -57,6 +56,7 @@
 </head>
 
 <body>
+@include('sweetalert::alert')
     <div id="app">
     @include('inc.mainNav')
         <main class="py-4">

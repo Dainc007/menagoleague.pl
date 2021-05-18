@@ -2,16 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class RivalController extends Controller
 {
     public function invite(Request $request)
     {
         Auth::user()->rivals()->attach($request['rivalId']);
+        Alert::success('Success Title', 'Success Message');
+
         return back()->with('message', 'Zaproszenie zostało wysłane');
     }
 
