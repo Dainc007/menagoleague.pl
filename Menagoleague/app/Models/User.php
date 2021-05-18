@@ -2,12 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 
 class User extends Authenticatable
 {
@@ -54,9 +52,18 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    /* Relations */
+
     public function roles()
     {
-        return $this->belongsToMany(Role::class);
+        return $this->belongsToMany(Role::class)
+            ->withTimestamps();
+    }
+
+    public function rivals()
+    {
+        return $this->belongsToMany(User::class, 'rival_user', 'user_id', 'rival_id')
+            ->withTimestamps();
     }
 
     public function team()
@@ -69,22 +76,17 @@ class User extends Authenticatable
         return $this->belongsToMany(Team::class)->withPivot('contract_sign_at', 'contract_expires');
     }
 
-    public function rivals()
-    {
-        return  $this->belongsToMany(User::class, 'rival_user', 'user_id', 'rival_id')
-            ->wherePivot('status', 'accepted')
-            ->withTimestamps();
-    }
-
-    public function addRival(User $user)
-    {
-        return $this->rivals()->attach($user->id);
-    }
-
     public function messages()
     {
         return $this->hasMany(Message::class);
     }
+
+    public function isTutorial()
+    {
+        return  $this->belongsTo(User::class);
+    }
+
+    /* Extra Functions */
 
     public function isAdministrator()
     {
@@ -104,8 +106,47 @@ class User extends Authenticatable
         return $allUsers;
     }
 
-    public function isTutorial()
+    /* Rivals */
+
+    public function rivalsOfMine()
     {
-        return  $this->belongsTo(User::class);
+        return $this->belongsToMany(User::class, 'rival_user', 'user_id', 'rival_id')
+            ->wherePivot('status', 'accepted');
+    }
+
+    public function rivalOf()
+    {
+        return $this->belongsToMany(User::class, 'rival_user', 'rival_id', 'user_id')
+            ->wherePivot('status', 'accepted');
+    }
+
+    public function rivalsInvitations()
+    {
+        return $this->belongsToMany(User::class, 'rival_user', 'rival_id', 'user_id')
+            ->wherePivot('status', 'sent')
+            ->withPivot('id');
+    }
+
+    public function getRivalsAttribute()
+    {
+        if (!array_key_exists('rivals', $this->relations)) {
+            $this->loadRivals();
+        }
+
+        return $this->getRelation('rivals');
+    }
+
+    protected function loadRivals()
+    {
+        if (!array_key_exists('rivals', $this->relations)) {
+            $rivals = $this->mergeRivals();
+
+            $this->setRelation('rivals', $rivals);
+        }
+    }
+
+    protected function mergeRivals()
+    {
+        return $this->rivalsOfMine->merge($this->rivalOf);
     }
 }

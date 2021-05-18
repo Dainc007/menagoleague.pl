@@ -35,6 +35,15 @@ Route::prefix('/users')->group(function () {
 
     Route::PUT('/{id}', [App\Http\Controllers\AccountController::class, 'update'])
         ->name('account.update');
+
+    Route::prefix('/rivals')->group(function () {
+
+        Route::post('/invite', [App\Http\Controllers\RivalController::class, 'invite'])
+            ->name('rival.invite');
+
+        Route::post('/store/{id}', [App\Http\Controllers\RivalController::class, 'respond'])
+            ->name('rival.respond');
+    });
 });
 
 Route::prefix('/teams')->group(function () {
@@ -117,15 +126,15 @@ Route::prefix('/competitions')->group(function () {
     Route::prefix('/fixtures')->group(function () {
 
         Route::get('/create/{competition}', [App\Http\Controllers\FixtureController::class, 'create'])
-        ->name('fixture.create');
+            ->name('fixture.create');
 
         Route::post('/store/{competition}', [App\Http\Controllers\FixtureController::class, 'store'])
-        ->name('fixture.store');
+            ->name('fixture.store');
     });
 
     Route::prefix('/tutorial')->group(function () {
 
         Route::post('/invite', [App\Http\Controllers\TutorialController::class, 'invite'])
-        ->name('tutorial.invite');
+            ->name('tutorial.invite');
     });
 });
