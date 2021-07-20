@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Competition;
 use App\Models\League;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class CompetitionController extends Controller
 {
@@ -17,9 +18,9 @@ class CompetitionController extends Controller
     {
         return view('competition.index', [
             'competitions' => Competition::where('status', 'active')
-            ->orderBy('league_id', 'ASC')
-            ->orderBy('id', 'DESC')
-            ->get(),
+                ->orderBy('league_id', 'ASC')
+                ->orderBy('id', 'DESC')
+                ->get(),
         ]);
     }
 
@@ -50,10 +51,13 @@ class CompetitionController extends Controller
             ->where('level', $request['level'])
             ->value('id');
 
-        $competition = new Competition();
-        $competition->league_id = $leagueId;
-        $competition->save();
+        if ($leagueId == null) {
+            Alert::error('OOPS!', 'Something went wrong, try again.');
+            return back();
+        }
 
+        (new Competition(['league_id' => $leagueId]))->save();
+        Alert::success('Success', 'Competition Created');
         return back();
     }
 

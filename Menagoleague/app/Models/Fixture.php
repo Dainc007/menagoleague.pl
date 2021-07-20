@@ -9,7 +9,9 @@ class Fixture extends Model
 {
     use HasFactory;
 
-    public const HOUR = '22:00';
+    public const HOUR           = '22:00';
+    public const WEEKDAY        = 'Wednesday';
+    public const WEEKEND_DAY    = 'Sunday';
 
     protected $fillable = [
         'id',
@@ -18,7 +20,8 @@ class Fixture extends Model
         'visitor_id',
         'host_goals',
         'visitor_goals',
-        'hour'
+        'date',
+        'hour',
     ];
 
     public function competition()

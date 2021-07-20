@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Fixture;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -21,12 +22,12 @@ class CreateFixturesTable extends Migration
             $table->integer('host_goals')->nullable();
             $table->integer('visitor_goals')->nullable();
             $table->date('date')->nullable();
+            $table->time('hour')->default(Fixture::HOUR);
             $table->timestamps();
 
             $table->foreign('competition_id')->references('id')->on('competitions')->onDelete('CASCADE');
             $table->foreign('host_id')->references('id')->on('teams')->onDelete('CASCADE');
             $table->foreign('visitor_id')->references('id')->on('teams')->onDelete('CASCADE');
-
         });
     }
 
@@ -40,4 +41,3 @@ class CreateFixturesTable extends Migration
         Schema::dropIfExists('fixtures');
     }
 }
-

@@ -47,7 +47,7 @@ class ArticleController extends Controller
                 $model->name = $photoName;
                 $model->galleryName = $galleryName;
                 $model->path = $path;
-                $model->save(); */    
+                $model->save(); */ 
         }
 
         return redirect(
