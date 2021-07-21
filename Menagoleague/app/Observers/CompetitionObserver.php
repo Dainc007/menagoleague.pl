@@ -14,10 +14,10 @@ class CompetitionObserver
             $teams = Team::where('league_id', $competition->league_id)->pluck('id');
 
             foreach ($teams as $team) {
-                $leagueTable = new LeagueTable();
-                $leagueTable->competition_id = $competition->id;
-                $leagueTable->team_id = $team;
-                $leagueTable->save();
+                (new LeagueTable([
+                    'competition_id' => $competition->id,
+                    'team_id'        => $team,
+                ]))->save();
             }
         }
     }

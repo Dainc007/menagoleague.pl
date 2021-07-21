@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Personality;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -14,12 +15,13 @@ class CreatePersonalitiesTable extends Migration
     public function up()
     {
         Schema::create('personalities', function (Blueprint $table) {
-            $table->id();
-            $table->integer('satisfaction')->default(rand(1, 100));
+            $table->foreignId('player_id')->constrained();
             $table->integer('greed')->default(rand(1, 100));
             $table->integer('ambitions')->default(rand(1, 100));
             $table->integer('fame')->default(rand(1, 100));
             $table->integer('leadership')->default(rand(1, 100));
+            $table->integer('loyalty')->default(rand(1, 100));
+            $table->enum('specialTrait', Personality::AVAILABLE_TRAITS);
         });
     }
 

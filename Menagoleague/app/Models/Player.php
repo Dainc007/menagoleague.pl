@@ -10,7 +10,6 @@ class Player extends Model
     use HasFactory;
 
     public const WAGE = 5000;
-    public const CONTRACT_LENGHT = 10;
     public const AVAILABLE_ROLES = ['future_first_11', 'bench', 'important', 'key'];
 
     protected $fillable = [

@@ -9,14 +9,16 @@ class Personality extends Model
 {
     use HasFactory;
 
-    public const PLAYER_SATISFACTION = 100;
+    public const AVAILABLE_TRAITS = [
+        'leader', 'star', 'team_player', 'bench_player', 'none', 'tenant', 'impulsive', 'fancy'
+    ];
 
     protected $fillable = [
         'player_id',
-        'satisfaction',
         'greed',
         'fame',
-        'leadership'
+        'leadership',
+        'specialTrait',
     ];
 
     public function player()

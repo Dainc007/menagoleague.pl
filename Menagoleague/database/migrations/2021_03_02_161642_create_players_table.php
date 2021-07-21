@@ -29,7 +29,6 @@ class CreatePlayersTable extends Migration
             $table->timestamps();
 
             $table->foreign('device_id')->references('id')->on('devices')->onDelete('CASCADE');
-            $table->foreign('id')->references('id')->on('personalities')->onDelete('CASCADE');
             $table->foreign('team_id')->references('id')->on('teams')->onDelete('CASCADE')->nullable();
         });
     }

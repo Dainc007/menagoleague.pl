@@ -19,6 +19,7 @@ class CreatePlayerTeam extends Migration
             $table->foreignId('team_id')->constrained();
             $table->integer('wage')->default(Player::WAGE);
             $table->enum('player_role', Player::AVAILABLE_ROLES);
+
             $table->timestamp('contract_sign_at');
             $table->timestamp('contract_expires');
         });
