@@ -2,16 +2,16 @@ Druzyna
 {{$team->name}}
 {{$team->device_id}}
 
-Manager
-{{$team->user->name}}
+Manager:
+@if($team->user) {{$team->user->name}} @else('Brak') @endif
 
 Rozgrywki
-{{$team->league->region}}{{$team->league->level}}
-
+@if($team->league) {{$team->league->region}}{{$team->league->level}}
 <p>
     Aktualny sezon:
     {{$team->league->competitions}}
 </p>
+@endif
 
 Skład
 @foreach($team->players as $player)
