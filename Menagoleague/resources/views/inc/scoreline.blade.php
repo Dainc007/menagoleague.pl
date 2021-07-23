@@ -1,4 +1,4 @@
-<div class="container py-3 scoreline d-flex flex-row overflow-auto" id="scoreline">
+<div class="container py-1 scoreline d-flex flex-row overflow-auto" id="scoreline">
 
     @for($i = 1; $i<=20; $i++) <div class="d-flex flex-column  align-items-center">
 

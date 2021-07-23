@@ -46,7 +46,7 @@
 <body>
     <div id="app">
         @include('inc.mainNav')
-        <main class="py-4">
+        <main class="py-2">
             @if(Auth::check())
             <div class="container-fluid top-bar">
                 <div>
