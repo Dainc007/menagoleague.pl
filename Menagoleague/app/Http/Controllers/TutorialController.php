@@ -2,31 +2,53 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tutorial;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class TutorialController extends Controller
 {
 
     public function invite(Request $request)
     {
-        DB::table('tutorials')->insert([
+        $tutorial = Tutorial::where('user_id', Auth::user()->id)
+            ->where('rival_id', $request['rival'])->first();
+
+        if ($tutorial != null) {
+            Alert::error('Wysłałeś juz zaproszenie tej osobie');
+            return back();
+        }
+
+        (new Tutorial([
             'user_id'  => Auth::user()->id,
             'rival_id' => $request['rival'],
-        ]);
+        ]))->save();
 
-        return back()->with('message', 'Zaproszenie zostało wysłane');
+        Alert::success('Zaproszenie Zostało Wysłane');
+        return back();
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function respond(Request $request, int $id)
     {
-        //
+        $tutorial = Tutorial::where('id', $id)->where('status', 'sent')->first();
+
+        if ($tutorial == null) {
+            Alert::error('Coś poszło nie tak!');
+            return back();
+        }
+
+        if ($request['accept'])
+        {
+            $tutorial->status = 'accepted';
+            Alert::success('Challange Accepted!');
+            return back();
+        }
+
+        $tutorial->status = 'rejected';
+        Alert::success('Challange Rejected!');
+            return back();
     }
 
     /**
@@ -35,9 +57,19 @@ class TutorialController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, int $id)
     {
-        //
+        $tutorial = Tutorial::find($id);
+
+        if ($tutorial == null) {
+            Alert::error('Coś poszło nie tak!');
+            return back();
+        }
+
+        $tutorial->full_time = $request['fullTime'];
+        $tutorial->half_time = $request['halfTime'];
+        $tutorial->fair_play = $request['fairPlay'];
+        $tutorial->save();
     }
 
     /**

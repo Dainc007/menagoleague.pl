@@ -21,7 +21,10 @@ class CreateTutorialsTable extends Migration
             $table->enum('status', User::AVAILABLE_STATUSES)->default('sent');
             $table->unique(['user_id', 'rival_id']);
             $table->string('message')->nullable();
-            $table->unsignedBigInteger('raport')->nullable();
+            $table->string('full_time')->nullable();
+            $table->string('half_time')->nullable();
+            $table->string('fair_play')->nullable();
+
 
             $table->foreign('rival_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();

@@ -136,5 +136,11 @@ Route::prefix('/competitions')->group(function () {
 
         Route::post('/invite', [App\Http\Controllers\TutorialController::class, 'invite'])
             ->name('tutorial.invite');
+
+        Route::post('/respond/{id}', [App\Http\Controllers\TutorialController::class, 'respond'])
+            ->name('tutorial.respond');
+
+        Route::post('/store/{id}', [App\Http\Controllers\TutorialController::class, 'store'])
+            ->name('tutorial.store');
     });
 });

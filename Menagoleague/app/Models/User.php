@@ -81,10 +81,15 @@ class User extends Authenticatable
         return $this->hasMany(Message::class);
     }
 
-    public function isTutorial()
+    public function tutorials()
+    {
+        return $this->hasMany(Tutorial::class);
+    }
+
+    /* public function isTutorial()
     {
         return  $this->belongsTo(User::class);
-    }
+    } */
 
     /* Extra Functions */
 
