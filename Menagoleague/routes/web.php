@@ -15,18 +15,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/* Welcome Page */
+
 Route::get('/', function () {
     return view('welcome', [
         'articles' => Article::all()
     ]);
 })->name('welcome');
 
+/* Auth Routes */
 Auth::routes();
 
+/* Home Route */
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+/* User */
 Route::prefix('/users')->group(function () {
 
+    /* Account */
     Route::get('/account', [App\Http\Controllers\AccountController::class, 'index'])
         ->name('user.account');
 
@@ -36,6 +42,7 @@ Route::prefix('/users')->group(function () {
     Route::PUT('/{id}', [App\Http\Controllers\AccountController::class, 'update'])
         ->name('account.update');
 
+    /* Rivals */
     Route::prefix('/rivals')->group(function () {
 
         Route::post('/invite', [App\Http\Controllers\RivalController::class, 'invite'])
@@ -79,6 +86,7 @@ Route::prefix('/players')->group(function () {
         ->name('players.show');
 });
 
+/* Articles */
 Route::prefix('/articles')->group(function () {
 
     Route::get('/create', [App\Http\Controllers\ArticleController::class, 'create'])
@@ -97,18 +105,14 @@ Route::prefix('/articles')->group(function () {
         ->name('article.delete')->middleware('administrator');
 });
 
-Route::prefix('/admin')->group(function () {
-
-    Route::get('/', [App\Http\Controllers\AdminController::class, 'index'])
-        ->name('admin.index');
-});
-
+/* Leagues */
 Route::prefix('/leagues')->group(function () {
 
     Route::get('/{league}', [App\Http\Controllers\LeagueController::class, 'show'])
         ->name('league.show');
 });
 
+/* Competition & Fixtures */
 Route::prefix('/competitions')->group(function () {
 
     Route::get('/', [App\Http\Controllers\CompetitionController::class, 'index'])
@@ -131,16 +135,31 @@ Route::prefix('/competitions')->group(function () {
         Route::post('/store/{competition}', [App\Http\Controllers\FixtureController::class, 'store'])
             ->name('fixture.store');
     });
+});
 
-    Route::prefix('/tutorial')->group(function () {
+/* Tutorials */
+Route::prefix('/tutorial')->group(function () {
 
-        Route::post('/invite', [App\Http\Controllers\TutorialController::class, 'invite'])
-            ->name('tutorial.invite');
+    Route::post('/invite', [App\Http\Controllers\TutorialController::class, 'invite'])
+        ->name('tutorial.invite');
 
-        Route::post('/respond/{id}', [App\Http\Controllers\TutorialController::class, 'respond'])
-            ->name('tutorial.respond');
+    Route::post('/respond/{id}', [App\Http\Controllers\TutorialController::class, 'respond'])
+        ->name('tutorial.respond');
 
-        Route::post('/store/{id}', [App\Http\Controllers\TutorialController::class, 'store'])
-            ->name('tutorial.store');
-    });
+    Route::post('/store/{id}', [App\Http\Controllers\TutorialController::class, 'store'])
+        ->name('tutorial.store');
+
+    Route::delete('/delete/{id}', [App\Http\Controllers\TutorialController::class, 'delete'])
+        ->name('tutorial.delete');
+});
+
+/* Admin Routes */
+Route::prefix('/admin')->group(function () {
+
+    Route::get('/', [App\Http\Controllers\AdminController::class, 'index'])
+        ->name('admin.index')->middleware('administrator');
+    Route::get('/tutorials', [App\Http\Controllers\AdminController::class, 'tutorials'])
+        ->name('admin.tutorials')->middleware('administrator');
+    Route::post('/tutorials/respond/{id}', [App\Http\Controllers\AdminController::class, 'tutorialRespond'])
+        ->name('admin.tutorial.respond')->middleware('administrator');
 });

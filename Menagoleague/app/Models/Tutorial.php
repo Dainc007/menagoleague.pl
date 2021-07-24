@@ -10,7 +10,7 @@ class Tutorial extends Model
     use HasFactory;
 
     public const AVAILABLE_STATUSES = [
-        'sent', 'accepted', 'rejected', 'passed', 'failed'
+        'sent', 'pending', 'passed', 'failed'
     ];
 
     protected $fillable = [

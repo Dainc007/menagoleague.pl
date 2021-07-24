@@ -13,11 +13,8 @@ class TutorialController extends Controller
 
     public function invite(Request $request)
     {
-        $tutorial = Tutorial::where('user_id', Auth::user()->id)
-            ->where('rival_id', $request['rival'])->first();
-
-        if ($tutorial != null) {
-            Alert::error('Wysłałeś juz zaproszenie tej osobie');
+        if (Auth::user()->tutorial != null) {
+            Alert::error('Wysłałeś juz zaproszenie innemu uzytkownikowi!');
             return back();
         }
 
@@ -39,8 +36,7 @@ class TutorialController extends Controller
             return back();
         }
 
-        if ($request['accept'])
-        {
+        if ($request['accept']) {
             $tutorial->status = 'accepted';
             Alert::success('Challange Accepted!');
             return back();
@@ -48,7 +44,7 @@ class TutorialController extends Controller
 
         $tutorial->status = 'rejected';
         Alert::success('Challange Rejected!');
-            return back();
+        return back();
     }
 
     /**
@@ -69,7 +65,11 @@ class TutorialController extends Controller
         $tutorial->full_time = $request['fullTime'];
         $tutorial->half_time = $request['halfTime'];
         $tutorial->fair_play = $request['fairPlay'];
+        $tutorial->status    = 'pending';
         $tutorial->save();
+
+        Alert::success('Wniosek został wysłany!', 'Czekaj na akceptację!');
+            return back();
     }
 
     /**
@@ -112,8 +112,10 @@ class TutorialController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete($id)
     {
-        //
+        (Tutorial::find($id))->delete();
+        Alert::success('Usunieto');
+        return back();
     }
 }
