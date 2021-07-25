@@ -28,6 +28,8 @@ class Device extends Model
 
         $userDevice = Device::where('device', $device)->first('id');
 
-        return $userDevice->id;
+        if ($userDevice) {
+            return $userDevice->id;
+        }
     }
 }
