@@ -30,6 +30,7 @@ class TeamController extends Controller
     {
         if ($request['apply']) {
             (new JobApplicationService())->validate($request, $teamId);
+            return redirect()->route('office');
         }
 
         return view(

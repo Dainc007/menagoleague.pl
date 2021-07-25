@@ -12,8 +12,16 @@ class JobApplicationService
 {
     public function validate(Request $request, int $teamId)
     {
-        $this->checkUserDevice($teamId);
-        $this->checkIfApplicationExist($teamId);
+        if (!$this->checkUserDevice($teamId)) {
+            Alert::error('Nie mozesz przejąć druzyny', 'Nie masz odpowiedniej konsoli');
+            return redirect(route('office'));
+        }
+
+        if ($this->getApplication($teamId) !== null) {
+            Alert::error('Stop', 'Juz zlozyes podanie do tej druzyny');
+            return redirect()->route('office');
+        }
+
         $this->storeApplication($teamId, $request['message']);
     }
 
@@ -26,26 +34,16 @@ class JobApplicationService
         ]))->save();
 
         Alert::success('Twoja Aplikacja Została wysłana', 'Czekaj na odpowiedź');
-        return back();
-    }
-
-    private function checkIfApplicationExist($teamId)
-    {
-        $application = $this->getApplication($teamId);
-
-        if ($application !== null) {
-            Alert::error('Stop', 'Juz zlozyes podanie do tej druzyny');
-            return back();
-        }
+        return redirect(route('office'));
     }
 
     private function checkUserDevice(int $teamId)
     {
-
         if (Auth::user()->device_id != (Team::find($teamId))->device_id) {
-            Alert::error('Nie mozesz przejąć druzyny', 'Nie masz odpowiedniej konsoli');
-            return back();
+            return false;
         }
+
+        return true;
     }
 
     private function getApplication(int $teamId)
