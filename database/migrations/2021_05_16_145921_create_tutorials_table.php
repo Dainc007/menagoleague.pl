@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\User;
+use App\Models\Tutorial;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -18,7 +18,7 @@ class CreateTutorialsTable extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained();
             $table->unsignedBigInteger('rival_id');
-            $table->enum('status', User::AVAILABLE_STATUSES)->default('sent');
+            $table->enum('status', Tutorial::AVAILABLE_STATUSES)->default('sent');
             $table->unique(['user_id', 'rival_id']);
             $table->string('message')->nullable();
             $table->string('full_time')->nullable();

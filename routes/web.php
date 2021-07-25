@@ -60,6 +60,9 @@ Route::prefix('/teams')->group(function () {
 
     Route::get('/{team}', [App\Http\Controllers\TeamController::class, 'show'])
         ->name('teams.show');
+
+    Route::post('/application/{id}', [App\Http\Controllers\TeamController::class, 'apply'])
+        ->name('team.application');
 });
 
 Route::prefix('/transfers')->group(function () {

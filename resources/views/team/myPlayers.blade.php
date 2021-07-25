@@ -1,6 +1,6 @@
-@if(!empty(auth()->user()->team->players))
+@if(!empty($user->team->players))
 
-@foreach(auth()->user()->team->players as $player)
+@foreach($user->team->players as $player)
 <p> <a href="{{route('players.show', [ 'player' => $player ])}}">
         {{$player->name}}
         {{$player->position}}

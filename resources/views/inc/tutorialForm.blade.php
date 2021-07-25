@@ -32,7 +32,7 @@
     </div>
 
     <div class="form-group">
-        <input type="submit" class="btn btn-sm btn-danger" value="Zaproś">
+        <input type="submit" class="btn btn-sm btn-danger" value="Złóz aplikacje">
     </div>
     @csrf
     @method('POST')
