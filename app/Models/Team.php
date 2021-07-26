@@ -28,4 +28,9 @@ class Team extends Model
     {
         return $this->hasMany(League::class);
     }
+
+    public function jobApplications()
+    {
+        return $this->hasMany(JobApplication::class);
+    }
 }

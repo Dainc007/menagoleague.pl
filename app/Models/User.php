@@ -86,6 +86,11 @@ class User extends Authenticatable
         return $this->hasOne(Tutorial::class);
     }
 
+    public function jobApplications()
+    {
+        return $this->hasMany(JobApplication::class);
+    }
+
     /* Extra Functions */
 
     public function isAdministrator()

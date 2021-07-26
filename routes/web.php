@@ -161,8 +161,16 @@ Route::prefix('/admin')->group(function () {
 
     Route::get('/', [App\Http\Controllers\AdminController::class, 'index'])
         ->name('admin.index')->middleware('administrator');
+
     Route::get('/tutorials', [App\Http\Controllers\AdminController::class, 'tutorials'])
         ->name('admin.tutorials')->middleware('administrator');
+
     Route::post('/tutorials/respond/{id}', [App\Http\Controllers\AdminController::class, 'tutorialRespond'])
         ->name('admin.tutorial.respond')->middleware('administrator');
+
+    Route::get('/jobApplications', [App\Http\Controllers\AdminController::class, 'jobApplications'])
+        ->name('admin.jobApplications')->middleware('administrator');
+
+    Route::post('/jobApplications/respond/{id}', [App\Http\Controllers\AdminController::class, 'JobApplicationRespond'])
+        ->name('admin.jobApplication.respond')->middleware('administrator');
 });

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\JobApplication;
 use App\Models\Role;
 use App\Models\Tutorial;
 use Illuminate\Http\Request;
@@ -52,6 +53,39 @@ class AdminController extends Controller
             ]);
 
             Alert::success('zaakceptowano');
+            return back();
+        }
+    }
+
+    public function jobApplications()
+    {
+        return view('admin.jobApplications', [
+            'jobApplications' => JobApplication::where('status', 'pending')->orderBy('team_id')->get(),
+        ]);
+    }
+
+    public function jobApplicationRespond(Request $request, int $id)
+    {
+        $jobApplication = JobApplication::find($id);
+
+        if ($jobApplication == null) {
+            Alert::error('Nie znaleziono aplikacji');
+            return back();
+        }
+
+        if ($request['reject']) {
+            $jobApplication->status  = 'rejected';
+            $jobApplication->message = $request['message'];
+            $jobApplication->save();
+            Alert::error('Odrzucono');
+            return back();
+        }
+
+        if ($request['accept']) {
+            $jobApplication->status  = 'accepted';
+            $jobApplication->message = $request['message'];
+            $jobApplication->save();
+            Alert::success('Zaakceptowano');
             return back();
         }
     }

@@ -1,6 +1,8 @@
-@if(Auth::user()->tutorial)
+@if($user->tutorial)
 
-<form method="POST" action="{{ route('tutorial.delete', ['id' => Auth::user()->tutorial->id]) }}">
+@if($user->tutorial->status == 'sent')
+
+<form method="POST" action="{{ route('tutorial.delete', ['id' => $user->tutorial->id]) }}">
     <div class="form-group">
         <input type="submit" class="btn btn-sm btn-danger" value="wycofaj zaproszenie">
     </div>
@@ -8,13 +10,15 @@
     @method('DELETE')
 </form>
 
-@if(Auth::user()->tutorial->full_time == null)
+@endif
+
+@if($user->tutorial->full_time == null)
 
 <h5>Wysłałeś zaproszenie rywalowi. Teraz musisz rozegrać mecz sparingowy zgodnie z wytycznymi opisanymi TUTAJ </h5>
 <h6>Rozegrałeś mecz? Świetnie! Teraz mozesz wypełnić wniosek o przyznanie licencji trenerskiej!</h6>
 
 
-<form method="POST" action="{{ route('tutorial.store', ['id' => Auth::user()->tutorial->id]) }}">
+<form method="POST" action="{{ route('tutorial.store', ['id' => $user->tutorial->id]) }}">
 
     <div class="form-group">
         <label for="raport">Raport Pomeczowy</label>
@@ -40,7 +44,7 @@
 @else
 
 <h6>Twoja aplikacja jest w trakcie weryfikacji.</h6>
-<h6>Wynik: {{Auth::user()->tutorial->status}}</h6>
+<h6>Wynik: {{$user->tutorial->status}}</h6>
 
 @endif
 
@@ -50,7 +54,7 @@
     <div class="form-group">
         <label for="rival">Zaproś do rozegrania Samouczka</label>
         <select name="rival" id="rival" class="form-control w-50">
-            @foreach(Auth::user()->getUsersByDeviceId() as $username)
+            @foreach($user->getUsersByDeviceId() as $username)
             <option value="{{$username->id}}">{{$username->name}}</option>
             @endforeach
         </select>
@@ -62,9 +66,6 @@
     @method('POST')
 </form>
 @endif
-
-
-
 
 
 
