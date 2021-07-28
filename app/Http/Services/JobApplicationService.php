@@ -22,6 +22,13 @@ class JobApplicationService
             return redirect()->route('office');
         }
 
+        $lastResponse = $this->wasLatelyRejected($teamId);
+
+        if ($lastResponse) {
+            Alert::error('Niedawno aplikowałeś do tej druzyny', 'Następna aplikacja będzie mozliwa ' . $lastResponse);
+            return redirect()->route('office');
+        }
+
         $this->storeApplication($teamId, $request['message']);
     }
 
@@ -35,6 +42,21 @@ class JobApplicationService
 
         Alert::success('Twoja Aplikacja Została wysłana', 'Czekaj na odpowiedź');
         return redirect(route('office'));
+    }
+
+    private function wasLatelyRejected($teamId)
+    {
+        $lastResponse = JobApplication::where('user_id', Auth::user()->id)
+            ->where('team_id', $teamId)
+            ->where('status', 'rejected')->first();
+
+        if ($lastResponse == null) {
+            return false;
+        }
+
+        if (now() < $lastResponse->updated_at->addDays(JobApplication::NUM_OF_DAYS)) {
+            return $lastResponse->updated_at->addDays(JobApplication::NUM_OF_DAYS)->format('d-m-y h:s');
+        }
     }
 
     private function checkUserDevice(int $teamId)

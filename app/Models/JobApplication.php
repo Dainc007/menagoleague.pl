@@ -9,6 +9,9 @@ class JobApplication extends Model
 {
     use HasFactory;
 
+    /* How often user can apply for the same job if he got rejected */
+    public const NUM_OF_DAYS = 7;
+
     public const AVAILABLE_STATUSES = [
        'pending', 'accepted', 'rejected'
     ];
