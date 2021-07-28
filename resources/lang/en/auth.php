@@ -29,7 +29,12 @@ return [
     'confirm'  => 'Confirm Your Password',
     'discord'  => 'Discord',
     'fb'       => 'www.facebook.com/',
-    'join'     => 'Join'
-    
+    'join'     => 'Join',
+    'recommendation' => "Friend's GamerTag:",
+    'recommendation.details' => 'If Someone recommended you this site, enter you re friend GT',
+    'statute' => 'Site Statute',
+    'policy'  => 'Privacy Policy',
+    'statute.annoucement' => 'Doing this You agreeing',
+
 
 ];

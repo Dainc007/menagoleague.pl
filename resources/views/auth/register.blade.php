@@ -84,6 +84,22 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="recommendation" class="col-md-4 col-form-label text-md-right">{{ __('auth.recommendation') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="recommendation" type="text" class="form-control" name="recommendation">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-12 text-center mb-3">
+                                <small clas="text-center">{{__('auth.recommendation.details')}}</small>
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group row">
                             <label for="discord" class="col-md-4 col-form-label text-md-right">{{ __('auth.discord') }}</label>
 
                             <div class="col-md-6">
@@ -107,16 +123,22 @@
                             </div>
                         </div>
 
-
-
-                    </form>
+                        <div class="form-group row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                                <small>{{__('auth.statute.annoucement')}} <a href="">{{__('auth.statute')}}</a> i <a href="">{{__('auth.policy')}}</a></small>
+                            </div>
+                        </div>
 
                 </div>
+
+                </form>
+
             </div>
-
-
         </div>
+
+
     </div>
+</div>
 
 </div>
 </div>

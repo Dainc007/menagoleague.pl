@@ -23,12 +23,13 @@ class CreateUsersTable extends Migration
             $table->string('discord')->unique()->nullable();
             $table->string('facebook')->nullable();
             $table->unsignedBigInteger('device_id')->nullable();
-    
+            $table->unsignedBigInteger('recommendation_id')->nullable();
+
             $table->rememberToken();
             $table->timestamps();
 
+            $table->foreign('recommendation_id')->references('id')->on('users')->nullable();
             $table->foreign('device_id')->references('id')->on('devices')->onDelete('CASCADE');
-
         });
     }
 

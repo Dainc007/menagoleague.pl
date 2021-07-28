@@ -31,6 +31,7 @@ class User extends Authenticatable
         'device_id',
         'discord',
         'facebook',
+        'recommendation_id'
     ];
 
     /**
@@ -109,6 +110,11 @@ class User extends Authenticatable
             ->orderBy('name', 'ASC')
             ->get();
         return $allUsers;
+    }
+
+    public function getRecommendedUsers()
+    {
+        return User::where('recommendation_id', Auth::user()->id)->count();
     }
 
     /* Rivals */

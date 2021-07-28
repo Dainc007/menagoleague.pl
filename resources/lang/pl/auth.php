@@ -19,5 +19,10 @@ return [
     'discord'  => 'Discord',
     'fb'       => 'www.facebook.com/',
     'join'     => 'Dołącz',
+    'recommendation' => "GamerTag Polecającego:",
+    'recommendation.details' => 'Jeśli jakiś gracz polecił Ci stronę, podaj jego GT',
+    'statute' => 'Regulamin',
+    'policy'  => 'Politykę Prywatności',
+    'statute.annoucement' => 'Rejestrując się akceptujesz',
 
 ];
