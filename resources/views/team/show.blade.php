@@ -1,19 +1,22 @@
 Druzyna
 {{$team->name}}
-{{$team->device_id}}
+({{$team->device->name}})
 
 Manager:
-@if($team->user) {{$team->user->name}} @else('Brak') @endif
+@if($team->user == null)
+Brak
+@else
+{{$team->user->name}}
+@endif
 
-Rozgrywki
-@if($team->league) {{$team->league->region}}{{$team->league->level}}
+@if($team->league !== null)
+Rozgrywki {{$team->league->region}}{{$team->league->level}}
 <p>
     Aktualny sezon:
     {{$team->league->competitions}}
 </p>
 @endif
 
-Skład
-@foreach($team->players as $player)
-{{$player->name}}
-@endforeach
+@if($team->players !== null)
+@include('team.myPlayers')
+@endif

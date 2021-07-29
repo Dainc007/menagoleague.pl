@@ -14,6 +14,4 @@
 <h6>Nie jesteś licencjonowanym trenerem. O tym jak zdobyć licencję i przejąć druzyne przeczytasz TUTAJ</h6>
 @endif
 
-
-
 @endsection
