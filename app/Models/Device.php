@@ -18,10 +18,20 @@ class Device extends Model
      *  available devices.
      */
     public const AVAILABLE_DEVICES = [
-        'Xbox'   => 'Xbox',
+        'Xbox'        => 'Xbox',
         'Playstation' => 'Playstation',
-        'PC' => 'PC'
+        'PC'          => 'PC'
     ];
+
+    public function teams()
+    {
+        return $this->hasMany(Team::class);
+    }
+
+    public function users()
+    {
+        return $this->hasMany(User::class);
+    }
 
     public static function getDeviceId(string $device)
     {

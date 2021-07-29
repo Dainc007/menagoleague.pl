@@ -9,6 +9,15 @@ class Team extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'id',
+        'name',
+        'user_id',
+        'league_id',
+        'device_id',
+        'is_active',
+    ];
+
     public function user()
     {
         return $this->belongsTo(User::class);
@@ -32,5 +41,10 @@ class Team extends Model
     public function jobApplications()
     {
         return $this->hasMany(JobApplication::class);
+    }
+
+    public function device()
+    {
+        return $this->belongsTo(Device::class);
     }
 }
