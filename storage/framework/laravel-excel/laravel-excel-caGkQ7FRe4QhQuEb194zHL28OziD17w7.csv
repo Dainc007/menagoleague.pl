@@ -1,0 +1,731 @@
+ID;Name;device_id
+1;Arsenal;1
+2;Aston Villa;1
+1808;Brighton & Hove Albion;1
+1796;Burnley;1
+5;Chelsea;1
+1799;Crystal Palace;1
+7;Everton;1
+144;Fulham;1
+8;Leeds United;1
+95;Leicester City;1
+9;Liverpool;1
+10;Manchester City;1
+11;Manchester United;1
+13;Newcastle United;1
+1794;Sheffield United;1
+17;Southampton;1
+18;Tottenham Hotspur;1
+109;West Bromwich Albion;1
+19;West Ham United;1
+110;Wolverhampton Wanderers;1
+69;AS Monaco;1
+1819;AS Saint-Étienne;1
+1530;Angers SCO;1
+110569;Dijon FCO;1
+59;FC Girondins de Bordeaux;1
+217;FC Lorient;1
+68;FC Metz;1
+71;FC Nantes;1
+65;LOSC Lille;1
+70;Montpellier HSC;1
+224;Nîmes Olympique;1
+72;OGC Nice;1
+66;Olympique Lyonnais;1
+219;Olympique de Marseille;1
+73;Paris Saint-Germain;1
+76;RC Strasbourg Alsace;1
+64;Racing Club de Lens;1
+378;Stade Brestois 29;1
+74;Stade Rennais FC;1
+379;Stade de Reims;1
+31;1. FC Köln;1
+1831;1. FC Union Berlin;1
+169;1. FSV Mainz 05;1
+32;Bayer 04 Leverkusen;1
+22;Borussia Dortmund;1
+23;Borussia Mönchengladbach;1
+159;DSC Arminia Bielefeld;1
+1824;Eintracht Frankfurt;1
+100409;FC Augsburg;1
+21;FC Bayern München;1
+34;FC Schalke 04;1
+166;Hertha BSC;1
+112172;RB Leipzig;1
+25;SC Freiburg;1
+38;SV Werder Bremen;1
+10029;TSG 1899 Hoffenheim;1
+36;VfB Stuttgart;1
+175;VfL Wolfsburg;1
+39;Atalanta;1
+112026;Benevento;1
+189;Bologna;1
+1842;Cagliari;1
+110734;Crotone;1
+110374;Fiorentina;1
+110556;Genoa;1
+206;Hellas Verona;1
+44;Inter;1
+45;Juventus;1
+46;Lazio;1
+47;Milan;1
+48;Napoli;1
+50;Parma;1
+52;Roma;1
+1837;Sampdoria;1
+111974;Sassuolo;1
+110741;Spezia;1
+54;Torino;1
+55;Udinese;1
+448;Athletic Club de Bilbao;1
+240;Atlético Madrid;1
+479;CA Osasuna;1
+1968;Cádiz CF;1
+463;Deportivo Alavés;1
+468;Elche CF;1
+241;FC Barcelona;1
+1860;Getafe CF;1
+110832;Granada CF;1
+1853;Levante UD;1
+450;RC Celta;1
+449;Real Betis;1
+243;Real Madrid;1
+457;Real Sociedad;1
+462;Real Valladolid CF;1
+467;SD Eibar;1
+110839;SD Huesca;1
+481;Sevilla FC;1
+461;Valencia CF;1
+483;Villarreal CF;1
+111019;Argentinos Juniors;1
+110394;Arsenal de Sarandí;1
+111708;Atlético Tucumán;1
+1877;Boca Juniors;1
+112965;Central Córdoba;1
+111707;Club Atlético Aldosivi;1
+110404;Club Atlético Banfield;1
+110406;Club Atlético Colón;1
+111711;Club Atlético Huracán;1
+110395;Club Atlético Lanús;1
+112670;Club Atlético Talleres;1
+111715;Club Atlético Tigre;1
+111710;Defensa y Justicia;1
+101083;Estudiantes de La Plata;1
+101084;Gimnasia y Esgrima La Plata;1
+111706;Godoy Cruz;1
+110093;Independiente;1
+110396;Newell's Old Boys;1
+110581;Patronato;1
+101085;Racing Club;1
+1876;River Plate;1
+110580;Rosario Central;1
+1013;San Lorenzo de Almagro;1
+111716;Unión de Santa Fe;1
+101088;Vélez Sarsfield;1
+111393;Adelaide United;1
+111395;Brisbane Roar;1
+111396;Central Coast Mariners;1
+114604;Macarthur FC;1
+112224;Melbourne City FC;1
+111397;Melbourne Victory;1
+111398;Newcastle Jets;1
+111399;Perth Glory;1
+111400;Sydney FC;1
+111766;Wellington Phoenix;1
+112427;Western Sydney Wanderers;1
+114023;Western United FC;1
+111821;FC Admira Wacker Mödling;1
+191;FC Red Bull Salzburg;1
+256;FK Austria Wien;1
+252;LASK Linz;1
+15009;SCR Altach;1
+254;SK Rapid Wien;1
+209;SK Sturm Graz;1
+112075;SKN St. Pölten;1
+780;SV Ried;1
+2017;TSV Hartberg;1
+15040;WSG Tirol;1
+111822;Wolfsberger AC;1
+675;Beerschot AC;1
+231;Club Brugge KV;1
+674;KAA Gent;1
+2013;KAS Eupen;1
+673;KRC Genk;1
+1750;KSV Cercle Brugge;1
+100081;KV Kortrijk;1
+110724;KV Mechelen;1
+682;KV Oostende;1
+100087;Oud-Heverlee Leuven;1
+229;RSC Anderlecht;1
+230;Royal Antwerp FC;1
+111560;Royal Excel Mouscron;1
+15005;SV Zulte-Waregem;1
+680;Sint-Truidense VV;1
+670;Sporting de Charleroi;1
+232;Standard de Liège;1
+110913;Waasland-Beveren;1
+112119;Atlético Clube Goianiense;1
+1035;Atlético Mineiro;1
+1598;Bahia;1
+517;Botafogo;1
+111059;Ceará Sporting Club;1
+1039;Club Athletico Paranaense;1
+111044;Coritiba;1
+1043;Flamengo;1
+567;Fluminense;1
+111052;Fortaleza;1
+111042;Goiás;1
+1629;Grêmio;1
+1048;Internacional;1
+115199;Oceânico FC;1
+383;Palmeiras;1
+1053;Santos;1
+598;São Paulo;1
+569;Vasco da Gama;1
+101097;Audax Italiano;1
+111327;CD Huachipato;1
+110980;Colo-Colo;1
+112705;Coquimbo Unido;1
+110975;Universidad Católica;1
+112535;Unión La Calera;1
+111768;Beijing Sinobo Guoan FC;1
+112165;Chongqing Dangdai Lifan FC SWM Team;1
+112378;Dalian YiFang FC;1
+111839;Guangzhou Evergrande Taobao FC;1
+112429;Guangzhou R&F FC;1
+112978;Hebei China Fortune FC;1
+111779;Henan Jianye FC;1
+112162;Jiangsu Suning FC;1
+112961;Qingdao Huanghai F.C.;1
+111724;Shandong Luneng TaiShan FC;1
+110955;Shanghai Greenland Shenhua FC;1
+112540;Shanghai SIPG FC;1
+111773;Shenzhen FC;1
+112985;Shijiazhuang Ever Bright F.C.;1
+111774;Tianjin TEDA FC;1
+112541;Wuhan Zall;1
+101099;América de Cali;1
+101100;Atlético Nacional;1
+101102;Deportivo Cali;1
+111723;Deportivo Pasto;1
+101103;Independiente Medellín;1
+101101;Junior FC;1
+101105;Millonarios FC;1
+211;Dinamo Zagreb;1
+266;SK Slavia Praha;1
+267;Sparta Praha;1
+110468;Viktoria Plzeň;1
+1446;AC Horsens;1
+820;Aalborg BK;1
+271;Aarhus GF;1
+269;Brøndby IF;1
+819;FC København;1
+1516;FC Midtjylland;1
+1788;FC Nordsjælland;1
+15001;Lyngby BK;1
+272;Odense Boldklub;1
+1786;Randers FC;1
+1447;SønderjyskE;1
+822;Vejle Boldklub;1
+110981;Barcelona Sporting Club;1
+114580;Delfín SC;1
+111331;El Nacional;1
+110984;Emelec;1
+112908;Independiente del Valle;1
+110986;LDU Quito;1
+110987;SD Aucas;1
+114581;Universidad Católica del Ecuador;1
+1932;Barnsley;1
+88;Birmingham City;1
+3;Blackburn Rovers;1
+1943;Bournemouth;1
+1925;Brentford;1
+1919;Bristol City;1
+1961;Cardiff City;1
+1800;Coventry City;1
+91;Derby County;1
+1939;Huddersfield Town;1
+1923;Luton Town;1
+12;Middlesbrough;1
+97;Millwall;1
+1792;Norwich City;1
+14;Nottingham Forest;1
+1801;Preston North End;1
+15;Queens Park Rangers;1
+1793;Reading;1
+1797;Rotherham United;1
+1807;Sheffield Wednesday;1
+1806;Stoke City;1
+1960;Swansea City;1
+1795;Watford;1
+1933;Wycombe Wanderers;1
+112259;AFC Wimbledon;1
+110313;Accrington Stanley;1
+1926;Blackpool;1
+1962;Bristol Rovers;1
+15015;Burton Albion;1
+89;Charlton Athletic;1
+121;Crewe Alexandra;1
+142;Doncaster Rovers;1
+112260;Fleetwood Town;1
+1802;Gillingham;1
+1952;Hull City;1
+94;Ipswich Town;1
+149;Lincoln City;1
+1798;Milton Keynes Dons;1
+1930;Northampton Town;1
+1951;Oxford United;1
+1938;Peterborough United;1
+1929;Plymouth Argyle;1
+1790;Portsmouth;1
+1955;Rochdale;1
+127;Shrewsbury;1
+106;Sunderland;1
+1934;Swindon Town;1
+1917;Wigan Athletic;1
+381;Barrow;1
+4;Bolton Wanderers;1
+1804;Bradford City;1
+1944;Cambridge United;1
+1480;Carlisle United;1
+1936;Cheltenham Town;1
+1935;Colchester United;1
+110890;Crawley Town;1
+143;Exeter City;1
+561;Forest Green Rovers;1
+92;Grimsby Town;1
+112222;Harrogate Town;1
+1958;Leyton Orient;1
+1940;Mansfield Town;1
+357;Morecambe;1
+112254;Newport County;1
+1920;Oldham Athletic;1
+1928;Port Vale;1
+113926;Salford City;1
+1949;Scunthorpe United;1
+1954;Southend United;1
+361;Stevenage;1
+15048;Tranmere Rovers;1
+1803;Walsall;1
+100325;HJK Helsinki;1
+614;AC Ajaccio;1
+57;AJ Auxerre;1
+1823;AS Nancy Lorraine;1
+1816;Amiens SC;1
+1813;Chamois Niortais Football Club;1
+1815;Clermont Foot 63;1
+294;ESTAC Troyes;1
+62;En Avant de Guingamp;1
+112627;FC Chambly Oise;1
+226;FC Sochaux-Montbéliard;1
+1805;Grenoble Foot 38;1
+212;La Berrichonne de Châteauroux;1
+1738;Le Havre AC;1
+111817;Paris FC;1
+110321;Pau FC;1
+111659;Rodez Aveyron Football;1
+210;Stade Malherbe Caen;1
+1809;Toulouse Football Club;1
+111276;USL Dunkerque;1
+110456;Valenciennes FC;1
+111235;1. FC Heidenheim 1846;1
+171;1. FC Nürnberg;1
+110500;Eintracht Braunschweig;1
+506;FC Erzgebirge Aue;1
+110329;FC St. Pauli;1
+110197;FC Würzburger Kickers;1
+110636;Fortuna Düsseldorf;1
+28;Hamburger SV;1
+485;Hannover 96;1
+576;Holstein Kiel;1
+1832;Karlsruher SC;1
+10030;SC Paderborn 07;1
+543;SSV Jahn Regensburg;1
+110502;SV Darmstadt 98;1
+110178;SV Sandhausen;1
+165;SpVgg Greuther Fürth;1
+160;VfL Bochum 1848;1
+487;VfL Osnabrück;1
+29;1. FC Kaiserslautern;1
+110588;1. FC Magdeburg;1
+523;1. FC Saarbrücken;1
+110679;Bayern München II;1
+27;FC Hansa Rostock;1
+111239;FC Ingolstadt 04;1
+110592;FSV Zwickau;1
+110482;Hallescher FC;1
+167;KFC Uerdingen 05;1
+1825;MSV Duisburg;1
+110501;SC Verl;1
+503;SG Dynamo Dresden;1
+110597;SV Meppen;1
+110532;SV Waldhof Mannheim;1
+492;SV Wehen Wiesbaden;1
+172;SpVgg Unterhaching;1
+33;TSV 1860 München;1
+114398;Türkgücü München;1
+1829;VfB Lübeck;1
+110645;Viktoria Köln;1
+278;AEK Athens;1
+280;Olympiacos CFP;1
+393;PAOK;1
+1884;Panathinaikos FC;1
+650;ADO Den Haag;1
+1906;AZ Alkmaar;1
+245;Ajax;1
+100628;FC Emmen;1
+1915;FC Groningen;1
+1908;FC Twente;1
+1903;FC Utrecht;1
+246;Feyenoord;1
+634;Fortuna Sittard;1
+100634;Heracles Almelo;1
+1914;PEC Zwolle;1
+247;PSV;1
+1905;RKC Waalwijk;1
+1913;SC Heerenveen;1
+100646;Sparta Rotterdam;1
+100651;VVV-Venlo;1
+1909;Vitesse;1
+1907;Willem II;1
+1369;Argentina;1
+1415;Australia;1
+1322;Austria;1
+1325;Belgium;1
+111451;Bolivia;1
+1370;Brazil;1
+1327;Bulgaria;1
+1395;Cameroon;1
+111455;Canada;1
+111459;Chile;1
+1413;China PR;1
+111109;Colombia;1
+1330;Czech Republic;1
+111112;Côte d'Ivoire;1
+1331;Denmark;1
+111465;Ecuador;1
+111130;Egypt;1
+1318;England;1
+1334;Finland;1
+1335;France;1
+1337;Germany;1
+1338;Greece;1
+1886;Hungary;1
+1341;Iceland;1
+111466;India;1
+1343;Italy;1
+1386;Mexico;1
+105035;Netherlands;1
+111473;New Zealand;1
+110081;Northern Ireland;1
+1352;Norway;1
+1375;Paraguay;1
+111108;Peru;1
+1353;Poland;1
+1354;Portugal;1
+1355;Republic of Ireland;1
+1356;Romania;1
+1357;Russia;1
+1359;Scotland;1
+1361;Slovenia;1
+111099;South Africa;1
+1362;Spain;1
+1363;Sweden;1
+1364;Switzerland;1
+1365;Turkey;1
+1387;United States;1
+1377;Uruguay;1
+111487;Venezuela;1
+1367;Wales;1
+111811;AC Monza;1
+190;Brescia;1
+192;Chievo Verona;1
+1746;Empoli;1
+347;Lecce;1
+112791;SPAL;1
+101148;Cerezo Osaka;1
+101150;FC Tokyo;1
+112093;Gamba Osaka;1
+112444;Hokkaido Consadole Sapporo;1
+101147;Kashima Antlers;1
+101145;Kashiwa Reysol;1
+111730;Kawasaki Frontale;1
+112092;Nagoya Grampus;1
+113183;Oita Trinita;1
+113160;Sagan Tosu;1
+113157;Sanfrecce Hiroshima;1
+101149;Shimizu S-Pulse;1
+113161;Shonan Bellmare;1
+111575;Urawa Red Diamonds;1
+112836;Vegalta Sendai;1
+101146;Vissel Kobe;1
+101151;Yokohama F. Marinos;1
+113197;Yokohama FC;1
+1476;Busan IPark;1
+2056;Daegu FC;1
+982;FC Seoul;1
+112115;Gangwon FC;1
+112258;GwangJu FC;1
+110765;Incheon United FC;1
+1477;Jeonbuk Hyundai Motors;1
+1474;Pohang Steelers;1
+2055;Sangju Sangmu FC;1
+981;Seongnam FC;1
+983;Suwon Samsung Bluewings;1
+1473;Ulsan Hyundai FC;1
+114577;Always Ready;1
+110967;Club Blooming;1
+110968;Club Bolívar;1
+110974;Jorge Wilstermann;1
+112667;Nacional Potosí;1
+110970;Oriente Petrolero;1
+112678;Atlético de San Luis;1
+1879;Club América;1
+101114;Club Atlas;1
+110781;Club León;1
+101121;Club Necaxa;1
+111678;Club Tijuana;1
+1878;Cruz Azul;1
+1882;Deportivo Toluca;1
+113134;FC Juárez;1
+1880;Guadalajara;1
+114899;Mazatlán FC;1
+1032;Monterrey;1
+110147;Pachuca;1
+110152;Puebla FC;1
+110150;Querétaro;1
+110144;Santos Laguna;1
+1970;Tigres U.A.N.L.;1
+1881;U.N.A.M.;1
+1755;Aalesunds FK;1
+918;FK Bodø/Glimt;1
+1463;FK Haugesund;1
+1524;IK Start;1
+113459;Kristiansund BK;1
+112420;Mjøndalen IF;1
+417;Molde FK;1
+1456;Odds BK;1
+298;Rosenborg BK;1
+919;SK Brann;1
+1757;Sandefjord Fotball;1
+112199;Sarpsborg 08 FF;1
+917;Stabæk Fotball;1
+922;Strømsgodset IF;1
+300;Viking FK;1
+920;Vålerenga Fotball;1
+111329;Club Guaraní;1
+111008;Club Libertad;1
+112671;Nacional Asunción;1
+101108;Olimpia Asunción;1
+114575;River Plate Asunción;1
+112080;Sol de América;1
+111006;Sportivo Luqueño;1
+111010;Alianza Lima;1
+114598;Club Atlético Grau;1
+112659;Cusco FC;1
+114582;Deportivo Binacional;1
+111334;Melgar FBC;1
+114511;Sport Huancayo;1
+110747;Cracovia;1
+420;Górnik Zabrze;1
+110745;Jagiellonia Białystok;1
+873;Lech Poznań;1
+111091;Lechia Gdańsk;1
+1871;Legia Warszawa;1
+111086;Piast Gliwice;1
+111087;Podbeskidzie Bielsko-Biała;1
+110746;Pogoń Szczecin;1
+114326;Raków Częstochowa;1
+114004;Stal Mielec;1
+112511;Warta Poznań;1
+1873;Wisła Kraków;1
+1569;Wisła Płock;1
+110749;Zagłębie Lubin;1
+111092;Śląsk Wrocław;1
+1898;Boavista FC;1
+1891;CD Nacional;1
+112516;CD Tondela;1
+1893;Clube Sport Marítimo;1
+1892;FC Paços de Ferreira;1
+236;FC Porto;1
+112809;Famalicão;1
+489;Farense;1
+1888;Gil Vicente FC;1
+1900;Moreirense FC;1
+1889;Os Belenenses;1
+10031;Portimonense SC;1
+744;Rio Ave FC;1
+1896;SC Braga;1
+234;SL Benfica;1
+1438;Santa Clara;1
+237;Sporting CP;1
+1887;Vitória Guimarães;1
+305;Bohemian FC;1
+422;Cork City;1
+445;Derry City;1
+837;Dundalk;1
+111131;Finn Harps;1
+306;Shamrock Rovers;1
+834;Shelbourne FC;1
+563;Sligo Rovers;1
+423;St. Patrick's Athletic;1
+753;Waterford FC;1
+113391;Academica Clinceni;1
+112847;Astra Giurgiu;1
+110816;CFR Cluj;1
+113387;Chindia Târgovişte;1
+100757;Dinamo Bucureşti;1
+100759;FC Argeș;1
+110752;FC Botoşani;1
+114147;FC Hermannstadt;1
+113180;FC Viitorul;1
+113182;FC Voluntari;1
+100761;FCSB (Steaua);1
+112637;Gaz Metan Mediaş;1
+110815;Politehnica Iaşi;1
+113378;Sepsi OSK;1
+110750;UTA Arad;1
+308;Universitatea Craiova;1
+100765;Lokomotiv Moscow;1
+315;PFC CSKA Moscow;1
+100767;Spartak Moscow;1
+113058;Abha Club;1
+113345;Al Adalah;1
+112387;Al Ahli;1
+112389;Al Faisaly;1
+112390;Al Fateh;1
+113057;Al Fayha;1
+113222;Al Hazem;1
+605;Al Hilal;1
+607;Al Ittihad;1
+112139;Al Nassr;1
+112392;Al Raed;1
+111674;Al Shabab;1
+112393;Al Taawoun;1
+112408;Al Wehda;1
+113217;Damac FC;1
+112096;Ettifaq FC;1
+77;Aberdeen;1
+78;Celtic;1
+181;Dundee United;1
+184;Hamilton Academical FC;1
+81;Hibernian;1
+82;Kilmarnock;1
+621;Livingston FC;1
+83;Motherwell;1
+86;Rangers FC;1
+631;Ross County FC;1
+100804;St. Johnstone FC;1
+100805;St. Mirren;1
+110929;Kaizer Chiefs;1
+110930;Orlando Pirates;1
+100831;AD Alcorcón;1
+1854;Albacete BP;1
+100852;C.D. Castellón;1
+100888;CD Leganés;1
+110831;CD Lugo;1
+110069;CD Mirandés;1
+260;CD Tenerife;1
+15021;CE Sabadell FC;1
+110065;CF Fuenlabrada;1
+100851;FC Cartagena;1
+110062;Girona FC;1
+573;Málaga CF;1
+452;RCD Espanyol;1
+453;RCD Mallorca;1
+480;Rayo Vallecano;1
+110827;Real Oviedo;1
+459;Real Sporting de Gijón;1
+244;Real Zaragoza;1
+2023;SD Ponferradina;1
+1861;UD Almería;1
+472;UD Las Palmas;1
+476;UD Logroñés;1
+433;AIK;1
+711;BK Häcken;1
+710;Djurgårdens IF;1
+112169;Falkenbergs FF;1
+708;Hammarby IF;1
+432;Helsingborgs IF;1
+700;IF Elfsborg;1
+319;IFK Göteborg;1
+702;IFK Norrköping;1
+113458;IK Sirius;1
+1439;Kalmar FF;1
+320;Malmö FF;1
+112072;Mjällby AIF;1
+113743;Varbergs BoIS;1
+705;Örebro SK;1
+113173;Östersunds FK;1
+900;BSC Young Boys;1
+896;FC Basel 1893;1
+1862;FC Lausanne-Sport;1
+10032;FC Lugano;1
+897;FC Luzern;1
+110770;FC Sion;1
+898;FC St. Gallen;1
+286;FC Vaduz;1
+894;FC Zürich;1
+324;Servette FC;1
+113142;Alanyaspor;1
+741;Antalyaspor;1
+101033;Atiker Konyaspor;1
+749;BB Erzurumspor;1
+327;Beşiktaş JK;1
+1457;Denizlispor;1
+111117;Fatih Karagümrük S.K.;1
+326;Fenerbahçe SK;1
+325;Galatasaray SK;1
+110776;Gazişehir Gaziantep F.K.;1
+101025;Gençlerbirliği SK;1
+101026;Göztepe SK;1
+101028;Hatayspor;1
+111339;Kasimpaşa SK;1
+101020;Kayserispor;1
+101007;MKE Ankaragücü;1
+101014;Medipol Başakşehir FK;1
+101041;Sivasspor;1
+436;Trabzonspor;1
+113259;Yeni Malatyaspor;1
+101037;Çaykur Rizespor;1
+111701;Al Ain FC;1
+112885;Atlanta United;1
+693;Chicago Fire;1
+694;Colorado Rapids;1
+687;Columbus Crew SC;1
+688;DC United;1
+113149;FC Cincinnati;1
+695;FC Dallas;1
+698;Houston Dynamo;1
+112893;Inter Miami;1
+697;LA Galaxy;1
+112996;Los Angeles FC;1
+111138;Minnesota United FC;1
+111139;Montreal Impact;1
+114162;Nashville SC;1
+691;New England Revolution;1
+112828;New York City FC;1
+689;New York Red Bulls;1
+112606;Orlando City SC;1
+112134;Philadelphia Union;1
+111140;Portland Timbers;1
+111065;Real Salt Lake;1
+111928;San Jose Earthquakes;1
+111144;Seattle Sounders FC;1
+696;Sporting Kansas City;1
+111651;Toronto FC;1
+101112;Vancouver Whitecaps FC;1
+101047;Dynamo Kyiv;1
+101059;Shakhtar Donetsk;1
+111002;Centro Atlético Fénix;1
+114024;Club Plaza Colonia;1
+111326;Liverpool Fútbol Club;1
+111325;Nacional de Montevideo;1
+101110;Peñarol;1
+112184;River Plate Montevideo;1
+110992;AC Mineros de Guayana;1
+112916;Aragua FC;1
+110989;Caracas FC;1
+111332;Estudiantes de Mérida;1
+114623;Llaneros de Guanare;1
+112912;Zamora FC;1
