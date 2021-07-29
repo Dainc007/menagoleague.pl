@@ -1,6 +1,10 @@
-<div class="container-fluid footer">
-        <p class="text-center m-0"><small>&copy; Menagoleague.pl since 2018</small></p>
-        <p class="text-center m-0"><small>FIFA 21 et al. and all FIFA assets are property of EA Sports.</small></p>
-        <p class="text-center m-0"><small>created by Menagoleague team.</small></p>
-        <p class="text-center m-0"><small>Join us</small></p>
-    </div>
+<div class="container">
+    <footer>
+      <p><span class="material-icons"> copyright </span> Menagoleague Team 2021. All rights reserved.</p>
+      <div class="footer-socials">
+        <a class="material-icons social-item"> <img src="./images/fb-logo.svg" alt="" /> </a>
+        <a class="material-icons social-item"> <img src="./images/discord-logo.svg" alt="" /> </a>
+        <a class="material-icons social-item"> <img src="./images/mail-logo.svg" alt="" /> </a>
+      </div>
+    </footer>
+  </div>
