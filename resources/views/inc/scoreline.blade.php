@@ -7,12 +7,12 @@
             <div class="results-slider-item">
                 <div class="result">
                 <div class="result-team">
-                    <img class="result-team-icon" src="https://picsum.photos/25/25" alt="" />
+                    <img class="result-team-icon" src="{{url('/images/shields/6.png')}}" alt="" />
                     <span class="result-team-name">T01</span>
                     <span class="result-score"><?php echo rand(0,9)?></span>
                 </div>
                 <div class="result-team">
-                    <img class="result-team-icon" src="https://picsum.photos/25/25" alt="" />
+                    <img class="result-team-icon" src="{{url('/images/shields/8.png')}}" alt="" />
                     <span class="result-team-name">T02</span>
                     <span class="result-score"><?php echo rand(0,9)?></span>
                 </div>

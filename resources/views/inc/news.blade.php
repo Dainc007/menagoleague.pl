@@ -14,7 +14,7 @@
         <div class="league-news-container">
           @for ($i=1;$i<=4;$i++)
           <div class="league-news-item">
-            <img class="league-news-item-img" src="https://picsum.photos/400/200" alt="" />
+            <img class="league-news-item-img" src="{{url('/images/6.png')}}" alt="" />
             <div class="league-news-item-shadow"></div>
             <p class="league-news-item-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, ullam.</p>
           </div>
@@ -29,7 +29,7 @@
         <div class="read-more-container">
           @for ($i=1;$i<=5;$i++)
           <div class="read-more-item">
-            <img class="read-more-item-img" src="https://picsum.photos/130/80" alt="" />
+            <img class="read-more-item-img" src="{{url('/images/8.png')}}" alt="" />
             <div class="read-more-item-text">
               <div class="read-more-item-text-h">
                 <h3>League1</h3>
