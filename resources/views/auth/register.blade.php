@@ -18,17 +18,17 @@
                             <div class="col-md-6 justify-content-center d-flex">
                                 <div class="form-check form-check-inline">
                                     <input checked class="form-check-input" type="radio" name="device" id="xbox" value="xbox">
-                                    <label class="form-check-label" for="xbox"><i class="fab fa-xbox"></i></label>
+                                    <img src="./images/xbox-icon.svg" alt="xbox" />
                                 </div>
 
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="device" id="playstation" value="playstation">
-                                    <label class="form-check-label" for="playstation"><i class="fab fa-playstation"></i></label>
+                                    <img src="./images/playstation-icon.svg" alt="playstation" />
                                 </div>
 
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="device" id="pc" value="pc">
-                                    <label class="form-check-label" for="pc"><i class="fas fa-laptop"></i></label>
+                                    <img src="./images/pc-icon.svg" alt="PC" />
                                 </div>
                             </div>
                         </div>

@@ -5,10 +5,6 @@
     <h2>MENAGOLEAGUE STATS</h2>
 
     <div class="menagoleague-stats-container">
-      <div class="menagoleague-stats-content-item">
-        <p class="menagoleague-stats-content-item-number">2137</p>
-        <p class="menagoleague-stats-content-item-desc">REGISTERED USERS</p>
-      </div>
 
       <div class="menagoleague-stats-content-item">
         <p class="menagoleague-stats-content-item-number">69</p>
@@ -16,14 +12,20 @@
       </div>
 
       <div class="menagoleague-stats-content-item">
+        <p class="menagoleague-stats-content-item-number">123</p>
+        <p class="menagoleague-stats-content-item-desc">REGISTERED USERS</p>
+      </div>
+
+      <div class="menagoleague-stats-content-item">
         <p class="menagoleague-stats-content-item-number">1488</p>
-        <p class="menagoleague-stats-content-item-desc">FOOTBALL PLAYERS AVAILABLE</p>
+        <p class="menagoleague-stats-content-item-desc">PLAYED GAMES</p>
       </div>
 
       <div class="menagoleague-stats-content-item">
         <p class="menagoleague-stats-content-item-number">9999</p>
-        <p class="menagoleague-stats-content-item-desc">GOAL SHOT</p>
+        <p class="menagoleague-stats-content-item-desc">SCORED GOALS</p>
       </div>
+
     </div>
     <p class="menagoleague-stats-p">Running proudly since <b>2018</b></p>
   </div>
