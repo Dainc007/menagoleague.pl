@@ -1,142 +1,138 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+<div class="row justify-content-center">
+    <div class="col-md-8">
 
-            <div class="card">
-                <div class="card-header">{{ __('auth.register') }}</div>
-                <div class="card-body">
+        <div class="card">
+            <div class="card-header">{{ __('auth.register') }}</div>
+            <div class="card-body">
 
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
+                <form method="POST" action="{{ route('register') }}">
+                    @csrf
 
-                        <div class="form-group row">
-                            <label for="device" class="col-md-4 col-form-label text-md-right">{{ __('auth.device') }}</label>
+                    <div class="form-group row">
+                        <label for="device" class="col-md-4 col-form-label text-md-right">{{ __('auth.device') }}</label>
 
-                            <div class="col-md-6 justify-content-center d-flex">
-                                <div class="form-check form-check-inline">
-                                    <input checked class="form-check-input" type="radio" name="device" id="xbox" value="xbox">
-                                    <img src="./images/xbox-icon.svg" alt="xbox" />
-                                </div>
+                        <div class="col-md-6 justify-content-center d-flex">
+                            <div class="form-check form-check-inline">
+                                <input checked class="form-check-input" type="radio" name="device" id="xbox" value="xbox">
+                                <img src="./images/xbox-icon.svg" alt="xbox" />
+                            </div>
 
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="device" id="playstation" value="playstation">
-                                    <img src="./images/playstation-icon.svg" alt="playstation" />
-                                </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="device" id="playstation" value="playstation">
+                                <img src="./images/playstation-icon.svg" alt="playstation" />
+                            </div>
 
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="device" id="pc" value="pc">
-                                    <img src="./images/pc-icon.svg" alt="PC" />
-                                </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="device" id="pc" value="pc">
+                                <img src="./images/pc-icon.svg" alt="PC" />
                             </div>
                         </div>
+                    </div>
 
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('auth.username') }}</label>
+                    <div class="form-group row">
+                        <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('auth.username') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" placeholder="GamerTag, PSN lub nick Origin" autofocus>
+                        <div class="col-md-6">
+                            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" placeholder="GamerTag, PSN lub nick Origin" autofocus>
 
-                                @error('name')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
-                            </div>
+                            @error('name')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
                         </div>
+                    </div>
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('auth.email') }}</label>
+                    <div class="form-group row">
+                        <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('auth.email') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                        <div class="col-md-6">
+                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
-                                @error('email')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
-                            </div>
+                            @error('email')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
                         </div>
+                    </div>
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('auth.pass') }}</label>
+                    <div class="form-group row">
+                        <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('auth.pass') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                        <div class="col-md-6">
+                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
-                                @error('password')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
-                            </div>
+                            @error('password')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
                         </div>
+                    </div>
 
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('auth.confirm') }}</label>
+                    <div class="form-group row">
+                        <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('auth.confirm') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
+                        <div class="col-md-6">
+                            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                         </div>
+                    </div>
 
-                        <div class="form-group row">
-                            <label for="recommendation" class="col-md-4 col-form-label text-md-right">{{ __('auth.recommendation') }}</label>
+                    <div class="form-group row">
+                        <label for="recommendation" class="col-md-4 col-form-label text-md-right">{{ __('auth.recommendation') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="recommendation" type="text" class="form-control" name="recommendation">
-                            </div>
+                        <div class="col-md-6">
+                            <input id="recommendation" type="text" class="form-control" name="recommendation">
                         </div>
+                    </div>
 
-                        <div class="form-group row">
-                            <div class="col-md-12 text-center mb-3">
-                                <small clas="text-center">{{__('auth.recommendation.details')}}</small>
-                            </div>
+                    <div class="form-group row">
+                        <div class="col-md-12 text-center mb-3">
+                            <small clas="text-center">{{__('auth.recommendation.details')}}</small>
                         </div>
+                    </div>
 
 
 
-                        <div class="form-group row">
-                            <label for="discord" class="col-md-4 col-form-label text-md-right">{{ __('auth.discord') }}</label>
+                    <div class="form-group row">
+                        <label for="discord" class="col-md-4 col-form-label text-md-right">{{ __('auth.discord') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="discord" type="text" class="form-control @error('discord') is-invalid @enderror" name="discord" value="{{ old('discord') }}" placeholder="np: SnaggyDainc#3572" autocomplete="discord" autofocus>
-                            </div>
+                        <div class="col-md-6">
+                            <input id="discord" type="text" class="form-control @error('discord') is-invalid @enderror" name="discord" value="{{ old('discord') }}" placeholder="np: SnaggyDainc#3572" autocomplete="discord" autofocus>
                         </div>
+                    </div>
 
-                        <div class="form-group row">
-                            <label for="facebook" class="col-md-4 col-form-label text-md-right"><i>{{ __('auth.fb') }}</i></label>
+                    <div class="form-group row">
+                        <label for="facebook" class="col-md-4 col-form-label text-md-right"><i>{{ __('auth.fb') }}</i></label>
 
-                            <div class="col-md-6">
-                                <input id="facebook" type="text" class="form-control @error('facebook') is-invalid @enderror" name="facebook" value="{{ old('facebook') }}" autocomplete="facebook">
-                            </div>
+                        <div class="col-md-6">
+                            <input id="facebook" type="text" class="form-control @error('facebook') is-invalid @enderror" name="facebook" value="{{ old('facebook') }}" autocomplete="facebook">
                         </div>
+                    </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('auth.join') }}
-                                </button>
-                            </div>
+                    <div class="form-group row mb-0">
+                        <div class="col-md-6 offset-md-4">
+                            <button type="submit" class="btn btn-primary">
+                                {{ __('auth.join') }}
+                            </button>
                         </div>
+                    </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <small>{{__('auth.statute.annoucement')}} <a href="">{{__('auth.statute')}}</a> i <a href="">{{__('auth.policy')}}</a></small>
-                            </div>
+                    <div class="form-group row mb-0">
+                        <div class="col-md-6 offset-md-4">
+                            <small>{{__('auth.statute.annoucement')}} <a href="">{{__('auth.statute')}}</a> i <a href="">{{__('auth.policy')}}</a></small>
                         </div>
-
-                </div>
-
-                </form>
+                    </div>
 
             </div>
+
+            </form>
+
         </div>
-
-
     </div>
 </div>
 
