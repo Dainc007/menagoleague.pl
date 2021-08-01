@@ -1,5 +1,7 @@
-<aside class="discord">Discord</aside>
-<div class="menagoleague-stats">
+<div class="content content-mobile">
+  <aside class="discord">Discord</aside>
+
+  <div class="menagoleague-stats">
     <h2>MENAGOLEAGUE STATS</h2>
 
     <div class="menagoleague-stats-container">
@@ -27,3 +29,4 @@
   </div>
 
   <aside class="discord">Discord</aside>
+</div>

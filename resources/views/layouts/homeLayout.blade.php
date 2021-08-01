@@ -59,22 +59,25 @@
                     </div>
                 </div>
             </div>
-            @yield('content')
-            @yield('news')
+
             <div class="container">
-                <div class="content content-mobile">
-                    @yield('stats')
-                </div>
+               @yield('content')
             </div>
+
             <div class="container">
-                <div class="gameplay-overview">
-                    @yield('gameplay')
-                </div>
+                @yield('news')
             </div>
+
             <div class="container">
-                <div class="what-is-menagoleague">
-                    @yield('aboutgame')
-                </div>
+                @yield('stats')
+            </div>
+
+            <div class="container">
+                @yield('gameplay')
+            </div>
+
+            <div class="container">
+                @yield('aboutgame')
             </div>
         </main>
     </div>
