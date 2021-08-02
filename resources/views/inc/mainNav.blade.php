@@ -11,12 +11,13 @@
                 </a>
             </div>
             <div class="dropdown">
-                <a class="dropdown-link">
+              
+                <a class="dropdown-link" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     {{__('nav.mainNav.tablesAndFixtures')}}
                     <span class="material-icons">arrow_drop_down</span>
                 </a>
                 <div class="dropdown-menu">
-                    <a href="#">{{ __('nav.mainNav.england') }}</a>
+                    <a class="dropdown-item" href="#">{{ __('nav.mainNav.england') }}</a>
                     <a href="#">{{ __('nav.mainNav.spain') }}</a>
                     <a href="#">{{ __('nav.mainNav.poland') }}</a>
                     <a href="#">{{ __('nav.mainNav.italy') }}</a>
@@ -25,7 +26,7 @@
                 </div>
             </div>
             <div class="dropdown">
-                <a class="dropdown-link">
+                <a class="dropdown-link" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     {{ __('nav.mainNav.society') }}
                     <span class="material-icons">arrow_drop_down</span>
                 </a>
@@ -37,7 +38,7 @@
                 </div>
             </div>
             <div class="dropdown">
-                <a class="dropdown-link">
+                <a class="dropdown-link" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     {{ __('nav.mainNav.help') }}
                     <span class="material-icons">arrow_drop_down</span>
                 </a>
@@ -47,7 +48,7 @@
                 </div>
             </div>
         </div>
-        <div class="nav-auth">
+        <div class="nav-auth dropdown">
             @guest
             @if (Route::has('login'))
               <a href="{{route('login')}}" class="btn">{{__('Logowanie')}}</a>
@@ -57,10 +58,11 @@
               <a class="btn btn-w-border" href="{{ route('register') }}">{{ __('Rejestracja') }}</a>
             @endif
             @else
-            <a class="dropdown-link">Nickname <span class="material-icons"> arrow_drop_down </span></a>
+            <a class="dropdown-link" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{auth()->user()->name}} <span class="material-icons"> arrow_drop_down </span></a>
+            
             <div class="dropdown-menu">
               <a href="#">Settings</a>
-              <a href="#">Logout</a>
+              <a href="{{ route('logout') }}" >Logout</a>
             </div>
             @endguest
         </div>
