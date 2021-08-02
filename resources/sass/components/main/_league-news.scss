@@ -48,7 +48,16 @@
     height: 210px;
     position: relative;
     margin: 0 auto;
-    background-color: var(--text-gray);
+    background-color: $text-gray;
+    overflow: hidden;
+    img {
+        transition: .5s;
+    }
+    &:hover {
+        img {
+            transform: scale(1.1);
+        }
+    }
     a {
         &:hover {
             color: white;
