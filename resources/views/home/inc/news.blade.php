@@ -16,9 +16,15 @@
       <div class="league-news-item" data-toggle="modal" data-target="#exampleModalLong{{$article->id}}">
         <img class="league-news-item-img" src="{{url('/images/'. rand(1,8) .'.png')}}" alt="" />
         <div class="league-news-item-shadow"></div>
+<<<<<<< HEAD
         <p class="league-news-item-p">{{$article->title}}</p>
 
         <div class="modal fade" id="exampleModalLong{{$article->id}}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+=======
+        <p class="league-news-item-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, ullam.</p>
+      </div>
+      <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" >
+>>>>>>> c4ebb00ebdf188ae4fda90465cad6c82aac9880a
           <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
               <div class="modal-header">
