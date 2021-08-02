@@ -1,32 +1,32 @@
+// What is MenagoLeague
+
 .what-is-menagoleague {
-    background-color: $sectionColor;
-    margin-bottom: 2rem;
-    padding: 25px;
-    border-radius: 5px;
-    box-shadow: inset 0px -4px 5px rgb(176 176 176 / 25%);
+  background-color: $sectionColor;
+  margin-bottom: 2rem;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: inset 0px -4px 5px rgb(176 176 176 / 25%);
 
-    h2 {
-        margin-bottom: 35px;
+  h2 {
+    margin-bottom: 35px;
+  }
+
+  .what-is-menagoleague-container-item {
+    margin-bottom: 25px;
+  }
+
+  .what-is-menagoleague-container-item {
+    h3 {
+      margin-bottom: 17px;
+      font-size: 1.3em;
     }
 
-    .what-is-menagoleague-container-item {
-        margin-bottom: 25px;
+    p {
+      font-size: 1.2em;
+      padding: 15px;
+      border-left: 13px solid $text-olivine;
+      border-bottom-left-radius: 5px;
+      border-top-left-radius: 5px;
     }
-
-
-    .what-is-menagoleague-container-item {
-        h3 {
-            margin-bottom: 17px;
-            font-size: 1.3em;
-        }
-
-        p {
-            font-size: 1.2em;
-            padding: 15px;
-            border-left: 13px solid $text-olivine;
-            border-bottom-left-radius: 5px;
-            border-top-left-radius: 5px;
-        }
-    }
-
+  }
 }

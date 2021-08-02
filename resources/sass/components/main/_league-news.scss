@@ -1,226 +1,152 @@
 /* Main news */
 
 .content {
-    display: flex;
-    margin-bottom: 2rem;
+  display: flex;
+  margin-bottom: 2rem;
 
-    .league-news {
-        width: 100%;
-        background-color: $sectionColor;
-        padding: 25px;
-        border-radius: 5px;
-        box-shadow: inset 0px -4px 5px rgb(176 176 176 / 25%);
-    }
-
-    .league-news-h {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .league-news-h {
-        h2 {
-            margin-bottom: 35px;
-        }
-    }
-
-    .league-news-devices {
-        width: 34%;
-        display: flex;
-        justify-content: space-between;
-
-        a {
-            height: max-content;
-        }
-
-        img {
-            height: 25px;
-            width: 25px;
-        }
-    }
-
-    .league-news-container {
-        display: grid;
-        grid-template-columns: 100%;
-        gap: 20px;
-    }
-
-    .league-news-item {
-        width: 100%;
-        height: 210px;
-        position: relative;
-        margin: 0 auto;
-        background-color: $text-gray;
-        overflow: hidden;
-
-        img {
-            transition: .5s;
-        }
-
-        &:hover {
-            cursor: pointer;
-
-            img {
-                transform: scale(1.1);
-            }
-        }
-
-        a {
-            &:hover {
-                color: white;
-            }
-        }
-    }
-
-    .league-news-item-img {
-        width: 100%;
-        background-size: cover;
-    }
-
-    .league-news-item-shadow {
-        height: 65%;
-        width: 100%;
-        background: linear-gradient(0deg, rgba(48, 100, 36, 0.9) 0%, rgba(62, 120, 48, 0.9) 33%, rgba(91, 161, 73, 0) 100%);
-        position: absolute;
-        bottom: 0;
-    }
-
-    .league-news-item-p {
-        padding: 20px;
-        font-size: 1em;
-        color: white;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-    }
-
-    @media (min-width: 425px) {
-        .league-news-item {
-            width: 350px;
-            height: 230px;
-        }
-
-        .league-news-devices {
-            width: 28%;
-        }
-    }
-
-    @media (min-width: 768px) {
-        .league-news-devices {
-            width: 15%;
-        }
-
-        .league-news-container {
-            gap: 25px;
-        }
-
-        .league-news-item-p {
-            font-size: 1.4em;
-        }
-
-        .league-news-item {
-            width: 450px;
-            height: 280px;
-        }
-    }
-
-    @media (min-width: 1024px) {
-        .league-news-item-p {
-            font-size: 1.6em;
-        }
-
-        .league-news-item {
-            width: 100%;
-            height: 320px;
-            margin: 0;
-        }
-
-        .league-news-container {
-            grid-template-columns: calc(50% - 17.5px) calc(50% - 17.5px);
-            gap: 35px;
-        }
-    }
-
-    @media (min-width: 1440px) {
-        .league-news-item {
-            width: 100%;
-            height: 300px;
-            margin: 0;
-        }
-
-        .league-news {
-            width: 68%;
-            margin-right: 2rem;
-        }
-
-        .responsive-btn-allNews {
-            display: none !important;
-        }
-    }
-
-}
-
-/* Read more */
-.read-more {
-    display: none;
-    width: 30%;
+  .league-news {
+    width: 100%;
     background-color: $sectionColor;
     padding: 25px;
     border-radius: 5px;
     box-shadow: inset 0px -4px 5px rgb(176 176 176 / 25%);
+  }
 
+  .league-news-h {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .league-news-h {
     h2 {
-        margin-bottom: 20px;
+      margin-bottom: 35px;
     }
-}
+  }
 
-
-
-.read-more-item {
+  .league-news-devices {
+    width: 34%;
     display: flex;
-    border-bottom: 1px solid black;
-    padding: 15px 0 20px 0;
-}
+    justify-content: space-between;
 
-.read-more-item-img {
-    width: 120px;
-    margin: auto 0;
-}
-
-.read-more-item {
-    &:last-of-type {
-        border: none;
+    a {
+      height: max-content;
     }
-}
 
-.read-more-item-text {
-    padding-left: 15px;
-    color: $text-gray;
-
-    p {
-        font-size: 0.9em;
-        text-align: right;
+    img {
+      height: 25px;
+      width: 25px;
     }
-}
+  }
 
-.read-more-item-text-a {
-    color: $text-gray;
-    font-weight: 600;
+  .league-news-container {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 20px;
+  }
+
+  .league-news-item {
+    width: 100%;
+    height: 210px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    cursor: pointer;
+
+    img {
+      transition: 0.5s;
+    }
+
     &:hover {
-        color: $text-gray;
-        text-decoration: none;
+      img {
+        transform: scale(1.1);
+      }
     }
-}
+  }
 
-.btn-allNews {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-}
+  .league-news-item-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-@media (min-width: 1440px) {
-    .content {
-        .read-more {
-            display: initial;
-        }
+  .league-news-item-shadow {
+    height: 65%;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(48, 100, 36, 0.9) 0%, rgba(62, 120, 48, 0.9) 33%, rgba(91, 161, 73, 0) 100%);
+    position: absolute;
+    bottom: 0;
+  }
+
+  .league-news-item-p {
+    padding: 20px;
+    font-size: 1em;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  @media (min-width: 425px) {
+    .league-news-item {
+      width: 350px;
+      height: 230px;
     }
+
+    .league-news-devices {
+      width: 28%;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .league-news-devices {
+      width: 15%;
+    }
+
+    .league-news-container {
+      gap: 25px;
+    }
+
+    .league-news-item-p {
+      font-size: 1.4em;
+    }
+
+    .league-news-item {
+      width: 450px;
+      height: 280px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .league-news-item-p {
+      font-size: 1.6em;
+    }
+
+    .league-news-item {
+      width: 100%;
+      height: 320px;
+      margin: 0;
+    }
+
+    .league-news-container {
+      grid-template-columns: calc(50% - 17.5px) calc(50% - 17.5px);
+      gap: 35px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .league-news-item {
+      width: 100%;
+      height: 300px;
+      margin: 0;
+    }
+
+    .league-news {
+      width: 68%;
+      margin-right: 2rem;
+    }
+
+    .responsive-btn-allNews {
+      display: none !important;
+    }
+  }
 }
