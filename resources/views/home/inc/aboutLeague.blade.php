@@ -1,7 +1,7 @@
-<div class="what-is-menagoleague">
+<div class="what-is-menagoleague" id="about">
   <h2>WHAT IS MENAGOLEAGUE?</h2>
   <div class="what-is-menagoleague-container">
-    @for($i=1;$i<=4;$i++)
+    @for($i=1;$i<=3;$i++)
       <div class="what-is-menagoleague-container-item">
         <h3>How does the "Online Career Mode" work?</h3>
         <p>

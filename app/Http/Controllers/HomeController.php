@@ -11,9 +11,10 @@ class HomeController extends Controller
     public function index()
     {
         return view('home.home', [
-            'articles' => Article::all(),
-            'user'  => Auth::user(),
-            'games' => Fixture::where('date', '>=', now()->subDays(7))
+            'articles'    => Article::limit(4)->get(),
+            'oldArticles' => Article::skip(4)->take(6)->get(),
+            'user'        => Auth::user(),
+            'games'       => Fixture::where('date', '>=', now()->subDays(7))
                 ->where('date', '<=', now()->addDays(7))->get(),
         ]);
     }
