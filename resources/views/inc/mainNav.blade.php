@@ -84,45 +84,38 @@
 
         <div class="r-menu">
           <div class="r-dropdown">
-            <a class="r-dropdown-link" href="/">WHO ARE WE </a>
+            <a href="{{route('welcome')}}" class="r-dropdown-link">
+              {{__('nav.mainNav.whatAreWe')}}
+            </a>
           </div>
 
           <div class="r-dropdown">
-            <button class="btn btn-r-menu r-dropdown-link">MATCHES & STANDINGS <span class="material-icons"> arrow_right</span></button>
+            <a class="btn btn-r-menu r-dropdown-link" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{__('nav.mainNav.tablesAndFixtures')}}<span class="material-icons"> arrow_right</span></button>
             <div class="r-dropdown-menu">
-              <a href="">England</a>
-              <a href="">Spain</a>
-              <a href="">Poland</a>
-              <a href="">Italy</a>
-              <a href="" class="disabled">Champions</a>
-              <a href="" class="disabled">Europe</a>
+              <a class="dropdown-item" href="#">{{ __('nav.mainNav.england') }}</a>
+              <a class="dropdown-item" href="drop">{{ __('nav.mainNav.spain') }}</a>
+              <a class="dropdown-item" href="#">{{ __('nav.mainNav.poland') }}</a>
+              <a class="dropdown-item" href="#">{{ __('nav.mainNav.italy') }}</a>
+              <a class="disabled dropdown-item" href="#">{{ __('nav.mainNav.champions') }}</a>
+              <a class="disabled dropdown-item" href="#">{{ __('nav.mainNav.europe') }}</a>
+            </div>
+          </div>
+          <div class="r-dropdown">
+            <button class="btn btn-r-menu r-dropdown-link" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ __('nav.mainNav.society') }}<span class="material-icons"> arrow_right </span></button>
+            <div class="r-dropdown-menu">
+              <a class="dropdown-item" href="https://www.facebook.com/groups/230246767524306" target="_blank">{{ __('nav.mainNav.fbGroup') }}</a>
+              <a class="dropdown-item" href="https://www.facebook.com/MenagoLeague" target="_blank">{{ __('nav.mainNav.fbFanPage') }}</a>
+              <a class="dropdown-item" href="https://discord.gg/w73uDUjse8" target="_blank">{{ __('nav.mainNav.discord') }} </a>
+              <a class="dropdown-item" href="#admin">{{ __('nav.mainNav.admin') }}</a>
             </div>
           </div>
 
           <div class="r-dropdown">
-            <button class="btn btn-r-menu r-dropdown-link">LEADERBOARD <span class="material-icons"> arrow_right </span></button>
+            <button class="btn btn-r-menu r-dropdown-link" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{ __('nav.mainNav.help') }} <span class="material-icons">arrow_right </span></button>
             <div class="r-dropdown-menu">
-              <a href="">Link 1</a>
-              <a href="">Link 2</a>
-              <a href="">Link 3</a>
-            </div>
-          </div>
-
-          <div class="r-dropdown">
-            <button class="btn btn-r-menu r-dropdown-link">COMMUNITY <span class="material-icons"> arrow_right </span></button>
-            <div class="r-dropdown-menu">
-              <a href="">fb</a>
-              <a href="">fb</a>
-              <a href="">dc</a>
-              <a href="">admin</a>
-            </div>
-          </div>
-
-          <div class="r-dropdown">
-            <button class="btn btn-r-menu r-dropdown-link">HELP <span class="material-icons">arrow_right </span></button>
-            <div class="r-dropdown-menu">
-              <a href="">Rules</a>
-              <a href="">FAQ</a>
+              <a class="dropdown-item" href="#"> {{ __('nav.mainNav.rules') }}</a>
+              <a class="dropdown-item" href="#"> {{ __('nav.mainNav.FAQ') }}</a>
             </div>
           </div>
 

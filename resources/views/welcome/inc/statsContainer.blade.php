@@ -1,5 +1,7 @@
 <div class="content content-mobile">
-  <aside class="discord">Discord</aside>
+  <aside class="discord">
+    <iframe src="https://discord.com/widget?id=785081091710517268&theme=dark" width="100%" height="100%" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+  </aside>
 
   <div class="menagoleague-stats">
     <h2>MENAGOLEAGUE STATS</h2>
@@ -30,5 +32,7 @@
     <p class="menagoleague-stats-p">Running proudly since <b>2018</b></p>
   </div>
 
-  <aside class="discord">Discord</aside>
+  <aside class="discord">
+    <iframe src="https://discord.com/widget?id=785081091710517268&theme=dark" width="100%" height="100%" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+  </aside>
 </div>
