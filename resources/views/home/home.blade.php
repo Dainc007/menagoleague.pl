@@ -2,30 +2,30 @@
 
 @section('content')
 
-@include('welcome.inc.scoreline')
+@include('home.inc.scoreline')
 
 @endsection
 
 <!-- News and read more -->
 @section('news')
 
-@include('welcome.inc.news')
+@include('home.inc.news')
 
 @endsection
 
 <!-- Discord and menagoleague stats -->
 @section('stats')
 
-@include('welcome.inc.statsContainer')
+@include('home.inc.statsContainer')
 
 @endsection
 
 <!-- Gameplay overview -->
 @section('gameplay')
-@include('welcome.inc.gameplayOverview')
+@include('home.inc.gameplayOverview')
 @endsection
 
 <!-- About menagoleague -->
 @section('aboutgame')
-@include('welcome.inc.aboutLeague')
+@include('home.inc.aboutLeague')
 @endsection

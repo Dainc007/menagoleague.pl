@@ -5,9 +5,9 @@
       <h2>LEAGUE NEWS</h2>
 
       <div class="league-news-devices">
-        <a href=""><img src="./images/xbox-icon.svg" alt="" /></a>
-        <a href=""><img src="./images/playstation-icon.svg" alt="" /></a>
-        <a href=""><img src="./images/pc-icon.svg" alt="" /></a>
+        <a href="#"><img src="./images/xbox-icon.svg" alt="" /></a>
+        <a href="#"><img src="./images/playstation-icon.svg" alt="" /></a>
+        <a href="#"><img src="./images/pc-icon.svg" alt="" /></a>
       </div>
     </div>
 

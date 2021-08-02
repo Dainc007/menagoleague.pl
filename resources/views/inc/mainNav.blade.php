@@ -1,12 +1,12 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
   <div class="container">
-    <a class="logo" href="{{ route('home') }}">
+    <a class="logo" href="{{ route('central') }}">
       <img src="images/logo-normal-classic.svg" alt="">
     </a>
 
     <div class="menu">
       <div class="dropdown">
-        <a href="{{route('welcome')}}" class="dropdown-link">
+        <a href="{{route('home')}}" class="dropdown-link">
           {{__('nav.mainNav.whatAreWe')}}
         </a>
       </div>
@@ -84,7 +84,7 @@
 
         <div class="r-menu">
           <div class="r-dropdown">
-            <a href="{{route('welcome')}}" class="r-dropdown-link">
+            <a href="{{route('home')}}" class="r-dropdown-link">
               {{__('nav.mainNav.whatAreWe')}}
             </a>
           </div>
