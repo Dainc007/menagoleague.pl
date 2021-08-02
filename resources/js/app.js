@@ -30,3 +30,27 @@ files.keys().map((key) => Vue.component(key.split('/').pop().split('.')[0], file
 const app = new Vue({
   el: '#app',
 });
+
+const burgerMenu = document.querySelector('.burger-menu');
+const closeBurgerMenu = document.querySelector('.close-burger-menu');
+const responsiveMenu = document.querySelector('.responsive-menu');
+
+burgerMenu.onclick = () => {
+  const openResponsiveMenu = () => {
+    if (responsiveMenu.style.display == 'none') {
+      responsiveMenu.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+  };
+  openResponsiveMenu();
+};
+
+closeBurgerMenu.onclick = () => {
+  const closeResponsiveMenu = () => {
+    if (responsiveMenu.style.display == 'flex') {
+      responsiveMenu.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+  };
+  closeResponsiveMenu();
+};
