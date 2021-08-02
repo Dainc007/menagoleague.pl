@@ -17,17 +17,13 @@ use Illuminate\Support\Facades\Route;
 
 /* Welcome Page */
 
-Route::get('/', function () {
-    return view('welcome', [
-        'articles' => Article::all()
-    ]);
-})->name('welcome');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 /* Auth Routes */
 Auth::routes();
 
-/* Home Route */
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+/* Central Route */
+Route::get('/central', [App\Http\Controllers\CentralController::class, 'index'])->name('central');
 
 /* User */
 Route::prefix('/users')->group(function () {
