@@ -11583,15 +11583,15 @@ footer a .social-item img {
 
 /* Homepage components */
 
-.modal-header {
+.modal-content .modal-header {
   align-items: center;
 }
 
-.modal-header button span {
+.modal-content .modal-header button span {
   font-size: 2em;
 }
 
-.modal-body img {
+.modal-content .modal-body img {
   height: 300px;
   width: 100%;
   -o-object-fit: cover;
@@ -11599,16 +11599,22 @@ footer a .social-item img {
   margin-bottom: 1rem;
 }
 
-.modal-body h5 {
+.modal-content .modal-body h5 {
   margin-bottom: 2rem;
 }
 
-.show {
+.league-news-item-img .fade {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal .show {
   display: flex !important;
   justify-content: center;
 }
 
-.modal.show .modal-dialog {
+.modal .show .modal-dialog {
   margin: auto;
 }
 
@@ -11969,11 +11975,11 @@ a .btn-discord img {
   cursor: pointer;
 }
 
-.content .league-news-item img {
+.content .league-news-item .league-news-item-img {
   transition: 0.5s;
 }
 
-.content .league-news-item:hover img {
+.content .league-news-item .league-news-item-img:hover {
   transform: scale(1.1);
 }
 
