@@ -52,15 +52,13 @@
     overflow: hidden;
     cursor: pointer;
 
-    img {
+    .league-news-item-img {
       transition: 0.5s;
-    }
-
-    &:hover {
-      img {
+      &:hover {
         transform: scale(1.1);
       }
     }
+
   }
 
   .league-news-item-img {

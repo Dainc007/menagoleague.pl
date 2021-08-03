@@ -20,7 +20,6 @@
     
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/theme.css') }}" rel="stylesheet">
     <style>
         .user-info__logo img {
             max-width: 80px;

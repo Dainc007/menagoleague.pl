@@ -1,12 +1,12 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
   <div class="container">
-    <a class="logo" href="{{ route('central') }}">
+    <a class="logo" href="{{ route('home') }}">
       <img src="images/logo-normal-classic.svg" alt="">
     </a>
 
     <div class="menu">
       <div class="dropdown">
-        <a href="{{route('home')}}" class="dropdown-link">
+        <a href="#about" class="dropdown-link">
           {{__('nav.mainNav.whatAreWe')}}
         </a>
       </div>
@@ -17,12 +17,12 @@
           <span class="material-icons">arrow_drop_down</span>
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">{{ __('nav.mainNav.england') }}</a>
+          <a href="#">{{ __('nav.mainNav.england') }}</a>
           <a href="#">{{ __('nav.mainNav.spain') }}</a>
           <a href="#">{{ __('nav.mainNav.poland') }}</a>
           <a href="#">{{ __('nav.mainNav.italy') }}</a>
-          <a class="disabled" href="#">{{ __('nav.mainNav.champions') }}</a>
-          <a class="disabled" href="#">{{ __('nav.mainNav.europe') }}</a>
+          <a href="#">{{ __('nav.mainNav.champions') }}</a>
+          <a href="#">{{ __('nav.mainNav.europe') }}</a>
         </div>
       </div>
       <div class="dropdown">
@@ -84,7 +84,7 @@
 
         <div class="r-menu">
           <div class="r-dropdown">
-            <a href="{{route('home')}}" class="r-dropdown-link">
+            <a href="#about" class="r-dropdown-link">
               {{__('nav.mainNav.whatAreWe')}}
             </a>
           </div>

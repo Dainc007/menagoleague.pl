@@ -1,31 +1,38 @@
-.modal-header {
-  align-items: center;
-
-  button {
-    span {
-      font-size: 2em;
+.modal-content {
+    .modal-header {
+        align-items: center;
+        button {
+            span {
+                font-size: 2em;
+            }
+        }
     }
+    .modal-body {
+        img {
+            height: 300px;
+            width: 100%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+        h5 {
+            margin-bottom: 2rem;
+        }
+    }
+    
+}
+.league-news-item-img {
+  .fade {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
-
-.modal-body {
-  img {
-    height: 300px;
-    width: 100%;
-    object-fit: cover;
-    margin-bottom: 1rem;
-  }
-
-  h5 {
-    margin-bottom: 2rem;
-  }
-}
-
-.show {
-  display: flex !important;
-  justify-content: center;
-}
-
-.modal.show .modal-dialog {
-  margin: auto;
+.modal {
+    .show {
+        display: flex !important;
+        justify-content: center;
+        .modal-dialog {
+          margin: auto;
+        }
+    }
 }
