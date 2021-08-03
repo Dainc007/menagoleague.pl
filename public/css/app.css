@@ -11251,6 +11251,10 @@ ul {
   transition: all 1s;
 }
 
+.menu .dropdown .show {
+  flex-direction: column !important;
+}
+
 .menu .dropdown:hover .dropdown-link {
   color: #144f06;
 }

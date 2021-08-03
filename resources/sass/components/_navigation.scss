@@ -59,7 +59,7 @@ ul {
         align-items: center;
         transition: all 1s;
         .show {
-            flex-direction: column;
+            flex-direction: column!important;
         }
         &:hover {
             .dropdown-link {
