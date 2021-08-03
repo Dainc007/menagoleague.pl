@@ -52,13 +52,15 @@ ul {
     width: max-content;
     display: none;
     justify-content: space-between;
-
+    
     .dropdown {
         position: relative;
         display: flex;
         align-items: center;
         transition: all 1s;
-
+        .show {
+            flex-direction: column;
+        }
         &:hover {
             .dropdown-link {
                 color: $text-dark;
