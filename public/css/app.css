@@ -11644,6 +11644,7 @@ footer a .social-item img {
 .read-more-item-text {
   padding-left: 15px;
   color: #494949;
+  width: 100%;
 }
 
 .read-more-item-text p {
@@ -12076,7 +12077,7 @@ a .btn-discord img {
 
 .menagoleague-stats .menagoleague-stats-container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   margin-bottom: 35px;
 }

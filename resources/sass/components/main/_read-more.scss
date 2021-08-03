@@ -35,6 +35,7 @@
 .read-more-item-text {
   padding-left: 15px;
   color: $text-gray;
+  width: 100%;
 
   p {
     font-size: 0.9em;
@@ -45,6 +46,7 @@
 .read-more-item-text-a {
   color: $text-gray;
   font-weight: 600;
+
   &:hover {
     color: $text-gray;
     text-decoration: none;
