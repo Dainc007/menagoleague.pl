@@ -40,7 +40,7 @@ const app = new Vue({
 });
 
 // Responsive menu
-// Responsive menu
+// Main responsive menu
 
 const burgerMenu = document.querySelector('.burger-menu');
 const closeBurgerMenu = document.querySelector('.close-burger-menu');
@@ -64,4 +64,23 @@ closeBurgerMenu.onclick = () => {
     }
   };
   closeResponsiveMenu();
+};
+
+// Game responsive menu
+
+const gameBurgerMenu = document.querySelector('.central-burger-menu');
+const gameResponsiveMenu = document.querySelector('.responsive-central-menu');
+const centralBurgerMenuImg = document.querySelector('.central-burger-menu');
+
+gameBurgerMenu.onclick = () => {
+  const openGameResponsiveMenu = () => {
+    if (gameResponsiveMenu.style.display == 'none') {
+      gameResponsiveMenu.style.display = 'flex';
+      centralBurgerMenuImg.src = './images/close-burger-menu.svg';
+    } else {
+      gameResponsiveMenu.style.display = 'none';
+      centralBurgerMenuImg.src = './images/burger-menu.svg';
+    }
+  };
+  openGameResponsiveMenu();
 };
