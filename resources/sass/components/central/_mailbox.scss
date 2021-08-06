@@ -1,0 +1,125 @@
+/* Team Mailbox */
+.central-team-mailbox {
+  background-color: $sectionColor;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: inset 0px -4px 5px rgb(176 176 176 / 25%);
+  height: 588px;
+}
+
+.team-mailbox-date {
+  text-align: right;
+  font-size: 0.8em;
+}
+
+.central-team-mailbox-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.team-mailbox-sender {
+  display: flex;
+  width: 100%;
+  margin-top: 1rem;
+
+  img {
+    width: 90px;
+  }
+}
+
+.team-mailbox-sender-name {
+  font-weight: bold;
+  font-size: 0.9em;
+  text-align: left;
+  margin: 15px 0 5px 0;
+  padding-left: 15px;
+}
+
+.team-mailbox-sender-proffesion {
+  font-size: 0.8em;
+  text-align: left;
+  padding-left: 15px;
+}
+
+.central-team-mailbox-messages {
+  width: 100%;
+  padding-left: 15px;
+  overflow: hidden;
+}
+
+.track-team-mailbox-messages {
+  height: 416px;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.message-item {
+  font-size: 0.8em;
+  margin-bottom: 15px;
+
+  .message {
+    padding: 10px;
+    border: 1px solid $text-gray;
+    border-radius: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .central-team-mailbox-content {
+    flex-direction: unset;
+  }
+
+  .team-mailbox-sender {
+    display: block;
+    width: 90px;
+  }
+
+  .team-mailbox-sender-name {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .team-mailbox-sender-proffesion {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .track-team-mailbox-messages {
+    height: 499px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .central-team-mailbox {
+    height: 570px;
+  }
+
+  .track-team-mailbox-messages {
+    height: 474px;
+  }
+
+  .central-team-mailbox-messages {
+    padding-left: 14px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .central-team-mailbox-messages {
+    padding-left: 15px;
+  }
+
+  .central-team-mailbox {
+    height: 602px;
+  }
+
+  .track-team-mailbox-messages {
+    height: 516px;
+  }
+}
+
+.bshadow {
+  box-shadow: inset 4px 4px 20px #dcdcdc, inset -4px -4px 20px #dedede;
+  color: $text-gray;
+}

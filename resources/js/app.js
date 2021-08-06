@@ -17,7 +17,15 @@ window.Vue = require('vue').default;
  */
 
 const files = require.context('./', true, /\.vue$/i);
-files.keys().map((key) => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
+files.keys().map((key) =>
+  Vue.component(
+    key
+      .split('/')
+      .pop()
+      .split('.')[0],
+    files(key).default
+  )
+);
 
 //Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
@@ -30,6 +38,9 @@ files.keys().map((key) => Vue.component(key.split('/').pop().split('.')[0], file
 const app = new Vue({
   el: '#app',
 });
+
+// Responsive menu
+// Main responsive menu
 
 const burgerMenu = document.querySelector('.burger-menu');
 const closeBurgerMenu = document.querySelector('.close-burger-menu');
@@ -53,4 +64,23 @@ closeBurgerMenu.onclick = () => {
     }
   };
   closeResponsiveMenu();
+};
+
+// Game responsive menu
+
+const gameBurgerMenu = document.querySelector('.central-burger-menu');
+const gameResponsiveMenu = document.querySelector('.responsive-central-menu');
+const centralBurgerMenuImg = document.querySelector('.central-burger-menu');
+
+gameBurgerMenu.onclick = () => {
+  const openGameResponsiveMenu = () => {
+    if (gameResponsiveMenu.style.display == 'none') {
+      gameResponsiveMenu.style.display = 'flex';
+      centralBurgerMenuImg.src = './images/close-burger-menu.svg';
+    } else {
+      gameResponsiveMenu.style.display = 'none';
+      centralBurgerMenuImg.src = './images/burger-menu.svg';
+    }
+  };
+  openGameResponsiveMenu();
 };

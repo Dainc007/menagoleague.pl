@@ -7,15 +7,17 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-
 body {
-    font-family: "BW Modelica";
+  font-family: 'BW Modelica';
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.882) 71.99%, rgba(206, 234, 211, 0.855) 87.12%, rgba(62, 73, 64, 0.9) 98.93%), url(/images/background.jpg);
+  background-size: cover;
+  min-height: 100vh;
 }
 
 .material-icons {
-    vertical-align: middle;
-    position: relative;
-    top: -2px;
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
 }
 
 h1,
@@ -25,43 +27,52 @@ h4,
 h5,
 h6,
 p {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
 }
 
 h2 {
-    color: $text-darker;
-    font-size: 1.2em;
-    font-weight: 700;
+  color: $text-darker;
+  font-size: 1.2em;
+  font-weight: 700;
 }
 
 @media (min-width: 425px) {
-    h2 {
-        font-size: 1.5em;
-    }
+  h2 {
+    font-size: 1.5em;
+  }
 }
 
 h3 {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 body,
 html {
-    font-family: 'Bw Modelica';
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    position: relative;
-    width: 100vw;
-    scroll-behavior: smooth;
+  font-family: 'Bw Modelica';
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  position: relative;
+  width: 100vw;
+  scroll-behavior: smooth;
 }
 
 @import 'components/scrollbar';
 
 .container {
-    width: 98%;
-    margin: 0 auto;
-    padding: 0;
+  width: 98%;
+  margin: 0 auto;
+  padding: 0;
 }
 
 @media (min-width: 768px) {
@@ -108,19 +119,18 @@ a {
 
 .disabled {
   pointer-events: none !important;
-  color: $text-gray!important;
+  color: $text-gray !important;
 }
- 
-/* Navbar and footer */ 
 
+/* Navbar and footer */
 @import 'components/navigation';
 @import 'components/footer';
+@import 'components/log-user-nav'; /* Logged user navigation */
 
-/* Homepage components */ 
-
+/* Homepage components */
 @import 'components/main/main';
 
-/* Game components */ 
+/* Game components */
+@import 'components/central/main'; /* Central components:*/
 
-/* @import 'components/app/ */ 
-
+/* @import 'components/app/ */
