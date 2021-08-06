@@ -28,6 +28,11 @@
         <p class="menagoleague-stats-content-item-desc">SCORED GOALS</p>
       </div>
 
+      <div class="menagoleague-stats-content-item">
+        <p class="menagoleague-stats-content-item-number">12 123 456 789 M$</p>
+        <p class="menagoleague-stats-content-item-desc">SPEND ON TRANSFERS</p>
+      </div>
+
     </div>
     <p class="menagoleague-stats-p">Running proudly since <b>2018</b></p>
   </div>
