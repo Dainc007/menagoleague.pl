@@ -1,0 +1,209 @@
+.squad-team-management {
+  a {
+    color: $text-gray;
+  }
+}
+
+.status-content,
+.attributes-content {
+  height: 500px;
+  overflow: hidden;
+}
+
+.player-status-container,
+.player-attributes-container {
+  width: 100%;
+  background-color: $sectionColor;
+}
+
+.player-status-content,
+.player-attributes-content {
+  height: calc(100% - 40px);
+  overflow-y: auto;
+}
+
+.player-status-item,
+.player-status-desc,
+.player-attributes-item,
+.player-attributes-desc {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  transition: background 0.2s;
+  font-weight: 600;
+
+  &:hover {
+    // transform: scale(1.02);
+    background: linear-gradient(180deg, rgb(164 226 144 / 90%) 0%, rgba(14, 168, 40, 0.9) 100%);
+  }
+
+  &:nth-of-type(2n) {
+    background-color: #e4e4e4;
+  }
+
+  .pos {
+    font-size: 0.8em;
+    width: 15%;
+    text-align: center;
+  }
+
+  .name {
+    height: 100%;
+    width: 36%;
+    text-decoration: none;
+    padding-left: 10px;
+    border-right: 1px solid $text-gray;
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 45px;
+      width: 45px;
+      object-fit: cover;
+      margin-right: 10px;
+    }
+  }
+
+  .overall {
+    width: 8%;
+    color: $text-dark;
+  }
+
+  .role {
+    width: 33%;
+  }
+
+  .player-actions-container {
+    width: 8%;
+    cursor: pointer;
+
+    button {
+      padding: 0;
+    }
+
+    .material-icons {
+      top: 0;
+    }
+  }
+
+  .action {
+    width: 7%;
+  }
+
+  .age {
+    width: 10%;
+  }
+
+  .nationality {
+    width: 30%;
+    border: none;
+    text-align: center;
+  }
+
+  .pos,
+  .overall,
+  .role,
+  .player-actions-container,
+  .action,
+  .age,
+  .nationality {
+    height: 100%;
+    border-right: 1px solid $text-gray;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .player-actions-container,
+  .nationality {
+    border-right: none;
+  }
+}
+
+.player-status-desc,
+.player-attributes-desc {
+  height: 40px;
+  font-weight: 600;
+  box-shadow: inset 0px -4px 5px rgb(176 176 176 / 25%);
+  color: $text-dark !important;
+  font-size: 0.9em;
+
+  &:hover {
+    transform: none;
+    background: none;
+  }
+
+  .pos,
+  .overall,
+  .role,
+  .player-actions-container,
+  .action,
+  .age,
+  .nationality,
+  .name {
+    border-right: none;
+    font-size: 1.1em !important;
+  }
+}
+
+.player-image {
+  display: none;
+}
+
+.player-attributes-desc,
+.player-status-desc {
+  .overall {
+    justify-content: flex-start !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .player-image {
+    display: flex;
+  }
+
+  .name {
+    width: 45% !important;
+  }
+
+  .overall {
+    width: 10% !important;
+    font-size: 1.3em;
+    justify-content: center;
+  }
+
+  .role {
+    width: 20% !important;
+  }
+
+  .player-actions-container {
+    width: 10% !important;
+    cursor: pointer;
+
+    button {
+      padding: 7px 23px !important;
+    }
+  }
+
+  .action {
+    width: 10% !important;
+  }
+
+  .pos {
+    font-size: 1em !important;
+  }
+
+  .age {
+    width: 8% !important;
+    font-size: 1.3em;
+  }
+
+  .nationality {
+    width: 22% !important;
+  }
+
+  .player-status-desc,
+  .player-attributes-desc {
+    font-size: 1em;
+  }
+}
