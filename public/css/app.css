@@ -11865,6 +11865,9 @@ a .btn-discord img {
   width: 100%;
   margin-bottom: 40px;
   flex-shrink: 0;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .gameplay-overview-item:last-of-type {
@@ -11881,7 +11884,6 @@ a .btn-discord img {
 .gameplay-overview-item h3 {
   margin: 10px 0;
   text-align: center;
-  min-height: 100px;
 }
 
 .gameplay-overview-item p {
@@ -11905,6 +11907,10 @@ a .btn-discord img {
 @media (min-width: 1024px) {
   .gameplay-overview-container {
     overflow: hidden;
+  }
+
+  .gameplay-overview-item h3 {
+    min-height: 100px;
   }
 
   .gameplay-overview-track {
@@ -12028,7 +12034,10 @@ a .btn-discord img {
 }
 
 .result-team-icon {
-  height: 23px;
+  height: 26px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 20px;
 }
 
 .result-score {
@@ -12099,11 +12108,7 @@ a .btn-discord img {
   cursor: pointer;
 }
 
-.content .league-news-item .league-news-item-img {
-  transition: 0.5s;
-}
-
-.content .league-news-item .league-news-item-img:hover {
+.content .league-news-item:hover .league-news-item-img {
   transform: scale(1.1);
 }
 
@@ -12112,6 +12117,7 @@ a .btn-discord img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: 0.5s;
 }
 
 .content .league-news-item-shadow {
@@ -12212,6 +12218,7 @@ a .btn-discord img {
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  flex-direction: column;
   margin-bottom: 35px;
 }
 
@@ -12221,6 +12228,10 @@ a .btn-discord img {
   flex-direction: column;
   align-items: center;
   margin-bottom: 10px;
+}
+
+.menagoleague-stats-content-item-large {
+  width: 100% !important;
 }
 
 .menagoleague-stats-content-item-number {
@@ -12278,6 +12289,11 @@ a .btn-discord img {
   .content-mobile {
     align-items: center;
   }
+
+  .menagoleague-stats-content-item-large .menagoleague-stats-content-item-number,
+  .menagoleague-stats-content-item-large .menagoleague-stats-content-item-desc {
+    font-size: 1.2em;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -12306,6 +12322,7 @@ a .btn-discord img {
     flex-direction: unset;
     align-items: unset;
     flex-wrap: wrap;
+    flex-direction: row !important;
   }
 
   .menagoleague-stats-content-item {
@@ -12318,6 +12335,14 @@ a .btn-discord img {
   }
 
   .menagoleague-stats-content-item-desc {
+    font-size: 1.2em;
+  }
+
+  .menagoleague-stats-content-item-large .menagoleague-stats-content-item-number {
+    font-size: 2em;
+  }
+
+  .menagoleague-stats-content-item-large .menagoleague-stats-content-item-desc {
     font-size: 1.2em;
   }
 }
@@ -12435,6 +12460,11 @@ a .btn-discord img {
   }
 }
 
+.central-content .nav-link.active {
+  color: #8ab87f !important;
+  border-radius: 50%;
+}
+
 .headers-switch {
   display: flex;
   list-style: none;
@@ -12449,6 +12479,7 @@ a .btn-discord img {
 
 .headers-switch .nav-item a {
   padding: 5px;
+  color: #494949;
 }
 
 .tab-content > .active {
@@ -12520,7 +12551,9 @@ a .btn-discord img {
 
 .advance-callendar-day > div img {
   width: 40px;
-  height: 40px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .advance-callendar-day:nth-of-type(2) {
@@ -12548,7 +12581,7 @@ a .btn-discord img {
 .advance-callendar-day:nth-of-type(2) > div img {
   margin-top: 4px;
   width: 60px;
-  height: 60px;
+  height: 70px;
 }
 
 @media (min-width: 768px) {
@@ -12571,7 +12604,7 @@ a .btn-discord img {
 
   .advance-callendar-day > div img {
     width: 30px;
-    height: 30px;
+    height: 40px;
   }
 
   .advance-callendar-day > div p {
@@ -12584,7 +12617,7 @@ a .btn-discord img {
 
   .advance-callendar-day:nth-of-type(2) div img {
     width: 40px;
-    height: 40px;
+    height: 50px;
   }
 
   .advance-callendar-day:nth-of-type(2) div p {
@@ -12613,7 +12646,7 @@ a .btn-discord img {
 
   .advance-callendar-day div img {
     width: 40px;
-    height: 40px;
+    height: 50px;
   }
 
   .advance-callendar-day div p {
@@ -12622,7 +12655,7 @@ a .btn-discord img {
 
   .advance-callendar-day:nth-of-type(2) > div img {
     width: 50px;
-    height: 50px;
+    height: 60px;
     margin-top: 13px;
   }
 
@@ -12646,7 +12679,7 @@ a .btn-discord img {
 
   .advance-callendar-day:nth-of-type(2) > div img {
     width: 60px;
-    height: 60px;
+    height: 70px;
   }
 
   .advance-callendar-day:nth-of-type(2) > div p {
@@ -12952,12 +12985,6 @@ a .btn-discord img {
 .standings-item-name {
   padding-left: 20px;
   width: 54.5%;
-}
-
-.radio-active {
-  background-color: #494949;
-  color: white;
-  border-radius: 50%;
 }
 
 .standings-content {

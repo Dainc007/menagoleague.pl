@@ -58,6 +58,13 @@
 
 // content section tab menu
 
+.central-content {
+  .nav-link.active {
+    color: $text-olivine !important;
+    border-radius: 50%;
+  }
+}
+
 .headers-switch {
   display: flex;
   list-style: none;
@@ -71,6 +78,7 @@
 
   .nav-item a {
     padding: 5px;
+    color: $text-gray;
   }
 }
 

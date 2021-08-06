@@ -4,19 +4,19 @@
         <li class="nav-item" role="presentation">
             <a class="nav-link active" id="notifications-tab" data-toggle="tab" href="#notifications" role="tab"
                 aria-controls="notifications" aria-selected="true">
-                <span class="material-icons radio-active"> radio_button_unchecked </span>
+                <span class="material-icons"> radio_button_unchecked </span>
             </a>
         </li>
         <li class="nav-item" role="presentation">
             <a class="nav-link" id="last-transfers-tab" data-toggle="tab" href="#last-transfers" role="tab"
                 aria-controls="last-transfers" aria-selected="false">
-                <span class="material-icons radio-active"> radio_button_unchecked</span>
+                <span class="material-icons"> radio_button_unchecked</span>
             </a>
         </li>
         <li class="nav-item" role="presentation">
             <a class="nav-link" id="big-transfers-tab" data-toggle="tab" href="#big-transfers" role="tab"
                 aria-controls="big-transfers" aria-selected="false">
-                <span class="material-icons radio-active"> radio_button_unchecked</span>
+                <span class="material-icons"> radio_button_unchecked</span>
             </a>
         </li>
     </ul>

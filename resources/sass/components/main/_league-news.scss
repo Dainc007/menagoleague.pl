@@ -52,19 +52,18 @@
     overflow: hidden;
     cursor: pointer;
 
-    .league-news-item-img {
-      transition: 0.5s;
-      &:hover {
+    &:hover {
+      .league-news-item-img {
         transform: scale(1.1);
       }
     }
-
   }
 
   .league-news-item-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.5s;
   }
 
   .league-news-item-shadow {
