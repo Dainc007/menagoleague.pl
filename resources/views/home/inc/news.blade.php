@@ -1,7 +1,7 @@
 <div class="content">
   <section class="league-news">
     <div class="league-news-h">
-      <h2>LEAGUE NEWS</h2>
+      <h2>{{__('home.news.header')}}</h2>
 
       <div class="league-news-devices">
         <a href="#"><img src="./images/xbox-icon.svg" alt="" /></a>
@@ -44,7 +44,7 @@
   </section>
 
   <aside class="read-more">
-    <h2>READ MORE</h2>
+    <h2>{{__('home.news.readMore')}}</h2>
 
     <div class="read-more-container">
       @foreach ($oldArticles as $article) <div class="read-more-item">
@@ -58,6 +58,6 @@
       @endforeach
 
     </div>
-    <a href="" class="btn btn-w-border btn-allNews">ALL NEWS</a>
+    <a href="" class="btn btn-w-border btn-allNews">{{__('home.news.moreNews')}}</a>
   </aside>
 </div>

@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     'noTeam' => 'Unemployed',
     'about'  => [
         'header'     => 'What Is Menago League?',
@@ -24,6 +23,31 @@ return [
         'howLongItTakesAnswer' => 'Building a team takes about 15 minutes and you need to do it only once.
         You need to play at least two games in a week if you want to be a part of our society.
         We still work on getting new options to this project, still we want you to have bots and asistants',
+    ],
+
+    'news'  => [
+        'header' => 'LEAGUE NEWS',
+        'readMore'   => 'READ MORE',
+        'moreNews'   => 'MORE NEWS',
+    ],
+
+    'stats' => [
+        'title' => 'MENAGOLEAGUE STATS',
+        'teams' => 'ACTIVE TEAMS',
+        'users' => 'REGISTERED USERS',
+        'games' => 'PLAYED GAMES',
+        'transfers' => 'SPEND ON TRANSFERS',
+        'since' => 'Running proudly since 2018',
+        'goals' => 'SCORED GOALS',
+    ],
+
+    'gameplay'  => [
+        'title' => 'GAMEPLAY OVERVIEW',
+    ],
+
+    'rights'    => [
+        'ml'    =>  'Menagoleague Team 2021. All rights reserved',
+        'fifa'  =>  'All FIFA assets are property of EA Sports.'
     ]
 
 ];

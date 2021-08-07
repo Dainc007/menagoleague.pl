@@ -35,15 +35,19 @@ class CentralController extends Controller
             today()->addDays(3),
         ];
 
-        return view('central.central', [
-            'user'      => Auth::user(),
-            'fixtures'  => Auth::user()->team->getFixtures()->whereBetween(
+        if (Auth::user()->team) {
+            $fixtures = Auth::user()->team->getFixtures()->whereBetween(
                 'date',
                 [
                     now()->yesterday()->format('Y-m-d'),
                     now()->addDays(4)->format('Y-m-d')
                 ]
-            ),
+            );
+        }
+
+        return view('central.central', [
+            'user'      => Auth::user(),
+            'fixtures'  => $fixtures ?? '',
             'calendar'  => $calendar,
         ]);
     }

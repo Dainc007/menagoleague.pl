@@ -35,6 +35,7 @@ $date = date( 'y-m-d');
 
     <div class="advance-callendar">
         @foreach($calendar as $day)
+        @if($fixtures !== '')
         <div class="advance-callendar-day">
             <p>{{__('central.calendar.day.'.$day->format('D'))}}
                 @foreach($fixtures as $game)
@@ -53,6 +54,16 @@ $date = date( 'y-m-d');
             </div>
             <span class="material-icons">swap_horiz</span>
         </div>
+        @else
+        <div class="advance-callendar-day">
+            <p>{{__('central.calendar.day.'.$day->format('D'))}}
+            </p>
+            <div>
+                <p>{{$day->format('d')}}</p>
+            </div>
+            <span class="material-icons">swap_horiz</span>
+        </div>
+        @endif
         @endforeach
     </div>
 

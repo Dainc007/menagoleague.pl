@@ -49,6 +49,20 @@ Route::prefix('/users')->group(function () {
     });
 });
 
+/* HELP */
+Route::prefix('/help')->group(function () {
+
+
+    Route::get('/', [App\Http\Controllers\HelpController::class, 'index'])
+        ->name('help');
+
+    Route::get('/tutorial', [App\Http\Controllers\HelpController::class, 'tutorial'])
+        ->name('help.tutorial');
+
+    Route::get('/statute', [App\Http\Controllers\HelpController::class, 'statute'])
+        ->name('help.statute');
+});
+
 Route::prefix('/teams')->group(function () {
 
     Route::get('/', [App\Http\Controllers\TeamController::class, 'index'])

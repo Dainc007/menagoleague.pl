@@ -37,6 +37,31 @@ return [
         'howItCombinesAnswer' => 'Gracze odwzorowują swoje kluby na stronie bezpośrednio w grze FIFA.
         Rozgrywają mecze przeciwko innym graczom, a po spotkaniu nagrywają raport z meczu i udostępniają
         go na naszej stronie. Dane są przetwarzane na logikę działania gry. Bazujemy na statystyce i losowości.',
+    ],
+
+    'news'  => [
+        'header' => 'NEWSY',
+        'readMore'   => 'ZOBACZ TAKŻE',
+        'moreNews'   => 'WIĘCEJ ARTYKUŁÓW',
+    ],
+
+    'stats' => [
+        'title' => 'STATYSTYKI',
+        'teams' => 'AKTYWNYCH DRUŻYN',
+        'users' => 'UŻYTKOWNIKÓW',
+        'games' => 'ROZEGRANYCH MECZÓW',
+        'transfers' => 'WYDANYCH NA TRANSFERY',
+        'since' => 'Projekt rozwijany od roku',
+        'goals' => 'ZDOBYTYCH GOLI',
+    ],
+
+    'gameplay'  => [
+        'title' => 'GAMEPLAY',
+    ],
+
+    'rights'    => [
+        'ml'    =>  'Menagoleague Team (2018-2021). Wszystkie Prawa Zastrzeżone.',
+        'fifa'  =>  'Wszystkie elementy pochodzące z gry FIFA są własnością EA Sports.'
     ]
 
 ];
