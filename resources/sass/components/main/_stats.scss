@@ -16,6 +16,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    flex-direction: column;
     margin-bottom: 35px;
   }
 }
@@ -26,6 +27,10 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 10px;
+}
+
+.menagoleague-stats-content-item-large {
+  width: 100% !important;
 }
 
 .menagoleague-stats-content-item-number {
@@ -83,6 +88,13 @@
   .content-mobile {
     align-items: center;
   }
+
+  .menagoleague-stats-content-item-large {
+    .menagoleague-stats-content-item-number,
+    .menagoleague-stats-content-item-desc {
+      font-size: 1.2em;
+    }
+  }
 }
 
 @media (min-width: 1024px) {
@@ -111,6 +123,7 @@
     flex-direction: unset;
     align-items: unset;
     flex-wrap: wrap;
+    flex-direction: row !important;
   }
 
   .menagoleague-stats-content-item {
@@ -124,6 +137,16 @@
 
   .menagoleague-stats-content-item-desc {
     font-size: 1.2em;
+  }
+
+  .menagoleague-stats-content-item-large {
+    .menagoleague-stats-content-item-number {
+      font-size: 2em;
+    }
+
+    .menagoleague-stats-content-item-desc {
+      font-size: 1.2em;
+    }
   }
 }
 

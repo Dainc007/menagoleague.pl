@@ -70,8 +70,10 @@
 
                 <div class="dropdown-menu">
                     <a href="#">Settings</a>
-                    <a href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                         document.getElementById('logout-form').submit();">Logout</a>
+                    <a href="{{ route('logout') }}"
+                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout
+                    </a>
+
                 </div>
 
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -99,18 +101,18 @@
                         </div>
 
                         <div class="r-dropdown">
-                            <a class="btn btn-r-menu r-dropdown-link" type="button" id="dropdownMenuButton"
+                            <button class="btn btn-r-menu r-dropdown-link" type="button" id="dropdownMenuButton"
                                 data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">{{ __('nav.mainNav.tablesAndFixtures') }}<span
                                     class="material-icons"> arrow_right</span></button>
-                                <div class="r-dropdown-menu">
-                                    <a class="dropdown-item" href="#">{{ __('nav.mainNav.england') }}</a>
-                                    <a class="dropdown-item" href="drop">{{ __('nav.mainNav.spain') }}</a>
-                                    <a class="dropdown-item" href="#">{{ __('nav.mainNav.poland') }}</a>
-                                    <a class="dropdown-item" href="#">{{ __('nav.mainNav.italy') }}</a>
-                                    <a class="disabled dropdown-item" href="#">{{ __('nav.mainNav.champions') }}</a>
-                                    <a class="disabled dropdown-item" href="#">{{ __('nav.mainNav.europe') }}</a>
-                                </div>
+                            <div class="r-dropdown-menu">
+                                <a class="dropdown-item" href="#">{{ __('nav.mainNav.england') }}</a>
+                                <a class="dropdown-item" href="drop">{{ __('nav.mainNav.spain') }}</a>
+                                <a class="dropdown-item" href="#">{{ __('nav.mainNav.poland') }}</a>
+                                <a class="dropdown-item" href="#">{{ __('nav.mainNav.italy') }}</a>
+                                <a class="disabled dropdown-item" href="#">{{ __('nav.mainNav.champions') }}</a>
+                                <a class="disabled dropdown-item" href="#">{{ __('nav.mainNav.europe') }}</a>
+                            </div>
                         </div>
                         <div class="r-dropdown">
                             <button class="btn btn-r-menu r-dropdown-link" type="button" id="dropdownMenuButton"

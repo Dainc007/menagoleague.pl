@@ -104,6 +104,10 @@ a {
   text-decoration: none;
   font-weight: bold;
   cursor: pointer;
+
+  &:hover {
+    color: $text-dark;
+  }
 }
 
 .btn {
@@ -132,5 +136,7 @@ a {
 
 /* Game components */
 @import 'components/central/main'; /* Central components:*/
+
+@import 'components/squad/main'; /* Squad components:*/
 
 /* @import 'components/app/ */

@@ -4,19 +4,19 @@
         <li class="nav-item" role="presentation">
             <a class="nav-link active" id="standings-tab" data-toggle="tab" href="#standings" role="tab"
                 aria-controls="standings" aria-selected="true">
-                <span class="material-icons radio-active"> radio_button_unchecked </span>
+                <span class="material-icons"> radio_button_unchecked </span>
             </a>
         </li>
         <li class="nav-item" role="presentation">
             <a class="nav-link" id="top-scorers-tab" data-toggle="tab" href="#top-scorers" role="tab"
                 aria-controls="top-scorers" aria-selected="false">
-                <span class="material-icons radio-active"> radio_button_unchecked</span>
+                <span class="material-icons"> radio_button_unchecked</span>
             </a>
         </li>
         <li class="nav-item" role="presentation">
             <a class="nav-link" id="top-asists-tab" data-toggle="tab" href="#top-asists" role="tab"
                 aria-controls="top-asists" aria-selected="false">
-                <span class="material-icons radio-active"> radio_button_unchecked</span>
+                <span class="material-icons">radio_button_unchecked</span>
             </a>
         </li>
     </ul>
@@ -69,8 +69,9 @@
                 @for ($i = 1; $i <= 10; $i++)
                     <div class="standings-item">
                         <p class="standings-item-id">{{ $i }}.</p>
-                        <img class="standings-item-img" src="https://picsum.photos/30/30" alt="" />
-                        <p class="standings-item-name">Lorem, ipsum.</p>
+                        <img class="standings-item-img"
+                            src="https://fifastatic.fifaindex.com/FIFA21/images/players/5/158023.png" alt="" />
+                        <p class="standings-item-name">Leo Messi</p>
                         <p class="standings-item-scorePLD">{{ rand(0, 20) }}</p>
                     </div>
                 @endfor

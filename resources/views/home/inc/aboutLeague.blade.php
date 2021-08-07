@@ -1,14 +1,34 @@
 <div class="what-is-menagoleague" id="about">
-  <h2>WHAT IS MENAGOLEAGUE?</h2>
+
+  <h2>{{__('home.about.header')}}</h2>
+
   <div class="what-is-menagoleague-container">
-    @for($i=1;$i<=3;$i++)
+
+    <div class="what-is-menagoleague-container-item">
+      <h3>{{__('home.about.howItWorks')}}</h3>
+      <p> {{__('home.about.howItWorksAnswer')}} </p>
+    </div>
+
+    <div class="what-is-menagoleague-container-item">
       <div class="what-is-menagoleague-container-item">
-        <h3>How does the "Online Career Mode" work?</h3>
-        <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non porro molestias, nam cumque voluptatem, in officiis consectetur numquam labore facilis quaerat amet dolorem cum, animi optio
-        perspiciatis est dicta saepe ipsam? Quod quo pariatur neque corporis et natus, nemo voluptate.
-        </p>
+        <h3>{{__('home.about.isItComplicated')}}</h3>
+        <p> {{__('home.about.isItComplicatedAnswer')}} </p>
       </div>
-    @endfor
+    </div>
+
+    <div class="what-is-menagoleague-container-item">
+      <div class="what-is-menagoleague-container-item">
+        <h3>{{__('home.about.howItCombines')}}</h3>
+        <p> {{__('home.about.howItCombinesAnswer')}} </p>
+      </div>
+    </div>
+
+    <div class="what-is-menagoleague-container-item">
+      <div class="what-is-menagoleague-container-item">
+        <h3>{{__('home.about.howLongItTakes')}}</h3>
+        <p> {{__('home.about.howLongItTakesAnswer')}} </p>
+      </div>
+    </div>
+
   </div>
 </div>

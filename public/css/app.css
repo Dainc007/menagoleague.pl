@@ -11186,6 +11186,10 @@ a {
   cursor: pointer;
 }
 
+a:hover {
+  color: #144f06;
+}
+
 .btn {
   background: none;
   border: none;
@@ -11861,6 +11865,9 @@ a .btn-discord img {
   width: 100%;
   margin-bottom: 40px;
   flex-shrink: 0;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .gameplay-overview-item:last-of-type {
@@ -11877,7 +11884,6 @@ a .btn-discord img {
 .gameplay-overview-item h3 {
   margin: 10px 0;
   text-align: center;
-  min-height: 100px;
 }
 
 .gameplay-overview-item p {
@@ -11901,6 +11907,10 @@ a .btn-discord img {
 @media (min-width: 1024px) {
   .gameplay-overview-container {
     overflow: hidden;
+  }
+
+  .gameplay-overview-item h3 {
+    min-height: 100px;
   }
 
   .gameplay-overview-track {
@@ -12024,7 +12034,10 @@ a .btn-discord img {
 }
 
 .result-team-icon {
-  height: 23px;
+  height: 26px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 20px;
 }
 
 .result-score {
@@ -12095,11 +12108,7 @@ a .btn-discord img {
   cursor: pointer;
 }
 
-.content .league-news-item .league-news-item-img {
-  transition: 0.5s;
-}
-
-.content .league-news-item .league-news-item-img:hover {
+.content .league-news-item:hover .league-news-item-img {
   transform: scale(1.1);
 }
 
@@ -12108,6 +12117,7 @@ a .btn-discord img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: 0.5s;
 }
 
 .content .league-news-item-shadow {
@@ -12208,6 +12218,7 @@ a .btn-discord img {
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  flex-direction: column;
   margin-bottom: 35px;
 }
 
@@ -12217,6 +12228,10 @@ a .btn-discord img {
   flex-direction: column;
   align-items: center;
   margin-bottom: 10px;
+}
+
+.menagoleague-stats-content-item-large {
+  width: 100% !important;
 }
 
 .menagoleague-stats-content-item-number {
@@ -12274,6 +12289,11 @@ a .btn-discord img {
   .content-mobile {
     align-items: center;
   }
+
+  .menagoleague-stats-content-item-large .menagoleague-stats-content-item-number,
+  .menagoleague-stats-content-item-large .menagoleague-stats-content-item-desc {
+    font-size: 1.2em;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -12302,6 +12322,7 @@ a .btn-discord img {
     flex-direction: unset;
     align-items: unset;
     flex-wrap: wrap;
+    flex-direction: row !important;
   }
 
   .menagoleague-stats-content-item {
@@ -12314,6 +12335,14 @@ a .btn-discord img {
   }
 
   .menagoleague-stats-content-item-desc {
+    font-size: 1.2em;
+  }
+
+  .menagoleague-stats-content-item-large .menagoleague-stats-content-item-number {
+    font-size: 2em;
+  }
+
+  .menagoleague-stats-content-item-large .menagoleague-stats-content-item-desc {
     font-size: 1.2em;
   }
 }
@@ -12431,6 +12460,11 @@ a .btn-discord img {
   }
 }
 
+.central-content .nav-link.active {
+  color: #8ab87f !important;
+  border-radius: 50%;
+}
+
 .headers-switch {
   display: flex;
   list-style: none;
@@ -12445,6 +12479,7 @@ a .btn-discord img {
 
 .headers-switch .nav-item a {
   padding: 5px;
+  color: #494949;
 }
 
 .tab-content > .active {
@@ -12516,7 +12551,9 @@ a .btn-discord img {
 
 .advance-callendar-day > div img {
   width: 40px;
-  height: 40px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .advance-callendar-day:nth-of-type(2) {
@@ -12544,7 +12581,7 @@ a .btn-discord img {
 .advance-callendar-day:nth-of-type(2) > div img {
   margin-top: 4px;
   width: 60px;
-  height: 60px;
+  height: 70px;
 }
 
 @media (min-width: 768px) {
@@ -12567,7 +12604,7 @@ a .btn-discord img {
 
   .advance-callendar-day > div img {
     width: 30px;
-    height: 30px;
+    height: 40px;
   }
 
   .advance-callendar-day > div p {
@@ -12580,7 +12617,7 @@ a .btn-discord img {
 
   .advance-callendar-day:nth-of-type(2) div img {
     width: 40px;
-    height: 40px;
+    height: 50px;
   }
 
   .advance-callendar-day:nth-of-type(2) div p {
@@ -12609,7 +12646,7 @@ a .btn-discord img {
 
   .advance-callendar-day div img {
     width: 40px;
-    height: 40px;
+    height: 50px;
   }
 
   .advance-callendar-day div p {
@@ -12618,7 +12655,7 @@ a .btn-discord img {
 
   .advance-callendar-day:nth-of-type(2) > div img {
     width: 50px;
-    height: 50px;
+    height: 60px;
     margin-top: 13px;
   }
 
@@ -12642,7 +12679,7 @@ a .btn-discord img {
 
   .advance-callendar-day:nth-of-type(2) > div img {
     width: 60px;
-    height: 60px;
+    height: 70px;
   }
 
   .advance-callendar-day:nth-of-type(2) > div p {
@@ -12950,18 +12987,321 @@ a .btn-discord img {
   width: 54.5%;
 }
 
-.radio-active {
-  background-color: #494949;
-  color: white;
-  border-radius: 50%;
-}
-
 .standings-content {
   width: 100%;
   overflow-y: auto;
 }
 
 /* Central components:*/
+
+.squad-team-management a {
+  color: #494949;
+}
+
+.status-content,
+.attributes-content {
+  height: 500px;
+  overflow: hidden;
+}
+
+.player-status-container,
+.player-attributes-container {
+  width: 100%;
+  background-color: rgba(255, 253, 253, 0.7);
+}
+
+.player-status-content,
+.player-attributes-content {
+  height: calc(100% - 40px);
+  overflow-y: auto;
+}
+
+.player-status-item,
+.player-status-desc,
+.player-attributes-item,
+.player-attributes-desc {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  transition: background 0.2s;
+  font-weight: 600;
+}
+
+.player-status-item:hover,
+.player-status-desc:hover,
+.player-attributes-item:hover,
+.player-attributes-desc:hover {
+  background: linear-gradient(180deg, rgba(164, 226, 144, 0.9) 0%, rgba(14, 168, 40, 0.9) 100%);
+}
+
+.player-status-item:nth-of-type(2n),
+.player-status-desc:nth-of-type(2n),
+.player-attributes-item:nth-of-type(2n),
+.player-attributes-desc:nth-of-type(2n) {
+  background-color: #e4e4e4;
+}
+
+.player-status-item .pos,
+.player-status-desc .pos,
+.player-attributes-item .pos,
+.player-attributes-desc .pos {
+  font-size: 0.8em;
+  width: 15%;
+  text-align: center;
+}
+
+.player-status-item .name,
+.player-status-desc .name,
+.player-attributes-item .name,
+.player-attributes-desc .name {
+  height: 100%;
+  width: 36%;
+  text-decoration: none;
+  padding-left: 10px;
+  border-right: 1px solid #494949;
+  display: flex;
+  align-items: center;
+}
+
+.player-status-item .name img,
+.player-status-desc .name img,
+.player-attributes-item .name img,
+.player-attributes-desc .name img {
+  height: 45px;
+  width: 45px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 10px;
+}
+
+.player-status-item .overall,
+.player-status-desc .overall,
+.player-attributes-item .overall,
+.player-attributes-desc .overall {
+  width: 8%;
+  color: #144f06;
+}
+
+.player-status-item .role,
+.player-status-desc .role,
+.player-attributes-item .role,
+.player-attributes-desc .role {
+  width: 33%;
+}
+
+.player-status-item .player-actions-container,
+.player-status-desc .player-actions-container,
+.player-attributes-item .player-actions-container,
+.player-attributes-desc .player-actions-container {
+  width: 8%;
+  cursor: pointer;
+}
+
+.player-status-item .player-actions-container button,
+.player-status-desc .player-actions-container button,
+.player-attributes-item .player-actions-container button,
+.player-attributes-desc .player-actions-container button {
+  padding: 0;
+}
+
+.player-status-item .player-actions-container .material-icons,
+.player-status-desc .player-actions-container .material-icons,
+.player-attributes-item .player-actions-container .material-icons,
+.player-attributes-desc .player-actions-container .material-icons {
+  top: 0;
+}
+
+.player-status-item .action,
+.player-status-desc .action,
+.player-attributes-item .action,
+.player-attributes-desc .action {
+  width: 7%;
+}
+
+.player-status-item .age,
+.player-status-desc .age,
+.player-attributes-item .age,
+.player-attributes-desc .age {
+  width: 10%;
+}
+
+.player-status-item .nationality,
+.player-status-desc .nationality,
+.player-attributes-item .nationality,
+.player-attributes-desc .nationality {
+  width: 30%;
+  border: none;
+  text-align: center;
+}
+
+.player-status-item .pos,
+.player-status-item .overall,
+.player-status-item .role,
+.player-status-item .player-actions-container,
+.player-status-item .action,
+.player-status-item .age,
+.player-status-item .nationality,
+.player-status-desc .pos,
+.player-status-desc .overall,
+.player-status-desc .role,
+.player-status-desc .player-actions-container,
+.player-status-desc .action,
+.player-status-desc .age,
+.player-status-desc .nationality,
+.player-attributes-item .pos,
+.player-attributes-item .overall,
+.player-attributes-item .role,
+.player-attributes-item .player-actions-container,
+.player-attributes-item .action,
+.player-attributes-item .age,
+.player-attributes-item .nationality,
+.player-attributes-desc .pos,
+.player-attributes-desc .overall,
+.player-attributes-desc .role,
+.player-attributes-desc .player-actions-container,
+.player-attributes-desc .action,
+.player-attributes-desc .age,
+.player-attributes-desc .nationality {
+  height: 100%;
+  border-right: 1px solid #494949;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.player-status-item .player-actions-container,
+.player-status-item .nationality,
+.player-status-desc .player-actions-container,
+.player-status-desc .nationality,
+.player-attributes-item .player-actions-container,
+.player-attributes-item .nationality,
+.player-attributes-desc .player-actions-container,
+.player-attributes-desc .nationality {
+  border-right: none;
+}
+
+.player-status-desc,
+.player-attributes-desc {
+  height: 40px;
+  font-weight: 600;
+  box-shadow: inset 0px -4px 5px rgba(176, 176, 176, 0.25);
+  color: #144f06 !important;
+  font-size: 0.9em;
+}
+
+.player-status-desc:hover,
+.player-attributes-desc:hover {
+  transform: none;
+  background: none;
+}
+
+.player-status-desc .pos,
+.player-status-desc .overall,
+.player-status-desc .role,
+.player-status-desc .player-actions-container,
+.player-status-desc .action,
+.player-status-desc .age,
+.player-status-desc .nationality,
+.player-status-desc .name,
+.player-attributes-desc .pos,
+.player-attributes-desc .overall,
+.player-attributes-desc .role,
+.player-attributes-desc .player-actions-container,
+.player-attributes-desc .action,
+.player-attributes-desc .age,
+.player-attributes-desc .nationality,
+.player-attributes-desc .name {
+  border-right: none;
+  font-size: 1.1em !important;
+}
+
+.player-image {
+  display: none;
+}
+
+.player-attributes-desc .overall,
+.player-status-desc .overall {
+  justify-content: flex-start !important;
+}
+
+@media (min-width: 768px) {
+  .player-image {
+    display: flex;
+  }
+
+  .name {
+    width: 45% !important;
+  }
+
+  .overall {
+    width: 10% !important;
+    font-size: 1.3em;
+    justify-content: center;
+  }
+
+  .role {
+    width: 20% !important;
+  }
+
+  .player-actions-container {
+    width: 10% !important;
+    cursor: pointer;
+  }
+
+  .player-actions-container button {
+    padding: 7px 23px !important;
+  }
+
+  .action {
+    width: 10% !important;
+  }
+
+  .pos {
+    font-size: 1em !important;
+  }
+
+  .age {
+    width: 8% !important;
+    font-size: 1.3em;
+  }
+
+  .nationality {
+    width: 22% !important;
+  }
+
+  .player-status-desc,
+  .player-attributes-desc {
+    font-size: 1em;
+  }
+}
+
+.squad-team-management {
+  grid-area: teammanagement;
+}
+
+.squad-content {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas: "teammanagement";
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .squad-content {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "teammanagement teammanagement ." "teammanagement teammanagement ." "teammanagement teammanagement .";
+    gap: 1rem;
+  }
+
+  .squad-content a,
+  .squad-content h2,
+  .squad-content h3 {
+    color: #494949;
+  }
+}
+
+/* Squad components:*/
 
 /* @import 'components/app/ */
 
