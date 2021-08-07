@@ -33,4 +33,19 @@ class Team extends Model
     {
         return $this->hasMany(JobApplication::class);
     }
+
+    public function fixturesAsHost()
+    {
+        return $this->hasMany(Fixture::class, 'host_id');
+    }
+
+    public function fixturesAsVisitor()
+    {
+        return $this->hasMany(Fixture::class, 'visitor_id');
+    }
+
+    public function getFixtures()
+    {
+        return $this->fixtures = $this->fixturesAsHost->merge($this->fixturesAsVisitor);
+    }
 }
