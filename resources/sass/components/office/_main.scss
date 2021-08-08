@@ -1,0 +1,65 @@
+.office-messages {
+    grid-area: messages;
+}
+
+.office-finances {
+    grid-area: finances;
+}
+
+.office-fans {
+    grid-area: fans;
+}
+
+.office-rivals {
+    grid-area: rivals;
+}
+
+.office-jobs {
+    grid-area: jobs;
+}
+
+.office-stadium {
+    grid-area: stadium;
+}
+
+.office-carrer {
+    grid-area: carrer;
+}
+
+.office-content {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    gap: 2rem;
+    grid-template-areas:
+    "messages"
+    "finances"
+    "jobs"
+    "fans"
+    "rivals"
+    "stadium"
+    "carrer"
+}
+@media (min-width: 1024px) {
+    .office-content {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+            "messages finances finances"
+            "fans rivals jobs"
+            "stadium carrer jobs";
+        gap: 1rem;
+    }
+    
+}
+
+.office-messages, .office-finances, .office-fans, .office-carrer, .office-rivals, .office-jobs, .office-stadium {
+    background-color: $sectionColor;
+    padding: 0px 19px 10px 19px;
+    .office-title {
+        font-size: 18px;
+        padding: 19px 0px 31px 0px;
+        text-transform: uppercase
+    }
+}
+
+@import 'messages', 'finances', 'fans', 'rivals', 'jobs', 'stadium', 'carrer';

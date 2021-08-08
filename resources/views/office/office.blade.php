@@ -3,7 +3,26 @@
 @section('title', 'Biuro')
 
 @section('content')
-<!-- @include('office.userRivals') -->
-@include('office.jobOffers')
+<div class="office-content">
+    {{-- Messages --}}
+    @include('office.messages')
 
+    {{--Finances (All, Incomes, Outgoing --}}
+    @include('office.finances')
+
+    {{-- Fans (details about them)  --}}
+    @include('office.fans')
+
+    {{-- Rivals --}}
+    @include('office.rivals')
+
+    {{-- Jobs offer --}}
+    @include('office.jobs')
+
+    {{-- Stadium --}}
+    @include('office.stadium')
+
+    {{-- Carrer --}}
+    @include('office.carrer')
+</div>
 @endsection

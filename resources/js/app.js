@@ -84,3 +84,28 @@ gameBurgerMenu.onclick = () => {
   };
   openGameResponsiveMenu();
 };
+
+/* Finances view */ 
+
+const financesBtn = document.querySelectorAll('.details-buttons > li[data-number]'),
+  financesData = document.querySelectorAll('.finances-view > div[data-number]');
+
+function resetFinances() {
+  financesData.forEach((el) => {
+    el.classList.remove('active')
+  });
+  financesBtn.forEach((el) => {
+    el.classList.remove('active');
+  })
+}
+
+financesBtn.forEach((el) => {
+  el.addEventListener('click', () => {
+    resetFinances();
+    key = el.dataset.number;
+    financesData[key].classList.add('active');
+    el.classList.add('active');
+  });
+})
+
+/* Jobs offer */ 
