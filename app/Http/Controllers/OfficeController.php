@@ -10,6 +10,11 @@ use Illuminate\Support\Facades\Auth;
 class OfficeController extends Controller
 {
 
+    public function calendar()
+    {
+        return view('office.calendar');
+    }
+
     public function __construct()
     {
         $this->middleware('auth');
