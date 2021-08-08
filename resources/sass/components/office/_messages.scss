@@ -1,0 +1,17 @@
+.office-messages {
+    display: flex;
+    justify-content: center;
+    a {
+        width: 100%;
+        text-align: center;
+        .material-icons {
+            transition: .4s;
+            font-size: 6em;
+            color: $text-darker;
+        }
+        .office-title {
+            padding-bottom: 19px;
+            font-size: 21px;
+        }
+    }
+}

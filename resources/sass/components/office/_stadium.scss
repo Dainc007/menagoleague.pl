@@ -1,0 +1,27 @@
+.office-stadium {
+    .stadium-details {
+        display: flex;
+        flex-wrap: wrap;
+        .stadium-img {
+            flex: 1 1 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .none {
+                margin: 0 auto;
+                text-align: center;
+                width: 50%;
+                h3 {
+                    font-size: 14px;
+                    background-color: $text-warning;
+                    color: white;
+                    padding: 5px 10px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        .stadium-info {
+            padding: 0px 5px;
+        }
+    }
+}
