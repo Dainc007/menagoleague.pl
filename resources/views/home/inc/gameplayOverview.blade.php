@@ -1,5 +1,5 @@
 <div class="gameplay-overview">
-<h2>GAMEPLAY OVERVIEW</h2>
+<h2>{{__('home.gameplay.title')}}</h2>
 
   <div class="gameplay-overview-container">
     <div class="gameplay-overview-track">

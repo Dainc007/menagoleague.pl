@@ -24,10 +24,10 @@ return [
     ],
 
     'homeNav' => [
-        'central' => 'Centrala',
-        'team'    => 'Drużyna',
-        'transfers' => 'Transfery',
-        'office' => 'Biuro',
-        'season' => 'Sezon',
+        'central' => 'CENTRALA',
+        'team'    => 'DRUŻYNA',
+        'transfers' => 'TRANSFERY',
+        'office' => 'BIURO',
+        'season' => 'SEZON',
     ]
 ];

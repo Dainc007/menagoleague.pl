@@ -27,19 +27,19 @@
         {{-- Notifications --}}
         <div class="central-notifications-content tab-pane fade active show" id="notifications" role="tabpanel"
             aria-labelledby="notifications-tab">
-            <h2>NOTIFICATIONS</h2>
+            <h2>{{__('central.notifications')}}</h2>
 
             <div class="central-notifications-content">
                 <span class="material-icons">description </span>
-                <h3>Lorem, ipsum.</h3>
-                <p>[INFO] Lorem ipsum dolor sit.</p>
+                <h3>Nowa wiadomość OD: Zarząd.</h3>
+                <p>[INFO] Budzet transferowy na .</p>
             </div>
         </div>
 
         {{-- Last transfers --}}
         <div class="central-notifications-content tab-pane fade" id="last-transfers" role="tabpanel"
             aria-labelledby="last-transfers-tab">
-            <h2>LAST TRANSFERS</h2>
+            <h2>{{__('central.lastTransfers')}}</h2>
 
             <div class="notifications-content">
                 @for ($i = 0; $i < 15; $i++)
@@ -59,7 +59,7 @@
         {{-- Big transfers --}}
         <div class="central-notifications-content tab-pane fade" id="big-transfers" role="tabpanel"
             aria-labelledby="big-transfers-tab">
-            <h2>BIG TRANSFERS</h2>
+            <h2>{{__('central.bigTransfers')}}</h2>
 
             <div class="notifications-content">
                 @for ($i = 0; $i < 15; $i++)

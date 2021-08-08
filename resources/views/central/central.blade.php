@@ -8,10 +8,10 @@
     <div class="central-content">
 
         {{-- Advance section --}}
-        @include('central.inc.advance')
+        @include('central.inc.calendar')
 
-        {{-- Team mailbox section --}}
-        @include('central.inc.mailbox')
+        {{-- Team assistant section --}}
+        @include('central.inc.assistant')
 
         {{-- Notifications section --}}
         @include('central.inc.notifications')
