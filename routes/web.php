@@ -85,9 +85,6 @@ Route::prefix('/office')->group(function () {
 
     Route::get('/', [App\Http\Controllers\OfficeController::class, 'index'])
         ->name('office');
-
-    Route::get('/', [App\Http\Controllers\OfficeController::class, 'calendar'])
-        ->name('office.calendar');
 });
 
 Route::prefix('/seasons')->group(function () {
