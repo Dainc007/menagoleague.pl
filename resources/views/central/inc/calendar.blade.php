@@ -28,7 +28,7 @@
 
 <section class="central-advance">
     <div class="advance-headers">
-        <h2>{{ __('central.calendar.title') }}</h2>
+        <h2><a href="">{{ __('central.calendar.title') }}</a></h2>
         <span>{{ __('central.calendar.month.' . $calendar[0]->format('M')) }}{{ $calendar[0]->format('Y') }}</span>
     </div>
 

@@ -12513,7 +12513,7 @@ a .btn-discord img {
   padding: 20px 20px 0 20px;
 }
 
-.advance-headers h2 {
+.advance-headers h2 a {
   color: whitesmoke;
 }
 
@@ -13014,6 +13014,164 @@ a .btn-discord img {
 }
 
 /* Central components:*/
+
+.full-calendar {
+  background-color: #494949;
+  width: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  color: whitesmoke;
+}
+
+.full-calendar h2 {
+  color: whitesmoke;
+  font-size: 1.5em;
+  margin-bottom: 0.5rem;
+}
+
+.full-calendar h3 {
+  font-size: 1.2em;
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+.calendar-display {
+  width: 100%;
+}
+
+.month-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  color: white;
+  font-size: 0.9em;
+}
+
+.day-container {
+  height: 400px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 5px;
+  grid-template-areas: ". . . . . . ." ". . . . . . ." ". . . . . . ." ". . . . . . ." ". . . . . . ." ". . . . . . .";
+}
+
+.day-item {
+  background: radial-gradient(circle, rgba(196, 196, 196, 0.816964) 0%, rgba(173, 173, 173, 0.441334) 100%), snow;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  color: black;
+  border-radius: 3px;
+}
+
+.day-item p {
+  width: 100%;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 600;
+  align-self: flex-start;
+}
+
+.day-item img {
+  width: 29px;
+  height: 38px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.day-item-disabled {
+  background: radial-gradient(circle, #bfbfbf 0%, #a2a2a2 100%);
+}
+
+.day-item-disabled p {
+  color: #656565;
+}
+
+.day-item-disabled img {
+  opacity: 0.6;
+}
+
+.current-day {
+  background: radial-gradient(circle, #55d641 0%, #539240 100%);
+}
+
+.calendar-forms {
+  width: 100%;
+  color: #f5f5f5;
+  margin-top: 1rem;
+}
+
+.calendar-forms div {
+  margin-bottom: 20px;
+}
+
+.calendar-forms div:last-of-type {
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .day-item img {
+    width: 35px;
+    height: 48px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .month-container {
+    font-size: 1.1em;
+  }
+
+  .day-container {
+    height: 490px;
+  }
+
+  .calendar-forms {
+    width: calc(28% - 15px);
+    margin-left: 15px;
+    padding-left: 15px;
+    margin-top: 0;
+    border-left: 2px ridge snow;
+  }
+
+  .full-calendar {
+    flex-direction: unset;
+  }
+
+  .calendar-display {
+    width: 72%;
+  }
+
+  .day-item {
+    flex-direction: unset;
+    padding: 6px;
+  }
+
+  .day-item p {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    font-size: 1.5em;
+  }
+
+  .day-item img {
+    width: 40px;
+    height: 53px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .day-item img {
+    width: 45px;
+    height: 58px;
+    margin-right: 10px;
+  }
+}
+
+/* Calendar components */
 
 .squad-team-management a {
   color: #494949;
