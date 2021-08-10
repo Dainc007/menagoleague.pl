@@ -62,6 +62,12 @@
   .nav-link.active {
     color: $text-olivine !important;
     border-radius: 50%;
+
+    span {
+      background-color: $text-gray;
+      border-radius: 50%;
+      color: white;
+    }
   }
 }
 

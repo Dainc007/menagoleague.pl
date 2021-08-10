@@ -46,16 +46,16 @@
   .notifications-content-item {
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: 10px;
 
     &:nth-of-type(2n) {
       background-color: rgb(228, 228, 228);
     }
 
     > img {
-      width: 50px;
-      height: 62px;
+      width: 34px;
+      height: 45px;
       object-fit: cover;
+      align-self: center;
     }
 
     div {
@@ -64,7 +64,7 @@
       img {
         min-width: 150px;
         width: max-content;
-        height: 62px;
+        height: 54px;
       }
 
       p {
@@ -79,5 +79,19 @@
         }
       }
     }
+  }
+}
+
+.header-w-tab {
+  width: 100%;
+  margin: 5px 0 10px 0;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 4px;
+
+  h2 {
+    width: 70%;
+    margin: unset;
+    border-bottom: unset;
+    padding-bottom: unset;
   }
 }
