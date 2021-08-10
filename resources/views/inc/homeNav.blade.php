@@ -4,7 +4,7 @@
     <a class="btn" href="{{ route('transfers') }}">{{__('nav.homeNav.transfers')}}</a>
     <div class="central-menu-item-alert">
         <a class="btn" href="{{ route('office') }}">{{__('nav.homeNav.office')}}</a>
-        <span class="material-icons alert"> notifications_active </span>
+        <span class="notification">2</span>
     </div>
     <a class="btn" href="{{ route('season') }}">{{__('nav.homeNav.season')}}</a>
 </div>
@@ -25,7 +25,7 @@
             <a class="btn" href="{{ route('transfers') }}">TRANSFERS</a>
             <div class="r-central-menu-item-alert">
                 <a class="btn" href="">OFFICE</a>
-                <span class="material-icons alert"> notifications_active </span>
+                <span class="notification">2</span>
             </div>
             <a class="btn" href="{{ route('season') }}">SEASON</a>
         </div>

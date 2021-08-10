@@ -3,7 +3,7 @@
     <div class="stadium-details">
         <div class="stadium-img">
             <div class="none">
-                <h3>Przebudowa</h3>
+                <h3 class="bg-danger">Przebudowa</h3>
             </div>
         </div>
         <div class="stadium-info">
