@@ -11429,6 +11429,28 @@ nav .container .r-menu {
   padding: 25px;
 }
 
+nav .container .r-menu .r-central-menu-item-alert .btn-notification {
+  margin-right: 5px !important;
+}
+
+nav .container .r-menu .r-central-menu-item-alert .notification {
+  display: none;
+  margin-left: -20px;
+  background-color: #dc3545;
+  height: 20px;
+  width: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 50%;
+  color: #fff;
+  margin-right: 15px;
+  margin-top: 5px;
+}
+
+nav .container .r-menu .r-central-menu-item-alert .unread {
+  display: block !important;
+}
+
 nav .container .r-dropdown,
 nav .container .r-dropdown-link {
   padding: 10px 5px;
@@ -11497,6 +11519,23 @@ nav .container .r-nav-auth-logged-user-settings {
   display: flex;
   justify-content: space-evenly;
   width: 80%;
+}
+
+.central-menu .central-menu-item-alert .notification,
+.central-menu .r-central-menu-item-alert .notification,
+.r-central-menu .central-menu-item-alert .notification,
+.r-central-menu .r-central-menu-item-alert .notification {
+  background-color: #dc3545;
+  height: 16px;
+  width: 16px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 50%;
+  color: #fff;
+  margin-right: 15px;
+  margin-left: -40px;
+  margin-top: 3px;
 }
 
 .navbar {
@@ -11623,6 +11662,18 @@ footer a .social-item img {
 .central-menu-item-alert {
   display: flex;
   position: relative;
+}
+
+.central-menu-item-alert .btn-notification {
+  margin-right: 5px !important;
+}
+
+.central-menu-item-alert .notification {
+  display: none;
+}
+
+.central-menu-item-alert .unread {
+  display: block !important;
 }
 
 .alert {
@@ -13302,6 +13353,282 @@ a .btn-discord img {
 }
 
 /* Squad components:*/
+
+.office-messages {
+  grid-area: messages;
+}
+
+.office-finances {
+  grid-area: finances;
+}
+
+.office-fans {
+  grid-area: fans;
+}
+
+.office-rivals {
+  grid-area: rivals;
+}
+
+.office-jobs {
+  grid-area: jobs;
+}
+
+.office-stadium {
+  grid-area: stadium;
+}
+
+.office-carrer {
+  grid-area: carrer;
+}
+
+.office-content {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  gap: 2rem;
+  grid-template-areas: "messages" "finances" "jobs" "fans" "rivals" "stadium" "carrer";
+}
+
+@media (min-width: 1024px) {
+  .office-content {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "messages finances finances" "fans rivals jobs" "stadium carrer jobs";
+    gap: 1rem;
+  }
+}
+
+.office-messages,
+.office-finances,
+.office-fans,
+.office-carrer,
+.office-rivals,
+.office-jobs,
+.office-stadium {
+  background-color: rgba(255, 253, 253, 0.7);
+  padding: 0px 19px 10px 19px;
+}
+
+.office-messages .office-title,
+.office-finances .office-title,
+.office-fans .office-title,
+.office-carrer .office-title,
+.office-rivals .office-title,
+.office-jobs .office-title,
+.office-stadium .office-title {
+  font-size: 18px;
+  padding: 19px 0px 31px 0px;
+  text-transform: uppercase;
+}
+
+.office-messages {
+  display: flex;
+  justify-content: center;
+}
+
+.office-messages a {
+  width: 100%;
+  text-align: center;
+}
+
+.office-messages a .material-icons {
+  transition: 0.4s;
+  font-size: 6em;
+  color: #0a2403;
+}
+
+.office-messages a .office-title {
+  padding-bottom: 19px;
+  font-size: 21px;
+}
+
+.office-finances .office-title {
+  padding-bottom: 10px;
+}
+
+.office-finances .finances {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.office-finances .finances .finances-details {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -30px;
+  margin-bottom: 10px;
+  text-align: right;
+  width: 100%;
+}
+
+.office-finances .finances .finances-view {
+  overflow: scroll;
+  max-height: 165px;
+  width: 100%;
+}
+
+.office-finances .finances .finances-view .details-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px 0px;
+  position: sticky;
+  top: 0;
+  justify-content: center;
+  border: 1px solid #ddd;
+  border-bottom: 0px;
+  background-color: #f7f7f7;
+}
+
+.office-finances .finances .finances-view .details-buttons li {
+  margin-right: 5px;
+  list-style-type: none;
+}
+
+.office-finances .finances .finances-view .details-buttons li.active {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.office-finances .finances .finances-view .details-buttons li:hover {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.office-finances .finances .finances-view div {
+  display: none;
+}
+
+.office-finances .finances .finances-view div table {
+  font-size: 12px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.office-finances .finances .finances-view div table td,
+.office-finances .finances .finances-view div table th {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 4px;
+}
+
+.office-finances .finances .finances-view div table tr:nth-child(even) {
+  background-color: #ddd;
+}
+
+.office-finances .finances .finances-view div table tr th:first-of-type,
+.office-finances .finances .finances-view div table tr td:first-of-type {
+  padding-right: 10px;
+}
+
+.office-finances .finances .finances-view .active {
+  display: flex;
+}
+
+.office-rivals .rivals-statistics .rival-info {
+  padding: 0px 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.office-rivals .rivals-statistics .rival-info:nth-child(2n) {
+  background-color: #e4e4e4;
+}
+
+.office-rivals .rivals-statistics .rival-info:hover {
+  background: #dbdbdb;
+}
+
+.office-rivals .rivals-statistics .rival-info .rival-form {
+  display: flex;
+}
+
+.office-rivals .rivals-statistics .rival-info .rival-name {
+  margin-right: 15px;
+}
+
+.office-rivals .rivals-statistics .rival-info .text-white {
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  font-size: 12px;
+  margin: 2px;
+}
+
+.office-rivals .rivals-statistics .rival-info .text-white:hover {
+  cursor: pointer;
+}
+
+.office-stadium .stadium-details {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.office-stadium .stadium-details .stadium-img {
+  flex: 1 1 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.office-stadium .stadium-details .stadium-img .none {
+  margin: 0 auto;
+  text-align: center;
+  width: 50%;
+}
+
+.office-stadium .stadium-details .stadium-img .none h3 {
+  font-size: 14px;
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  text-transform: uppercase;
+}
+
+.office-stadium .stadium-details .stadium-info {
+  padding: 0px 5px;
+}
+
+.office-carrer .carrer-invites {
+  font-size: 14px;
+  margin: 10px 0px;
+}
+
+.office-carrer .carrer-summary .summary-statistics,
+.office-carrer .carrer-summary .summary-awards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+.office-carrer .carrer-summary .summary-statistics p,
+.office-carrer .carrer-summary .summary-awards p {
+  margin: 0px 5px;
+}
+
+.office-carrer form {
+  display: flex;
+  flex-direction: column;
+}
+
+.office-carrer form select {
+  font-size: 12px;
+}
+
+.office-carrer form .btn-danger {
+  font-size: 14px;
+}
+
+.office-carrer form input,
+.office-carrer form button {
+  margin: 10px 0px;
+}
+
+/*Office components */
 
 /* @import 'components/app/ */
 
