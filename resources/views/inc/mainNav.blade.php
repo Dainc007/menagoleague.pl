@@ -1,113 +1,172 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
     <div class="container">
-        <a class="navbar-brand" href="{{ route('home') }}">
-            {{ config('app.name', 'Menago League') }}
+        <a class="logo" href="{{ route('home') }}">
+            <img src="images/logo-normal-classic.svg" alt="">
         </a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <div class="menu">
+            <div class="dropdown">
+                <a href="#about" class="dropdown-link">
+                    {{ __('nav.mainNav.whatAreWe') }}
+                </a>
+            </div>
+            <div class="dropdown">
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- Left Side Of Navbar -->
-            <ul class="navbar-nav mr-auto">
-
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('welcome') }}"> {{ __('nav.mainNav.whatAreWe') }}</a>
-                </li>
-
-                <!-- Dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                <a class="dropdown-link" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
                     {{ __('nav.mainNav.tablesAndFixtures') }}
-                    </a>
-                    <div class="dropdown-menu" id="">
-                        <a class="dropdown-item" href="#">{{ __('nav.mainNav.england') }}</a>
-                        <a class="dropdown-item" href="#">{{ __('nav.mainNav.spain') }}</a>
-                        <a class="dropdown-item" href="#">{{ __('nav.mainNav.poland') }}</a>
-                        <a class="dropdown-item" href="#">{{ __('nav.mainNav.italy') }}</a>
-                        <a class="dropdown-item disabled" href="#">{{ __('nav.mainNav.champions') }}</a>
-                        <a class="dropdown-item disabled" href="#">{{ __('nav.mainNav.europe') }}</a>
-
-                    </div>
-                </li>
-                <!-- Dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    <span class="material-icons">arrow_drop_down</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="#">{{ __('nav.mainNav.england') }}</a>
+                    <a href="#">{{ __('nav.mainNav.spain') }}</a>
+                    <a href="#">{{ __('nav.mainNav.poland') }}</a>
+                    <a href="#">{{ __('nav.mainNav.italy') }}</a>
+                    <a href="#">{{ __('nav.mainNav.champions') }}</a>
+                    <a href="#">{{ __('nav.mainNav.europe') }}</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a class="dropdown-link" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
                     {{ __('nav.mainNav.society') }}
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="https://www.facebook.com/groups/230246767524306" target="_blank">{{ __('nav.mainNav.fbGroup') }}</a>
-                        <a class="dropdown-item" href="https://www.facebook.com/MenagoLeague" target="_blank">{{ __('nav.mainNav.fbFanPage') }}</a>
-                        <a class="dropdown-item" href="https://discord.gg/w73uDUjse8" target="_blank">{{ __('nav.mainNav.discord') }} </a>
-                        <a class="dropdown-item" href="#admin">{{ __('nav.mainNav.admin') }}</a>
-                    </div>
-                </li>
-
-                <!-- Dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                    {{ __('nav.mainNav.leaderboards') }}
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Link 1</a>
-                        <a class="dropdown-item" href="#">Link 2</a>
-                        <a class="dropdown-item" href="#">Link 3</a>
-                    </div>
-                </li>
-
-                <!-- Dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    <span class="material-icons">arrow_drop_down</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="https://www.facebook.com/groups/230246767524306"
+                        target="_blank">{{ __('nav.mainNav.fbGroup') }}</a>
+                    <a class="dropdown-item" href="https://www.facebook.com/MenagoLeague"
+                        target="_blank">{{ __('nav.mainNav.fbFanPage') }}</a>
+                    <a class="dropdown-item" href="https://discord.gg/w73uDUjse8"
+                        target="_blank">{{ __('nav.mainNav.discord') }} </a>
+                    <a class="dropdown-item" href="#admin">{{ __('nav.mainNav.admin') }}</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a class="dropdown-link" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
                     {{ __('nav.mainNav.help') }}
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">    {{ __('nav.mainNav.rules') }}</a>
-                        <a class="dropdown-item" href="#">    {{ __('nav.mainNav.FAQ') }}</a>
-                    </div>
-                </li>
-         
-            </ul>
-
-            <!-- Right Side Of Navbar -->
-            <ul class="navbar-nav ml-auto">
-
-                <!-- Authentication Links -->
-                @guest
+                    <span class="material-icons">arrow_drop_down</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#"> {{ __('nav.mainNav.rules') }}</a>
+                    <a class="dropdown-item" href="#"> {{ __('nav.mainNav.FAQ') }}</a>
+                </div>
+            </div>
+        </div>
+        <div class="nav-auth dropdown">
+            @guest
                 @if (Route::has('login'))
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">{{ __('Logowanie') }}</a>
-                </li>
+                    <a href="{{ route('login') }}" class="btn">{{ __('Logowanie') }}</a>
                 @endif
 
                 @if (Route::has('register'))
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('register') }}">{{ __('Rejestracja') }}</a>
-                </li>
+                    <a class="btn btn-w-border" href="{{ route('register') }}">{{ __('Rejestracja') }}</a>
                 @endif
-                @else
-                <li class="nav-item dropdown">
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        {{ Auth::user()->name }}
+            @else
+                <a class="dropdown-link" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">{{ auth()->user()->name }} <span class="material-icons"> arrow_drop_down
+                    </span></a>
+
+                <div class="dropdown-menu">
+                    <a href="#">Settings</a>
+                    <a href="{{ route('logout') }}"
+                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout
                     </a>
 
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                </div>
 
-                        <a class="dropdown-item" href="{{ route('user.account') }}">
-                            {{ __('nav.mainNav.settings') }}
-                        </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
+            @endguest
+        </div>
 
-                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                            {{ __('nav.mainNav.logout') }}
-                        </a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
+        <img class="btn burger-menu" src="./images/burger-menu.svg" alt="" />
+
+        <div class="responsive-menu" style="display: none">
+            <div class="container">
+                <div class="responsive-menu-content">
+                    <div class="responsive-menu-logo">
+                        <a href="./Central/" class="logo"><img src="./images/logo-normal-classic.svg" alt="" /></a>
+
+                        <img class="btn close-burger-menu" src="./images/close-burger-menu.svg" alt="" />
                     </div>
-                </li>
-                @endguest
-            </ul>
+
+                    <div class="r-menu">
+                        <div class="r-dropdown">
+                            <a href="#about" class="r-dropdown-link">
+                                {{ __('nav.mainNav.whatAreWe') }}
+                            </a>
+                        </div>
+
+                        <div class="r-dropdown">
+                            <button class="btn btn-r-menu r-dropdown-link" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">{{ __('nav.mainNav.tablesAndFixtures') }}<span
+                                    class="material-icons"> arrow_right</span></button>
+                            <div class="r-dropdown-menu">
+                                <a class="dropdown-item" href="#">{{ __('nav.mainNav.england') }}</a>
+                                <a class="dropdown-item" href="drop">{{ __('nav.mainNav.spain') }}</a>
+                                <a class="dropdown-item" href="#">{{ __('nav.mainNav.poland') }}</a>
+                                <a class="dropdown-item" href="#">{{ __('nav.mainNav.italy') }}</a>
+                                <a class="disabled dropdown-item" href="#">{{ __('nav.mainNav.champions') }}</a>
+                                <a class="disabled dropdown-item" href="#">{{ __('nav.mainNav.europe') }}</a>
+                            </div>
+                        </div>
+                        <div class="r-dropdown">
+                            <button class="btn btn-r-menu r-dropdown-link" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">{{ __('nav.mainNav.society') }}<span class="material-icons">
+                                    arrow_right </span></button>
+                            <div class="r-dropdown-menu">
+                                <a class="dropdown-item" href="https://www.facebook.com/groups/230246767524306"
+                                    target="_blank">{{ __('nav.mainNav.fbGroup') }}</a>
+                                <a class="dropdown-item" href="https://www.facebook.com/MenagoLeague"
+                                    target="_blank">{{ __('nav.mainNav.fbFanPage') }}</a>
+                                <a class="dropdown-item" href="https://discord.gg/w73uDUjse8"
+                                    target="_blank">{{ __('nav.mainNav.discord') }} </a>
+                                <a class="dropdown-item" href="#admin">{{ __('nav.mainNav.admin') }}</a>
+                            </div>
+                        </div>
+
+                        <div class="r-dropdown">
+                            <button class="btn btn-r-menu r-dropdown-link" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                {{ __('nav.mainNav.help') }} <span class="material-icons">arrow_right
+                                </span></button>
+                            <div class="r-dropdown-menu">
+                                <a class="dropdown-item" href="#"> {{ __('nav.mainNav.rules') }}</a>
+                                <a class="dropdown-item" href="#"> {{ __('nav.mainNav.FAQ') }}</a>
+                            </div>
+                        </div>
+
+                        <hr />
+
+                        <div class="r-nav-auth">
+                            @guest
+
+                                @if (Route::has('login'))
+                                    <a href="{{ route('login') }}" class="btn">{{ __('Logowanie') }}</a>
+                                @endif
+
+                                @if (Route::has('register'))
+                                    <a class="btn btn-w-border"
+                                        href="{{ route('register') }}">{{ __('Rejestracja') }}</a>
+                                @endif
+                            @else
+                                <div class="r-nav-auth-logged-user">
+                                    <a class="r-nav-auth-logged-user-nickname" href="">Nickname </a>
+                                    <div class="r-nav-auth-logged-user-settings">
+                                        <a href=""><span class="material-icons"> manage_accounts </span> Settings</a>
+                                        <a href=""><span class="material-icons"> logout </span> Logout</a>
+                                    </div>
+                                </div>
+                            @endguest
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </nav>

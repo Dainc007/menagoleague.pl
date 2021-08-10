@@ -16,8 +16,16 @@ window.Vue = require('vue').default;
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
-const files = require.context('./', true, /\.vue$/i)
-files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+const files = require.context('./', true, /\.vue$/i);
+files.keys().map((key) =>
+  Vue.component(
+    key
+      .split('/')
+      .pop()
+      .split('.')[0],
+    files(key).default
+  )
+);
 
 //Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
@@ -28,5 +36,76 @@ files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(
  */
 
 const app = new Vue({
-    el: '#app',
+  el: '#app',
 });
+
+// Responsive menu
+// Main responsive menu
+
+const burgerMenu = document.querySelector('.burger-menu');
+const closeBurgerMenu = document.querySelector('.close-burger-menu');
+const responsiveMenu = document.querySelector('.responsive-menu');
+
+burgerMenu.onclick = () => {
+  const openResponsiveMenu = () => {
+    if (responsiveMenu.style.display == 'none') {
+      responsiveMenu.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+  };
+  openResponsiveMenu();
+};
+
+closeBurgerMenu.onclick = () => {
+  const closeResponsiveMenu = () => {
+    if (responsiveMenu.style.display == 'flex') {
+      responsiveMenu.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+  };
+  closeResponsiveMenu();
+};
+
+// Game responsive menu
+
+const gameBurgerMenu = document.querySelector('.central-burger-menu');
+const gameResponsiveMenu = document.querySelector('.responsive-central-menu');
+const centralBurgerMenuImg = document.querySelector('.central-burger-menu');
+
+gameBurgerMenu.onclick = () => {
+  const openGameResponsiveMenu = () => {
+    if (gameResponsiveMenu.style.display == 'none') {
+      gameResponsiveMenu.style.display = 'flex';
+      centralBurgerMenuImg.src = './images/close-burger-menu.svg';
+    } else {
+      gameResponsiveMenu.style.display = 'none';
+      centralBurgerMenuImg.src = './images/burger-menu.svg';
+    }
+  };
+  openGameResponsiveMenu();
+};
+
+/* Finances view */ 
+
+const financesBtn = document.querySelectorAll('.details-buttons > li[data-number]'),
+  financesData = document.querySelectorAll('.finances-view > div[data-number]');
+
+function resetFinances() {
+  financesData.forEach((el) => {
+    el.classList.remove('active')
+  });
+  financesBtn.forEach((el) => {
+    el.classList.remove('active');
+  })
+}
+
+financesBtn.forEach((el) => {
+  el.addEventListener('click', () => {
+    resetFinances();
+    key = el.dataset.number;
+    financesData[key].classList.add('active');
+    el.classList.add('active');
+  });
+})
+
+/* Jobs offer */ 

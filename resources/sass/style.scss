@@ -1,0 +1,144 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import 'fonts';
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+body {
+  font-family: 'BW Modelica';
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.882) 71.99%, rgba(206, 234, 211, 0.855) 87.12%, rgba(62, 73, 64, 0.9) 98.93%), url(/images/background.jpg);
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.material-icons {
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+h2 {
+  color: $text-darker;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+@media (min-width: 425px) {
+  h2 {
+    font-size: 1.5em;
+  }
+}
+
+h3 {
+  font-weight: 600;
+}
+
+body,
+html {
+  font-family: 'Bw Modelica';
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  position: relative;
+  width: 100vw;
+  scroll-behavior: smooth;
+}
+
+@import 'components/scrollbar';
+
+.container {
+  width: 98%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 980px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+@media (min-width: 1660px) {
+  .container {
+    width: 1420px;
+  }
+}
+
+a {
+  color: $text-hippieGreen;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover {
+    color: $text-dark;
+  }
+}
+
+.btn {
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: $text-dark;
+  padding: 7px 23px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.disabled {
+  pointer-events: none !important;
+  color: $text-gray !important;
+}
+
+/* Navbar and footer */
+@import 'components/navigation';
+@import 'components/footer';
+@import 'components/log-user-nav'; /* Logged user navigation */
+
+/* Homepage components */
+@import 'components/main/main';
+
+/* Game components */
+@import 'components/central/main'; /* Central components:*/
+
+@import 'components/squad/main'; /* Squad components:*/
+
+@import 'components/office/main'; /*Office components */
+
+/* @import 'components/app/ */

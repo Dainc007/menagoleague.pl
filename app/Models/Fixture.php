@@ -34,6 +34,16 @@ class Fixture extends Model
         return $this->belongsToMany(Team::class);
     }
 
+    public function host()
+    {
+        return $this->hasOne(Team::class, 'id', 'host_id');
+    }
+
+    public function visitor()
+    {
+        return $this->hasOne(Team::class, 'id', 'visitor_id');
+    }
+
     public function gameStats()
     {
         return $this->hasMany(GameStats::class);

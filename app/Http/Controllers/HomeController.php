@@ -2,30 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Article;
+use App\Models\Fixture;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function index()
     {
-        return view('home', [
-            'user' => Auth::user(),
+        return view('home.home', [
+            'articles'    => Article::limit(4)->get(),
+            'oldArticles' => Article::skip(4)->take(6)->get(),
+            'user'        => Auth::user(),
+            'games'       => Fixture::where('date', '>=', now()->subDays(7))
+                ->where('date', '<=', now()->addDays(7))->get(),
         ]);
     }
 }

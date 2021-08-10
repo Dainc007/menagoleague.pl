@@ -1,0 +1,88 @@
+.central-standings {
+  background-color: $sectionColor;
+  padding: 20px;
+  height: 313px;
+  max-height: 313px;
+  border-radius: 5px;
+  box-shadow: inset 0px -4px 5px rgb(176 176 176 / 25%);
+  position: relative;
+}
+
+.headers-standings,
+.central-standings-info-text,
+.central-standings-content,
+.standings-item {
+  display: flex;
+}
+
+.central-standings-info-text {
+  justify-content: flex-end;
+  font-weight: bold;
+  width: 100%;
+
+  div {
+    width: 14.5%;
+    align-self: center;
+    display: flex;
+
+    p {
+      text-align: center;
+    }
+
+    img {
+      width: 30px;
+      height: 30px;
+      object-fit: cover;
+    }
+  }
+}
+
+.central-standings-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: auto;
+  height: 100%;
+
+  h2 {
+    width: 100%;
+    margin: 5px 0 10px 0;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 4px;
+  }
+}
+
+.standings-item {
+  width: 99%;
+  border-bottom: 2px solid $text-gray;
+  justify-content: space-evenly;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 10px 0 5px;
+}
+
+.standings-item-scorePLD,
+.standings-item-scorePTS {
+  width: 13%;
+  text-align: center;
+}
+
+.standings-item-id {
+  width: 10%;
+}
+
+.standings-item-img {
+  height: 30px;
+  width: 30px;
+}
+
+.standings-item-name {
+  padding-left: 20px;
+  width: 54.5%;
+}
+
+.standings-content {
+  width: 100%;
+  overflow-y: auto;
+}

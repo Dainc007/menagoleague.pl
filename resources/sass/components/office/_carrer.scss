@@ -1,0 +1,33 @@
+.office-carrer {
+    .carrer-invites {
+        font-size: 14px;
+        margin: 10px 0px;
+    }
+    .carrer-summary {
+        .summary-statistics, .summary-awards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 10px;
+            p {
+                margin: 0px 5px;
+               
+            }
+        }
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        select {
+            font-size: 12px;
+        }
+        .btn-danger {
+            font-size: 14px;
+
+        }
+        input, button {
+            margin:10px 0px;
+        }
+    }
+}
