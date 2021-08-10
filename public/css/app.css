@@ -13561,6 +13561,67 @@ a .btn-discord img {
   cursor: pointer;
 }
 
+.office-jobs .jobs-offers .offers-none p {
+  text-align: center;
+}
+
+.office-jobs .jobs-offers .offers-none button {
+  margin-top: 10px;
+}
+
+.office-jobs .jobs-offers .offers-details {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.office-jobs .jobs-offers .offers-details .offers-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.office-jobs .jobs-offers .offers-details .offers-buttons li {
+  list-style-type: none;
+  margin: 0px 7px;
+}
+
+.office-jobs .jobs-offers .offers-details .offers-buttons li:hover {
+  cursor: pointer;
+}
+
+.office-jobs .jobs-offers .offers-details .offers-buttons .active {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.office-jobs .jobs-offers .offers-details .offer-cards {
+  position: relative;
+  min-height: 275px;
+}
+
+.office-jobs .jobs-offers .offers-details .offer-cards .offers-data {
+  position: absolute;
+  width: 100%;
+}
+
+.office-jobs .jobs-offers .offers-details .offer-cards .offers-data .data-logo img {
+  margin: 20px 0px;
+  max-height: 100px;
+}
+
+.office-jobs .jobs-offers .offers-details .offer-cards .offers-data .btn {
+  margin: 15px 0px;
+}
+
+.office-jobs .jobs-offers .offers-details .offers-controls:hover {
+  cursor: pointer;
+}
+
+.office-jobs .jobs-offers .offers-details .offers-controls .material-icons {
+  margin: 0px 25px;
+}
+
 .office-stadium .stadium-details {
   display: flex;
   flex-wrap: wrap;

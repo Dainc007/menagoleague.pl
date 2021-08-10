@@ -1,6 +1,65 @@
 <section class="office-jobs">
     <h2 class="office-title">Oferty pracy</h2>
-    @if(($jobOffers == null))
+    <div class="jobs-offers">
+        {{-- Jeżeli nie ma ofert --}}
+        {{-- <div class="offers-none">
+            <p>Obecnie nie ma dostępnych ofert pracy</p>
+            <button class="btn btn-sm btn-secondary">Złóz wniosek o stworzenie nowej druzyny</button>
+        </div> --}}
+        {{-- Jeżeli są oferty --}}
+        <div class="offers-details">
+            <div class="offers-buttons">
+                <li class="active" data-type="free-vacancies">
+                    Wolne Wakaty
+                </li>
+                <li data-type="danger-vacancies">
+                    Zagrożone Wakaty
+                </li>
+                <li data-type="all-offers">
+                    Wszystkie
+                </li>
+            </div>
+            <div class="offer-cards">
+                <div class="offers-data" data-type="danger-vacancies">
+                    <div class="data-logo">
+                        <img src="{{ url('/images/shields/' . rand(1, 8) . '.png') }}">
+                    </div>
+                    <div class="data-club">
+                        <p><b>Klub</b>: FC Name</p>
+                    </div>
+                    <div class="data-league">
+                        <p><b>Liga</b>: 1. League</p>
+                    </div>
+                    <div class="data-manager">
+                        <p><b>Menedżer</b>: Frank Lampard</p>
+                    </div>
+                    <button class="btn btn-sm btn-success">Aplikuj</button>
+                </div>
+                <div class="offers-data" data-type="danger-vacancies">
+                    <div class="data-logo">
+                        <img src="{{ url('/images/shields/' . rand(1, 8) . '.png') }}">
+                    </div>
+                    <div class="data-club">
+                        <p><b>Klub</b>: FC Name 1</p>
+                    </div>
+                    <div class="data-league">
+                        <p><b>Liga</b>: Premier League</p>
+                    </div>
+                    <div class="data-manager">
+                        <p><b>Menedżer</b>: Mauricio Pochettino</p>
+                    </div>
+                    <button class="btn btn-sm btn-success">Aplikuj</button>
+                </div>
+            </div>
+            <div class="offers-controls">
+                <span class="material-icons" id="previousOffer">undo</span>
+                <span class="material-icons" id="nextOffer">redo</span>
+            </div>
+        </div>
+    </div>
+    
+</section>
+{{-- @if(($jobOffers != null))
         <div class="d-flex justify-content-center">
             {{ $jobOffers->links()}}
         </div>
@@ -26,5 +85,4 @@
     @else
     <h6>Obecnie nie ma dostępnych ofert pracy</h6>
     <button class="btn btn-sm btn-danger">Złóz wniosek o stworzenie nowej druzyny</button>
-    @endif
-</section>
+    @endif --}}
