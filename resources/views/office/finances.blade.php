@@ -4,10 +4,10 @@
         <div class="finances-details">
             <div class="details-info">
                 <p>
-                    Budżet klubu: 100 000 000
+                    Budżet klubu: 100 mln.
                 </p>
                 <p>
-                    Tygodniowe koszta utrzymania klubu: 120 000
+                    Tyg. koszta utrzymania klubu: 120 tys.
                 </p>
             </div>
         </div>
@@ -30,48 +30,56 @@
                         <th>Kwota</th>
                         <th>Budżet przed transakcją</th>
                         <th>Budżet po transakcji</th>
+                        <th>Data</th>
                     </tr>
-                    <tr>
-                        <td>Sprzedaż: Lionel Messi</td>
+                    <tr class="bg-success text-white">
+                        <td>Lionel Messi</td>
                         <td>70 000 000 $</td>
                         <td>120 000 000</td>
                         <td>50 000 000</td>
+                        <td>01.01.2021 23:59</td>
                     </tr>
-                    <tr>
-                        <td>Sprzedaż: Thierry Henry</td>
+                    <tr class="bg-success text-white">
+                        <td>Thierry Henry</td>
                         <td>50 000 000 $</td>
                         <td>50 000 000</td>
                         <td>120 000 000</td>
+                        <td>01.01.2021 23:59</td>
                     </tr>
-                    <tr>
-                        <td>Kupno: Martin Braithwaite</td>
+                    <tr class="bg-danger text-white">
+                        <td>Martin Braithwaite</td>
                         <td>5 000 000 $</td>
                         <td>120 000 000</td>
                         <td>115 000 000</td>
+                        <td>01.01.2021 23:59</td>
                     </tr>
-                    <tr>
-                        <td>Kupno: Antoine Griezmann</td>
+                    <tr class="bg-danger text-white">
+                        <td>Antoine Griezmann</td>
                         <td>100 000 000 $</td>
                         <td>115 000 000</td>
                         <td>15 000 000</td>
+                        <td>01.01.2021 23:59</td>
                     </tr>
-                    <tr>
-                        <td>Sprzedaż: Luis Suarez</td>
+                    <tr class="bg-success text-white">
+                        <td>Luis Suarez</td>
                         <td>30 000 000 $</td>
                         <td>15 000 000</td>
                         <td>45 000 000</td>
+                        <td>01.01.2021 23:59</td>
                     </tr>
-                    <tr>
-                        <td>Sprzedaż: Ousmane Dembele</td>
+                    <tr class="bg-success text-white">
+                        <td>Ousmane Dembele</td>
                         <td>60 000 000 $</td>
                         <td>45 000 000</td>
                         <td>105 000 000</td>
+                        <td>01.01.2021 23:59</td>
                     </tr>
-                    <tr>
-                        <td>Kupno: Philippe Coutinho</td>
+                    <tr class="bg-danger text-white">
+                        <td>Philippe Coutinho</td>
                         <td>25 000 000 $</td>
                         <td>105 000 000</td>
                         <td>80 000 000</td>
+                        <td>01.01.2021 23:59</td>
                     </tr>
                 </table>
             </div>
@@ -82,29 +90,34 @@
                         <th>Kwota</th>
                         <th>Budżet przed transakcją</th>
                         <th>Budżet po transakcji</th>
+                        <td>Data</td>
                     </tr>
-                    <tr>
-                        <td>Sprzedaż: Lionel Messi</td>
+                    <tr class="bg-success text-white">
+                        <td>Lionel Messi</td>
                         <td>70 000 000 $</td>
                         <td>120 000 000</td>
                         <td>50 000 000</td>
+                        <td>01.01.2021 23:59</td>
                     </tr>
-                    <tr>
-                        <td>Sprzedaż: Thierry Henry</td>
+                    <tr class="bg-success text-white">
+                        <td>Thierry Henry</td>
                         <td>50 000 000 $</td>
                         <td>50 000 000</td>
                         <td>120 000 000</td>
-                    </tr>
-                        <td>Sprzedaż: Luis Suarez</td>
+                        <td>01.01.2021 23:59</td>
+                    <tr class="bg-success text-white">
+                        <td>Luis Suarez</td>
                         <td>30 000 000 $</td>
                         <td>15 000 000</td>
                         <td>45 000 000</td>
+                        <td>01.01.2021 23:59</td>
                     </tr>
-                    <tr>
-                        <td>Sprzedaż: Ousmane Dembele</td>
+                    <tr class="bg-success text-white">
+                        <td>Ousmane Dembele</td>
                         <td>60 000 000 $</td>
                         <td>45 000 000</td>
                         <td>105 000 000</td>
+                        <td>01.01.2021 23:59</td>
                     </tr>
                 </table>    
             </div>
@@ -115,24 +128,28 @@
                         <th>Kwota</th>
                         <th>Budżet przed transakcją</th>
                         <th>Budżet po transakcji</th>
+                        <th>Data</th>
                     </tr>
-                    <tr>
-                        <td>Kupno: Martin Braithwaite</td>
+                    <tr class="bg-danger text-white">
+                        <td>Martin Braithwaite</td>
                         <td>5 000 000 $</td>
                         <td>120 000 000</td>
                         <td>115 000 000</td>
+                        <td>01.01.2021 23:59</td>
                     </tr>
-                    <tr>
-                        <td>Kupno: Antoine Griezmann</td>
+                    <tr class="bg-danger text-white">
+                        <td>Antoine Griezmann</td>
                         <td>100 000 000 $</td>
                         <td>115 000 000</td>
                         <td>15 000 000</td>
+                        <td>01.01.2021 23:59</td>
                     </tr>
-                    <tr>
-                        <td>Kupno: Philippe Coutinho</td>
+                    <tr class="bg-danger text-white">
+                        <td>Philippe Coutinho</td>
                         <td>25 000 000 $</td>
                         <td>105 000 000</td>
                         <td>80 000 000</td>
+                        <td>01.01.2021 23:59</td>
                     </tr>
                 </table>
             </div>

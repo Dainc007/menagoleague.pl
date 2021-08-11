@@ -1,0 +1,58 @@
+.office-jobs {
+    .jobs-offers {
+        .offers-none {
+            p {
+                text-align: center;
+            }
+            button {
+                margin-top: 10px;
+            }
+        }
+        .offers-details {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            .offers-buttons {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 15px;
+                li {
+                    list-style-type: none;
+                    margin: 0px 7px;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+                .active {
+                    font-weight: 700;
+                    text-decoration: underline;
+                }
+            }
+            .offer-cards {
+                position: relative;
+                min-height: 275px;
+                .offers-data {
+                    position: absolute;
+                    width: 100%;
+                    .data-logo {
+                        img {
+                            margin: 20px 0px;
+                            max-height: 100px;
+                        }
+                    }
+                    .btn {
+                        margin: 15px 0px;
+                    }
+                }
+            }
+            .offers-controls {
+                &:hover {
+                    cursor: pointer;
+                }
+                .material-icons {
+                    margin: 0px 25px;
+                }
+            }
+        }
+    }
+}

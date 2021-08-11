@@ -32,6 +32,15 @@
 .central-menu-item-alert {
   display: flex;
   position: relative;
+  .btn-notification {
+    margin-right: 5px!important;
+  }
+  .notification {
+    display: none;
+  }
+  .unread {
+    display: block!important;
+  }
 }
 
 .alert {
