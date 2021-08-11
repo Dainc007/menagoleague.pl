@@ -56,13 +56,17 @@
 }
 
 @media (min-width: 768px) {
+  .menagoleague-stats-container {
+    margin-bottom: 0 !important;
+  }
+
   .menagoleague-stats-p {
     font-size: 1em;
   }
 
   .menagoleague-stats {
-    width: calc(40% - 4rem);
-    margin-right: 2rem;
+    width: calc(40% - 2rem);
+    margin-right: 1rem;
     margin-bottom: 0;
 
     h2 {
@@ -82,9 +86,7 @@
     width: 95%;
     margin-bottom: 15px;
   }
-}
 
-@media (min-width: 768px) {
   .content-mobile {
     align-items: center;
   }
@@ -111,7 +113,7 @@
 
     h2 {
       font-size: 1.5em;
-      margin-bottom: 90px;
+      margin-bottom: 30px;
     }
   }
 
@@ -124,15 +126,12 @@
     align-items: unset;
     flex-wrap: wrap;
     flex-direction: row !important;
+    margin-bottom: 35px !important;
   }
 
   .menagoleague-stats-content-item {
     width: 50%;
     margin-bottom: 20px;
-  }
-
-  .menagoleague-stats-container {
-    margin-bottom: 41px;
   }
 
   .menagoleague-stats-content-item-desc {
@@ -157,29 +156,17 @@
 
   .menagoleague-stats-content-item {
     width: 42%;
-    margin-bottom: 25px;
-  }
-
-  .menagoleague-stats {
-    h2 {
-      margin-bottom: 90px;
-    }
   }
 
   .menagoleague-stats-container {
-    margin-bottom: 21px;
+    margin-bottom: 21px !important;
   }
 }
 
 @media (min-width: 1660px) {
-  .menagoleague-stats-content-item {
-    width: 25%;
-    margin: 0;
-  }
-
   .menagoleague-stats {
     h2 {
-      margin-bottom: 130px;
+      margin-bottom: 50px;
     }
   }
 
