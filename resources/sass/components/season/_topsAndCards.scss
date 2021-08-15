@@ -1,0 +1,144 @@
+.season-topScorers {
+  overflow: hidden;
+}
+
+.topsAndCards-info {
+  display: flex;
+  justify-content: flex-end;
+
+  .legend {
+    width: 10%;
+    text-align: center;
+  }
+
+  img {
+    width: 25px;
+  }
+}
+
+.topsAndCards-container {
+  overflow-y: auto;
+  height: 220px;
+}
+
+.topAndCards-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+  .id {
+    width: 10%;
+    text-align: center;
+  }
+
+  .names {
+    display: flex;
+    align-items: center;
+    width: 80%;
+
+    img {
+      width: 25px;
+      height: 33px;
+      object-fit: cover;
+    }
+
+    p {
+      padding-left: 15px;
+    }
+  }
+
+  .score {
+    width: 10%;
+    text-align: center;
+  }
+}
+
+.season-cards {
+  .topsAndCards-info {
+    .legend {
+      width: 12%;
+    }
+  }
+
+  .topAndCards-item {
+    .names {
+      width: 66%;
+    }
+
+    .score {
+      width: 12%;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .topAndCards-item {
+    .names {
+      width: 76%;
+    }
+
+    .score {
+      width: 14%;
+    }
+  }
+
+  .topsAndCards-info {
+    .legend {
+      width: 14%;
+    }
+  }
+
+  .season-cards {
+    .topsAndCards-info {
+      .legend {
+        width: 14%;
+      }
+    }
+
+    .topAndCards-item {
+      .names {
+        width: 62%;
+      }
+
+      .score {
+        width: 14%;
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .topAndCards-item {
+    .names {
+      width: 80%;
+    }
+
+    .score {
+      width: 10%;
+    }
+  }
+
+  .topsAndCards-info {
+    .legend {
+      width: 10%;
+    }
+  }
+
+  .season-cards {
+    .topsAndCards-info {
+      .legend {
+        width: 12%;
+      }
+    }
+
+    .topAndCards-item {
+      .names {
+        width: 66%;
+      }
+
+      .score {
+        width: 12%;
+      }
+    }
+  }
+}

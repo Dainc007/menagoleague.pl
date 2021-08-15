@@ -126,6 +126,15 @@ a {
   color: $text-gray !important;
 }
 
+.section-disabled {
+  background-color: #d2d2d2 !important;
+  pointer-events: none !important;
+
+  * {
+    background-color: transparent;
+  }
+}
+
 /* Navbar and footer */
 @import 'components/navigation';
 @import 'components/footer';
@@ -141,5 +150,7 @@ a {
 @import 'components/squad/main'; /* Squad components:*/
 
 @import 'components/office/main'; /*Office components */
+
+@import 'components/season/main'; /*Season components */
 
 /* @import 'components/app/ */

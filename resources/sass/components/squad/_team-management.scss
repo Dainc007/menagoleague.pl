@@ -125,7 +125,7 @@
   height: 40px;
   font-weight: 600;
   box-shadow: inset 0px -4px 5px rgb(176 176 176 / 25%);
-  color: $text-dark !important;
+  color: $text-dark;
   font-size: 0.9em;
 
   &:hover {
@@ -142,7 +142,7 @@
   .nationality,
   .name {
     border-right: none;
-    font-size: 1.1em !important;
+    font-size: 1.1em;
   }
 }
 
@@ -153,7 +153,7 @@
 .player-attributes-desc,
 .player-status-desc {
   .overall {
-    justify-content: flex-start !important;
+    justify-content: flex-start;
   }
 }
 
@@ -162,44 +162,45 @@
     display: flex;
   }
 
-  .name {
-    width: 45% !important;
-  }
-
-  .overall {
-    width: 10% !important;
-    font-size: 1.3em;
-    justify-content: center;
-  }
-
-  .role {
-    width: 20% !important;
-  }
-
-  .player-actions-container {
-    width: 10% !important;
-    cursor: pointer;
-
-    button {
-      padding: 7px 23px !important;
+  .player-status-item,
+  .player-status-desc,
+  .player-attributes-item,
+  .player-attributes-desc {
+    .name {
+      width: 45%;
     }
-  }
 
-  .action {
-    width: 10% !important;
-  }
+    .overall {
+      width: 10%;
+      font-size: 1.1em;
+      justify-content: center;
+    }
 
-  .pos {
-    font-size: 1em !important;
-  }
+    .role {
+      width: 20%;
+    }
 
-  .age {
-    width: 8% !important;
-    font-size: 1.3em;
-  }
+    .player-actions-container {
+      width: 10%;
+      cursor: pointer;
 
-  .nationality {
-    width: 22% !important;
+      button {
+        padding: 7px 23px;
+      }
+    }
+
+    .action {
+      width: 10%;
+    }
+
+    .age {
+      width: 8%;
+      font-size: 1.1em;
+    }
+
+    .nationality {
+      width: 22%;
+    }
   }
 
   .player-status-desc,

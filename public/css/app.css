@@ -11206,6 +11206,15 @@ a:hover {
   color: #494949 !important;
 }
 
+.section-disabled {
+  background-color: #d2d2d2 !important;
+  pointer-events: none !important;
+}
+
+.section-disabled * {
+  background-color: transparent;
+}
+
 /* Navbar and footer */
 
 nav {
@@ -13404,7 +13413,7 @@ a .btn-discord img {
   height: 40px;
   font-weight: 600;
   box-shadow: inset 0px -4px 5px rgba(176, 176, 176, 0.25);
-  color: #144f06 !important;
+  color: #144f06;
   font-size: 0.9em;
 }
 
@@ -13431,7 +13440,7 @@ a .btn-discord img {
 .player-attributes-desc .nationality,
 .player-attributes-desc .name {
   border-right: none;
-  font-size: 1.1em !important;
+  font-size: 1.1em;
 }
 
 .player-image {
@@ -13440,7 +13449,7 @@ a .btn-discord img {
 
 .player-attributes-desc .overall,
 .player-status-desc .overall {
-  justify-content: flex-start !important;
+  justify-content: flex-start;
 }
 
 @media (min-width: 768px) {
@@ -13448,44 +13457,64 @@ a .btn-discord img {
     display: flex;
   }
 
-  .name {
-    width: 45% !important;
+  .player-status-item .name,
+  .player-status-desc .name,
+  .player-attributes-item .name,
+  .player-attributes-desc .name {
+    width: 45%;
   }
 
-  .overall {
-    width: 10% !important;
-    font-size: 1.3em;
+  .player-status-item .overall,
+  .player-status-desc .overall,
+  .player-attributes-item .overall,
+  .player-attributes-desc .overall {
+    width: 10%;
+    font-size: 1.1em;
     justify-content: center;
   }
 
-  .role {
-    width: 20% !important;
+  .player-status-item .role,
+  .player-status-desc .role,
+  .player-attributes-item .role,
+  .player-attributes-desc .role {
+    width: 20%;
   }
 
-  .player-actions-container {
-    width: 10% !important;
+  .player-status-item .player-actions-container,
+  .player-status-desc .player-actions-container,
+  .player-attributes-item .player-actions-container,
+  .player-attributes-desc .player-actions-container {
+    width: 10%;
     cursor: pointer;
   }
 
-  .player-actions-container button {
-    padding: 7px 23px !important;
+  .player-status-item .player-actions-container button,
+  .player-status-desc .player-actions-container button,
+  .player-attributes-item .player-actions-container button,
+  .player-attributes-desc .player-actions-container button {
+    padding: 7px 23px;
   }
 
-  .action {
-    width: 10% !important;
+  .player-status-item .action,
+  .player-status-desc .action,
+  .player-attributes-item .action,
+  .player-attributes-desc .action {
+    width: 10%;
   }
 
-  .pos {
-    font-size: 1em !important;
+  .player-status-item .age,
+  .player-status-desc .age,
+  .player-attributes-item .age,
+  .player-attributes-desc .age {
+    width: 8%;
+    font-size: 1.1em;
   }
 
-  .age {
-    width: 8% !important;
-    font-size: 1.3em;
-  }
-
-  .nationality {
-    width: 22% !important;
+  .player-status-item .nationality,
+  .player-status-desc .nationality,
+  .player-attributes-item .nationality,
+  .player-attributes-desc .nationality {
+    width: 22%;
   }
 
   .player-status-desc,
@@ -13858,6 +13887,379 @@ a .btn-discord img {
 }
 
 /*Office components */
+
+.season-teamOTW,
+.season-topScorers,
+.season-topAsists,
+.season-cleanSheets,
+.season-cards,
+.season-PSTournaments {
+  background-color: rgba(255, 253, 253, 0.7);
+  padding: 20px;
+}
+
+.season-teamOTW {
+  grid-area: teamOTW;
+}
+
+.season-topScorers {
+  grid-area: topScorers;
+}
+
+.season-topAsists {
+  grid-area: topAsists;
+}
+
+.season-cleanSheets {
+  grid-area: cleanSheets;
+}
+
+.season-cards {
+  grid-area: cards;
+}
+
+.season-PSTournaments {
+  grid-area: PSTournaments;
+}
+
+.season-content {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas: "teamOTW" "topScorers" "topAsists" "cleanSheets" "cards" "PSTournaments";
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .season-content {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "teamOTW teamOTW topScorers topAsists" "teamOTW teamOTW cleanSheets cards" "teamOTW teamOTW PSTournaments PSTournaments";
+    gap: 1rem;
+  }
+
+  .season-content a,
+  .season-content h2,
+  .season-content h3 {
+    color: #494949;
+  }
+
+  .season-content h2 {
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 1440px) {
+  .season-content h2 {
+    font-size: 1.5em;
+  }
+}
+
+.season-teamOTW h2 {
+  margin-bottom: 15px;
+}
+
+.season-teamOTW .selects {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.season-teamOTW .selects select {
+  padding: 5px 10px;
+}
+
+.season-teamOTW .formation {
+  position: relative;
+  height: calc(100% - 83px);
+  width: 100%;
+}
+
+.season-teamOTW .formation > img {
+  width: 100%;
+  opacity: 0.5;
+}
+
+.season-teamOTW .formation .player {
+  position: absolute;
+}
+
+.season-teamOTW .formation .player .player-info {
+  position: relative;
+  color: black;
+  font-weight: 600;
+}
+
+.season-teamOTW .formation .player .player-info img {
+  width: 30px;
+}
+
+.season-teamOTW .formation .player .player-info .name {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  text-align: center;
+  font-size: 0.7em;
+  line-height: 0.85rem;
+}
+
+.season-teamOTW .formation .player:nth-of-type(1) {
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 7%;
+}
+
+.season-teamOTW .formation .player:nth-of-type(2) {
+  left: 13%;
+  transform: translateX(-13%);
+  bottom: 26%;
+}
+
+.season-teamOTW .formation .player:nth-of-type(3) {
+  left: 36%;
+  transform: translateX(-36%);
+  bottom: 23%;
+}
+
+.season-teamOTW .formation .player:nth-of-type(4) {
+  right: 31.5%;
+  transform: translateX(-30%);
+  bottom: 23%;
+}
+
+.season-teamOTW .formation .player:nth-of-type(5) {
+  right: 13%;
+  transform: translateX(-13%);
+  bottom: 26%;
+}
+
+.season-teamOTW .formation .player:nth-of-type(6) {
+  left: 15%;
+  transform: translateX(-13%);
+  bottom: 49%;
+}
+
+.season-teamOTW .formation .player:nth-of-type(7) {
+  left: 36%;
+  transform: translateX(-36%);
+  bottom: 46%;
+}
+
+.season-teamOTW .formation .player:nth-of-type(8) {
+  right: 31.5%;
+  transform: translateX(-30%);
+  bottom: 46%;
+}
+
+.season-teamOTW .formation .player:nth-of-type(9) {
+  right: 15%;
+  transform: translateX(-13%);
+  bottom: 49%;
+}
+
+.season-teamOTW .formation .player:nth-of-type(10) {
+  left: 36%;
+  transform: translateX(-36%);
+  bottom: 71%;
+}
+
+.season-teamOTW .formation .player:nth-of-type(11) {
+  right: 31.5%;
+  transform: translateX(-30%);
+  bottom: 71%;
+}
+
+@media (min-width: 425px) {
+  .season-teamOTW .formation .player .player-info img {
+    width: 45px;
+  }
+
+  .season-teamOTW .formation .player .player-info .name {
+    font-size: 1em;
+    line-height: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .season-teamOTW .formation .player .player-info img {
+    width: 55px;
+  }
+
+  .season-teamOTW .formation .player .player-info .name {
+    width: 126px;
+    line-height: 1.2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .season-teamOTW .formation .player .player-info img {
+    width: 45px;
+  }
+
+  .season-teamOTW .formation .player .player-info .name {
+    width: 75px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .season-teamOTW .formation {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1660px) {
+  .season-teamOTW .formation {
+    max-height: 815px;
+  }
+
+  .season-teamOTW .formation .player .player-info .name {
+    width: 90px;
+  }
+}
+
+.season-topScorers {
+  overflow: hidden;
+}
+
+.topsAndCards-info {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.topsAndCards-info .legend {
+  width: 10%;
+  text-align: center;
+}
+
+.topsAndCards-info img {
+  width: 25px;
+}
+
+.topsAndCards-container {
+  overflow-y: auto;
+  height: 220px;
+}
+
+.topAndCards-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.topAndCards-item .id {
+  width: 10%;
+  text-align: center;
+}
+
+.topAndCards-item .names {
+  display: flex;
+  align-items: center;
+  width: 80%;
+}
+
+.topAndCards-item .names img {
+  width: 25px;
+  height: 33px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.topAndCards-item .names p {
+  padding-left: 15px;
+}
+
+.topAndCards-item .score {
+  width: 10%;
+  text-align: center;
+}
+
+.season-cards .topsAndCards-info .legend {
+  width: 12%;
+}
+
+.season-cards .topAndCards-item .names {
+  width: 66%;
+}
+
+.season-cards .topAndCards-item .score {
+  width: 12%;
+}
+
+@media (min-width: 1024px) {
+  .topAndCards-item .names {
+    width: 76%;
+  }
+
+  .topAndCards-item .score {
+    width: 14%;
+  }
+
+  .topsAndCards-info .legend {
+    width: 14%;
+  }
+
+  .season-cards .topsAndCards-info .legend {
+    width: 14%;
+  }
+
+  .season-cards .topAndCards-item .names {
+    width: 62%;
+  }
+
+  .season-cards .topAndCards-item .score {
+    width: 14%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .topAndCards-item .names {
+    width: 80%;
+  }
+
+  .topAndCards-item .score {
+    width: 10%;
+  }
+
+  .topsAndCards-info .legend {
+    width: 10%;
+  }
+
+  .season-cards .topsAndCards-info .legend {
+    width: 12%;
+  }
+
+  .season-cards .topAndCards-item .names {
+    width: 66%;
+  }
+
+  .season-cards .topAndCards-item .score {
+    width: 12%;
+  }
+}
+
+.season-PSTournaments p {
+  font-size: 2em;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.PSTournaments-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 80px;
+  max-height: 219px;
+}
+
+.PSTournaments-content button {
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  width: 30%;
+}
+
+/*Season components */
 
 /* @import 'components/app/ */
 

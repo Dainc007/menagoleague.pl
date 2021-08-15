@@ -1,0 +1,200 @@
+.season-teamOTW {
+  h2 {
+    margin-bottom: 15px;
+  }
+
+  .selects {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    select {
+      padding: 5px 10px;
+    }
+  }
+
+  .formation {
+    position: relative;
+    height: calc(100% - 83px);
+    width: 100%;
+
+    > img {
+      width: 100%;
+      opacity: 0.5;
+    }
+
+    .player {
+      position: absolute;
+
+      .player-info {
+        position: relative;
+        color: black;
+        font-weight: 600;
+
+        img {
+          width: 30px;
+        }
+
+        .name {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 50px;
+          text-align: center;
+          font-size: 0.7em;
+          line-height: 0.85rem;
+        }
+      }
+
+      // goalkeeper
+      &:nth-of-type(1) {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 7%;
+      }
+
+      // defenders
+      &:nth-of-type(2) {
+        left: 13%;
+        transform: translateX(-13%);
+        bottom: 26%;
+      }
+
+      &:nth-of-type(3) {
+        left: 36%;
+        transform: translateX(-36%);
+        bottom: 23%;
+      }
+
+      &:nth-of-type(4) {
+        right: 31.5%;
+        transform: translateX(-30%);
+        bottom: 23%;
+      }
+
+      &:nth-of-type(5) {
+        right: 13%;
+        transform: translateX(-13%);
+        bottom: 26%;
+      }
+
+      // helpers
+      &:nth-of-type(6) {
+        left: 15%;
+        transform: translateX(-13%);
+        bottom: 49%;
+      }
+
+      &:nth-of-type(7) {
+        left: 36%;
+        transform: translateX(-36%);
+        bottom: 46%;
+      }
+
+      &:nth-of-type(8) {
+        right: 31.5%;
+        transform: translateX(-30%);
+        bottom: 46%;
+      }
+
+      &:nth-of-type(9) {
+        right: 15%;
+        transform: translateX(-13%);
+        bottom: 49%;
+      }
+
+      // attackers
+      &:nth-of-type(10) {
+        left: 36%;
+        transform: translateX(-36%);
+        bottom: 71%;
+      }
+
+      &:nth-of-type(11) {
+        right: 31.5%;
+        transform: translateX(-30%);
+        bottom: 71%;
+      }
+    }
+  }
+}
+
+@media (min-width: 425px) {
+  .season-teamOTW {
+    .formation {
+      .player {
+        .player-info {
+          img {
+            width: 45px;
+          }
+
+          .name {
+            font-size: 1em;
+            line-height: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .season-teamOTW {
+    .formation {
+      .player {
+        .player-info {
+          img {
+            width: 55px;
+          }
+
+          .name {
+            width: 126px;
+            line-height: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .season-teamOTW {
+    .formation {
+      .player {
+        .player-info {
+          img {
+            width: 45px;
+          }
+
+          .name {
+            width: 75px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .season-teamOTW {
+    .formation {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (min-width: 1660px) {
+  .season-teamOTW {
+    .formation {
+      max-height: 815px;
+      .player {
+        .player-info {
+          .name {
+            width: 90px;
+          }
+        }
+      }
+    }
+  }
+}
