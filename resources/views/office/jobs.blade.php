@@ -9,52 +9,127 @@
         {{-- Jeżeli są oferty --}}
         <div class="offers-details">
             <div class="offers-buttons">
-                <li class="active" data-type="free-vacancies">
+                <li class="active" data-type="free-vacancies" data-number="0">
                     Wolne Wakaty
                 </li>
-                <li data-type="danger-vacancies">
+                <li data-type="danger-vacancies" data-number="1">
                     Zagrożone Wakaty
                 </li>
-                <li data-type="all-offers">
+                <li data-type="all-offers" data-number="2">
                     Wszystkie
                 </li>
             </div>
             <div class="offer-cards">
-                <div class="offers-data" data-type="danger-vacancies">
-                    <div class="data-logo">
-                        <img src="{{ url('/images/shields/' . rand(1, 8) . '.png') }}">
+                <div class="offers-jobs active" data-type="free-vacancies">
+                    <div class="offers-data active">
+                        <div class="data-logo">
+                            <img src="{{ url('/images/shields/' . rand(1, 8) . '.png') }}">
+                        </div>
+                        <div class="data-club">
+                            <p><b>Klub</b>: FC Bayern Monachium</p>
+                        </div>
+                        <div class="data-league">
+                            <p><b>Liga</b>: Bundesliga</p>
+                        </div>
+                        <div class="data-manager">
+                            <p><b>Menedżer</b>: Pep Guardiola</p>
+                        </div>
+                        <button class="btn btn-sm btn-success">Aplikuj</button>
                     </div>
-                    <div class="data-club">
-                        <p><b>Klub</b>: FC Name</p>
+                    <div class="offers-data">
+                        <div class="data-logo">
+                            <img src="{{ url('/images/shields/' . rand(1, 8) . '.png') }}">
+                        </div>
+                        <div class="data-club">
+                            <p><b>Klub</b>: Liverpool</p>
+                        </div>
+                        <div class="data-league">
+                            <p><b>Liga</b>: Premier League</p>
+                        </div>
+                        <div class="data-manager">
+                            <p><b>Menedżer</b>: Mauricio Pochettino</p>
+                        </div>
+                        <button class="btn btn-sm btn-success">Aplikuj</button>
                     </div>
-                    <div class="data-league">
-                        <p><b>Liga</b>: 1. League</p>
+                    <div class="offers-controls">
+                        <button class="material-icons" id="previousOffer" data-number="0">undo</button>
+                        <button class="material-icons" id="nextOffer" data-number="0">redo</button>
                     </div>
-                    <div class="data-manager">
-                        <p><b>Menedżer</b>: Frank Lampard</p>
+                </div>  
+                <div class="offers-jobs" data-type="danger-vacancies">
+                    <div class="offers-data active">
+                        <div class="data-logo">
+                            <img src="{{ url('/images/shields/' . rand(1, 8) . '.png') }}">
+                        </div>
+                        <div class="data-club">
+                            <p><b>Klub</b>: Borussia Dortmund</p>
+                        </div>
+                        <div class="data-league">
+                            <p><b>Liga</b>: Bundesliga</p>
+                        </div>
+                        <div class="data-manager">
+                            <p><b>Menedżer</b>: Thomas Tuchel</p>
+                        </div>
+                        <button class="btn btn-sm btn-success">Aplikuj</button>
                     </div>
-                    <button class="btn btn-sm btn-success">Aplikuj</button>
-                </div>
-                <div class="offers-data" data-type="danger-vacancies">
-                    <div class="data-logo">
-                        <img src="{{ url('/images/shields/' . rand(1, 8) . '.png') }}">
+                    <div class="offers-data">
+                        <div class="data-logo">
+                            <img src="{{ url('/images/shields/' . rand(1, 8) . '.png') }}">
+                        </div>
+                        <div class="data-club">
+                            <p><b>Klub</b>: Legia Warszawa</p>
+                        </div>
+                        <div class="data-league">
+                            <p><b>Liga</b>: Ekstraklasa</p>
+                        </div>
+                        <div class="data-manager">
+                            <p><b>Menedżer</b>: Stanisław Czerczesow</p>
+                        </div>
+                        <button class="btn btn-sm btn-success">Aplikuj</button>
                     </div>
-                    <div class="data-club">
-                        <p><b>Klub</b>: FC Name 1</p>
+                    <div class="offers-controls">
+                        <button class="material-icons" id="previousOffer" data-number="1">undo</button>
+                        <button class="material-icons" id="nextOffer" data-number="1">redo</button>
                     </div>
-                    <div class="data-league">
-                        <p><b>Liga</b>: Premier League</p>
+                </div>  
+                <div class="offers-jobs" data-type="all-offers">
+                    <div class="offers-data active">
+                        <div class="data-logo">
+                            <img src="{{ url('/images/shields/' . rand(1, 8) . '.png') }}">
+                        </div>
+                        <div class="data-club">
+                            <p><b>Klub</b>: AS Monaco</p>
+                        </div>
+                        <div class="data-league">
+                            <p><b>Liga</b>: Francuska</p>
+                        </div>
+                        <div class="data-manager">
+                            <p><b>Menedżer</b>: Frank Lampard</p>
+                        </div>
+                        <button class="btn btn-sm btn-success">Aplikuj</button>
                     </div>
-                    <div class="data-manager">
-                        <p><b>Menedżer</b>: Mauricio Pochettino</p>
+                    <div class="offers-data">
+                        <div class="data-logo">
+                            <img src="{{ url('/images/shields/' . rand(1, 8) . '.png') }}">
+                        </div>
+                        <div class="data-club">
+                            <p><b>Klub</b>: FC Name 1</p>
+                        </div>
+                        <div class="data-league">
+                            <p><b>Liga</b>: Premier League</p>
+                        </div>
+                        <div class="data-manager">
+                            <p><b>Menedżer</b>: Mauricio Pochettino</p>
+                        </div>
+                        <button class="btn btn-sm btn-success">Aplikuj</button>
                     </div>
-                    <button class="btn btn-sm btn-success">Aplikuj</button>
-                </div>
+                    <div class="offers-controls">
+                        <button class="material-icons" id="previousOffer" data-number="2">undo</button>
+                        <button class="material-icons" id="nextOffer" data-number="2">redo</button>
+                    </div>
+                </div>      
             </div>
-            <div class="offers-controls">
-                <span class="material-icons" id="previousOffer">undo</span>
-                <span class="material-icons" id="nextOffer">redo</span>
-            </div>
+            
         </div>
     </div>
     

@@ -85,7 +85,7 @@ gameBurgerMenu.onclick = () => {
   openGameResponsiveMenu();
 };
 
-/* Finances view */ 
+/* Finances view */
 
 const financesBtn = document.querySelectorAll('.details-buttons > li[data-number]'),
   financesData = document.querySelectorAll('.finances-view > div[data-number]');
@@ -108,4 +108,62 @@ financesBtn.forEach((el) => {
   });
 })
 
-/* Jobs offer */ 
+/* Jobs offer */
+const jobsCategories = document.querySelectorAll('.offer-cards > div[data-type]');
+const jobsButtons = document.querySelectorAll('.offers-buttons > li[data-type]');
+
+jobsButtons.forEach((el) => {
+  el.addEventListener('click', () => {
+    jobsCategories.forEach((category, index) => {
+      const button = jobsButtons[index];
+      category.classList.remove('active');
+      button.classList.remove('active');
+    });
+    jobsButtons[el.dataset.number].classList.add('active');
+    jobsCategories[el.dataset.number].classList.add('active');
+  });
+});
+const nextOfferBtn = document.querySelectorAll('.offers-controls > #nextOffer');
+const previousOfferBtn = document.querySelectorAll('.offers-controls > #previousOffer');
+
+function nextOffer(btn) {
+  var allOffers = btn.parentElement.parentElement.parentNode.children[btn.dataset.number].children;
+  var allOffersCount = btn.parentElement.parentElement.parentNode.childElementCount - 1;
+  for (var a = 0; a <= allOffersCount; a++) {
+    if (allOffers[a].classList.contains("active")) {
+      var thisOffer = a;
+      allOffers[a].classList.remove("active");
+
+    }
+  }
+  thisOffer += 1;
+  if (thisOffer == allOffersCount) thisOffer = 0;
+  allOffers[thisOffer].classList.add('active');
+
+}
+
+function previousOffer(btn) {
+  var allOffers = btn.parentElement.parentElement.parentNode.children[btn.dataset.number].children;
+  var allOffersCount = btn.parentElement.parentElement.parentNode.childElementCount - 1;
+  for (var a = 0; a <= allOffersCount; a++) {
+    if (allOffers[a].classList.contains("active")) {
+      var thisOffer = a;
+      allOffers[a].classList.remove("active");
+      if (thisOffer == 0) thisOffer = allOffersCount;
+    }
+  }
+  thisOffer -= 1;
+  allOffers[thisOffer].classList.add('active');
+}
+
+nextOfferBtn.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    nextOffer(btn);
+  });
+})
+
+previousOfferBtn.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    previousOffer(btn);
+  });
+})

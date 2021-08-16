@@ -12,6 +12,7 @@
             display: flex;
             flex-direction: column;
             text-align: center;
+            padding-bottom: 30px;
             .offers-buttons {
                 display: flex;
                 justify-content: center;
@@ -31,9 +32,19 @@
             .offer-cards {
                 position: relative;
                 min-height: 275px;
+                .offers-jobs {
+                    display: none;
+                    opacity: 0;
+                    transition: all .5s;
+                }
+                
                 .offers-data {
-                    position: absolute;
+                    transition: all .5s;
                     width: 100%;
+                    display: none;
+                    position: absolute;
+                    opacity: 0;
+                    left: -20px;
                     .data-logo {
                         img {
                             margin: 20px 0px;
@@ -44,12 +55,25 @@
                         margin: 15px 0px;
                     }
                 }
+                .active {
+                    transition: all .5s;
+                    left: 0;
+                    opacity: 1;
+                    display: block;
+                }
             }
             .offers-controls {
+                position: absolute;
+                bottom: -30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
                 &:hover {
                     cursor: pointer;
                 }
                 .material-icons {
+                    border: none;
                     margin: 0px 25px;
                 }
             }
