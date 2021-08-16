@@ -128,7 +128,7 @@ const previousOfferBtn = document.querySelectorAll('.offers-controls > #previous
 
 function nextOffer(btn) {
   var allOffers = btn.parentElement.parentElement.parentNode.children[btn.dataset.number].children;
-  var allOffersCount = btn.parentElement.parentElement.parentNode.childElementCount - 1;
+  var allOffersCount = btn.parentElement.parentElement.parentNode.children[btn.dataset.number].childElementCount - 1;
   for (var a = 0; a <= allOffersCount; a++) {
     if (allOffers[a].classList.contains("active")) {
       var thisOffer = a;
@@ -144,7 +144,7 @@ function nextOffer(btn) {
 
 function previousOffer(btn) {
   var allOffers = btn.parentElement.parentElement.parentNode.children[btn.dataset.number].children;
-  var allOffersCount = btn.parentElement.parentElement.parentNode.childElementCount - 1;
+  var allOffersCount = btn.parentElement.parentElement.parentNode.children[btn.dataset.number].childElementCount - 1;
   for (var a = 0; a <= allOffersCount; a++) {
     if (allOffers[a].classList.contains("active")) {
       var thisOffer = a;
