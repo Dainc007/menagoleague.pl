@@ -10,7 +10,7 @@ return [
             'Mon'   => 'Pon',
             'Tue'   => 'Wt',
             'Wed'   => 'Śr',
-            'Thi'   => 'Czw',
+            'Thu'   => 'Czw',
             'Fri'   => 'Pt',
         ],
 

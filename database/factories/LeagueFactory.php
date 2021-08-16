@@ -21,6 +21,6 @@ class LeagueFactory extends Factory
      */
     public function definition()
     {
-
+        //
     }
 }

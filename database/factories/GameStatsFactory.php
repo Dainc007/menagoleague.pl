@@ -27,8 +27,8 @@ class GameStatsFactory extends Factory
             'game_id' => $this->faker->numberBetween(1, Fixture::count()),
             'player_id' => $this->faker->numberBetween(1, Player::count()),
             'apperiance' => $this->faker->boolean(),
-            'goals' => $this->faker->numberBetween(0,3),
-            'assists' => $this->faker->numberBetween(0,3),
+            'goals' => $this->faker->numberBetween(0, 3),
+            'assists' => $this->faker->numberBetween(0, 3),
         ];
     }
 }

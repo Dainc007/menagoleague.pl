@@ -19,6 +19,7 @@ class TeamsImport implements ToModel, WithHeadingRow, WithCustomCsvSettings
             return new Team([
                 'name'     => $row['name'],
                 'device_id' => $row['device_id'],
+                'is_active' => rand(0, 1),
             ]);
     }
 
