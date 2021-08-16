@@ -52,8 +52,8 @@
                         <button class="btn btn-sm btn-success">Aplikuj</button>
                     </div>
                     <div class="offers-controls">
-                        <span class="material-icons" id="previousOffer">undo</span>
-                        <span class="material-icons" id="nextOffer">redo</span>
+                        <button class="material-icons" id="previousOffer" data-number="0">undo</button>
+                        <button class="material-icons" id="nextOffer" data-number="0">redo</button>
                     </div>
                 </div>  
                 <div class="offers-jobs" data-type="danger-vacancies">
@@ -88,8 +88,8 @@
                         <button class="btn btn-sm btn-success">Aplikuj</button>
                     </div>
                     <div class="offers-controls">
-                        <span class="material-icons" id="previousOffer">undo</span>
-                        <span class="material-icons" id="nextOffer">redo</span>
+                        <button class="material-icons" id="previousOffer" data-number="1">undo</button>
+                        <button class="material-icons" id="nextOffer" data-number="1">redo</button>
                     </div>
                 </div>  
                 <div class="offers-jobs" data-type="all-offers">
@@ -124,8 +124,8 @@
                         <button class="btn btn-sm btn-success">Aplikuj</button>
                     </div>
                     <div class="offers-controls">
-                        <span class="material-icons" id="previousOffer">undo</span>
-                        <span class="material-icons" id="nextOffer">redo</span>
+                        <button class="material-icons" id="previousOffer" data-number="2">undo</button>
+                        <button class="material-icons" id="nextOffer" data-number="2">redo</button>
                     </div>
                 </div>      
             </div>
