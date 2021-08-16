@@ -53,6 +53,11 @@
                         padding: 4px;
                     }
                     tr {
+                        &:first-of-type {
+                            position: sticky;
+                            top: 33px;
+                            background-color: #f7f7f7;
+                        }
                         &:nth-child(even) {
                             background-color: #ddd;
                         }
