@@ -13796,9 +13796,14 @@ a .btn-discord img {
   min-height: 275px;
 }
 
+.office-jobs .jobs-offers .offers-details .offer-cards .offers-jobs {
+  display: none;
+}
+
 .office-jobs .jobs-offers .offers-details .offer-cards .offers-data {
   position: absolute;
   width: 100%;
+  display: none;
 }
 
 .office-jobs .jobs-offers .offers-details .offer-cards .offers-data .data-logo img {
@@ -13808,6 +13813,19 @@ a .btn-discord img {
 
 .office-jobs .jobs-offers .offers-details .offer-cards .offers-data .btn {
   margin: 15px 0px;
+}
+
+.office-jobs .jobs-offers .offers-details .offer-cards .active {
+  display: block;
+}
+
+.office-jobs .jobs-offers .offers-details .offers-controls {
+  position: absolute;
+  bottom: -30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .office-jobs .jobs-offers .offers-details .offers-controls:hover {

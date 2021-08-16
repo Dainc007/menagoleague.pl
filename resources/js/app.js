@@ -18,13 +18,13 @@ window.Vue = require('vue').default;
 
 const files = require.context('./', true, /\.vue$/i);
 files.keys().map((key) =>
-  Vue.component(
-    key
-      .split('/')
-      .pop()
-      .split('.')[0],
-    files(key).default
-  )
+    Vue.component(
+        key
+        .split('/')
+        .pop()
+        .split('.')[0],
+        files(key).default
+    )
 );
 
 //Vue.component('example-component', require('./components/ExampleComponent.vue').default);
@@ -36,7 +36,7 @@ files.keys().map((key) =>
  */
 
 const app = new Vue({
-  el: '#app',
+    el: '#app',
 });
 
 // Responsive menu
@@ -47,23 +47,23 @@ const closeBurgerMenu = document.querySelector('.close-burger-menu');
 const responsiveMenu = document.querySelector('.responsive-menu');
 
 burgerMenu.onclick = () => {
-  const openResponsiveMenu = () => {
-    if (responsiveMenu.style.display == 'none') {
-      responsiveMenu.style.display = 'flex';
-      document.body.style.overflow = 'hidden';
-    }
-  };
-  openResponsiveMenu();
+    const openResponsiveMenu = () => {
+        if (responsiveMenu.style.display == 'none') {
+            responsiveMenu.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+    };
+    openResponsiveMenu();
 };
 
 closeBurgerMenu.onclick = () => {
-  const closeResponsiveMenu = () => {
-    if (responsiveMenu.style.display == 'flex') {
-      responsiveMenu.style.display = 'none';
-      document.body.style.overflow = 'auto';
-    }
-  };
-  closeResponsiveMenu();
+    const closeResponsiveMenu = () => {
+        if (responsiveMenu.style.display == 'flex') {
+            responsiveMenu.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    };
+    closeResponsiveMenu();
 };
 
 // Game responsive menu
@@ -73,39 +73,90 @@ const gameResponsiveMenu = document.querySelector('.responsive-central-menu');
 const centralBurgerMenuImg = document.querySelector('.central-burger-menu');
 
 gameBurgerMenu.onclick = () => {
-  const openGameResponsiveMenu = () => {
-    if (gameResponsiveMenu.style.display == 'none') {
-      gameResponsiveMenu.style.display = 'flex';
-      centralBurgerMenuImg.src = './images/close-burger-menu.svg';
-    } else {
-      gameResponsiveMenu.style.display = 'none';
-      centralBurgerMenuImg.src = './images/burger-menu.svg';
-    }
-  };
-  openGameResponsiveMenu();
+    const openGameResponsiveMenu = () => {
+        if (gameResponsiveMenu.style.display == 'none') {
+            gameResponsiveMenu.style.display = 'flex';
+            centralBurgerMenuImg.src = './images/close-burger-menu.svg';
+        } else {
+            gameResponsiveMenu.style.display = 'none';
+            centralBurgerMenuImg.src = './images/burger-menu.svg';
+        }
+    };
+    openGameResponsiveMenu();
 };
 
-/* Finances view */ 
+/* Finances view */
 
 const financesBtn = document.querySelectorAll('.details-buttons > li[data-number]'),
-  financesData = document.querySelectorAll('.finances-view > div[data-number]');
+    financesData = document.querySelectorAll('.finances-view > div[data-number]');
 
 function resetFinances() {
-  financesData.forEach((el) => {
-    el.classList.remove('active')
-  });
-  financesBtn.forEach((el) => {
-    el.classList.remove('active');
-  })
+    financesData.forEach((el) => {
+        el.classList.remove('active')
+    });
+    financesBtn.forEach((el) => {
+        el.classList.remove('active');
+    })
 }
 
 financesBtn.forEach((el) => {
-  el.addEventListener('click', () => {
-    resetFinances();
-    key = el.dataset.number;
-    financesData[key].classList.add('active');
-    el.classList.add('active');
-  });
+    el.addEventListener('click', () => {
+        resetFinances();
+        key = el.dataset.number;
+        financesData[key].classList.add('active');
+        el.classList.add('active');
+    });
 })
 
-/* Jobs offer */ 
+/* Jobs offer */
+const jobsCategories = document.querySelectorAll('.offer-cards > div[data-type]');
+const jobsButtons = document.querySelectorAll('.offers-buttons > li[data-type]');
+
+jobsButtons.forEach((el) => {
+    el.addEventListener('click', () => {
+        jobsCategories.forEach((category, index) => {
+            const button = jobsButtons[index];
+            category.classList.remove('active');
+            button.classList.remove('active');
+        });
+        jobsButtons[el.dataset.number].classList.add('active');
+        jobsCategories[el.dataset.number].classList.add('active');
+    });
+});
+const nextOfferBtn = document.querySelectorAll('.offers-controls > #nextOffer');
+const previousOfferBtn = document.querySelectorAll('.offers-controls > #previousOffer');
+
+function nextOffer(btn) {
+    var allOffers = btn.parentElement.parentElement.parentNode.children;
+    var allOffersCount = btn.parentElement.parentElement.parentNode.childElementCount - 1;
+    console.log(allOffers);
+    for (var a = 0; a <= allOffersCount; a++) {
+        if (allOffers[a].classList.contains("active")) {
+            var thisOffer = a;
+            allOffers[a].classList.remove("active");
+            thisOffer += 1;
+        }
+    }
+    allOffers[thisOffer].classList.add('active');
+    if (thisOffer == allOffersCount) {
+        thisOffer = 0;
+    }
+    // console.log(allOffers);
+
+}
+
+function previousOffer(btn) {
+    console.log(btn);
+}
+
+nextOfferBtn.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        nextOffer(btn);
+    });
+})
+
+previousOfferBtn.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        previousOffer(btn);
+    });
+})

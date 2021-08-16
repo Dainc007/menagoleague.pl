@@ -31,9 +31,14 @@
             .offer-cards {
                 position: relative;
                 min-height: 275px;
+                .offers-jobs {
+                    display: none;
+                }
+                
                 .offers-data {
                     position: absolute;
                     width: 100%;
+                    display: none;
                     .data-logo {
                         img {
                             margin: 20px 0px;
@@ -44,8 +49,17 @@
                         margin: 15px 0px;
                     }
                 }
+                .active {
+                    display: block;
+                }
             }
             .offers-controls {
+                position: absolute;
+                bottom: -30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
                 &:hover {
                     cursor: pointer;
                 }
