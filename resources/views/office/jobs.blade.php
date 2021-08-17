@@ -113,6 +113,21 @@
                             <img src="{{ url('/images/shields/' . rand(1, 8) . '.png') }}">
                         </div>
                         <div class="data-club">
+                            <p><b>Klub</b>: AS qwe</p>
+                        </div>
+                        <div class="data-league">
+                            <p><b>Liga</b>: Francuska</p>
+                        </div>
+                        <div class="data-manager">
+                            <p><b>Menedżer</b>: Frank Lampard</p>
+                        </div>
+                        <button class="btn btn-sm btn-success">Aplikuj</button>
+                    </div>
+                    <div class="offers-data">
+                        <div class="data-logo">
+                            <img src="{{ url('/images/shields/' . rand(1, 8) . '.png') }}">
+                        </div>
+                        <div class="data-club">
                             <p><b>Klub</b>: FC Name 1</p>
                         </div>
                         <div class="data-league">

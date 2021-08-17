@@ -62,4 +62,27 @@
     }
 }
 
+.disabled-section {
+    position: relative;
+    pointer-events: none !important;
+    user-select: none!important;
+    color: #494949 !important;
+    &::after {
+        z-index:99;
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        font-size: 22px;
+        opacity: .8;
+        background: url("../images/icons/disabled_icon.svg"), #000;
+        background-repeat: no-repeat;
+        background-size: 86px;
+        background-position: 50%;
+    }
+}
+
 @import 'messages', 'finances', 'fans', 'rivals', 'jobs', 'stadium', 'carrer';
