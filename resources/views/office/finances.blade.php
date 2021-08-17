@@ -32,55 +32,16 @@
                         <th>Budżet po transakcji</th>
                         <th>Data</th>
                     </tr>
-                    <tr class="bg-success text-white">
-                        <td>Lionel Messi</td>
-                        <td>70 000 000 $</td>
-                        <td>120 000 000</td>
-                        <td>50 000 000</td>
-                        <td>01.01.2021 23:59</td>
+
+                    @foreach($user->team->finances as $row)
+                    <tr class="bg-{{$class}} text-white">
+                        <td>{{$row->title}}</td>
+                        <td>{{$row->price}}</td>
+                        <td>{{$row->money_before}}</td>
+                        <td>{{$row->money_after}}</td>
+                        <td>{{$row->updated_at}}</td>
                     </tr>
-                    <tr class="bg-success text-white">
-                        <td>Thierry Henry</td>
-                        <td>50 000 000 $</td>
-                        <td>50 000 000</td>
-                        <td>120 000 000</td>
-                        <td>01.01.2021 23:59</td>
-                    </tr>
-                    <tr class="bg-danger text-white">
-                        <td>Martin Braithwaite</td>
-                        <td>5 000 000 $</td>
-                        <td>120 000 000</td>
-                        <td>115 000 000</td>
-                        <td>01.01.2021 23:59</td>
-                    </tr>
-                    <tr class="bg-danger text-white">
-                        <td>Antoine Griezmann</td>
-                        <td>100 000 000 $</td>
-                        <td>115 000 000</td>
-                        <td>15 000 000</td>
-                        <td>01.01.2021 23:59</td>
-                    </tr>
-                    <tr class="bg-success text-white">
-                        <td>Luis Suarez</td>
-                        <td>30 000 000 $</td>
-                        <td>15 000 000</td>
-                        <td>45 000 000</td>
-                        <td>01.01.2021 23:59</td>
-                    </tr>
-                    <tr class="bg-success text-white">
-                        <td>Ousmane Dembele</td>
-                        <td>60 000 000 $</td>
-                        <td>45 000 000</td>
-                        <td>105 000 000</td>
-                        <td>01.01.2021 23:59</td>
-                    </tr>
-                    <tr class="bg-danger text-white">
-                        <td>Philippe Coutinho</td>
-                        <td>25 000 000 $</td>
-                        <td>105 000 000</td>
-                        <td>80 000 000</td>
-                        <td>01.01.2021 23:59</td>
-                    </tr>
+                    @endforeach
                 </table>
             </div>
             <div id="income" data-number="1">
@@ -92,34 +53,17 @@
                         <th>Budżet po transakcji</th>
                         <td>Data</td>
                     </tr>
+
+                    @foreach($user->team->finances->where('type', 'income') as $row)
                     <tr class="bg-success text-white">
-                        <td>Lionel Messi</td>
-                        <td>70 000 000 $</td>
-                        <td>120 000 000</td>
-                        <td>50 000 000</td>
-                        <td>01.01.2021 23:59</td>
+                        <td>{{$row->title}}</td>
+                        <td>{{$row->price}}</td>
+                        <td>{{$row->money_before}}</td>
+                        <td>{{$row->money_after}}</td>
+                        <td>{{$row->updated_at}}</td>
                     </tr>
-                    <tr class="bg-success text-white">
-                        <td>Thierry Henry</td>
-                        <td>50 000 000 $</td>
-                        <td>50 000 000</td>
-                        <td>120 000 000</td>
-                        <td>01.01.2021 23:59</td>
-                    <tr class="bg-success text-white">
-                        <td>Luis Suarez</td>
-                        <td>30 000 000 $</td>
-                        <td>15 000 000</td>
-                        <td>45 000 000</td>
-                        <td>01.01.2021 23:59</td>
-                    </tr>
-                    <tr class="bg-success text-white">
-                        <td>Ousmane Dembele</td>
-                        <td>60 000 000 $</td>
-                        <td>45 000 000</td>
-                        <td>105 000 000</td>
-                        <td>01.01.2021 23:59</td>
-                    </tr>
-                </table>    
+                    @endforeach
+                </table>
             </div>
             <div id="outgoing" data-number="2">
                 <table>
@@ -130,27 +74,15 @@
                         <th>Budżet po transakcji</th>
                         <th>Data</th>
                     </tr>
+                    @foreach($user->team->finances->where('type', 'outgo') as $row)
                     <tr class="bg-danger text-white">
-                        <td>Martin Braithwaite</td>
-                        <td>5 000 000 $</td>
-                        <td>120 000 000</td>
-                        <td>115 000 000</td>
-                        <td>01.01.2021 23:59</td>
+                        <td>{{$row->title}}</td>
+                        <td>{{$row->price}}</td>
+                        <td>{{$row->money_before}}</td>
+                        <td>{{$row->money_after}}</td>
+                        <td>{{$row->updated_at}}</td>
                     </tr>
-                    <tr class="bg-danger text-white">
-                        <td>Antoine Griezmann</td>
-                        <td>100 000 000 $</td>
-                        <td>115 000 000</td>
-                        <td>15 000 000</td>
-                        <td>01.01.2021 23:59</td>
-                    </tr>
-                    <tr class="bg-danger text-white">
-                        <td>Philippe Coutinho</td>
-                        <td>25 000 000 $</td>
-                        <td>105 000 000</td>
-                        <td>80 000 000</td>
-                        <td>01.01.2021 23:59</td>
-                    </tr>
+                    @endforeach
                 </table>
             </div>
         </div>

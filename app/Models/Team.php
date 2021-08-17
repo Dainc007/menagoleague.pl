@@ -43,6 +43,11 @@ class Team extends Model
         return $this->hasMany(JobApplication::class);
     }
 
+    public function finances()
+    {
+        return $this->hasMany(Finance::class);
+    }
+
     public function fixturesAsHost()
     {
         return $this->hasMany(Fixture::class, 'host_id');
