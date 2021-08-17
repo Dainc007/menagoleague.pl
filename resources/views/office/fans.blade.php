@@ -1,4 +1,4 @@
-<section class="office-fans">
+<section class="office-fans disabled-section">
     <h2 class="office-title">Kibice</h2>
     <div class="fans-details">
         <p>Poparcie kibiców: 70%</p>

@@ -1,4 +1,4 @@
-<section class="office-stadium">
+<section class="office-stadium disabled-section">
     <h2 class="office-title">Stadion</h2>
     <div class="stadium-details">
         <div class="stadium-img">

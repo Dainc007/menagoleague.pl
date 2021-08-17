@@ -1,5 +1,6 @@
 .office-rivals {
     .rivals-statistics {
+        margin-bottom: 10px;
         .rival-info {
             padding: 0px 5px;
             display: flex;
@@ -29,6 +30,20 @@
                     cursor: pointer;
                 }
             }
+        }
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        select {
+            font-size: 12px;
+        }
+        .btn-danger {
+            font-size: 14px;
+
+        }
+        input, button {
+            margin:10px 0px;
         }
     }
 }
