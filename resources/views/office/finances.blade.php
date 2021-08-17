@@ -34,7 +34,7 @@
                     </tr>
 
                     @foreach($user->team->finances as $row)
-                    <tr class="bg-{{$class}} text-white">
+                    <tr class="bg-success text-white">
                         <td>{{$row->title}}</td>
                         <td>{{$row->price}}</td>
                         <td>{{$row->money_before}}</td>

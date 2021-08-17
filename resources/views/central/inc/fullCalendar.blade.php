@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <div class="container">
     <div class="full-calendar">
         <div class="calendar-display">
@@ -43,3 +46,4 @@
         </div>
     </div>
 </div>
+@endsection

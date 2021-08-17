@@ -1,12 +1,12 @@
 <section class="office-jobs">
     <h2 class="office-title">Oferty pracy</h2>
     <div class="jobs-offers">
-        {{-- Jeżeli nie ma ofert --}}
-        {{-- <div class="offers-none">
+        @if($jobOffers == null)
+        <div class="offers-none">
             <p>Obecnie nie ma dostępnych ofert pracy</p>
             <button class="btn btn-sm btn-secondary">Złóz wniosek o stworzenie nowej druzyny</button>
-        </div> --}}
-        {{-- Jeżeli są oferty --}}
+        </div>
+        @else
         <div class="offers-details">
             <div class="offers-buttons">
                 <li class="active" data-type="free-vacancies" data-number="0">
@@ -55,7 +55,7 @@
                         <button class="material-icons" id="previousOffer" data-number="0">undo</button>
                         <button class="material-icons" id="nextOffer" data-number="0">redo</button>
                     </div>
-                </div>  
+                </div>
                 <div class="offers-jobs" data-type="danger-vacancies">
                     <div class="offers-data active">
                         <div class="data-logo">
@@ -91,7 +91,7 @@
                         <button class="material-icons" id="previousOffer" data-number="1">undo</button>
                         <button class="material-icons" id="nextOffer" data-number="1">redo</button>
                     </div>
-                </div>  
+                </div>
                 <div class="offers-jobs" data-type="all-offers">
                     <div class="offers-data active">
                         <div class="data-logo">
@@ -142,37 +142,37 @@
                         <button class="material-icons" id="previousOffer" data-number="2">undo</button>
                         <button class="material-icons" id="nextOffer" data-number="2">redo</button>
                     </div>
-                </div>      
+                </div>
             </div>
-            
+
         </div>
     </div>
-    
+@endif
 </section>
-{{-- @if(($jobOffers != null))
-        <div class="d-flex justify-content-center">
+ @if(($jobOffers != null))
+ <div class="d-flex justify-content-center">
             {{ $jobOffers->links()}}
-        </div>
-    
-    @foreach($jobOffers as $team)    
-        <p><a href="{{route('teams.show',['team' => $team])}}">{{$team->name}}</a>{{$team->device_id}}
-            @if($team->league)
-            {{$team->league->region}}
-            {{$team->league->level}}
-            @endif
-            @if($user->isManager())
-            <form method="POST" action="{{ route('team.application', ['id' => $team->id]) }}">
-            <input type="submit" class="btn btn-success btn-sm" value="Aplikuj">
-            @csrf
-            @method('POST')
-            </form>
-        </p>
-    @else
-    Zdobądź licencję trenerską by aplikować na to stanowisko</p>
+</div>
+
+@foreach($jobOffers as $team)
+<p><a href="{{route('teams.show',['team' => $team])}}">{{$team->name}}</a>{{$team->device_id}}
+    @if($team->league)
+    {{$team->league->region}}
+    {{$team->league->level}}
     @endif
-    @endforeach
-    
-    @else
-    <h6>Obecnie nie ma dostępnych ofert pracy</h6>
-    <button class="btn btn-sm btn-danger">Złóz wniosek o stworzenie nowej druzyny</button>
-    @endif --}}
+    @if($user->isManager())
+<form method="POST" action="{{ route('team.application', ['id' => $team->id]) }}">
+    <input type="submit" class="btn btn-success btn-sm" value="Aplikuj">
+    @csrf
+    @method('POST')
+</form>
+</p>
+@else
+Zdobądź licencję trenerską by aplikować na to stanowisko</p>
+@endif
+@endforeach
+
+@else
+<h6>Obecnie nie ma dostępnych ofert pracy</h6>
+<button class="btn btn-sm btn-danger">Złóz wniosek o stworzenie nowej druzyny</button>
+@endif 

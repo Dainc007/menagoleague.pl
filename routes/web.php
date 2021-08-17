@@ -92,6 +92,9 @@ Route::prefix('/office')->group(function () {
 
     Route::get('/', [App\Http\Controllers\OfficeController::class, 'index'])
         ->name('office');
+
+    Route::get('/messages', [App\Http\Controllers\OfficeController::class, 'messages'])
+        ->name('office.messages');
 });
 
 Route::prefix('/seasons')->group(function () {
