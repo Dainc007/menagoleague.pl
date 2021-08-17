@@ -734,7 +734,7 @@ pre code {
   .container-md,
   .container-sm,
   .container {
-    max-width: 1420px;
+    max-width: 1140px;
   }
 }
 
@@ -8406,6 +8406,7 @@ button.bg-dark:focus {
 }
 
 .position-sticky {
+  position: -webkit-sticky !important;
   position: sticky !important;
 }
 
@@ -8425,8 +8426,9 @@ button.bg-dark:focus {
   z-index: 1030;
 }
 
-@supports (position: sticky) {
+@supports ((position: -webkit-sticky) or (position: sticky)) {
   .sticky-top {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020;
@@ -13694,6 +13696,7 @@ a .btn-discord img {
   display: flex;
   flex-wrap: wrap;
   padding: 5px 0px;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   justify-content: center;
@@ -13735,6 +13738,7 @@ a .btn-discord img {
 }
 
 .office-finances .finances .finances-view div table tr:first-of-type {
+  position: -webkit-sticky;
   position: sticky;
   top: 33px;
   background-color: #f7f7f7;

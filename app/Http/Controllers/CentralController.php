@@ -26,7 +26,6 @@ class CentralController extends Controller
     public function index()
     {
         $carbon = new Carbon();
-
         $calendar = [
             $carbon->yesterday(),
             $carbon->today(),
@@ -49,6 +48,34 @@ class CentralController extends Controller
             'user'      => Auth::user(),
             'fixtures'  => $fixtures ?? '',
             'calendar'  => $calendar,
+        ]);
+    }
+
+    public function calendar()
+    {
+        $period = now()->startOfMonth()->subMonth()->monthsUntil(now());
+
+        $calendar = [];
+        foreach ($period as $date) {
+            $calendar[] = [
+                'month' => $date->shortMonthName,
+                'year' => $date->year,
+            ];
+        }
+
+        if (Auth::user()->team) {
+            $fixtures = Auth::user()->team->getFixtures()->whereBetween(
+                'date',
+                [
+                    now()->subMonth()->firstOfMonth()->format('Y-m-d'),
+                    now()->addMonth()->lastOfMonth()->format('Y-m-d')
+                ]
+            );
+        }
+
+        return view('central.inc.fullCalendar', [
+            'calendar'  => $calendar,
+            'fixtures'  => $fixtures,
         ]);
     }
 }
