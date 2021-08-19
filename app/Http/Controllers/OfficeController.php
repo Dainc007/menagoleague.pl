@@ -27,9 +27,14 @@ class OfficeController extends Controller
                 ->where('is_active', true)
                 ->orderBy('league_id', 'ASC')
                 ->orderBy('name', 'ASC')
-                ->simplePaginate(10),
+                ->simplePaginate(3),
             'user' => Auth::user(),
         ]);
+    }
+
+    public function messages()
+    {
+        return view('office.messages.index', []);
     }
 
     /**

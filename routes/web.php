@@ -23,7 +23,14 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 Auth::routes();
 
 /* Central Route */
-Route::get('/central', [App\Http\Controllers\CentralController::class, 'index'])->name('central');
+Route::prefix('/central')->group(function () {
+
+    Route::get('/central', [App\Http\Controllers\CentralController::class, 'index'])
+        ->name('central');
+
+    Route::get('/calendar', [App\Http\Controllers\CentralController::class, 'calendar'])
+        ->name('central.fullCalendar');
+});
 
 /* User */
 Route::prefix('/users')->group(function () {
@@ -85,6 +92,9 @@ Route::prefix('/office')->group(function () {
 
     Route::get('/', [App\Http\Controllers\OfficeController::class, 'index'])
         ->name('office');
+
+    Route::get('/messages', [App\Http\Controllers\OfficeController::class, 'messages'])
+        ->name('office.messages');
 });
 
 Route::prefix('/seasons')->group(function () {
