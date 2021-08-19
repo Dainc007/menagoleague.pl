@@ -1,0 +1,235 @@
+// Tops and cards styles is on components/season/topsAndCards
+// Set gris is on components/season/season-content
+
+.competition-content {
+  .topsAndCards-container {
+    height: 298px;
+  }
+}
+
+.leagueInfo {
+  background-color: $sectionColor;
+  padding: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .legend {
+    display: flex;
+    color: $text-dark;
+    font-weight: 700;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+  }
+
+  .item {
+    display: flex;
+    height: 45px;
+    align-items: center;
+    border-bottom: 1px solid #d8d8d8;
+  }
+
+  .table {
+    display: flex;
+    overflow: hidden;
+    height: 492px;
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 1.1em;
+    &:hover::-webkit-scrollbar {
+      height: 10px;
+    }
+
+    .team-info {
+      width: 50%;
+
+      .legend {
+        .ID {
+          width: 20%;
+        }
+
+        .name {
+          width: 80%;
+          padding-left: 10px;
+        }
+      }
+
+      .item {
+        &:nth-of-type(2),
+        &:nth-of-type(3),
+        &:nth-of-type(4),
+        &:nth-of-type(5) {
+          .ID {
+            background-color: #0092c1;
+            color: white;
+          }
+        }
+
+        &:nth-of-type(6) {
+          .ID {
+            background-color: #32b726;
+            color: white;
+          }
+        }
+
+        .ID,
+        .name {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .ID {
+          width: 20%;
+          background-color: #efefef;
+        }
+
+        .name {
+          width: 80%;
+          text-align: left;
+          padding-left: 10px;
+          justify-content: flex-start;
+        }
+      }
+    }
+
+    .team-stats {
+      width: 50%;
+      overflow-x: auto;
+      box-shadow: -5px 0 5px -5px #a5a5a5;
+
+      .legend {
+        width: max-content;
+        text-align: center;
+
+        .M,
+        .W,
+        .R,
+        .P,
+        .pkt {
+          width: 40px;
+        }
+
+        .B {
+          width: 70px;
+        }
+
+        .condition {
+          padding-left: 25px;
+          text-align: left;
+        }
+      }
+
+      .item {
+        width: max-content;
+
+        .stats {
+          display: flex;
+          text-align: center;
+
+          .M,
+          .W,
+          .R,
+          .P,
+          .pkt {
+            width: 40px;
+          }
+
+          .B {
+            width: 70px;
+          }
+
+          .condition {
+            display: flex;
+            margin-left: 15px;
+
+            > div {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 30px;
+              width: 30px;
+              margin-right: 10px;
+              border-radius: 5px;
+              color: white;
+
+              &:last-of-type {
+                margin-right: 0;
+              }
+
+              &.next-match {
+                background-color: #b9b9b9;
+              }
+
+              &.win {
+                background-color: #00b439;
+              }
+
+              &.lose {
+                background-color: #fd1d00;
+              }
+
+              &.draw {
+                background-color: #ffb300;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .leagueInfo {
+    .table {
+      .team-info {
+        width: 29%;
+      }
+
+      .team-stats {
+        width: 71%;
+      }
+    }
+  }
+}
+
+@media (min-width: 790px) {
+  .leagueInfo {
+    .table {
+      .team-stats {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .leagueInfo {
+    .table {
+      .team-info {
+        width: 52%;
+
+        .legend,
+        .item {
+          .ID {
+            width: 9%;
+          }
+
+          .name {
+            width: 91%;
+          }
+        }
+      }
+
+      .team-stats {
+        width: 48%;
+      }
+    }
+  }
+}

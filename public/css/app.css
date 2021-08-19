@@ -11665,6 +11665,7 @@ footer a .social-item img {
 .central-menu a.active:last-of-type {
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
+  margin-right: 0;
 }
 
 .central-menu-item-alert {
@@ -12457,6 +12458,243 @@ a .btn-discord img {
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
 }
+
+.leagueInfo {
+  grid-area: leagueInfo;
+}
+
+.competition-content {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas: "leagueInfo" "topScorers" "topAsists" "cleanSheets" "cards";
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .competition-content {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "leagueInfo leagueInfo leagueInfo ." "topScorers topAsists cleanSheets cards";
+    gap: 1rem;
+  }
+}
+
+.competition-content .topsAndCards-container {
+  height: 298px;
+}
+
+.leagueInfo {
+  background-color: rgba(255, 253, 253, 0.7);
+  padding: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.leagueInfo h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.leagueInfo .legend {
+  display: flex;
+  color: #144f06;
+  font-weight: 700;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+
+.leagueInfo .item {
+  display: flex;
+  height: 45px;
+  align-items: center;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.leagueInfo .table {
+  display: flex;
+  overflow: hidden;
+  height: 492px;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+.leagueInfo .table:hover::-webkit-scrollbar {
+  height: 10px;
+}
+
+.leagueInfo .table .team-info {
+  width: 50%;
+}
+
+.leagueInfo .table .team-info .legend .ID {
+  width: 20%;
+}
+
+.leagueInfo .table .team-info .legend .name {
+  width: 80%;
+  padding-left: 10px;
+}
+
+.leagueInfo .table .team-info .item:nth-of-type(2) .ID,
+.leagueInfo .table .team-info .item:nth-of-type(3) .ID,
+.leagueInfo .table .team-info .item:nth-of-type(4) .ID,
+.leagueInfo .table .team-info .item:nth-of-type(5) .ID {
+  background-color: #0092c1;
+  color: white;
+}
+
+.leagueInfo .table .team-info .item:nth-of-type(6) .ID {
+  background-color: #32b726;
+  color: white;
+}
+
+.leagueInfo .table .team-info .item .ID,
+.leagueInfo .table .team-info .item .name {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leagueInfo .table .team-info .item .ID {
+  width: 20%;
+  background-color: #efefef;
+}
+
+.leagueInfo .table .team-info .item .name {
+  width: 80%;
+  text-align: left;
+  padding-left: 10px;
+  justify-content: flex-start;
+}
+
+.leagueInfo .table .team-stats {
+  width: 50%;
+  overflow-x: auto;
+  box-shadow: -5px 0 5px -5px #a5a5a5;
+}
+
+.leagueInfo .table .team-stats .legend {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-align: center;
+}
+
+.leagueInfo .table .team-stats .legend .M,
+.leagueInfo .table .team-stats .legend .W,
+.leagueInfo .table .team-stats .legend .R,
+.leagueInfo .table .team-stats .legend .P,
+.leagueInfo .table .team-stats .legend .pkt {
+  width: 40px;
+}
+
+.leagueInfo .table .team-stats .legend .B {
+  width: 70px;
+}
+
+.leagueInfo .table .team-stats .legend .condition {
+  padding-left: 25px;
+  text-align: left;
+}
+
+.leagueInfo .table .team-stats .item {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.leagueInfo .table .team-stats .item .stats {
+  display: flex;
+  text-align: center;
+}
+
+.leagueInfo .table .team-stats .item .stats .M,
+.leagueInfo .table .team-stats .item .stats .W,
+.leagueInfo .table .team-stats .item .stats .R,
+.leagueInfo .table .team-stats .item .stats .P,
+.leagueInfo .table .team-stats .item .stats .pkt {
+  width: 40px;
+}
+
+.leagueInfo .table .team-stats .item .stats .B {
+  width: 70px;
+}
+
+.leagueInfo .table .team-stats .item .stats .condition {
+  display: flex;
+  margin-left: 15px;
+}
+
+.leagueInfo .table .team-stats .item .stats .condition > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+.leagueInfo .table .team-stats .item .stats .condition > div:last-of-type {
+  margin-right: 0;
+}
+
+.leagueInfo .table .team-stats .item .stats .condition > div.next-match {
+  background-color: #b9b9b9;
+}
+
+.leagueInfo .table .team-stats .item .stats .condition > div.win {
+  background-color: #00b439;
+}
+
+.leagueInfo .table .team-stats .item .stats .condition > div.lose {
+  background-color: #fd1d00;
+}
+
+.leagueInfo .table .team-stats .item .stats .condition > div.draw {
+  background-color: #ffb300;
+}
+
+@media (min-width: 768px) {
+  .leagueInfo .table .team-info {
+    width: 29%;
+  }
+
+  .leagueInfo .table .team-stats {
+    width: 71%;
+  }
+}
+
+@media (min-width: 790px) {
+  .leagueInfo .table .team-stats {
+    box-shadow: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  .leagueInfo .table .team-info {
+    width: 52%;
+  }
+
+  .leagueInfo .table .team-info .legend .ID,
+  .leagueInfo .table .team-info .item .ID {
+    width: 9%;
+  }
+
+  .leagueInfo .table .team-info .legend .name,
+  .leagueInfo .table .team-info .item .name {
+    width: 91%;
+  }
+
+  .leagueInfo .table .team-stats {
+    width: 48%;
+  }
+}
+
+/* Competition components*/
 
 /* Game components */
 
@@ -13960,6 +14198,7 @@ a .btn-discord img {
 .season-PSTournaments {
   background-color: rgba(255, 253, 253, 0.7);
   padding: 20px;
+  border-radius: 5px;
 }
 
 .season-teamOTW {
@@ -14003,17 +14242,22 @@ a .btn-discord img {
 
   .season-content a,
   .season-content h2,
-  .season-content h3 {
+  .season-content h3,
+  .competition-content a,
+  .competition-content h2,
+  .competition-content h3 {
     color: #494949;
   }
 
-  .season-content h2 {
+  .season-content h2,
+  .competition-content h2 {
     font-size: 1.2em;
   }
 }
 
 @media (min-width: 1440px) {
-  .season-content h2 {
+  .season-content h2,
+  .competition-content h2 {
     font-size: 1.5em;
   }
 }
@@ -14216,20 +14460,20 @@ a .btn-discord img {
   text-align: center;
 }
 
-.topAndCards-item .names {
+.topAndCards-item .name {
   display: flex;
   align-items: center;
   width: 80%;
 }
 
-.topAndCards-item .names img {
+.topAndCards-item .name img {
   width: 25px;
   height: 33px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.topAndCards-item .names p {
+.topAndCards-item .name p {
   padding-left: 15px;
 }
 
@@ -14242,7 +14486,7 @@ a .btn-discord img {
   width: 12%;
 }
 
-.season-cards .topAndCards-item .names {
+.season-cards .topAndCards-item .name {
   width: 66%;
 }
 
@@ -14251,7 +14495,7 @@ a .btn-discord img {
 }
 
 @media (min-width: 1024px) {
-  .topAndCards-item .names {
+  .topAndCards-item .name {
     width: 76%;
   }
 
@@ -14267,7 +14511,7 @@ a .btn-discord img {
     width: 14%;
   }
 
-  .season-cards .topAndCards-item .names {
+  .season-cards .topAndCards-item .name {
     width: 62%;
   }
 
@@ -14277,7 +14521,7 @@ a .btn-discord img {
 }
 
 @media (min-width: 1440px) {
-  .topAndCards-item .names {
+  .topAndCards-item .name {
     width: 80%;
   }
 
@@ -14293,7 +14537,7 @@ a .btn-discord img {
     width: 12%;
   }
 
-  .season-cards .topAndCards-item .names {
+  .season-cards .topAndCards-item .name {
     width: 66%;
   }
 

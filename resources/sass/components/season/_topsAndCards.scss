@@ -31,7 +31,7 @@
     text-align: center;
   }
 
-  .names {
+  .name {
     display: flex;
     align-items: center;
     width: 80%;
@@ -61,7 +61,7 @@
   }
 
   .topAndCards-item {
-    .names {
+    .name {
       width: 66%;
     }
 
@@ -73,7 +73,7 @@
 
 @media (min-width: 1024px) {
   .topAndCards-item {
-    .names {
+    .name {
       width: 76%;
     }
 
@@ -96,7 +96,7 @@
     }
 
     .topAndCards-item {
-      .names {
+      .name {
         width: 62%;
       }
 
@@ -109,7 +109,7 @@
 
 @media (min-width: 1440px) {
   .topAndCards-item {
-    .names {
+    .name {
       width: 80%;
     }
 
@@ -132,7 +132,7 @@
     }
 
     .topAndCards-item {
-      .names {
+      .name {
         width: 66%;
       }
 

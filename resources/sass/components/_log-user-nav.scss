@@ -24,6 +24,7 @@
       &:last-of-type {
         border-top-right-radius: 3px;
         border-bottom-right-radius: 3px;
+        margin-right: 0;
       }
     }
   }
@@ -33,13 +34,13 @@
   display: flex;
   position: relative;
   .btn-notification {
-    margin-right: 5px!important;
+    margin-right: 5px !important;
   }
   .notification {
     display: none;
   }
   .unread {
-    display: block!important;
+    display: block !important;
   }
 }
 

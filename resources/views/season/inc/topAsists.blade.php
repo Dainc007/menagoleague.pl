@@ -11,7 +11,7 @@
         @for ($i = 1; $i <= 10; $i++)
             <div class="topAndCards-item">
                 <p class="id">{{ $i }}</p>
-                <div class="names">
+                <div class="name">
                     <div style="display: none">Icons made by <a href="" title="photo3idea_studio">photo3idea_studio</a>
                         from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
                     <img src="/images/shields/{{ rand(1, 8) }}.png" alt="">

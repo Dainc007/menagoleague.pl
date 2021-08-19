@@ -14,7 +14,7 @@
         @for ($i = 1; $i <= 10; $i++)
             <div class="topAndCards-item">
                 <p class="id">{{ $i }}</p>
-                <div class="names">
+                <div class="name">
                     <img src="/images/shields/{{ rand(1, 8) }}.png" alt="">
                     <p>Nazwa piłkarza</p>
                 </div>
