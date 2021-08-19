@@ -1,9 +1,5 @@
 <section class="office-rivals">
-    {{ session()->get('message') ?? '' }}
-
-    <h2 class="office-title">
-    {{__('office.rivals.title')}}
-    </h2>
+    <h2 class="office-title">{{__('office.rivals.title')}}</h2>
     <div class="rivals-statistics">
         @for ($i=0;$i<5;$i++)
             <div class="rival-info">
@@ -26,6 +22,7 @@
             </div>
         @endfor
     </div>
+
     <form action="{{route('rival.invite') }}" method="POST">
         <select name="rivalId" class="custom-select">
             @foreach($user->getUsersByDeviceId() as $username)
@@ -51,5 +48,4 @@
     {{$userRvial->name}}
     @endforeach
 
-    
 </section>

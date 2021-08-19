@@ -33,8 +33,12 @@
                         <th>{{__('office.finances.col.date')}}</th>
                     </tr>
 
-                    @foreach($user->team->finances as $row)
-                    <tr class="bg-success text-white">
+                    @foreach($user->team->finances->sortByDesc('id') as $row)
+                    <tr class="text-white 
+                    @if($row->type == 'income') bg-success 
+                    @else bg-danger 
+                    @endif
+                    ">
                         <td>{{$row->title}}</td>
                         <td>{{$row->price}}</td>
                         <td>{{$row->money_before}}</td>
@@ -54,7 +58,7 @@
                         <th>{{__('office.finances.col.date')}}</th>
                     </tr>
 
-                    @foreach($user->team->finances->where('type', 'income') as $row)
+                    @foreach($user->team->finances->where('type', 'income')->sortByDesc('id') as $row)
                     <tr class="bg-success text-white">
                         <td>{{$row->title}}</td>
                         <td>{{$row->price}}</td>
@@ -74,7 +78,7 @@
                         <th>{{__('office.finances.col.after')}}</th>
                         <th>{{__('office.finances.col.date')}}</th>
                     </tr>
-                    @foreach($user->team->finances->where('type', 'outgo') as $row)
+                    @foreach($user->team->finances->where('type', 'outgo')->sortByDesc('id') as $row)
                     <tr class="bg-danger text-white">
                         <td>{{$row->title}}</td>
                         <td>{{$row->price}}</td>

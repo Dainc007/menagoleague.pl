@@ -48,6 +48,5 @@ return [
         'invitations'   => 'OTRZYMANE ZAPROSZENIA',
         'accept'    => 'AKCEPTUJ',
         'reject'    => 'ODRZUĆ',
-
-    ]
+    ],
 ];
