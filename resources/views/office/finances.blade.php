@@ -1,40 +1,44 @@
 <section class="office-finances">
-    <h2 class="office-title">Finanse</h2>
+    <h2 class="office-title">{{__('office.finances.title')}}</h2>
     <div class="finances">
         <div class="finances-details">
             <div class="details-info">
                 <p>
-                    Budżet klubu: 100 mln.
+                {{__('office.finances.budget')}} 100 000 000
                 </p>
                 <p>
-                    Tyg. koszta utrzymania klubu: 120 tys.
+                {{__('office.finances.costs')}} 120 000
                 </p>
             </div>
         </div>
         <div class="finances-view">
             <div class="details-buttons">
                 <li class="active" data-number="0">
-                    Wszystko
+                {{__('office.finances.tabs.all')}}
                 </li>
                 <li data-number="1">
-                    Przychody
+                {{__('office.finances.tabs.income')}}
                 </li>
                 <li data-number="2">
-                    Wydatki
+                {{__('office.finances.tabs.outgo')}}
                 </li>
             </div>
             <div id="all" class="active" data-number="0">
                 <table>
                     <tr>
-                        <th>Tytuł transakcji</th>
-                        <th>Kwota</th>
-                        <th>Budżet przed transakcją</th>
-                        <th>Budżet po transakcji</th>
-                        <th>Data</th>
+                        <th>{{__('office.finances.col.title')}}</th>
+                        <th>{{__('office.finances.col.price')}}</th>
+                        <th>{{__('office.finances.col.before')}}</th>
+                        <th>{{__('office.finances.col.after')}}</th>
+                        <th>{{__('office.finances.col.date')}}</th>
                     </tr>
 
-                    @foreach($user->team->finances as $row)
-                    <tr class="bg-success text-white">
+                    @foreach($user->team->finances->sortByDesc('id') as $row)
+                    <tr class="text-white 
+                    @if($row->type == 'income') bg-success 
+                    @else bg-danger 
+                    @endif
+                    ">
                         <td>{{$row->title}}</td>
                         <td>{{$row->price}}</td>
                         <td>{{$row->money_before}}</td>
@@ -46,15 +50,15 @@
             </div>
             <div id="income" data-number="1">
                 <table>
-                    <tr>
-                        <th>Tytuł transakcji</th>
-                        <th>Kwota</th>
-                        <th>Budżet przed transakcją</th>
-                        <th>Budżet po transakcji</th>
-                        <td>Data</td>
+                <tr>
+                        <th>{{__('office.finances.col.title')}}</th>
+                        <th>{{__('office.finances.col.price')}}</th>
+                        <th>{{__('office.finances.col.before')}}</th>
+                        <th>{{__('office.finances.col.after')}}</th>
+                        <th>{{__('office.finances.col.date')}}</th>
                     </tr>
 
-                    @foreach($user->team->finances->where('type', 'income') as $row)
+                    @foreach($user->team->finances->where('type', 'income')->sortByDesc('id') as $row)
                     <tr class="bg-success text-white">
                         <td>{{$row->title}}</td>
                         <td>{{$row->price}}</td>
@@ -67,14 +71,14 @@
             </div>
             <div id="outgoing" data-number="2">
                 <table>
-                    <tr>
-                        <th>Tytuł transakcji</th>
-                        <th>Kwota</th>
-                        <th>Budżet przed transakcją</th>
-                        <th>Budżet po transakcji</th>
-                        <th>Data</th>
+                <tr>
+                        <th>{{__('office.finances.col.title')}}</th>
+                        <th>{{__('office.finances.col.price')}}</th>
+                        <th>{{__('office.finances.col.before')}}</th>
+                        <th>{{__('office.finances.col.after')}}</th>
+                        <th>{{__('office.finances.col.date')}}</th>
                     </tr>
-                    @foreach($user->team->finances->where('type', 'outgo') as $row)
+                    @foreach($user->team->finances->where('type', 'outgo')->sortByDesc('id') as $row)
                     <tr class="bg-danger text-white">
                         <td>{{$row->title}}</td>
                         <td>{{$row->price}}</td>
