@@ -213,7 +213,7 @@
   .leagueInfo {
     .table {
       .team-info {
-        width: 52%;
+        width: 44%;
 
         .legend,
         .item {
@@ -225,6 +225,20 @@
             width: 91%;
           }
         }
+      }
+
+      .team-stats {
+        width: 56%;
+      }
+    }
+  }
+}
+
+@media (min-width: 1660px) {
+  .leagueInfo {
+    .table {
+      .team-info {
+        width: 52%;
       }
 
       .team-stats {

@@ -734,7 +734,7 @@ pre code {
   .container-md,
   .container-sm,
   .container {
-    max-width: 1140px;
+    max-width: 1420px;
   }
 }
 
@@ -8406,7 +8406,6 @@ button.bg-dark:focus {
 }
 
 .position-sticky {
-  position: -webkit-sticky !important;
   position: sticky !important;
 }
 
@@ -8426,9 +8425,8 @@ button.bg-dark:focus {
   z-index: 1030;
 }
 
-@supports ((position: -webkit-sticky) or (position: sticky)) {
+@supports (position: sticky) {
   .sticky-top {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020;
@@ -12678,7 +12676,7 @@ a .btn-discord img {
 
 @media (min-width: 1440px) {
   .leagueInfo .table .team-info {
-    width: 52%;
+    width: 44%;
   }
 
   .leagueInfo .table .team-info .legend .ID,
@@ -12689,6 +12687,16 @@ a .btn-discord img {
   .leagueInfo .table .team-info .legend .name,
   .leagueInfo .table .team-info .item .name {
     width: 91%;
+  }
+
+  .leagueInfo .table .team-stats {
+    width: 56%;
+  }
+}
+
+@media (min-width: 1660px) {
+  .leagueInfo .table .team-info {
+    width: 52%;
   }
 
   .leagueInfo .table .team-stats {
@@ -13934,7 +13942,6 @@ a .btn-discord img {
   display: flex;
   flex-wrap: wrap;
   padding: 5px 0px;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   justify-content: center;
@@ -13976,7 +13983,6 @@ a .btn-discord img {
 }
 
 .office-finances .finances .finances-view div table tr:first-of-type {
-  position: -webkit-sticky;
   position: sticky;
   top: 33px;
   background-color: #f7f7f7;
