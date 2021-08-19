@@ -1,22 +1,21 @@
 <section class="office-jobs">
-    <h2 class="office-title">Oferty pracy</h2>
+    <h2 class="office-title">{{__('office.job.title')}}</h2>
     <div class="jobs-offers">
         @if($jobOffers == null)
         <div class="offers-none">
-            <p>Obecnie nie ma dostępnych ofert pracy</p>
-            <button class="btn btn-sm btn-secondary">Złóz wniosek o stworzenie nowej druzyny</button>
+            <p>{{__('office.job.nojob')}}</p>
+            <button class="btn btn-sm btn-secondary">{{__('office.job.createTeam')}}</button>
         </div>
         @else
         <div class="offers-details">
             <div class="offers-buttons">
                 <li class="active" data-type="free-vacancies" data-number="0">
-                    Wolne Wakaty
+                {{__('office.job.tabs.open')}}
                 </li>
                 <li data-type="danger-vacancies" data-number="1">
-                    Zagrożone Wakaty
-                </li>
+                {{__('office.job.tabs.thread')}}                </li>
                 <li data-type="all-offers" data-number="2">
-                    Wszystkie
+                {{__('office.job.tabs.all')}}
                 </li>
             </div>
             <div class="offer-cards">
@@ -26,15 +25,15 @@
                             <img src="{{ url('/images/shields/' . rand(1, 8) . '.png') }}">
                         </div>
                         <div class="data-club">
-                            <p><b>Klub</b>: FC Bayern Monachium</p>
+                            <p><b>{{__('office.job.club')}}</b>: FC Bayern Monachium</p>
                         </div>
                         <div class="data-league">
-                            <p><b>Liga</b>: Bundesliga</p>
+                            <p><b>{{__('office.job.league')}}</b>: Bundesliga</p>
                         </div>
                         <div class="data-manager">
-                            <p><b>Menedżer</b>: Pep Guardiola</p>
+                            <p><b>{{__('office.job.manager')}}</b>: Pep Guardiola</p>
                         </div>
-                        <button class="btn btn-sm btn-success">Aplikuj</button>
+                        <button class="btn btn-sm btn-success">{{__('office.job.apply')}}</button>
                     </div>
                     <div class="offers-data">
                         <div class="data-logo">
