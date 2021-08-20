@@ -4,38 +4,35 @@
 <div class="container">
     <div class="full-calendar">
         <div class="calendar-display">
-            <h2>Calendar</h2>
-            <h3>Month, 08/08/2021</h3>
+            <h2>{{ __('central.calendar.title') }}</h2>
+            <h3>{{ __('central.calendar.month.' . today()->format('M')) }}</h3>
             <div class="calendar">
                 <div class="month-container">
-                    <div class="month-item">Pon</div>
-                    <div class="month-item">Wt</div>
-                    <div class="month-item">Sr</div>
-                    <div class="month-item">Czw</div>
-                    <div class="month-item">Pt</div>
-                    <div class="month-item">Sb</div>
-                    <div class="month-item">Ndz</div>
+                    @foreach($week as $day)
+                    <div class="month-item">{{ __('central.calendar.day.' . $day) }}</div>
+                    @endforeach
                 </div>
 
                 <div class="day-container">
-                    @for ($h = 25; $h <= 30; $h++)
-                        <div class="day-item day-item-disabled">
-                            <p>{{ $h }}</p>
-                        </div>
-                    @endfor
 
-                    @for ($i = 1; $i <= 31; $i++)
-                        <div class="day-item">
-                            <p>{{ $i }}</p>
-                            <img src="/images/shields/5.png" alt="" />
-                        </div>
-                    @endfor
+                    @foreach($calendar as $day)
+                    <div class="day-item @if(today()->month !== $day->month)
+                        day-item-disabled
+                        @endif
+                        @if($day == today())
+                        current-day
+                        @endif">
+                        <p>{{$day->format('d')}}</p>
+                        @if($fixtures !== null)
+                        @foreach ($fixtures as $game)
+                        @if ($game->date == $day->format('Y-m-d'))
+                        <img src="{{ url('/images/shields/' . rand(1, 8) . '.png') }}">
+                        @endif
+                        @endforeach
+                        @endif
+                    </div>
+                    @endforeach
 
-                    @for ($j = 1; $j <= 5; $j++)
-                        <div class="day-item day-item-disabled">
-                            <p>{{ $j }}</p>
-                        </div>
-                    @endfor
                 </div>
             </div>
         </div>

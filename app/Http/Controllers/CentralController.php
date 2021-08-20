@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Carbon\Carbon;
 use Carbon\CarbonImmutable;
+use Carbon\CarbonPeriod;
 use Illuminate\Support\Facades\Auth;
 
 class CentralController extends Controller
@@ -53,22 +54,22 @@ class CentralController extends Controller
 
     public function calendar()
     {
-        $period = now()->startOfMonth()->subMonth()->monthsUntil(now());
 
-        $calendar = [];
-        foreach ($period as $date) {
-            $calendar[] = [
-                'month' => $date->shortMonthName,
-                'year' => $date->year,
-            ];
+        $first = now()->firstOfMonth()->subWeek();
+        $last  = now()->lastOfMonth()->addWeek();
+
+        $calendar = (CarbonPeriod::create($first, $last))->toArray();
+
+        if (count($calendar) > 42) {
+            array_splice($calendar, 42);
         }
 
         if (Auth::user()->team) {
             $fixtures = Auth::user()->team->getFixtures()->whereBetween(
                 'date',
                 [
-                    now()->subMonth()->firstOfMonth()->format('Y-m-d'),
-                    now()->addMonth()->lastOfMonth()->format('Y-m-d')
+                    $first->format('Y-m-d'),
+                    $last->format('Y-m-d'),
                 ]
             );
         }
@@ -76,6 +77,7 @@ class CentralController extends Controller
         return view('central.inc.fullCalendar', [
             'calendar'  => $calendar,
             'fixtures'  => $fixtures,
+            'week'      => ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
         ]);
     }
 }
