@@ -46,6 +46,7 @@
                 table {
                     font-size: 12px;
                     border-collapse: collapse;
+                    overflow-x: auto;
                     width: 100%;
                     td, th {
                         border: 1px solid #ddd;

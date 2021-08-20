@@ -39,7 +39,7 @@
                     @else bg-danger 
                     @endif
                     ">
-                        <td>{{$row->title}}</td>
+                        <td style="max-width:100px">{{$row->title}}</td>
                         <td>{{$row->price}}</td>
                         <td>{{$row->money_before}}</td>
                         <td>{{$row->money_after}}</td>
