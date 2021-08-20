@@ -1,11 +1,16 @@
 .office-jobs {
     .jobs-offers {
         .offers-none {
+            text-align: center;
             p {
-                text-align: center;
+                font-size: 13px;
             }
             button {
                 margin-top: 10px;
+                font-size: 14px;
+                color: #fff;
+                box-shadow: inset 4px 4px 20px #dcdcdc, inset -4px -4px 20px #dedede;
+
             }
         }
         .offers-details {
@@ -53,6 +58,8 @@
                     }
                     .btn {
                         margin: 15px 0px;
+                        box-shadow: inset 4px 4px 20px #dcdcdc, inset -4px -4px 20px #dedede;
+                        color: #fff;
                     }
                 }
                 .active {

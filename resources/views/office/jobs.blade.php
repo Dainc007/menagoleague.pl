@@ -6,7 +6,7 @@
         @if($jobOffers == null)
         <div class="offers-none">
             <p>{{__('office.job.noJob')}}</p>
-            <button class="btn btn-sm btn-secondary">{{__('office.job.createTeam')}}</button>
+            <button class="btn btn-sm btn-success">{{__('office.job.createTeam')}}</button>
         </div>
         @else
         <div class="offers-details">

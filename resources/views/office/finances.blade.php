@@ -39,7 +39,12 @@
                     @else bg-danger 
                     @endif
                     ">
-                        <td>{{$row->title}}</td>
+                        <td style="max-width:100px">
+                            {{Str::limit($row->title, 15, '...')}}
+                            <span>
+                                {{$row->title}}
+                            </span>
+                        </td>
                         <td>{{$row->price}}</td>
                         <td>{{$row->money_before}}</td>
                         <td>{{$row->money_after}}</td>
@@ -60,7 +65,12 @@
 
                     @foreach($user->team->finances->where('type', 'income')->sortByDesc('id') as $row)
                     <tr class="bg-success text-white">
-                        <td>{{$row->title}}</td>
+                        <td style="max-width:100px">
+                            {{Str::limit($row->title, 15, '...')}}
+                            <span>
+                                {{$row->title}}
+                            </span>
+                        </td>
                         <td>{{$row->price}}</td>
                         <td>{{$row->money_before}}</td>
                         <td>{{$row->money_after}}</td>
@@ -80,7 +90,12 @@
                     </tr>
                     @foreach($user->team->finances->where('type', 'outgo')->sortByDesc('id') as $row)
                     <tr class="bg-danger text-white">
-                        <td>{{$row->title}}</td>
+                        <td style="max-width:100px">
+                            {{Str::limit($row->title, 15, '...')}}
+                            <span>
+                                {{$row->title}}
+                            </span>
+                        </td>
                         <td>{{$row->price}}</td>
                         <td>{{$row->money_before}}</td>
                         <td>{{$row->money_after}}</td>
