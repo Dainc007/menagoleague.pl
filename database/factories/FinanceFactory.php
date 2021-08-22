@@ -23,7 +23,7 @@ class FinanceFactory extends Factory
     public function definition()
     {
         return [
-            'team_id' => $this->faker->numberBetween(1, Team::count()),
+            'team_id' => $this->faker->numberBetween(1, 200),
             'type' => $this->faker->randomElement(Finance::AVAILABLE_TYPES),
             'title' => $this->faker->sentence(4),
             'money_before' => $this->faker->numberBetween(999999, 99999999),

@@ -7,6 +7,7 @@ use App\Imports\TeamsImport;
 use App\Models\Article;
 use App\Models\Competition;
 use App\Models\Device;
+use App\Models\Finance;
 use App\Models\GameStats;
 use App\Models\League;
 use App\Models\User;
@@ -33,8 +34,9 @@ class DatabaseSeeder extends Seeder
             LeagueTableSeeder::class,
             FixtureSeeder::class,
             PlayerSeeder::class,
-            GameStatsSeeder::class,
+            /* GameStatsSeeder::class, */
             ArticleSeeder::class,
+            FinanceSeeder::class,
         ]);
     }
 }

@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Finance;
+use App\Models\Team;
 use Illuminate\Database\Seeder;
 
 class FinanceSeeder extends Seeder
@@ -13,6 +15,6 @@ class FinanceSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\Finance::factory(1000)->create();
+        \App\Models\Finance::factory(5000)->create();
     }
 }
