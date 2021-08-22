@@ -26,12 +26,14 @@ class PlayerFactory extends Factory
         return [
             'name' => $this->faker->name,
             'device_id' => $this->faker->numberBetween(1, 3),
-            'team_id' => $this->faker->numberBetween(1, Team::count()),
+            'team_id' => $this->faker->numberBetween(1, 200),
             'nationality' => $this->faker->country,
-            'position' => $this->faker->randomElement(['CM','CB', 'GK', 'ST']),
+            'position' => $this->faker->randomElement(['CM', 'CB', 'GK', 'ST']),
             'overall' => $this->faker->numberBetween(60, 90),
             'age' => $this->faker->numberBetween(17, 33),
-            'real_team' => $this->faker->company
+            'real_team' => $this->faker->company,
+            'transfer_listed'   => $this->faker->boolean(30),
+            'loan_listed'       => $this->faker->boolean(30),
         ];
     }
 }
