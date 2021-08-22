@@ -24,9 +24,7 @@
           wybierz kapitana, kupuj, sprzedawaj i wiele, wiele więcej.
         </p>
       </div>
-      <!-- 1 -->
 
-      <!-- 1 -->
       <div class="gameplay-overview-item">
         <img src="{{ asset('storage/gameplay/season.png')}}" alt="season" />
         <h3>Przeglądaj Pozostałe Ligi</h3>
@@ -34,7 +32,25 @@
           Korzystaj z łatwego przeglądu statystyk zarówno własnych rozgrywek jak i swoich znajomych grających w innych ligach.
         </p>
       </div>
-      <!-- 1 -->
+
+      <div class="gameplay-overview-item">
+        <img src="{{ asset('storage/gameplay/office.png')}}" alt="office" />
+        <h3>Wygodne zarządzanie zespołem</h3>
+        <p>
+          Przeglądaj finanse klubu i bez trudu zarządzaj własną karierą
+        </p>
+      </div>
+
+      <div class="gameplay-overview-item">
+        <img src="{{ asset('storage/gameplay/calendar.png')}}" alt="office" />
+        <h3>Terminarz dostosowany do Ciebie</h3>
+        <p>
+          Menago League choć zawiera statyczne godziny spotkań, oferuje równiez mozliwość przekładania meczów
+          i dostosowywania ich do własnego trybu dnia. Jeśli potrafisz wygospodarować czas na 2-3 mecze w tygodniu,
+          zapraszamy!
+        </p>
+      </div>
+
 
     </div>
   </div>
