@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Player;
 use App\Models\Transfer;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class TransferController extends Controller
 {
@@ -14,7 +16,12 @@ class TransferController extends Controller
      */
     public function index()
     {
-        return view('transfers.transfers');
+        return view('transfers.transfers', [
+            'user'          => Auth::user(),
+            'transferList'  => Player::getTransferListedPlayers(),
+            'freeAgentList' => Player::getFreeAgents(),
+            'loanList'      => Player::getLoanListedPlayers(),
+        ]);
     }
 
     /**
@@ -35,7 +42,7 @@ class TransferController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request);
     }
 
     /**

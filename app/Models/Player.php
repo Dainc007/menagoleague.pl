@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 class Player extends Model
 {
@@ -49,5 +50,29 @@ class Player extends Model
     public function gameStats()
     {
         return $this->hasMany(GameStats::class);
+    }
+
+    public static function getTransferListedPlayers()
+    {
+        $players = Player::where('device_id', Auth::user()->device_id)
+            ->where('transfer_listed', true)->simplePaginate();
+
+        return $players;
+    }
+
+    public static function getLoanListedPlayers()
+    {
+        $players = Player::where('device_id', Auth::user()->device_id)
+            ->where('loan_listed', true)->simplePaginate();
+
+        return $players;
+    }
+
+    public static function getFreeAgents()
+    {
+        $players = Player::where('device_id', Auth::user()->device_id)
+            ->where('team_id', null)->simplePaginate();
+
+        return $players;
     }
 }

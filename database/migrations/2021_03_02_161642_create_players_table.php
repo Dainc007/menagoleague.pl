@@ -25,6 +25,9 @@ class CreatePlayersTable extends Migration
             $table->integer('overall');
             $table->integer('age');
             $table->string('real_team');
+            $table->boolean('transfer_listed');
+            $table->boolean('loan_listed');
+
             $table->unique(['name', 'real_team', 'overall', 'age', 'device_id']);
             $table->timestamps();
 

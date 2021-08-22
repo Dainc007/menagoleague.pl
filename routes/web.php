@@ -86,6 +86,9 @@ Route::prefix('/transfers')->group(function () {
 
     Route::get('/', [App\Http\Controllers\TransferController::class, 'index'])
         ->name('transfers');
+
+    Route::post('/store', [App\Http\Controllers\TransferController::class, 'store'])
+        ->name('transfers.store');
 });
 
 Route::prefix('/office')->group(function () {

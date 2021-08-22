@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTransfersTable extends Migration
+class CreateLoansTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateTransfersTable extends Migration
      */
     public function up()
     {
-        Schema::create('transfers', function (Blueprint $table) {
+        Schema::create('loans', function (Blueprint $table) {
             $table->id();
             $table->foreignId('player_id')->constrained();
-            $table->unsignedBigInteger('from')->nullable();
-            $table->unsignedBigInteger('to')->nullable();
+            $table->unsignedBigInteger('old_team_id');
+            $table->unsignedBigInteger('new_team_id');
             $table->unsignedBigInteger('price')->nullable();
 
             $table->boolean('player_sign');
@@ -26,8 +26,8 @@ class CreateTransfersTable extends Migration
 
             $table->timestamps();
 
-            $table->foreign('from')->references('id')->on('teams')->onDelete('cascade');
-            $table->foreign('to')->references('id')->on('teams')->onDelete('cascade');
+            $table->foreign('old_team_id')->references('id')->on('teams')->onDelete('cascade');
+            $table->foreign('new_team_id')->references('id')->on('teams')->onDelete('cascade');
         });
     }
 
@@ -38,6 +38,6 @@ class CreateTransfersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('transfers');
+        Schema::dropIfExists('loans');
     }
 }
