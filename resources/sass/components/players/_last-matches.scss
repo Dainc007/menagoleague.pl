@@ -1,0 +1,238 @@
+.lastMatches {
+  .table {
+    .legend {
+      > div {
+        text-align: center;
+        display: none;
+      }
+    }
+
+    .table-content {
+      .item {
+        display: none;
+
+        > div {
+          text-align: center;
+        }
+
+        .condition {
+          display: flex;
+          justify-content: center;
+
+          > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            width: 30px;
+            border-radius: 5px;
+            color: white;
+
+            &.next-match {
+              background-color: #b9b9b9;
+            }
+
+            &.win {
+              background-color: #00b439;
+            }
+
+            &.lose {
+              background-color: #fd1d00;
+            }
+
+            &.draw {
+              background-color: #ffb300;
+            }
+          }
+        }
+      }
+
+      .ritem {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+          'clubHost clubHost info info info score condition'
+          'clubGuest clubGuest info info info date condition';
+        padding: 5px;
+
+        &:nth-of-type(2n) {
+          background-color: #e8e8e8;
+        }
+
+        .clubHost,
+        .clubGuest {
+          grid-area: clubHost;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          font-weight: 600;
+
+          img {
+            display: none;
+          }
+        }
+
+        .clubGuest {
+          grid-area: clubGuest;
+        }
+
+        .info {
+          grid-area: info;
+          display: flex;
+          justify-content: space-evenly;
+
+          > div {
+            width: max-content;
+
+            > div {
+              text-align: center;
+            }
+          }
+
+          img {
+            margin-right: 0;
+            margin-bottom: -5px;
+          }
+        }
+
+        .team-score {
+          grid-area: score;
+          text-align: center;
+          font-weight: 600;
+        }
+
+        .date {
+          grid-area: date;
+          text-align: center;
+          font-size: 0.8em;
+        }
+
+        .condition {
+          grid-area: condition;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            width: 30px;
+            border-radius: 5px;
+            color: white;
+
+            &.next-match {
+              background-color: #b9b9b9;
+            }
+
+            &.win {
+              background-color: #00b439;
+            }
+
+            &.lose {
+              background-color: #fd1d00;
+            }
+
+            &.draw {
+              background-color: #ffb300;
+            }
+          }
+        }
+      }
+
+      .show-more {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 15px;
+        padding-top: 10px;
+
+        p {
+          cursor: pointer;
+          text-decoration: underline;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .lastMatches {
+    .table {
+      .legend {
+        > div {
+          width: 5%;
+          display: flex;
+          justify-content: center;
+        }
+
+        .region {
+          width: 8%;
+        }
+
+        .date {
+          width: 9%;
+        }
+
+        .club {
+          width: 24%;
+        }
+      }
+
+      .table-content {
+        .ritem {
+          display: none;
+        }
+
+        .item {
+          display: flex;
+
+          > div {
+            width: 5%;
+            text-align: center;
+
+            img {
+              display: none;
+            }
+          }
+
+          .region {
+            width: 8%;
+            font-weight: 600;
+          }
+
+          .date {
+            width: 9%;
+          }
+
+          .club {
+            width: 24%;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .lastMatches {
+    .table {
+      .table-content {
+        .item {
+          > div {
+            img {
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+  }
+}

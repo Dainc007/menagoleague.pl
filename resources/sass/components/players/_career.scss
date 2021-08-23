@@ -1,0 +1,107 @@
+.career {
+  .table {
+    .legend {
+      img {
+        width: 20px;
+        height: 20px;
+      }
+
+      > div {
+        width: 7%;
+        text-align: center;
+      }
+
+      .season {
+        width: 13%;
+      }
+
+      .club {
+        width: 52%;
+      }
+
+      .region {
+        display: none;
+      }
+    }
+
+    .table-content {
+      .item {
+        > div {
+          width: 7%;
+          text-align: center;
+        }
+
+        .season {
+          width: 13%;
+        }
+
+        .club {
+          width: 52%;
+          font-weight: 600;
+
+          img {
+            display: none;
+          }
+        }
+
+        .region {
+          display: none;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 425px) {
+  .career {
+    .table {
+      .legend {
+        img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+      .table-content {
+        .item {
+          .club {
+            img {
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .career {
+    .table {
+      .legend {
+        .region {
+          display: block;
+        }
+
+        .club,
+        .region {
+          width: 26%;
+        }
+      }
+
+      .table-content {
+        .item {
+          .region {
+            display: flex;
+          }
+
+          .club,
+          .region {
+            width: 26%;
+          }
+        }
+      }
+    }
+  }
+}

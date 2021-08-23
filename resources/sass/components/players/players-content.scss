@@ -1,0 +1,83 @@
+.playerInfo,
+.career,
+.lastMatches,
+.transfers {
+  border-top: 3px solid #558c47;
+  border-radius: 5px;
+}
+
+.career {
+  border-top: 0;
+}
+
+.lastMatches,
+.career,
+.transfers {
+  width: 100%;
+
+  .table {
+    background-color: $sectionColor;
+    margin: 0;
+    border-radius: 5px;
+    padding-bottom: 20px;
+    min-height: 460px;
+    height: max-content;
+  }
+
+  .legend {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    background-color: $text-paleLeaf;
+    font-weight: 600;
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .table-content {
+    .region,
+    .club,
+    .from,
+    .to {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .from,
+    .to {
+      justify-content: flex-start;
+    }
+
+    img {
+      width: 20px;
+      margin-right: 5px;
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #d8d8d8;
+      height: 40px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .lastMatches,
+  .career,
+  .transfers {
+    .legend {
+      padding: 0 20px;
+    }
+
+    .table-content {
+      .item {
+        padding: 0 20px;
+      }
+    }
+  }
+}

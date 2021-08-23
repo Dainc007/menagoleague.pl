@@ -46,7 +46,7 @@ const burgerMenu = document.querySelector('.burger-menu');
 const closeBurgerMenu = document.querySelector('.close-burger-menu');
 const responsiveMenu = document.querySelector('.responsive-menu');
 
-burgerMenu.onclick = () => {
+burgerMenu.addEventListener('onclick', () => {
   const openResponsiveMenu = () => {
     if (responsiveMenu.style.display == 'none') {
       responsiveMenu.style.display = 'flex';
@@ -54,9 +54,9 @@ burgerMenu.onclick = () => {
     }
   };
   openResponsiveMenu();
-};
+});
 
-closeBurgerMenu.onclick = () => {
+closeBurgerMenu.addEventListener('onclick', () => {
   const closeResponsiveMenu = () => {
     if (responsiveMenu.style.display == 'flex') {
       responsiveMenu.style.display = 'none';
@@ -64,7 +64,7 @@ closeBurgerMenu.onclick = () => {
     }
   };
   closeResponsiveMenu();
-};
+});
 
 // Game responsive menu
 
@@ -72,18 +72,49 @@ const gameBurgerMenu = document.querySelector('.central-burger-menu');
 const gameResponsiveMenu = document.querySelector('.responsive-central-menu');
 const centralBurgerMenuImg = document.querySelector('.central-burger-menu');
 
-gameBurgerMenu.onclick = () => {
-  const openGameResponsiveMenu = () => {
-    if (gameResponsiveMenu.style.display == 'none') {
-      gameResponsiveMenu.style.display = 'flex';
-      centralBurgerMenuImg.src = './images/close-burger-menu.svg';
-    } else {
-      gameResponsiveMenu.style.display = 'none';
-      centralBurgerMenuImg.src = './images/burger-menu.svg';
+if (gameBurgerMenu !== null) {
+  gameBurgerMenu.addEventListener('onclick', () => {
+    const openGameResponsiveMenu = () => {
+      if (gameResponsiveMenu.style.display == 'none') {
+        gameResponsiveMenu.style.display = 'flex';
+        centralBurgerMenuImg.src = '/images/close-burger-menu.svg';
+      } else {
+        gameResponsiveMenu.style.display = 'none';
+        centralBurgerMenuImg.src = '/images/burger-menu.svg';
+      }
+    };
+    openGameResponsiveMenu();
+  });
+}
+
+// Tab responsive menu
+const tabMenuButton = document.querySelector('.responsive-tab-menu');
+const tabMenuNav = document.querySelector('.players .nav');
+const tabMenuItems = document.querySelectorAll('.players .main-tab .nav-link');
+const tabMenuActiveItems = document.querySelectorAll('.players .main-tab .nav-link');
+let activeItem;
+
+const checkActiveItem = () => {
+  tabMenuActiveItems.forEach((item) => {
+    if (item.classList.contains('active') == true) {
+      activeItem = item;
+      activeItem.style.display = 'flex';
     }
-  };
-  openGameResponsiveMenu();
+  });
 };
+
+tabMenuButton.addEventListener('click', () => {
+  if (tabMenuNav.style.display == 'flex') {
+    tabMenuNav.style.display = 'block';
+    tabMenuButton.src = '/images/close.svg';
+    tabMenuItems.forEach((item) => (item.style.display = 'flex'));
+  } else {
+    tabMenuNav.style.display = 'flex';
+    tabMenuButton.src = '/images/menu.svg';
+    tabMenuItems.forEach((item) => (item.style.display = 'none'));
+    checkActiveItem();
+  }
+});
 
 /* Finances view */
 
@@ -92,11 +123,11 @@ const financesBtn = document.querySelectorAll('.details-buttons > li[data-number
 
 function resetFinances() {
   financesData.forEach((el) => {
-    el.classList.remove('active')
+    el.classList.remove('active');
   });
   financesBtn.forEach((el) => {
     el.classList.remove('active');
-  })
+  });
 }
 
 financesBtn.forEach((el) => {
@@ -106,7 +137,7 @@ financesBtn.forEach((el) => {
     financesData[key].classList.add('active');
     el.classList.add('active');
   });
-})
+});
 
 /* Jobs offer */
 const jobsCategories = document.querySelectorAll('.offer-cards > div[data-type]');
@@ -130,25 +161,23 @@ function nextOffer(btn) {
   var allOffers = btn.parentElement.parentElement.parentNode.children[btn.dataset.number].children;
   var allOffersCount = btn.parentElement.parentElement.parentNode.children[btn.dataset.number].childElementCount - 1;
   for (var a = 0; a <= allOffersCount; a++) {
-    if (allOffers[a].classList.contains("active")) {
+    if (allOffers[a].classList.contains('active')) {
       var thisOffer = a;
-      allOffers[a].classList.remove("active");
-
+      allOffers[a].classList.remove('active');
     }
   }
   thisOffer += 1;
   if (thisOffer == allOffersCount) thisOffer = 0;
   allOffers[thisOffer].classList.add('active');
-
 }
 
 function previousOffer(btn) {
   var allOffers = btn.parentElement.parentElement.parentNode.children[btn.dataset.number].children;
   var allOffersCount = btn.parentElement.parentElement.parentNode.children[btn.dataset.number].childElementCount - 1;
   for (var a = 0; a <= allOffersCount; a++) {
-    if (allOffers[a].classList.contains("active")) {
+    if (allOffers[a].classList.contains('active')) {
       var thisOffer = a;
-      allOffers[a].classList.remove("active");
+      allOffers[a].classList.remove('active');
       if (thisOffer == 0) thisOffer = allOffersCount;
     }
   }
@@ -160,10 +189,10 @@ nextOfferBtn.forEach((btn) => {
   btn.addEventListener('click', () => {
     nextOffer(btn);
   });
-})
+});
 
 previousOfferBtn.forEach((btn) => {
   btn.addEventListener('click', () => {
     previousOffer(btn);
   });
-})
+});

@@ -218,7 +218,7 @@ nav {
       padding: 25px;
       .r-central-menu-item-alert {
         .btn-notification {
-          margin-right: 5px!important;
+          margin-right: 5px !important;
         }
         .notification {
           display: none;
@@ -234,7 +234,7 @@ nav {
           margin-top: 5px;
         }
         .unread {
-          display: block!important;
+          display: block !important;
         }
       }
     }
@@ -297,20 +297,22 @@ nav {
     }
   }
 }
-.central-menu, .r-central-menu {
-  .central-menu-item-alert, .r-central-menu-item-alert {
+.central-menu,
+.r-central-menu {
+  .central-menu-item-alert,
+  .r-central-menu-item-alert {
     .notification {
-          background-color: #dc3545;
-          height: 16px;
-          width: 16px;
-          text-align: center;
-          font-size: 10px;
-          font-weight: 600;
-          border-radius: 50%;
-          color: #fff;
-          margin-right: 15px;
-          margin-left: -40px;
-          margin-top: 3px;
+      background-color: #dc3545;
+      height: 16px;
+      width: 16px;
+      text-align: center;
+      font-size: 10px;
+      font-weight: 600;
+      border-radius: 50%;
+      color: #fff;
+      margin-right: 15px;
+      margin-left: -40px;
+      margin-top: 3px;
     }
   }
 }
@@ -328,7 +330,6 @@ nav {
 @media (min-width: 768px) {
   .responsive-menu-logo {
     width: 100%;
-    padding: 0 5%;
   }
 }
 
