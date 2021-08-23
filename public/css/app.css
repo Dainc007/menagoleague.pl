@@ -734,7 +734,7 @@ pre code {
   .container-md,
   .container-sm,
   .container {
-    max-width: 1140px;
+    max-width: 1420px;
   }
 }
 
@@ -8406,7 +8406,6 @@ button.bg-dark:focus {
 }
 
 .position-sticky {
-  position: -webkit-sticky !important;
   position: sticky !important;
 }
 
@@ -8426,9 +8425,8 @@ button.bg-dark:focus {
   z-index: 1030;
 }
 
-@supports ((position: -webkit-sticky) or (position: sticky)) {
+@supports (position: sticky) {
   .sticky-top {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020;
@@ -13944,7 +13942,6 @@ a .btn-discord img {
   display: flex;
   flex-wrap: wrap;
   padding: 5px 0px;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   justify-content: center;
@@ -13975,6 +13972,7 @@ a .btn-discord img {
 .office-finances .finances .finances-view div table {
   font-size: 12px;
   border-collapse: collapse;
+  overflow-x: auto;
   width: 100%;
 }
 
@@ -13986,7 +13984,6 @@ a .btn-discord img {
 }
 
 .office-finances .finances .finances-view div table tr:first-of-type {
-  position: -webkit-sticky;
   position: sticky;
   top: 33px;
   background-color: #f7f7f7;
@@ -13999,6 +13996,31 @@ a .btn-discord img {
 .office-finances .finances .finances-view div table tr th:first-of-type,
 .office-finances .finances .finances-view div table tr td:first-of-type {
   padding-right: 10px;
+}
+
+.office-finances .finances .finances-view div table tr td {
+  position: relative;
+}
+
+.office-finances .finances .finances-view div table tr td span {
+  position: absolute;
+  visibility: hidden;
+  min-width: 200px;
+  top: -50px;
+  opacity: 0;
+  font-size: 12px;
+  color: #fff;
+  text-decoration: none;
+  padding: 2px 5px;
+  transition: all 0.5s;
+}
+
+.office-finances .finances .finances-view div table tr td:hover span {
+  visibility: visible;
+  opacity: 1;
+  background-color: #494949;
+  margin: 2px 5px;
+  z-index: 99;
 }
 
 .office-finances .finances .finances-view .active {
@@ -14057,6 +14079,8 @@ a .btn-discord img {
 
 .office-rivals form .btn-danger {
   font-size: 14px;
+  color: #fff;
+  box-shadow: inset 4px 4px 20px #dcdcdc, inset -4px -4px 20px #dedede;
 }
 
 .office-rivals form input,
@@ -14064,12 +14088,19 @@ a .btn-discord img {
   margin: 10px 0px;
 }
 
-.office-jobs .jobs-offers .offers-none p {
+.office-jobs .jobs-offers .offers-none {
   text-align: center;
+}
+
+.office-jobs .jobs-offers .offers-none p {
+  font-size: 13px;
 }
 
 .office-jobs .jobs-offers .offers-none button {
   margin-top: 10px;
+  font-size: 14px;
+  color: #fff;
+  box-shadow: inset 4px 4px 20px #dcdcdc, inset -4px -4px 20px #dedede;
 }
 
 .office-jobs .jobs-offers .offers-details {
@@ -14126,6 +14157,8 @@ a .btn-discord img {
 
 .office-jobs .jobs-offers .offers-details .offer-cards .offers-data .btn {
   margin: 15px 0px;
+  box-shadow: inset 4px 4px 20px #dcdcdc, inset -4px -4px 20px #dedede;
+  color: #fff;
 }
 
 .office-jobs .jobs-offers .offers-details .offer-cards .active {
