@@ -103,18 +103,20 @@ const checkActiveItem = () => {
   });
 };
 
-tabMenuButton.addEventListener('click', () => {
-  if (tabMenuNav.style.display == 'flex') {
-    tabMenuNav.style.display = 'block';
-    tabMenuButton.src = '/images/close.svg';
-    tabMenuItems.forEach((item) => (item.style.display = 'flex'));
-  } else {
-    tabMenuNav.style.display = 'flex';
-    tabMenuButton.src = '/images/menu.svg';
-    tabMenuItems.forEach((item) => (item.style.display = 'none'));
-    checkActiveItem();
-  }
-});
+if (tabMenuButton !== null) {
+  tabMenuButton.addEventListener('click', () => {
+    if (tabMenuNav.style.display == 'flex') {
+      tabMenuNav.style.display = 'block';
+      tabMenuButton.src = '/images/close.svg';
+      tabMenuItems.forEach((item) => (item.style.display = 'flex'));
+    } else {
+      tabMenuNav.style.display = 'flex';
+      tabMenuButton.src = '/images/menu.svg';
+      tabMenuItems.forEach((item) => (item.style.display = 'none'));
+      checkActiveItem();
+    }
+  });
+}
 
 /* Finances view */
 
