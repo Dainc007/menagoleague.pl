@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
     <div class="container">
         <a class="logo" href="{{ route('home') }}">
-            <img src="images/logo-normal-classic.svg" alt="">
+            <img src="/images/logo-normal-classic.svg" alt="">
         </a>
 
         <div class="menu">
@@ -82,15 +82,15 @@
             @endguest
         </div>
 
-        <img class="btn burger-menu" src="./images/burger-menu.svg" alt="" />
+        <img class="btn burger-menu" src="/images/burger-menu.svg" alt="" />
 
         <div class="responsive-menu" style="display: none">
             <div class="container">
                 <div class="responsive-menu-content">
                     <div class="responsive-menu-logo">
-                        <a href="./Central/" class="logo"><img src="./images/logo-normal-classic.svg" alt="" /></a>
+                        <a href="./Central/" class="logo"><img src="/images/logo-normal-classic.svg" alt="" /></a>
 
-                        <img class="btn close-burger-menu" src="./images/close-burger-menu.svg" alt="" />
+                        <img class="btn close-burger-menu" src="/images/close-burger-menu.svg" alt="" />
                     </div>
 
                     <div class="r-menu">

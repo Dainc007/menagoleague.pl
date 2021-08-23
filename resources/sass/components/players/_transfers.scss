@@ -1,0 +1,128 @@
+.transfers {
+  .table {
+    .legend {
+      > div {
+        display: none;
+      }
+    }
+
+    .table-content {
+      .item {
+        display: none;
+      }
+
+      .ritem {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+          'from from from arrow to to to'
+          'type type date date . price price';
+        padding: 5px;
+
+        &:nth-of-type(2n) {
+          background-color: #e8e8e8;
+        }
+
+        > div {
+          text-align: center;
+        }
+
+        .date {
+          grid-area: date;
+          font-size: 0.9em;
+        }
+
+        .from,
+        .to {
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          font-weight: 600;
+        }
+
+        .from {
+          grid-area: from;
+        }
+
+        .to {
+          grid-area: to;
+        }
+
+        .price {
+          grid-area: price;
+          font-weight: 600;
+        }
+
+        .type {
+          grid-area: type;
+          font-style: italic;
+        }
+
+        .arrow {
+          grid-area: arrow;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .transfers {
+    .table {
+      .legend {
+        padding: 0 20px;
+
+        > div {
+          display: flex;
+        }
+
+        .date {
+          width: 14%;
+        }
+
+        .from,
+        .to {
+          width: 28%;
+          font-weight: 600;
+        }
+
+        .price,
+        .type {
+          width: 15%;
+          justify-content: center;
+        }
+      }
+
+      .table-content {
+        .ritem {
+          display: none;
+        }
+
+        .item {
+          padding: 0 20px;
+          display: flex;
+
+          .date {
+            width: 14%;
+          }
+
+          .from,
+          .to {
+            width: 28%;
+            font-weight: 600;
+          }
+
+          .price,
+          .type {
+            width: 15%;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

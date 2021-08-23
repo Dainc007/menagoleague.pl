@@ -1,0 +1,60 @@
+.playerInfo {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  background-color: $sectionColor;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+
+  .player {
+    display: flex;
+
+    .info {
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      .name {
+        font-weight: 600;
+        font-size: 1.5em;
+      }
+
+      > div {
+        font-size: 0.9em;
+      }
+    }
+  }
+
+  img {
+    width: 57px;
+    height: 65px;
+    object-fit: cover;
+    margin: auto 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .playerInfo {
+    padding: 0 50px;
+
+    .player {
+      .info {
+        padding: 20px;
+
+        .name {
+          font-size: 2em;
+        }
+
+        > div {
+          font-size: 1em;
+        }
+      }
+    }
+
+    img {
+      width: 84px;
+      height: 108px;
+    }
+  }
+}

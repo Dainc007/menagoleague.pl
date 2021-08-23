@@ -1,0 +1,107 @@
+//
+// Main tab
+//
+
+.players {
+  .nav-tabs {
+    position: relative;
+
+    .nav-item {
+      margin-right: 2px;
+
+      .nav-link {
+        display: none;
+        margin-bottom: -2px;
+        border: 1px solid transparent;
+        color: $text-gray;
+        background-color: $sectionColor;
+        border-color: $text-hippieGreen;
+      }
+    }
+
+    .responsive-tab-menu {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      width: 30px;
+    }
+  }
+
+  .nav-tabs .nav-link.active,
+  .nav-tabs .nav-item.show .nav-link {
+    color: white;
+    background-color: $text-hippieGreen;
+    border-color: $text-hippieGreen;
+    pointer-events: none;
+    display: flex;
+  }
+
+  .nav-tabs .nav-link:hover {
+    background-color: $text-hippieGreen;
+    border-color: $text-hippieGreen;
+    color: whitesmoke;
+  }
+}
+
+//
+// Sub tab
+//
+
+.careerSubTab {
+  width: 100%;
+
+  .nav-tabs {
+    .nav-item {
+      &:first-of-type {
+        .nav-link {
+          margin-left: 3px;
+        }
+      }
+      .nav-link {
+        display: block;
+        margin-bottom: 0px;
+        border: 1px solid transparent;
+        color: $text-gray;
+        background-color: $text-hippieGreen;
+        border-color: $text-hippieGreen;
+        margin-right: 5px;
+        border-radius: 10px;
+        color: $text-paleLeaf;
+      }
+    }
+  }
+
+  .nav-tabs .nav-link.active,
+  .nav-tabs .nav-item.show .nav-link {
+    color: white;
+    background-color: $text-dark;
+    pointer-events: none;
+  }
+
+  .nav-tabs .nav-link:hover {
+    background-color: $text-dark;
+    color: white;
+  }
+
+  .sub-tab {
+    background-color: $text-hippieGreen;
+    border-top-right-radius: 5px;
+    padding: 4px 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .players {
+    .nav-tabs {
+      .nav-item {
+        .nav-link {
+          display: flex;
+        }
+      }
+
+      .responsive-tab-menu {
+        display: none;
+      }
+    }
+  }
+}
