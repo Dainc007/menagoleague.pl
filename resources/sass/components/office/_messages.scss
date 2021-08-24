@@ -15,3 +15,119 @@
         }
     }
 }
+.messages-list {
+    grid-area: messages-list;
+}
+
+.messages-text {
+    grid-area: messages-text;
+}
+
+.messages-tabs {
+    display: flex;
+    margin: 10px 0px;
+    .active {
+        background-color: $text-gray;
+        border-bottom: 5px solid $text-paleLeaf;
+        a {
+            color: $text-paleLeaf;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+    div {
+        padding: 9px 26px;
+        position: relative;
+        span {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            font-size: 13px;
+            background-color: #ff0000;
+            height: 20px;
+            width: 20px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+        }
+        a {
+            color: $text-darker;
+            text-transform: uppercase;
+            font-size: 18px;
+        }
+    }
+}
+.messages-content {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    gap: 20px;
+    grid-template-areas:
+    "messages-list"
+    "messages-text";
+    .messages-list, .messages-text {
+        background-color: $sectionColor
+    }
+    .messages-text {
+        min-height: 500px;
+    }
+    .messages-list {
+        .players-list {
+            margin-top: 5px;
+            .message {
+                padding: 10px 0px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                .message-logo {
+                    img {
+                        width: 50px;
+                    }
+                }
+                .message-details {
+                    display: flex;
+                    flex-direction: column;
+                    .title {
+                        span {
+                            font-weight: 700;
+                            color: $text-darker;
+                        }
+                    }
+
+                }
+            }
+            .active {
+                background-color: $text-gray;
+                .message-details {
+                    .title {
+                        span {
+                            color: $text-paleLeaf;
+                        }
+                    }
+                    .info {
+                        color: #fff;
+                    }
+                    
+                }
+                .message-date {
+                    span {
+                        color: #fff;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+@media (min-width: 1024px) {
+    .messages-content {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+            "messages-list messages-text messages-text";
+        gap: 1rem;
+    }
+    
+}
