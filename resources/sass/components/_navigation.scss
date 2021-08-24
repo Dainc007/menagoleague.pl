@@ -2,7 +2,8 @@ nav {
   height: 80px;
   display: flex;
   align-items: center;
-  box-shadow: inset 0px -4px 5px rgb(176 176 176 / 25%);
+  box-shadow: inset 0px -4px 5px RGB(176, 176, 176, 0.25);
+  
   .container {
     display: flex;
     align-items: center;
