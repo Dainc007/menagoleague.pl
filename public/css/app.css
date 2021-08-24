@@ -12930,6 +12930,9 @@ a .btn-discord img {
 .career .table .table-content .item .club {
   width: 52%;
   font-weight: 600;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .career .table .table-content .item .club img {
@@ -13277,10 +13280,14 @@ a .btn-discord img {
 
 .transfers .table .table-content .ritem .from,
 .transfers .table .table-content .ritem .to {
+  font-weight: 600;
+}
+
+.transfers .table .table-content .ritem .from p,
+.transfers .table .table-content .ritem .to p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  font-weight: 600;
 }
 
 .transfers .table .table-content .ritem .from {

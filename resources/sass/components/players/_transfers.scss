@@ -35,10 +35,13 @@
 
         .from,
         .to {
-          overflow: hidden;
-          white-space: nowrap;
-          text-overflow: ellipsis;
           font-weight: 600;
+
+          p {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
         }
 
         .from {

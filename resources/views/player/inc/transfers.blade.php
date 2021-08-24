@@ -14,11 +14,11 @@
                     <div class="date">21.08.2021</div>
                     <div class="from">
                         <img src="/images/shields/6.png" alt="">
-                        Bayern Monachium
+                        <p>Bayern Monachium</p>
                     </div>
                     <div class="to">
                         <img src="/images/shields/6.png" alt="">
-                        Bundesliga
+                        <p>Bundesliga</p>
                     </div>
                     <div class="price">{{ rand(1000000, 10000000) }} $</div>
                     <div class="type">Transfer</div>
@@ -30,12 +30,12 @@
                     <div class="date">21.08.2021</div>
                     <div class="from">
                         <img src="/images/shields/6.png" alt="">
-                        Bayern Monachium
+                        <p>Bayern Monachium</p>
                     </div>
                     <div class="arrow"><img src="/images/arrow.svg" alt=""></div>
                     <div class="to">
                         <img src="/images/shields/6.png" alt="">
-                        Bundesliga
+                        <p>Bundesliga</p>
                     </div>
                     <div class="price">{{ rand(1000000, 10000000) }} $</div>
                     <div class="type">Transfer</div>
