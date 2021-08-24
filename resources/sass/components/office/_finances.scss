@@ -56,6 +56,7 @@
                     tr {
                         &:first-of-type {
                             position: sticky;
+                            z-index: 1;
                             top: 33px;
                             background-color: #f7f7f7;
                         }
