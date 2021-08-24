@@ -34,7 +34,7 @@
 
   &:hover {
     // transform: scale(1.02);
-    background: linear-gradient(180deg, rgb(164 226 144 / 90%) 0%, rgba(14, 168, 40, 0.9) 100%);
+    background: linear-gradient(180deg, rgba(164, 226, 144, 90%) 0%, rgba(14, 168, 40, 0.9) 100%);
   }
 
   &:nth-of-type(2n) {
@@ -124,7 +124,7 @@
 .player-attributes-desc {
   height: 40px;
   font-weight: 600;
-  box-shadow: inset 0px -4px 5px rgb(176 176 176 / 25%);
+  box-shadow: inset 0px -4px 5px rgba(176, 176, 176, 25%);
   color: $text-dark;
   font-size: 0.9em;
 
