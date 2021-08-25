@@ -22,4 +22,14 @@ class HomeController extends Controller
                 ->where('date', '<=', now()->addDays(7))->get(),
         ]);
     }
+
+    public function rules()
+    {
+        return 'w budowie';
+    }
+
+    public function faq()
+    {
+        return 'w budowie';
+    }
 }
