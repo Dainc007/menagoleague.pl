@@ -32,6 +32,16 @@ Route::prefix('/central')->group(function () {
         ->name('central.fullCalendar');
 });
 
+/* HELP */
+Route::prefix('/help')->group(function () {
+
+    Route::get('/rules', [App\Http\Controllers\HomeController::class, 'rules'])
+        ->name('rules');
+
+    Route::get('/faq', [App\Http\Controllers\HomeController::class, 'faq'])
+        ->name('faq');
+});
+
 /* User */
 Route::prefix('/users')->group(function () {
 

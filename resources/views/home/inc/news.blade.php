@@ -4,9 +4,9 @@
       <h2>{{__('home.news.header')}}</h2>
 
       <div class="league-news-devices">
-        <a href="#"><img src="./images/xbox-icon.svg" alt="" /></a>
-        <a href="#"><img src="./images/playstation-icon.svg" alt="" /></a>
-        <a href="#"><img src="./images/pc-icon.svg" alt="" /></a>
+        <a href="#"><img src="./images/xbox-icon.svg" alt="Xbox" /></a>
+        <a href="#"><img src="./images/playstation-icon.svg" alt="Playstation" /></a>
+        <a href="#"><img src="./images/pc-icon.svg" alt="PC" /></a>
       </div>
     </div>
 
@@ -40,7 +40,7 @@
       @endforeach
       @endif
     </div>
-    <a href="" class="btn btn-w-border btn-allNews responsive-btn-allNews">ALL NEWS</a>
+    <a href="" class="btn btn-w-border btn-allNews responsive-btn-allNews">{{__('home.news.moreNews')}}</a>
   </section>
 
   <aside class="read-more">

@@ -57,6 +57,36 @@ return [
 
     'gameplay'  => [
         'title' => 'GAMEPLAY',
+        '1' => [
+            'header'    => 'Intuicyjny Design',
+            'body'      => 'Menu uzytkownika zostało stworzone i zainspirowne
+             menu trybu kariery dostępnym w grze FIFA.',
+        ],
+        '2' => [
+            'header'    => 'Zarzadzaj Zespołem',
+            'body'      => 'Strona została wyposazona w przejrzysty interfejs zarzadzania zespołem,
+             oferujący szereg możliwości. To od Ciebie zależy w jaki sposób poprowadzisz zespół. 
+             Bądź dla swoich piłkarzy niczym ojciec i pomagaj im w rozwoju kariery albo
+              kieruj się w pierwszej kolejności interesem klubu lub własnymi korzyściami. Rozmawiaj z piłkarzami,
+              negocjuj warunki kontraktów, rozwijaj infrastrukturę klubu - rozwijaj się tak jak chcesz i
+               tak jak jak lubisz.',
+        ],
+        '3' => [
+            'header'    => 'Przeglądaj Pozostałe Ligi',
+            'body'      => 'Korzystaj z łatwego przeglądu statystyk lub 
+                            śledź poczynania swoich znajomych i rywali w innych ligach.',
+        ],
+        '4' => [
+            'header'    => 'Wygodne zarządzanie zespołem',
+            'body'      => 'Przeglądaj finanse klubu i bez trudu zarządzaj własną karierą',
+        ],
+        '5' => [
+            'header'    => 'Terminarz dostosowany do Ciebie',
+            'body'      => 'Menago League choć zawiera statyczne godziny spotkań,
+             oferuje równiez mozliwość przekładania meczów i dostosowywania ich do własnego trybu dnia.
+              Jeśli potrafisz wygospodarować czas na 2-3 mecze
+               w tygodniu - jesteśmy miejscem dla Ciebie!',
+        ],
     ],
 
     'rights'    => [
