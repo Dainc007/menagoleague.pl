@@ -1,0 +1,72 @@
+.transfer-table {
+  background-color: $sectionColor;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  .legend {
+    display: flex;
+    height: 35px;
+    background-color: $text-paleLeaf;
+    font-weight: 600;
+
+    > div {
+      width: 7%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .name,
+    .team {
+      width: 30%;
+      justify-content: flex-start;
+
+      p {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .price {
+      width: 19%;
+    }
+  }
+
+  .item {
+    display: flex;
+    height: 30px;
+
+    > div {
+      width: 7%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .name,
+    .team {
+      width: 30%;
+      justify-content: flex-start;
+
+      p {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .price {
+      width: 19%;
+    }
+
+    .action {
+      button {
+        width: 100%;
+        height: 100%;
+        border: none;
+        background-color: transparent;
+      }
+    }
+  }
+}
