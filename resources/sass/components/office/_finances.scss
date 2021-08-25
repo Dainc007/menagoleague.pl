@@ -52,8 +52,12 @@
                         border: 1px solid #ddd;
                         text-align: left;
                         padding: 4px;
+                        
                     }
                     tr {
+                        &:not(:first-child) {
+                            box-shadow: inset 2px 2px 15px #dcdcdc, inset -2px -2px 15px #dedede;
+                        }
                         &:first-of-type {
                             position: sticky;
                             z-index: 1;

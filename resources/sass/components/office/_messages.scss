@@ -85,6 +85,7 @@
     .messages-text {
         min-height: 500px;
         max-height: 500px;
+        overflow: scroll;
     }
     .messages-list {
         .message-tabs {
