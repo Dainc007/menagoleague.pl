@@ -8,7 +8,7 @@
         <div class="action">Act</div>
     </div>
     <div class="data">
-        @foreach ($transferList as $player)
+        @foreach ($loanList as $player)
             <div class="item">
                 <div class="position">{{ $player->position }}</div>
                 <div class="name">
@@ -34,7 +34,7 @@
             </div>
         @endforeach
 
-        @foreach ($transferList as $player)
+        @foreach ($loanList as $player)
             <div class="ritem">
                 <div class="position">{{ $player->position }}</div>
                 <div class="name">

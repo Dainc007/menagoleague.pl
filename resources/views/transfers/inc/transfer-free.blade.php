@@ -8,7 +8,7 @@
         <div class="action">Act</div>
     </div>
     <div class="data">
-        @foreach ($transferList as $player)
+        @foreach ($freeAgentList as $player)
             <div class="item">
                 <div class="position">{{ $player->position }}</div>
                 <div class="name">
@@ -16,8 +16,7 @@
                     <p>{{ $player->name }}</p>
                 </div>
                 <div class="team">
-                    <img src="/images/shields/6.png" alt="">
-                    <p>{{ $player->real_team }}</p>
+                    <p>Ready to hire</p>
                 </div>
                 <div class="ovr">{{ $player->overall }}</div>
                 <div class="price">{{ rand(10000000, 100000000) }} $</div>
@@ -34,7 +33,7 @@
             </div>
         @endforeach
 
-        @foreach ($transferList as $player)
+        @foreach ($freeAgentList as $player)
             <div class="ritem">
                 <div class="position">{{ $player->position }}</div>
                 <div class="name">
@@ -42,8 +41,7 @@
                     <p>{{ $player->name }}</p>
                 </div>
                 <div class="team">
-                    <img src="/images/shields/6.png" alt="">
-                    <p>{{ $player->real_team }}</p>
+                    <p>Ready to hire</p>
                 </div>
                 <div class="ovr">{{ $player->overall }}</div>
                 <div class="price">{{ rand(10000000, 100000000) }} $</div>
@@ -63,6 +61,4 @@
 
 </div>
 
-
-
-{{ $transferList->links() }}
+{{ $freeAgentList->links() }}
