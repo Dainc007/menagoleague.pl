@@ -14,17 +14,6 @@ class HomeController extends Controller
 {
     public function index()
     {
-        /* last league competitions */
-        foreach (LEAGUE::AVAILABLE_REGIONS as $region) {
-            $id = League::where('region', $region)->where('type', 'league')->value('id');
-            $competitions[strtolower($region)] = Competition::where(
-                'league_id',
-                $id
-            )
-                ->where('status', 'active')
-                ->orderByDesc('id')->value('id');
-        }
-
         return view('home.home', [
             'articles'         => Article::limit(4)->OrderByDesc('id')->get(),
             'oldArticles'      => Article::skip(4)->take(6)->get(),
@@ -33,7 +22,7 @@ class HomeController extends Controller
             'numOfTeams'       => Team::where('is_active', true)->count(),
             'games'            => Fixture::where('date', '>=', now()->subDays(7))
                 ->where('date', '<=', now()->addDays(7))->get(),
-            'competitions'  => $competitions,
+            'competitions'  => Competition::getActiveCompetitions(),
         ]);
     }
 
