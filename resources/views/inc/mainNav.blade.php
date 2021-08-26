@@ -17,12 +17,9 @@
                     <span class="material-icons">arrow_drop_down</span>
                 </a>
                 <div class="dropdown-menu">
-                    <a href="{{ route('competition.show', 1) }}">{{ __('nav.mainNav.england') }}</a>
-                    <a href="{{ route('competition.show', 1) }}">{{ __('nav.mainNav.spain') }}</a>
-                    <a href="{{ route('competition.show', 1) }}">{{ __('nav.mainNav.poland') }}</a>
-                    <a href="{{ route('competition.show', 1) }}">{{ __('nav.mainNav.italy') }}</a>
-                    <a href="{{ route('competition.show', 1) }}">{{ __('nav.mainNav.champions') }}</a>
-                    <a href="{{ route('competition.show', 1) }}">{{ __('nav.mainNav.europe') }}</a>
+                    @foreach($competitions as $key => $value)
+                    <a href="{{ route('competition.show', $value ?? '0') }}">{{ __('nav.mainNav.' . $key) }}</a>
+                    @endforeach
                 </div>
             </div>
             <div class="dropdown">

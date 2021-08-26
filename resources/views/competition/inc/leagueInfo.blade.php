@@ -1,5 +1,5 @@
 <div class="leagueInfo">
-    <h2>PREMIER LEAGUE</h2>
+    <h2>{{ __('league.' . $competition->league->region . '.' . $competition->league->level) }}</h2>
 
     <div class="table">
         <div class="team-info">
@@ -7,12 +7,13 @@
                 <div class="ID">ID</div>
                 <div class="name">Name</div>
             </div>
-            @for ($i = 1; $i <= 10; $i++)
+            
+            @foreach ($competition->leagueTables as $team)
                 <div class="item">
-                    <div class="ID">{{ $i }}</div>
-                    <div class="name">Manchester Utd</div>
+                    <div class="ID">1</div>
+                    <div class="name">{{$team->name}}</div>
                 </div>
-            @endfor
+            @endforeach
         </div>
 
         <div class="team-stats">
@@ -28,12 +29,12 @@
             @for ($j = 1; $j <= 10; $j++)
                 <div class="item">
                     <div class="stats">
-                        <div class="M">{{ rand(0, 200) }}</div>
-                        <div class="W">{{ rand(0, 200) }}</div>
-                        <div class="R">{{ rand(0, 200) }}</div>
-                        <div class="P">{{ rand(0, 200) }}</div>
-                        <div class="B">{{ rand(0, 200) }}:{{ rand(0, 200) }}</div>
-                        <div class="P">{{ rand(0, 200) }}</div>
+                        <div class="M">{{ rand(0, 18) }}</div>
+                        <div class="W">{{ rand(0, 10) }}</div>
+                        <div class="R">{{ rand(0, 10) }}</div>
+                        <div class="P">{{ rand(0, 10) }}</div>
+                        <div class="B">{{ rand(0, 100) }}:{{ rand(0, 100) }}</div>
+                        <div class="P">{{ rand(0, 60) }}</div>
                         <div class="condition">
                             <div class="next-match" title="?:?">?</div>
                             <div class="lose" title="{{ rand(0, 10) }}:{{ rand(0, 10) }}">L</div>

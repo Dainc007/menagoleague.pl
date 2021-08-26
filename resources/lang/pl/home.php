@@ -6,37 +6,23 @@ return [
     'about'  => [
         'header'     => 'Czym Jest Menago League?',
 
-        'howItWorks' => 'Jak działa "Tryb Kariery Online" ?',
+        'howItWorks' => 'Jak działa Tryb "Kariery Online" ?',
 
-        'howItWorksAnswer' => " Menago League to połączenie przeglądarkowej gry typu
-        Football Manager z kultową serią gier FIFA. Dzięki naszej stronie możesz stworzyć
-        lub przejąć klub, przeprowadzać transfery, wchodzić w interakcje z fanami, zawodnikami
-        i zarządem, wybudować stadion, stworzyć własną wirtualną gwiazdę i wiele, wiele więcej.
-        Dzięki naszym poradnikom dowiesz się jak stworzyć swój zespół w grze FIFA by podjąć
-        rywalizację z innymi graczami z całej Polski, a wkrótce być może i z całego świata.",
+        'howItWorksAnswer' => "Menago League to połączenie przeglądarkowej gry typu Football Manager z kultową serią gier FIFA. Dzięki naszej stronie możesz stworzyć lub przejąć klub, przeprowadzać transfery, wchodzić w interakcje z fanami, zawodnikami i zarządem, wybudować stadion, wykreować własną wirtualną gwiazdę i wiele, wiele więcej.
+        ",
 
         'isItComplicated' => 'Czy gra Menago League jest skomplikowana?',
 
-        'isItComplicatedAnswer' => ' Nie. Wszystko, czego potrzebujesz znajdziesz w poradnikach
-        na naszej stronie. Do wyboru zostały wyznaczone podpowiedzi tekstowe, głosowe i filmowe tak,
-        by kady znalazł wygodny dla siebie sposób. Pomożemy Ci przejąć zespół, podpowiemy jak go
-        prowadzić i jak konkurować z innymi graczami bezpośrednio w najnowszej odsłonie FIFY.',
+        'isItComplicatedAnswer' => 'Nie. Dzięki naszym poradnikom dowiesz się, jak stworzyć swój zespół w grze FIFA, by podjąć rywalizację z innymi graczami z całej Polski, a wkrótce być może i z całego świata.
+        Zawarliśmy także podpowiedzi w formie tekstowej, głosowej, jak również filmowej, abyś mógł wybrać spośród nich najwygodniejszą dla siebie. Pomożemy Ci przejąć zespół, podpowiemy, jak go prowadzić i konkurować z innymi graczami bezpośrednio w najnowszej odsłonie FIFY – wszystko, czego potrzebujesz, znajdziesz w poradnikach na naszej stronie.',
 
         'howLongItTakes'    => 'Czy Gra Menago League jest czasochłonna?',
 
-        'howLongItTakesAnswer' => ' Zbudowanie zespołu w FIFA zajmuje około 15 minut. Wystarczy zrobić
-        to raz. Nieustannie rozbudowujemy możliwości zarządzania zespołem na tej stronie, równocześnie
-        starając się, by granie była zbyt czasochłonna. Do pomocy zostanie wyznaczony szereg botów i 
-        asystentów, którzy (jesli sobie tego zażyczysz) wykonają część obowiązków Managera za Ciebie.
-
-        Aby pozostać uczestnikiem naszej społeczności powinieneś być jednak przygotowany na rozegranie
-        co najmniej dwóch meczów tygodniowo.',
+        'howLongItTakesAnswer' => 'Zbudowanie zespołu w FIFA zajmuje około 15 minut. Wystarczy zrobić to jeden raz. Nieustannie wdrażamy nowe możliwości zarządzania zespołem na tej stronie, równocześnie starając się, by gra nie była zbyt czasochłonna. Do pomocy zostanie wyznaczony szereg botów i asystentów, którzy (jeśli sobie tego zażyczysz) wykonają część obowiązków Managera za Ciebie. Aby pozostać uczestnikiem naszej społeczności, powinieneś być jednak przygotowany na rozegranie co najmniej dwóch meczów tygodniowo.',
 
         'howItCombines' => 'W jaki sposób strona internetowa łaczy się z Fifą?',
 
-        'howItCombinesAnswer' => 'Gracze odwzorowują swoje kluby na stronie bezpośrednio w grze FIFA.
-        Rozgrywają mecze przeciwko innym graczom, a po spotkaniu nagrywają raport z meczu i udostępniają
-        go na naszej stronie. Dane są przetwarzane na logikę działania gry. Bazujemy na statystyce i losowości.',
+        'howItCombinesAnswer' => 'Gracze odwzorowują swoje kluby stworzone w Menago League bezpośrednio w grze FIFA. Rozgrywają mecze przeciwko innym graczom, a po spotkaniu nagrywają raport pomeczowy i udostępniają go na naszej stronie. Gra działa w oparciu o dane statystyczne meczów rozegranych przez graczy, poprzeplatanych z nutką losowości.',
     ],
 
     'news'  => [
@@ -59,33 +45,25 @@ return [
         'title' => 'GAMEPLAY',
         '1' => [
             'header'    => 'Intuicyjny Design',
-            'body'      => 'Menu uzytkownika zostało stworzone i zainspirowne
-             menu trybu kariery dostępnym w grze FIFA.',
+            'body'      => 'Menu użytkownika zostało stworzone i zainspirowane menu trybu kariery, które jest dostępne w grze FIFA.',
         ],
         '2' => [
             'header'    => 'Zarzadzaj Zespołem',
-            'body'      => 'Strona została wyposazona w przejrzysty interfejs zarzadzania zespołem,
-             oferujący szereg możliwości. To od Ciebie zależy w jaki sposób poprowadzisz zespół. 
-             Bądź dla swoich piłkarzy niczym ojciec i pomagaj im w rozwoju kariery albo
-              kieruj się w pierwszej kolejności interesem klubu lub własnymi korzyściami. Rozmawiaj z piłkarzami,
-              negocjuj warunki kontraktów, rozwijaj infrastrukturę klubu - rozwijaj się tak jak chcesz i
-               tak jak jak lubisz.',
+            'body'      => 'Stronę wyposażyliśmy w przejrzysty interfejs zarzadzania zespołem, oferujący szereg możliwości. To od Ciebie zależy, w jaki sposób poprowadzisz drużynę. Bądź dla swoich piłkarzy niczym ojciec i pomagaj im w rozwoju kariery albo kieruj się w pierwszej kolejności interesem klubu lub własnymi korzyściami. Rozmawiaj z piłkarzami, negocjuj warunki kontraktów, udoskonalaj infrastrukturę klubu – rozwijaj się tak, jak chcesz i tak, jak lubisz.
+            ',
         ],
         '3' => [
             'header'    => 'Przeglądaj Pozostałe Ligi',
-            'body'      => 'Korzystaj z łatwego przeglądu statystyk lub 
-                            śledź poczynania swoich znajomych i rywali w innych ligach.',
+            'body'      => 'Korzystaj z prostego w obsłudze przeglądu statystyk lub śledź poczynania swoich znajomych i rywali w innych ligach.',
         ],
         '4' => [
             'header'    => 'Wygodne zarządzanie zespołem',
-            'body'      => 'Przeglądaj finanse klubu i bez trudu zarządzaj własną karierą',
+            'body'      => 'Przeglądaj finanse klubu i z łatwością zarządzaj własną karierą.
+            ',
         ],
         '5' => [
             'header'    => 'Terminarz dostosowany do Ciebie',
-            'body'      => 'Menago League choć zawiera statyczne godziny spotkań,
-             oferuje równiez mozliwość przekładania meczów i dostosowywania ich do własnego trybu dnia.
-              Jeśli potrafisz wygospodarować czas na 2-3 mecze
-               w tygodniu - jesteśmy miejscem dla Ciebie!',
+            'body'      => 'Menago League co prawda dysponuje statycznymi godzinami spotkań, ale oferuje również możliwość przekładania meczów i dostosowywania ich do własnego trybu dnia. Jeśli dasz radę wygospodarować czas na 2-3 mecze w tygodniu – jesteśmy miejscem dla Ciebie!',
         ],
     ],
 
