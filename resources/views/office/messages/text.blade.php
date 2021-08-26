@@ -32,7 +32,7 @@
         </div>
         <div class="player-morals">
             <p>Morale</p>
-            <span class="progress-bar">
+            <span class="progress-bar" data-progress="20%">
 
             </span>
             <p>
@@ -41,6 +41,26 @@
         </div>
     </div>
     <div class="text-full">
+        <div class="receiver">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae est mollitia, magnam, at accusantium nisi officiis unde adipisci qui corrupti excepturi aliquam ratione! Molestias quia nisi quidem alias fugiat dignissimos!
+            </p>
+        </div>
+        <div class="sender">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. A minima harum illum perspiciatis quod similique, ipsum assumenda voluptatum, veritatis exercitationem optio quo reprehenderit magnam itaque possimus accusamus ex dolor laudantium!
+            </p>
+        </div>
+        <div class="receiver">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae est mollitia, magnam, at accusantium nisi officiis unde adipisci qui corrupti excepturi aliquam ratione! Molestias quia nisi quidem alias fugiat dignissimos!
+            </p>
+        </div>
+        <div class="sender">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. A minima harum illum perspiciatis quod similique, ipsum assumenda voluptatum, veritatis exercitationem optio quo reprehenderit magnam itaque possimus accusamus ex dolor laudantium!
+            </p>
+        </div>
         <div class="receiver">
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae est mollitia, magnam, at accusantium nisi officiis unde adipisci qui corrupti excepturi aliquam ratione! Molestias quia nisi quidem alias fugiat dignissimos!

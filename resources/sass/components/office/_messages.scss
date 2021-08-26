@@ -15,6 +15,7 @@
         }
     }
 }
+
 .messages-list {
     grid-area: messages-list;
 }
@@ -60,14 +61,13 @@
         }
     }
 }
+
 .messages-content {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto;
     gap: 20px;
-    grid-template-areas:
-    "messages-list"
-    "messages-text";
+    grid-template-areas: "messages-list" "messages-text";
     .messages-list {
         background-color: $sectionColor
     }
@@ -79,13 +79,11 @@
             a {
                 margin: 0px 5px;
             }
-            
         }
     }
     .messages-text {
         min-height: 500px;
         max-height: 500px;
-        overflow: scroll;
     }
     .messages-list {
         .message-tabs {
@@ -114,7 +112,6 @@
                             color: $text-darker;
                         }
                     }
-
                 }
             }
             .active {
@@ -128,7 +125,6 @@
                     .info {
                         color: #fff;
                     }
-                    
                 }
                 .message-date {
                     span {
@@ -136,7 +132,6 @@
                     }
                 }
             }
-            
         }
     }
     .messages-text {
@@ -168,7 +163,8 @@
                 }
             }
             .player-about {
-                p, span {
+                p,
+                span {
                     text-transform: uppercase;
                 }
                 display: flex;
@@ -213,7 +209,6 @@
                 }
             }
         }
-        
         .player-morals {
             display: flex;
             flex-direction: column;
@@ -222,26 +217,100 @@
             align-items: center;
             text-transform: uppercase;
             .progress-bar {
-                background-color: $text-paleLeaf;
+                width: 100%;
+                background-color: $morale-bar;
                 height: 15px;
+                position: relative;
                 border-radius: 15px;
+                --data-progress: 0%;
+                overflow: inherit;
+                &::before {
+                    position: absolute;
+                    top:-3px;
+                    left: var(--data-progress);
+                    width: 20px;
+                    height: 20px;
+                    content: '';
+                    background-color: $text-light;
+                    border-radius: 15px;
+                }
+                &::after {
+                    position: absolute;
+                    top:0;
+                    left:0;
+                    content: "";
+                    width: attr(data-progress);
+                    height: 15px;
+                    background-color: $text-light;
+                    border-radius: 15px;
+                }
             }
+        }
+        .text-full {
+            padding-top: 20px;
+            overflow: scroll;
+            display: flex;
+            flex-direction: column;
+            .receiver,
+            .sender {
+                display: flex;
+                width: 100%;
+                position: relative;
+                p {
+                    width: 70%;
+                    padding: 5px 10px;
+                    margin: 8px 25px;  
+                    font-weight: bolder; 
+                    &::after {
+                        position: absolute;
+                        top: 8px;
+                        content: '';
+                        width: 25px;
+                        height: 25px;
+                        background-color: #fff;
+                    }
+                }
+            }
+            .receiver {
+                justify-content: flex-start;
+                p {
+                    background-color: $chat-sender;
+                    &::after {
+                        left: 0px;
+                        background-color: $chat-sender;
+                        clip-path: polygon(0 0, 100% 100%, 100% 0);
 
+                    }
+                }
+            }
+            .sender {
+                justify-content: flex-end;
+                p {
+                    background-color: $chat-receiver;
+                    color: #fff;
+                    &::after {
+                        right: 0px;
+                        background-color: $chat-receiver;
+                        clip-path: polygon(0 0, 0 100%, 100% 0);
+
+                    }
+                }
+            }
         }
     }
 }
+
 @media (min-width: 1024px) {
     .messages-content {
         grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: 
-            "messages-list messages-text messages-text";
+        grid-template-areas: "messages-list messages-text messages-text";
         gap: 1rem;
         .messages-list {
             max-height: 500px;
         }
     }
-    
 }
+
 @media (max-width: 1024px) {
     .messages-content {
         .messages-list {
