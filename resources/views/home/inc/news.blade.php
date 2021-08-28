@@ -58,6 +58,6 @@
       @endforeach
 
     </div>
-    <a href="" class="btn btn-w-border btn-allNews">{{__('home.news.moreNews')}}</a>
+    <a href="{{ route('article.index') }}" class="btn btn-w-border btn-allNews">{{__('home.news.moreNews')}}</a>
   </aside>
 </div>
