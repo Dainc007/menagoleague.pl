@@ -1,5 +1,5 @@
 <div class="season-topAsists">
-    <h2>TOP ASISTS</h2>
+    <h2>{{__('season.asists')}}</h2>
 
     <div class="topsAndCards-info">
         <div class="legend">
