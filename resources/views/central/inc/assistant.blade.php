@@ -17,7 +17,7 @@
                     <div class="team-mailbox-date">{{now()}}</div>
 
                     <div class="message">
-                        @include('inc.tutorialForm')
+                        @include('central.inc.tutorialForm')
                     </div>
                 </div>
 
