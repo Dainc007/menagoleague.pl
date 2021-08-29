@@ -48,7 +48,14 @@
 @else
 
 <p class="mb-2"><b>{{ __('central.tutorial.verify') }}</b></p>
-<p>{{ __('central.tutorial.result') }} <b><i>{{ $user->tutorial->status }}</i></b></p>
+<p>{{ __('central.tutorial.result') }}
+    <b><i>
+            {{__('central.tutorial.results.' . $user->tutorial->status  )}}
+        </i></b>
+</p>
+        @if($user->tutorial->status == 'rejected')
+        <p> {{ __('central.tutorial.reason') }} {{$user->tutorial->message}}</p>
+        @endif
 
 @endif
 

@@ -58,8 +58,16 @@ return [
 
         'application'   => 'Przygotowałem dla Ciebie wniosek o przyznanie licencji trenerskiej.',
         'application2'  => 'Wypełnimy go, gdy już rozegrasz mecz.',
-        'verify'        => 'Twoja aplikacja jest w trakcie weryfikacji.',
-        'result'        => 'Wynik:',
+        'verify'        => 'Aplikowałeś o odnownienie licencji trenerskiej.',
+        'result'        => 'Aktualny Status Aplikcji:',
+
+        'results'       => [
+            'pending'   => 'W trakcie weryfikacji',
+            'passed'    => 'Zdana',
+            'rejected'  => 'Odrzucona',
+        ],
+
+        'reason'        => 'Powód: ',
         'here'          => 'TUTAJ',
 
         'raport'    => [
