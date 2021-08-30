@@ -1,5 +1,5 @@
 <div class="season-cleanSheets">
-    <h2>CLEAN SHEETS</h2>
+    <h2>{{__('season.sheets')}}</h2>
 
     <div class="topsAndCards-info">
         <div class="legend">

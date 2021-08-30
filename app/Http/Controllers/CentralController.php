@@ -50,7 +50,6 @@ class CentralController extends Controller
             'user'      => Auth::user(),
             'fixtures'  => $fixtures ?? '',
             'calendar'  => $calendar,
-            'competitions'  => Competition::getActiveCompetitions() ?? '',
         ]);
     }
 

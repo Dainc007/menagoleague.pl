@@ -1,5 +1,5 @@
 <div class="season-topScorers">
-    <h2>TOP SCORERS</h2>
+    <h2>{{__('season.scorers')}}</h2>
 
     <div class="topsAndCards-info">
         <div class="legend">

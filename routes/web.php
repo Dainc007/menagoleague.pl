@@ -128,6 +128,9 @@ Route::prefix('/articles')->group(function () {
     Route::get('/create', [App\Http\Controllers\ArticleController::class, 'create'])
         ->name('article.create')->middleware('administrator');
 
+    Route::get('/all', [App\Http\Controllers\ArticleController::class, 'index'])
+        ->name('article.index');
+
     Route::get('/{article}', [App\Http\Controllers\ArticleController::class, 'show'])
         ->name('article.show');
 

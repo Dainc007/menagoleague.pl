@@ -22,7 +22,6 @@ class HomeController extends Controller
             'numOfTeams'       => Team::where('is_active', true)->count(),
             'games'            => Fixture::where('date', '>=', now()->subDays(7))
                 ->where('date', '<=', now()->addDays(7))->get(),
-            'competitions'  => Competition::getActiveCompetitions(),
         ]);
     }
 
