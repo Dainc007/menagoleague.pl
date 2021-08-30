@@ -17,9 +17,8 @@
                     <span class="material-icons">arrow_drop_down</span>
                 </a>
                 <div class="dropdown-menu">
-
-
-                    @foreach(config('nav.activeCompetitions') as $key => $value)
+                    
+                    @foreach($activeCompetitions as $key => $value)
                     <a href="{{ route('competition.show', $value ?? '0') }}">{{ __('nav.mainNav.' . $key) }}</a>
                     @endforeach
 
