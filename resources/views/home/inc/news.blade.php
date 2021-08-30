@@ -31,7 +31,7 @@
               </div>
               <div class="modal-body">
                 <img src="{{url('/images/6.png')}}" alt="" />
-                <h5>Source: <small>Sky Sports Menago 02.08.2021r</small></h5>
+                <h5><span>Source: <small>Sky Sports Menago </small></span>  <small>02.08.2021r</small></h5>
 
                 <p> {{$article->content}}</p>
               </div>

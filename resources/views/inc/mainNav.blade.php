@@ -18,9 +18,9 @@
                 </a>
                 <div class="dropdown-menu">
 
-                    @foreach($competitions as $key => $value)
+                    {{-- @foreach($competitions as $key => $value)
                     <a href="{{ route('competition.show', $value ?? '0') }}">{{ __('nav.mainNav.' . $key) }}</a>
-                    @endforeach
+                    @endforeach --}}
 
                 </div>
             </div>

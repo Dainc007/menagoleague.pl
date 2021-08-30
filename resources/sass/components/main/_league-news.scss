@@ -10,6 +10,20 @@
     padding: 25px;
     border-radius: 5px;
     box-shadow: inset 0px -4px 5px rgba(176, 176, 176, 25%);
+
+    .modal-body {
+      padding-bottom: 2rem;
+
+      h5 {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      p {
+        text-align: justify;
+        text-justify: inter-word;
+      }
+    }
   }
 
   .league-news-h {

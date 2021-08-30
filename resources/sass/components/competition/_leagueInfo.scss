@@ -59,13 +59,12 @@
       }
 
       .item {
-        &:nth-of-type(2),
-        &:nth-of-type(3),
-        &:nth-of-type(4),
-        &:nth-of-type(5) {
-          .ID {
-            background-color: #0092c1;
-            color: white;
+        @for $i from 2 to 5 {
+          &:nth-of-type(#{$i}) {
+            .ID {
+              background-color: #0092c1;
+              color: white;
+            }
           }
         }
 

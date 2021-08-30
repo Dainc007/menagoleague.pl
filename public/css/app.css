@@ -11067,6 +11067,17 @@ a .btn-discord img {
   border-radius: 5px;
   box-shadow: inset 0px -4px 5px rgba(176, 176, 176, 0.25);
 }
+.content .league-news .modal-body {
+  padding-bottom: 2rem;
+}
+.content .league-news .modal-body h5 {
+  display: flex;
+  justify-content: space-between;
+}
+.content .league-news .modal-body p {
+  text-align: justify;
+  text-justify: inter-word;
+}
 .content .league-news-h {
   display: flex;
   justify-content: space-between;
@@ -11428,7 +11439,15 @@ a .btn-discord img {
   width: 80%;
   padding-left: 10px;
 }
-.leagueInfo .table .team-info .item:nth-of-type(2) .ID, .leagueInfo .table .team-info .item:nth-of-type(3) .ID, .leagueInfo .table .team-info .item:nth-of-type(4) .ID, .leagueInfo .table .team-info .item:nth-of-type(5) .ID {
+.leagueInfo .table .team-info .item:nth-of-type(2) .ID {
+  background-color: #0092c1;
+  color: white;
+}
+.leagueInfo .table .team-info .item:nth-of-type(3) .ID {
+  background-color: #0092c1;
+  color: white;
+}
+.leagueInfo .table .team-info .item:nth-of-type(4) .ID {
   background-color: #0092c1;
   color: white;
 }
