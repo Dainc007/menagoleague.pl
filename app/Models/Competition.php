@@ -40,7 +40,7 @@ class Competition extends Model
 
     public static function getActiveCompetitions()
     {
-        foreach (LEAGUE::AVAILABLE_REGIONS as $region) {
+        foreach (League::AVAILABLE_REGIONS as $region) {
             $id = League::where('region', $region)->where('type', 'league')->value('id');
             $competitions[strtolower($region)] = Competition::where(
                 'league_id',
