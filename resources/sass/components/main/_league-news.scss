@@ -72,15 +72,13 @@
     background: linear-gradient(0deg, rgba(48, 100, 36, 0.9) 0%, rgba(62, 120, 48, 0.9) 33%, rgba(91, 161, 73, 0) 100%);
     position: absolute;
     bottom: 0;
+    padding-top: 50px;
   }
 
   .league-news-item-p {
     padding: 20px;
     font-size: 1em;
     color: white;
-    position: absolute;
-    bottom: 0;
-    left: 0;
   }
 
   @media (min-width: 425px) {

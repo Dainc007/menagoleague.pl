@@ -15,8 +15,10 @@
       @foreach ($articles as $article)
       <div class="league-news-item" data-toggle="modal" data-target="#exampleModalLong{{$article->id}}">
         <img class="league-news-item-img" src="{{url('/images/'. rand(1,8) .'.png')}}" alt="" />
-        <div class="league-news-item-shadow"></div>
-        <p class="league-news-item-p">{{$article->title}}</p>
+        <div class="league-news-item-shadow">
+          <p class="league-news-item-p">{{$article->title}}</p>
+        </div>
+        
 
         <div class="modal fade" id="exampleModalLong{{$article->id}}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-lg" role="document">
