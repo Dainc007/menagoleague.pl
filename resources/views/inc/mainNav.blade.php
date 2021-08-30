@@ -18,7 +18,10 @@
                 </a>
                 <div class="dropdown-menu">
 
-                    
+
+                    @foreach(config('nav.activeCompetitions') as $key => $value)
+                    <a href="{{ route('competition.show', $value ?? '0') }}">{{ __('nav.mainNav.' . $key) }}</a>
+                    @endforeach
 
                 </div>
             </div>
