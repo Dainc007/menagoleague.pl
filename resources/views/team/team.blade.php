@@ -12,10 +12,11 @@
 @endif
 
 @if ($user->isManager())
-<h6>Obecnie nie jesteś zatrudniony. Przejąć klub lub złozyc wniosek o zalozenie nowego mozesz <a href="">TUTAJ</a>
+<h6> {{__('team.noJob')}} <a href="{{route('help.tutorial') }}">{{__('team.here')}}</a>
 </h6>
 @else
-<h6>Nie jesteś licencjonowanym trenerem. O tym jak zdobyć licencję i przejąć druzyne przeczytasz <a href="">TUTAJ</a></h6>
+<h6>{{__('team.noLicence')}}
+     <a href="{{route('help.tutorial') }}">{{__('team.here')}}</a></h6>
 @endif
 
 

@@ -6,9 +6,9 @@
       <!-- 1 -->
       <div class="gameplay-overview-item">
         <img src="{{ asset('storage/gameplay/central.png')}}" alt="central" />
-        <h3>Intuicyjny Design</h3>
+        <h3>{{__('home.gameplay.1.header')}}</h3>
         <p>
-          Menu uzytkownika zostało stworzone i zainspirowne menu w karierze w Fifie.
+        {{__('home.gameplay.1.body')}}
         </p>
       </div>
       <!-- 1 -->
@@ -16,38 +16,33 @@
       <!-- 1 -->
       <div class="gameplay-overview-item">
         <img src="{{ asset('storage/gameplay/team.png')}}" alt="team" />
-        <h3>Zarzadzaj Zespołem</h3>
+        <h3>{{__('home.gameplay.2.header')}}</h3>
         <p>
-          Strona została wyposazona w przejrzysty interfejs zarzadzania zespołem, oferujący masę moliwości. Bądź dla swoich piłkarzy niczym ojciec i pomóz
-          im w rozwoju kariery lub przedkładaj losy klubu lub własne interesy.
-          Rozmawiaj z piłkarzami, negocjuj warunki kontraktów,
-          wybierz kapitana, kupuj, sprzedawaj i wiele, wiele więcej.
+        {{__('home.gameplay.2.body')}}
         </p>
       </div>
 
       <div class="gameplay-overview-item">
         <img src="{{ asset('storage/gameplay/season.png')}}" alt="season" />
-        <h3>Przeglądaj Pozostałe Ligi</h3>
+        <h3>{{__('home.gameplay.3.header')}}</h3>
         <p>
-          Korzystaj z łatwego przeglądu statystyk zarówno własnych rozgrywek jak i swoich znajomych grających w innych ligach.
+        {{__('home.gameplay.3.body')}}
         </p>
       </div>
 
       <div class="gameplay-overview-item">
         <img src="{{ asset('storage/gameplay/office.png')}}" alt="office" />
-        <h3>Wygodne zarządzanie zespołem</h3>
+        <h3>{{__('home.gameplay.4.header')}}</h3>
         <p>
-          Przeglądaj finanse klubu i bez trudu zarządzaj własną karierą
+        {{__('home.gameplay.4.body')}}
         </p>
       </div>
 
       <div class="gameplay-overview-item">
         <img src="{{ asset('storage/gameplay/calendar.png')}}" alt="office" />
-        <h3>Terminarz dostosowany do Ciebie</h3>
+        <h3>{{__('home.gameplay.5.header')}}</h3>
         <p>
-          Menago League choć zawiera statyczne godziny spotkań, oferuje równiez mozliwość przekładania meczów
-          i dostosowywania ich do własnego trybu dnia. Jeśli potrafisz wygospodarować czas na 2-3 mecze w tygodniu,
-          zapraszamy!
+        {{__('home.gameplay.5.body')}}
         </p>
       </div>
 

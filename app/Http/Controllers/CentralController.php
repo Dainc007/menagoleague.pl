@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Competition;
 use Carbon\Carbon;
 use Carbon\CarbonImmutable;
 use Carbon\CarbonPeriod;

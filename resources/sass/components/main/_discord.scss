@@ -10,6 +10,11 @@
   background-color: rgb(99, 90, 153);
   font-weight: bold;
   color: whitesmoke;
+
+  &:first-of-type {
+    display: none;
+  }
+
   &:last-of-type {
     margin: 0;
   }
@@ -33,5 +38,13 @@ a {
     width: 30%;
     margin-right: 1rem;
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .discord {
+    &:first-of-type {
+      display: flex;
+    }
   }
 }

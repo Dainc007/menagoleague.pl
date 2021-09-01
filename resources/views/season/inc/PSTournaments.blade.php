@@ -1,11 +1,11 @@
 <div class="season-PSTournaments section-disabled">
-    <h2>Pre-Season Tournaments</h2>
+    <h2>{{__('season.pre-season.header')}}</h2>
 
     <p>Coming soon...</p>
 
-    {{-- <div class="PSTournaments-content">
+    <div class="PSTournaments-content">
 
-        <button>Dołącz</button>
-        <button>Stwórz</button>
-    </div> --}}
+        <button>{{__('season.pre-season.join')}}</button>
+        <button>{{__('season.pre-season.create')}}</button>
+    </div>
 </div>

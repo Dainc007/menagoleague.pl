@@ -1,5 +1,5 @@
 <div class="season-cards">
-    <h2>CARDS</h2>
+    <h2>{{__('season.cards')}}</h2>
 
     <div class="topsAndCards-info">
         <div class="legend">

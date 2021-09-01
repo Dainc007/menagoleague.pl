@@ -37,4 +37,19 @@ class Competition extends Model
     {
         return $this->belongsTo(League::class);
     }
+
+    public static function getActiveCompetitions()
+    {
+        foreach (League::AVAILABLE_REGIONS as $region) {
+            $id = League::where('region', $region)->where('type', 'league')->value('id');
+            $competitions[strtolower($region)] = Competition::where(
+                'league_id',
+                $id
+            )
+                ->where('status', 'active')
+                ->orderByDesc('id')->first();
+        }
+
+        return $competitions;
+    }
 }

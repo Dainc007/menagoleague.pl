@@ -56,21 +56,21 @@
 }
 
 @media (min-width: 768px) {
-  .menagoleague-stats-container {
-    margin-bottom: 0 !important;
-  }
-
   .menagoleague-stats-p {
     font-size: 1em;
   }
 
   .menagoleague-stats {
-    width: calc(40% - 2rem);
+    width: calc(70% - 2rem);
     margin-right: 1rem;
     margin-bottom: 0;
 
     h2 {
       font-size: 1.1em;
+    }
+
+    .menagoleague-stats-container {
+      margin-bottom: 0;
     }
   }
 
