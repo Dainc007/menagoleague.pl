@@ -199,7 +199,69 @@ previousOfferBtn.forEach((btn) => {
   });
 });
 
+// Messages 
+
 var progressBar = document.querySelectorAll('span[data-progress]');
 
-progressBar[0].style.setProperty('--data-progress', progressBar[0].getAttribute('data-progress'));
+progressBar[0].style.setProperty(
+  '--data-progress', 
+  `calc(
+    ${progressBar[0].getAttribute('data-progress')} - 5%)`
+  );
 
+progressBar[0].style.setProperty(
+  '--data-progress-bar',
+  progressBar[0].getAttribute('data-progress')
+);
+
+const messagesTabs = document.querySelectorAll('.messages-tabs > div'),
+  messageLists = document.querySelectorAll('.messages-list > div'),
+  messageDetails = document.querySelectorAll('.messages-text > div');
+
+messagesTabs.forEach((el, index) => {
+  el.addEventListener('click', () => {
+    messagesTabs.forEach((tab) => {
+      tab.classList.remove('active');
+    });
+    el.classList.add('active');
+    messageLists.forEach((message) => {
+      message.classList.add('hidden');
+    });
+    messageDetails.forEach((text)=>{
+      text.classList.add('hidden');
+    })
+    messageLists[index].classList.remove('hidden');
+    messageDetails[index].classList.remove('hidden');
+  })
+});
+
+const inboxTabs = document.querySelectorAll('.inbox-list > .inbox-tabs > div > a');
+console.log(inboxTabs);
+inboxTabs.forEach((item, index) => {
+  item.addEventListener('click', () => {
+    inboxTabs.forEach((el) => {
+      el.classList.remove('activeTab');
+      let messageType = item.getAttribute('message-type');
+      let hideMessages = document.querySelectorAll('.inbox-list > div[message-type]');
+      hideMessages.forEach((change) => {
+        change.classList.add('hide');
+      });
+      document.querySelectorAll(`.inbox-list > div[message-type="${messageType}"]`).forEach((show) => {
+        show.classList.remove('hide');
+      });
+    });
+    item.classList.add('activeTab');
+  })
+});
+
+const playersMessages = document.querySelectorAll('.players-list > div[message-id]');
+
+playersMessages.forEach((msg) => {
+  msg.addEventListener('click', () => {
+    playersMessages.forEach((all) => {
+      all.classList.remove('active');
+    })
+    msg.classList.add('active');
+    
+  });
+})

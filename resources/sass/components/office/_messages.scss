@@ -30,6 +30,7 @@
     .active {
         background-color: $text-gray;
         border-bottom: 5px solid $text-paleLeaf;
+        transition: background .5s;
         a {
             color: $text-paleLeaf;
             &:hover {
@@ -40,6 +41,9 @@
     div {
         padding: 9px 26px;
         position: relative;
+        &:hover {
+            cursor: pointer;
+        }
         span {
             position: absolute;
             top: 5px;
@@ -89,7 +93,7 @@
         .message-tabs {
             margin-bottom: 5px;
         }
-        .players-list {
+        .players-list, .inbox-list, .notifications-list {
             .message {
                 &:hover {
                     cursor: pointer;
@@ -132,169 +136,258 @@
                     }
                 }
             }
+            
+        }
+        .players-list, .inbox-list, .notifications-list {
+            display: block;
+            animation: fadeTab 0.8s;
+        }
+        .hidden {
+            display: none;
+        }
+        .inbox-list {
+            .inbox-tabs {
+                padding: 10px 5px;
+                display: flex;
+                div {
+                    margin: 5px 15px;
+                    a { 
+                        color: $text-gray;
+                        opacity: 0.5;
+                        text-transform: uppercase;
+                        transition: opacity .5s;
+                        &:hover {
+                            opacity: 1;
+                            text-decoration: none;
+                        }
+
+                    }
+                    .activeTab {
+                        opacity: 1;
+                        color: $text-olivine;
+                    }
+                }
+            }
+            .hide {
+                display: none;
+            }
+        }
+        @keyframes fadeTab {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
     }
     .messages-text {
         display: flex;
         flex-direction: column;
-        .text-entry {
-            background-color: $sectionColor;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            padding: 10px 25px;
+        .hidden {
+            display: none!important;
+            opacity: 0;
         }
-        .player-info {
+        .active {
+            display: block;
+            opacity: 1;
+            
+        }
+        .messages-chat {
             display: flex;
-            .player-overall {
+            flex-direction: column;
+            overflow: scroll;
+            .text-entry {
+                background-color: $sectionColor;
                 display: flex;
-                flex-direction: column;
-                .overall {
-                    font-size: 34px;
-                    color: $text-darker;
-                    font-weight: bolder;
-                }
+                flex-wrap: wrap;
+                justify-content: space-between;
+                padding: 10px 25px;
             }
-            .player-photo {
-                height: 75px;
-                padding: 0px 15px;
-                img {
-                    height: 100%;
-                }
-            }
-            .player-about {
-                p,
-                span {
-                    text-transform: uppercase;
-                }
+            .player-info {
                 display: flex;
-                flex-direction: column;
-                height: 100%;
-                justify-content: space-around;
-                .surname {
-                    font-weight: bolder;
-                    font-size: 24px;
-                    line-height: 18px;
-                }
-                .position {
+                .player-overall {
                     display: flex;
-                    .circle {
-                        width: 13px;
-                        height: 13px;
-                        border-radius: 50%;
-                        margin-right: 9px;
+                    flex-direction: column;
+                    .overall {
+                        font-size: 34px;
+                        color: $text-darker;
+                        font-weight: bolder;
                     }
-                    .yellow {
-                        background-color: #ffc107;
+                }
+                .player-photo {
+                    height: 75px;
+                    padding: 0px 15px;
+                    img {
+                        height: 100%;
                     }
-                    .orange {
-                        background-color: #ff8b07;
+                }
+                .player-about {
+                    p,
+                    span {
+                        text-transform: uppercase;
                     }
-                    .green {
-                        background-color: #28a745;
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    justify-content: space-around;
+                    .surname {
+                        font-weight: bolder;
+                        font-size: 24px;
+                        line-height: 18px;
                     }
-                    .blue {
-                        background-color: #007bff;
+                    .position {
+                        display: flex;
+                        .circle {
+                            width: 13px;
+                            height: 13px;
+                            border-radius: 50%;
+                            margin-right: 9px;
+                        }
+                        .yellow {
+                            background-color: #ffc107;
+                        }
+                        .orange {
+                            background-color: #ff8b07;
+                        }
+                        .green {
+                            background-color: #28a745;
+                        }
+                        .blue {
+                            background-color: #007bff;
+                        }
+                        .shortcut {
+                            position: relative;
+                            margin-right: 15px;
+                            &::after {
+                                position: absolute;
+                                content: '|';
+                                right: -9px;
+                                top: -1px;
+                            }
+                        }
                     }
-                    .shortcut {
-                        position: relative;
-                        margin-right: 15px;
+                }
+            }
+            .player-morals {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                min-width: 140px;
+                align-items: center;
+                text-transform: uppercase;
+                .progress-bar {
+                    width: 100%;
+                    background-color: $morale-bar;
+                    height: 15px;
+                    position: relative;
+                    border-radius: 15px;
+                    --data-progress: -5%;
+                    overflow: inherit;
+                    &::before {
+                        position: absolute;
+                        top:-3px;
+                        left: var(--data-progress);
+                        width: 20px;
+                        height: 20px;
+                        content: '';
+                        background-color: $text-light;
+                        border-radius: 15px;
+                        border: 1px solid $sectionColor;
+                        z-index:2;
+                    }
+                    &::after {
+                        position: absolute;
+                        top:0;
+                        left:0;
+                        content: "";
+                        width: var(--data-progress-bar);
+                        height: 15px;
+                        background-color: $text-light;
+                        border-radius: 15px;
+                    }
+                }
+            }
+            .text-full {
+                padding-top: 20px;
+                overflow: scroll;
+                display: flex;
+                flex-direction: column;
+                .receiver,
+                .sender {
+                    display: flex;
+                    width: 100%;
+                    position: relative;
+                    p {
+                        width: 70%;
+                        padding: 5px 10px;
+                        margin: 8px 25px;  
+                        font-weight: bolder; 
                         &::after {
                             position: absolute;
-                            content: '|';
-                            right: -9px;
-                            top: -1px;
+                            top: 8px;
+                            content: '';
+                            width: 25px;
+                            height: 25px;
+                            background-color: #fff;
+                        }
+                    }
+                }
+                .receiver {
+                    justify-content: flex-start;
+                    p {
+                        background-color: $chat-sender;
+                        &::after {
+                            left: 0px;
+                            background-color: $chat-sender;
+                            clip-path: polygon(0 0, 100% 100%, 100% 0);
+    
+                        }
+                    }
+                }
+                .sender {
+                    justify-content: flex-end;
+                    p {
+                        background-color: $chat-receiver;
+                        color: #fff;
+                        &::after {
+                            right: 0px;
+                            background-color: $chat-receiver;
+                            clip-path: polygon(0 0, 0 100%, 100% 0);
+    
                         }
                     }
                 }
             }
         }
-        .player-morals {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            min-width: 140px;
-            align-items: center;
-            text-transform: uppercase;
-            .progress-bar {
-                width: 100%;
-                background-color: $morale-bar;
-                height: 15px;
-                position: relative;
-                border-radius: 15px;
-                --data-progress: 0%;
-                overflow: inherit;
-                &::before {
-                    position: absolute;
-                    top:-3px;
-                    left: var(--data-progress);
-                    width: 20px;
-                    height: 20px;
-                    content: '';
-                    background-color: $text-light;
-                    border-radius: 15px;
+        .messages-inbox {
+            overflow: scroll;
+            .text-full {
+                display: none;
+                padding: 0px 20px;
+                p {
+                    margin: 10px 0px;
+                    font-size: 18px;
                 }
-                &::after {
-                    position: absolute;
-                    top:0;
-                    left:0;
-                    content: "";
-                    width: attr(data-progress);
-                    height: 15px;
-                    background-color: $text-light;
-                    border-radius: 15px;
+                button {
+                    margin-top: 20px;
+                    margin-bottom: 50px;
                 }
+            }
+            .active {
+                display: block;
+                animation: fadeMessage .5s;
             }
         }
-        .text-full {
-            padding-top: 20px;
-            overflow: scroll;
-            display: flex;
-            flex-direction: column;
-            .receiver,
-            .sender {
-                display: flex;
-                width: 100%;
-                position: relative;
-                p {
-                    width: 70%;
-                    padding: 5px 10px;
-                    margin: 8px 25px;  
-                    font-weight: bolder; 
-                    &::after {
-                        position: absolute;
-                        top: 8px;
-                        content: '';
-                        width: 25px;
-                        height: 25px;
-                        background-color: #fff;
-                    }
-                }
+        .messages-notifications {
+            .text-full {
+                transition: .5s;
+                opacity: 0;
+                display: none;
             }
-            .receiver {
-                justify-content: flex-start;
-                p {
-                    background-color: $chat-sender;
-                    &::after {
-                        left: 0px;
-                        background-color: $chat-sender;
-                        clip-path: polygon(0 0, 100% 100%, 100% 0);
-
-                    }
-                }
-            }
-            .sender {
-                justify-content: flex-end;
-                p {
-                    background-color: $chat-receiver;
-                    color: #fff;
-                    &::after {
-                        right: 0px;
-                        background-color: $chat-receiver;
-                        clip-path: polygon(0 0, 0 100%, 100% 0);
-
-                    }
-                }
+            .active {
+                opacity: 1;
+                display: block;
             }
         }
     }
