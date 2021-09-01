@@ -198,3 +198,8 @@ previousOfferBtn.forEach((btn) => {
     previousOffer(btn);
   });
 });
+
+var progressBar = document.querySelectorAll('span[data-progress]');
+
+progressBar[0].style.setProperty('--data-progress', progressBar[0].getAttribute('data-progress'));
+
