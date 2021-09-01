@@ -29,9 +29,6 @@
             <img src="/images/placeholder-person.svg" alt="">
             <div class="info">
                 <div class="trophies">
-                    @php
-                        $how = rand(1, 8);
-                    @endphp
                     @for ($i = 1; $i <= 8; $i++)
                         <div class="trophy" data-toggle="tooltip" data-placement="top"
                             title='Gets {{ rand(1, 10) }} trophies!'>
