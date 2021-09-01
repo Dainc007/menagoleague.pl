@@ -11994,52 +11994,194 @@ a .btn-discord img {
 }
 .playerInfo {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   padding: 0 10px;
   background-color: rgba(255, 253, 253, 0.7);
   margin-top: 3rem;
   margin-bottom: 2rem;
 }
-.playerInfo .player {
+.playerInfo .team {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.playerInfo .team .cost {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 1rem 1rem 1rem 0;
+  background-color: #bcd4b6;
+  border-radius: 5px;
+  padding: 10px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+.playerInfo .team .cost .price {
+  font-size: 2.5em;
+}
+.playerInfo .content {
+  display: none;
+}
+.playerInfo .r-content {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid #144f06;
+}
+.playerInfo .r-content .player {
   display: flex;
 }
-.playerInfo .player .info {
+.playerInfo .r-content .info {
   padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-.playerInfo .player .info .name {
+.playerInfo .r-content .info .name {
   font-weight: 600;
   font-size: 1.5em;
 }
-.playerInfo .player .info > div {
+.playerInfo .r-content .info > div {
   font-size: 0.9em;
+}
+.playerInfo .r-content .trophies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+}
+.playerInfo .r-content .trophies .trophy {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.playerInfo .r-content .trophies .trophy:last-of-type {
+  margin-right: 0;
+}
+.playerInfo .r-content .trophies img {
+  width: 35px;
+  -o-object-fit: unset;
+     object-fit: unset;
+}
+.playerInfo .r-content .trophies .number {
+  position: absolute;
+  bottom: -5px;
+  right: -3px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #144f06;
+  background-color: #558c47;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
 }
 .playerInfo img {
   width: 57px;
-  height: 65px;
-  -o-object-fit: cover;
-     object-fit: cover;
   margin: auto 0;
 }
 
 @media (min-width: 768px) {
   .playerInfo {
-    padding: 0 50px;
+    padding: 0 3rem;
   }
-  .playerInfo .player .info {
+  .playerInfo .r-content .info {
     padding: 20px;
   }
-  .playerInfo .player .info .name {
+  .playerInfo .r-content .info .name {
     font-size: 2em;
   }
-  .playerInfo .player .info > div {
+  .playerInfo .r-content .info > div {
+    font-size: 1em;
+  }
+  .playerInfo .r-content .trophies {
+    margin-bottom: 10px;
+  }
+  .playerInfo .r-content .trophies .trophy {
+    margin-right: 10px;
+  }
+  .playerInfo .r-content .trophies img {
+    width: 65px;
+  }
+  .playerInfo .r-content .trophies .number {
+    bottom: -10px;
+    right: -5px;
+    width: 28px;
+    height: 28px;
     font-size: 1em;
   }
   .playerInfo img {
     width: 84px;
-    height: 108px;
+  }
+}
+@media (min-width: 1024px) {
+  .playerInfo {
+    flex-direction: row;
+  }
+  .playerInfo .r-content {
+    display: none;
+  }
+  .playerInfo .content {
+    display: flex;
+    margin-bottom: 0;
+  }
+  .playerInfo .content .player {
+    display: flex;
+  }
+  .playerInfo .content .info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .playerInfo .content .info .name {
+    font-weight: 600;
+    font-size: 2em;
+  }
+  .playerInfo .content .info > div {
+    font-size: 0.9em;
+  }
+  .playerInfo .content .info .trophies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 1rem 0;
+  }
+  .playerInfo .content .info .trophies .trophy {
+    position: relative;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .playerInfo .content .info .trophies .trophy:last-of-type {
+    margin-right: 0;
+  }
+  .playerInfo .content .info .trophies img {
+    width: 55px;
+    -o-object-fit: unset;
+       object-fit: unset;
+  }
+  .playerInfo .content .info .trophies .number {
+    position: absolute;
+    bottom: -10px;
+    right: -5px;
+    width: 28px;
+    height: 28px;
+    font-size: 1em;
+    border-radius: 50%;
+    border: 2px solid #144f06;
+    background-color: #558c47;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .playerInfo img {
+    width: 84px;
   }
 }
 .transfers .table .legend > div {
@@ -13454,6 +13596,293 @@ a .btn-discord img {
   font-size: 21px;
 }
 
+.messages-list {
+  grid-area: messages-list;
+}
+
+.messages-text {
+  grid-area: messages-text;
+}
+
+.messages-tabs {
+  display: flex;
+  margin: 10px 0px;
+}
+.messages-tabs .active {
+  background-color: #494949;
+  border-bottom: 5px solid #bcd4b6;
+}
+.messages-tabs .active a {
+  color: #bcd4b6;
+}
+.messages-tabs .active a:hover {
+  text-decoration: none;
+}
+.messages-tabs div {
+  padding: 9px 26px;
+  position: relative;
+}
+.messages-tabs div span {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 13px;
+  background-color: #ff0000;
+  height: 20px;
+  width: 20px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.messages-tabs div a {
+  color: #0a2403;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.messages-content {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  gap: 20px;
+  grid-template-areas: "messages-list" "messages-text";
+}
+.messages-content .messages-list {
+  background-color: rgba(255, 253, 253, 0.7);
+}
+.messages-content .messages-list {
+  overflow: scroll;
+}
+.messages-content .messages-list .messages-controls {
+  display: flex;
+  justify-content: space-between;
+}
+.messages-content .messages-list .messages-controls a {
+  margin: 0px 5px;
+}
+.messages-content .messages-text {
+  min-height: 500px;
+  max-height: 500px;
+}
+.messages-content .messages-list .message-tabs {
+  margin-bottom: 5px;
+}
+.messages-content .messages-list .players-list .message {
+  padding: 10px 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.messages-content .messages-list .players-list .message:hover {
+  cursor: pointer;
+}
+.messages-content .messages-list .players-list .message .message-logo img {
+  width: 50px;
+}
+.messages-content .messages-list .players-list .message .message-details {
+  display: flex;
+  flex-direction: column;
+}
+.messages-content .messages-list .players-list .message .message-details .title span {
+  font-weight: 700;
+  color: #0a2403;
+}
+.messages-content .messages-list .players-list .active {
+  background-color: #494949;
+}
+.messages-content .messages-list .players-list .active .message-details .title span {
+  color: #bcd4b6;
+}
+.messages-content .messages-list .players-list .active .message-details .info {
+  color: #fff;
+}
+.messages-content .messages-list .players-list .active .message-date span {
+  color: #fff;
+}
+.messages-content .messages-text {
+  display: flex;
+  flex-direction: column;
+}
+.messages-content .messages-text .text-entry {
+  background-color: rgba(255, 253, 253, 0.7);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px 25px;
+}
+.messages-content .messages-text .player-info {
+  display: flex;
+}
+.messages-content .messages-text .player-info .player-overall {
+  display: flex;
+  flex-direction: column;
+}
+.messages-content .messages-text .player-info .player-overall .overall {
+  font-size: 34px;
+  color: #0a2403;
+  font-weight: bolder;
+}
+.messages-content .messages-text .player-info .player-photo {
+  height: 75px;
+  padding: 0px 15px;
+}
+.messages-content .messages-text .player-info .player-photo img {
+  height: 100%;
+}
+.messages-content .messages-text .player-info .player-about {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+}
+.messages-content .messages-text .player-info .player-about p,
+.messages-content .messages-text .player-info .player-about span {
+  text-transform: uppercase;
+}
+.messages-content .messages-text .player-info .player-about .surname {
+  font-weight: bolder;
+  font-size: 24px;
+  line-height: 18px;
+}
+.messages-content .messages-text .player-info .player-about .position {
+  display: flex;
+}
+.messages-content .messages-text .player-info .player-about .position .circle {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  margin-right: 9px;
+}
+.messages-content .messages-text .player-info .player-about .position .yellow {
+  background-color: #ffc107;
+}
+.messages-content .messages-text .player-info .player-about .position .orange {
+  background-color: #ff8b07;
+}
+.messages-content .messages-text .player-info .player-about .position .green {
+  background-color: #28a745;
+}
+.messages-content .messages-text .player-info .player-about .position .blue {
+  background-color: #007bff;
+}
+.messages-content .messages-text .player-info .player-about .position .shortcut {
+  position: relative;
+  margin-right: 15px;
+}
+.messages-content .messages-text .player-info .player-about .position .shortcut::after {
+  position: absolute;
+  content: "|";
+  right: -9px;
+  top: -1px;
+}
+.messages-content .messages-text .player-morals {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-width: 140px;
+  align-items: center;
+  text-transform: uppercase;
+}
+.messages-content .messages-text .player-morals .progress-bar {
+  width: 100%;
+  background-color: rgba(156, 156, 156, 0.6);
+  height: 15px;
+  position: relative;
+  border-radius: 15px;
+  --data-progress: 0%;
+  overflow: inherit;
+}
+.messages-content .messages-text .player-morals .progress-bar::before {
+  position: absolute;
+  top: -3px;
+  left: var(--data-progress);
+  width: 20px;
+  height: 20px;
+  content: "";
+  background-color: #72e356;
+  border-radius: 15px;
+}
+.messages-content .messages-text .player-morals .progress-bar::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: attr(data-progress);
+  height: 15px;
+  background-color: #72e356;
+  border-radius: 15px;
+}
+.messages-content .messages-text .text-full {
+  padding-top: 20px;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+}
+.messages-content .messages-text .text-full .receiver,
+.messages-content .messages-text .text-full .sender {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+.messages-content .messages-text .text-full .receiver p,
+.messages-content .messages-text .text-full .sender p {
+  width: 70%;
+  padding: 5px 10px;
+  margin: 8px 25px;
+  font-weight: bolder;
+}
+.messages-content .messages-text .text-full .receiver p::after,
+.messages-content .messages-text .text-full .sender p::after {
+  position: absolute;
+  top: 8px;
+  content: "";
+  width: 25px;
+  height: 25px;
+  background-color: #fff;
+}
+.messages-content .messages-text .text-full .receiver {
+  justify-content: flex-start;
+}
+.messages-content .messages-text .text-full .receiver p {
+  background-color: rgba(188, 212, 182, 0.75);
+}
+.messages-content .messages-text .text-full .receiver p::after {
+  left: 0px;
+  background-color: rgba(188, 212, 182, 0.75);
+  -webkit-clip-path: polygon(0 0, 100% 100%, 100% 0);
+          clip-path: polygon(0 0, 100% 100%, 100% 0);
+}
+.messages-content .messages-text .text-full .sender {
+  justify-content: flex-end;
+}
+.messages-content .messages-text .text-full .sender p {
+  background-color: rgba(73, 73, 73, 0.75);
+  color: #fff;
+}
+.messages-content .messages-text .text-full .sender p::after {
+  right: 0px;
+  background-color: rgba(73, 73, 73, 0.75);
+  -webkit-clip-path: polygon(0 0, 0 100%, 100% 0);
+          clip-path: polygon(0 0, 0 100%, 100% 0);
+}
+
+@media (min-width: 1024px) {
+  .messages-content {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "messages-list messages-text messages-text";
+    gap: 1rem;
+  }
+  .messages-content .messages-list {
+    max-height: 500px;
+  }
+}
+@media (max-width: 1024px) {
+  .messages-content .messages-list {
+    max-height: 350px;
+  }
+}
 .office-finances .office-title {
   padding-bottom: 10px;
 }
@@ -13511,6 +13940,9 @@ a .btn-discord img {
   border: 1px solid #ddd;
   text-align: left;
   padding: 4px;
+}
+.office-finances .finances .finances-view div table tr:not(:first-child) {
+  box-shadow: inset 2px 2px 15px #dcdcdc, inset -2px -2px 15px #dedede;
 }
 .office-finances .finances .finances-view div table tr:first-of-type {
   position: sticky;

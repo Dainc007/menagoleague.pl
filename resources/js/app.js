@@ -42,6 +42,10 @@ const app = new Vue({
 // Responsive menu
 // Main responsive menu
 
+$(function() {
+  $('[data-toggle="tooltip"]').tooltip();
+});
+
 const burgerMenu = document.querySelector('.burger-menu');
 const closeBurgerMenu = document.querySelector('.close-burger-menu');
 const responsiveMenu = document.querySelector('.responsive-menu');
@@ -202,4 +206,3 @@ previousOfferBtn.forEach((btn) => {
 var progressBar = document.querySelectorAll('span[data-progress]');
 
 progressBar[0].style.setProperty('--data-progress', progressBar[0].getAttribute('data-progress'));
-

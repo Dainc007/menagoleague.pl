@@ -1,13 +1,45 @@
 .playerInfo {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   padding: 0 10px;
   background-color: $sectionColor;
   margin-top: 3rem;
   margin-bottom: 2rem;
-
-  .player {
+ 
+  .team {
     display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+    .cost {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      margin: 1rem 1rem 1rem 0;
+      background-color: $text-paleLeaf;
+      border-radius: 5px;
+      padding: 10px;
+      height: max-content;
+
+      .price {
+        font-size: 2.5em;
+      }
+    }
+  }
+
+  .content {
+    display: none;
+  }
+
+  .r-content {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid $text-dark;
+    
+    .player {
+      display: flex;
+    }
 
     .info {
       padding: 15px;
@@ -24,21 +56,56 @@
         font-size: 0.9em;
       }
     }
+
+    .trophies {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      margin-top: 1rem;
+
+      .trophy {
+        position: relative;
+        width: max-content;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+
+      img {
+        width: 35px;
+        object-fit: unset;
+      }
+
+      .number {
+        position: absolute;
+        bottom: -5px;
+        right: -3px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 2px solid $text-dark;
+        background-color: $text-hippieGreen;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: .8em;
+      }
+    }
   }
 
   img {
     width: 57px;
-    height: 65px;
-    object-fit: cover;
     margin: auto 0;
   }
 }
 
 @media (min-width: 768px) {
   .playerInfo {
-    padding: 0 50px;
+    padding: 0 3rem;
 
-    .player {
+    .r-content {
       .info {
         padding: 20px;
 
@@ -50,11 +117,106 @@
           font-size: 1em;
         }
       }
+
+      .trophies {
+        margin-bottom: 10px;
+
+        .trophy {
+          margin-right: 10px;
+        }
+
+        img {
+          width: 65px;
+        }
+
+        .number {
+          bottom: -10px;
+          right: -5px;
+          width: 28px;
+          height: 28px;
+          font-size: 1em;
+        }
+      }
     }
 
     img {
       width: 84px;
-      height: 108px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .playerInfo {
+    flex-direction: row;
+
+    .r-content {
+      display: none;
+    }
+
+    .content {
+      display: flex;
+      margin-bottom: 0;
+
+      .player {
+        display: flex;
+      }
+
+      .info {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .name {
+          font-weight: 600;
+          font-size: 2em;
+        }
+
+        > div {
+          font-size: 0.9em;
+        }
+
+        .trophies {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+          margin: 1rem 0;
+
+          .trophy {
+            position: relative;
+            width: max-content;
+
+            &:last-of-type {
+              margin-right: 0;
+            }
+          }
+
+          img {
+            width: 55px;
+            object-fit: unset;
+          }
+
+          .number {
+            position: absolute;
+            bottom: -10px;
+            right: -5px;
+            width: 28px;
+            height: 28px;
+            font-size: 1em;
+            border-radius: 50%;
+            border: 2px solid $text-dark;
+            background-color: $text-hippieGreen;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+    }
+
+    img {
+      width: 84px;
     }
   }
 }
