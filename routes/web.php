@@ -1,9 +1,7 @@
 <?php
 
-use App\Models\Article;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\URL;
 
 /*
 |--------------------------------------------------------------------------
@@ -211,5 +209,3 @@ Route::prefix('/admin')->group(function () {
     Route::post('/jobApplications/respond/{id}', [App\Http\Controllers\AdminController::class, 'JobApplicationRespond'])
         ->name('admin.jobApplication.respond')->middleware('administrator');
 });
-
-URL::forceScheme('https');
