@@ -1,4 +1,4 @@
-.playerInfo {
+.playerInfo, .teamInfo {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -42,6 +42,7 @@
       .name {
         font-weight: 600;
         font-size: 1.5em;
+        color: $text-dark;
       }
 
       > div {
@@ -52,7 +53,6 @@
     .trophies {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-evenly;
       margin-top: 1rem;
 
       .trophy {
@@ -104,9 +104,7 @@
 }
 
 @media (min-width: 768px) {
-  .playerInfo {
-    padding: 0 3rem;
-
+  .playerInfo, .teamInfo {
     .info {
       padding: 20px;
 
@@ -144,7 +142,7 @@
 }
 
 @media (min-width: 1024px) {
-  .playerInfo {
+  .playerInfo, .teamInfo {
     flex-direction: row;
 
     .r-content {
@@ -173,9 +171,7 @@
 }
 
 @media (min-width: 1440px) {
-  .playerInfo {
-    padding: 0 5rem;
-
+  .playerInfo, .teamInfo {
     .content {
       .info {
         .trophies {
@@ -189,11 +185,5 @@
         }
       }
     }
-  }
-}
-
-@media (min-width: 1660px) {
-  .playerInfo {
-    padding: 0 8rem;
   }
 }

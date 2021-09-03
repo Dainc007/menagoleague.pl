@@ -1,15 +1,26 @@
-Druzyna
+@extends('layouts.homeLayout')
+
+@section('title', '{{ $team->name }}')
+
+@section('content')
+
+    @include('team.inc.teamInfo')
+
+@endsection
+
+
+{{-- Druzyna
 {{$team->name}}
 ({{$team->device->name}})
 
 Manager:
-@if($team->user == null)
+@if ($team->user == null)
 Brak
 @else
 {{$team->user->name}}
 @endif
 
-@if($team->league !== null)
+@if ($team->league !== null)
 Rozgrywki {{$team->league->region}}{{$team->league->level}}
 <p>
     Aktualny sezon:
@@ -17,6 +28,6 @@ Rozgrywki {{$team->league->region}}{{$team->league->level}}
 </p>
 @endif
 
-@if($team->players !== null)
+@if ($team->players !== null)
 @include('team.myPlayers')
-@endif
+@endif --}}
