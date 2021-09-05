@@ -9,14 +9,20 @@ class League extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'id', 'region', 'type', 'level'
+    ];
+
     public const AVAILABLE_REGIONS = [
         'England'   => 'England',
-        'Germany' => 'Germany',
-        'France' => 'France',
-        'Italy' => 'Italy',
-        'Spain' => 'Spain',
-        'Poland' => 'Poland',
-        'Europe' => 'Europe',
+        'Germany'   => 'Germany',
+        'France'    => 'France',
+        'Italy'     => 'Italy',
+        'Spain'     => 'Spain',
+        'Poland'    => 'Poland',
+        'Portugal'  => 'Portugal',
+        'Nederland' => 'Nederland',
+        'Europe'    => 'Europe',
     ];
 
     public const AVAILABLE_LEVELS = [

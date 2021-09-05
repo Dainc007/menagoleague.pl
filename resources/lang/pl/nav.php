@@ -8,6 +8,10 @@ return [
         'spain'             => 'Hiszpania',
         'poland'            => 'Polska',
         'italy'             => 'Włochy',
+        'germany'           => 'Niemcy',
+        'portugal'          => 'Portugalia',
+        'france'            => 'Francja',
+        'nederland'         => 'Holandia',
         'europe'            => 'Liga Europy',
         'champions'         => 'Liga Mistrzów',
 

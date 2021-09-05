@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Competition;
 use Carbon\Carbon;
 use Carbon\CarbonImmutable;
 use Carbon\CarbonPeriod;
@@ -76,7 +77,7 @@ class CentralController extends Controller
 
         return view('central.inc.fullCalendar', [
             'calendar'  => $calendar,
-            'fixtures'  => $fixtures,
+            'fixtures'  => $fixtures ?? [],
             'week'      => ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
         ]);
     }

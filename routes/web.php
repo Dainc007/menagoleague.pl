@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\Article;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -30,6 +29,16 @@ Route::prefix('/central')->group(function () {
 
     Route::get('/calendar', [App\Http\Controllers\CentralController::class, 'calendar'])
         ->name('central.fullCalendar');
+});
+
+/* HELP */
+Route::prefix('/help')->group(function () {
+
+    Route::get('/rules', [App\Http\Controllers\HomeController::class, 'rules'])
+        ->name('rules');
+
+    Route::get('/faq', [App\Http\Controllers\HomeController::class, 'faq'])
+        ->name('faq');
 });
 
 /* User */
@@ -117,6 +126,9 @@ Route::prefix('/articles')->group(function () {
 
     Route::get('/create', [App\Http\Controllers\ArticleController::class, 'create'])
         ->name('article.create')->middleware('administrator');
+
+    Route::get('/all', [App\Http\Controllers\ArticleController::class, 'index'])
+        ->name('article.index');
 
     Route::get('/{article}', [App\Http\Controllers\ArticleController::class, 'show'])
         ->name('article.show');

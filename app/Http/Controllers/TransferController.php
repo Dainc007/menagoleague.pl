@@ -21,6 +21,12 @@ class TransferController extends Controller
             'transferList'  => Player::getTransferListedPlayers(),
             'freeAgentList' => Player::getFreeAgents(),
             'loanList'      => Player::getLoanListedPlayers(),
+            'roles'         => Player::AVAILABLE_ROLES,
+            'goals'         => array_merge(
+                Player::AVAILABLE_LEAGUE_GOALS,
+                Player::AVAILABLE_CUP_GOALS,
+                Player::AVAILABLE_EUROPE_GOALS
+            ),
         ]);
     }
 

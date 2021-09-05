@@ -143,12 +143,15 @@ a {
 @import 'components/main/main';
 @import 'components/competition/main'; /* Competition components*/
 @import 'components/players/main'; /* Players components*/
+@import 'components/teams/main'; /* Players components*/
 
 /* Game components */
 @import 'components/central/main'; /* Central components:*/
 @import 'components/calendar/calendar'; /* Calendar components */
 
 @import 'components/squad/main'; /* Squad components:*/
+
+@import 'components/transfers/main'; /* Transfers components:*/
 
 @import 'components/office/main'; /*Office components */
 

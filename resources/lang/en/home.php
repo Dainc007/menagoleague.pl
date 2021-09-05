@@ -43,6 +43,26 @@ return [
 
     'gameplay'  => [
         'title' => 'GAMEPLAY OVERVIEW',
+        '1' => [
+            'header'    => 'header',
+            'body'      => 'body',
+        ],
+        '2' => [
+            'header'    => 'header',
+            'body'      => 'body',
+        ],
+        '3' => [
+            'header'    => 'header',
+            'body'      => 'body',
+        ],
+        '4' => [
+            'header'    => 'header',
+            'body'      => 'body',
+        ],
+        '5' => [
+            'header'    => 'header',
+            'body'      => 'body',
+        ],
     ],
 
     'rights'    => [

@@ -70,7 +70,8 @@ class CompetitionController extends Controller
     public function show(Competition $competition)
     {
         return view('competition.show', [
-            'competition' => $competition
+            'competition' => $competition,
+            'competitions'  => Competition::getActiveCompetitions(),
         ]);
     }
 

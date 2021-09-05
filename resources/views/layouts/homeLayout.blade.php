@@ -40,7 +40,7 @@
     <div id="app">
         @include('inc.mainNav')
         <main class="py-2">
-            @if(Auth::check())
+            <!-- @if(Auth::check())
             <div class="container-fluid top-bar">
                 <div>
                     @include('inc.userShield')
@@ -49,9 +49,9 @@
                     @include('inc.userOptionsBar')
                 </div>
             </div>
-            @endif
+            @endif -->
 
-            <div class="container-fluid">
+           <!--  <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
                         @if(Auth::check())
@@ -59,7 +59,7 @@
                         @endif
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <div class="container">
                @yield('content')

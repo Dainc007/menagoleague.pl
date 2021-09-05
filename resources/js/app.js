@@ -42,11 +42,15 @@ const app = new Vue({
 // Responsive menu
 // Main responsive menu
 
+$(function() {
+  $('[data-toggle="tooltip"]').tooltip();
+});
+
 const burgerMenu = document.querySelector('.burger-menu');
 const closeBurgerMenu = document.querySelector('.close-burger-menu');
 const responsiveMenu = document.querySelector('.responsive-menu');
 
-burgerMenu.addEventListener('onclick', () => {
+burgerMenu.addEventListener('click', () => {
   const openResponsiveMenu = () => {
     if (responsiveMenu.style.display == 'none') {
       responsiveMenu.style.display = 'flex';
@@ -56,7 +60,7 @@ burgerMenu.addEventListener('onclick', () => {
   openResponsiveMenu();
 });
 
-closeBurgerMenu.addEventListener('onclick', () => {
+closeBurgerMenu.addEventListener('click', () => {
   const closeResponsiveMenu = () => {
     if (responsiveMenu.style.display == 'flex') {
       responsiveMenu.style.display = 'none';
@@ -73,7 +77,7 @@ const gameResponsiveMenu = document.querySelector('.responsive-central-menu');
 const centralBurgerMenuImg = document.querySelector('.central-burger-menu');
 
 if (gameBurgerMenu !== null) {
-  gameBurgerMenu.addEventListener('onclick', () => {
+  gameBurgerMenu.addEventListener('click', () => {
     const openGameResponsiveMenu = () => {
       if (gameResponsiveMenu.style.display == 'none') {
         gameResponsiveMenu.style.display = 'flex';

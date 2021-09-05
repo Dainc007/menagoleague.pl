@@ -12,6 +12,9 @@ class Player extends Model
 
     public const WAGE = 5000;
     public const AVAILABLE_ROLES = ['future_first_11', 'bench', 'important', 'key'];
+    public const AVAILABLE_LEAGUE_GOALS = ['avoid_relegation', 'qualify', 'win'];
+    public const AVAILABLE_CUP_GOALS = ['win', 'semi-final', '3rd-round'];
+    public const AVAILABLE_EUROPE_GOALS = ['win', 'semi_final', 'knockout_stage', '3rd_place'];
 
     protected $fillable = [
         'id',
