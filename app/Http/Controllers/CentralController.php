@@ -77,7 +77,7 @@ class CentralController extends Controller
 
         return view('central.inc.fullCalendar', [
             'calendar'  => $calendar,
-            'fixtures'  => $fixtures,
+            'fixtures'  => $fixtures ?? [],
             'week'      => ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
         ]);
     }
