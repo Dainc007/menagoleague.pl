@@ -1,6 +1,6 @@
 <section class="messages-text">
-    <div class="messages-chat hidden">
-        <div class="text-entry" message-id="1">
+    <div class="messages-chat">
+        <div class="text-entry" player-id="1">
             <div class="player-info">
                 <div class="player-overall">
                     <p>OGL</p>
@@ -33,7 +33,8 @@
             </div>
             <div class="player-morals">
                 <p>Morale</p>
-                <span class="progress-bar" data-progress="67%">
+                <span class="progress-bar" 
+                    data-progress="@php echo rand(1,100)@endphp%">
     
                 </span>
                 <p>
@@ -41,7 +42,7 @@
                 </p>
             </div>
         </div>
-        <div class="text-full" message-id="1">
+        <div class="text-full active" message-id="1">
             <div class="receiver">
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae est mollitia, magnam, at accusantium nisi officiis unde adipisci qui corrupti excepturi aliquam ratione! Molestias quia nisi quidem alias fugiat dignissimos!
@@ -76,8 +77,46 @@
     
             </div>
         </div>
+        @for ($i=2;$i<10;$i++) 
+        <div class="text-full" message-id="{{$i}}">
+            <div class="receiver">
+                <p>
+                    {{$i}}
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae est mollitia, magnam, at accusantium nisi officiis unde adipisci qui corrupti excepturi aliquam ratione! Molestias quia nisi quidem alias fugiat dignissimos!
+                </p>
+            </div>
+            <div class="sender">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A minima harum illum perspiciatis quod similique, ipsum assumenda voluptatum, veritatis exercitationem optio quo reprehenderit magnam itaque possimus accusamus ex dolor laudantium!
+                </p>
+            </div>
+            <div class="receiver">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae est mollitia, magnam, at accusantium nisi officiis unde adipisci qui corrupti excepturi aliquam ratione! Molestias quia nisi quidem alias fugiat dignissimos!
+                </p>
+            </div>
+            <div class="sender">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A minima harum illum perspiciatis quod similique, ipsum assumenda voluptatum, veritatis exercitationem optio quo reprehenderit magnam itaque possimus accusamus ex dolor laudantium!
+                </p>
+            </div>
+            <div class="receiver">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae est mollitia, magnam, at accusantium nisi officiis unde adipisci qui corrupti excepturi aliquam ratione! Molestias quia nisi quidem alias fugiat dignissimos!
+                </p>
+            </div>
+            <div class="sender">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A minima harum illum perspiciatis quod similique, ipsum assumenda voluptatum, veritatis exercitationem optio quo reprehenderit magnam itaque possimus accusamus ex dolor laudantium!
+                </p>
+            </div>
+            <div class="reply">
+    
+            </div>
+        </div>
+        @endfor
     </div>
-    <div class="messages-inbox">
+    <div class="messages-inbox hidden">
         <div class="text-full active" message-id="1" class="active">
             <p>
                 Good Morning, Boss

@@ -284,6 +284,7 @@
                     border-radius: 15px;
                     --data-progress: -5%;
                     overflow: inherit;
+                    
                     &::before {
                         position: absolute;
                         top:-3px;
@@ -291,7 +292,6 @@
                         width: 20px;
                         height: 20px;
                         content: '';
-                        background-color: $text-light;
                         border-radius: 15px;
                         border: 1px solid $sectionColor;
                         z-index:2;
@@ -303,15 +303,41 @@
                         content: "";
                         width: var(--data-progress-bar);
                         height: 15px;
-                        background-color: $text-light;
                         border-radius: 15px;
                     }
                 }
+                .bad-moral {
+                    &::before, &::after {
+                        background-color: $moral-bad;
+                    }
+                    
+                }
+                .sad-moral {
+                    &::before, &::after {
+                        background-color: $moral-sad;
+                    }
+                }
+                .neutral-moral {
+                    &::before, &::after {
+                        background-color: $moral-neutral;
+                    }
+                }
+                .good-moral {
+                    &::before, &::after {
+                        background-color: $moral-good;
+                    }
+                }
+                .happy-moral {
+                    &::before, &::after {
+                        background-color: $moral-happy;
+                    }
+                }
             }
+            
             .text-full {
                 padding-top: 20px;
                 overflow: scroll;
-                display: flex;
+                display: none;
                 flex-direction: column;
                 .receiver,
                 .sender {
@@ -358,6 +384,9 @@
                         }
                     }
                 }
+            }
+            .active {
+                display: flex;
             }
         }
         .messages-inbox {

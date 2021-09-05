@@ -203,16 +203,37 @@ previousOfferBtn.forEach((btn) => {
 
 var progressBar = document.querySelectorAll('span[data-progress]');
 
-progressBar[0].style.setProperty(
-  '--data-progress', 
-  `calc(
-    ${progressBar[0].getAttribute('data-progress')} - 5%)`
+if(progressBar.length > 0) {
+  progressBar[0].style.setProperty(
+    '--data-progress', 
+    `calc(
+      ${progressBar[0].getAttribute('data-progress')} - 5%)`
+    );
+  
+  progressBar[0].style.setProperty(
+    '--data-progress-bar',
+    progressBar[0].getAttribute('data-progress')
   );
+  let progressScore = progressBar[0].getAttribute('data-progress');
+  progressScore = progressScore.substring(0, progressScore.length - 1);
+  console.log(progressScore);
+  if (progressScore < 20) {
+    progressBar[0].classList.add('bad-moral');
+  }
+  else if (progressScore > 20 && progressScore < 40) {
+    progressBar[0].classList.add('sad-moral');
+  }
+  else if (progressScore > 40 && progressScore < 60) {
+    progressBar[0].classList.add('neutral-moral');
+  }
+  else if (progressScore > 60 && progressScore < 80) {
+    progressBar[0].classList.add('good-moral');
+  }
+  else if (progressScore > 80){
+    progressBar[0].classList.add('happy-moral');
+  }
+}
 
-progressBar[0].style.setProperty(
-  '--data-progress-bar',
-  progressBar[0].getAttribute('data-progress')
-);
 
 const messagesTabs = document.querySelectorAll('.messages-tabs > div'),
   messageLists = document.querySelectorAll('.messages-list > div'),
@@ -236,8 +257,7 @@ messagesTabs.forEach((el, index) => {
 });
 
 const inboxTabs = document.querySelectorAll('.inbox-list > .inbox-tabs > div > a');
-console.log(inboxTabs);
-inboxTabs.forEach((item, index) => {
+inboxTabs.forEach((item) => {
   item.addEventListener('click', () => {
     inboxTabs.forEach((el) => {
       el.classList.remove('activeTab');
@@ -255,13 +275,17 @@ inboxTabs.forEach((item, index) => {
 });
 
 const playersMessages = document.querySelectorAll('.players-list > div[message-id]');
+const playersMessagesFull = document.querySelectorAll('.messages-chat > div[message-id]');
 
-playersMessages.forEach((msg) => {
+playersMessages.forEach((msg, index) => {
   msg.addEventListener('click', () => {
     playersMessages.forEach((all) => {
       all.classList.remove('active');
-    })
+    });
+    playersMessagesFull.forEach((msgFull) => {
+      msgFull.classList.remove('active');
+    });
+    playersMessagesFull[index].classList.add('active');
     msg.classList.add('active');
-    
   });
 })

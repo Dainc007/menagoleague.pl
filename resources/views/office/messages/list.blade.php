@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 <div class="message-date">
-                    <p>16.08</p>
+                    <span>16.08</span>
                 </div>
             </div>
         @endfor
