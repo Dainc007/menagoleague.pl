@@ -4,7 +4,7 @@
     <a class="btn {{ request()->segment(1) == 'teams' ? 'active' : '' }}"
         href="{{ route('team') }}">{{ __('nav.homeNav.team') }}</a>
     <a class="btn {{ request()->segment(1) == 'transfers' ? 'active' : '' }}"
-        href="{{ route('transfers') }}">{{ __('nav.homeNav.transfers') }}</a>
+        href="{{ route('transfers', 'transferListed') }}">{{ __('nav.homeNav.transfers') }}</a>
     <div class="central-menu-item-alert">
         <a class="btn {{ request()->segment(1) == 'office' ? 'active' : '' }}"
             href="{{ route('office') }}">{{ __('nav.homeNav.office') }}</a>
@@ -30,7 +30,7 @@
             <a class="btn {{ request()->segment(1) == 'teams' ? 'active' : '' }}"
                 href="{{ route('team') }}">SQUAD</a>
             <a class="btn {{ request()->segment(1) == 'transfers' ? 'active' : '' }}"
-                href="{{ route('transfers') }}">TRANSFERS</a>
+                href="{{ route('transfers', 'transferListed') }}">TRANSFERS</a>
             <div class="r-central-menu-item-alert">
                 <a class="btn {{ request()->segment(1) == 'office' ? 'active' : '' }}" href="">OFFICE</a>
                 <span class="notification">2</span>

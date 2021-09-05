@@ -14,7 +14,7 @@ class TransferController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(string $type = 'transferListed')
     {
         return view('transfers.transfers', [
             'user'          => Auth::user(),
@@ -27,6 +27,7 @@ class TransferController extends Controller
                 Player::AVAILABLE_CUP_GOALS,
                 Player::AVAILABLE_EUROPE_GOALS
             ),
+            'type'  => $type,
         ]);
     }
 

@@ -4,20 +4,28 @@
 
 @section('content')
 
-    <div class="transfers-content">
-        <div class="content-table">
-            @include('transfers.inc.transfers-menu')
+<div class="transfers-content">
+    <div class="content-table">
+        
+        @include('transfers.inc.transfers-menu')
 
-            @include('transfers.inc.transfer-list')
+        @if($type == 'transferListed')
+        @include('transfers.inc.transferList')
+        @endif
 
-            @include('transfers.inc.transfer-free')
+        @if($type == 'freeAgents')
+        @include('transfers.inc.freeAgentList')
+        @endif
 
-            @include('transfers.inc.transfer-trade')
-        </div>
+        @if($type == 'loanListed')
+        @include('transfers.inc.loanList')
+        @endif
+        
     </div>
+</div>
 
 
-    {{-- @if (Auth::user()->team !== null)
+{{-- @if (Auth::user()->team !== null)
         @include('transfers.forms.buy')
         @include('transfers.forms.loan')
     @endif --}}
