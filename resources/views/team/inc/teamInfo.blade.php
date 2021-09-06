@@ -78,7 +78,6 @@
             <p class="last-change"><small>Ostatnia zmiana: 26 maj 2021</small></p>
         </div>
         <div class="info">
-            <img src="/images/shields/{{ rand(1, 8) }}.png" alt="">
             <div>
                 <p>Premier League</p>
                 <p>Szczebel ligi: <span>1. Liga</span></p>
