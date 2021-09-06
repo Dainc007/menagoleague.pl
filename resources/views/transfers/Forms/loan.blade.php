@@ -1,31 +1,26 @@
 <form method="POST" action="{{route('transfers.store')}}">
 
-    Jednorazowa opłata za wypozyczenie:
-    <input type="number" name="money" max="{{$user->team->budget ?? ''}}">
-
-    tygodniowa opłata za wypozyczenie:
-    <input type="number" name="salary" max="{{$user->team->budget ?? ''}}">
-
-    Kwota opcjonalnego transferu definitywnego
-    <input type="number" name="price" max="{{$user->team->budget ?? ''}}">
-
-    <div class="custom-control custom-switch">
-        <input type="checkbox" class="custom-control-input" name="buylaw" id="customSwitch1">
-        <label class="custom-control-label" for="customSwitch1">Obowiązek wykupu</label>
+    <div class="form-group">
+        <label for="money">Jednorazowa opłata za wypozyczenie:</label>
+        <input type="number" name="money" id="money" placeholder="Kwota">
     </div>
 
-    <h6>zaoferuj piłkarzy wystawionych na listę transferową</h6>
-    <select class="custom-select" name="players" multiple>
-        @foreach($user->team->players->where('transfer_listed', true) as $player)
-        <option value="{{$player->id}}">{{$player->name}}</option>
-        @endforeach
-    </select>
+    <div class="form-group">
+        <label for="salary">tygodniowa opłata za wypozyczenie:</label>
+        <input type="number" name="salary" id="salary" placeholder="tygodniowka">
+    </div>
 
-    <h6>procent od następnego transferu</h6>
+    <div class="form-group">
+        <label for="salary">Kwota opcjonalnego transferu definitywnego:</label>
+        <input type="number" name="transferFee" id="transferFee" placeholder="$$$">
+    </div>
 
-    <input type="number" name="nextTransferFee" max="25">
+    <div class="custom-control custom-switch">
+        <input type="checkbox" class="custom-control-input" name="buylaw" id="buylaw">
+        <label class="custom-control-label" for="buylaw">Obowiązek wykupu</label>
+    </div>
 
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-success">Wypozycz</button>
     @method('POST')
     @csrf
 </form>

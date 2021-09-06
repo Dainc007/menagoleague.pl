@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\Competition;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
@@ -31,5 +32,6 @@ class AppServiceProvider extends ServiceProvider
         }
 
         View::share('activeCompetitions', Competition::getActiveCompetitions());
+        View::share('user', Auth::user());
     }
 }

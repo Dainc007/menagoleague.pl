@@ -78,4 +78,13 @@ class Player extends Model
 
         return $players;
     }
+
+    public static function getAvailableGoals()
+    {
+        return array_merge(
+            self::AVAILABLE_LEAGUE_GOALS,
+            self::AVAILABLE_CUP_GOALS,
+            self::AVAILABLE_EUROPE_GOALS
+        );
+    }
 }

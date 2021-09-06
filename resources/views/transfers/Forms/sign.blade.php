@@ -22,8 +22,8 @@
     <div class="form-group">
     <label for="promises">Złóz deklaracje dotyczącą celów druzyny</label>
     <select multiple class="form-control" id="goals" name="goals">
-      @foreach($goals as $goal)
-      <option>{{promise}}</option>
+      @foreach($goals as $promise)
+      <option>{{$promise}}</option>
       @endforeach
     </select>
   </div>

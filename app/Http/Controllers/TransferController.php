@@ -22,23 +22,28 @@ class TransferController extends Controller
             'freeAgentList' => Player::getFreeAgents(),
             'loanList'      => Player::getLoanListedPlayers(),
             'roles'         => Player::AVAILABLE_ROLES,
-            'goals'         => array_merge(
-                Player::AVAILABLE_LEAGUE_GOALS,
-                Player::AVAILABLE_CUP_GOALS,
-                Player::AVAILABLE_EUROPE_GOALS
-            ),
-            'type'  => $type,
+            'goals'         => Player::getAvailableGoals(),
+            'type'          => $type,
+            'nextFees'      => Transfer::AVAILABLE_NEXT_FEES,
         ]);
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the form for negotiate a new deal.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function negotiate(string $type, string $recipient, int $player_id)
     {
-        //
+        $action = $this->checkAction($type);
+
+        return view("transfers.negotiation", [
+            'user'     => Auth::user(),
+            'roles'    => Player::AVAILABLE_ROLES,
+            'goals'    => Player::getAvailableGoals(),
+            'nextFees' => Transfer::AVAILABLE_NEXT_FEES,
+            'action'   => $action,
+        ]);
     }
 
     /**
@@ -95,5 +100,18 @@ class TransferController extends Controller
     public function destroy(Transfer $transfer)
     {
         //
+    }
+
+    private function checkAction(string $type): string
+    {
+        if ($type == 'loanListed') {
+            $action = 'loan';
+        } elseif ($type == 'transferListed') {
+            $action = 'buy';
+        } else {
+            $action = 'sign';
+        }
+
+        return $action;
     }
 }

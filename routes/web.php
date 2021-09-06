@@ -96,6 +96,9 @@ Route::prefix('/transfers')->group(function () {
     Route::get('/{type}', [App\Http\Controllers\TransferController::class, 'index'])
         ->name('transfers');
 
+    Route::get('/{type}/{recipient}/{id}', [App\Http\Controllers\TransferController::class, 'negotiate'])
+        ->name('transfers.negotiate');
+
     Route::post('/store', [App\Http\Controllers\TransferController::class, 'store'])
         ->name('transfers.store');
 });

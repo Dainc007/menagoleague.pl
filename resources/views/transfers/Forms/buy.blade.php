@@ -1,19 +1,34 @@
 <form method="POST" action="{{route('transfers.store')}}">
 
-    <input type="number" name="money" max="{{$user->team->budget ?? ''}}" required>
+    <div class="form-group">
+        <label for="money">Kwota Transferu</label>
+        <input type="number" name="money" id="money" placeholder="Kwota" required>
+    </div>
 
-    <h6>zaoferuj piłkarzy wystawionych na listę transferową</h6>
-    <select class="custom-select" name="players" multiple>
+    <div class="form-group">
+        <label for="extraPlayer">Zaoferuj piłkarza wystawionego na listę transferową</label>
+        <select class="custom-select" name="extraPlayer" id="extraPlayer">
+        <option selected>Wybierz Zawodnika</option>
         @foreach($user->team->players->where('transfer_listed', true) as $player)
         <option value="{{$player->id}}">{{$player->name}}</option>
         @endforeach
     </select>
+    </div>
+
+    <div class="form-group">
+        <label for="nextTransferFee">Zaoferuj procent od kolejnego transferu</label>
+        <select class="custom-select" name="nextTransferFee" id="nextTransferFee">
+        @foreach($nextFees as $fee)
+        <option value="{{$fee}}">{{$fee}} %</option>
+        @endforeach
+    </select>
+    </div>
 
     <h6>procent od następnego transferu</h6>
 
     <input type="number" name="nextTransferFee" max="25">
 
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-success">Kup</button>
     @method('POST')
     @csrf
 </form>

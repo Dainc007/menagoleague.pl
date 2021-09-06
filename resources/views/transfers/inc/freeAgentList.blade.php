@@ -24,11 +24,7 @@
                     <button class="dropdown-toggle" type="button" id="dropdown{{ $player->id }}"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdown{{ $player->id }}">
-                        <a class="dropdown-item" href="#">Action 1</a>
-                        <a class="dropdown-item" href="#">Action 2</a>
-                        <a class="dropdown-item" href="#">Action 3</a>
-                    </div>
+                    @include('transfers.forms.actions')
                 </div>
             </div>
         @endforeach
@@ -49,11 +45,7 @@
                     <button class="dropdown-toggle" type="button" id="dropdown{{ $player->id }}"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     </button>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown{{ $player->id }}">
-                        <a class="dropdown-item" href="#">Action 1</a>
-                        <a class="dropdown-item" href="#">Action 2</a>
-                        <a class="dropdown-item" href="#">Action 3</a>
-                    </div>
+                    @include('transfers.forms.actions')
                 </div>
             </div>
         @endforeach

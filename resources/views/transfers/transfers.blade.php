@@ -6,7 +6,7 @@
 
 <div class="transfers-content">
     <div class="content-table">
-        
+
         @include('transfers.inc.transfers-menu')
 
         @if($type == 'transferListed')
@@ -20,14 +20,7 @@
         @if($type == 'loanListed')
         @include('transfers.inc.loanList')
         @endif
-        
+
     </div>
 </div>
-
-
-{{-- @if (Auth::user()->team !== null)
-        @include('transfers.forms.buy')
-        @include('transfers.forms.loan')
-    @endif --}}
-
 @endsection
