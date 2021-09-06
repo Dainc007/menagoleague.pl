@@ -1,6 +1,6 @@
 @extends('layouts.homeLayout')
 
-@section('title', '{{ $team->name }}')
+@section('title', $team->name)
 
 @section('content')
 
