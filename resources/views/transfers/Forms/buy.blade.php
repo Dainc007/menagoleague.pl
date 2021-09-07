@@ -5,6 +5,12 @@
         <input type="number" name="money" id="money" placeholder="Kwota" required>
     </div>
 
+    <!-- Jeśli extraOptions jest na ON, pokazuj wszystkie divy ponizej -->
+    <div class="custom-control custom-switch">
+        <input type="checkbox" class="custom-control-input" name="extraOptions" id="extraOptions">
+        <label class="custom-control-label" for="extraOptions">Pokaz Dodatkowe Opcje</label>
+    </div>
+
     <div class="form-group">
         <label for="extraPlayer">Zaoferuj piłkarza wystawionego na listę transferową:</label>
         <select class="custom-select" name="extraPlayer" id="extraPlayer">
