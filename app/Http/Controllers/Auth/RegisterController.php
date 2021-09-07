@@ -51,11 +51,13 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        $user = User::where('name', $data['recommendation'])->first();
+
         return Validator::make($data, [
-            'name'     => ['required', 'string', 'max:255', 'unique:users'],
-            'email'    => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'name'     => ['required', 'string', 'min:3', 'max:255', 'unique:users'],
+            'email'    => ['required', 'string', 'email', 'min:3', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'email'    => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'recommendation' => ['nullable', 'in:' . implode(',', User::pluck('id')->toArray()),]
         ]);
     }
 
@@ -66,7 +68,7 @@ class RegisterController extends Controller
      * @return \App\Models\User
      */
     protected function create(array $data)
-    {   
+    {
         $user = User::where('name', $data['recommendation'])->first();
 
         return User::create([

@@ -33,6 +33,25 @@
                     </div>
 
                     <div class="form-group row">
+                        <label class="col-md-4 col-form-label text-md-right" for="version">Posiadam FIFĘ w wersji:</label>
+
+                        <div class="col-md-6">
+                            <select class="form-control @error('version') is-invalid @enderror" name="version" id="version" required>
+                                <option selected>Wybierz wersję</option>
+                                <option>Old-gen (Xbox One, Ps4) </option>
+                                <option>Next-gen (Xbox Series S|X, Ps5) </option>
+                                <option>Obie wersje (Ultimate) </option>
+                            </select>
+
+                            @error('version')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
                         <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('auth.username') }}</label>
 
                         <div class="col-md-6">

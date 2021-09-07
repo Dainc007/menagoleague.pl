@@ -54,8 +54,7 @@ class TransferController extends Controller
      */
     public function store(TransferRequest $request)
     {
-        $request = $request->validated();
-        dd($request);
+         (new Transfer($request->validated()))->save();
     }
 
     /**

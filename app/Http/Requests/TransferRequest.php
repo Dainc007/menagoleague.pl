@@ -30,9 +30,9 @@ class TransferRequest extends FormRequest
         return [
             'transferFee'       => 'integer|min:1|max:' . Team::MONEY,
             'loanFee'           => 'integer|min:0|max:' . Team::MONEY,
-            'salary'            => 'integer|min:' . Player::WAGE . '|max:' . Team::MONEY,
+            'salary'            => 'integer|required|min:' . Player::WAGE . '|max:' . Team::MONEY,
             'nextTransferFee'   => 'integer|in:' . implode(',', Transfer::AVAILABLE_NEXT_FEES),
-            'extraPlayer'       => 'integer|in:' . implode(',', Player::all()->pluck('id')->toArray()),
+            'extraPlayer'       => 'integer|in:' . implode(',', Player::pluck('id')),
             'cancelFee'         =>  'integer|min:0|max:' . Team::MONEY,
         ];
     }
