@@ -10655,16 +10655,6 @@ footer a .social-item img {
   display: block !important;
 }
 
-.alert {
-  position: absolute;
-  font-size: 1.6em;
-  color: #ff3714;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 0;
-}
-
 .central-menu-container {
   display: flex;
   justify-content: flex-end;
@@ -10755,6 +10745,11 @@ footer a .social-item img {
 }
 .modal .show .modal-dialog {
   margin: auto;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
 }
 
 /* Read more */

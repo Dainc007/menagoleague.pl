@@ -57,6 +57,7 @@
             -webkit-transform: translateY(0);
             transform: translateY(0);
         }
+
     </style>
 
 </head>
@@ -64,30 +65,33 @@
 <body>
     @include('sweetalert::alert')
     <div id="app">
-        @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-        @endif
         @include('inc.mainNav')
         <main class="py-4">
             @if (Auth::check())
-            <div class="container">
-                @include('inc.userShield')
-            </div>
+                <div class="container">
+                    @include('inc.userShield')
+                </div>
 
-            <div class="container">
-                @include('inc.userOptionsBar')
-            </div>
+                <div class="container">
+                    @include('inc.userOptionsBar')
+                </div>
             @endif
 
             <div class="container central-menu-container">
                 @if (Auth::check())
-                @include('inc.homeNav')
+                    @include('inc.homeNav')
+                @endif
+            </div>
+
+            <div class="container">
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
                 @endif
             </div>
 
