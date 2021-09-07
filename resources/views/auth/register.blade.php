@@ -37,7 +37,7 @@
 
                         <div class="col-md-6">
                             <select class="form-control @error('version') is-invalid @enderror" name="version" id="version" required>
-                                <option selected>Wybierz wersję</option>
+                                <option selected value="">Wybierz wersję</option>
                                 <option>Old-gen (Xbox One, Ps4) </option>
                                 <option>Next-gen (Xbox Series S|X, Ps5) </option>
                                 <option>Obie wersje (Ultimate) </option>

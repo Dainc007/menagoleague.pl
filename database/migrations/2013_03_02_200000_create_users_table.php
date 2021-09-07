@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->string('facebook')->nullable();
             $table->unsignedBigInteger('device_id')->nullable();
             $table->unsignedBigInteger('recommendation_id')->nullable();
+            $table->enum('version', User::AVAILABLE_VERSIONS);
 
             $table->rememberToken();
             $table->timestamps();

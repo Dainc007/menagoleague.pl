@@ -16,6 +16,10 @@ class User extends Authenticatable
         'sent', 'accepted', 'rejected'
     ];
 
+    public const AVAILABLE_VERSIONS = [
+        'old-gen', 'next-gen', 'ultimate'
+    ];
+
     public const MAX_USER_RIVALS = 5;
 
     /**
@@ -31,7 +35,8 @@ class User extends Authenticatable
         'device_id',
         'discord',
         'facebook',
-        'recommendation_id'
+        'recommendation_id',
+        'version'
     ];
 
     /**
