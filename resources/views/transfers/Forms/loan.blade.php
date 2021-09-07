@@ -20,18 +20,17 @@
         <label class="custom-control-label" for="buylaw">Obowiązek wykupu</label>
     </div>
 
-    <!-- Jeśli cancelLoan jest na ON, pokazuj cancelFee -->
     <div class="custom-control custom-switch">
         <input type="checkbox" class="custom-control-input" name="cancelLoan" id="cancelLoan">
         <label class="custom-control-label" for="cancelLoan">Moze zostać sciągnięty wcześniej</label>
     </div>
 
-    <div class="form-group">
+    <div class="form-group loanExtraOptions">
         <label for="money">Opłata za skrócenie wypozyczenia:</label>
         <input type="number" name="cancelFee" id="cancelFee" placeholder="Kwota">
     </div>
 
-    <button type="submit" name="action" value="loan"class="btn btn-success bshadow">Wypozycz</button>
+    <button type="submit" name="action" value="loan" class="btn btn-success bshadow">Wypozycz</button>
     @method('POST')
     @csrf
 </form>

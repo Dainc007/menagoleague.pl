@@ -55,5 +55,13 @@
       background-color: rgba(85, 140, 71, 0.25);
       border-color: rgba(85, 140, 71, 0.25);
     }
+
+    .buyExtraOptions, 
+    .loanExtraOptions {
+      display: none;
+      margin-top: 15px;
+    }
+
+    
   }
 }

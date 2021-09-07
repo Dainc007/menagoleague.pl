@@ -13595,6 +13595,11 @@ a .btn-discord img {
   background-color: rgba(85, 140, 71, 0.25);
   border-color: rgba(85, 140, 71, 0.25);
 }
+.transfer-forms form .buyExtraOptions,
+.transfer-forms form .loanExtraOptions {
+  display: none;
+  margin-top: 15px;
+}
 
 /* Transfers components:*/
 .office-messages {

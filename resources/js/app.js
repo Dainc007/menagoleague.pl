@@ -122,6 +122,36 @@ if (tabMenuButton !== null) {
   });
 }
 
+// Transfers BUY
+
+const buyCheckBox = document.querySelector('#extraOptions');
+const buyExtraOptions = document.querySelector('.buyExtraOptions');
+
+if (buyCheckBox !== null) {
+  buyCheckBox.addEventListener('click', () => {
+    if (buyCheckBox.checked == true) {
+      buyExtraOptions.style.display = 'block';
+    } else {
+      buyExtraOptions.style.display = 'none';
+    }
+  });
+}
+
+// Transfers LOAN
+
+const loanCheckBox = document.querySelector('#cancelLoan');
+const loanCancelFee = document.querySelector('.loanExtraOptions');
+
+if (loanCheckBox !== null) {
+  loanCheckBox.addEventListener('click', () => {
+    if (loanCheckBox.checked == true) {
+      loanCancelFee.style.display = 'block';
+    } else {
+      loanCancelFee.style.display = 'none';
+    }
+  });
+}
+
 /* Finances view */
 
 const financesBtn = document.querySelectorAll('.details-buttons > li[data-number]'),
@@ -203,41 +233,33 @@ previousOfferBtn.forEach((btn) => {
   });
 });
 
-// Messages 
+// Messages
 
 var progressBar = document.querySelectorAll('span[data-progress]');
 
-if(progressBar.length > 0) {
+if (progressBar.length > 0) {
   progressBar[0].style.setProperty(
-    '--data-progress', 
+    '--data-progress',
     `calc(
       ${progressBar[0].getAttribute('data-progress')} - 5%)`
-    );
-  
-  progressBar[0].style.setProperty(
-    '--data-progress-bar',
-    progressBar[0].getAttribute('data-progress')
   );
+
+  progressBar[0].style.setProperty('--data-progress-bar', progressBar[0].getAttribute('data-progress'));
   let progressScore = progressBar[0].getAttribute('data-progress');
   progressScore = progressScore.substring(0, progressScore.length - 1);
   console.log(progressScore);
   if (progressScore < 20) {
     progressBar[0].classList.add('bad-moral');
-  }
-  else if (progressScore > 20 && progressScore < 40) {
+  } else if (progressScore > 20 && progressScore < 40) {
     progressBar[0].classList.add('sad-moral');
-  }
-  else if (progressScore > 40 && progressScore < 60) {
+  } else if (progressScore > 40 && progressScore < 60) {
     progressBar[0].classList.add('neutral-moral');
-  }
-  else if (progressScore > 60 && progressScore < 80) {
+  } else if (progressScore > 60 && progressScore < 80) {
     progressBar[0].classList.add('good-moral');
-  }
-  else if (progressScore > 80){
+  } else if (progressScore > 80) {
     progressBar[0].classList.add('happy-moral');
   }
 }
-
 
 const messagesTabs = document.querySelectorAll('.messages-tabs > div'),
   messageLists = document.querySelectorAll('.messages-list > div'),
@@ -252,12 +274,12 @@ messagesTabs.forEach((el, index) => {
     messageLists.forEach((message) => {
       message.classList.add('hidden');
     });
-    messageDetails.forEach((text)=>{
+    messageDetails.forEach((text) => {
       text.classList.add('hidden');
-    })
+    });
     messageLists[index].classList.remove('hidden');
     messageDetails[index].classList.remove('hidden');
-  })
+  });
 });
 
 const inboxTabs = document.querySelectorAll('.inbox-list > .inbox-tabs > div > a');
@@ -275,7 +297,7 @@ inboxTabs.forEach((item) => {
       });
     });
     item.classList.add('activeTab');
-  })
+  });
 });
 
 const playersMessages = document.querySelectorAll('.players-list > div[message-id]');
@@ -292,4 +314,4 @@ playersMessages.forEach((msg, index) => {
     playersMessagesFull[index].classList.add('active');
     msg.classList.add('active');
   });
-})
+});
