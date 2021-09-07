@@ -1,0 +1,59 @@
+.transfer-forms {
+  .nav-tabs {
+    .nav-item {
+      .nav-link {
+        display: flex;
+      }
+    }
+  }
+
+  form {
+    border-top: 3px solid $text-hippieGreen;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: $sectionColor;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    width: 100%;
+
+    button {
+      margin-top: 15px;
+      color: white;
+    }
+
+    .form-control:focus {
+      border-color: $text-hippieGreen;
+      box-shadow: 0 0 0 0.2rem rgba(85, 140, 71, 0.25);
+    }
+
+    input {
+      width: 100%;
+      border: 1px solid #ced4da;
+      padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+      border-radius: 0.25rem;
+    }
+
+    input[type="number"] {
+      padding: 0.375rem 0.75rem 0.375rem 0.75rem;
+    }
+
+    .custom-control-input:checked ~ .custom-control-label::before {
+      border-color: $text-hippieGreen;
+      background-color: $text-hippieGreen;
+    }
+
+    .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+      border-color: $text-hippieGreen;
+    }
+
+    .custom-control-input:focus ~ .custom-control-label::before {
+      box-shadow: 0 0 0 0.2rem rgba(85, 140, 71, 0.25);
+    }
+
+    .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+      background-color: rgba(85, 140, 71, 0.25);
+      border-color: rgba(85, 140, 71, 0.25);
+    }
+  }
+}

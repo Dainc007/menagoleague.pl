@@ -1,4 +1,12 @@
 .squad-team-management {
+  .nav-tabs {
+    .nav-item {
+      .nav-link {
+        display: flex;
+      }
+    }
+  }
+
   a {
     color: $text-gray;
   }
@@ -127,6 +135,7 @@
   box-shadow: inset 0px -4px 5px rgba(176, 176, 176, 25%);
   color: $text-dark;
   font-size: 0.9em;
+  border-top: 3px solid $text-hippieGreen;
 
   &:hover {
     transform: none;

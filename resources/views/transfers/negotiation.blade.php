@@ -4,11 +4,8 @@
 
 @section('content')
 
-@if($action == 'sign')
-@include('transfers.forms.sign')
-@else
-@include('transfers.forms.buy')
-@include('transfers.forms.loan')
-@endif
+    <div class="transfer-actions-content">
+        @include('transfers.forms.transfers-actions')
+    </div>
 
 @endsection

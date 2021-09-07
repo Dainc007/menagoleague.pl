@@ -1,4 +1,4 @@
-<form method="POST" action="{{route('transfers.store')}}">
+<form method="POST" action="{{ route('transfers.store') }}" class="loan">
 
     <div class="form-group">
         <label for="money">Jednorazowa opłata za wypozyczenie:</label>
@@ -6,8 +6,8 @@
     </div>
 
     <div class="form-group">
-        <label for="salary">tygodniowa opłata za wypozyczenie:</label>
-        <input type="number" name="salary" id="salary" placeholder="tygodniowka">
+        <label for="salary">Tygodniowa opłata za wypozyczenie:</label>
+        <input type="number" name="salary" id="salary" placeholder="Tygodniowka">
     </div>
 
     <div class="form-group">
@@ -20,7 +20,7 @@
         <label class="custom-control-label" for="buylaw">Obowiązek wykupu</label>
     </div>
 
-    <button type="submit" class="btn btn-success">Wypozycz</button>
+    <button type="submit" class="btn btn-success bshadow">Wypozycz</button>
     @method('POST')
     @csrf
 </form>

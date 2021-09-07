@@ -11584,13 +11584,13 @@ a .btn-discord img {
   }
 }
 /* Competition components*/
-.players .nav-tabs {
+.players .nav-tabs, .transfer-forms .nav-tabs, .squad-team-management .nav-tabs {
   position: relative;
 }
-.players .nav-tabs .nav-item {
+.players .nav-tabs .nav-item, .transfer-forms .nav-tabs .nav-item, .squad-team-management .nav-tabs .nav-item {
   margin-right: 2px;
 }
-.players .nav-tabs .nav-item .nav-link {
+.players .nav-tabs .nav-item .nav-link, .transfer-forms .nav-tabs .nav-item .nav-link, .squad-team-management .nav-tabs .nav-item .nav-link {
   display: none;
   margin-bottom: -2px;
   border: 1px solid transparent;
@@ -11598,21 +11598,23 @@ a .btn-discord img {
   background-color: rgba(255, 253, 253, 0.7);
   border-color: #558c47;
 }
-.players .nav-tabs .responsive-tab-menu {
+.players .nav-tabs .responsive-tab-menu, .transfer-forms .nav-tabs .responsive-tab-menu, .squad-team-management .nav-tabs .responsive-tab-menu {
   position: absolute;
   right: 5px;
   top: 5px;
   width: 30px;
 }
 .players .nav-tabs .nav-link.active,
-.players .nav-tabs .nav-item.show .nav-link {
+.players .nav-tabs .nav-item.show .nav-link, .transfer-forms .nav-tabs .nav-link.active,
+.transfer-forms .nav-tabs .nav-item.show .nav-link, .squad-team-management .nav-tabs .nav-link.active,
+.squad-team-management .nav-tabs .nav-item.show .nav-link {
   color: white;
   background-color: #558c47;
   border-color: #558c47;
   pointer-events: none;
   display: flex;
 }
-.players .nav-tabs .nav-link:hover {
+.players .nav-tabs .nav-link:hover, .transfer-forms .nav-tabs .nav-link:hover, .squad-team-management .nav-tabs .nav-link:hover {
   background-color: #558c47;
   border-color: #558c47;
   color: whitesmoke;
@@ -12979,6 +12981,9 @@ a .btn-discord img {
   }
 }
 /* Calendar components */
+.squad-team-management .nav-tabs .nav-item .nav-link {
+  display: flex;
+}
 .squad-team-management a {
   color: #494949;
 }
@@ -13157,6 +13162,7 @@ a .btn-discord img {
   box-shadow: inset 0px -4px 5px rgba(176, 176, 176, 0.25);
   color: #144f06;
   font-size: 0.9em;
+  border-top: 3px solid #558c47;
 }
 .player-status-desc:hover,
 .player-attributes-desc:hover {
@@ -13280,6 +13286,26 @@ a .btn-discord img {
   }
 }
 /* Squad components:*/
+.transfer-actions-content {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas: "forms";
+  gap: 2rem;
+}
+.transfer-actions-content .transfer-forms {
+  grid-area: forms;
+}
+
+@media (min-width: 768px) {
+  .transfer-actions-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "forms .";
+    gap: 1rem;
+  }
+}
 .transfers-content {
   display: grid;
   grid-template-columns: 100%;
@@ -13511,6 +13537,51 @@ a .btn-discord img {
 .transfers-menu a.active, .transfers-menu a:hover {
   background-color: #558c47;
   color: whitesmoke;
+}
+
+.transfer-forms .nav-tabs .nav-item .nav-link {
+  display: flex;
+}
+.transfer-forms form {
+  border-top: 3px solid #558c47;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 253, 253, 0.7);
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  width: 100%;
+}
+.transfer-forms form button {
+  margin-top: 15px;
+  color: white;
+}
+.transfer-forms form .form-control:focus {
+  border-color: #558c47;
+  box-shadow: 0 0 0 0.2rem rgba(85, 140, 71, 0.25);
+}
+.transfer-forms form input {
+  width: 100%;
+  border: 1px solid #ced4da;
+  padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+  border-radius: 0.25rem;
+}
+.transfer-forms form input[type=number] {
+  padding: 0.375rem 0.75rem 0.375rem 0.75rem;
+}
+.transfer-forms form .custom-control-input:checked ~ .custom-control-label::before {
+  border-color: #558c47;
+  background-color: #558c47;
+}
+.transfer-forms form .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+  border-color: #558c47;
+}
+.transfer-forms form .custom-control-input:focus ~ .custom-control-label::before {
+  box-shadow: 0 0 0 0.2rem rgba(85, 140, 71, 0.25);
+}
+.transfer-forms form .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+  background-color: rgba(85, 140, 71, 0.25);
+  border-color: rgba(85, 140, 71, 0.25);
 }
 
 /* Transfers components:*/

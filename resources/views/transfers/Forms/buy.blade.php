@@ -1,34 +1,30 @@
-<form method="POST" action="{{route('transfers.store')}}">
+<form method="POST" action="{{ route('transfers.store') }}" class="buy">
 
     <div class="form-group">
-        <label for="money">Kwota Transferu</label>
+        <label for="money">Kwota Transferu:</label>
         <input type="number" name="money" id="money" placeholder="Kwota" required>
     </div>
 
     <div class="form-group">
-        <label for="extraPlayer">Zaoferuj piłkarza wystawionego na listę transferową</label>
+        <label for="extraPlayer">Zaoferuj piłkarza wystawionego na listę transferową:</label>
         <select class="custom-select" name="extraPlayer" id="extraPlayer">
-        <option selected>Wybierz Zawodnika</option>
-        @foreach($user->team->players->where('transfer_listed', true) as $player)
-        <option value="{{$player->id}}">{{$player->name}}</option>
-        @endforeach
-    </select>
+            <option selected>Wybierz Zawodnika</option>
+            @foreach ($user->team->players->where('transfer_listed', true) as $player)
+                <option value="{{ $player->id }}">{{ $player->name }}</option>
+            @endforeach
+        </select>
     </div>
 
     <div class="form-group">
-        <label for="nextTransferFee">Zaoferuj procent od kolejnego transferu</label>
+        <label for="nextTransferFee">Zaoferuj procent od kolejnego transferu:</label>
         <select class="custom-select" name="nextTransferFee" id="nextTransferFee">
-        @foreach($nextFees as $fee)
-        <option value="{{$fee}}">{{$fee}} %</option>
-        @endforeach
-    </select>
+            @foreach ($nextFees as $fee)
+                <option value="{{ $fee }}">{{ $fee }} %</option>
+            @endforeach
+        </select>
     </div>
 
-    <h6>procent od następnego transferu</h6>
-
-    <input type="number" name="nextTransferFee" max="25">
-
-    <button type="submit" class="btn btn-success">Kup</button>
+    <button type="submit" class="btn btn-success bshadow">Kup</button>
     @method('POST')
     @csrf
 </form>

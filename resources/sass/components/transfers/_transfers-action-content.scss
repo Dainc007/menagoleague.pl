@@ -1,0 +1,22 @@
+.transfer-actions-content {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  'forms';
+  gap: 2rem;
+
+  .transfer-forms {
+    grid-area: forms;
+  }
+}
+
+@media (min-width: 768px) {
+  .transfer-actions-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 'forms .';
+  gap: 1rem;
+}
+}
