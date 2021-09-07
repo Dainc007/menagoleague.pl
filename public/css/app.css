@@ -10877,6 +10877,10 @@ a .btn-discord img {
   align-items: center;
 }
 
+.gameplay-overview-track:hover::-webkit-scrollbar {
+  height: 10px;
+}
+
 .gameplay-overview-item {
   width: 100%;
   margin-bottom: 40px;
@@ -10921,12 +10925,12 @@ a .btn-discord img {
   }
 
   .gameplay-overview-item h3 {
-    min-height: 100px;
+    min-height: 90px;
   }
 
   .gameplay-overview-track {
     width: 100%;
-    height: 510px;
+    height: 580px;
     display: flex;
     align-items: unset;
     flex-direction: unset;
@@ -10954,6 +10958,14 @@ a .btn-discord img {
   }
   .gameplay-overview-item img {
     width: 300px;
+  }
+
+  .gameplay-overview-item h3 {
+    min-height: 70px;
+  }
+
+  .gameplay-overview-track {
+    height: 515px;
   }
 }
 @media (min-width: 1660px) {
@@ -13556,7 +13568,7 @@ a .btn-discord img {
   margin-top: 15px;
   color: white;
 }
-.transfer-forms form .form-control:focus {
+.transfer-forms form .form-control:focus, .transfer-forms form .custom-select:focus {
   border-color: #558c47;
   box-shadow: 0 0 0 0.2rem rgba(85, 140, 71, 0.25);
 }

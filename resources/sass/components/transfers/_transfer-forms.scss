@@ -22,7 +22,7 @@
       color: white;
     }
 
-    .form-control:focus {
+    .form-control:focus, .custom-select:focus {
       border-color: $text-hippieGreen;
       box-shadow: 0 0 0 0.2rem rgba(85, 140, 71, 0.25);
     }
