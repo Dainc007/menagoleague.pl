@@ -11,7 +11,7 @@
     </div>
 
     <div class="form-group">
-        <label for="salary">Kwota opcjonalnego transferu definitywnego:</label>
+        <label for="transferFee">Kwota opcjonalnego transferu definitywnego:</label>
         <input type="number" name="transferFee" id="transferFee" placeholder="$$$">
     </div>
 

@@ -4,6 +4,7 @@ namespace App\Http\Services;
 
 use App\Models\JobApplication;
 use App\Models\Team;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -12,6 +13,11 @@ class JobApplicationService
 {
     public function validate(Request $request, int $teamId)
     {
+        if (!$this->checkUserLicense(Auth::user()->id)) {
+            Alert::error('Nie mozesz przejąć druzyny', 'Nie masz licencji');
+            return redirect(route('office'));
+        }
+
         if (!$this->checkUserDevice($teamId)) {
             Alert::error('Nie mozesz przejąć druzyny', 'Nie masz odpowiedniej konsoli');
             return redirect(route('office'));
@@ -74,5 +80,10 @@ class JobApplicationService
             ->where('user_id', Auth::user()->id)->where('status', 'pending')->value('id');
 
         return $result;
+    }
+
+    private function checkUserLicense(int $id)
+    {
+        return (User::find($id))->isManager();
     }
 }

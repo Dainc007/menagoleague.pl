@@ -9,6 +9,8 @@ class Team extends Model
 {
     use HasFactory;
 
+    public const MONEY = 100000000;
+
     protected $fillable = [
         'id',
         'name',

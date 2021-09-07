@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\TransferRequest;
 use App\Models\Player;
 use App\Models\Transfer;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class TransferController extends Controller
@@ -52,8 +52,9 @@ class TransferController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(TransferRequest $request)
     {
+        $request = $request->validated();
         dd($request);
     }
 
