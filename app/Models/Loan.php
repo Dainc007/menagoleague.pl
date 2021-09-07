@@ -10,6 +10,6 @@ class Loan extends Model
     use HasFactory;
 
     protected $fillable = [
-        //
+        'loanFee', 'salary', 'transferFee', 'buylaw', 'cancelLoan', 'cancelFee'
     ];
 }

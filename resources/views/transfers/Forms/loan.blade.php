@@ -2,7 +2,7 @@
 
     <div class="form-group">
         <label for="money">Jednorazowa opłata za wypozyczenie:</label>
-        <input type="number" name="money" id="money" placeholder="Kwota">
+        <input type="number" name="loanFee" id="loanFee" placeholder="Kwota">
     </div>
 
     <div class="form-group">
@@ -31,7 +31,7 @@
         <input type="number" name="cancelFee" id="cancelFee" placeholder="Kwota">
     </div>
 
-    <button type="submit" class="btn btn-success bshadow">Wypozycz</button>
+    <button type="submit" name="action" value="loan"class="btn btn-success bshadow">Wypozycz</button>
     @method('POST')
     @csrf
 </form>

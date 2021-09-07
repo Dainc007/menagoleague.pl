@@ -2,7 +2,7 @@
 
     <div class="form-group">
         <label for="money">Kwota Transferu:</label>
-        <input type="number" name="money" id="money" placeholder="Kwota" required>
+        <input type="number" name="fee" id="fee" placeholder="Kwota" required>
     </div>
 
     <!-- Jeśli extraOptions jest na ON, pokazuj wszystkie divy ponizej -->
@@ -30,7 +30,7 @@
         </select>
     </div>
 
-    <button type="submit" class="btn btn-success bshadow">Kup</button>
+    <button type="submit" name="action" value="buy" class="btn btn-success bshadow">Kup</button>
     @method('POST')
     @csrf
 </form>

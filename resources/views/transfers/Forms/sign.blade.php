@@ -30,7 +30,7 @@
         </select>
     </div>
 
-    <button type="submit" class="btn btn-success bshadow">Zaproponuj Kontrakt</button>
+    <button type="submit" name="action" value="sign" class="btn btn-success bshadow">Zaproponuj Kontrakt</button>
     @method('POST')
     @csrf
 </form>

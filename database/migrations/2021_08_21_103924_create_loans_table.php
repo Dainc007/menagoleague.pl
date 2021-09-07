@@ -18,7 +18,14 @@ class CreateLoansTable extends Migration
             $table->foreignId('player_id')->constrained();
             $table->unsignedBigInteger('old_team_id');
             $table->unsignedBigInteger('new_team_id');
-            $table->unsignedBigInteger('price')->nullable();
+            $table->unsignedBigInteger('loanFee')->nullable();
+            $table->unsignedBigInteger('salary')->nullable();
+
+            $table->boolean('buylaw');
+            $table->unsignedBigInteger('transferFee')->nullable();
+
+            $table->boolean('cancelLoan');
+            $table->unsignedBigInteger('cancelFee')->nullable();
 
             $table->boolean('player_sign');
             $table->boolean('new_team_sign');

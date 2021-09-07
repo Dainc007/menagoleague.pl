@@ -35,7 +35,7 @@ class TransferController extends Controller
      */
     public function negotiate(string $type, string $recipient, int $player_id)
     {
-        $action = $this->checkAction($type);
+        $action = $this->checkType($type);
 
         return view("transfers.negotiation", [
             'user'     => Auth::user(),
@@ -102,7 +102,7 @@ class TransferController extends Controller
         //
     }
 
-    private function checkAction(string $type): string
+    private function checkType(string $type): string
     {
         if ($type == 'loanListed') {
             $action = 'loan';
