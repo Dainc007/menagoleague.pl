@@ -79,6 +79,7 @@ class RegisterController extends Controller
             'discord'   => $data['discord'],
             'device_id' => Device::getDeviceId($data['device']),
             'recommendation_id' => $user->id ?? null,
+            'version'           => $data['version'],
         ]);
     }
 }
