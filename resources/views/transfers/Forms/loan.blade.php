@@ -1,18 +1,18 @@
-<form method="POST" action="{{ route('transfers.store') }}" class="loan">
+<form method="POST" action="{{ route('transfers.store', $id) }}" class="loan">
 
     <div class="form-group">
-        <label for="money">Jednorazowa opłata za wypozyczenie:</label>
-        <input type="number" name="loanFee" id="loanFee" placeholder="Kwota">
+        <label for="fee">Jednorazowa opłata za wypozyczenie:</label>
+        <input type="number" name="fee" id="fee" placeholder="Kwota" required>
     </div>
 
     <div class="form-group">
-        <label for="salary">Tygodniowa opłata za wypozyczenie:</label>
-        <input type="number" name="salary" id="salary" placeholder="Tygodniowka">
+        <label for="weekFee">Tygodniowa opłata za wypozyczenie:</label>
+        <input type="number" name="weekFee" id="weekFee" placeholder="Tygodniowka">
     </div>
 
     <div class="form-group">
-        <label for="transferFee">Kwota opcjonalnego transferu definitywnego:</label>
-        <input type="number" name="transferFee" id="transferFee" placeholder="$$$">
+        <label for="transferClause">Kwota opcjonalnego transferu definitywnego:</label>
+        <input type="number" name="transferClause" id="transferClause" placeholder="$$$">
     </div>
 
     <div class="custom-control custom-switch">
@@ -26,11 +26,11 @@
     </div>
 
     <div class="form-group loanExtraOptions">
-        <label for="money">Opłata za skrócenie wypozyczenia:</label>
+        <label for="cancelFee">Opłata za skrócenie wypozyczenia:</label>
         <input type="number" name="cancelFee" id="cancelFee" placeholder="Kwota">
     </div>
 
-    <button type="submit" name="action" value="loan" class="btn btn-success bshadow">Wypozycz</button>
+    <button type="submit" name="type" value="loan" class="btn btn-success bshadow">Wypozycz</button>
     @method('POST')
     @csrf
 </form>

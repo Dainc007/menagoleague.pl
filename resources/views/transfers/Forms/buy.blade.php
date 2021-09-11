@@ -1,8 +1,8 @@
-<form method="POST" action="{{ route('transfers.store') }}" class="buy">
+<form method="POST" action="{{ route('transfers.store', $id) }}" class="buy">
 
     <div class="form-group">
         <label for="money">Kwota Transferu:</label>
-        <input type="number" name="transferFee" id="transferFee" placeholder="Kwota" required>
+        <input type="number" name="fee" id="fee" placeholder="Kwota" required>
     </div>
 
     <div class="custom-control custom-switch">
@@ -14,7 +14,7 @@
         <div class="form-group">
             <label for="extraPlayer">Zaoferuj piłkarza wystawionego na listę transferową:</label>
             <select class="custom-select" name="extraPlayer" id="extraPlayer">
-                <option selected>Wybierz Zawodnika</option>
+                <option value="" selected>Wybierz Zawodnika</option>
                 @foreach ($user->team->players->where('transfer_listed', true) as $player)
                     <option value="{{ $player->id }}">{{ $player->name }}</option>
                 @endforeach
@@ -31,7 +31,7 @@
         </div>
     </div>
 
-    <button type="submit" name="action" value="buy" class="btn btn-success bshadow">Kup</button>
+    <button type="submit" name="type" value="buy" class="btn btn-success bshadow">Kup</button>
     @method('POST')
     @csrf
 </form>
