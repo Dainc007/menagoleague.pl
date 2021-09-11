@@ -34,6 +34,12 @@ Route::prefix('/central')->group(function () {
 /* HELP */
 Route::prefix('/help')->group(function () {
 
+    Route::get('/help', [App\Http\Controllers\HomeController::class, 'help'])
+        ->name('help');
+
+    Route::get('/tutorial', [App\Http\Controllers\HomeController::class, 'tutorial'])
+        ->name('tutorial');
+
     Route::get('/rules', [App\Http\Controllers\HomeController::class, 'rules'])
         ->name('rules');
 

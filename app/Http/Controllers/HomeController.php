@@ -25,13 +25,23 @@ class HomeController extends Controller
         ]);
     }
 
+    public function help()
+    {
+        return view('help.help');
+    }
+
     public function rules()
     {
-        return 'w budowie';
+        return view('help.rules');
     }
 
     public function faq()
     {
-        return 'w budowie';
+        return view('help.faq');
+    }
+
+    public function tutorial()
+    {
+        return view('help.tutorial');
     }
 }
