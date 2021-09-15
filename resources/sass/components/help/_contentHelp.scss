@@ -1,0 +1,79 @@
+.contentHelp {
+  a {
+    text-decoration: none;
+    width: max-content;
+    color: $text-darker;
+
+    &::before {
+      content: '# ';
+      color: $text-olivine;
+    }
+
+    &.main-link {
+      font-size: 1.5em;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5 {
+      color: $text-darker;
+      width: max-content;
+    }
+
+    h2 {
+      font-size: 1.6em;
+    }
+  }
+
+  .sub-link {
+    margin-top: 20px;
+    font-size: 1.3em;
+  }
+
+  h3 {
+    font-size: 1.4em;
+    margin-top: 20px;
+  }
+
+  p {
+    margin-top: 20px;
+    font-size: 1.2em;
+  }
+
+  .sectionHelp {
+    margin-top: 30px;
+  }
+
+  .sectionLegend {
+    a {
+      &.main-link {
+        font-size: 1.3em;
+      }
+
+      &.sub-link {
+        font-size: 1.2em;
+      }
+    }
+
+    h3 {
+      margin-top: 0;
+    }
+
+    > ul {
+      border: 1px solid $text-hippieGreen;
+      border-radius: 5px;
+      margin-top: 1rem;
+      padding: 1rem;
+    }
+
+    ul {
+      padding-left: 25px;
+
+      li {
+        padding: 5px 0;
+        width: max-content;
+      }
+    }
+  }
+}

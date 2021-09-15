@@ -10137,7 +10137,7 @@ h6 {
 }
 
 h2 {
-  color: #0a2403;
+  color: #0b2603;
   font-size: 1.2em;
   font-weight: 700;
 }
@@ -10747,7 +10747,7 @@ footer a .social-item img {
   margin: auto;
 }
 
-ul {
+.alert ul {
   padding: 0;
   margin: 0;
 }
@@ -13563,7 +13563,8 @@ a .btn-discord img {
   margin-top: 15px;
   color: white;
 }
-.transfer-forms form .form-control:focus, .transfer-forms form .custom-select:focus {
+.transfer-forms form .form-control:focus,
+.transfer-forms form .custom-select:focus {
   border-color: #558c47;
   box-shadow: 0 0 0 0.2rem rgba(85, 140, 71, 0.25);
 }
@@ -13687,7 +13688,7 @@ a .btn-discord img {
 .office-messages a .material-icons {
   transition: 0.4s;
   font-size: 6em;
-  color: #0a2403;
+  color: #0b2603;
 }
 .office-messages a .office-title {
   padding-bottom: 19px;
@@ -13739,7 +13740,7 @@ a .btn-discord img {
   border-radius: 50%;
 }
 .messages-tabs div a {
-  color: #0a2403;
+  color: #0b2603;
   text-transform: uppercase;
   font-size: 18px;
 }
@@ -13789,7 +13790,7 @@ a .btn-discord img {
 }
 .messages-content .messages-list .players-list .message .message-details .title span, .messages-content .messages-list .inbox-list .message .message-details .title span, .messages-content .messages-list .notifications-list .message .message-details .title span {
   font-weight: 700;
-  color: #0a2403;
+  color: #0b2603;
 }
 .messages-content .messages-list .players-list .active, .messages-content .messages-list .inbox-list .active, .messages-content .messages-list .notifications-list .active {
   background-color: #494949;
@@ -13884,7 +13885,7 @@ a .btn-discord img {
 }
 .messages-content .messages-text .messages-chat .player-info .player-overall .overall {
   font-size: 34px;
-  color: #0a2403;
+  color: #0b2603;
   font-weight: bolder;
 }
 .messages-content .messages-text .messages-chat .player-info .player-photo {
@@ -14124,6 +14125,7 @@ a .btn-discord img {
   border: 1px solid #ddd;
   border-bottom: 0px;
   background-color: #f7f7f7;
+  z-index: 2;
 }
 .office-finances .finances .finances-view .details-buttons li {
   margin-right: 5px;
@@ -14694,4 +14696,175 @@ a .btn-discord img {
 }
 
 /*Season components */
+.contentHelp a {
+  text-decoration: none;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: #0b2603;
+}
+.contentHelp a::before {
+  content: "# ";
+  color: #8ab87f;
+}
+.contentHelp a.main-link {
+  font-size: 1.5em;
+}
+.contentHelp a h2,
+.contentHelp a h3,
+.contentHelp a h4,
+.contentHelp a h5 {
+  color: #0b2603;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.contentHelp a h2 {
+  font-size: 1.6em;
+}
+.contentHelp .sub-link {
+  margin-top: 20px;
+  font-size: 1.3em;
+}
+.contentHelp h3 {
+  font-size: 1.4em;
+  margin-top: 20px;
+}
+.contentHelp p {
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+.contentHelp .sectionHelp {
+  margin-top: 30px;
+}
+.contentHelp .sectionLegend a.main-link {
+  font-size: 1.3em;
+}
+.contentHelp .sectionLegend a.sub-link {
+  font-size: 1.2em;
+}
+.contentHelp .sectionLegend h3 {
+  margin-top: 0;
+}
+.contentHelp .sectionLegend > ul {
+  border: 1px solid #558c47;
+  border-radius: 5px;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+.contentHelp .sectionLegend ul {
+  padding-left: 25px;
+}
+.contentHelp .sectionLegend ul li {
+  padding: 5px 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.navHelp .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 40px;
+  position: relative;
+}
+.navHelp .logo h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 6em;
+  letter-spacing: 15px;
+  opacity: 0.2;
+  font-weight: 900;
+}
+.navHelp .logo img {
+  width: 150px;
+}
+.navHelp li {
+  margin: 25px 0;
+}
+.navHelp li h2 {
+  color: #144f06;
+  font-size: 1.2em;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+.navHelp li h2:hover {
+  transform: translateX(5px);
+}
+.navHelp li ul {
+  display: none;
+  padding-left: 25px;
+}
+.navHelp li.navOn ul {
+  display: block;
+  -webkit-animation: navOnAnimate 0.3s linear 0s alternate 1 backwards running;
+          animation: navOnAnimate 0.3s linear 0s alternate 1 backwards running;
+}
+@-webkit-keyframes navOnAnimate {
+  from {
+    transform: translateY(-10px);
+    opacity: 0.5;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes navOnAnimate {
+  from {
+    transform: translateY(-10px);
+    opacity: 0.5;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.navHelp li.navOn ul li {
+  position: relative;
+}
+.navHelp li.navOn ul li.active::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #558c47;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -11px;
+}
+.navHelp li.navOn ul li a {
+  color: #144f06;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.help-content {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: auto;
+  grid-template-areas: "nav content";
+}
+.help-content .navHelp,
+.help-content .contentHelp {
+  background-color: rgba(255, 253, 253, 0.7);
+  padding: 20px;
+  border-radius: 5px;
+}
+.help-content .navHelp {
+  grid-area: nav;
+  border-right: 2px solid #9c9c9c;
+}
+.help-content .contentHelp {
+  grid-area: content;
+  padding-left: 40px;
+}
+
 /* @import 'components/app/ */

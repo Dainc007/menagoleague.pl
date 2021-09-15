@@ -1,0 +1,23 @@
+.help-content {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: auto;
+  grid-template-areas: 'nav content';
+
+  .navHelp,
+  .contentHelp {
+    background-color: $sectionColor;
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+  .navHelp {
+    grid-area: nav;
+    border-right: 2px solid rgb(156, 156, 156);
+  }
+
+  .contentHelp {
+    grid-area: content;
+    padding-left: 40px;
+  }
+}

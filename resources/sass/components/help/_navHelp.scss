@@ -1,0 +1,88 @@
+.navHelp {
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 40px;
+    position: relative;
+
+    h2 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 6em;
+      letter-spacing: 15px;
+      opacity: 0.2;
+      font-weight: 900;
+    }
+
+    img {
+      width: 150px;
+    }
+  }
+
+  li {
+    margin: 25px 0;
+
+    h2 {
+      color: $text-dark;
+      font-size: 1.2em;
+      width: max-content;
+      transition: transform 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateX(5px);
+      }
+    }
+
+    ul {
+      display: none;
+      padding-left: 25px;
+    }
+
+    &.navOn {
+      ul {
+        display: block;
+        animation: navOnAnimate 0.3s linear 0s alternate 1 backwards running;
+
+        @keyframes navOnAnimate {
+          from {
+            transform: translateY(-10px);
+            opacity: 0.5;
+          }
+
+          to {
+            transform: translateY(0px);
+            opacity: 1;
+          }
+        }
+
+        li {
+          position: relative;
+
+          &.active {
+            &::before {
+              content: '';
+              position: absolute;
+              width: 5px;
+              height: 5px;
+              border-radius: 50%;
+              background-color: $text-hippieGreen;
+              top: 50%;
+              transform: translateY(-50%);
+              left: -11px;
+            }
+          }
+
+          a {
+            color: $text-dark;
+            text-decoration: none;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+  }
+}

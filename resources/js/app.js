@@ -152,6 +152,18 @@ if (loanCheckBox !== null) {
   });
 }
 
+// Help nav
+
+const navHelpContainer = document.querySelector('.navHelp');
+const navHelpItems = navHelpContainer.querySelectorAll('.navHelp-mainUl > li');
+
+navHelpItems.forEach((item) => {
+  item.addEventListener('click', function() {
+    navHelpItems.forEach((li) => li.classList.remove('navOn'));
+    this.classList.add('navOn');
+  });
+});
+
 /* Finances view */
 
 const financesBtn = document.querySelectorAll('.details-buttons > li[data-number]'),

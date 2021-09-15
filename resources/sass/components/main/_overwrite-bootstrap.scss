@@ -1,26 +1,25 @@
 .modal-content {
-    .modal-header {
-        align-items: center;
+  .modal-header {
+    align-items: center;
 
-        button {
-            span {
-                font-size: 2em;
-            }
-        }
+    button {
+      span {
+        font-size: 2em;
+      }
     }
-    .modal-body {
-        img {
-            height: 300px;
-            width: 100%;
-            object-fit: cover;
-            margin-bottom: 1rem;
-        }
-        
-        h5 {
-            margin-bottom: 2rem;
-        }
+  }
+  .modal-body {
+    img {
+      height: 300px;
+      width: 100%;
+      object-fit: cover;
+      margin-bottom: 1rem;
     }
-    
+
+    h5 {
+      margin-bottom: 2rem;
+    }
+  }
 }
 
 .league-news-item-img {
@@ -32,16 +31,18 @@
 }
 
 .modal {
-    .show {
-        display: flex !important;
-        justify-content: center;
-        .modal-dialog {
-          margin: auto;
-        }
+  .show {
+    display: flex !important;
+    justify-content: center;
+    .modal-dialog {
+      margin: auto;
     }
+  }
 }
 
-ul {
+.alert {
+  ul {
     padding: 0;
     margin: 0;
+  }
 }
