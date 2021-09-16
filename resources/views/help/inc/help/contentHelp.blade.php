@@ -1,4 +1,8 @@
 <div class="contentHelp">
+    <div class="r-navHelp">
+        <img src="/images/burger-menu.svg" alt="">
+    </div>
+
     <h1>Installation</h1>
 
     <div class="sectionLegend">

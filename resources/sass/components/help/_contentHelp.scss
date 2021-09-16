@@ -1,4 +1,11 @@
 .contentHelp {
+  .r-navHelp {
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
   a {
     text-decoration: none;
     width: max-content;
@@ -74,6 +81,14 @@
         padding: 5px 0;
         width: max-content;
       }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .contentHelp {
+    .r-navHelp {
+      display: none;
     }
   }
 }

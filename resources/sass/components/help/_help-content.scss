@@ -1,8 +1,9 @@
 .help-content {
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 100%;
   grid-template-rows: auto;
-  grid-template-areas: 'nav content';
+  grid-template-areas: 'content';
+  position: relative;
 
   .navHelp,
   .contentHelp {
@@ -13,11 +14,44 @@
 
   .navHelp {
     grid-area: nav;
+    position: absolute;
+    height: calc(100vh - 90px);
     border-right: 2px solid rgb(156, 156, 156);
+    border-bottom: 2px solid rgb(156, 156, 156);
+    width: 80%;
+    max-width: 320px;
+    background-color: whitesmoke;
+    overflow-y: auto;
+    display: none;
   }
 
   .contentHelp {
     grid-area: content;
-    padding-left: 40px;
+
+    .r-navHelp {
+      text-align: right;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .help-content {
+    grid-template-columns: 30% 70%;
+    grid-template-areas: 'nav content';
+    position: unset;
+
+    .navHelp {
+      position: unset;
+      height: unset;
+      width: unset;
+      max-width: unset;
+      background-color: $sectionColor;
+      display: block !important;
+      border-bottom: none;
+    }
+
+    .contentHelp {
+      padding-left: 40px;
+    }
   }
 }

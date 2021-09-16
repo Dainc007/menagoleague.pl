@@ -14696,6 +14696,10 @@ a .btn-discord img {
 }
 
 /*Season components */
+.contentHelp .r-navHelp img {
+  width: 40px;
+  height: 40px;
+}
 .contentHelp a {
   text-decoration: none;
   width: -webkit-max-content;
@@ -14762,6 +14766,11 @@ a .btn-discord img {
   width: max-content;
 }
 
+@media (min-width: 1024px) {
+  .contentHelp .r-navHelp {
+    display: none;
+  }
+}
 .navHelp .logo {
   display: flex;
   justify-content: center;
@@ -14773,8 +14782,8 @@ a .btn-discord img {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 6em;
+  transform: translate(-48%, -52%);
+  font-size: 5em;
   letter-spacing: 15px;
   opacity: 0.2;
   font-weight: 900;
@@ -14793,6 +14802,7 @@ a .btn-discord img {
   width: max-content;
   transition: transform 0.3s;
   cursor: pointer;
+  width: 100%;
 }
 .navHelp li h2:hover {
   transform: translateX(5px);
@@ -14846,11 +14856,30 @@ a .btn-discord img {
   font-weight: normal;
 }
 
+@media (min-width: 400px) {
+  .navHelp .logo h2 {
+    transform: translate(-50%, -50%);
+    font-size: 6em;
+  }
+}
+@media (min-width: 1024px) {
+  .navHelp .logo h2 {
+    transform: translate(-48%, -50%);
+    font-size: 5em;
+  }
+}
+@media (min-width: 1440px) {
+  .navHelp .logo h2 {
+    transform: translate(-50%, -50%);
+    font-size: 6em;
+  }
+}
 .help-content {
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 100%;
   grid-template-rows: auto;
-  grid-template-areas: "nav content";
+  grid-template-areas: "content";
+  position: relative;
 }
 .help-content .navHelp,
 .help-content .contentHelp {
@@ -14860,11 +14889,40 @@ a .btn-discord img {
 }
 .help-content .navHelp {
   grid-area: nav;
+  position: absolute;
+  height: calc(100vh - 90px);
   border-right: 2px solid #9c9c9c;
+  border-bottom: 2px solid #9c9c9c;
+  width: 80%;
+  max-width: 320px;
+  background-color: whitesmoke;
+  overflow-y: auto;
+  display: none;
 }
 .help-content .contentHelp {
   grid-area: content;
-  padding-left: 40px;
+}
+.help-content .contentHelp .r-navHelp {
+  text-align: right;
 }
 
+@media (min-width: 1024px) {
+  .help-content {
+    grid-template-columns: 30% 70%;
+    grid-template-areas: "nav content";
+    position: unset;
+  }
+  .help-content .navHelp {
+    position: unset;
+    height: unset;
+    width: unset;
+    max-width: unset;
+    background-color: rgba(255, 253, 253, 0.7);
+    display: block !important;
+    border-bottom: none;
+  }
+  .help-content .contentHelp {
+    padding-left: 40px;
+  }
+}
 /* @import 'components/app/ */

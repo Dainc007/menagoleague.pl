@@ -155,7 +155,23 @@ if (loanCheckBox !== null) {
 // Help nav
 
 const navHelpContainer = document.querySelector('.navHelp');
-const navHelpItems = navHelpContainer.querySelectorAll('.navHelp-mainUl > li');
+const navHelpItems = document.querySelectorAll('.navHelp-mainUl > li');
+const responsiveNavHelpButton = document.querySelector('.contentHelp .r-navHelp img');
+
+if (responsiveNavHelpButton !== null) {
+  responsiveNavHelpButton.addEventListener('click', () => {
+    const openResponsiveNavHelp = () => {
+      if (navHelpContainer.style.display == 'none') {
+        navHelpContainer.style.display = 'table';
+        responsiveNavHelpButton.src = '/images/close-burger-menu.svg';
+      } else {
+        navHelpContainer.style.display = 'none';
+        responsiveNavHelpButton.src = '/images/burger-menu.svg';
+      }
+    };
+    openResponsiveNavHelp();
+  });
+}
 
 navHelpItems.forEach((item) => {
   item.addEventListener('click', function() {
