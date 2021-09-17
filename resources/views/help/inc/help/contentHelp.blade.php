@@ -8,27 +8,27 @@
     <div class="sectionLegend">
         <ul>
             <li>
-                <a href="#Dupa" class="main-link">Dupa</a>
+                <a href="#Lorem" class="main-link">Lorem</a>
             </li>
 
             <li>
-                <a href="#Dupa2" class="main-link">Dupa2</a>
+                <a href="#Lorem2" class="main-link">Lorem2</a>
 
                 <ul>
                     <li>
-                        <a href="#Dupa2.a" class="sub-link">Dupa2.a</a>
+                        <a href="#Lorem2.a" class="sub-link">Lorem2.a</a>
                     </li>
                 </ul>
             </li>
 
             <li>
-                <a href="#Dupa3" class="main-link">Dupa3</a>
+                <a href="#Lorem3" class="main-link">Lorem3</a>
             </li>
         </ul>
     </div>
 
-    <div class="sectionHelp" id="Dupa">
-        <a href="#Dupa" class="main-link">Dupa</a>
+    <div class="sectionHelp" id="Lorem">
+        <a href="#Lorem" class="main-link">Lorem</a>
 
         <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis ad rerum incidunt culpa voluptates delectus
@@ -49,8 +49,8 @@
         </p>
     </div>
 
-    <div class="sectionHelp" id="Dupa2">
-        <a href="#Dupa2" class="main-link">Dupa2</a>
+    <div class="sectionHelp" id="Lorem2">
+        <a href="#Lorem2" class="main-link">Lorem2</a>
 
         <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis ad rerum incidunt culpa voluptates delectus
@@ -59,7 +59,7 @@
         </p>
 
         <div class="sub-link">
-            <a href="#Dupa2.a" id="Dupa2.a">Dupa2.a</a>
+            <a href="#Lorem2.a" id="Lorem2.a">Lorem2.a</a>
         </div>
         <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis ad rerum incidunt culpa voluptates delectus
@@ -74,8 +74,8 @@
         </p>
     </div>
 
-    <div class="sectionHelp" id="Dupa3">
-        <a href="#Dupa3" class="main-link">Dupa3</a>
+    <div class="sectionHelp" id="Lorem3">
+        <a href="#Lorem3" class="main-link">Lorem3</a>
 
         <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis ad rerum incidunt culpa voluptates delectus
