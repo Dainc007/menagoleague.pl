@@ -16,21 +16,22 @@
                                 class="col-md-4 col-form-label text-md-right">{{ __('auth.device') }}</label>
 
                             <div class="col-md-6 justify-content-center d-flex">
-                                <div class="form-check form-check-inline">
-                                    <input checked class="form-check-input" type="radio" name="device" id="xbox"
+                                <div class="form-check form-check-inline register-radios mr-3">
+                                    <input checked class="form-check-input" type="radio" name="device" id="device_xbox"
                                         value="xbox">
-                                    <img src="./images/xbox-icon.svg" alt="xbox" />
+                                    <label for="device_xbox"><img src="./images/xbox-icon.svg" alt="xbox" /></label>
                                 </div>
 
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="device" id="playstation"
+                                <div class="form-check form-check-inline register-radios mr-3">
+                                    <input class="form-check-input" type="radio" name="device" id="device_playstation"
                                         value="playstation">
-                                    <img src="./images/playstation-icon.svg" alt="playstation" />
+                                    <label for="device_playstation"><img src="./images/playstation-icon.svg"
+                                            alt="playstation" /></label>
                                 </div>
 
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="device" id="pc" value="pc">
-                                    <img src="./images/pc-icon.svg" alt="PC" />
+                                <div class="form-check form-check-inline register-radios mr-3">
+                                    <input class="form-check-input" type="radio" name="device" id="device_pc" value="pc">
+                                    <label for="device_pc"><img src="./images/pc-icon.svg" alt="PC" /></label>
                                 </div>
                             </div>
                         </div>

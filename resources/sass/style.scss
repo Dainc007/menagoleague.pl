@@ -134,6 +134,29 @@ a {
   }
 }
 
+// Register
+.register-radios {
+  label:before {
+    content: '';
+    position: absolute;
+    border: 2px solid $text-gray;
+    border-radius: 5px;
+    width: 37px;
+    height: 37px;
+    left: -6px;
+    top: -4px;
+  }
+
+  input[type='radio'][id^='device'] {
+    display: none;
+
+    &:checked + label:before {
+      content: '';
+      border: 3px solid $text-olivine;
+    }
+  }
+}
+
 /* Navbar and footer */
 @import 'components/navigation';
 @import 'components/footer';

@@ -10250,6 +10250,24 @@ a:hover {
   box-shadow: inset 0px 0px 13px #f0f0f0ad, inset 0px 0px 13px #f0f0f0ad;
 }
 
+.register-radios label:before {
+  content: "";
+  position: absolute;
+  border: 2px solid #494949;
+  border-radius: 5px;
+  width: 37px;
+  height: 37px;
+  left: -6px;
+  top: -4px;
+}
+.register-radios input[type=radio][id^=device] {
+  display: none;
+}
+.register-radios input[type=radio][id^=device]:checked + label:before {
+  content: "";
+  border: 3px solid #8ab87f;
+}
+
 /* Navbar and footer */
 nav {
   height: 80px;
@@ -10752,6 +10770,10 @@ footer a .social-item img {
   margin: 0;
 }
 
+.btn-link:hover {
+  color: #144f06;
+}
+
 .form-control:focus,
 .custom-select:focus {
   border-color: #558c47;
@@ -10762,10 +10784,6 @@ input {
   border: 1px solid #ced4da;
   padding: 0.375rem 1.75rem 0.375rem 0.75rem;
   border-radius: 0.25rem;
-}
-
-#xbox:checked {
-  background-color: #558c47;
 }
 
 input[type=number],
@@ -12440,6 +12458,10 @@ a .btn-discord img {
 }
 .advance-headers h2 a {
   color: whitesmoke;
+  text-decoration: underline;
+}
+.advance-headers h2 a:hover {
+  text-decoration: none;
 }
 
 .advance-callendar {
