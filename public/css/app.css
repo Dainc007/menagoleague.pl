@@ -10250,6 +10250,12 @@ a:hover {
   background-color: transparent;
 }
 
+.login button,
+.verify button,
+.register button {
+  color: whitesmoke;
+}
+
 /* Navbar and footer */
 nav {
   height: 80px;
@@ -10750,6 +10756,44 @@ footer a .social-item img {
 .alert ul {
   padding: 0;
   margin: 0;
+}
+
+.form-control:focus,
+.custom-select:focus {
+  border-color: #558c47;
+  box-shadow: 0 0 0 0.2rem rgba(85, 140, 71, 0.25);
+}
+
+input {
+  border: 1px solid #ced4da;
+  padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+  border-radius: 0.25rem;
+}
+
+#xbox:checked {
+  background-color: #558c47;
+}
+
+input[type=number] {
+  padding: 0.375rem 0.75rem 0.375rem 0.75rem;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  border-color: #558c47;
+  background-color: #558c47;
+}
+
+.custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+  border-color: #558c47;
+}
+
+.custom-control-input:focus ~ .custom-control-label::before {
+  box-shadow: 0 0 0 0.2rem rgba(85, 140, 71, 0.25);
+}
+
+.custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+  background-color: rgba(85, 140, 71, 0.25);
+  border-color: rgba(85, 140, 71, 0.25);
 }
 
 /* Read more */
@@ -13563,33 +13607,8 @@ a .btn-discord img {
   margin-top: 15px;
   color: white;
 }
-.transfer-forms form .form-control:focus,
-.transfer-forms form .custom-select:focus {
-  border-color: #558c47;
-  box-shadow: 0 0 0 0.2rem rgba(85, 140, 71, 0.25);
-}
 .transfer-forms form input {
   width: 100%;
-  border: 1px solid #ced4da;
-  padding: 0.375rem 1.75rem 0.375rem 0.75rem;
-  border-radius: 0.25rem;
-}
-.transfer-forms form input[type=number] {
-  padding: 0.375rem 0.75rem 0.375rem 0.75rem;
-}
-.transfer-forms form .custom-control-input:checked ~ .custom-control-label::before {
-  border-color: #558c47;
-  background-color: #558c47;
-}
-.transfer-forms form .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
-  border-color: #558c47;
-}
-.transfer-forms form .custom-control-input:focus ~ .custom-control-label::before {
-  box-shadow: 0 0 0 0.2rem rgba(85, 140, 71, 0.25);
-}
-.transfer-forms form .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
-  background-color: rgba(85, 140, 71, 0.25);
-  border-color: rgba(85, 140, 71, 0.25);
 }
 .transfer-forms form .buyExtraOptions,
 .transfer-forms form .loanExtraOptions {

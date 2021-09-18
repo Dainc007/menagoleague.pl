@@ -134,6 +134,14 @@ a {
   }
 }
 
+.login,
+.verify,
+.register {
+  button {
+    color: whitesmoke;
+  }
+}
+
 /* Navbar and footer */
 @import 'components/navigation';
 @import 'components/footer';
