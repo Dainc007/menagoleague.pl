@@ -63,7 +63,9 @@ input {
   background-color: $text-hippieGreen;
 }
 
-input[type='number'] {
+input[type='number'],
+input[type='date'],
+input[type='time'] {
   padding: 0.375rem 0.75rem 0.375rem 0.75rem;
 }
 

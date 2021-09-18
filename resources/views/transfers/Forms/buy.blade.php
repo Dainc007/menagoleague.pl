@@ -14,7 +14,7 @@
         <div class="form-group">
             <label for="extraPlayer">Zaoferuj piłkarza wystawionego na listę transferową:</label>
             <select class="custom-select" name="extraPlayer" id="extraPlayer">
-                <option selected>Wybierz Zawodnika</option>
+                <option selected disabled>Wybierz Zawodnika</option>
                 @foreach ($user->team->players->where('transfer_listed', true) as $player)
                     <option value="{{ $player->id }}">{{ $player->name }}</option>
                 @endforeach
