@@ -11649,40 +11649,63 @@ a .btn-discord img {
   }
 }
 /* Competition components*/
-.players .nav-tabs, .transfer-forms .nav-tabs, .squad-team-management .nav-tabs {
+.players .nav-tabs .nav-item .nav-link {
+  display: none;
+}
+
+.players .nav-tabs,
+.transfer-forms .nav-tabs,
+.squad-team-management .nav-tabs,
+.ranking-content .nav-tabs {
   position: relative;
 }
-.players .nav-tabs .nav-item, .transfer-forms .nav-tabs .nav-item, .squad-team-management .nav-tabs .nav-item {
+.players .nav-tabs .nav-item,
+.transfer-forms .nav-tabs .nav-item,
+.squad-team-management .nav-tabs .nav-item,
+.ranking-content .nav-tabs .nav-item {
   margin-right: 2px;
 }
-.players .nav-tabs .nav-item .nav-link, .transfer-forms .nav-tabs .nav-item .nav-link, .squad-team-management .nav-tabs .nav-item .nav-link {
-  display: none;
+.players .nav-tabs .nav-item .nav-link,
+.transfer-forms .nav-tabs .nav-item .nav-link,
+.squad-team-management .nav-tabs .nav-item .nav-link,
+.ranking-content .nav-tabs .nav-item .nav-link {
   margin-bottom: -2px;
   border: 1px solid transparent;
   color: #494949;
   background-color: rgba(255, 253, 253, 0.7);
   border-color: #558c47;
+  transition: 0.3s background-color, 0.3s color;
 }
-.players .nav-tabs .responsive-tab-menu, .transfer-forms .nav-tabs .responsive-tab-menu, .squad-team-management .nav-tabs .responsive-tab-menu {
+.players .nav-tabs .nav-item .nav-link:hover,
+.transfer-forms .nav-tabs .nav-item .nav-link:hover,
+.squad-team-management .nav-tabs .nav-item .nav-link:hover,
+.ranking-content .nav-tabs .nav-item .nav-link:hover {
+  background-color: #558c47;
+  border-color: #558c47;
+  color: whitesmoke;
+}
+.players .nav-tabs .responsive-tab-menu,
+.transfer-forms .nav-tabs .responsive-tab-menu,
+.squad-team-management .nav-tabs .responsive-tab-menu,
+.ranking-content .nav-tabs .responsive-tab-menu {
   position: absolute;
   right: 5px;
   top: 5px;
   width: 30px;
 }
 .players .nav-tabs .nav-link.active,
-.players .nav-tabs .nav-item.show .nav-link, .transfer-forms .nav-tabs .nav-link.active,
-.transfer-forms .nav-tabs .nav-item.show .nav-link, .squad-team-management .nav-tabs .nav-link.active,
-.squad-team-management .nav-tabs .nav-item.show .nav-link {
+.players .nav-tabs .nav-item.show .nav-link,
+.transfer-forms .nav-tabs .nav-link.active,
+.transfer-forms .nav-tabs .nav-item.show .nav-link,
+.squad-team-management .nav-tabs .nav-link.active,
+.squad-team-management .nav-tabs .nav-item.show .nav-link,
+.ranking-content .nav-tabs .nav-link.active,
+.ranking-content .nav-tabs .nav-item.show .nav-link {
   color: white;
   background-color: #558c47;
   border-color: #558c47;
   pointer-events: none;
   display: flex;
-}
-.players .nav-tabs .nav-link:hover, .transfer-forms .nav-tabs .nav-link:hover, .squad-team-management .nav-tabs .nav-link:hover {
-  background-color: #558c47;
-  border-color: #558c47;
-  color: whitesmoke;
 }
 
 .careerSubTab {
@@ -12361,7 +12384,185 @@ a .btn-discord img {
     margin: 1rem;
   }
 }
-/* Players components*/
+/* Teams components*/
+.ranking-content h1 {
+  font-size: 4.5em;
+  color: transparent;
+  -webkit-text-stroke: 0.1px #144f06;
+  text-align: center;
+  font-family: "EA Font";
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+.ranking-content .nav-tabs {
+  display: flex;
+  justify-content: space-between;
+}
+.ranking-content .nav-tabs .nav-item {
+  width: calc(33% - 2px);
+  text-align: center;
+}
+.ranking-content .nav-tabs .nav-item .nav-link {
+  justify-content: center;
+}
+
+.rank-card {
+  width: 100%;
+  background-color: rgba(255, 253, 253, 0.7);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.rank-card .rank-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+  padding: 10px 15px;
+  background-color: #558c47;
+}
+.rank-card .rank-form p {
+  color: whitesmoke;
+  font-size: 1em;
+  margin-top: 10px;
+}
+.rank-card .rank-form p span {
+  font-style: italic;
+}
+.rank-card .rank-form form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+.rank-card .rank-form form .form-group {
+  margin-bottom: 0;
+  width: calc(100% - 64px);
+}
+.rank-card .rank-form form .form-group select {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+.rank-card .rank-form form button {
+  height: 37px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.rank-card .rank-form form button.material-icons {
+  top: 0;
+}
+.rank-card .rank-content .rank-table-legend {
+  display: flex;
+  font-size: 1.3em;
+  background-color: #8ab87f;
+  padding: 5px 0;
+}
+.rank-card .rank-content .rank-table-legend .place,
+.rank-card .rank-content .rank-table-legend .points {
+  width: 17%;
+  text-align: center;
+}
+.rank-card .rank-content .rank-table-legend .player,
+.rank-card .rank-content .rank-table-legend .team,
+.rank-card .rank-content .rank-table-legend .gamerTag {
+  width: 33%;
+}
+.rank-card .rank-content .rank-table-legend .player {
+  display: none;
+}
+.rank-card .rank-content .rank-table .rank-table-item {
+  display: flex;
+  font-size: 1.2em;
+  padding: 2px 0;
+}
+.rank-card .rank-content .rank-table .rank-table-item:nth-of-type(2n) {
+  background-color: #a0c5982e;
+}
+.rank-card .rank-content .rank-table .rank-table-item .place,
+.rank-card .rank-content .rank-table .rank-table-item .points {
+  width: 17%;
+  text-align: center;
+}
+.rank-card .rank-content .rank-table .rank-table-item .player,
+.rank-card .rank-content .rank-table .rank-table-item .team,
+.rank-card .rank-content .rank-table .rank-table-item .gamerTag {
+  width: 33%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.rank-card .rank-content .rank-table .rank-table-item .player {
+  display: none;
+}
+.rank-card .rank-pagination {
+  height: 50px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #8ab87f;
+}
+
+@media (min-width: 500px) {
+  .ranking-content h1 {
+    font-size: 6em;
+    letter-spacing: 15px;
+  }
+}
+@media (min-width: 768px) {
+  .rank-card .rank-content .rank-table-legend {
+    padding: 5px 15px;
+  }
+  .rank-card .rank-content .rank-table-legend .place,
+.rank-card .rank-content .rank-table-legend .points {
+    width: 5%;
+  }
+  .rank-card .rank-content .rank-table-legend .player,
+.rank-card .rank-content .rank-table-legend .team,
+.rank-card .rank-content .rank-table-legend .gamerTag {
+    width: 30%;
+  }
+  .rank-card .rank-content .rank-table-legend .player {
+    display: block;
+    text-align: center;
+  }
+  .rank-card .rank-content .rank-table .rank-table-item {
+    padding: 3px 15px;
+  }
+  .rank-card .rank-content .rank-table .rank-table-item .place,
+.rank-card .rank-content .rank-table .rank-table-item .points {
+    width: 5%;
+  }
+  .rank-card .rank-content .rank-table .rank-table-item .player,
+.rank-card .rank-content .rank-table .rank-table-item .team,
+.rank-card .rank-content .rank-table .rank-table-item .gamerTag {
+    width: 30%;
+  }
+  .rank-card .rank-content .rank-table .rank-table-item .player {
+    display: block;
+    text-align: center;
+  }
+}
+@media (min-width: 1024px) {
+  .rank-card .rank-form {
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: unset;
+    height: 55px;
+  }
+  .rank-card .rank-form p {
+    margin-top: 0;
+    font-size: 1.3em;
+  }
+  .rank-card .rank-form form {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50%;
+  }
+  .rank-card .rank-form form .form-group {
+    width: 50%;
+  }
+}
+/* Teams components*/
 /* Game components */
 .central-advance {
   grid-area: advance;
@@ -13049,9 +13250,6 @@ a .btn-discord img {
   }
 }
 /* Calendar components */
-.squad-team-management .nav-tabs .nav-item .nav-link {
-  display: flex;
-}
 .squad-team-management a {
   color: #494949;
 }
@@ -13607,9 +13805,6 @@ a .btn-discord img {
   color: whitesmoke;
 }
 
-.transfer-forms .nav-tabs .nav-item .nav-link {
-  display: flex;
-}
 .transfer-forms form {
   border-top: 3px solid #558c47;
   padding: 15px;

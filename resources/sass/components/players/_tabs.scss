@@ -2,7 +2,20 @@
 // Main tab
 //
 
-.players, .transfer-forms, .squad-team-management {
+.players {
+  .nav-tabs {
+    .nav-item {
+      .nav-link {
+        display: none;
+      }
+    }
+  }
+}
+
+.players,
+.transfer-forms,
+.squad-team-management,
+.ranking-content {
   .nav-tabs {
     position: relative;
 
@@ -10,12 +23,18 @@
       margin-right: 2px;
 
       .nav-link {
-        display: none;
         margin-bottom: -2px;
         border: 1px solid transparent;
         color: $text-gray;
         background-color: $sectionColor;
         border-color: $text-hippieGreen;
+        transition: 0.3s background-color, 0.3s color;
+
+        &:hover {
+          background-color: $text-hippieGreen;
+          border-color: $text-hippieGreen;
+          color: whitesmoke;
+        }
       }
     }
 
@@ -34,12 +53,6 @@
     border-color: $text-hippieGreen;
     pointer-events: none;
     display: flex;
-  }
-
-  .nav-tabs .nav-link:hover {
-    background-color: $text-hippieGreen;
-    border-color: $text-hippieGreen;
-    color: whitesmoke;
   }
 }
 

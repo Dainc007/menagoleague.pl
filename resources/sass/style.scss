@@ -157,6 +157,8 @@ a {
   }
 }
 
+// Styling Tabs is on sass/components/players/_tabs
+
 /* Navbar and footer */
 @import 'components/navigation';
 @import 'components/footer';
@@ -166,7 +168,8 @@ a {
 @import 'components/main/main';
 @import 'components/competition/main'; /* Competition components*/
 @import 'components/players/main'; /* Players components*/
-@import 'components/teams/main'; /* Players components*/
+@import 'components/teams/main'; /* Teams components*/
+@import 'components/ranking/ranking'; /* Teams components*/
 
 /* Game components */
 @import 'components/central/main'; /* Central components:*/

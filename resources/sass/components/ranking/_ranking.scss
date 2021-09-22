@@ -1,0 +1,226 @@
+.ranking-content {
+  h1 {
+    font-size: 4.5em;
+    color: transparent;
+    -webkit-text-stroke: 0.1px $text-dark;
+    text-align: center;
+    font-family: 'EA Font';
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 15px;
+  }
+
+  .nav-tabs {
+    display: flex;
+    justify-content: space-between;
+
+    .nav-item {
+      width: calc(33% - 2px);
+      text-align: center;
+
+      .nav-link {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.rank-card {
+  width: 100%;
+  background-color: $sectionColor;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  .rank-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    padding: 10px 15px;
+    background-color: $text-hippieGreen;
+
+    p {
+      color: whitesmoke;
+      font-size: 1em;
+      margin-top: 10px;
+
+      span {
+        font-style: italic;
+      }
+    }
+
+    form {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 100%;
+
+      .form-group {
+        margin-bottom: 0;
+        width: calc(100% - 64px);
+
+        select {
+          border-bottom-right-radius: 0;
+          border-top-right-radius: 0;
+        }
+      }
+
+      button {
+        height: 37px;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+
+        &.material-icons {
+          top: 0;
+        }
+      }
+    }
+  }
+
+  .rank-content {
+    .rank-table-legend {
+      display: flex;
+      font-size: 1.3em;
+      background-color: $text-olivine;
+      padding: 5px 0;
+
+      .place,
+      .points {
+        width: 17%;
+        text-align: center;
+      }
+
+      .player,
+      .team,
+      .gamerTag {
+        width: 33%;
+      }
+
+      .player {
+        display: none;
+      }
+    }
+
+    .rank-table {
+      .rank-table-item {
+        display: flex;
+        font-size: 1.2em;
+        padding: 2px 0;
+
+        &:nth-of-type(2n) {
+          background-color: #a0c5982e;
+        }
+
+        .place,
+        .points {
+          width: 17%;
+          text-align: center;
+        }
+
+        .player,
+        .team,
+        .gamerTag {
+          width: 33%;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+
+        .player {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .rank-pagination {
+    height: 50px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: $text-olivine;
+  }
+}
+
+@media (min-width: 500px) {
+  .ranking-content {
+    h1 {
+      font-size: 6em;
+      letter-spacing: 15px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .rank-card {
+    .rank-content {
+      .rank-table-legend {
+        padding: 5px 15px;
+
+        .place,
+        .points {
+          width: 5%;
+        }
+
+        .player,
+        .team,
+        .gamerTag {
+          width: 30%;
+        }
+
+        .player {
+          display: block;
+          text-align: center;
+        }
+      }
+
+      .rank-table {
+        .rank-table-item {
+          padding: 3px 15px;
+
+          .place,
+          .points {
+            width: 5%;
+          }
+
+          .player,
+          .team,
+          .gamerTag {
+            width: 30%;
+          }
+
+          .player {
+            display: block;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .rank-card {
+    .rank-form {
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: unset;
+      height: 55px;
+
+      p {
+        margin-top: 0;
+        font-size: 1.3em;
+      }
+
+      form {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 50%;
+
+        .form-group {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
