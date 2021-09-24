@@ -14,12 +14,12 @@
 </ul>
 <div class="tab-content" id="myTabContent">
     <div class="tab-pane fade show active" id="rank" role="tabpanel" aria-labelledby="rank-tab">
-        @include('.help.inc.ranking.rank')
+        @include('ranking.inc.rank')
     </div>
     <div class="tab-pane fade" id="rank-teams" role="tabpanel" aria-labelledby="rank-teams-tab">
-        @include('.help.inc.ranking.rankTeams')
+        @include('ranking.inc.rankTeams')
     </div>
     <div class="tab-pane fade" id="rank-players" role="tabpanel" aria-labelledby="rank-players-tab">
-        @include('.help.inc.ranking.rankPlayers')
+        @include('ranking.inc.rankPlayers')
     </div>
 </div>
