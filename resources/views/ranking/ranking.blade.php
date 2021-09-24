@@ -2,10 +2,10 @@
 
 @section('content')
 
-    <div class="help-content">
-        @include('ranking.inc.navHelp')
+    <div class="ranking-content">
+        <h1>Ranking</h1>
 
-        @include('ranking.inc.contentHelp')
+        @include('ranking.inc.rankTabs')
     </div>
 
 @endsection
