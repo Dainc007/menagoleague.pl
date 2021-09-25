@@ -166,25 +166,22 @@ a {
 
 /* Homepage components */
 @import 'components/main/main';
+
+/* Other components*/
+
 @import 'components/competition/main'; /* Competition components*/
 @import 'components/players/main'; /* Players components*/
 @import 'components/teams/main'; /* Teams components*/
-@import 'components/ranking/ranking'; /* Teams components*/
+@import 'components/ranking/ranking'; /* Ranking component*/
+@import 'components/tournaments/main'; /* Tournaments components*/
+@import 'components/help/main'; /* Help components */
 
 /* Game components */
 @import 'components/central/main'; /* Central components:*/
 @import 'components/calendar/calendar'; /* Calendar components */
-
 @import 'components/squad/main'; /* Squad components:*/
-
 @import 'components/transfers/main'; /* Transfers components:*/
-
 @import 'components/office/main'; /*Office components */
-
 @import 'components/season/main'; /*Season components */
 
-// Help components
-
-@import 'components/help/main';
-
-/* @import 'components/app/ */
+/* @import 'components/name/ */

@@ -1,0 +1,193 @@
+.tournamentThree {
+  background-color: $sectionColor;
+  border-radius: 5px;
+
+  .tournamentThree-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 2fr repeat(3, 1fr);
+    grid-template-rows: 700px;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+
+    .r16,
+    .qtr,
+    .semi,
+    .final {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .team {
+        display: flex;
+        width: 90%;
+        background-color: $chat-sender;
+        border-radius: 5px;
+        height: 75px;
+
+        &.rev {
+          flex-direction: row-reverse;
+
+          .img {
+            border-right: 0;
+            border-left: 1px solid $text-olivine;
+          }
+        }
+
+        > div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .img {
+          width: 70%;
+          border-right: 1px solid $text-olivine;
+          background-color: $text-paleLeaf;
+
+          img {
+            width: 50px;
+          }
+        }
+
+        .score {
+          width: 30%;
+          font-size: 2em;
+          height: 100%;
+        }
+      }
+    }
+
+    .final {
+      flex-direction: row;
+
+      .team {
+        width: 43%;
+
+        &:last-of-type {
+          flex-direction: row-reverse;
+        }
+
+        .score {
+          background-color: $text-paleLeaf;
+        }
+
+        .img {
+          background-color: $text-olivine;
+        }
+      }
+    }
+
+    .r16,
+    .qtr,
+    .semi {
+      align-items: center;
+
+      .team {
+        position: relative;
+
+        &:nth-of-type(2n - 1) {
+          &::before {
+            content: '';
+            position: absolute;
+            right: -15px;
+            top: 37.5px;
+            height: 89px;
+            width: 16px;
+            border: 1px solid $text-paleLeaf;
+            border-left: 0;
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            right: -30px;
+            top: 82.15px;
+            height: 1px;
+            width: 16px;
+            border-top: 1px solid $text-paleLeaf;
+          }
+        }
+
+        &.rev {
+          &:nth-of-type(2n - 1) {
+            &::before {
+              left: -16px;
+              transform: rotate(180deg);
+            }
+
+            &::after {
+              left: -31px;
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+    }
+
+    .r16 {
+      height: 100%;
+    }
+
+    .qtr {
+      height: 87.5%;
+
+      .team {
+        &:nth-of-type(1),
+        &:nth-of-type(3) {
+          &::before {
+            height: 179px;
+          }
+
+          &::after {
+            top: 168.15px;
+          }
+        }
+
+        &:nth-of-type(3),
+        &:nth-of-type(7) {
+          &::after {
+            top: 82.15px;
+          }
+        }
+      }
+    }
+
+    .semi {
+      height: 50%;
+
+      .team {
+        &:nth-of-type(2n-1) {
+          &::before {
+            height: 275px;
+            right: -10px;
+            width: 10px;
+          }
+
+          &::after {
+            top: 175.15px;
+            right: -22px;
+            width: 13px;
+          }
+        }
+
+        &.rev {
+          &:nth-of-type(2n - 1) {
+            &::before {
+              left: -9px;
+            }
+
+            &::after {
+              left: -21px;
+            }
+          }
+        }
+      }
+    }
+
+    .final {
+      height: 48%;
+      align-items: center;
+    }
+  }
+}
