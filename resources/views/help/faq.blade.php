@@ -3,6 +3,15 @@
 @section('content')
 
     <div class="tournamentThree">
+        <div class="tournamentThree-legend">
+            <div class="r16">r16</div>
+            <div class="qtr">qtr</div>
+            <div class="semi">semi</div>
+            <div class="final">final</div>
+            <div class="semi">semi</div>
+            <div class="qtr">qtr</div>
+            <div class="r16">r16</div>
+        </div>
         <div class="tournamentThree-content">
             <div class="r16">
                 @for ($i = 1; $i <= 8; $i++)
@@ -11,7 +20,7 @@
                             <img src="{{ url('/images/shields/' . rand(1, 8) . '.png') }}" alt="" />
                         </div>
 
-                        <div class="score">{{ rand(0, 20) }}</div>
+                        <div class="score">{{ rand(0, 9) }}</div>
                     </div>
                 @endfor
             </div>
@@ -23,7 +32,7 @@
                             <img src="{{ url('/images/shields/' . rand(1, 8) . '.png') }}" alt="" />
                         </div>
 
-                        <div class="score">{{ rand(0, 20) }}</div>
+                        <div class="score">{{ rand(0, 9) }}</div>
                     </div>
                 @endfor
             </div>
@@ -35,7 +44,7 @@
                             <img src="{{ url('/images/shields/' . rand(1, 8) . '.png') }}" alt="" />
                         </div>
 
-                        <div class="score">{{ rand(0, 20) }}</div>
+                        <div class="score">{{ rand(0, 9) }}</div>
                     </div>
                 @endfor
             </div>
@@ -47,9 +56,10 @@
                             <img src="{{ url('/images/shields/' . rand(1, 8) . '.png') }}" alt="" />
                         </div>
 
-                        <div class="score">{{ rand(0, 20) }}</div>
+                        <div class="score">{{ rand(0, 9) }}</div>
                     </div>
                 @endfor
+                <div class="trophy"><img src="/images/trophy.svg" alt=""></div>
             </div>
 
             <div class="semi">
@@ -59,7 +69,7 @@
                             <img src="{{ url('/images/shields/' . rand(1, 8) . '.png') }}" alt="" />
                         </div>
 
-                        <div class="score">{{ rand(0, 20) }}</div>
+                        <div class="score">{{ rand(0, 9) }}</div>
                     </div>
                 @endfor
             </div>
@@ -71,7 +81,7 @@
                             <img src="{{ url('/images/shields/' . rand(1, 8) . '.png') }}" alt="" />
                         </div>
 
-                        <div class="score">{{ rand(0, 20) }}</div>
+                        <div class="score">{{ rand(0, 9) }}</div>
                     </div>
                 @endfor
             </div>
@@ -83,7 +93,7 @@
                             <img src="{{ url('/images/shields/' . rand(1, 8) . '.png') }}" alt="" />
                         </div>
 
-                        <div class="score">{{ rand(0, 20) }}</div>
+                        <div class="score">{{ rand(0, 9) }}</div>
                     </div>
                 @endfor
             </div>
