@@ -84,6 +84,7 @@
           border-top-right-radius: 5px;
           border-bottom-right-radius: 5px;
           width: 30%;
+          font-size: 2em;
         }
 
         .img {
@@ -123,106 +124,21 @@
     .qtr,
     .semi {
       align-items: center;
-
-      .team {
-        position: relative;
-
-        &:nth-of-type(2n - 1) {
-          &::before {
-            content: '';
-            position: absolute;
-            right: -4px;
-            top: 58.5px;
-            height: 40px;
-            width: 9px;
-            border: 1px solid $text-paleLeaf;
-            border-left: 0;
-            transform: rotate(90deg);
-          }
-
-          &::after {
-            content: '';
-            position: absolute;
-            right: -5px;
-            top: 87.15px;
-            height: 1px;
-            width: 8px;
-            border-top: 1px solid $text-paleLeaf;
-            transform: rotate(90deg);
-          }
-        }
-
-        &.rev {
-          &:nth-of-type(2n - 1) {
-            &::before {
-              left: 30px;
-              top: -24.5px;
-              transform: rotate(270deg);
-            }
-
-            &::after {
-              left: 31px;
-              top: -12.85px;
-              transform: rotate(270deg);
-            }
-          }
-        }
-      }
     }
 
     .r16 {
       width: 100%;
+
+      .team {
+        width: 12%;
+      }
     }
 
     .qtr {
       width: 87.5%;
 
       .team {
-        &:nth-of-type(1),
-        &:nth-of-type(3) {
-          &::before {
-            height: 80px;
-            right: -24px;
-            top: 38.5px;
-          }
-
-          &::after {
-            top: 87.15px;
-            right: -40px;
-          }
-        }
-
-        &:nth-of-type(3),
-        &:nth-of-type(7) {
-          &::after {
-            top: 86.15px;
-            right: -5px;
-          }
-        }
-
-        &.rev {
-          &:nth-of-type(1),
-          &:nth-of-type(3) {
-            &::before {
-              height: 80px;
-              left: 47px;
-              top: -44.5px;
-            }
-
-            &::after {
-              top: -11.85px;
-              left: 67px;
-            }
-          }
-
-          &:nth-of-type(3),
-          &:nth-of-type(7) {
-            &::after {
-              top: -12.85px;
-              left: 31px;
-            }
-          }
-        }
+        width: 14%;
       }
     }
 
@@ -230,34 +146,7 @@
       width: 50%;
 
       .team {
-        &:nth-of-type(2n-1) {
-          &::before {
-            height: 115px;
-            right: -41px;
-            width: 10px;
-            top: 19.5px;
-          }
-
-          &::after {
-            top: 86px;
-            right: -40px;
-            width: 10px;
-          }
-        }
-
-        &.rev {
-          &:nth-of-type(2n - 1) {
-            &::before {
-              left: 64px;
-              top: -60.5px;
-            }
-
-            &::after {
-              left: 63px;
-              top: -11.85px;
-            }
-          }
-        }
+        width: 28%;
       }
     }
   }
@@ -284,77 +173,6 @@
           .img {
             img {
               width: 50px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 375px) {
-  .tournamentThree {
-    .tournamentThree-content {
-      .r16,
-      .qtr,
-      .semi {
-        .team {
-          &:nth-of-type(2n - 1) {
-            &::before {
-            }
-
-            &::after {
-            }
-          }
-
-          &.rev {
-            &:nth-of-type(2n - 1) {
-              &::before {
-              }
-
-              &::after {
-              }
-            }
-          }
-        }
-      }
-
-      .qtr {
-        .team {
-          &:nth-of-type(1),
-          &:nth-of-type(3) {
-            &::before {
-            }
-
-            &::after {
-            }
-          }
-
-          &:nth-of-type(3),
-          &:nth-of-type(7) {
-            &::after {
-            }
-          }
-        }
-      }
-
-      .semi {
-        .team {
-          &:nth-of-type(2n-1) {
-            &::before {
-            }
-
-            &::after {
-            }
-          }
-
-          &.rev {
-            &:nth-of-type(2n - 1) {
-              &::before {
-              }
-
-              &::after {
-              }
             }
           }
         }
@@ -582,7 +400,7 @@
           &:nth-of-type(3),
           &:nth-of-type(7) {
             &::after {
-              top: 85.15px;
+              top: 86.15px;
             }
           }
         }
@@ -602,8 +420,8 @@
 
             &::after {
               top: 175.15px;
-              right: -25px;
-              width: 16px;
+              right: -22px;
+              width: 12px;
             }
           }
 
@@ -614,7 +432,7 @@
               }
 
               &::after {
-                left: -24px;
+                left: -20px;
               }
             }
           }
@@ -675,6 +493,25 @@
         .trophy {
           img {
             width: 55%;
+          }
+        }
+      }
+
+      .semi {
+        .team {
+          &:nth-of-type(2n-1) {
+            &::after {
+              width: 16px;
+              right: -25px;
+            }
+          }
+
+          &.rev {
+            &:nth-of-type(2n - 1) {
+              &::after {
+                left: -24px;
+              }
+            }
           }
         }
       }
