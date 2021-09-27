@@ -6,39 +6,15 @@
   .tournamentThree-content,
   .tournamentThree-legend {
     display: grid;
-    grid-template-columns: repeat(3, 1fr) 2fr repeat(3, 1fr);
-    grid-template-rows: 700px;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, 1fr) 2fr repeat(3, 1fr);
     gap: 1rem;
     align-items: center;
     padding: 1rem;
   }
 
   .tournamentThree-legend {
-    grid-template-rows: auto;
-    background-color: $text-olivine;
-    font-family: 'EA Font';
-    padding: 0.5rem;
-
-    > div {
-      text-transform: uppercase;
-      text-align: center;
-      font-weight: 600;
-      letter-spacing: 2px;
-      color: $text-dark;
-    }
-
-    .r16 {
-      font-size: 1.2em;
-    }
-    .qtr {
-      font-size: 1.3em;
-    }
-    .semi {
-      font-size: 1.4em;
-    }
-    .final {
-      font-size: 1.5em;
-    }
+    display: none;
   }
 
   .tournamentThree-content {
@@ -47,24 +23,15 @@
     .semi,
     .final {
       display: flex;
-      flex-direction: column;
       justify-content: space-between;
+      margin: 0 auto;
 
       .team {
         display: flex;
-        width: 90%;
+        flex-direction: column;
         background-color: $chat-sender;
         border-radius: 5px;
         height: 75px;
-
-        &.rev {
-          flex-direction: row-reverse;
-
-          .img {
-            border-right: 0;
-            border-left: 1px solid $text-olivine;
-          }
-        }
 
         > div {
           display: flex;
@@ -73,24 +40,34 @@
         }
 
         .img {
-          width: 70%;
-          border-right: 1px solid $text-olivine;
           background-color: $text-paleLeaf;
+          border-bottom: 1px solid $text-olivine;
 
           img {
-            width: 50px;
+            width: 30px;
+            padding: 2px;
           }
         }
 
         .score {
-          width: 30%;
-          font-size: 2em;
+          font-size: 1.3em;
           height: 100%;
+        }
+
+        &.rev {
+          flex-direction: column-reverse;
+
+          .img {
+            border-right: 0;
+            border-top: 1px solid $text-olivine;
+            border-bottom: 0;
+          }
         }
       }
     }
 
     .final {
+      width: 100%;
       height: 100%;
       align-items: center;
       flex-direction: row;
@@ -100,15 +77,22 @@
       .team {
         width: 43%;
         margin-left: 5px;
+        flex-direction: unset;
 
         .score {
           background-color: $text-paleLeaf;
           border-top-right-radius: 5px;
           border-bottom-right-radius: 5px;
+          width: 30%;
         }
 
         .img {
           background-color: $text-olivine;
+          width: 70%;
+
+          img {
+            width: 50px;
+          }
         }
 
         &:nth-of-type(2) {
@@ -131,15 +115,7 @@
       }
 
       .trophy {
-        position: absolute;
-        text-align: center;
-        bottom: 100px;
-        width: 100%;
-        opacity: 0.8;
-
-        img {
-          width: 50%;
-        }
+        display: none;
       }
     }
 
@@ -155,35 +131,39 @@
           &::before {
             content: '';
             position: absolute;
-            right: -15px;
-            top: 37.5px;
-            height: 89px;
-            width: 16px;
+            right: -4px;
+            top: 58.5px;
+            height: 40px;
+            width: 9px;
             border: 1px solid $text-paleLeaf;
             border-left: 0;
+            transform: rotate(90deg);
           }
 
           &::after {
             content: '';
             position: absolute;
-            right: -33px;
-            top: 82.15px;
+            right: -5px;
+            top: 87.15px;
             height: 1px;
-            width: 19px;
+            width: 8px;
             border-top: 1px solid $text-paleLeaf;
+            transform: rotate(90deg);
           }
         }
 
         &.rev {
           &:nth-of-type(2n - 1) {
             &::before {
-              left: -16px;
-              transform: rotate(180deg);
+              left: 30px;
+              top: -24.5px;
+              transform: rotate(270deg);
             }
 
             &::after {
-              left: -34px;
-              transform: rotate(180deg);
+              left: 31px;
+              top: -12.85px;
+              transform: rotate(270deg);
             }
           }
         }
@@ -191,59 +171,190 @@
     }
 
     .r16 {
-      height: 100%;
+      width: 100%;
     }
 
     .qtr {
-      height: 87.5%;
+      width: 87.5%;
 
       .team {
         &:nth-of-type(1),
         &:nth-of-type(3) {
           &::before {
-            height: 179px;
+            height: 80px;
+            right: -24px;
+            top: 38.5px;
           }
 
           &::after {
-            top: 168.15px;
+            top: 87.15px;
+            right: -40px;
           }
         }
 
         &:nth-of-type(3),
         &:nth-of-type(7) {
           &::after {
-            top: 85.15px;
+            top: 86.15px;
+            right: -5px;
+          }
+        }
+
+        &.rev {
+          &:nth-of-type(1),
+          &:nth-of-type(3) {
+            &::before {
+              height: 80px;
+              left: 47px;
+              top: -44.5px;
+            }
+
+            &::after {
+              top: -11.85px;
+              left: 67px;
+            }
+          }
+
+          &:nth-of-type(3),
+          &:nth-of-type(7) {
+            &::after {
+              top: -12.85px;
+              left: 31px;
+            }
           }
         }
       }
     }
 
     .semi {
-      height: 50%;
+      width: 50%;
 
       .team {
         &:nth-of-type(2n-1) {
           &::before {
-            height: 275px;
-            right: -10px;
+            height: 115px;
+            right: -41px;
             width: 10px;
+            top: 19.5px;
           }
 
           &::after {
-            top: 175.15px;
-            right: -25px;
-            width: 16px;
+            top: 86px;
+            right: -40px;
+            width: 10px;
           }
         }
 
         &.rev {
           &:nth-of-type(2n - 1) {
             &::before {
-              left: -9px;
+              left: 64px;
+              top: -60.5px;
             }
 
             &::after {
-              left: -24px;
+              left: 63px;
+              top: -11.85px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) {
+  .tournamentThree {
+    .tournamentThree-content {
+      .r16,
+      .qtr,
+      .semi,
+      .final {
+        .team {
+          .img {
+            img {
+              width: 34px;
+            }
+          }
+        }
+      }
+
+      .final {
+        .team {
+          .img {
+            img {
+              width: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 375px) {
+  .tournamentThree {
+    .tournamentThree-content {
+      .r16,
+      .qtr,
+      .semi {
+        .team {
+          &:nth-of-type(2n - 1) {
+            &::before {
+            }
+
+            &::after {
+            }
+          }
+
+          &.rev {
+            &:nth-of-type(2n - 1) {
+              &::before {
+              }
+
+              &::after {
+              }
+            }
+          }
+        }
+      }
+
+      .qtr {
+        .team {
+          &:nth-of-type(1),
+          &:nth-of-type(3) {
+            &::before {
+            }
+
+            &::after {
+            }
+          }
+
+          &:nth-of-type(3),
+          &:nth-of-type(7) {
+            &::after {
+            }
+          }
+        }
+      }
+
+      .semi {
+        .team {
+          &:nth-of-type(2n-1) {
+            &::before {
+            }
+
+            &::after {
+            }
+          }
+
+          &.rev {
+            &:nth-of-type(2n - 1) {
+              &::before {
+              }
+
+              &::after {
+              }
             }
           }
         }
@@ -256,7 +367,6 @@
   .tournamentThree {
     .tournamentThree-content,
     .tournamentThree-legend {
-      display: grid;
       grid-template-columns: repeat(3, 1fr) 2fr repeat(3, 1fr);
       grid-template-rows: 700px;
       gap: 1rem;
@@ -265,6 +375,7 @@
     }
 
     .tournamentThree-legend {
+      display: grid;
       grid-template-rows: auto;
       background-color: $text-olivine;
       font-family: 'EA Font';
@@ -300,22 +411,15 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        margin: unset;
 
         .team {
           display: flex;
+          flex-direction: unset;
           width: 90%;
           background-color: $chat-sender;
           border-radius: 5px;
           height: 75px;
-
-          &.rev {
-            flex-direction: row-reverse;
-
-            .img {
-              border-right: 0;
-              border-left: 1px solid $text-olivine;
-            }
-          }
 
           > div {
             display: flex;
@@ -327,22 +431,33 @@
             width: 70%;
             border-right: 1px solid $text-olivine;
             background-color: $text-paleLeaf;
+            border-bottom: 0;
 
             img {
               width: 35px;
+              padding: 0;
             }
           }
 
           .score {
             width: 30%;
             font-size: 1.5em;
-            height: 100%;
+          }
+
+          &.rev {
+            flex-direction: row-reverse;
+
+            .img {
+              border-right: 0;
+              border-top: 0;
+              border-left: 1px solid $text-olivine;
+            }
           }
         }
       }
 
       .final {
-        height: 100%;
+        width: unset;
         align-items: center;
         flex-direction: row;
         background: radial-gradient(circle, #72a765 0%, #3a6530 100%);
@@ -382,6 +497,7 @@
         }
 
         .trophy {
+          display: block;
           position: absolute;
           text-align: center;
           bottom: 100px;
@@ -412,6 +528,7 @@
               width: 16px;
               border: 1px solid $text-paleLeaf;
               border-left: 0;
+              transform: none;
             }
 
             &::after {
@@ -442,10 +559,12 @@
       }
 
       .r16 {
+        width: unset;
         height: 100%;
       }
 
       .qtr {
+        width: unset;
         height: 87.5%;
 
         .team {
@@ -470,6 +589,7 @@
       }
 
       .semi {
+        width: unset;
         height: 50%;
 
         .team {
