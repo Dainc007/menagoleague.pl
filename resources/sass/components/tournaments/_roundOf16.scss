@@ -60,7 +60,6 @@
           .img {
             border-right: 0;
             border-top: 1px solid $text-olivine;
-            border-bottom: 0;
           }
         }
       }
@@ -187,9 +186,6 @@
     .tournamentThree-legend {
       grid-template-columns: repeat(3, 1fr) 2fr repeat(3, 1fr);
       grid-template-rows: 700px;
-      gap: 1rem;
-      align-items: center;
-      padding: 1rem;
     }
 
     .tournamentThree-legend {
@@ -226,29 +222,16 @@
       .qtr,
       .semi,
       .final {
-        display: flex;
         flex-direction: column;
-        justify-content: space-between;
         margin: unset;
 
         .team {
-          display: flex;
           flex-direction: unset;
           width: 90%;
-          background-color: $chat-sender;
-          border-radius: 5px;
-          height: 75px;
-
-          > div {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
 
           .img {
             width: 70%;
             border-right: 1px solid $text-olivine;
-            background-color: $text-paleLeaf;
             border-bottom: 0;
 
             img {
@@ -266,7 +249,6 @@
             flex-direction: row-reverse;
 
             .img {
-              border-right: 0;
               border-top: 0;
               border-left: 1px solid $text-olivine;
             }
@@ -276,42 +258,10 @@
 
       .final {
         width: unset;
-        align-items: center;
         flex-direction: row;
-        background: radial-gradient(circle, #72a765 0%, #3a6530 100%);
-        position: relative;
 
         .team {
           width: 43%;
-          margin-left: 5px;
-
-          .score {
-            background-color: $text-paleLeaf;
-            border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
-          }
-
-          .img {
-            background-color: $text-olivine;
-          }
-
-          &:nth-of-type(2) {
-            flex-direction: row-reverse;
-            margin-left: 0;
-            margin-right: 5px;
-
-            .score {
-              border-top-right-radius: 0;
-              border-bottom-right-radius: 0;
-              border-top-left-radius: 5px;
-              border-bottom-left-radius: 5px;
-            }
-
-            .img {
-              border-right: 0;
-              border-left: 1px solid $text-olivine;
-            }
-          }
         }
 
         .trophy {
@@ -331,8 +281,6 @@
       .r16,
       .qtr,
       .semi {
-        align-items: center;
-
         .team {
           position: relative;
 

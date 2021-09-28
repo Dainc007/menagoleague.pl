@@ -12640,7 +12640,6 @@ a .btn-discord img {
 .tournamentThree .tournamentThree-content .final .team.rev .img {
   border-right: 0;
   border-top: 1px solid #8ab87f;
-  border-bottom: 0;
 }
 .tournamentThree .tournamentThree-content .final {
   width: 100%;
@@ -12727,9 +12726,6 @@ a .btn-discord img {
 .tournamentThree .tournamentThree-legend {
     grid-template-columns: repeat(3, 1fr) 2fr repeat(3, 1fr);
     grid-template-rows: 700px;
-    gap: 1rem;
-    align-items: center;
-    padding: 1rem;
   }
   .tournamentThree .tournamentThree-legend {
     display: grid;
@@ -12761,29 +12757,15 @@ a .btn-discord img {
 .tournamentThree .tournamentThree-content .qtr,
 .tournamentThree .tournamentThree-content .semi,
 .tournamentThree .tournamentThree-content .final {
-    display: flex;
     flex-direction: column;
-    justify-content: space-between;
     margin: unset;
   }
   .tournamentThree .tournamentThree-content .r16 .team,
 .tournamentThree .tournamentThree-content .qtr .team,
 .tournamentThree .tournamentThree-content .semi .team,
 .tournamentThree .tournamentThree-content .final .team {
-    display: flex;
     flex-direction: unset;
     width: 90%;
-    background-color: rgba(188, 212, 182, 0.75);
-    border-radius: 5px;
-    height: 75px;
-  }
-  .tournamentThree .tournamentThree-content .r16 .team > div,
-.tournamentThree .tournamentThree-content .qtr .team > div,
-.tournamentThree .tournamentThree-content .semi .team > div,
-.tournamentThree .tournamentThree-content .final .team > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
   .tournamentThree .tournamentThree-content .r16 .team .img,
 .tournamentThree .tournamentThree-content .qtr .team .img,
@@ -12791,7 +12773,6 @@ a .btn-discord img {
 .tournamentThree .tournamentThree-content .final .team .img {
     width: 70%;
     border-right: 1px solid #8ab87f;
-    background-color: #bcd4b6;
     border-bottom: 0;
   }
   .tournamentThree .tournamentThree-content .r16 .team .img img,
@@ -12818,43 +12799,15 @@ a .btn-discord img {
 .tournamentThree .tournamentThree-content .qtr .team.rev .img,
 .tournamentThree .tournamentThree-content .semi .team.rev .img,
 .tournamentThree .tournamentThree-content .final .team.rev .img {
-    border-right: 0;
     border-top: 0;
     border-left: 1px solid #8ab87f;
   }
   .tournamentThree .tournamentThree-content .final {
     width: unset;
-    align-items: center;
     flex-direction: row;
-    background: radial-gradient(circle, #72a765 0%, #3a6530 100%);
-    position: relative;
   }
   .tournamentThree .tournamentThree-content .final .team {
     width: 43%;
-    margin-left: 5px;
-  }
-  .tournamentThree .tournamentThree-content .final .team .score {
-    background-color: #bcd4b6;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-  }
-  .tournamentThree .tournamentThree-content .final .team .img {
-    background-color: #8ab87f;
-  }
-  .tournamentThree .tournamentThree-content .final .team:nth-of-type(2) {
-    flex-direction: row-reverse;
-    margin-left: 0;
-    margin-right: 5px;
-  }
-  .tournamentThree .tournamentThree-content .final .team:nth-of-type(2) .score {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-  }
-  .tournamentThree .tournamentThree-content .final .team:nth-of-type(2) .img {
-    border-right: 0;
-    border-left: 1px solid #8ab87f;
   }
   .tournamentThree .tournamentThree-content .final .trophy {
     display: block;
@@ -12866,11 +12819,6 @@ a .btn-discord img {
   }
   .tournamentThree .tournamentThree-content .final .trophy img {
     width: 85%;
-  }
-  .tournamentThree .tournamentThree-content .r16,
-.tournamentThree .tournamentThree-content .qtr,
-.tournamentThree .tournamentThree-content .semi {
-    align-items: center;
   }
   .tournamentThree .tournamentThree-content .r16 .team,
 .tournamentThree .tournamentThree-content .qtr .team,
