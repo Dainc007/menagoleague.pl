@@ -1,10 +1,11 @@
-.tournamentThree {
+.tournamentTree {
   background-color: $sectionColor;
   border-radius: 5px;
+  width: 100%;
   margin-top: 2.5rem;
 
-  .tournamentThree-content,
-  .tournamentThree-legend {
+  .tournamentTree-content,
+  .tournamentTree-legend {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: repeat(3, 1fr) 2fr repeat(3, 1fr);
@@ -13,11 +14,11 @@
     padding: 1rem;
   }
 
-  .tournamentThree-legend {
+  .tournamentTree-legend {
     display: none;
   }
 
-  .tournamentThree-content {
+  .tournamentTree-content {
     .r16,
     .qtr,
     .semi,
@@ -152,8 +153,8 @@
 }
 
 @media (min-width: 320px) {
-  .tournamentThree {
-    .tournamentThree-content {
+  .tournamentTree {
+    .tournamentTree-content {
       .r16,
       .qtr,
       .semi,
@@ -181,14 +182,14 @@
 }
 
 @media (min-width: 768px) {
-  .tournamentThree {
-    .tournamentThree-content,
-    .tournamentThree-legend {
+  .tournamentTree {
+    .tournamentTree-content,
+    .tournamentTree-legend {
       grid-template-columns: repeat(3, 1fr) 2fr repeat(3, 1fr);
       grid-template-rows: 700px;
     }
 
-    .tournamentThree-legend {
+    .tournamentTree-legend {
       display: grid;
       grid-template-rows: auto;
       background-color: $text-olivine;
@@ -217,7 +218,7 @@
       }
     }
 
-    .tournamentThree-content {
+    .tournamentTree-content {
       .r16,
       .qtr,
       .semi,
@@ -237,6 +238,7 @@
             img {
               width: 35px;
               padding: 0;
+              z-index: 1;
             }
           }
 
@@ -391,8 +393,8 @@
 }
 
 @media (min-width: 1024px) {
-  .tournamentThree {
-    .tournamentThree-content {
+  .tournamentTree {
+    .tournamentTree-content {
       .r16,
       .qtr,
       .semi,
@@ -422,8 +424,8 @@
 }
 
 @media (min-width: 1440px) {
-  .tournamentThree {
-    .tournamentThree-content {
+  .tournamentTree {
+    .tournamentTree-content {
       .r16,
       .qtr,
       .semi,
@@ -468,8 +470,8 @@
 }
 
 @media (min-width: 1660px) {
-  .tournamentThree {
-    .tournamentThree-content {
+  .tournamentTree {
+    .tournamentTree-content {
       .final {
         .trophy {
           img {

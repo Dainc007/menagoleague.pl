@@ -1,0 +1,129 @@
+.groupStage {
+  width: 100%;
+  border-top: 3px solid $text-hippieGreen;
+  background-color: $sectionColor;
+
+  .groupStage-item {
+    border-top: 0.5px solid transparent;
+
+    &:first-of-type {
+      border-top: unset;
+    }
+
+    &.active {
+      .groupStage-item-table {
+        display: block;
+      }
+
+      .groupStage-item-header {
+        pointer-events: none;
+        background: none;
+        margin: 10px 0;
+      }
+    }
+
+    .groupStage-item-header {
+      text-align: center;
+      font-size: 2em;
+      font-weight: 600;
+      font-family: 'EA Font';
+      letter-spacing: 5px;
+      cursor: pointer;
+      background: radial-gradient(circle, #72a765 0%, #3a6530 100%);
+      padding: 5px;
+    }
+
+    .groupStage-item-table {
+      display: none;
+      padding-bottom: 15px;
+
+      .groupStage-item-table-legend {
+        display: flex;
+        justify-content: flex-end;
+        padding: 5px 15px;
+
+        > div {
+          width: 7%;
+          text-align: center;
+          font-size: 0.85em;
+          font-weight: 700;
+        }
+      }
+
+      .groupStage-item-table-content {
+        .groupStage-item-table-content-item {
+          display: flex;
+          padding: 10px 15px;
+
+          > div {
+            width: 7%;
+            text-align: center;
+          }
+
+          .team {
+            width: 37%;
+            text-align: start;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 578px) {
+  .groupStage {
+    .groupStage-item {
+      .groupStage-item-table {
+        .groupStage-item-table-legend {
+          > div {
+            width: 6%;
+            font-size: 1.15em;
+          }
+        }
+
+        .groupStage-item-table-content {
+          .groupStage-item-table-content-item {
+            > div {
+              width: 6%;
+              font-size: 1.2em;
+            }
+
+            .team {
+              width: 46%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .groupStage {
+    .groupStage-item {
+      .groupStage-item-table {
+        .groupStage-item-table-legend {
+          > div {
+            font-size: 1.4em;
+          }
+        }
+
+        .groupStage-item-table-content {
+          .groupStage-item-table-content-item {
+            > div {
+              width: 6%;
+              font-size: 1.3em;
+            }
+
+            .team {
+              width: 46%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
