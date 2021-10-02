@@ -1,5 +1,6 @@
 .groupStage {
   width: 100%;
+  border: 2px solid $text-hippieGreen;
   border-top: 3px solid $text-hippieGreen;
   background-color: $sectionColor;
 
@@ -13,6 +14,17 @@
     &.active {
       .groupStage-item-table {
         display: block;
+
+        animation: clipPathGroups 0.5s ease 0s alternate 1 forwards running;
+
+        @keyframes clipPathGroups {
+          from {
+            clip-path: inset(0 0 100% 0);
+          }
+          to {
+            clip-path: inset(0 0 0 0);
+          }
+        }
       }
 
       .groupStage-item-header {
@@ -35,6 +47,7 @@
 
     .groupStage-item-table {
       display: none;
+      clip-path: inset(0 0 100% 0);
       padding-bottom: 15px;
 
       .groupStage-item-table-legend {

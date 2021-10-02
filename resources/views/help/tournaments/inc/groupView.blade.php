@@ -4,9 +4,9 @@
         $groups = ['A', 'B', 'C', 'D'];
     @endphp
 
-    @foreach ($groups as $item)
-        <div class="groupStage-item {{ $item === 'B' ? 'active' : '' }}">
-            <div class="groupStage-item-header">GROUP {{ $item }}</div>
+    @foreach ($groups as $group)
+        <div class="groupStage-item {{ $group === 'A' ? 'active' : '' }}">
+            <div class="groupStage-item-header">GROUP {{ $group }}</div>
             <div class="groupStage-item-table">
                 <div class="groupStage-item-table-legend">
                     <div class="P">P</div>

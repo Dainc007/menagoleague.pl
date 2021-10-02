@@ -12950,6 +12950,7 @@ a .btn-discord img {
 }
 .groupStage {
   width: 100%;
+  border: 2px solid #558c47;
   border-top: 3px solid #558c47;
   background-color: rgba(255, 253, 253, 0.7);
 }
@@ -12961,6 +12962,28 @@ a .btn-discord img {
 }
 .groupStage .groupStage-item.active .groupStage-item-table {
   display: block;
+  -webkit-animation: clipPathGroups 0.5s ease 0s alternate 1 forwards running;
+          animation: clipPathGroups 0.5s ease 0s alternate 1 forwards running;
+}
+@-webkit-keyframes clipPathGroups {
+  from {
+    -webkit-clip-path: inset(0 0 100% 0);
+            clip-path: inset(0 0 100% 0);
+  }
+  to {
+    -webkit-clip-path: inset(0 0 0 0);
+            clip-path: inset(0 0 0 0);
+  }
+}
+@keyframes clipPathGroups {
+  from {
+    -webkit-clip-path: inset(0 0 100% 0);
+            clip-path: inset(0 0 100% 0);
+  }
+  to {
+    -webkit-clip-path: inset(0 0 0 0);
+            clip-path: inset(0 0 0 0);
+  }
 }
 .groupStage .groupStage-item.active .groupStage-item-header {
   pointer-events: none;
@@ -12979,6 +13002,8 @@ a .btn-discord img {
 }
 .groupStage .groupStage-item .groupStage-item-table {
   display: none;
+  -webkit-clip-path: inset(0 0 100% 0);
+          clip-path: inset(0 0 100% 0);
   padding-bottom: 15px;
 }
 .groupStage .groupStage-item .groupStage-item-table .groupStage-item-table-legend {
