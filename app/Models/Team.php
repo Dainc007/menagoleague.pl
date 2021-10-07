@@ -34,10 +34,10 @@ class Team extends Model
     {
         return $this->belongsTo(League::class);
     }
-
+    //todo wcześniej było samo related to League, mozliwe ze coś tym zepsułem!
     public function leagueTables()
     {
-        return $this->hasMany(League::class);
+        return $this->hasMany(LeagueTable::class);
     }
 
     public function jobApplications()

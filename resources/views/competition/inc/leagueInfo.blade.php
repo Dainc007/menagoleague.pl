@@ -7,12 +7,13 @@
                 <div class="ID">ID</div>
                 <div class="name">Name</div>
             </div>
-            
-            @foreach ($competition->leagueTables as $team)
+            @php($i=1)
+            @foreach ($competition->leagueTables as $row)
                 <div class="item">
-                    <div class="ID">1</div>
-                    <div class="name">{{$team->name}}</div>
+                    <div class="ID">{{$i}}</div>
+                    <div class="name">{{$row->team->name}}</div>
                 </div>
+                @php($i++)
             @endforeach
         </div>
 
@@ -26,15 +27,15 @@
                 <div class="pkt">Pkt</div>
                 <div class="condition">Forma</div>
             </div>
-            @for ($j = 1; $j <= 10; $j++)
+            @foreach ($competition->leagueTables as $row)
                 <div class="item">
                     <div class="stats">
-                        <div class="M">{{ rand(0, 18) }}</div>
-                        <div class="W">{{ rand(0, 10) }}</div>
-                        <div class="R">{{ rand(0, 10) }}</div>
-                        <div class="P">{{ rand(0, 10) }}</div>
-                        <div class="B">{{ rand(0, 100) }}:{{ rand(0, 100) }}</div>
-                        <div class="P">{{ rand(0, 60) }}</div>
+                        <div class="M">{{ $row->games }}</div>
+                        <div class="W">{{ $row->wins }}</div>
+                        <div class="R">{{ $row->draws }}</div>
+                        <div class="P">{{ $row->losts }}</div>
+                        <div class="B">{{ $row->goals_scored }}:{{ $row->goals_lost }}</div>
+                        <div class="P">{{ $row->points }}</div>
                         <div class="condition">
                             <div class="next-match" title="?:?">?</div>
                             <div class="lose" title="{{ rand(0, 10) }}:{{ rand(0, 10) }}">L</div>
@@ -44,7 +45,7 @@
                         </div>
                     </div>
                 </div>
-            @endfor
+            @endforeach
         </div>
     </div>
 </div>

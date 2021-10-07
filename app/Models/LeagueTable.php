@@ -29,4 +29,10 @@ class LeagueTable extends Model
     {
         return $this->belongsToMany(Team::class);
     }
+
+
+    public function team()
+    {
+        return $this->belongsTo(Team::class);
+    }
 }
