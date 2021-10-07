@@ -49,4 +49,5 @@ return [
         'accept'    => 'AKCEPTUJ',
         'reject'    => 'ODRZUĆ',
     ],
+
 ];
