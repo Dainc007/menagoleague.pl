@@ -183,14 +183,16 @@ navHelpItems.forEach((item) => {
 // Groups
 
 const groupsContainer = document.querySelector('.groupStage');
-const groups = groupsContainer.querySelectorAll('.groupStage-item');
+if (groupsContainer !== null) {
+  const groups = groupsContainer.querySelectorAll('.groupStage-item');
 
-groups.forEach((group) => {
-  group.addEventListener('click', function() {
-    groups.forEach((group) => group.classList.remove('active'));
-    this.classList.add('active');
+  groups.forEach((group) => {
+    group.addEventListener('click', function() {
+      groups.forEach((group) => group.classList.remove('active'));
+      this.classList.add('active');
+    });
   });
-});
+}
 
 /* Finances view */
 

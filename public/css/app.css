@@ -13002,8 +13002,6 @@ a .btn-discord img {
 }
 .groupStage .groupStage-item .groupStage-item-table {
   display: none;
-  -webkit-clip-path: inset(0 0 100% 0);
-          clip-path: inset(0 0 100% 0);
   padding-bottom: 15px;
 }
 .groupStage .groupStage-item .groupStage-item-table .groupStage-item-table-legend {
