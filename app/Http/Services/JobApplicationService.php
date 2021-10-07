@@ -14,24 +14,24 @@ class JobApplicationService
     public function validate(Request $request, int $teamId)
     {
         if (!$this->checkUserLicense(Auth::user()->id)) {
-            Alert::error('Nie mozesz przejąć druzyny', 'Nie masz licencji');
+            Alert::error(__('team.apply.denied'), __('team.apply.noLicence'));
             return redirect(route('office'));
         }
 
         if (!$this->checkUserDevice($teamId)) {
-            Alert::error('Nie mozesz przejąć druzyny', 'Nie masz odpowiedniej konsoli');
+            Alert::error(__('team.apply.denied'), __('team.apply.noDevice'));
             return redirect(route('office'));
         }
 
         if ($this->getApplication($teamId) !== null) {
-            Alert::error('Stop', 'Juz zlozyes podanie do tej druzyny');
+            Alert::error(__('team.apply.stop'), __('team.apply.alreadyDone'));
             return redirect()->route('office');
         }
 
         $lastResponse = $this->wasLatelyRejected($teamId);
 
         if ($lastResponse) {
-            Alert::error('Niedawno aplikowałeś do tej druzyny', 'Następna aplikacja będzie mozliwa ' . $lastResponse);
+            Alert::error(__('team.apply.alreadyDone'), __('team.apply.nextApp')  . $lastResponse);
             return redirect()->route('office');
         }
 
@@ -46,7 +46,7 @@ class JobApplicationService
             'message'   => $message ?? '',
         ]))->save();
 
-        Alert::success('Twoja Aplikacja Została wysłana', 'Czekaj na odpowiedź');
+        Alert::success(__('team.apply.send'), __('team.apply.waitForResponse'));
         return redirect(route('office'));
     }
 
