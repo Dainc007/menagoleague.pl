@@ -59,7 +59,7 @@
       }
 
       .item {
-        @for $i from 2 to 5 {
+        @for $i from 2 to 6 {
           &:nth-of-type(#{$i}) {
             .ID {
               background-color: #0092c1;

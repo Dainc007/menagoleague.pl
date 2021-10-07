@@ -11517,6 +11517,10 @@ a .btn-discord img {
   background-color: #0092c1;
   color: white;
 }
+.leagueInfo .table .team-info .item:nth-of-type(5) .ID {
+  background-color: #0092c1;
+  color: white;
+}
 .leagueInfo .table .team-info .item:nth-of-type(6) .ID {
   background-color: #32b726;
   color: white;
