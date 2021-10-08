@@ -55,6 +55,9 @@
     border-right: 1px solid $text-gray;
     display: flex;
     align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 
     img {
       height: 45px;

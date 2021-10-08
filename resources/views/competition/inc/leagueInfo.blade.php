@@ -7,11 +7,11 @@
                 <div class="ID">ID</div>
                 <div class="name">Name</div>
             </div>
-            @php($i=1)
+            @php($i = 1)
             @foreach ($competition->leagueTables as $row)
                 <div class="item">
-                    <div class="ID">{{$i}}</div>
-                    <div class="name">{{$row->team->name}}</div>
+                    <div class="ID">{{ $i }}</div>
+                    <div class="name">{{ $row->team->name }}Manchester City</div>
                 </div>
                 @php($i++)
             @endforeach
@@ -34,7 +34,8 @@
                         <div class="W">{{ $row->wins }}</div>
                         <div class="R">{{ $row->draws }}</div>
                         <div class="P">{{ $row->losts }}</div>
-                        <div class="B">{{ $row->goals_scored }}:{{ $row->goals_lost }}</div>
+                        <div class="B">
+                            {{ $row->goals_scored }}:{{ $row->goals_lost }}</div>
                         <div class="P">{{ $row->points }}</div>
                         <div class="condition">
                             <div class="next-match" title="?:?">?</div>

@@ -11541,6 +11541,13 @@ a .btn-discord img {
   text-align: left;
   padding-left: 10px;
   justify-content: flex-start;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
 .leagueInfo .table .team-stats {
   width: 50%;
@@ -14050,6 +14057,9 @@ a .btn-discord img {
   border-right: 1px solid #494949;
   display: flex;
   align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .player-status-item .name img,
 .player-status-desc .name img,
