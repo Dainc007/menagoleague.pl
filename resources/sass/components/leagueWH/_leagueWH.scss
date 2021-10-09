@@ -1,0 +1,83 @@
+.leagueWinnersHistory {
+  margin-top: 2rem;
+
+  h1 {
+    text-align: center;
+    padding: 20px;
+    font-size: 3em;
+    font-weight: 700;
+  }
+
+  &__table {
+    background-color: $sectionColor;
+    border-radius: 5px;
+
+    &-legend {
+      background-color: $text-paleLeaf;
+      display: flex;
+      padding: 10px 20px;
+      font-size: 1.5em;
+      font-weight: 800;
+
+      > div {
+        width: 50%;
+      }
+    }
+
+    &-content {
+      font-weight: 600;
+
+      .item {
+        display: flex;
+        padding: 5px 20px;
+        font-size: 1.2em;
+
+        > div {
+          width: 50%;
+          display: flex;
+          align-items: center;
+        }
+
+        .winner {
+          img {
+            display: none;
+            width: 30px;
+            object-fit: cover;
+          }
+
+          p {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 425px) {
+  .leagueWinnersHistory {
+    &__table {
+      &-content {
+        .item {
+          .winner {
+            img {
+              display: block;
+            }
+
+            p {
+              padding-left: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .leagueWinnersHistory {
+    h1 {
+      font-size: 4em;
+    }
+  }
+}

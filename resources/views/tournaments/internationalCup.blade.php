@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="internationalCup-content">
-        @include('help.tournaments.inc.tournamentsMenu')
+        @include('tournaments.inc.tournamentsMenu')
     </div>
 
 @endsection

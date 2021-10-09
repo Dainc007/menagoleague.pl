@@ -13307,6 +13307,66 @@ a .btn-discord img {
   }
 }
 /* Help components */
+.leagueWinnersHistory {
+  margin-top: 2rem;
+}
+.leagueWinnersHistory h1 {
+  text-align: center;
+  padding: 20px;
+  font-size: 3em;
+  font-weight: 700;
+}
+.leagueWinnersHistory__table {
+  background-color: rgba(255, 253, 253, 0.7);
+  border-radius: 5px;
+}
+.leagueWinnersHistory__table-legend {
+  background-color: #bcd4b6;
+  display: flex;
+  padding: 10px 20px;
+  font-size: 1.5em;
+  font-weight: 800;
+}
+.leagueWinnersHistory__table-legend > div {
+  width: 50%;
+}
+.leagueWinnersHistory__table-content {
+  font-weight: 600;
+}
+.leagueWinnersHistory__table-content .item {
+  display: flex;
+  padding: 5px 20px;
+  font-size: 1.2em;
+}
+.leagueWinnersHistory__table-content .item > div {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+.leagueWinnersHistory__table-content .item .winner img {
+  display: none;
+  width: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.leagueWinnersHistory__table-content .item .winner p {
+  text-align: center;
+}
+
+@media (min-width: 425px) {
+  .leagueWinnersHistory__table-content .item .winner img {
+    display: block;
+  }
+  .leagueWinnersHistory__table-content .item .winner p {
+    padding-left: 10px;
+  }
+}
+@media (min-width: 768px) {
+  .leagueWinnersHistory h1 {
+    font-size: 4em;
+  }
+}
+/* League Winners History components */
 /* Game components */
 .central-advance {
   grid-area: advance;
