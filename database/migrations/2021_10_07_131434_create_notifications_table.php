@@ -15,6 +15,10 @@ class CreateNotificationsTable extends Migration
     {
         Schema::create('notifications', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained();
+            $table->string('message_path', 255);
+            $table->boolean('seen')->default(false);
+            $table->boolean('archive')->default(false);
             $table->timestamps();
         });
     }

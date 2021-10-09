@@ -3,6 +3,7 @@
 namespace App\Http\Services;
 
 use App\Models\JobApplication;
+use App\Models\Notification;
 use App\Models\Team;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -11,6 +12,31 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class JobApplicationService
 {
+
+    public static function notifyUser($application)
+    {
+        $params = [
+            'user_id'  => $application->user_id
+        ];
+
+        if($application->status == 'accepted')
+        {
+            $params += [
+              'message_path' => 'team.apply.response.accepted'
+            ];
+        }
+
+        if($application->status == 'rejected')
+        {
+            $params += [
+                'message_path' => 'team.apply.response.rejected'
+            ];
+        }
+
+        Notification::insert([$params]);
+    }
+
+
     public function validate(Request $request, int $teamId)
     {
         if (!$this->checkUserLicense(Auth::user()->id)) {
