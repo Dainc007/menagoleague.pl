@@ -14742,8 +14742,10 @@ a .btn-discord img {
 }
 
 .messages-tabs {
-  display: flex;
-  margin: 10px 0px;
+  margin-top: 10px;
+  background-color: rgba(255, 253, 253, 0.7);
+  border-bottom: 1px solid #494949;
+  text-align: center;
 }
 .messages-tabs .active {
   background-color: #494949;
@@ -14766,11 +14768,11 @@ a .btn-discord img {
 .messages-tabs div span {
   position: absolute;
   top: 5px;
-  right: 5px;
-  font-size: 13px;
+  right: 11px;
+  font-size: 0.8em;
   background-color: #ff0000;
-  height: 20px;
-  width: 20px;
+  height: 15px;
+  width: 15px;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -14810,39 +14812,59 @@ a .btn-discord img {
 .messages-content .messages-list .message-tabs {
   margin-bottom: 5px;
 }
-.messages-content .messages-list .players-list .message, .messages-content .messages-list .inbox-list .message, .messages-content .messages-list .notifications-list .message {
+.messages-content .messages-list .players-list .message,
+.messages-content .messages-list .inbox-list .message,
+.messages-content .messages-list .notifications-list .message {
   padding: 10px 5px;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.messages-content .messages-list .players-list .message:hover, .messages-content .messages-list .inbox-list .message:hover, .messages-content .messages-list .notifications-list .message:hover {
+.messages-content .messages-list .players-list .message:hover,
+.messages-content .messages-list .inbox-list .message:hover,
+.messages-content .messages-list .notifications-list .message:hover {
   cursor: pointer;
 }
-.messages-content .messages-list .players-list .message .message-logo img, .messages-content .messages-list .inbox-list .message .message-logo img, .messages-content .messages-list .notifications-list .message .message-logo img {
+.messages-content .messages-list .players-list .message .message-logo img,
+.messages-content .messages-list .inbox-list .message .message-logo img,
+.messages-content .messages-list .notifications-list .message .message-logo img {
   width: 50px;
 }
-.messages-content .messages-list .players-list .message .message-details, .messages-content .messages-list .inbox-list .message .message-details, .messages-content .messages-list .notifications-list .message .message-details {
+.messages-content .messages-list .players-list .message .message-details,
+.messages-content .messages-list .inbox-list .message .message-details,
+.messages-content .messages-list .notifications-list .message .message-details {
   display: flex;
   flex-direction: column;
 }
-.messages-content .messages-list .players-list .message .message-details .title span, .messages-content .messages-list .inbox-list .message .message-details .title span, .messages-content .messages-list .notifications-list .message .message-details .title span {
+.messages-content .messages-list .players-list .message .message-details .title span,
+.messages-content .messages-list .inbox-list .message .message-details .title span,
+.messages-content .messages-list .notifications-list .message .message-details .title span {
   font-weight: 700;
   color: #0b2603;
 }
-.messages-content .messages-list .players-list .active, .messages-content .messages-list .inbox-list .active, .messages-content .messages-list .notifications-list .active {
+.messages-content .messages-list .players-list .active,
+.messages-content .messages-list .inbox-list .active,
+.messages-content .messages-list .notifications-list .active {
   background-color: #494949;
 }
-.messages-content .messages-list .players-list .active .message-details .title span, .messages-content .messages-list .inbox-list .active .message-details .title span, .messages-content .messages-list .notifications-list .active .message-details .title span {
+.messages-content .messages-list .players-list .active .message-details .title span,
+.messages-content .messages-list .inbox-list .active .message-details .title span,
+.messages-content .messages-list .notifications-list .active .message-details .title span {
   color: #bcd4b6;
 }
-.messages-content .messages-list .players-list .active .message-details .info, .messages-content .messages-list .inbox-list .active .message-details .info, .messages-content .messages-list .notifications-list .active .message-details .info {
+.messages-content .messages-list .players-list .active .message-details .info,
+.messages-content .messages-list .inbox-list .active .message-details .info,
+.messages-content .messages-list .notifications-list .active .message-details .info {
   color: #fff;
 }
-.messages-content .messages-list .players-list .active .message-date span, .messages-content .messages-list .inbox-list .active .message-date span, .messages-content .messages-list .notifications-list .active .message-date span {
+.messages-content .messages-list .players-list .active .message-date span,
+.messages-content .messages-list .inbox-list .active .message-date span,
+.messages-content .messages-list .notifications-list .active .message-date span {
   color: #fff;
 }
-.messages-content .messages-list .players-list, .messages-content .messages-list .inbox-list, .messages-content .messages-list .notifications-list {
+.messages-content .messages-list .players-list,
+.messages-content .messages-list .inbox-list,
+.messages-content .messages-list .notifications-list {
   display: block;
   -webkit-animation: fadeTab 0.8s;
           animation: fadeTab 0.8s;
@@ -14850,9 +14872,15 @@ a .btn-discord img {
 .messages-content .messages-list .hidden {
   display: none;
 }
+.messages-content .messages-list .inbox-list {
+  position: relative;
+}
 .messages-content .messages-list .inbox-list .inbox-tabs {
   padding: 10px 5px;
   display: flex;
+  position: sticky;
+  top: 0;
+  background-color: #f7f7f7;
 }
 .messages-content .messages-list .inbox-list .inbox-tabs div {
   margin: 5px 15px;
@@ -14893,6 +14921,7 @@ a .btn-discord img {
 .messages-content .messages-text {
   display: flex;
   flex-direction: column;
+  background-color: rgba(255, 253, 253, 0.7);
 }
 .messages-content .messages-text .hidden {
   display: none !important;
@@ -14908,10 +14937,9 @@ a .btn-discord img {
   overflow: scroll;
 }
 .messages-content .messages-text .messages-chat .text-entry {
-  background-color: rgba(255, 253, 253, 0.7);
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   padding: 10px 25px;
 }
 .messages-content .messages-text .messages-chat .player-info {
@@ -15036,6 +15064,7 @@ a .btn-discord img {
   overflow: scroll;
   display: none;
   flex-direction: column;
+  padding: 0 20px;
 }
 .messages-content .messages-text .messages-chat .text-full .receiver,
 .messages-content .messages-text .messages-chat .text-full .sender {
@@ -15090,6 +15119,20 @@ a .btn-discord img {
 .messages-content .messages-text .messages-inbox {
   overflow: scroll;
 }
+.messages-content .messages-text .messages-inbox div[received-message-id] p {
+  width: 80%;
+  background-color: rgba(188, 212, 182, 0.75);
+  padding: 10px;
+  border-radius: 5px;
+}
+.messages-content .messages-text .messages-inbox div[sent-message-id] p {
+  width: 80%;
+  background-color: rgba(73, 73, 73, 0.75);
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  margin-left: 20%;
+}
 .messages-content .messages-text .messages-inbox .text-full {
   display: none;
   padding: 0px 20px;
@@ -15107,16 +15150,36 @@ a .btn-discord img {
   -webkit-animation: fadeMessage 0.5s;
           animation: fadeMessage 0.5s;
 }
+.messages-content .messages-text .messages-notifications {
+  padding: 10px 20px;
+}
 .messages-content .messages-text .messages-notifications .text-full {
   transition: 0.5s;
   opacity: 0;
   display: none;
+}
+.messages-content .messages-text .messages-notifications .text-full p {
+  background-color: rgba(188, 212, 182, 0.75);
+  width: 70%;
+  padding: 5px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  font-weight: 600;
 }
 .messages-content .messages-text .messages-notifications .active {
   opacity: 1;
   display: block;
 }
 
+@media (min-width: 600px) {
+  .messages-tabs {
+    display: flex;
+  }
+
+  .messages-content .messages-text .messages-chat .text-entry {
+    justify-content: space-between;
+  }
+}
 @media (min-width: 1024px) {
   .messages-content {
     grid-template-columns: repeat(3, 1fr);

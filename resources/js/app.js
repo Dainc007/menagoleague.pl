@@ -289,7 +289,6 @@ if (progressBar.length > 0) {
   progressBar[0].style.setProperty('--data-progress-bar', progressBar[0].getAttribute('data-progress'));
   let progressScore = progressBar[0].getAttribute('data-progress');
   progressScore = progressScore.substring(0, progressScore.length - 1);
-  console.log(progressScore);
   if (progressScore < 20) {
     progressBar[0].classList.add('bad-moral');
   } else if (progressScore > 20 && progressScore < 40) {
@@ -354,6 +353,78 @@ playersMessages.forEach((msg, index) => {
       msgFull.classList.remove('active');
     });
     playersMessagesFull[index].classList.add('active');
+    msg.classList.add('active');
+  });
+});
+
+const notificationsMessages = document.querySelectorAll('.notifications-list > div[message-id]');
+const notificationsMessagesFull = document.querySelectorAll('.messages-notifications > div[message-id]');
+
+notificationsMessages.forEach((msg, index) => {
+  msg.addEventListener('click', () => {
+    notificationsMessages.forEach((all) => {
+      all.classList.remove('active');
+    });
+    notificationsMessagesFull.forEach((msgFull) => {
+      msgFull.classList.remove('active');
+    });
+    notificationsMessagesFull[index].classList.add('active');
+    msg.classList.add('active');
+  });
+});
+
+const inboxMessages = document.querySelectorAll('.inbox-list > div[message-type="received"]');
+const inboxMessagesFull = document.querySelectorAll('.messages-inbox > div[received-message-id]');
+const inboxSentMessages = document.querySelectorAll('.inbox-list > div[message-type="sent"]');
+const inboxSentMessagesFull = document.querySelectorAll('.messages-inbox > div[sent-message-id]');
+
+const btnReceived = document.querySelector('.inbox-tabs .inbox-received');
+const btnSent = document.querySelector('.inbox-tabs .inbox-sent');
+const btnCreate = document.querySelector('.inbox-tabs .inbox-create');
+
+btnSent.addEventListener('click', () => {
+  inboxMessagesFull.forEach((msgFull) => {
+    msgFull.classList.remove('active');
+  });
+});
+
+btnReceived.addEventListener('click', () => {
+  inboxSentMessagesFull.forEach((msgFull) => {
+    msgFull.classList.remove('active');
+  });
+});
+
+btnCreate.addEventListener('click', () => {
+  inboxSentMessagesFull.forEach((msgFull) => {
+    msgFull.classList.remove('active');
+  });
+  inboxMessagesFull.forEach((msgFull) => {
+    msgFull.classList.remove('active');
+  });
+});
+
+inboxMessages.forEach((msg, index) => {
+  msg.addEventListener('click', () => {
+    inboxMessages.forEach((all) => {
+      all.classList.remove('active');
+    });
+    inboxMessagesFull.forEach((msgFull) => {
+      msgFull.classList.remove('active');
+    });
+    inboxMessagesFull[index].classList.add('active');
+    msg.classList.add('active');
+  });
+});
+
+inboxSentMessages.forEach((msg, index) => {
+  msg.addEventListener('click', () => {
+    inboxSentMessages.forEach((all) => {
+      all.classList.remove('active');
+    });
+    inboxSentMessagesFull.forEach((msgFull) => {
+      msgFull.classList.remove('active');
+    });
+    inboxSentMessagesFull[index].classList.add('active');
     msg.classList.add('active');
   });
 });

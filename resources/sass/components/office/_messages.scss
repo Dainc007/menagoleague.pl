@@ -1,442 +1,500 @@
 .office-messages {
-    display: flex;
-    justify-content: center;
-    a {
-        width: 100%;
-        text-align: center;
-        .material-icons {
-            transition: .4s;
-            font-size: 6em;
-            color: $text-darker;
-        }
-        .office-title {
-            padding-bottom: 19px;
-            font-size: 21px;
-        }
+  display: flex;
+  justify-content: center;
+  a {
+    width: 100%;
+    text-align: center;
+    .material-icons {
+      transition: 0.4s;
+      font-size: 6em;
+      color: $text-darker;
     }
+    .office-title {
+      padding-bottom: 19px;
+      font-size: 21px;
+    }
+  }
 }
 
 .messages-list {
-    grid-area: messages-list;
+  grid-area: messages-list;
 }
 
 .messages-text {
-    grid-area: messages-text;
+  grid-area: messages-text;
 }
 
 .messages-tabs {
-    display: flex;
-    margin: 10px 0px;
-    .active {
-        background-color: $text-gray;
-        border-bottom: 5px solid $text-paleLeaf;
-        transition: background .5s;
-        a {
-            color: $text-paleLeaf;
-            &:hover {
-                text-decoration: none;
-            }
-        }
+  margin-top: 10px;
+  background-color: $sectionColor;
+  border-bottom: 1px solid $text-gray;
+  text-align: center;
+  .active {
+    background-color: $text-gray;
+    border-bottom: 5px solid $text-paleLeaf;
+    transition: background 0.5s;
+    a {
+      color: $text-paleLeaf;
+      &:hover {
+        text-decoration: none;
+      }
     }
-    div {
-        padding: 9px 26px;
-        position: relative;
-        &:hover {
-            cursor: pointer;
-        }
-        span {
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            font-size: 13px;
-            background-color: #ff0000;
-            height: 20px;
-            width: 20px;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 50%;
-        }
-        a {
-            color: $text-darker;
-            text-transform: uppercase;
-            font-size: 18px;
-        }
+  }
+  div {
+    padding: 9px 26px;
+    position: relative;
+    &:hover {
+      cursor: pointer;
     }
+    span {
+      position: absolute;
+      top: 5px;
+      right: 11px;
+      font-size: 0.8em;
+      background-color: #ff0000;
+      height: 15px;
+      width: 15px;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+    }
+    a {
+      color: $text-darker;
+      text-transform: uppercase;
+      font-size: 18px;
+    }
+  }
 }
 
 .messages-content {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-    gap: 20px;
-    grid-template-areas: "messages-list" "messages-text";
-    .messages-list {
-        background-color: $sectionColor
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  gap: 20px;
+  grid-template-areas: 'messages-list' 'messages-text';
+  .messages-list {
+    background-color: $sectionColor;
+  }
+  .messages-list {
+    overflow: scroll;
+    .messages-controls {
+      display: flex;
+      justify-content: space-between;
+      a {
+        margin: 0px 5px;
+      }
     }
-    .messages-list {
-        overflow: scroll;
-        .messages-controls {
-            display: flex;
-            justify-content: space-between;
-            a {
-                margin: 0px 5px;
-            }
-        }
+  }
+  .messages-text {
+    min-height: 500px;
+    max-height: 500px;
+  }
+  .messages-list {
+    .message-tabs {
+      margin-bottom: 5px;
     }
-    .messages-text {
-        min-height: 500px;
-        max-height: 500px;
+    .players-list,
+    .inbox-list,
+    .notifications-list {
+      .message {
+        &:hover {
+          cursor: pointer;
+        }
+        padding: 10px 5px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .message-logo {
+          img {
+            width: 50px;
+          }
+        }
+        .message-details {
+          display: flex;
+          flex-direction: column;
+          .title {
+            span {
+              font-weight: 700;
+              color: $text-darker;
+            }
+          }
+        }
+      }
+      .active {
+        background-color: $text-gray;
+        .message-details {
+          .title {
+            span {
+              color: $text-paleLeaf;
+            }
+          }
+          .info {
+            color: #fff;
+          }
+        }
+        .message-date {
+          span {
+            color: #fff;
+          }
+        }
+      }
     }
-    .messages-list {
-        .message-tabs {
-            margin-bottom: 5px;
-        }
-        .players-list, .inbox-list, .notifications-list {
-            .message {
-                &:hover {
-                    cursor: pointer;
-                }
-                padding: 10px 5px;
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                .message-logo {
-                    img {
-                        width: 50px;
-                    }
-                }
-                .message-details {
-                    display: flex;
-                    flex-direction: column;
-                    .title {
-                        span {
-                            font-weight: 700;
-                            color: $text-darker;
-                        }
-                    }
-                }
+    .players-list,
+    .inbox-list,
+    .notifications-list {
+      display: block;
+      animation: fadeTab 0.8s;
+    }
+    .hidden {
+      display: none;
+    }
+    .inbox-list {
+      position: relative;
+      .inbox-tabs {
+        padding: 10px 5px;
+        display: flex;
+        position: sticky;
+        top: 0;
+        background-color: #f7f7f7;
+        div {
+          margin: 5px 15px;
+          a {
+            color: $text-gray;
+            opacity: 0.5;
+            text-transform: uppercase;
+            transition: opacity 0.5s;
+            &:hover {
+              opacity: 1;
+              text-decoration: none;
             }
-            .active {
-                background-color: $text-gray;
-                .message-details {
-                    .title {
-                        span {
-                            color: $text-paleLeaf;
-                        }
-                    }
-                    .info {
-                        color: #fff;
-                    }
-                }
-                .message-date {
-                    span {
-                        color: #fff;
-                    }
-                }
-            }
-            
+          }
+          .activeTab {
+            opacity: 1;
+            color: $text-olivine;
+          }
         }
-        .players-list, .inbox-list, .notifications-list {
-            display: block;
-            animation: fadeTab 0.8s;
-        }
-        .hidden {
-            display: none;
-        }
-        .inbox-list {
-            .inbox-tabs {
-                padding: 10px 5px;
-                display: flex;
-                div {
-                    margin: 5px 15px;
-                    a { 
-                        color: $text-gray;
-                        opacity: 0.5;
-                        text-transform: uppercase;
-                        transition: opacity .5s;
-                        &:hover {
-                            opacity: 1;
-                            text-decoration: none;
-                        }
+      }
+      .hide {
+        display: none;
+      }
+    }
+    @keyframes fadeTab {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  }
+  .messages-text {
+    display: flex;
+    flex-direction: column;
+    background-color: $sectionColor;
 
-                    }
-                    .activeTab {
-                        opacity: 1;
-                        color: $text-olivine;
-                    }
-                }
-            }
-            .hide {
-                display: none;
-            }
-        }
-        @keyframes fadeTab {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
+    .hidden {
+      display: none !important;
+      opacity: 0;
     }
-    .messages-text {
+    .active {
+      display: block;
+      opacity: 1;
+    }
+    .messages-chat {
+      display: flex;
+      flex-direction: column;
+      overflow: scroll;
+      .text-entry {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px 25px;
+      }
+      .player-info {
+        display: flex;
+        .player-overall {
+          display: flex;
+          flex-direction: column;
+          .overall {
+            font-size: 34px;
+            color: $text-darker;
+            font-weight: bolder;
+          }
+        }
+        .player-photo {
+          height: 75px;
+          padding: 0px 15px;
+          img {
+            height: 100%;
+          }
+        }
+        .player-about {
+          p,
+          span {
+            text-transform: uppercase;
+          }
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          justify-content: space-around;
+          .surname {
+            font-weight: bolder;
+            font-size: 24px;
+            line-height: 18px;
+          }
+          .position {
+            display: flex;
+            .circle {
+              width: 13px;
+              height: 13px;
+              border-radius: 50%;
+              margin-right: 9px;
+            }
+            .yellow {
+              background-color: #ffc107;
+            }
+            .orange {
+              background-color: #ff8b07;
+            }
+            .green {
+              background-color: #28a745;
+            }
+            .blue {
+              background-color: #007bff;
+            }
+            .shortcut {
+              position: relative;
+              margin-right: 15px;
+              &::after {
+                position: absolute;
+                content: '|';
+                right: -9px;
+                top: -1px;
+              }
+            }
+          }
+        }
+      }
+      .player-morals {
         display: flex;
         flex-direction: column;
-        .hidden {
-            display: none!important;
-            opacity: 0;
+        justify-content: space-around;
+        min-width: 140px;
+        align-items: center;
+        text-transform: uppercase;
+        .progress-bar {
+          width: 100%;
+          background-color: $morale-bar;
+          height: 15px;
+          position: relative;
+          border-radius: 15px;
+          --data-progress: -5%;
+          overflow: inherit;
+
+          &::before {
+            position: absolute;
+            top: -3px;
+            left: var(--data-progress);
+            width: 20px;
+            height: 20px;
+            content: '';
+            border-radius: 15px;
+            border: 1px solid $sectionColor;
+            z-index: 2;
+          }
+          &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '';
+            width: var(--data-progress-bar);
+            height: 15px;
+            border-radius: 15px;
+          }
         }
-        .active {
-            display: block;
-            opacity: 1;
-            
+        .bad-moral {
+          &::before,
+          &::after {
+            background-color: $moral-bad;
+          }
         }
-        .messages-chat {
-            display: flex;
-            flex-direction: column;
-            overflow: scroll;
-            .text-entry {
-                background-color: $sectionColor;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                padding: 10px 25px;
-            }
-            .player-info {
-                display: flex;
-                .player-overall {
-                    display: flex;
-                    flex-direction: column;
-                    .overall {
-                        font-size: 34px;
-                        color: $text-darker;
-                        font-weight: bolder;
-                    }
-                }
-                .player-photo {
-                    height: 75px;
-                    padding: 0px 15px;
-                    img {
-                        height: 100%;
-                    }
-                }
-                .player-about {
-                    p,
-                    span {
-                        text-transform: uppercase;
-                    }
-                    display: flex;
-                    flex-direction: column;
-                    height: 100%;
-                    justify-content: space-around;
-                    .surname {
-                        font-weight: bolder;
-                        font-size: 24px;
-                        line-height: 18px;
-                    }
-                    .position {
-                        display: flex;
-                        .circle {
-                            width: 13px;
-                            height: 13px;
-                            border-radius: 50%;
-                            margin-right: 9px;
-                        }
-                        .yellow {
-                            background-color: #ffc107;
-                        }
-                        .orange {
-                            background-color: #ff8b07;
-                        }
-                        .green {
-                            background-color: #28a745;
-                        }
-                        .blue {
-                            background-color: #007bff;
-                        }
-                        .shortcut {
-                            position: relative;
-                            margin-right: 15px;
-                            &::after {
-                                position: absolute;
-                                content: '|';
-                                right: -9px;
-                                top: -1px;
-                            }
-                        }
-                    }
-                }
-            }
-            .player-morals {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                min-width: 140px;
-                align-items: center;
-                text-transform: uppercase;
-                .progress-bar {
-                    width: 100%;
-                    background-color: $morale-bar;
-                    height: 15px;
-                    position: relative;
-                    border-radius: 15px;
-                    --data-progress: -5%;
-                    overflow: inherit;
-                    
-                    &::before {
-                        position: absolute;
-                        top:-3px;
-                        left: var(--data-progress);
-                        width: 20px;
-                        height: 20px;
-                        content: '';
-                        border-radius: 15px;
-                        border: 1px solid $sectionColor;
-                        z-index:2;
-                    }
-                    &::after {
-                        position: absolute;
-                        top:0;
-                        left:0;
-                        content: "";
-                        width: var(--data-progress-bar);
-                        height: 15px;
-                        border-radius: 15px;
-                    }
-                }
-                .bad-moral {
-                    &::before, &::after {
-                        background-color: $moral-bad;
-                    }
-                    
-                }
-                .sad-moral {
-                    &::before, &::after {
-                        background-color: $moral-sad;
-                    }
-                }
-                .neutral-moral {
-                    &::before, &::after {
-                        background-color: $moral-neutral;
-                    }
-                }
-                .good-moral {
-                    &::before, &::after {
-                        background-color: $moral-good;
-                    }
-                }
-                .happy-moral {
-                    &::before, &::after {
-                        background-color: $moral-happy;
-                    }
-                }
-            }
-            
-            .text-full {
-                padding-top: 20px;
-                overflow: scroll;
-                display: none;
-                flex-direction: column;
-                .receiver,
-                .sender {
-                    display: flex;
-                    width: 100%;
-                    position: relative;
-                    p {
-                        width: 70%;
-                        padding: 5px 10px;
-                        margin: 8px 25px;  
-                        font-weight: bolder; 
-                        &::after {
-                            position: absolute;
-                            top: 8px;
-                            content: '';
-                            width: 25px;
-                            height: 25px;
-                            background-color: #fff;
-                        }
-                    }
-                }
-                .receiver {
-                    justify-content: flex-start;
-                    p {
-                        background-color: $chat-sender;
-                        &::after {
-                            left: 0px;
-                            background-color: $chat-sender;
-                            clip-path: polygon(0 0, 100% 100%, 100% 0);
-    
-                        }
-                    }
-                }
-                .sender {
-                    justify-content: flex-end;
-                    p {
-                        background-color: $chat-receiver;
-                        color: #fff;
-                        &::after {
-                            right: 0px;
-                            background-color: $chat-receiver;
-                            clip-path: polygon(0 0, 0 100%, 100% 0);
-    
-                        }
-                    }
-                }
-            }
-            .active {
-                display: flex;
-            }
+        .sad-moral {
+          &::before,
+          &::after {
+            background-color: $moral-sad;
+          }
         }
-        .messages-inbox {
-            overflow: scroll;
-            .text-full {
-                display: none;
-                padding: 0px 20px;
-                p {
-                    margin: 10px 0px;
-                    font-size: 18px;
-                }
-                button {
-                    margin-top: 20px;
-                    margin-bottom: 50px;
-                }
-            }
-            .active {
-                display: block;
-                animation: fadeMessage .5s;
-            }
+        .neutral-moral {
+          &::before,
+          &::after {
+            background-color: $moral-neutral;
+          }
         }
-        .messages-notifications {
-            .text-full {
-                transition: .5s;
-                opacity: 0;
-                display: none;
-            }
-            .active {
-                opacity: 1;
-                display: block;
-            }
+        .good-moral {
+          &::before,
+          &::after {
+            background-color: $moral-good;
+          }
         }
+        .happy-moral {
+          &::before,
+          &::after {
+            background-color: $moral-happy;
+          }
+        }
+      }
+
+      .text-full {
+        padding-top: 20px;
+        overflow: scroll;
+        display: none;
+        flex-direction: column;
+        padding: 0 20px;
+        .receiver,
+        .sender {
+          display: flex;
+          width: 100%;
+          position: relative;
+          p {
+            width: 70%;
+            padding: 5px 10px;
+            margin: 8px 25px;
+            font-weight: bolder;
+            &::after {
+              position: absolute;
+              top: 8px;
+              content: '';
+              width: 25px;
+              height: 25px;
+              background-color: #fff;
+            }
+          }
+        }
+        .receiver {
+          justify-content: flex-start;
+          p {
+            background-color: $chat-sender;
+            &::after {
+              left: 0px;
+              background-color: $chat-sender;
+              clip-path: polygon(0 0, 100% 100%, 100% 0);
+            }
+          }
+        }
+        .sender {
+          justify-content: flex-end;
+          p {
+            background-color: $chat-receiver;
+            color: #fff;
+            &::after {
+              right: 0px;
+              background-color: $chat-receiver;
+              clip-path: polygon(0 0, 0 100%, 100% 0);
+            }
+          }
+        }
+      }
+      .active {
+        display: flex;
+      }
     }
+    .messages-inbox {
+      overflow: scroll;
+
+      div[received-message-id] {
+        p {
+          width: 80%;
+          background-color: $chat-sender;
+          padding: 10px;
+          border-radius: 5px;
+        }
+      }
+
+      div[sent-message-id] {
+        p {
+          width: 80%;
+          background-color: $chat-receiver;
+          padding: 10px;
+          border-radius: 5px;
+          color: white;
+          margin-left: 20%;
+        }
+      }
+
+      .text-full {
+        display: none;
+        padding: 0px 20px;
+        p {
+          margin: 10px 0px;
+          font-size: 18px;
+        }
+        button {
+          margin-top: 20px;
+          margin-bottom: 50px;
+        }
+      }
+      .active {
+        display: block;
+        animation: fadeMessage 0.5s;
+      }
+    }
+    .messages-notifications {
+      padding: 10px 20px;
+      .text-full {
+        transition: 0.5s;
+        opacity: 0;
+        display: none;
+
+        p {
+          background-color: $chat-sender;
+          width: 70%;
+          padding: 5px;
+          margin-bottom: 15px;
+          border-radius: 5px;
+          font-weight: 600;
+        }
+      }
+      .active {
+        opacity: 1;
+        display: block;
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .messages-tabs {
+    display: flex;
+  }
+
+  .messages-content {
+    .messages-text {
+      .messages-chat {
+        .text-entry {
+          justify-content: space-between;
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 1024px) {
-    .messages-content {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: "messages-list messages-text messages-text";
-        gap: 1rem;
-        .messages-list {
-            max-height: 500px;
-        }
+  .messages-content {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 'messages-list messages-text messages-text';
+    gap: 1rem;
+    .messages-list {
+      max-height: 500px;
     }
+  }
 }
 
 @media (max-width: 1024px) {
-    .messages-content {
-        .messages-list {
-            max-height: 350px;
-        }
+  .messages-content {
+    .messages-list {
+      max-height: 350px;
     }
+  }
 }
