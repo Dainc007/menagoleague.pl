@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Competition;
+use App\Models\Notification;
 use Carbon\Carbon;
 use Carbon\CarbonImmutable;
 use Carbon\CarbonPeriod;
@@ -49,7 +50,7 @@ class CentralController extends Controller
         return view('central.central', [
             'user'      => Auth::user(),
             'fixtures'  => $fixtures ?? '',
-            'calendar'  => $calendar,
+            'calendar'  => $calendar
         ]);
     }
 

@@ -27,12 +27,20 @@
         {{-- Notifications --}}
         <div class="central-notifications-content tab-pane fade active show" id="notifications" role="tabpanel"
             aria-labelledby="notifications-tab">
-            <h2>{{ __('central.notifications') }}</h2>
+            <h2>{{ __('central.notifications.title') }}</h2>
 
             <div class="central-notifications-content">
                 <span class="material-icons">description </span>
-                <h3>Nowa wiadomość OD: Zarząd.</h3>
-                <p>[INFO] Budzet transferowy na .</p>
+                @if($user->getNumOfNotifications() > 0)
+                    <h3>
+                        <a href="{{ route('office.messages')  }}">
+                        {{ __('central.notifications.count', ['number' => $user->getNumOfNotifications()])}}
+                    </a>
+                    </h3>  <p>{{Str::limit($user->getLastNotification()->title, 30)}}</p>
+                    @else
+                    <h3>{{ __('central.notifications.none') }}</h3>
+                @endif
+
             </div>
         </div>
 

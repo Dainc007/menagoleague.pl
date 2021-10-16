@@ -97,6 +97,26 @@ class User extends Authenticatable
         return $this->hasMany(JobApplication::class);
     }
 
+    public function notifications()
+    {
+        return $this->hasMany(Notification::class);
+    }
+
+    public function getLastNotification()
+    {
+       return $this->getNewNotifications()->latest()->first();
+    }
+
+    public function getNewNotifications()
+    {
+        return $this->notifications()->where('seen', '=', false);
+    }
+
+    public function getNumOfNotifications()
+    {
+       return $this->getNewNotifications()->count();
+    }
+
     /* Extra Functions */
 
     public function isAdministrator()

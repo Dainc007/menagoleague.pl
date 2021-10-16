@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'board' => 'Menago League',
     'calendar'  => [
         'title' => 'KALENDARZ',
 
@@ -30,7 +31,13 @@ return [
 
     'lastTransfers' => 'OSTATNIE TRANSFERY',
     'bigTransfers'  => 'NAJWIĘKSZE TRANSFERY',
-    'notifications' => 'POWIADOMIENIA',
+    'notifications' => [
+        'title'     => 'POWIADOMIENIA',
+        'new'       => 'Nowa wiadomość od',
+        'none'      => 'Brak Nowych Powiadomień',
+        'count'     => 'Masz :number Nowych Powiadomień'
+
+    ],
 
     'standings'     => [
         'title'     => 'TABELA',
