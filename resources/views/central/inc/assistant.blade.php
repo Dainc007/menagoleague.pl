@@ -13,6 +13,22 @@
         </div>
         <div class="central-team-mailbox-messages">
             <div class="track-team-mailbox-messages">
+                <!-- Notifications -->
+                <div class="message-item">
+                    @if($user->notifications)
+                    @foreach($user->notifications as $message)
+                    <div class="team-mailbox-date">{{now()}}</div>
+
+                    <div class="message">
+                        <b>{{ __($message->title, ['name' => $user->name]) }}</b><br>
+                        {{ __($message->content, ['name' => $user->name]) }}
+                    </div>
+                    @endforeach
+                    @endif
+                </div>
+                <!-- END -->
+
+                <!-- Tutorial -->
                 <div class="message-item">
                     <div class="team-mailbox-date">{{now()}}</div>
 
@@ -20,6 +36,7 @@
                         @include('central.inc.tutorialForm')
                     </div>
                 </div>
+                <!-- END -->
 
 
             </div>

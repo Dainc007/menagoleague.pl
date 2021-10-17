@@ -36,7 +36,9 @@ class OfficeController extends Controller
 
     public function messages()
     {
-        return view('office.messages.index', []);
+        return view('office.messages.index', [
+            'user'  => Auth::user(),
+        ]);
     }
 
     /**

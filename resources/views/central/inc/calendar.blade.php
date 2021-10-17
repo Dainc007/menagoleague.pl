@@ -1,7 +1,7 @@
 <section class="central-advance">
     <div class="advance-headers">
         <h2><a href="{{ route('central.fullCalendar') }}">{{ __('central.calendar.title') }}</a></h2>
-        <span>{{ __('central.calendar.month.' . $calendar[0]->format('M')) }}{{ $calendar[0]->format('Y') }}</span>
+        <span>{{ __('central.calendar.month.' . $calendar[0]->format('M')) }} {{ $calendar[0]->format('Y') }}</span>
     </div>
 
     <div class="advance-callendar">
