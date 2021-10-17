@@ -1,110 +1,110 @@
 .office-finances {
-    .office-title {
-        padding-bottom: 10px;
+  .office-title {
+    padding-bottom: 10px;
+  }
+  .finances {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .finances-details {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: -30px;
+      margin-bottom: 10px;
+      text-align: right;
+      width: 100%;
     }
-    .finances {
+    .finances-view {
+      overflow: scroll;
+      max-height: 165px;
+      width: 100%;
+      .details-buttons {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
-        .finances-details {
-            display: flex;
-            justify-content: flex-end;
-            margin-top: -30px;
-            margin-bottom: 10px;
-            text-align: right;
-            width: 100%;
+        padding: 5px 0px;
+        position: sticky;
+        top: 0;
+        justify-content: center;
+        border: 1px solid #ddd;
+        border-bottom: 0px;
+        background-color: #f7f7f7;
+        z-index: 2;
+        li {
+          margin-right: 5px;
+          list-style-type: none;
+          padding: 0 10px;
+          cursor: pointer;
+          &.active {
+            font-weight: 600;
+            text-decoration: underline;
+          }
+          &:hover {
+            text-decoration: underline;
+          }
         }
-        .finances-view {
-            overflow: scroll;
-            max-height: 165px;
-            width: 100%;
-            .details-buttons {
-                display: flex;
-                flex-wrap: wrap;
-                padding: 5px 0px;
-                position: sticky;
-                top: 0;
-                justify-content: center;
-                border: 1px solid #ddd;
-                border-bottom: 0px;
-                background-color: #f7f7f7;
-                z-index: 2;
-                li {
-                    margin-right: 5px;
-                    list-style-type: none;
-                    &.active {
-                        font-weight: 700;
-                        text-decoration: underline;
-                    }
-                    &:hover {
-                        cursor: pointer; 
-                        font-weight: 700;
-                    }
+      }
+      div {
+        display: none;
+        table {
+          font-size: 12px;
+          border-collapse: collapse;
+          overflow-x: auto;
+          width: 100%;
+          td,
+          th {
+            border: 1px solid #ddd;
+            text-align: left;
+            padding: 4px;
+          }
+          tr {
+            &:not(:first-child) {
+              box-shadow: inset 2px 2px 15px #dcdcdc, inset -2px -2px 15px #dedede;
+            }
+            &:first-of-type {
+              position: sticky;
+              z-index: 1;
+              top: 33px;
+              background-color: #f7f7f7;
+            }
+            &:nth-child(even) {
+              background-color: #ddd;
+            }
+            th,
+            td {
+              &:first-of-type {
+                padding-right: 10px;
+              }
+            }
+            td {
+              position: relative;
+              span {
+                position: absolute;
+                visibility: hidden;
+                min-width: 200px;
+                top: -50px;
+                opacity: 0;
+                font-size: 12px;
+                color: #fff;
+                text-decoration: none;
+                padding: 2px 5px;
+                transition: all 0.5s;
+              }
+              &:hover {
+                span {
+                  visibility: visible;
+                  opacity: 1;
+                  background-color: $text-gray;
+                  margin: 2px 5px;
+                  z-index: 99;
                 }
+              }
             }
-            div {
-                display: none;
-                table {
-                    font-size: 12px;
-                    border-collapse: collapse;
-                    overflow-x: auto;
-                    width: 100%;
-                    td, th {
-                        border: 1px solid #ddd;
-                        text-align: left;
-                        padding: 4px;
-                        
-                    }
-                    tr {
-                        &:not(:first-child) {
-                            box-shadow: inset 2px 2px 15px #dcdcdc, inset -2px -2px 15px #dedede;
-                        }
-                        &:first-of-type {
-                            position: sticky;
-                            z-index: 1;
-                            top: 33px;
-                            background-color: #f7f7f7;
-                        }
-                        &:nth-child(even) {
-                            background-color: #ddd;
-                        }
-                        th, td {
-                            &:first-of-type {
-                                padding-right:10px;
-                            }
-                        }
-                        td {
-                            position: relative;
-                            span {
-                                position: absolute;
-                                visibility: hidden;
-                                min-width: 200px;
-                                top: -50px;
-                                opacity: 0;
-                                font-size: 12px;
-                                color: #fff;
-                                text-decoration: none;
-                                padding: 2px 5px;
-                                transition: all .5s;
-                            }
-                            &:hover {
-                                span {
-                                    visibility: visible;
-                                    opacity: 1;
-                                    background-color: $text-gray;
-                                    margin: 2px 5px;
-                                    z-index: 99;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            .active {
-                display: flex;
-
-            }
+          }
         }
+      }
+      .active {
+        display: flex;
+      }
     }
-    
+  }
 }

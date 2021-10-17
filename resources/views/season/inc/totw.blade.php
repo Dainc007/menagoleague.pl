@@ -2,7 +2,6 @@
     <h2>Top team</h2>
     <div class="selects">
         <div class="league">
-            <p>Select yours league</p>
             <select name="League" id="">
 
                 <option>League</option>

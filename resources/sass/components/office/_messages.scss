@@ -1,18 +1,21 @@
 .office-messages {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  .material-icons {
+    transition: 0.4s;
+    font-size: 6em;
+    color: $text-darker;
+  }
+  .office-title {
+    padding-bottom: 19px;
+    font-size: 21px;
+  }
   a {
     width: 100%;
     text-align: center;
-    .material-icons {
-      transition: 0.4s;
-      font-size: 6em;
-      color: $text-darker;
-    }
-    .office-title {
-      padding-bottom: 19px;
-      font-size: 21px;
-    }
   }
 }
 
@@ -446,14 +449,15 @@
         transition: 0.5s;
         opacity: 0;
         display: none;
+        background-color: $chat-sender;
+        width: 70%;
+        padding: 5px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        font-weight: 600;
 
         p {
-          background-color: $chat-sender;
-          width: 70%;
-          padding: 5px;
-          margin-bottom: 15px;
-          border-radius: 5px;
-          font-weight: 600;
+          margin: 10px 0;
         }
       }
       .active {

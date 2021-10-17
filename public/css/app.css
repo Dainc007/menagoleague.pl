@@ -13765,6 +13765,7 @@ a .btn-discord img {
 .central-notifications-content h3 {
   margin: 10px 0;
   text-align: center;
+  font-size: 1.2em;
 }
 .central-notifications-content p {
   width: 65%;
@@ -14718,19 +14719,21 @@ a .btn-discord img {
 .office-messages {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
-.office-messages a {
-  width: 100%;
-  text-align: center;
-}
-.office-messages a .material-icons {
+.office-messages .material-icons {
   transition: 0.4s;
   font-size: 6em;
   color: #0b2603;
 }
-.office-messages a .office-title {
+.office-messages .office-title {
   padding-bottom: 19px;
   font-size: 21px;
+}
+.office-messages a {
+  width: 100%;
+  text-align: center;
 }
 
 .messages-list {
@@ -15157,14 +15160,15 @@ a .btn-discord img {
   transition: 0.5s;
   opacity: 0;
   display: none;
-}
-.messages-content .messages-text .messages-notifications .text-full p {
   background-color: rgba(188, 212, 182, 0.75);
   width: 70%;
   padding: 5px;
   margin-bottom: 15px;
   border-radius: 5px;
   font-weight: 600;
+}
+.messages-content .messages-text .messages-notifications .text-full p {
+  margin: 10px 0;
 }
 .messages-content .messages-text .messages-notifications .active {
   opacity: 1;
@@ -15231,14 +15235,15 @@ a .btn-discord img {
 .office-finances .finances .finances-view .details-buttons li {
   margin-right: 5px;
   list-style-type: none;
+  padding: 0 10px;
+  cursor: pointer;
 }
 .office-finances .finances .finances-view .details-buttons li.active {
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: underline;
 }
 .office-finances .finances .finances-view .details-buttons li:hover {
-  cursor: pointer;
-  font-weight: 700;
+  text-decoration: underline;
 }
 .office-finances .finances .finances-view div {
   display: none;
@@ -15249,7 +15254,8 @@ a .btn-discord img {
   overflow-x: auto;
   width: 100%;
 }
-.office-finances .finances .finances-view div table td, .office-finances .finances .finances-view div table th {
+.office-finances .finances .finances-view div table td,
+.office-finances .finances .finances-view div table th {
   border: 1px solid #ddd;
   text-align: left;
   padding: 4px;
@@ -15266,7 +15272,8 @@ a .btn-discord img {
 .office-finances .finances .finances-view div table tr:nth-child(even) {
   background-color: #ddd;
 }
-.office-finances .finances .finances-view div table tr th:first-of-type, .office-finances .finances .finances-view div table tr td:first-of-type {
+.office-finances .finances .finances-view div table tr th:first-of-type,
+.office-finances .finances .finances-view div table tr td:first-of-type {
   padding-right: 10px;
 }
 .office-finances .finances .finances-view div table tr td {
@@ -15364,15 +15371,16 @@ a .btn-discord img {
 }
 .office-jobs .jobs-offers .offers-details .offers-buttons {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   margin-bottom: 15px;
 }
 .office-jobs .jobs-offers .offers-details .offers-buttons li {
   list-style-type: none;
   margin: 0px 7px;
+  cursor: pointer;
 }
 .office-jobs .jobs-offers .offers-details .offers-buttons li:hover {
-  cursor: pointer;
+  text-decoration: underline;
 }
 .office-jobs .jobs-offers .offers-details .offers-buttons .active {
   font-weight: 700;
@@ -15418,12 +15426,17 @@ a .btn-discord img {
   align-items: center;
   width: 100%;
 }
-.office-jobs .jobs-offers .offers-details .offers-controls:hover {
+.office-jobs .jobs-offers .offers-details .offers-controls button {
+  border: 1px solid #bcd4b6;
+  border-radius: 5px;
   cursor: pointer;
+  transition: transform 0.3s;
 }
-.office-jobs .jobs-offers .offers-details .offers-controls .material-icons {
-  border: none;
+.office-jobs .jobs-offers .offers-details .offers-controls button.material-icons {
   margin: 0px 25px;
+}
+.office-jobs .jobs-offers .offers-details .offers-controls button.material-icons:hover {
+  transform: scale(1.2);
 }
 
 .office-stadium .stadium-details {
@@ -15547,6 +15560,11 @@ a .btn-discord img {
 }
 .season-teamOTW .selects select {
   padding: 5px 10px;
+  border: none;
+  background-color: transparent;
+  border: 2px solid #8ab87f;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 .season-teamOTW .formation {
   position: relative;

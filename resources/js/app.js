@@ -382,26 +382,28 @@ const btnReceived = document.querySelector('.inbox-tabs .inbox-received');
 const btnSent = document.querySelector('.inbox-tabs .inbox-sent');
 const btnCreate = document.querySelector('.inbox-tabs .inbox-create');
 
-btnSent.addEventListener('click', () => {
-  inboxMessagesFull.forEach((msgFull) => {
-    msgFull.classList.remove('active');
+if (btnSent !== null) {
+  btnSent.addEventListener('click', () => {
+    inboxMessagesFull.forEach((msgFull) => {
+      msgFull.classList.remove('active');
+    });
   });
-});
 
-btnReceived.addEventListener('click', () => {
-  inboxSentMessagesFull.forEach((msgFull) => {
-    msgFull.classList.remove('active');
+  btnReceived.addEventListener('click', () => {
+    inboxSentMessagesFull.forEach((msgFull) => {
+      msgFull.classList.remove('active');
+    });
   });
-});
 
-btnCreate.addEventListener('click', () => {
-  inboxSentMessagesFull.forEach((msgFull) => {
-    msgFull.classList.remove('active');
+  btnCreate.addEventListener('click', () => {
+    inboxSentMessagesFull.forEach((msgFull) => {
+      msgFull.classList.remove('active');
+    });
+    inboxMessagesFull.forEach((msgFull) => {
+      msgFull.classList.remove('active');
+    });
   });
-  inboxMessagesFull.forEach((msgFull) => {
-    msgFull.classList.remove('active');
-  });
-});
+}
 
 inboxMessages.forEach((msg, index) => {
   msg.addEventListener('click', () => {

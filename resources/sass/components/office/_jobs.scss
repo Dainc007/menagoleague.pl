@@ -1,89 +1,96 @@
 .office-jobs {
-    .jobs-offers {
-        .offers-none {
-            text-align: center;
-            p {
-                font-size: 13px;
-            }
-            button {
-                margin-top: 10px;
-                font-size: 14px;
-                color: #fff;
-                box-shadow: inset 4px 4px 20px #dcdcdc, inset -4px -4px 20px #dedede;
-
-            }
-        }
-        .offers-details {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            padding-bottom: 30px;
-            .offers-buttons {
-                display: flex;
-                justify-content: center;
-                margin-bottom: 15px;
-                li {
-                    list-style-type: none;
-                    margin: 0px 7px;
-                    &:hover {
-                        cursor: pointer;
-                    }
-                }
-                .active {
-                    font-weight: 700;
-                    text-decoration: underline;
-                }
-            }
-            .offer-cards {
-                position: relative;
-                min-height: 275px;
-                .offers-jobs {
-                    display: none;
-                    opacity: 0;
-                    transition: all .5s;
-                }
-                
-                .offers-data {
-                    transition: all .5s;
-                    width: 100%;
-                    display: none;
-                    position: absolute;
-                    opacity: 0;
-                    left: -20px;
-                    .data-logo {
-                        img {
-                            margin: 20px 0px;
-                            max-height: 100px;
-                        }
-                    }
-                    .btn {
-                        margin: 15px 0px;
-                        box-shadow: inset 4px 4px 20px #dcdcdc, inset -4px -4px 20px #dedede;
-                        color: #fff;
-                    }
-                }
-                .active {
-                    transition: all .5s;
-                    left: 0;
-                    opacity: 1;
-                    display: block;
-                }
-            }
-            .offers-controls {
-                position: absolute;
-                bottom: -30px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                &:hover {
-                    cursor: pointer;
-                }
-                .material-icons {
-                    border: none;
-                    margin: 0px 25px;
-                }
-            }
-        }
+  .jobs-offers {
+    .offers-none {
+      text-align: center;
+      p {
+        font-size: 13px;
+      }
+      button {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #fff;
+        box-shadow: inset 4px 4px 20px #dcdcdc, inset -4px -4px 20px #dedede;
+      }
     }
+    .offers-details {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding-bottom: 30px;
+      .offers-buttons {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 15px;
+        li {
+          list-style-type: none;
+          margin: 0px 7px;
+          cursor: pointer;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        .active {
+          font-weight: 700;
+          text-decoration: underline;
+        }
+      }
+      .offer-cards {
+        position: relative;
+        min-height: 275px;
+        .offers-jobs {
+          display: none;
+          opacity: 0;
+          transition: all 0.5s;
+        }
+
+        .offers-data {
+          transition: all 0.5s;
+          width: 100%;
+          display: none;
+          position: absolute;
+          opacity: 0;
+          left: -20px;
+          .data-logo {
+            img {
+              margin: 20px 0px;
+              max-height: 100px;
+            }
+          }
+          .btn {
+            margin: 15px 0px;
+            box-shadow: inset 4px 4px 20px #dcdcdc, inset -4px -4px 20px #dedede;
+            color: #fff;
+          }
+        }
+        .active {
+          transition: all 0.5s;
+          left: 0;
+          opacity: 1;
+          display: block;
+        }
+      }
+      .offers-controls {
+        position: absolute;
+        bottom: -30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        button {
+          border: 1px solid $text-paleLeaf;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: transform 0.3s;
+          &.material-icons {
+            margin: 0px 25px;
+
+            &:hover {
+              transform: scale(1.2);
+            }
+          }
+        }
+      }
+    }
+  }
 }
