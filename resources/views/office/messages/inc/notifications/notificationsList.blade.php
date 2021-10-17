@@ -1,3 +1,4 @@
+@if($user->notifications)
 @foreach($user->notifications as $message)
 <div class="message" message-id="{{ $message->id }}">
         <div class="message-details">
@@ -11,3 +12,4 @@
         <div class="message-date"><span>{{$message->created_at}}</span></div>
     </div>
 @endforeach
+@endif
