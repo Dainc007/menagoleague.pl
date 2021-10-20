@@ -16,13 +16,16 @@
                 <!-- Notifications -->
                 <div class="message-item">
                     @if($user->notifications)
-                    @foreach($user->notifications as $message)
+                    @foreach($user->getNewNotifications as $message)
                     <div class="team-mailbox-date">{{now()}}</div>
 
-                    <div class="message">
+                    <div class="message" id="message{{$message->id}}">
                         <b>{{ __($message->title, ['name' => $user->name]) }}</b><br>
                         {{ __($message->content, ['name' => $user->name]) }}
+                        <button class="confirm" data-id="{{ $message->id }}">Oznacz jako przeczytane</button>
                     </div>
+
+                    
                     @endforeach
                     @endif
                 </div>

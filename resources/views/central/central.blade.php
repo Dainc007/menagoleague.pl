@@ -24,3 +24,27 @@
 {{-- @include('calendar.fullcalendar') --}}
 
 @endsection
+
+@section('javascript')
+$(function() {
+
+    $('.confirm').click(function() {
+
+        var notificationId = $(this).data("id");
+
+        $.ajax({
+  method: "POST",
+  url: "{{route('notifications.markAsSeen')}}",
+  data: { 
+      id: notificationId,
+      "_token": "{{ csrf_token() }}"
+ }
+})
+  .done(function( msg ) {
+    $('#message' + notificationId).css('display', 'none');
+  });
+        
+    });
+
+});
+@endsection
