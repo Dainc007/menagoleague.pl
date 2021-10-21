@@ -104,7 +104,7 @@ class User extends Authenticatable
 
     public function getLastNotification()
     {
-       return $this->getNewNotifications()->latest()->first();
+        return $this->getNewNotifications()->latest()->first();
     }
 
     public function getNewNotifications()
@@ -114,7 +114,7 @@ class User extends Authenticatable
 
     public function getNumOfNotifications()
     {
-       return $this->getNewNotifications()->count();
+        return $this->getNewNotifications()->count();
     }
 
     /* Extra Functions */

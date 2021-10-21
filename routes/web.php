@@ -218,3 +218,7 @@ Route::prefix('/admin')->group(function () {
     Route::post('/jobApplications/respond/{id}', [App\Http\Controllers\AdminController::class, 'JobApplicationRespond'])
         ->name('admin.jobApplication.respond')->middleware('administrator');
 });
+
+/* Notifications */
+Route::post('/notifications', [App\Http\Controllers\NotificationController::class, 'markAsSeen'])
+    ->name('notifications.markAsSeen');
