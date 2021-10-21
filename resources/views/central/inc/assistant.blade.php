@@ -22,7 +22,7 @@
                     <div class="message" id="message{{$message->id}}">
                         <b>{{ __($message->title, ['name' => $user->name]) }}</b><br>
                         {{ __($message->content, ['name' => $user->name]) }}
-                        <button class="confirm" data-id="{{ $message->id }}">Oznacz jako przeczytane</button>
+                        <button class="confirm btn" data-id="{{ $message->id }}">Oznacz jako przeczytane</button>
                     </div>
 
                     

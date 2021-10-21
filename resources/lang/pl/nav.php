@@ -33,5 +33,8 @@ return [
         'transfers' => 'TRANSFERY',
         'office' => 'BIURO',
         'season' => 'SEZON',
-    ]
+    ],
+
+    'logout'   => 'Wyloguj',
+    'settings' => 'Ustawienia',
 ];

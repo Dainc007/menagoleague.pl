@@ -61,8 +61,9 @@
                 </span></a>
 
             <div class="dropdown-menu">
-                <a href="{{ route('user.account') }}">Settings</a>
-                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout
+                <a href="{{ route('user.account') }}">{{ __('nav.settings') }}</a>
+                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    {{ __('nav.logout') }}
                 </a>
 
             </div>
@@ -139,7 +140,7 @@
                             <div class="r-nav-auth-logged-user">
                                 <a class="r-nav-auth-logged-user-nickname" href="">Nickname </a>
                                 <div class="r-nav-auth-logged-user-settings">
-                                    <a href="{{ route('user.account') }}"><span class="material-icons"> manage_accounts </span> Settings</a>
+                                    <a href="{{ route('user.account') }}"><span class="material-icons"> manage_accounts </span> {{ __('nav.settings') }}</a>
                                     <a href=""><span class="material-icons"> logout </span> Logout</a>
                                 </div>
                             </div>

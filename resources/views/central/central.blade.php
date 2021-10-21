@@ -5,46 +5,46 @@
 
 @section('content')
 
-<div class="central-content">
+    <div class="central-content">
 
-    {{-- Advance section --}}
-    @include('central.inc.calendar')
+        {{-- Advance section --}}
+        @include('central.inc.calendar')
 
-    {{-- Team assistant section --}}
-    @include('central.inc.assistant')
+        {{-- Team assistant section --}}
+        @include('central.inc.assistant')
 
-    {{-- Notifications section --}}
-    @include('central.inc.notifications')
+        {{-- Notifications section --}}
+        @include('central.inc.notifications')
 
-    {{-- Standings section --}}
-    @include('central.inc.standings')
+        {{-- Standings section --}}
+        @include('central.inc.standings')
 
-</div>
+    </div>
 
-{{-- @include('calendar.fullcalendar') --}}
+    {{-- @include('calendar.fullcalendar') --}}
 
 @endsection
 
 @section('javascript')
-$(function() {
+    $(function() {
 
-    $('.confirm').click(function() {
+      $('.confirm').click(function() {
 
         var notificationId = $(this).data("id");
 
         $.ajax({
-  method: "POST",
-  url: "{{route('notifications.markAsSeen')}}",
-  data: { 
-      id: notificationId,
-      "_token": "{{ csrf_token() }}"
- }
-})
-  .done(function( msg ) {
-    $('#message' + notificationId).css('display', 'none');
-  });
-        
-    });
+        method: "POST",
+        url: "{{ route('notifications.markAsSeen') }}",
+        data: {
+        id: notificationId,
+        }
+        })
 
-});
+        .done(function( msg ) {
+        $('#message' + notificationId).css('display', 'none');
+        });
+
+      });
+
+    });
 @endsection

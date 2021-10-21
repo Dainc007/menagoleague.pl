@@ -34,5 +34,8 @@ return [
         'transfers' => 'Transfers',
         'office' => 'Office',
         'season' => 'Season',
-    ]
+    ],
+
+    'logout'   => 'Logout',
+    'settings' => 'Settings',
 ];
