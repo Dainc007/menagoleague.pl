@@ -21,9 +21,13 @@ class CreateTeamsTable extends Migration
             $table->unsignedBigInteger('user_id')->nullable()->unique();
             $table->unsignedBigInteger('league_id')->nullable();
             $table->unsignedBigInteger('device_id')->nullable();
+            $table->unsignedBigInteger('transferBudget')->nullable();
+            $table->unsignedBigInteger('value')->nullable();
             $table->boolean('is_active')->default(false);
+            $table->unsignedBigInteger('sofifa_id');
 
             $table->unique(['name', 'device_id']);
+            $table->unique(['sofifa_id', 'device_id']);
             $table->timestamps();
 
             $table->foreign('device_id')->references('id')->on('devices')->onDelete('CASCADE');

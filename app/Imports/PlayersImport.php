@@ -16,21 +16,31 @@ class PlayersImport implements ToModel, WithHeadingRow, WithCustomCsvSettings
      */
     public function model(array $row)
     {
-            return new Player([
-                'name'     => $row['name'],
-                'nationality' => $row['nationality'],
-                'position' => $row['position'],
-                'overall' => $row['overall'],
-                'age' => $row['age'],
-                'real_team' => $row['real_team'],
-                'device_id' => $row['device'],
-            ]);
+        $search = Player::where('sofifa_id', '=', $row['sofifa_id'])->first();
+        if ($search) {
+            return;
+        }
+
+        return new Player([
+            'name'         => $row['name'],
+            'fullName'     => $row['fullname'],
+            'nationality'  => $row['nationality'],
+            'positions'     => $row['positions'],
+            'bestPosition' => $row['bestposition'],
+            'overall'      => $row['overall'],
+            'age'          => $row['age'],
+            'real_team'    => $row['club'],
+            'device_id'    => 1,
+            'sofifa_id'    => $row['id'],
+            'weight'       => $row['weight'],
+            'height'       => $row['height'],
+        ]);
     }
 
     public function getCsvSettings(): array
     {
         return [
-            'delimiter' => ";"
+            'delimiter' => ","
         ];
     }
 }

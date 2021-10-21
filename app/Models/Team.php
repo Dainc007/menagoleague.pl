@@ -18,6 +18,9 @@ class Team extends Model
         'league_id',
         'device_id',
         'is_active',
+        'value',
+        'transferBudget',
+        'sofifa_id',
     ];
 
     public function user()

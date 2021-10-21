@@ -16,18 +16,24 @@ class Player extends Model
     public const AVAILABLE_CUP_GOALS = ['win', 'semi-final', '3rd-round'];
     public const AVAILABLE_EUROPE_GOALS = ['win', 'semi_final', 'knockout_stage', '3rd_place'];
 
+  
     protected $fillable = [
         'id',
         'name',
+        'fullName',
         'nationality',
         'age',
         'team_id',
         'device_id',
         'wage',
         'contract_lenght',
-        'position',
+        'positions',
+        'bestPosition',
         'overall',
+        'height',
+        'weight',
         'real_team',
+        'sofifa_id',
     ];
 
     public function team()
@@ -88,3 +94,5 @@ class Player extends Model
         );
     }
 }
+
+/* PreferredFoot,WeakFoot,SkillMoves,AttackingWorkRate,DefensiveWorkRate,PaceTotal,ShootingTotal,PassingTotal,DribblingTotal,DefendingTotal,PhysicalityTotal,Crossing,Finishing,HeadingAccuracy,ShortPassing,Volleys,Dribbling,Curve,FKAccuracy,LongPassing,BallControl,Acceleration,SprintSpeed,Agility,Reactions,Balance,ShotPower,Jumping,Stamina,Strength,LongShots,Aggression,Interceptions,Positioning,Vision,Penalties,Composure,Marking,StandingTackle,SlidingTackle,GKDiving,GKHandling,GKKicking,GKPositioning,GKReflexes, */

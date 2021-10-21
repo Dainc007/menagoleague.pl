@@ -16,9 +16,12 @@ class CreateLeaguesTable extends Migration
     {
         Schema::create('leagues', function (Blueprint $table) {
             $table->id();
-            $table->enum('region', League::AVAILABLE_REGIONS);
+            /* $table->enum('region', League::AVAILABLE_REGIONS);
             $table->enum('type', League::AVAILABLE_TYPES);
-            $table->enum('level', League::AVAILABLE_LEVELS);
+            $table->enum('level', League::AVAILABLE_LEVELS); */
+            $table->string('region')->nullable();
+            $table->string('type')->nullable();
+            $table->integer('level')->nullable();
             $table->unique(['region', 'level', 'type']);
             $table->timestamps();
         });

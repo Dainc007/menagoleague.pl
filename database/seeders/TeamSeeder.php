@@ -17,8 +17,6 @@ class TeamSeeder extends Seeder
      */
     public function run()
     {
-        Excel::import(new TeamsImport, Storage::path('public/CSV/teamsXbox.csv'));
-        Excel::import(new TeamsImport, Storage::path('public/CSV/teamsPlaystation.csv'));
-        Excel::import(new TeamsImport, Storage::path('public/CSV/teamsPC.csv'));
+        Excel::import(new TeamsImport, Storage::path('public/CSV/teams_fifa22.csv'));
     }
 }

@@ -14,7 +14,7 @@ class LeagueSeeder extends Seeder
      */
     public function run()
     {
-        for ($level = 1; $level <= 3; $level++) {
+        for ($level = 1; $level <= 90; $level++) {
             foreach (League::AVAILABLE_REGIONS as $region) {
                 foreach (League::AVAILABLE_TYPES as $type) {
                     League::insert([

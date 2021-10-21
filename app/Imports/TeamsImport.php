@@ -17,16 +17,17 @@ class TeamsImport implements ToModel, WithHeadingRow, WithCustomCsvSettings
     public function model(array $row)
     {
             return new Team([
-                'name'     => $row['name'],
-                'device_id' => $row['device_id'],
-                'is_active' => rand(0, 1),
+                'sofifa_id'   => $row['id'],
+                'name'      => $row['name'],
+                'league_id' => $row['leagueid'],
+                'device_id' => 1
             ]);
     }
 
     public function getCsvSettings(): array
     {
         return [
-            'delimiter' => ";"
+            'delimiter' => ","
         ];
     }
 }

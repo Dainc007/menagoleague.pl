@@ -17,12 +17,8 @@ class PlayerSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\Player::factory(5000)->create();
-
-        Player::find((1))->update(['team_id' => null]);
-
-        /* Excel::import(new PlayersImport, Storage::path('public/CSV/playersXbox.csv'));
-        Excel::import(new PlayersImport, Storage::path('public/CSV/playersPlaystation.csv'));
-        Excel::import(new PlayersImport, Storage::path('public/CSV/playersPC.csv')); */
+        /* \App\Models\Player::factory(5000)->create();
+        Player::find((1))->update(['team_id' => null]); */
+        Excel::import(new PlayersImport, Storage::path('public/CSV/players_fifa22.csv'));
     }
 }

@@ -18,17 +18,23 @@ class CreatePlayersTable extends Migration
             $table->id();
 
             $table->string('name');
+            $table->string('fullName')->nullable();
             $table->unsignedBigInteger('team_id')->nullable();
             $table->unsignedBigInteger('device_id')->nullable();
             $table->string('nationality');
-            $table->string('position');
+            $table->string('positions');
+            $table->string('bestPosition');
             $table->integer('overall');
             $table->integer('age');
+            $table->integer('weight');
+            $table->integer('height');
             $table->string('real_team');
             $table->boolean('transfer_listed');
             $table->boolean('loan_listed');
+            $table->unsignedBigInteger('sofifa_id');
 
-            $table->unique(['name', 'real_team', 'overall', 'age', 'device_id']);
+            $table->unique(['fullName', 'real_team', 'overall', 'age', 'device_id']);
+            $table->unique(['fullName', 'sofifa_id', 'device_id']);
             $table->timestamps();
 
             $table->foreign('device_id')->references('id')->on('devices')->onDelete('CASCADE');
