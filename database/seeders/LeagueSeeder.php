@@ -2,8 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\League;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Storage;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Imports\LeaguesImport;
 
 class LeagueSeeder extends Seeder
 {
@@ -14,7 +16,7 @@ class LeagueSeeder extends Seeder
      */
     public function run()
     {
-        for ($level = 1; $level <= 90; $level++) {
+/*         for ($level = 1; $level <= 90; $level++) {
             foreach (League::AVAILABLE_REGIONS as $region) {
                 foreach (League::AVAILABLE_TYPES as $type) {
                     League::insert([
@@ -24,6 +26,8 @@ class LeagueSeeder extends Seeder
                     ]);
                 }
             }
-        }
+        } */
+
+        Excel::import(new LeaguesImport, Storage::path('public/CSV/teams_fifa22.csv'));
     }
 }

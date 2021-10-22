@@ -34,6 +34,52 @@ class Player extends Model
         'weight',
         'real_team',
         'sofifa_id',
+
+        'preferredFoot',
+        'weakFoot',
+        'skillMoves',
+        'attackingWorkRate',
+        'defensiveWorkRate',
+        'paceTotal',
+        'shootingTotal',
+        'passingTotal',
+        'dribblingTotal',
+        'defendingTotal',
+        'physicalityTotal',
+        'crossing',
+        'finishing',
+        'headingAccuracy',
+        'shortPassing',
+        'volleys',
+        'dribbling',
+        'curve',
+        'FKAccuracy',
+        'longPassing',
+        'ballControl',
+        'acceleration',
+        'sprintSpeed',
+        'agility',
+        'reactions',
+        'balance',
+        'shotPower',
+        'jumping',
+        'stamina',
+        'strength',
+        'longShots',
+        'aggression',
+        'interceptions',
+        'positioning',
+        'vision',
+        'penalties',
+        'composure',
+        'marking',
+        'standingTackle',
+        'slidingTackle',
+        'GKDiving',
+        'GKHandling',
+        'GKKicking',
+        'GKPositioning',
+        'GKReflexes'
     ];
 
     public function team()
@@ -94,5 +140,3 @@ class Player extends Model
         );
     }
 }
-
-/* PreferredFoot,WeakFoot,SkillMoves,AttackingWorkRate,DefensiveWorkRate,PaceTotal,ShootingTotal,PassingTotal,DribblingTotal,DefendingTotal,PhysicalityTotal,Crossing,Finishing,HeadingAccuracy,ShortPassing,Volleys,Dribbling,Curve,FKAccuracy,LongPassing,BallControl,Acceleration,SprintSpeed,Agility,Reactions,Balance,ShotPower,Jumping,Stamina,Strength,LongShots,Aggression,Interceptions,Positioning,Vision,Penalties,Composure,Marking,StandingTackle,SlidingTackle,GKDiving,GKHandling,GKKicking,GKPositioning,GKReflexes, */

@@ -2,6 +2,7 @@
 
 namespace App\Imports;
 
+use App\Models\League;
 use App\Models\Team;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithCustomCsvSettings;
@@ -16,10 +17,12 @@ class TeamsImport implements ToModel, WithHeadingRow, WithCustomCsvSettings
      */
     public function model(array $row)
     {
+        $leagueId = League::where('sofifa_id', $row['leagueid'])->value('id');
+
             return new Team([
                 'sofifa_id'   => $row['id'],
                 'name'      => $row['name'],
-                'league_id' => $row['leagueid'],
+                'league_id' => $leagueId,
                 'device_id' => 1
             ]);
     }

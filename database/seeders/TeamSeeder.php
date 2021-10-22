@@ -6,7 +6,6 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Storage;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Imports\TeamsImport;
-use App\Models\Team;
 
 class TeamSeeder extends Seeder
 {

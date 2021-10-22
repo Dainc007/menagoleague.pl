@@ -16,7 +16,7 @@ class PlayersImport implements ToModel, WithHeadingRow, WithCustomCsvSettings
      */
     public function model(array $row)
     {
-        $search = Player::where('sofifa_id', '=', $row['sofifa_id'])->first();
+        $search = Player::where('sofifa_id', '=', $row['id'])->first();
         if ($search) {
             return;
         }

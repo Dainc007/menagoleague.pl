@@ -22,7 +22,9 @@ class CreateLeaguesTable extends Migration
             $table->string('region')->nullable();
             $table->string('type')->nullable();
             $table->integer('level')->nullable();
-            $table->unique(['region', 'level', 'type']);
+            $table->string('name')->nullable();
+            $table->unsignedBigInteger('sofifa_id');
+            $table->unique(['region', 'level', 'type', 'name']);
             $table->timestamps();
         });
     }

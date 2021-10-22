@@ -10,7 +10,7 @@ class League extends Model
     use HasFactory;
 
     protected $fillable = [
-        'id', 'region', 'type', 'level'
+        'id', 'region', 'type', 'level', 'name', 'sofifa_id'
     ];
 
     public const AVAILABLE_REGIONS = [
