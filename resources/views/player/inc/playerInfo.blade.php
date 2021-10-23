@@ -16,9 +16,12 @@
             <img src="/images/placeholder-person.svg" alt="">
             <div class="info">
                 <p class="name">Robert Lewandowski</p>
-                <div>
-                    <p>Napastnik (Bayern Monachium)</p>
-                    <p>Wiek: 32 (12.12.1234)</p>
+                <div class="about">
+                    <div class="squareNum">{{ rand(80, 100) }}</div>
+                    <div>
+                        <p>Napastnik (Bayern Monachium)</p>
+                        <p>Wiek: 32 (12.12.1234) <span>{{ rand(180, 200) }}cm {{ rand(80, 100) }}kg</span></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -29,7 +32,7 @@
             <img src="/images/placeholder-person.svg" alt="">
             <div class="info">
                 <div class="trophies">
-                    @for ($i = 1; $i <= 8; $i++)
+                    @for ($i = 1; $i <= $how; $i++)
                         <div class="trophy" data-toggle="tooltip" data-placement="top"
                             title='Gets {{ rand(1, 10) }} trophies!'>
                             <img src="/images/trophy.svg" alt="">
@@ -38,9 +41,12 @@
                     @endfor
                 </div>
                 <p class="name">Robert Lewandowski</p>
-                <div>
-                    <p>Napastnik (Bayern Monachium)</p>
-                    <p>Wiek: 32 (12.12.1234)</p>
+                <div class="about">
+                    <div class="squareNum">{{ rand(80, 100) }}</div>
+                    <div>
+                        <p>Napastnik (Bayern Monachium)</p>
+                        <p>Wiek: 32 (12.12.1234) <span>{{ rand(180, 200) }}cm {{ rand(80, 100) }}kg</span></p>
+                    </div>
                 </div>
             </div>
         </div>

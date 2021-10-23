@@ -1,0 +1,1 @@
+<?php /**PATH C:\Users\Bartek\Desktop\KURS\Menagoleague.pl\resources\views//help/inc/help/helpContent.blade.php ENDPATH**/ ?>

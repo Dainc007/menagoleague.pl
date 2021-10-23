@@ -10231,7 +10231,6 @@ a:hover {
   border: none;
   font-size: 1.2em;
   font-weight: 600;
-  color: #144f06;
   padding: 7px 23px;
   cursor: pointer;
   text-align: center;
@@ -10248,6 +10247,34 @@ a:hover {
 }
 .bshadow:hover {
   box-shadow: inset 0px 0px 13px #f0f0f0ad, inset 0px 0px 13px #f0f0f0ad;
+}
+
+.squareNum {
+  width: 40px;
+  height: 40px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 5px;
+}
+
+.starNum {
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+.starNum img {
+  width: 40px;
+  height: 40px;
+}
+.starNum p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 100%;
 }
 
 .register-radios label:before {
@@ -11661,6 +11688,47 @@ a .btn-discord img {
   }
 }
 /* Competition components*/
+.details {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  gap: 30px;
+  padding: 25px;
+  background-color: rgba(255, 253, 253, 0.7);
+  border-top: 3px solid #558c47;
+  border-top-right-radius: 5px;
+}
+.details .entity h2 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.details .entity div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.details .entity div p {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+@media (min-width: 577px) {
+  .details {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .details {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1440px) {
+  .details {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 .players .nav-tabs .nav-item .nav-link {
   display: none;
 }
@@ -12102,7 +12170,8 @@ a .btn-discord img {
     display: flex;
   }
 }
-.playerInfo, .teamInfo {
+.playerInfo,
+.teamInfo {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -12111,15 +12180,18 @@ a .btn-discord img {
   margin-top: 3rem;
   margin-bottom: 2rem;
 }
-.playerInfo .player, .teamInfo .player {
+.playerInfo .player,
+.teamInfo .player {
   display: flex;
 }
-.playerInfo .team, .teamInfo .team {
+.playerInfo .team,
+.teamInfo .team {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-.playerInfo .team .cost, .teamInfo .team .cost {
+.playerInfo .team .cost,
+.teamInfo .team .cost {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -12131,43 +12203,81 @@ a .btn-discord img {
   height: -moz-max-content;
   height: max-content;
 }
-.playerInfo .team .cost .price, .teamInfo .team .cost .price {
+.playerInfo .team .cost .price,
+.teamInfo .team .cost .price {
   font-size: 2.5em;
 }
-.playerInfo .content .info, .playerInfo .r-content .info, .teamInfo .content .info, .teamInfo .r-content .info {
+.playerInfo .content .info,
+.playerInfo .r-content .info,
+.teamInfo .content .info,
+.teamInfo .r-content .info {
   padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-.playerInfo .content .info .name, .playerInfo .r-content .info .name, .teamInfo .content .info .name, .teamInfo .r-content .info .name {
+.playerInfo .content .info .name,
+.playerInfo .r-content .info .name,
+.teamInfo .content .info .name,
+.teamInfo .r-content .info .name {
   font-weight: 600;
   font-size: 1.5em;
   color: #144f06;
 }
-.playerInfo .content .info > div, .playerInfo .r-content .info > div, .teamInfo .content .info > div, .teamInfo .r-content .info > div {
+.playerInfo .content .info .about,
+.playerInfo .r-content .info .about,
+.teamInfo .content .info .about,
+.teamInfo .r-content .info .about {
+  display: flex;
+  align-items: center;
+}
+.playerInfo .content .info .about div:last-of-type,
+.playerInfo .r-content .info .about div:last-of-type,
+.teamInfo .content .info .about div:last-of-type,
+.teamInfo .r-content .info .about div:last-of-type {
+  padding-left: 15px;
+}
+.playerInfo .content .info > div,
+.playerInfo .r-content .info > div,
+.teamInfo .content .info > div,
+.teamInfo .r-content .info > div {
   font-size: 0.9em;
 }
-.playerInfo .content .trophies, .playerInfo .r-content .trophies, .teamInfo .content .trophies, .teamInfo .r-content .trophies {
+.playerInfo .content .trophies,
+.playerInfo .r-content .trophies,
+.teamInfo .content .trophies,
+.teamInfo .r-content .trophies {
   display: flex;
   flex-wrap: wrap;
   margin-top: 1rem;
 }
-.playerInfo .content .trophies .trophy, .playerInfo .r-content .trophies .trophy, .teamInfo .content .trophies .trophy, .teamInfo .r-content .trophies .trophy {
+.playerInfo .content .trophies .trophy,
+.playerInfo .r-content .trophies .trophy,
+.teamInfo .content .trophies .trophy,
+.teamInfo .r-content .trophies .trophy {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
 }
-.playerInfo .content .trophies .trophy:last-of-type, .playerInfo .r-content .trophies .trophy:last-of-type, .teamInfo .content .trophies .trophy:last-of-type, .teamInfo .r-content .trophies .trophy:last-of-type {
+.playerInfo .content .trophies .trophy:last-of-type,
+.playerInfo .r-content .trophies .trophy:last-of-type,
+.teamInfo .content .trophies .trophy:last-of-type,
+.teamInfo .r-content .trophies .trophy:last-of-type {
   margin-right: 0;
 }
-.playerInfo .content .trophies img, .playerInfo .r-content .trophies img, .teamInfo .content .trophies img, .teamInfo .r-content .trophies img {
+.playerInfo .content .trophies img,
+.playerInfo .r-content .trophies img,
+.teamInfo .content .trophies img,
+.teamInfo .r-content .trophies img {
   width: 35px;
   -o-object-fit: unset;
      object-fit: unset;
 }
-.playerInfo .content .trophies .number, .playerInfo .r-content .trophies .number, .teamInfo .content .trophies .number, .teamInfo .r-content .trophies .number {
+.playerInfo .content .trophies .number,
+.playerInfo .r-content .trophies .number,
+.teamInfo .content .trophies .number,
+.teamInfo .r-content .trophies .number {
   position: absolute;
   bottom: -5px;
   right: -3px;
@@ -12182,72 +12292,96 @@ a .btn-discord img {
   align-items: center;
   font-size: 0.8em;
 }
-.playerInfo .r-content, .teamInfo .r-content {
+.playerInfo .r-content,
+.teamInfo .r-content {
   display: flex;
   flex-direction: column;
   border-bottom: 2px solid #144f06;
 }
-.playerInfo .content, .teamInfo .content {
+.playerInfo .content,
+.teamInfo .content {
   display: none;
 }
-.playerInfo img, .teamInfo img {
+.playerInfo img,
+.teamInfo img {
   width: 57px;
   margin: auto 0;
 }
 
 @media (min-width: 768px) {
-  .playerInfo .info, .teamInfo .info {
+  .playerInfo .info,
+.teamInfo .info {
     padding: 20px;
   }
-  .playerInfo .info .name, .teamInfo .info .name {
+  .playerInfo .info .name,
+.teamInfo .info .name {
     font-size: 2em;
   }
-  .playerInfo .info > div, .teamInfo .info > div {
+  .playerInfo .info > div,
+.teamInfo .info > div {
     font-size: 1em;
   }
-  .playerInfo .r-content .trophies, .playerInfo .content .trophies, .teamInfo .r-content .trophies, .teamInfo .content .trophies {
+  .playerInfo .r-content .trophies,
+.playerInfo .content .trophies,
+.teamInfo .r-content .trophies,
+.teamInfo .content .trophies {
     margin-bottom: 10px;
   }
-  .playerInfo .r-content .trophies img, .playerInfo .content .trophies img, .teamInfo .r-content .trophies img, .teamInfo .content .trophies img {
+  .playerInfo .r-content .trophies img,
+.playerInfo .content .trophies img,
+.teamInfo .r-content .trophies img,
+.teamInfo .content .trophies img {
     width: 55px;
   }
-  .playerInfo .r-content .trophies .number, .playerInfo .content .trophies .number, .teamInfo .r-content .trophies .number, .teamInfo .content .trophies .number {
+  .playerInfo .r-content .trophies .number,
+.playerInfo .content .trophies .number,
+.teamInfo .r-content .trophies .number,
+.teamInfo .content .trophies .number {
     bottom: -10px;
     right: -5px;
     width: 28px;
     height: 28px;
     font-size: 1em;
   }
-  .playerInfo img, .teamInfo img {
+  .playerInfo img,
+.teamInfo img {
     width: 84px;
   }
 }
 @media (min-width: 1024px) {
-  .playerInfo, .teamInfo {
+  .playerInfo,
+.teamInfo {
     flex-direction: row;
   }
-  .playerInfo .r-content, .teamInfo .r-content {
+  .playerInfo .r-content,
+.teamInfo .r-content {
     display: none;
   }
-  .playerInfo .content, .teamInfo .content {
+  .playerInfo .content,
+.teamInfo .content {
     display: flex;
     margin-bottom: 0;
   }
-  .playerInfo .content .info .name, .teamInfo .content .info .name {
+  .playerInfo .content .info .name,
+.teamInfo .content .info .name {
     font-size: 2em;
   }
-  .playerInfo .content .info .trophies, .teamInfo .content .info .trophies {
+  .playerInfo .content .info .trophies,
+.teamInfo .content .info .trophies {
     margin: 1rem 0;
   }
-  .playerInfo img, .teamInfo img {
+  .playerInfo img,
+.teamInfo img {
     width: 84px;
   }
 }
 @media (min-width: 1440px) {
-  .playerInfo .content .info .trophies .trophy, .teamInfo .content .info .trophies .trophy {
+  .playerInfo .content .info .trophies .trophy,
+.teamInfo .content .info .trophies .trophy {
     margin-right: 10px;
   }
-  .playerInfo .content .info .trophies .trophy:last-of-type, .teamInfo .content .info .trophies .trophy:last-of-type {
+  .playerInfo .content .info .trophies .trophy:last-of-type,
+.teamInfo .content .info .trophies .trophy:last-of-type {
     margin-right: 0;
   }
 }
