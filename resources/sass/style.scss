@@ -134,8 +134,8 @@ a {
 }
 
 .squareNum {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   font-weight: 700;
   display: flex;
   justify-content: center;
@@ -160,6 +160,7 @@ a {
     left: 50%;
     transform: translate(-50%, -50%);
     line-height: 100%;
+    font-size: 1.2em;
   }
 }
 

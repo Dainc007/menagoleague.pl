@@ -13,9 +13,9 @@
             <?php endfor; ?>
         </div>
         <div class="player">
-            <img src="/images/placeholder-person.svg" alt="">
+            <img src="<?php echo e(env('PLAYER_URL')); ?>" alt="">
             <div class="info">
-                <p class="name">Robert Lewandowski</p>
+                <p class="name"><?php echo e($player->name); ?></p>
                 <div class="about">
                     <div class="squareNum"><?php echo e(rand(80, 100)); ?></div>
                     <div>
@@ -40,7 +40,7 @@
                         </div>
                     <?php endfor; ?>
                 </div>
-                <p class="name">Robert Lewandowski</p>
+                <p class="name"><?php echo e($player->name); ?></p>
                 <div class="about">
                     <div class="squareNum"><?php echo e(rand(80, 100)); ?></div>
                     <div>
