@@ -13,9 +13,9 @@
             @endfor
         </div>
         <div class="player">
-            <img src="/images/placeholder-person.svg" alt="">
+            <img src="{{env('PLAYER_URL')}}" alt="">
             <div class="info">
-                <p class="name">Robert Lewandowski</p>
+                <p class="name">{{$player->name}}</p>
                 <div class="about">
                     <div class="squareNum">{{ rand(80, 100) }}</div>
                     <div>
@@ -40,7 +40,7 @@
                         </div>
                     @endfor
                 </div>
-                <p class="name">Robert Lewandowski</p>
+                <p class="name">{{$player->name}}</p>
                 <div class="about">
                     <div class="squareNum">{{ rand(80, 100) }}</div>
                     <div>

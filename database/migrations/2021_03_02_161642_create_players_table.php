@@ -12,29 +12,70 @@ class CreatePlayersTable extends Migration
      *
      * @return void
      */
+
+    protected $fillable = [
+        'faceUrl',
+
+        'preferredFoot',
+        'weakFoot',
+        'skillMoves',
+        'attackingWorkRate',
+        'defensiveWorkRate',
+        'paceTotal',
+        'shootingTotal',
+        'passingTotal',
+        'dribblingTotal',
+        'defendingTotal',
+        'physicalityTotal',
+        'crossing',
+        'finishing',
+        'headingAccuracy',
+        'shortPassing',
+        'volleys',
+        'dribbling',
+        'curve',
+        'FKAccuracy',
+        'longPassing',
+        'ballControl',
+        'acceleration',
+        'sprintSpeed',
+        'agility',
+        'reactions',
+        'balance',
+        'shotPower',
+        'jumping',
+        'stamina',
+        'strength',
+        'longShots',
+        'aggression',
+        'interceptions',
+        'positioning',
+        'vision',
+        'penalties',
+        'composure',
+        'marking',
+        'standingTackle',
+        'slidingTackle',
+        'GKDiving',
+        'GKHandling',
+        'GKKicking',
+        'GKPositioning',
+        'GKReflexes'
+    ];
+
     public function up()
     {
         Schema::create('players', function (Blueprint $table) {
             $table->id();
 
             $table->string('name');
-            $table->string('fullName')->nullable();
             $table->unsignedBigInteger('team_id')->nullable();
             $table->unsignedBigInteger('device_id')->nullable();
-            $table->string('nationality');
-            $table->string('positions');
-            $table->string('bestPosition');
-            $table->integer('overall');
-            $table->integer('age');
-            $table->integer('weight');
-            $table->integer('height');
-            $table->string('real_team');
             $table->boolean('transfer_listed');
             $table->boolean('loan_listed');
-            $table->unsignedBigInteger('sofifa_id');
+            $table->unsignedBigInteger('playerDetails_id');
 
-            $table->unique(['fullName', 'real_team', 'overall', 'age', 'device_id']);
-            $table->unique(['fullName', 'sofifa_id', 'device_id']);
+            $table->unique(['playerDetails_id', 'device_id']);
             $table->timestamps();
 
             $table->foreign('device_id')->references('id')->on('devices')->onDelete('CASCADE');
