@@ -194,6 +194,25 @@ if (groupsContainer !== null) {
   });
 }
 
+const squaresNodeList = document.querySelectorAll('.squareNum');
+// convert nodeList to array
+const squares = Array.from(squaresNodeList);
+
+squares.map((square) => {
+  // take text inside of div
+  number = square.childNodes[0].nodeValue;
+
+  if (number >= 0 && number <= 50) {
+    square.style.backgroundColor = '#ff4a42';
+  } else if (number >= 51 && number <= 70) {
+    square.style.backgroundColor = '#e6cf43';
+  } else if (number >= 71 && number <= 80) {
+    square.style.backgroundColor = '#65b925';
+  } else {
+    square.style.backgroundColor = '#29b419';
+  }
+});
+
 /* Finances view */
 
 const financesBtn = document.querySelectorAll('.details-buttons > li[data-number]'),

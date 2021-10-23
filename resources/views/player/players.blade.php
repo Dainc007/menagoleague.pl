@@ -1,8 +1,12 @@
 <div class="players">
     <ul class="nav nav-tabs main-tab" id="myTab" role="tablist" style="display: flex;">
         <li class="nav-item" role="presentation">
-            <a class="nav-link active" id="lastMatches-tab" data-toggle="tab" href="#lastMatches" role="tab"
-                aria-controls="lastMatches" aria-selected="true">Ostatnie mecze</a>
+            <a class="nav-link active" id="details-tab" data-toggle="tab" href="#details" role="tab"
+                aria-controls="details" aria-selected="true">Szczegóły</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="lastMatches-tab" data-toggle="tab" href="#lastMatches" role="tab"
+                aria-controls="lastMatches" aria-selected="false">Ostatnie mecze</a>
         </li>
         <li class="nav-item" role="presentation">
             <a class="nav-link" id="career-tab" data-toggle="tab" href="#career" role="tab" aria-controls="career"
@@ -17,7 +21,11 @@
     </ul>
 
     <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="lastMatches" role="tabpanel" aria-labelledby="lastMatches-tab">
+        <div class="tab-pane fade  show active" id="details" role="tabpanel" aria-labelledby="details-tab">
+            @include('player.inc.details')
+        </div>
+
+        <div class="tab-pane fade" id="lastMatches" role="tabpanel" aria-labelledby="lastMatches-tab">
             @include('player.inc.lastMatches')
         </div>
 

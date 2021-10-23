@@ -1,4 +1,5 @@
-.playerInfo, .teamInfo {
+.playerInfo,
+.teamInfo {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -10,12 +11,12 @@
   .player {
     display: flex;
   }
- 
+
   .team {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    
+
     .cost {
       display: flex;
       flex-direction: column;
@@ -32,7 +33,8 @@
     }
   }
 
-  .content, .r-content {
+  .content,
+  .r-content {
     .info {
       padding: 15px;
       display: flex;
@@ -43,6 +45,17 @@
         font-weight: 600;
         font-size: 1.5em;
         color: $text-dark;
+      }
+
+      .about {
+        display: flex;
+        align-items: center;
+
+        div {
+          &:last-of-type {
+            padding-left: 15px;
+          }
+        }
       }
 
       > div {
@@ -82,7 +95,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: .8em;
+        font-size: 0.8em;
       }
     }
   }
@@ -104,7 +117,8 @@
 }
 
 @media (min-width: 768px) {
-  .playerInfo, .teamInfo {
+  .playerInfo,
+  .teamInfo {
     .info {
       padding: 20px;
 
@@ -117,7 +131,8 @@
       }
     }
 
-    .r-content, .content {
+    .r-content,
+    .content {
       .trophies {
         margin-bottom: 10px;
 
@@ -142,7 +157,8 @@
 }
 
 @media (min-width: 1024px) {
-  .playerInfo, .teamInfo {
+  .playerInfo,
+  .teamInfo {
     flex-direction: row;
 
     .r-content {
@@ -171,7 +187,8 @@
 }
 
 @media (min-width: 1440px) {
-  .playerInfo, .teamInfo {
+  .playerInfo,
+  .teamInfo {
     .content {
       .info {
         .trophies {

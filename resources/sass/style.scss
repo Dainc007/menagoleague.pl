@@ -133,6 +133,36 @@ a {
   }
 }
 
+.squareNum {
+  width: 40px;
+  height: 40px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 5px;
+}
+
+.starNum {
+  width: 40px;
+  height: 40px;
+  position: relative;
+
+  img {
+    width: 40px;
+    height: 40px;
+  }
+
+  p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 100%;
+  }
+}
+
 // Register
 .register-radios {
   label:before {
