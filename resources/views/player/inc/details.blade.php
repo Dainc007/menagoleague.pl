@@ -50,7 +50,7 @@
         </div>
 
         <div class="entity attack">
-            <h2>{{$player->playerDetails->attackTotal}}Attacking</h2>
+            <h2>{{$player->playerDetails->attackTotal}}{{__('player.skills.attacking')}}</h2>
 
             <div><span class="squareNum">{{ $player->playerDetails->crossing }}</span>
                 <p>{{__('player.skills.crossing')}}</p>

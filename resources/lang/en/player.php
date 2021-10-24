@@ -92,7 +92,7 @@ return [
         'sliding'   => 'Sliding Tackle',
         'interceptions' => 'Interceptions',
 
-        'gp'        => 'GOALKEEPING',
+        'gk'        => 'GOALKEEPING',
         'diving'    => 'Diving',
         'handling'  => 'Handling',
         'kicking'   => 'Kicking',

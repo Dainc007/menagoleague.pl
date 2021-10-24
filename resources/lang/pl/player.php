@@ -90,7 +90,7 @@ return [
         'sliding'   => 'Wślizg',
         'interceptions' => 'Przechwyty',
 
-        'gp'        => 'BRAMKARSKIE',
+        'gk'        => 'BRAMKARSKIE',
         'diving'    => 'Parady',
         'handling'  => 'Łapanie',
         'kicking'   => 'Wykopy',
