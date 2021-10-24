@@ -29,7 +29,7 @@ class Player extends Model
 
     public function playerDetails()
     {
-        return $this->belongsTo(PlayerDetails::class);
+        return $this->belongsTo(PlayerDetails::class, 'playerDetails_id', 'id');
     }
 
     public function team()

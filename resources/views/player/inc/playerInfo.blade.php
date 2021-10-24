@@ -19,8 +19,10 @@
                 <div class="about">
                     <div class="squareNum">{{ rand(80, 100) }}</div>
                     <div>
-                        <p>Napastnik (Bayern Monachium)</p>
-                        <p>Wiek: 32 (12.12.1234) <span>{{ rand(180, 200) }}cm {{ rand(80, 100) }}kg</span></p>
+                        <p>{{__('player.positions.' .  $player->playerDetails->bestPosition)}} ({{$player->playerDetails->club}})</p>
+                        <p>{{__('player.age')}}: {{$player->playerDetails->age}} {{__('player.years')}} <span>
+                            {{__('player.height')}}: {{$player->playerDetails->height}}cm
+                            {{__('player.weight')}}: {{$player->playerDetails->weight}}kg</span></p>
                     </div>
                 </div>
             </div>
@@ -42,10 +44,12 @@
                 </div>
                 <p class="name">{{$player->name}}</p>
                 <div class="about">
-                    <div class="squareNum">{{ rand(80, 100) }}</div>
+                    <div class="squareNum">{{ $player->playerDetails->overall }}</div>
                     <div>
-                        <p>Napastnik (Bayern Monachium)</p>
-                        <p>Wiek: 32 (12.12.1234) <span>{{ rand(180, 200) }}cm {{ rand(80, 100) }}kg</span></p>
+                        <p>{{__('player.positions.' .  $player->playerDetails->bestPosition)}} ({{$player->playerDetails->club}})</p>
+                        <p>{{__('player.age')}}: {{$player->playerDetails->age}} {{__('player.years')}} <span>
+                            {{__('player.height')}}: {{$player->playerDetails->height}}cm
+                            {{__('player.weight')}}: {{$player->playerDetails->weight}}kg</span></p>
                     </div>
                 </div>
             </div>

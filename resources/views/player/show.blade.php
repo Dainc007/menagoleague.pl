@@ -1,10 +1,9 @@
 @extends('layouts.homeLayout')
 
-@section('title', config('app.name', 'Competitions'))
+@section('title', config('app.name'))
 
 @section('content')
     @include('player.inc.playerInfo')
-
     @include('player.players')
 @endsection
 
