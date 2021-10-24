@@ -13,14 +13,18 @@
             <?php endfor; ?>
         </div>
         <div class="player">
-            <img src="<?php echo e(env('PLAYER_URL')); ?>" alt="">
+            <img src="https://fifastatic.fifaindex.com/FIFA22/players/<?php echo e($player->playerDetails->id); ?>.png" alt="">
             <div class="info">
                 <p class="name"><?php echo e($player->name); ?></p>
                 <div class="about">
                     <div class="squareNum"><?php echo e(rand(80, 100)); ?></div>
                     <div>
-                        <p>Napastnik (Bayern Monachium)</p>
-                        <p>Wiek: 32 (12.12.1234) <span><?php echo e(rand(180, 200)); ?>cm <?php echo e(rand(80, 100)); ?>kg</span></p>
+                        <p><?php echo e(__('player.positions.' . $player->playerDetails->bestPosition)); ?>
+
+                            (<?php echo e($player->playerDetails->club); ?>)</p>
+                        <p><?php echo e(__('player.age')); ?>: <?php echo e($player->playerDetails->age); ?> <?php echo e(__('player.years')); ?> <span>
+                                <?php echo e(__('player.height')); ?>: <?php echo e($player->playerDetails->height); ?>cm
+                                <?php echo e(__('player.weight')); ?>: <?php echo e($player->playerDetails->weight); ?>kg</span></p>
                     </div>
                 </div>
             </div>
@@ -29,7 +33,7 @@
 
     <div class="content">
         <div class="player">
-            <img src="/images/placeholder-person.svg" alt="">
+            <img src="https://fifastatic.fifaindex.com/FIFA22/players/<?php echo e($player->playerDetails->id); ?>.png" alt="">
             <div class="info">
                 <div class="trophies">
                     <?php for($i = 1; $i <= $how; $i++): ?>
@@ -42,10 +46,14 @@
                 </div>
                 <p class="name"><?php echo e($player->name); ?></p>
                 <div class="about">
-                    <div class="squareNum"><?php echo e(rand(80, 100)); ?></div>
+                    <div class="squareNum"><?php echo e($player->playerDetails->overall); ?></div>
                     <div>
-                        <p>Napastnik (Bayern Monachium)</p>
-                        <p>Wiek: 32 (12.12.1234) <span><?php echo e(rand(180, 200)); ?>cm <?php echo e(rand(80, 100)); ?>kg</span></p>
+                        <p><?php echo e(__('player.positions.' . $player->playerDetails->bestPosition)); ?>
+
+                            (<?php echo e($player->playerDetails->club); ?>)</p>
+                        <p><?php echo e(__('player.age')); ?>: <?php echo e($player->playerDetails->age); ?> <?php echo e(__('player.years')); ?> <span>
+                                <?php echo e(__('player.height')); ?>: <?php echo e($player->playerDetails->height); ?>cm
+                                <?php echo e(__('player.weight')); ?>: <?php echo e($player->playerDetails->weight); ?>kg</span></p>
                     </div>
                 </div>
             </div>
