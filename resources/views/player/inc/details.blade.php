@@ -21,12 +21,32 @@
             <span class="foot">
                 <img src="/images/icons/foot.png" alt="">
             </span>
-            <p>{{__('player.foot')}}: <span>{{$player->playerDetails->preferredFoot}}</span></p>
+            <p>{{__('player.foot')}}: <span>{{__("player." . $player->playerDetails->preferredFoot )}}</span></p>
         </div>
     </div>
     <div class="entities">
 
         <div class="entity traits">
+            @if($player->playerDetails->bestPosition == 'GK')
+            <div><span class="squareNum">{{ $player->playerDetails->paceTotal }}</span>
+                <p>{{__('player.skills.diving')}}</p>
+            </div>
+            <div><span class="squareNum">{{ $player->playerDetails->shootingTotal }}</span>
+                <p>{{__('player.skills.handling')}}</p>
+            </div>
+            <div><span class="squareNum">{{ $player->playerDetails->passingTotal }}</span>
+                <p>{{__('player.skills.kicking')}}</p>
+            </div>
+            <div><span class="squareNum">{{ $player->playerDetails->dribblingTotal }}</span>
+                <p>{{__('player.skills.reflex')}}</p>
+            </div>
+            <div><span class="squareNum">{{ $player->playerDetails->defendingTotal }}</span>
+                <p>{{__('player.skills.pace')}}</p>
+            </div>
+            <div><span class="squareNum">{{ $player->playerDetails->physicaliTytotal }}</span>
+                <p>{{__('player.skills.positioning')}}</p>
+            </div>
+            @else
             <h2>{{__('player.skills.summary')}}</h2>
 
             <div><span class="squareNum">{{ $player->playerDetails->paceTotal }}</span>
@@ -47,6 +67,7 @@
             <div><span class="squareNum">{{ $player->playerDetails->physicaliTytotal }}</span>
                 <p>{{__('player.skills.physicality')}}</p>
             </div>
+            @endif
         </div>
 
         <div class="entity attack">

@@ -36,8 +36,8 @@ return [
     'medium' => 'Średnia',
     'high'    => 'Wysoka',
     'foot'  => 'Lepsza noga',
-    'left'  => 'Lewa',
-    'right' => 'Prawa',
+    'Left'  => 'Lewa',
+    'Right' => 'Prawa',
 
 
     'skills'    => [
@@ -74,7 +74,7 @@ return [
         'shotPower' => 'Siła Strzału',
         'jumping'   => 'Skoczność',
         'stamina'   => 'Wytrzymałość',
-        'strenght' => 'Siła',
+        'strength' => 'Siła',
         'longShots' => 'Strzały z Daleka',
 
         'mentality' => 'PSYCHIKA',

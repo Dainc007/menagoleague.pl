@@ -76,7 +76,7 @@ return [
         'shotPower' => 'Shot Power',
         'jumping'   => 'Jumping',
         'stamina'   => 'Stamina',
-        'strenght' => 'Strenght',
+        'strength' => 'Strength',
         'longShots' => 'Long Shots',
 
         'mentality' => 'Mentality',
