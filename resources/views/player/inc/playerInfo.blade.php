@@ -31,7 +31,7 @@
 
     <div class="content">
         <div class="player">
-            <img src="/images/placeholder-person.svg" alt="">
+            <img src="https://fifastatic.fifaindex.com/FIFA22/players/{{$player->playerDetails->id}}.png" alt="">
             <div class="info">
                 <div class="trophies">
                     @for ($i = 1; $i <= $how; $i++)
