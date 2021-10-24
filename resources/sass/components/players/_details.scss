@@ -33,10 +33,12 @@
 
   .stats {
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 15px;
     margin-bottom: 15px;
 
     > div {
+      width: 100%;
       display: flex;
       align-items: center;
       gap: 10px;
@@ -56,10 +58,16 @@
   }
 }
 
-@media (min-width: 577px) {
+@media (min-width: 500px) {
   .details {
     .entities {
       grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats {
+      > div {
+        width: calc(50% - 15px);
+      }
     }
   }
 }
@@ -68,6 +76,16 @@
   .details {
     .entities {
       grid-template-columns: repeat(3, 1fr);
+    }
+
+    .stats {
+      flex-direction: row;
+      justify-content: space-evenly;
+      flex-wrap: nowrap;
+
+      > div {
+        width: unset;
+      }
     }
   }
 }

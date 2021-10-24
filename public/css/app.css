@@ -11718,10 +11718,12 @@ a .btn-discord img {
 }
 .details .stats {
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 15px;
   margin-bottom: 15px;
 }
 .details .stats > div {
+  width: 100%;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -11735,14 +11737,25 @@ a .btn-discord img {
   height: 35px;
 }
 
-@media (min-width: 577px) {
+@media (min-width: 500px) {
   .details .entities {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .details .stats > div {
+    width: calc(50% - 15px);
   }
 }
 @media (min-width: 1024px) {
   .details .entities {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .details .stats {
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+  }
+  .details .stats > div {
+    width: unset;
   }
 }
 @media (min-width: 1440px) {
