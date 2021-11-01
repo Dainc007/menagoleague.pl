@@ -65,6 +65,11 @@ return [
             'header'    => 'Terminarz dostosowany do Ciebie',
             'body'      => 'Menago League co prawda dysponuje statycznymi godzinami spotkań, ale oferuje również możliwość przekładania meczów i dostosowywania ich do własnego trybu dnia. Jeśli dasz radę wygospodarować czas na 2-3 mecze w tygodniu – jesteśmy miejscem dla Ciebie!',
         ],
+
+        '6' => [
+            'header'    => 'Prezentacja Piłkarzy',
+            'body'      => 'Szeroki wybór danych na temat piłkarzy przedstawiony w przyjemny dla oka sposób.',
+        ],
     ],
 
     'rights'    => [

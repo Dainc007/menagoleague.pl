@@ -63,6 +63,10 @@ return [
             'header'    => 'header',
             'body'      => 'body',
         ],
+        '6' => [
+            'header'    => 'header',
+            'body'      => 'body',
+        ],
     ],
 
     'rights'    => [

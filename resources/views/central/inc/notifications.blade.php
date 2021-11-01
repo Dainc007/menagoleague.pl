@@ -52,17 +52,17 @@
             </div>
 
             <div class="notifications-content">
-                @for ($i = 0; $i < 15; $i++)
+                @foreach ($transfers as $transfer)
                     <div class="notifications-content-item">
-                        <img src="{{ url('/images/shields/' . rand(1, 8) . '.png') }}" alt="">
+                        <img src="{{env('TEAM_SRC')}}{{$transfer->from->sofifa_id ?? '111592'}}.png">
                         <div>
-                            <p>{{ rand(1000, 100000) }} <i>M$</i></p>
+                            <p>{{ $transfer->fee }} <i>M$</i></p>
                             <img src="{{ url('/images/arrow.svg') }}" alt="">
-                            <p>J. Guilavogui </p>
+                            <p> {{$transfer->player->name}} </p>
                         </div>
-                        <img src="{{ url('/images/shields/' . rand(1, 8) . '.png') }}" alt="">
+                        <img src="{{env('TEAM_SRC')}}{{$player->to->sofifa_id ?? '111592'}}.png">
                     </div>
-                @endfor
+                @endforeach
             </div>
         </div>
 
@@ -74,17 +74,17 @@
             </div>
 
             <div class="notifications-content">
-                @for ($i = 0; $i < 15; $i++)
+                @foreach ($biggestTransfers as $transfer)
                     <div class="notifications-content-item">
-                        <img src="{{ url('/images/shields/' . rand(1, 8) . '.png') }}" alt="">
+                        <img src="{{env('TEAM_SRC')}}{{$transfer->from->sofifa_id ?? '111592'}}.png">
                         <div>
-                            <p>{{ rand(1000000, 100000000) }} <i>M$</i></p>
+                            <p>{{ $transfer->fee }} <i>M$</i></p>
                             <img src="{{ url('/images/arrow.svg') }}" alt="">
-                            <p>J. Guilavogui </p>
+                            <p> {{$transfer->player->name}} </p>
                         </div>
-                        <img src="{{ url('/images/shields/' . rand(1, 8) . '.png') }}" alt="">
+                        <img src="{{env('TEAM_SRC')}}{{$player->to->sofifa_id ?? '111592'}}.png">
                     </div>
-                @endfor
+                @endforeach
             </div>
         </div>
     </div>

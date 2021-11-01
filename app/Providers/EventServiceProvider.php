@@ -5,15 +5,16 @@ namespace App\Providers;
 use App\Models\Competition;
 use App\Models\JobApplication;
 use App\Models\Player;
+use App\Models\Tutorial;
 use App\Models\User;
 use App\Observers\CompetitionObserver;
 use App\Observers\JobApplicationObserver;
 use App\Observers\PlayerObserver;
+use App\Observers\TutorialObserver;
 use App\Observers\UserObserver;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
-use Illuminate\Support\Facades\Event;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -44,5 +45,6 @@ class EventServiceProvider extends ServiceProvider
         Player::observe(PlayerObserver::class);
         Competition::observe(CompetitionObserver::class);
         JobApplication::observe(JobApplicationObserver::class);
+        Tutorial::observe(TutorialObserver::class);
     }
 }

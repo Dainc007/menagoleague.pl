@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Competition;
 use App\Models\Notification;
+use App\Models\Transfer;
 use Carbon\Carbon;
 use Carbon\CarbonImmutable;
 use Carbon\CarbonPeriod;
@@ -50,7 +51,9 @@ class CentralController extends Controller
         return view('central.central', [
             'user'      => Auth::user(),
             'fixtures'  => $fixtures ?? '',
-            'calendar'  => $calendar
+            'calendar'  => $calendar,
+            'transfers' => Transfer::latest()->take(15)->get(),
+            'biggestTransfers'  => Transfer::orderBy('fee', 'desc')->take(15)->get(),
         ]);
     }
 

@@ -46,6 +46,14 @@
         </p>
       </div>
 
+      <div class="gameplay-overview-item">
+        <img src="{{ asset('storage/gameplay/playerView.png')}}" alt="PlayerView" />
+        <h3>{{__('home.gameplay.6.header')}}</h3>
+        <p>
+        {{__('home.gameplay.6.body')}}
+        </p>
+      </div>
+
 
     </div>
   </div>

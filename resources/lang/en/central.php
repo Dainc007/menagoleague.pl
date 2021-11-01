@@ -22,4 +22,6 @@ return [
 
     'topScorers'    => 'TOP SCORERS',
     'topAssists'    => 'TOP ASSISTS',
+
+
 ];

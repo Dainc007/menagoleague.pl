@@ -74,6 +74,11 @@ return [
             'rejected'  => 'Odrzucona',
         ],
 
+        'response'  => [
+            'accepted'  => 'Zaakceptowano :message',
+            'rejected'  => 'Odrzucono : message',
+        ],
+
         'reason'        => 'Powód: ',
         'here'          => 'TUTAJ',
 
@@ -83,6 +88,6 @@ return [
             'fair-play'     => 'Dowód Uczciwej Gry',
         ],
 
+    ],
 
-    ]
 ];
