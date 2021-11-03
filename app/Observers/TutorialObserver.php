@@ -2,7 +2,7 @@
 
 namespace App\Observers;
 
-use App\Http\Services\NotificationService;
+use App\Http\Services\TutorialService;
 use App\Models\Tutorial;
 
 class TutorialObserver
@@ -10,7 +10,7 @@ class TutorialObserver
     public function updated(Tutorial $tutorial)
     {
         if ($tutorial->wasChanged('status')) {
-            NotificationService::notifyUser($tutorial);
+            TutorialService::notifyUser($tutorial);
         }
     }
 }

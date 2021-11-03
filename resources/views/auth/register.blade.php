@@ -46,7 +46,7 @@
                                     <option selected value="">Wybierz wersję</option>
                                     <option value="old-gen">Old-gen (Xbox One, Ps4) </option>
                                     <option value="next-gen">Next-gen (Xbox Series S|X, Ps5) </option>
-                                    <option value="ultimate">Obie wersje (Ultimate) </option>
+                                    <option value="ultimate">Obie wersje (Edycja Ultimate i Ps5/Xbox Series S|X) </option>
                                 </select>
 
                                 @error('version')
@@ -166,8 +166,8 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <small>{{ __('auth.statute.annoucement') }} <a href="">{{ __('auth.statute') }}</a> i
-                                    <a href="">{{ __('auth.policy') }}</a></small>
+                                <small>{{ __('auth.statute.annoucement') }} <a href="{{route('help.statute')}}">{{ __('auth.statute') }}</a> i
+                                    <a href="{{route('privacy')}}">{{ __('auth.policy') }}</a></small>
                             </div>
                         </div>
 

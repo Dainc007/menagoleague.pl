@@ -4,9 +4,9 @@
       <h2>{{__('home.news.header')}}</h2>
 
       <div class="league-news-devices">
-        <a href="#"><img src="./images/xbox-icon.svg" alt="Xbox" /></a>
-        <a href="#"><img src="./images/playstation-icon.svg" alt="Playstation" /></a>
-        <a href="#"><img src="./images/pc-icon.svg" alt="PC" /></a>
+        <a class="device" href=""><img src="./images/xbox-icon.svg" alt="Xbox" /></a>
+        <a class="device" href=""><img src="./images/playstation-icon.svg" alt="Playstation" /></a>
+        <a class="device" href=""><img src="./images/pc-icon.svg" alt="PC" /></a>
       </div>
     </div>
 
@@ -30,8 +30,9 @@
                 </button>
               </div>
               <div class="modal-body">
-                <img src="{{url('/images/6.png')}}" alt="" />
-                <h5><span>Source: <small>Sky Sports Menago </small></span>  <small>02.08.2021r</small></h5>
+                <img src="{{url('/images/'. rand(1,8) .'.png')}}" alt="" />
+                <h5><span>Source: <small>Sky Sports Menago </small></span>
+                    <small>{{$article->created_at->format('d-m-Y')}}</small></h5>
 
                 <p> {{$article->content}}</p>
               </div>
@@ -52,7 +53,7 @@
       @foreach ($oldArticles as $article) <div class="read-more-item">
         <img class="read-more-item-img" src="{{url('/images/'. rand(1,8) .'.png')}}" alt="" />
         <div class="read-more-item-text">
-          <p>24.07.2021</p>
+          <p>{{$article->created_at->format('d-m-Y')}}</p>
 
           <a class="read-more-item-text-a" href="">{{$article->title}}.</a>
         </div>

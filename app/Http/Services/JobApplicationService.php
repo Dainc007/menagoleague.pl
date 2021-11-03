@@ -19,15 +19,13 @@ class JobApplicationService
             'user_id'  => $application->user_id
         ];
 
-        if($application->status == 'accepted')
-        {
+        if ($application->status == 'accepted') {
             $params += [
-              'message_path' => 'team.apply.response.accepted'
+                'message_path' => 'team.apply.response.accepted'
             ];
         }
 
-        if($application->status == 'rejected')
-        {
+        if ($application->status == 'rejected') {
             $params += [
                 'message_path' => 'team.apply.response.rejected'
             ];

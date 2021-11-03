@@ -33,7 +33,7 @@
                     <a class="dropdown-item" href="https://www.facebook.com/groups/230246767524306" target="_blank">{{ __('nav.mainNav.fbGroup') }}</a>
                     <a class="dropdown-item" href="https://www.facebook.com/MenagoLeague" target="_blank">{{ __('nav.mainNav.fbFanPage') }}</a>
                     <a class="dropdown-item" href="https://discord.gg/w73uDUjse8" target="_blank">{{ __('nav.mainNav.discord') }} </a>
-                    <a class="dropdown-item" href="#admin">{{ __('nav.mainNav.admin') }}</a>
+                    <a class="dropdown-item" href="{{route('contact')}}">{{ __('nav.mainNav.admin') }}</a>
                 </div>
             </div>
             <div class="dropdown">

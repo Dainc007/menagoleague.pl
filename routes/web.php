@@ -45,6 +45,12 @@ Route::prefix('/help')->group(function () {
 
     Route::get('/faq', [App\Http\Controllers\HomeController::class, 'faq'])
         ->name('faq');
+
+    Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact'])
+        ->name('contact');
+
+    Route::get('/privacy', [App\Http\Controllers\HomeController::class, 'privacy'])
+        ->name('privacy');
 });
 
 /* User */

@@ -44,4 +44,14 @@ class HomeController extends Controller
     {
         return view('help.tutorial');
     }
+
+    public function contact()
+    {
+        return view('help.contact');
+    }
+
+    public function privacy()
+    {
+        return view('help.privacy');
+    }
 }
