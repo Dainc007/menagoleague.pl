@@ -1,7 +1,7 @@
 <section class="central-notifications">
     
     <ul class="nav nav-tabs headers-switch" id="myTab" role="tablist">
-       
+        
         <li class="nav-item" role="presentation">
             <a class="nav-link active" id="last-transfers-tab" data-toggle="tab" href="#last-transfers" role="tab"
                 aria-controls="last-transfers" aria-selected="false">
@@ -30,17 +30,24 @@
             </div>
 
             <div class="notifications-content">
-                <?php for($i = 0; $i < 15; $i++): ?>
-                    <div class="notifications-content-item">
-                        <img src="<?php echo e(url('/images/shields/' . rand(1, 8) . '.png')); ?>" alt="">
-                        <div>
-                            <p><?php echo e(rand(1000, 100000)); ?> <i>M$</i></p>
-                            <img src="<?php echo e(url('/images/arrow.svg')); ?>" alt="">
-                            <p>J. Guilavogui </p>
+                <?php if(!$transfers): ?>
+                    <?php $__currentLoopData = $transfers; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $transfer): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <div class="notifications-content-item">
+                            <img src="<?php echo e(env('TEAM_SRC')); ?><?php echo e($transfer->from->sofifa_id ?? '111592'); ?>.png">
+                            <div>
+                                <p><?php echo e($transfer->fee); ?> <i>M$</i></p>
+                                <img src="<?php echo e(url('/images/arrow.svg')); ?>" alt="">
+                                <p> <?php echo e($transfer->player->name); ?> </p>
+                            </div>
+                            <img src="<?php echo e(env('TEAM_SRC')); ?><?php echo e($player->to->sofifa_id ?? '111592'); ?>.png">
                         </div>
-                        <img src="<?php echo e(url('/images/shields/' . rand(1, 8) . '.png')); ?>" alt="">
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                <?php else: ?>
+                    <div class="notifications-content-placeholder">
+                        <p>Chwilowo brak danych do wyświetlenia.</p>
                     </div>
-                <?php endfor; ?>
+                <?php endif; ?>
+
             </div>
         </div>
 
@@ -52,17 +59,23 @@
             </div>
 
             <div class="notifications-content">
-                <?php for($i = 0; $i < 15; $i++): ?>
-                    <div class="notifications-content-item">
-                        <img src="<?php echo e(url('/images/shields/' . rand(1, 8) . '.png')); ?>" alt="">
-                        <div>
-                            <p><?php echo e(rand(1000000, 100000000)); ?> <i>M$</i></p>
-                            <img src="<?php echo e(url('/images/arrow.svg')); ?>" alt="">
-                            <p>J. Guilavogui </p>
+                <?php if(!$biggestTransfers): ?>
+                    <?php $__currentLoopData = $biggestTransfers; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $transfer): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <div class="notifications-content-item">
+                            <img src="<?php echo e(env('TEAM_SRC')); ?><?php echo e($transfer->from->sofifa_id ?? '111592'); ?>.png">
+                            <div>
+                                <p><?php echo e($transfer->fee); ?> <i>M$</i></p>
+                                <img src="<?php echo e(url('/images/arrow.svg')); ?>" alt="">
+                                <p> <?php echo e($transfer->player->name); ?> </p>
+                            </div>
+                            <img src="<?php echo e(env('TEAM_SRC')); ?><?php echo e($player->to->sofifa_id ?? '111592'); ?>.png">
                         </div>
-                        <img src="<?php echo e(url('/images/shields/' . rand(1, 8) . '.png')); ?>" alt="">
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                <?php else: ?>
+                    <div class="notifications-content-placeholder">
+                        <p>Chwilowo brak danych do wyświetlenia.</p>
                     </div>
-                <?php endfor; ?>
+                <?php endif; ?>
             </div>
         </div>
     </div>

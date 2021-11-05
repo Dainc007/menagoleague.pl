@@ -10116,6 +10116,10 @@ body {
   top: -2px;
 }
 
+#app {
+  min-height: 85vh;
+}
+
 h1,
 h2,
 h3,
@@ -13913,6 +13917,17 @@ a .btn-discord img {
   width: 100%;
   overflow-y: auto;
 }
+.notifications-content .notifications-content-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.notifications-content .notifications-content-placeholder p {
+  font-size: 1.3em;
+  font-weight: 600;
+}
 
 .central-notifications-content {
   display: flex;
@@ -14070,8 +14085,20 @@ a .btn-discord img {
 }
 
 .standings-content {
+  height: 100%;
   width: 100%;
   overflow-y: auto;
+}
+.standings-content .standings-content-placeholder {
+  width: 100%;
+  height: calc(100% - 30px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.standings-content .standings-content-placeholder p {
+  font-size: 1.3em;
+  font-weight: 600;
 }
 
 /* Central components:*/
@@ -15736,7 +15763,6 @@ a .btn-discord img {
 }
 .season-teamOTW .formation {
   position: relative;
-  height: calc(100% - 83px);
   width: 100%;
 }
 .season-teamOTW .formation > img {

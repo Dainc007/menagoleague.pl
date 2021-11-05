@@ -36,7 +36,7 @@
                     <a class="dropdown-item" href="https://www.facebook.com/groups/230246767524306" target="_blank"><?php echo e(__('nav.mainNav.fbGroup')); ?></a>
                     <a class="dropdown-item" href="https://www.facebook.com/MenagoLeague" target="_blank"><?php echo e(__('nav.mainNav.fbFanPage')); ?></a>
                     <a class="dropdown-item" href="https://discord.gg/w73uDUjse8" target="_blank"><?php echo e(__('nav.mainNav.discord')); ?> </a>
-                    <a class="dropdown-item" href="#admin"><?php echo e(__('nav.mainNav.admin')); ?></a>
+                    <a class="dropdown-item" href="<?php echo e(route('contact')); ?>"><?php echo e(__('nav.mainNav.admin')); ?></a>
                 </div>
             </div>
             <div class="dropdown">

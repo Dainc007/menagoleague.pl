@@ -2333,3 +2333,386 @@
 #61 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #62 {main}
 "} 
+[2021-11-05 14:32:50] local.ERROR: syntax error, unexpected token ")" (View: C:\Users\Bartek\Desktop\KURS\Menagoleague.pl\resources\views\central\inc\standings.blade.php) {"view":{"view":"C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\esources\\views/central/inc/standings.blade.php","data":{"activeCompetitions":"<pre class=sf-dump id=sf-dump-651843627 data-indent-pad=\"  \"><span class=sf-dump-note>array:9</span> [<samp data-depth=1 class=sf-dump-expanded>
+  \"<span class=sf-dump-key>england</span>\" => <span class=sf-dump-const>null</span>
+  \"<span class=sf-dump-key>germany</span>\" => <span class=sf-dump-const>null</span>
+  \"<span class=sf-dump-key>france</span>\" => <span class=sf-dump-const>null</span>
+  \"<span class=sf-dump-key>italy</span>\" => <span class=sf-dump-const>null</span>
+  \"<span class=sf-dump-key>spain</span>\" => <span class=sf-dump-const>null</span>
+  \"<span class=sf-dump-key>poland</span>\" => <span class=sf-dump-const>null</span>
+  \"<span class=sf-dump-key>portugal</span>\" => <span class=sf-dump-const>null</span>
+  \"<span class=sf-dump-key>nederland</span>\" => <span class=sf-dump-const>null</span>
+  \"<span class=sf-dump-key>europe</span>\" => <span class=sf-dump-const>null</span>
+</samp>]
+</pre><script>Sfdump(\"sf-dump-651843627\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","user":"<pre class=sf-dump id=sf-dump-1495997167 data-indent-pad=\"  \"><span class=sf-dump-note>App\\Models\\User</span> {<a class=sf-dump-ref>#1357</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">fillable</span>: <span class=sf-dump-note>array:9</span> [<samp data-depth=2 class=sf-dump-compact>
+    <span class=sf-dump-index>0</span> => \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+    <span class=sf-dump-index>1</span> => \"<span class=sf-dump-str title=\"4 characters\">name</span>\"
+    <span class=sf-dump-index>2</span> => \"<span class=sf-dump-str title=\"5 characters\">email</span>\"
+    <span class=sf-dump-index>3</span> => \"<span class=sf-dump-str title=\"8 characters\">password</span>\"
+    <span class=sf-dump-index>4</span> => \"<span class=sf-dump-str title=\"9 characters\">device_id</span>\"
+    <span class=sf-dump-index>5</span> => \"<span class=sf-dump-str title=\"7 characters\">discord</span>\"
+    <span class=sf-dump-index>6</span> => \"<span class=sf-dump-str title=\"8 characters\">facebook</span>\"
+    <span class=sf-dump-index>7</span> => \"<span class=sf-dump-str title=\"17 characters\">recommendation_id</span>\"
+    <span class=sf-dump-index>8</span> => \"<span class=sf-dump-str title=\"7 characters\">version</span>\"
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">hidden</span>: <span class=sf-dump-note>array:2</span> [<samp data-depth=2 class=sf-dump-compact>
+    <span class=sf-dump-index>0</span> => \"<span class=sf-dump-str title=\"8 characters\">password</span>\"
+    <span class=sf-dump-index>1</span> => \"<span class=sf-dump-str title=\"14 characters\">remember_token</span>\"
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">casts</span>: <span class=sf-dump-note>array:1</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>email_verified_at</span>\" => \"<span class=sf-dump-str title=\"8 characters\">datetime</span>\"
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">connection</span>: \"<span class=sf-dump-str title=\"5 characters\">mysql</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">table</span>: \"<span class=sf-dump-str title=\"5 characters\">users</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">primaryKey</span>: \"<span class=sf-dump-str title=\"2 characters\">id</span>\"
+  #<span class=sf-dump-protected title=\"Protected property\">keyType</span>: \"<span class=sf-dump-str title=\"3 characters\">int</span>\"
+  +<span class=sf-dump-public title=\"Public property\">incrementing</span>: <span class=sf-dump-const>true</span>
+  #<span class=sf-dump-protected title=\"Protected property\">with</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">withCount</span>: []
+  +<span class=sf-dump-public title=\"Public property\">preventsLazyLoading</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">perPage</span>: <span class=sf-dump-num>15</span>
+  +<span class=sf-dump-public title=\"Public property\">exists</span>: <span class=sf-dump-const>true</span>
+  +<span class=sf-dump-public title=\"Public property\">wasRecentlyCreated</span>: <span class=sf-dump-const>false</span>
+  #<span class=sf-dump-protected title=\"Protected property\">attributes</span>: <span class=sf-dump-note>array:13</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>id</span>\" => <span class=sf-dump-num>101</span>
+    \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"10 characters\">Fronikuniu</span>\"
+    \"<span class=sf-dump-key>email</span>\" => \"<span class=sf-dump-str title=\"23 characters\">Fronikuniugry@gmail.com</span>\"
+    \"<span class=sf-dump-key>email_verified_at</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>password</span>\" => \"<span class=sf-dump-str title=\"60 characters\">$2y$10$0XIz9dXGY5OGKnuDwyEoAOdZ2LnkzEFxPPLf57ErpZh0hE.AIO8Di</span>\"
+    \"<span class=sf-dump-key>discord</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>facebook</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>device_id</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>recommendation_id</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>version</span>\" => \"<span class=sf-dump-str title=\"7 characters\">old-gen</span>\"
+    \"<span class=sf-dump-key>remember_token</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>created_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2021-10-24 19:09:28</span>\"
+    \"<span class=sf-dump-key>updated_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2021-10-24 19:09:28</span>\"
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">original</span>: <span class=sf-dump-note>array:13</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>id</span>\" => <span class=sf-dump-num>101</span>
+    \"<span class=sf-dump-key>name</span>\" => \"<span class=sf-dump-str title=\"10 characters\">Fronikuniu</span>\"
+    \"<span class=sf-dump-key>email</span>\" => \"<span class=sf-dump-str title=\"23 characters\">Fronikuniugry@gmail.com</span>\"
+    \"<span class=sf-dump-key>email_verified_at</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>password</span>\" => \"<span class=sf-dump-str title=\"60 characters\">$2y$10$0XIz9dXGY5OGKnuDwyEoAOdZ2LnkzEFxPPLf57ErpZh0hE.AIO8Di</span>\"
+    \"<span class=sf-dump-key>discord</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>facebook</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>device_id</span>\" => <span class=sf-dump-num>1</span>
+    \"<span class=sf-dump-key>recommendation_id</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>version</span>\" => \"<span class=sf-dump-str title=\"7 characters\">old-gen</span>\"
+    \"<span class=sf-dump-key>remember_token</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>created_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2021-10-24 19:09:28</span>\"
+    \"<span class=sf-dump-key>updated_at</span>\" => \"<span class=sf-dump-str title=\"19 characters\">2021-10-24 19:09:28</span>\"
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">changes</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">classCastCache</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dates</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dateFormat</span>: <span class=sf-dump-const>null</span>
+  #<span class=sf-dump-protected title=\"Protected property\">appends</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">dispatchesEvents</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">observables</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">relations</span>: <span class=sf-dump-note>array:4</span> [<samp data-depth=2 class=sf-dump-compact>
+    \"<span class=sf-dump-key>team</span>\" => <span class=sf-dump-const>null</span>
+    \"<span class=sf-dump-key>notifications</span>\" => <span class=sf-dump-note title=\"Illuminate\\Database\\Eloquent\\Collection
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Database\\Eloquent</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>Collection</span> {<a class=sf-dump-ref>#1386</a><samp data-depth=3 class=sf-dump-compact>
+      #<span class=sf-dump-protected title=\"Protected property\">items</span>: <span class=sf-dump-note>array:1</span> [ &hellip;1]
+    </samp>}
+    \"<span class=sf-dump-key>getNewNotifications</span>\" => <span class=sf-dump-note title=\"Illuminate\\Database\\Eloquent\\Collection
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Database\\Eloquent</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>Collection</span> {<a class=sf-dump-ref>#1395</a><samp data-depth=3 class=sf-dump-compact>
+      #<span class=sf-dump-protected title=\"Protected property\">items</span>: <span class=sf-dump-note>array:1</span> [ &hellip;1]
+    </samp>}
+    \"<span class=sf-dump-key>tutorial</span>\" => <span class=sf-dump-const>null</span>
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">touches</span>: []
+  +<span class=sf-dump-public title=\"Public property\">timestamps</span>: <span class=sf-dump-const>true</span>
+  #<span class=sf-dump-protected title=\"Protected property\">visible</span>: []
+  #<span class=sf-dump-protected title=\"Protected property\">guarded</span>: <span class=sf-dump-note>array:1</span> [<samp data-depth=2 class=sf-dump-compact>
+    <span class=sf-dump-index>0</span> => \"<span class=sf-dump-str>*</span>\"
+  </samp>]
+  #<span class=sf-dump-protected title=\"Protected property\">rememberTokenName</span>: \"<span class=sf-dump-str title=\"14 characters\">remember_token</span>\"
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1495997167\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","errors":"<pre class=sf-dump id=sf-dump-1362050149 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Support\\ViewErrorBag</span> {<a class=sf-dump-ref>#1347</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">bags</span>: []
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1362050149\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","fixtures":"<pre class=sf-dump id=sf-dump-1333214332 data-indent-pad=\"  \">\"\"
+</pre><script>Sfdump(\"sf-dump-1333214332\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","calendar":"<pre class=sf-dump id=sf-dump-1662445266 data-indent-pad=\"  \"><span class=sf-dump-note>array:5</span> [<samp data-depth=1 class=sf-dump-expanded>
+  <span class=sf-dump-index>0</span> => <span class=sf-dump-note title=\"Carbon\\Carbon @1635984000
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Carbon</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>Carbon @1635984000</span> {<a class=sf-dump-ref>#1348</a><samp data-depth=2 class=sf-dump-compact>
+    #<span class=sf-dump-protected title=\"Protected property\">endOfTime</span>: <span class=sf-dump-const>false</span>
+    #<span class=sf-dump-protected title=\"Protected property\">startOfTime</span>: <span class=sf-dump-const>false</span>
+    #<span class=sf-dump-protected title=\"Protected property\">constructedObjectId</span>: \"<span class=sf-dump-str title=\"32 characters\">0000000050fd2eee000000004073ab2f</span>\"
+    #<span class=sf-dump-protected title=\"Protected property\">localMonthsOverflow</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localYearsOverflow</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localStrictModeEnabled</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localHumanDiffOptions</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localToStringFormat</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localSerializer</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localMacros</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localGenericMacros</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localFormatFunction</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localTranslator</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">dumpProperties</span>: <span class=sf-dump-note>array:3</span> [<samp data-depth=3 class=sf-dump-compact>
+      <span class=sf-dump-index>0</span> => \"<span class=sf-dump-str title=\"4 characters\">date</span>\"
+      <span class=sf-dump-index>1</span> => \"<span class=sf-dump-str title=\"13 characters\">timezone_type</span>\"
+      <span class=sf-dump-index>2</span> => \"<span class=sf-dump-str title=\"8 characters\">timezone</span>\"
+    </samp>]
+    #<span class=sf-dump-protected title=\"Protected property\">dumpLocale</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">dumpDateProperties</span>: <span class=sf-dump-const>null</span>
+    <span class=sf-dump-meta>date</span>: <span class=sf-dump-const title=\"Thursday, November 4, 2021
+- 1d 14:32:50.540307 from now
+DST Off\">2021-11-04 00:00:00.0 UTC (+00:00)</span>
+  </samp>}
+  <span class=sf-dump-index>1</span> => <span class=sf-dump-note title=\"Carbon\\Carbon @1636070400
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Carbon</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>Carbon @1636070400</span> {<a class=sf-dump-ref>#1354</a><samp data-depth=2 class=sf-dump-compact>
+    #<span class=sf-dump-protected title=\"Protected property\">endOfTime</span>: <span class=sf-dump-const>false</span>
+    #<span class=sf-dump-protected title=\"Protected property\">startOfTime</span>: <span class=sf-dump-const>false</span>
+    #<span class=sf-dump-protected title=\"Protected property\">constructedObjectId</span>: \"<span class=sf-dump-str title=\"32 characters\">0000000050fd2ee0000000004073ab2f</span>\"
+    #<span class=sf-dump-protected title=\"Protected property\">localMonthsOverflow</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localYearsOverflow</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localStrictModeEnabled</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localHumanDiffOptions</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localToStringFormat</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localSerializer</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localMacros</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localGenericMacros</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localFormatFunction</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localTranslator</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">dumpProperties</span>: <span class=sf-dump-note>array:3</span> [<samp data-depth=3 class=sf-dump-compact>
+      <span class=sf-dump-index>0</span> => \"<span class=sf-dump-str title=\"4 characters\">date</span>\"
+      <span class=sf-dump-index>1</span> => \"<span class=sf-dump-str title=\"13 characters\">timezone_type</span>\"
+      <span class=sf-dump-index>2</span> => \"<span class=sf-dump-str title=\"8 characters\">timezone</span>\"
+    </samp>]
+    #<span class=sf-dump-protected title=\"Protected property\">dumpLocale</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">dumpDateProperties</span>: <span class=sf-dump-const>null</span>
+    <span class=sf-dump-meta>date</span>: <span class=sf-dump-const title=\"Friday, November 5, 2021
+- 14:32:50.550506 from now
+DST Off\">2021-11-05 00:00:00.0 UTC (+00:00)</span>
+  </samp>}
+  <span class=sf-dump-index>2</span> => <span class=sf-dump-note title=\"Carbon\\Carbon @1636156800
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Carbon</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>Carbon @1636156800</span> {<a class=sf-dump-ref>#1356</a><samp data-depth=2 class=sf-dump-compact>
+    #<span class=sf-dump-protected title=\"Protected property\">endOfTime</span>: <span class=sf-dump-const>false</span>
+    #<span class=sf-dump-protected title=\"Protected property\">startOfTime</span>: <span class=sf-dump-const>false</span>
+    #<span class=sf-dump-protected title=\"Protected property\">constructedObjectId</span>: \"<span class=sf-dump-str title=\"32 characters\">0000000050fd2ee6000000004073ab2f</span>\"
+    #<span class=sf-dump-protected title=\"Protected property\">localMonthsOverflow</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localYearsOverflow</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localStrictModeEnabled</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localHumanDiffOptions</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localToStringFormat</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localSerializer</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localMacros</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localGenericMacros</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localFormatFunction</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localTranslator</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">dumpProperties</span>: <span class=sf-dump-note>array:3</span> [<samp data-depth=3 class=sf-dump-compact>
+      <span class=sf-dump-index>0</span> => \"<span class=sf-dump-str title=\"4 characters\">date</span>\"
+      <span class=sf-dump-index>1</span> => \"<span class=sf-dump-str title=\"13 characters\">timezone_type</span>\"
+      <span class=sf-dump-index>2</span> => \"<span class=sf-dump-str title=\"8 characters\">timezone</span>\"
+    </samp>]
+    #<span class=sf-dump-protected title=\"Protected property\">dumpLocale</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">dumpDateProperties</span>: <span class=sf-dump-const>null</span>
+    <span class=sf-dump-meta>date</span>: <span class=sf-dump-const title=\"Saturday, November 6, 2021
++ 09:27:09.449449 from now
+DST Off\">2021-11-06 00:00:00.0 UTC (+00:00)</span>
+  </samp>}
+  <span class=sf-dump-index>3</span> => <span class=sf-dump-note title=\"Illuminate\\Support\\Carbon @1636243200
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Support</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>Carbon @1636243200</span> {<a class=sf-dump-ref>#1351</a><samp data-depth=2 class=sf-dump-compact>
+    #<span class=sf-dump-protected title=\"Protected property\">endOfTime</span>: <span class=sf-dump-const>false</span>
+    #<span class=sf-dump-protected title=\"Protected property\">startOfTime</span>: <span class=sf-dump-const>false</span>
+    #<span class=sf-dump-protected title=\"Protected property\">constructedObjectId</span>: \"<span class=sf-dump-str title=\"32 characters\">0000000050fd2eed000000004073ab2f</span>\"
+    #<span class=sf-dump-protected title=\"Protected property\">localMonthsOverflow</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localYearsOverflow</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localStrictModeEnabled</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localHumanDiffOptions</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localToStringFormat</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localSerializer</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localMacros</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localGenericMacros</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localFormatFunction</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localTranslator</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">dumpProperties</span>: <span class=sf-dump-note>array:3</span> [<samp data-depth=3 class=sf-dump-compact>
+      <span class=sf-dump-index>0</span> => \"<span class=sf-dump-str title=\"4 characters\">date</span>\"
+      <span class=sf-dump-index>1</span> => \"<span class=sf-dump-str title=\"13 characters\">timezone_type</span>\"
+      <span class=sf-dump-index>2</span> => \"<span class=sf-dump-str title=\"8 characters\">timezone</span>\"
+    </samp>]
+    #<span class=sf-dump-protected title=\"Protected property\">dumpLocale</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">dumpDateProperties</span>: <span class=sf-dump-const>null</span>
+    <span class=sf-dump-meta>date</span>: <span class=sf-dump-const title=\"Sunday, November 7, 2021
++ 1d 09:27:09.4494 from now
+DST Off\">2021-11-07 00:00:00.0 UTC (+00:00)</span>
+  </samp>}
+  <span class=sf-dump-index>4</span> => <span class=sf-dump-note title=\"Illuminate\\Support\\Carbon @1636329600
+\"><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">Illuminate\\Support</span><span class=\"sf-dump-ellipsis sf-dump-ellipsis-note\">\\</span>Carbon @1636329600</span> {<a class=sf-dump-ref>#1353</a><samp data-depth=2 class=sf-dump-compact>
+    #<span class=sf-dump-protected title=\"Protected property\">endOfTime</span>: <span class=sf-dump-const>false</span>
+    #<span class=sf-dump-protected title=\"Protected property\">startOfTime</span>: <span class=sf-dump-const>false</span>
+    #<span class=sf-dump-protected title=\"Protected property\">constructedObjectId</span>: \"<span class=sf-dump-str title=\"32 characters\">0000000050fd2ee3000000004073ab2f</span>\"
+    #<span class=sf-dump-protected title=\"Protected property\">localMonthsOverflow</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localYearsOverflow</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localStrictModeEnabled</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localHumanDiffOptions</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localToStringFormat</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localSerializer</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localMacros</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localGenericMacros</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localFormatFunction</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">localTranslator</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">dumpProperties</span>: <span class=sf-dump-note>array:3</span> [<samp data-depth=3 class=sf-dump-compact>
+      <span class=sf-dump-index>0</span> => \"<span class=sf-dump-str title=\"4 characters\">date</span>\"
+      <span class=sf-dump-index>1</span> => \"<span class=sf-dump-str title=\"13 characters\">timezone_type</span>\"
+      <span class=sf-dump-index>2</span> => \"<span class=sf-dump-str title=\"8 characters\">timezone</span>\"
+    </samp>]
+    #<span class=sf-dump-protected title=\"Protected property\">dumpLocale</span>: <span class=sf-dump-const>null</span>
+    #<span class=sf-dump-protected title=\"Protected property\">dumpDateProperties</span>: <span class=sf-dump-const>null</span>
+    <span class=sf-dump-meta>date</span>: <span class=sf-dump-const title=\"Monday, November 8, 2021
++ 2d 09:27:09.449369 from now
+DST Off\">2021-11-08 00:00:00.0 UTC (+00:00)</span>
+  </samp>}
+</samp>]
+</pre><script>Sfdump(\"sf-dump-1662445266\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","transfers":"<pre class=sf-dump id=sf-dump-131475737 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Database\\Eloquent\\Collection</span> {<a class=sf-dump-ref>#1362</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">items</span>: []
+</samp>}
+</pre><script>Sfdump(\"sf-dump-131475737\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+","biggestTransfers":"<pre class=sf-dump id=sf-dump-1944572712 data-indent-pad=\"  \"><span class=sf-dump-note>Illuminate\\Database\\Eloquent\\Collection</span> {<a class=sf-dump-ref>#1363</a><samp data-depth=1 class=sf-dump-expanded>
+  #<span class=sf-dump-protected title=\"Protected property\">items</span>: []
+</samp>}
+</pre><script>Sfdump(\"sf-dump-1944572712\", {\"maxDepth\":3,\"maxStringLength\":160})</script>
+"}},"userId":101,"exception":"[object] (Facade\\Ignition\\Exceptions\\ViewException(code: 0): syntax error, unexpected token \")\" (View: C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\esources\\views\\central\\inc\\standings.blade.php) at C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\esources\\views/central/inc/standings.blade.php:110)
+[stacktrace]
+#0 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(108): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#1 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\Users\\\\Bartek...', Array)
+#2 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(61): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\Users\\\\Bartek...', Array)
+#3 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\facade\\ignition\\src\\Views\\Engines\\CompilerEngine.php(37): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\Users\\\\Bartek...', Array)
+#4 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(139): Facade\\Ignition\\Views\\Engines\\CompilerEngine->get('C:\\\\Users\\\\Bartek...', Array)
+#5 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(122): Illuminate\\View\\View->getContents()
+#6 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(91): Illuminate\\View\\View->renderContents()
+#7 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\esources\\views/central/central.blade.php(20): Illuminate\\View\\View->render()
+#8 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(107): require('C:\\\\Users\\\\Bartek...')
+#9 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(108): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#10 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\Users\\\\Bartek...', Array)
+#11 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(61): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\Users\\\\Bartek...', Array)
+#12 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\facade\\ignition\\src\\Views\\Engines\\CompilerEngine.php(37): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\Users\\\\Bartek...', Array)
+#13 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(139): Facade\\Ignition\\Views\\Engines\\CompilerEngine->get('C:\\\\Users\\\\Bartek...', Array)
+#14 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(122): Illuminate\\View\\View->getContents()
+#15 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(91): Illuminate\\View\\View->renderContents()
+#16 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#17 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#18 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(794): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#19 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(763): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#20 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(695): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#21 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#22 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\app\\Http\\Middleware\\CheckUserRole.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): App\\Http\\Middleware\\CheckUserRole->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(44): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#34 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(697): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#41 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(672): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#42 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(636): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#43 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(625): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#44 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(166): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#45 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#46 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#52 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#53 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#54 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#55 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#56 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(38): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#57 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#58 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#59 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#60 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#61 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(141): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#62 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(110): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#63 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#64 {main}
+
+[previous exception] [object] (ParseError(code: 0): syntax error, unexpected token \")\" at C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\storage\\framework\\views\\3edd44691ecf1caff00b89a8daeedce55a25374d.php:110)
+[stacktrace]
+#0 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(108): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#1 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\Users\\\\Bartek...', Array)
+#2 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(61): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\Users\\\\Bartek...', Array)
+#3 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\facade\\ignition\\src\\Views\\Engines\\CompilerEngine.php(37): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\Users\\\\Bartek...', Array)
+#4 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(139): Facade\\Ignition\\Views\\Engines\\CompilerEngine->get('C:\\\\Users\\\\Bartek...', Array)
+#5 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(122): Illuminate\\View\\View->getContents()
+#6 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(91): Illuminate\\View\\View->renderContents()
+#7 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\storage\\framework\\views\\30f97b012b1388ec4c820e04442c86d90dcd3a63.php(20): Illuminate\\View\\View->render()
+#8 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(107): require('C:\\\\Users\\\\Bartek...')
+#9 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(108): Illuminate\\Filesystem\\Filesystem::Illuminate\\Filesystem\\{closure}()
+#10 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\PhpEngine.php(58): Illuminate\\Filesystem\\Filesystem->getRequire('C:\\\\Users\\\\Bartek...', Array)
+#11 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Engines\\CompilerEngine.php(61): Illuminate\\View\\Engines\\PhpEngine->evaluatePath('C:\\\\Users\\\\Bartek...', Array)
+#12 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\facade\\ignition\\src\\Views\\Engines\\CompilerEngine.php(37): Illuminate\\View\\Engines\\CompilerEngine->get('C:\\\\Users\\\\Bartek...', Array)
+#13 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(139): Facade\\Ignition\\Views\\Engines\\CompilerEngine->get('C:\\\\Users\\\\Bartek...', Array)
+#14 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(122): Illuminate\\View\\View->getContents()
+#15 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\View\\View.php(91): Illuminate\\View\\View->renderContents()
+#16 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(69): Illuminate\\View\\View->render()
+#17 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Response.php(35): Illuminate\\Http\\Response->setContent(Object(Illuminate\\View\\View))
+#18 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(794): Illuminate\\Http\\Response->__construct(Object(Illuminate\\View\\View), 200, Array)
+#19 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(763): Illuminate\\Routing\\Router::toResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#20 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(695): Illuminate\\Routing\\Router->prepareResponse(Object(Illuminate\\Http\\Request), Object(Illuminate\\View\\View))
+#21 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#22 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\app\\Http\\Middleware\\CheckUserRole.php(19): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): App\\Http\\Middleware\\CheckUserRole->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(44): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php(78): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(121): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php(64): Illuminate\\Session\\Middleware\\StartSession->handleStatefulRequest(Object(Illuminate\\Http\\Request), Object(Illuminate\\Session\\Store), Object(Closure))
+#34 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php(67): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(697): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#41 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(672): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#42 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(636): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#43 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(625): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#44 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(166): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#45 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(128): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#46 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#52 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#53 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#54 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#55 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#56 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php(38): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#57 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fruitcake\\Cors\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#58 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#59 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(167): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#60 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(103): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#61 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(141): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#62 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(110): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#63 C:\\Users\\Bartek\\Desktop\\KURS\\Menagoleague.pl\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#64 {main}
+"} 

@@ -19,19 +19,15 @@
 
     <div class="formation">
         <img src="/images/soccer-glass.jpg" alt="">
-        <div class="player">
-            <div class="player-info">
-                <img src="/images/tshirt.svg" alt="">
-                <p class="name">Arnold Metzger</p>
-            </div>
-        </div>
 
-        <div class="player">
-            <div class="player-info">
-                <img src="/images/tshirt.svg" alt="">
-                <p class="name">Arnold Metzger</p>
+        <?php for($p = 1; $p <= 11; $p++): ?>
+            <div class="player">
+                <div class="player-info">
+                    <img src="/images/tshirt.svg" alt="">
+                    <p class="name">Arnold Metzger</p>
+                </div>
             </div>
-        </div>
+        <?php endfor; ?>
 
     </div>
 </div>

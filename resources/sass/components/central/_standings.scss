@@ -83,6 +83,20 @@
 }
 
 .standings-content {
+  height: 100%;
   width: 100%;
   overflow-y: auto;
+
+  .standings-content-placeholder {
+    width: 100%;
+    height: calc(100% - 30px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      font-size: 1.3em;
+      font-weight: 600;
+    }
+  }
 }

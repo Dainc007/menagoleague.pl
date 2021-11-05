@@ -13,6 +13,19 @@
   height: 100%;
   width: 100%;
   overflow-y: auto;
+
+  .notifications-content-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      font-size: 1.3em;
+      font-weight: 600;
+    }
+  }
 }
 
 .central-notifications-content {

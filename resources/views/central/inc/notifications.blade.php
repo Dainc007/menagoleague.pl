@@ -1,7 +1,7 @@
 <section class="central-notifications">
     {{-- Tab notifications menu --}}
     <ul class="nav nav-tabs headers-switch" id="myTab" role="tablist">
-       {{--  <li class="nav-item" role="presentation">
+        {{-- <li class="nav-item" role="presentation">
             <a class="nav-link" id="notifications-tab" data-toggle="tab" href="#notifications" role="tab"
                 aria-controls="notifications" aria-selected="true">
                 <span class="material-icons"> radio_button_unchecked </span>
@@ -31,7 +31,7 @@
 
             <div class="central-notifications-content">
                 <span class="material-icons">description </span>
-                @if($user->getNumOfNotifications() > 0)
+                @if ($user->getNumOfNotifications() > 0)
                     <h3>
                         <a href="{{ route('office.messages')  }}">
                         {{ __('central.notifications.count', ['number' => $user->getNumOfNotifications()])}}
@@ -52,17 +52,24 @@
             </div>
 
             <div class="notifications-content">
-                @foreach ($transfers as $transfer)
-                    <div class="notifications-content-item">
-                        <img src="{{env('TEAM_SRC')}}{{$transfer->from->sofifa_id ?? '111592'}}.png">
-                        <div>
-                            <p>{{ $transfer->fee }} <i>M$</i></p>
-                            <img src="{{ url('/images/arrow.svg') }}" alt="">
-                            <p> {{$transfer->player->name}} </p>
+                @if (!$transfers)
+                    @foreach ($transfers as $transfer)
+                        <div class="notifications-content-item">
+                            <img src="{{ env('TEAM_SRC') }}{{ $transfer->from->sofifa_id ?? '111592' }}.png">
+                            <div>
+                                <p>{{ $transfer->fee }} <i>M$</i></p>
+                                <img src="{{ url('/images/arrow.svg') }}" alt="">
+                                <p> {{ $transfer->player->name }} </p>
+                            </div>
+                            <img src="{{ env('TEAM_SRC') }}{{ $player->to->sofifa_id ?? '111592' }}.png">
                         </div>
-                        <img src="{{env('TEAM_SRC')}}{{$player->to->sofifa_id ?? '111592'}}.png">
+                    @endforeach
+                @else
+                    <div class="notifications-content-placeholder">
+                        <p>Chwilowo brak danych do wyświetlenia.</p>
                     </div>
-                @endforeach
+                @endif
+
             </div>
         </div>
 
@@ -74,17 +81,23 @@
             </div>
 
             <div class="notifications-content">
-                @foreach ($biggestTransfers as $transfer)
-                    <div class="notifications-content-item">
-                        <img src="{{env('TEAM_SRC')}}{{$transfer->from->sofifa_id ?? '111592'}}.png">
-                        <div>
-                            <p>{{ $transfer->fee }} <i>M$</i></p>
-                            <img src="{{ url('/images/arrow.svg') }}" alt="">
-                            <p> {{$transfer->player->name}} </p>
+                @if (!$biggestTransfers)
+                    @foreach ($biggestTransfers as $transfer)
+                        <div class="notifications-content-item">
+                            <img src="{{ env('TEAM_SRC') }}{{ $transfer->from->sofifa_id ?? '111592' }}.png">
+                            <div>
+                                <p>{{ $transfer->fee }} <i>M$</i></p>
+                                <img src="{{ url('/images/arrow.svg') }}" alt="">
+                                <p> {{ $transfer->player->name }} </p>
+                            </div>
+                            <img src="{{ env('TEAM_SRC') }}{{ $player->to->sofifa_id ?? '111592' }}.png">
                         </div>
-                        <img src="{{env('TEAM_SRC')}}{{$player->to->sofifa_id ?? '111592'}}.png">
+                    @endforeach
+                @else
+                    <div class="notifications-content-placeholder">
+                        <p>Chwilowo brak danych do wyświetlenia.</p>
                     </div>
-                @endforeach
+                @endif
             </div>
         </div>
     </div>

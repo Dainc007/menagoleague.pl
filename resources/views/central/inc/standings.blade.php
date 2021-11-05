@@ -29,6 +29,8 @@
             aria-labelledby="standings-tab">
             <h2>{{ __('central.standings.title') }}</h2>
 
+
+
             <div class="central-standings-info-text">
                 <div>
                     <div style="display: none">Icons made by <a href="https://www.flaticon.com/authors/dighital"
@@ -43,16 +45,22 @@
                 </div>
             </div>
             <div class="standings-content">
-                @for ($i = 1; $i <= 10; $i++)
-                    <div class="standings-item">
-                        <p class="standings-item-id">{{ $i }}.</p>
-                        <img class="standings-item-img" src="{{ url('/images/shields/' . rand(1, 8) . '.png') }}"
-                            alt="" />
-                        <p class="standings-item-name">Arsenal</p>
-                        <p class="standings-item-scorePLD">{{ rand(0, 20) }}</p>
-                        <p class="standings-item-scorePTS">{{ rand(0, 20) }}</p>
+                @if (!$biggestTransfers)
+                    @for ($i = 1; $i <= 10; $i++)
+                        <div class="standings-item">
+                            <p class="standings-item-id">{{ $i }}.</p>
+                            <img class="standings-item-img" src="{{ url('/images/shields/' . rand(1, 8) . '.png') }}"
+                                alt="" />
+                            <p class="standings-item-name">Arsenal</p>
+                            <p class="standings-item-scorePLD">{{ rand(0, 20) }}</p>
+                            <p class="standings-item-scorePTS">{{ rand(0, 20) }}</p>
+                        </div>
+                    @endfor
+                @else
+                    <div class="standings-content-placeholder">
+                        <p>Chwilowo brak danych do wyświetlenia.</p>
                     </div>
-                @endfor
+                @endif
             </div>
         </div>
 
@@ -67,15 +75,23 @@
                 </div>
             </div>
             <div class="standings-content">
-                @for ($i = 1; $i <= 10; $i++)
-                    <div class="standings-item">
-                        <p class="standings-item-id">{{ $i }}.</p>
-                        <img class="standings-item-img"
-                            src="https://fifastatic.fifaindex.com/FIFA21/images/players/5/158023.png" alt="" />
-                        <p class="standings-item-name">Leo Messi</p>
-                        <p class="standings-item-scorePLD">{{ rand(0, 20) }}</p>
+
+                @if (!$biggestTransfers)
+                    @for ($i = 1; $i <= 10; $i++)
+                        <div class="standings-item">
+                            <p class="standings-item-id">{{ $i }}.</p>
+                            <img class="standings-item-img"
+                                src="https://fifastatic.fifaindex.com/FIFA21/images/players/5/158023.png" alt="" />
+                            <p class="standings-item-name">Leo Messi</p>
+                            <p class="standings-item-scorePLD">{{ rand(0, 20) }}</p>
+                        </div>
+                    @endfor
+                @else
+                    <div class="standings-content-placeholder">
+                        <p>Chwilowo brak danych do wyświetlenia.</p>
                     </div>
-                @endfor
+                @endif
+
             </div>
         </div>
 
@@ -90,15 +106,23 @@
                 </div>
             </div>
             <div class="standings-content">
-                @for ($i = 1; $i <= 10; $i++)
-                    <div class="standings-item">
-                        <p class="standings-item-id">{{ $i }}.</p>
-                        <img class="standings-item-img"
-                            src="https://fifastatic.fifaindex.com/FIFA21/images/players/5/158023.png" alt="" />
-                        <p class="standings-item-name">Leo Messi</p>
-                        <p class="standings-item-scorePLD">{{ rand(0, 20) }}</p>
+
+                @if (!$biggestTransfers)
+                    @for ($i = 1; $i <= 10; $i++)
+                        <div class="standings-item">
+                            <p class="standings-item-id">{{ $i }}.</p>
+                            <img class="standings-item-img"
+                                src="https://fifastatic.fifaindex.com/FIFA21/images/players/5/158023.png" alt="" />
+                            <p class="standings-item-name">Leo Messi</p>
+                            <p class="standings-item-scorePLD">{{ rand(0, 20) }}</p>
+                        </div>
+                    @endfor
+                @else
+                    <div class="standings-content-placeholder">
+                        <p>Chwilowo brak danych do wyświetlenia.</p>
                     </div>
-                @endfor
+                @endif
+
             </div>
         </div>
     </div>

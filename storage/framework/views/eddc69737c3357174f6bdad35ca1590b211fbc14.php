@@ -51,6 +51,15 @@
         </p>
       </div>
 
+      <div class="gameplay-overview-item">
+        <img src="<?php echo e(asset('storage/gameplay/playerView.png')); ?>" alt="PlayerView" />
+        <h3><?php echo e(__('home.gameplay.6.header')); ?></h3>
+        <p>
+        <?php echo e(__('home.gameplay.6.body')); ?>
+
+        </p>
+      </div>
+
 
     </div>
   </div>

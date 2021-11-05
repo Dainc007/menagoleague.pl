@@ -93,7 +93,7 @@ unset($__errorArgs, $__bag); ?>
                                 </button>
 
                                 <?php if(Route::has('password.request')): ?>
-                                    <a class="btn btn-link" href="<?php echo e(route('password.request')); ?>">
+                                    <a class="btn btn-info btn-link bshadow" href="<?php echo e(route('password.request')); ?>">
                                         <?php echo e(__('auth.forgot')); ?>
 
                                     </a>
