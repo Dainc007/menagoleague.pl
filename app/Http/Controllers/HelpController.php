@@ -13,7 +13,7 @@ class HelpController extends Controller
 
     public function tutorial()
     {
-        return 'tutorial';
+        return view('help.tutorial');
     }
 
     public function statute()
