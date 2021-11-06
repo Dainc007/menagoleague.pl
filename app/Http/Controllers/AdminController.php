@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Services\SquadGeneratorService;
 use App\Models\JobApplication;
+use App\Models\PlayerDetails;
 use App\Models\Role;
 use App\Models\Tutorial;
 use Illuminate\Http\Request;
@@ -88,5 +90,14 @@ class AdminController extends Controller
             Alert::success('Zaakceptowano');
             return back();
         }
+    }
+
+    public function squadGenerator()
+    {
+        $service = (new SquadGeneratorService());
+
+        $squads = $service->generateTeams();
+
+        return view('admin.squadGenerator', ['squads' => $squads]);
     }
 }

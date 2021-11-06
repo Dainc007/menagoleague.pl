@@ -223,6 +223,9 @@ Route::prefix('/admin')->group(function () {
 
     Route::post('/jobApplications/respond/{id}', [App\Http\Controllers\AdminController::class, 'JobApplicationRespond'])
         ->name('admin.jobApplication.respond')->middleware('administrator');
+
+    Route::get('/squadGenerator', [App\Http\Controllers\AdminController::class, 'squadGenerator'])
+        ->name('admin.squadGenerator')->middleware('administrator');
 });
 
 /* Notifications */
