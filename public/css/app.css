@@ -10282,6 +10282,10 @@ a:hover {
   font-size: 1.2em;
 }
 
+.disc {
+  list-style-type: disc;
+}
+
 .register-radios label:before {
   content: "";
   position: absolute;
@@ -10315,8 +10319,7 @@ nav .container {
 nav .container .logo img {
   height: 50px;
 }
-
-ul {
+nav ul {
   list-style-type: none;
 }
 
@@ -13627,8 +13630,7 @@ a .btn-discord img {
     grid-template-areas: "advance advance mailbox" "notifications standings mailbox";
     gap: 1rem;
   }
-  .central-content a,
-.central-content h2,
+  .central-content h2,
 .central-content h3 {
     color: #494949;
   }

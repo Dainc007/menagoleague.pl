@@ -50,8 +50,8 @@ return [
 
     'tutorial'      => [
 
-        'discord'   => ' - discordowym kanale(link)',
-        'facebook'  => ' -grupie na facebooku(link)',
+        'discord'   => 'Discordowym kanale (link)',
+        'facebook'  => 'Grupie na facebooku (link)',
 
         'expired'   => 'Szefie, przykro mi to mówić, 
         ale Twoja licencja wygasła i należałoby ją odnowić.',
@@ -61,7 +61,7 @@ return [
          Proszę. Szczegóły zdobycia licencji znajdziesz',
 
         'partner'    => 'Jeśli nie masz jeszcze sparing-partnera, mozesz znaleźć go na naszym:',
-        'invite'     => 'zaproś',
+        'invite'     => 'Zaproś',
         'inviteSend' => 'Brawo Szefie! Przekazałem Twoje zaproszenie rywalowi.',
         'inviteSend2' => 'Teraz musi je przyjąć, by następnie rozegrać mecz sparingowy zgodnie z wytycznymi
         opisanymi',
@@ -78,8 +78,8 @@ return [
         ],
 
         'response'  => [
-            'accepted'  => 'Zaakceptowano :message',
-            'rejected'  => 'Odrzucono : message',
+            'accepted'  => 'Zaakceptowano: message',
+            'rejected'  => 'Odrzucono: message',
         ],
 
         'reason'        => 'Powód: ',

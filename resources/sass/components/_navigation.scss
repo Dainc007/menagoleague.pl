@@ -3,7 +3,7 @@ nav {
   display: flex;
   align-items: center;
   box-shadow: inset 0px -4px 5px RGB(176, 176, 176, 0.25);
-  
+
   .container {
     display: flex;
     align-items: center;
@@ -14,10 +14,10 @@ nav {
       }
     }
   }
-}
 
-ul {
-  list-style-type: none;
+  ul {
+    list-style-type: none;
+  }
 }
 
 @media (min-width: 1024px) {

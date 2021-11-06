@@ -33,9 +33,12 @@
                             <div class="team-mailbox-date">{{ now() }}</div>
 
                             <div class="message" id="message{{ $message->id }}">
-                                <b>{{ __($message->title, ['name' => $user->name]) }}</b><br>
-                                {{ __($message->content, ['name' => $user->name]) }}
-                                <button class="confirm btn" data-id="{{ $message->id }}">Oznacz jako
+                                <p class="text-center mb-3"><b>{{ __($message->title, ['name' => $user->name]) }}</b>
+                                </p>
+                                <p class="text-center mb-3">
+                                    {{ __($message->content, ['name' => $user->name]) }}</p>
+                                <button class="confirm btn w-100" style="border: 1px solid #558c47"
+                                    data-id="{{ $message->id }}">Oznacz jako
                                     przeczytane</button>
                             </div>
 

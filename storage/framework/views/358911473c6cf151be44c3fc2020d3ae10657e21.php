@@ -53,7 +53,7 @@ unset($__errorArgs, $__bag); ?>" name="version"
                                     <option selected value="">Wybierz wersję</option>
                                     <option value="old-gen">Old-gen (Xbox One, Ps4) </option>
                                     <option value="next-gen">Next-gen (Xbox Series S|X, Ps5) </option>
-                                    <option value="ultimate">Obie wersje (Ultimate) </option>
+                                    <option value="ultimate">Obie wersje (Edycja Ultimate i Ps5/Xbox Series S|X) </option>
                                 </select>
 
                                 <?php $__errorArgs = ['version'];
@@ -237,8 +237,8 @@ unset($__errorArgs, $__bag); ?>" name="facebook"
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <small><?php echo e(__('auth.statute.annoucement')); ?> <a href=""><?php echo e(__('auth.statute')); ?></a> i
-                                    <a href=""><?php echo e(__('auth.policy')); ?></a></small>
+                                <small><?php echo e(__('auth.statute.annoucement')); ?> <a href="<?php echo e(route('help.statute')); ?>"><?php echo e(__('auth.statute')); ?></a> i
+                                    <a href="<?php echo e(route('privacy')); ?>"><?php echo e(__('auth.policy')); ?></a></small>
                             </div>
                         </div>
 

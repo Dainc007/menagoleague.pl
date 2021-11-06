@@ -33,10 +33,12 @@
                             <div class="team-mailbox-date"><?php echo e(now()); ?></div>
 
                             <div class="message" id="message<?php echo e($message->id); ?>">
-                                <b><?php echo e(__($message->title, ['name' => $user->name])); ?></b><br>
-                                <?php echo e(__($message->content, ['name' => $user->name])); ?>
-
-                                <button class="confirm btn" data-id="<?php echo e($message->id); ?>">Oznacz jako
+                                <p class="text-center mb-3"><b><?php echo e(__($message->title, ['name' => $user->name])); ?></b>
+                                </p>
+                                <p class="text-center mb-3">
+                                    <?php echo e(__($message->content, ['name' => $user->name])); ?></p>
+                                <button class="confirm btn w-100" style="border: 1px solid #558c47"
+                                    data-id="<?php echo e($message->id); ?>">Oznacz jako
                                     przeczytane</button>
                             </div>
 

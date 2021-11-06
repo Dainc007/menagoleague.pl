@@ -21,30 +21,28 @@
 
     </div>
 
-    
-
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('javascript'); ?>
     $(function() {
 
-      $('.confirm').click(function() {
+    $('.confirm').click(function() {
 
-        var notificationId = $(this).data("id");
+    var notificationId = $(this).data("id");
 
-        $.ajax({
-        method: "POST",
-        url: "<?php echo e(route('notifications.markAsSeen')); ?>",
-        data: {
-        id: notificationId,
-        }
-        })
+    $.ajax({
+    method: "POST",
+    url: "<?php echo e(route('notifications.markAsSeen')); ?>",
+    data: {
+    id: notificationId,
+    }
+    })
 
-        .done(function( msg ) {
-        $('#message' + notificationId).css('display', 'none');
-        });
+    .done(function( msg ) {
+    $('#message' + notificationId).css('display', 'none');
+    });
 
-      });
+    });
 
     });
 <?php $__env->stopSection(); ?>

@@ -15,15 +15,15 @@
 
     @if ($user->tutorial->full_time == null)
 
-        <h6 class="text-center mb-2">{{ __('central.tutorial.inviteSend') }}</h6>
+        <h6 class="text-center mb-3">{{ __('central.tutorial.inviteSend') }}</h6>
 
-        <p class="text-left mb-2">
+        <p class="text-center mb-3">
             {{ __('central.tutorial.inviteSend2') }}
             <a href="{{ route('help.tutorial') }}">{{ __('central.tutorial.here') }}</a>.
         </p>
 
 
-        <h6 class="text-center mb-2">{{ __('central.tutorial.application') }}
+        <h6 class="text-center mb-4">{{ __('central.tutorial.application') }}
             {{ __('central.tutorial.application2') }} </h6>
 
 
@@ -32,23 +32,24 @@
             <div class="form-group">
                 <label for="raport">{{ __('central.tutorial.raport.afterGame') }}</label>
                 <input required class="form-control" type="text" name="fullTime"
-                    placeholder="np: https://gamerdvr.com/gamer/TwojGamerTag/video/134342287">
+                    placeholder="np: https://gamerdvr.com/gamer/TwojGamerTag/video/134342287" />
             </div>
 
             <div class="form-group">
                 <label for="raport">{{ __('central.tutorial.raport.after1stHalf') }}</label>
                 <input required class="form-control" type="text" name="halfTime"
-                    placeholder="np: https://gamerdvr.com/gamer/TwojGamerTag/video/134342287">
+                    placeholder="np: https://gamerdvr.com/gamer/TwojGamerTag/video/134342287" />
             </div>
 
             <div class="form-group">
                 <label for="raport">{{ __('central.tutorial.raport.fair-play') }}</label>
                 <input required class="form-control" type="text" name="fairPlay"
-                    placeholder="np: https://gamerdvr.com/gamer/TwojGamerTag/video/134342287">
+                    placeholder="np: https://gamerdvr.com/gamer/TwojGamerTag/video/134342287" />
             </div>
 
             <div class="form-group">
-                <input type="submit" class="btn btn-sm btn-success w-100 text-uppercase bshadow" value="Złóz aplikacje">
+                <input type="submit" class="btn btn-sm btn-success w-100 text-uppercase bshadow"
+                    value="Złóz aplikacje" />
             </div>
             @csrf
             @method('POST')
@@ -69,18 +70,25 @@
 
 @else
 
-    <h6 class="text-center mb-2">{{ __('central.tutorial.expired') }}</h6>
-    <p class="text-left mb-2">
+    <h6 class="text-center mb-3">{{ __('central.tutorial.expired') }}</h6>
+    <p class="text-center mb-4">
         {{ __('central.tutorial.sparing') }}
         <a href="{{ route('help.tutorial') }}">{{ __('central.tutorial.here') }}.</a>
     </p>
 
-    <p class="text-left">
-        <b> {{ __('central.tutorial.partner') }}<p> <a class="text-success" target="_blank"
-                    href="{{ env('DISCORD') }}">{{ __('central.tutorial.discord') }}</a> </p>
-            <p> <a class="text-primary" target="_blank"
-                    href="{{ env('FB') }}">{{ __('central.tutorial.facebook') }}</a></p>
-    </p></b>
+    <p class="text-center">
+        <b> {{ __('central.tutorial.partner') }} </b>
+    </p>
+    <ul class="text-center  list-unstyled">
+        <li>
+            <a target="_blank" href="{{ env('DISCORD') }}">{{ __('central.tutorial.discord') }}</a>
+        </li>
+        <li>
+            <a target="_blank" href="{{ env('FB') }}">{{ __('central.tutorial.facebook') }}</a>
+        </li>
+    </ul>
+
+
     <form method="POST" action="{{ route('tutorial.invite') }}">
         <div class="form-group">
             <select name="rival" id="rival" class="form-control w-100">

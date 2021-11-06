@@ -15,16 +15,16 @@
 
     <?php if($user->tutorial->full_time == null): ?>
 
-        <h6 class="text-center mb-2"><?php echo e(__('central.tutorial.inviteSend')); ?></h6>
+        <h6 class="text-center mb-3"><?php echo e(__('central.tutorial.inviteSend')); ?></h6>
 
-        <p class="text-left mb-2">
+        <p class="text-center mb-3">
             <?php echo e(__('central.tutorial.inviteSend2')); ?>
 
             <a href="<?php echo e(route('help.tutorial')); ?>"><?php echo e(__('central.tutorial.here')); ?></a>.
         </p>
 
 
-        <h6 class="text-center mb-2"><?php echo e(__('central.tutorial.application')); ?>
+        <h6 class="text-center mb-4"><?php echo e(__('central.tutorial.application')); ?>
 
             <?php echo e(__('central.tutorial.application2')); ?> </h6>
 
@@ -34,23 +34,24 @@
             <div class="form-group">
                 <label for="raport"><?php echo e(__('central.tutorial.raport.afterGame')); ?></label>
                 <input required class="form-control" type="text" name="fullTime"
-                    placeholder="np: https://gamerdvr.com/gamer/TwojGamerTag/video/134342287">
+                    placeholder="np: https://gamerdvr.com/gamer/TwojGamerTag/video/134342287" />
             </div>
 
             <div class="form-group">
                 <label for="raport"><?php echo e(__('central.tutorial.raport.after1stHalf')); ?></label>
                 <input required class="form-control" type="text" name="halfTime"
-                    placeholder="np: https://gamerdvr.com/gamer/TwojGamerTag/video/134342287">
+                    placeholder="np: https://gamerdvr.com/gamer/TwojGamerTag/video/134342287" />
             </div>
 
             <div class="form-group">
                 <label for="raport"><?php echo e(__('central.tutorial.raport.fair-play')); ?></label>
                 <input required class="form-control" type="text" name="fairPlay"
-                    placeholder="np: https://gamerdvr.com/gamer/TwojGamerTag/video/134342287">
+                    placeholder="np: https://gamerdvr.com/gamer/TwojGamerTag/video/134342287" />
             </div>
 
             <div class="form-group">
-                <input type="submit" class="btn btn-sm btn-success w-100 text-uppercase bshadow" value="Złóz aplikacje">
+                <input type="submit" class="btn btn-sm btn-success w-100 text-uppercase bshadow"
+                    value="Złóz aplikacje" />
             </div>
             <?php echo csrf_field(); ?>
             <?php echo method_field('POST'); ?>
@@ -73,19 +74,26 @@
 
 <?php else: ?>
 
-    <h6 class="text-center mb-2"><?php echo e(__('central.tutorial.expired')); ?></h6>
-    <p class="text-left mb-2">
+    <h6 class="text-center mb-3"><?php echo e(__('central.tutorial.expired')); ?></h6>
+    <p class="text-center mb-4">
         <?php echo e(__('central.tutorial.sparing')); ?>
 
         <a href="<?php echo e(route('help.tutorial')); ?>"><?php echo e(__('central.tutorial.here')); ?>.</a>
     </p>
 
-    <p class="text-left">
-        <b> <?php echo e(__('central.tutorial.partner')); ?><p> <a class="text-success" target="_blank"
-                    href="<?php echo e(env('DISCORD')); ?>"><?php echo e(__('central.tutorial.discord')); ?></a> </p>
-            <p> <a class="text-primary" target="_blank"
-                    href="<?php echo e(env('FB')); ?>"><?php echo e(__('central.tutorial.facebook')); ?></a></p>
-    </p></b>
+    <p class="text-center">
+        <b> <?php echo e(__('central.tutorial.partner')); ?> </b>
+    </p>
+    <ul class="text-center  list-unstyled">
+        <li>
+            <a target="_blank" href="<?php echo e(env('DISCORD')); ?>"><?php echo e(__('central.tutorial.discord')); ?></a>
+        </li>
+        <li>
+            <a target="_blank" href="<?php echo e(env('FB')); ?>"><?php echo e(__('central.tutorial.facebook')); ?></a>
+        </li>
+    </ul>
+
+
     <form method="POST" action="<?php echo e(route('tutorial.invite')); ?>">
         <div class="form-group">
             <select name="rival" id="rival" class="form-control w-100">
