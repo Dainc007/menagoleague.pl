@@ -1,0 +1,72 @@
+.tutorial,
+.tutorial-header {
+  background-color: $sectionColor;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tutorial {
+  display: flex;
+  flex-direction: column;
+
+  &__text {
+    padding: 1rem;
+    width: 100%;
+
+    p {
+      text-align: justify;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    img {
+      margin-bottom: 0.5rem;
+      padding-left: 1.5rem;
+    }
+
+    ul {
+      list-style-type: disc;
+    }
+
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    display: grid;
+    place-items: center;
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .tutorial {
+    flex-direction: row;
+
+    &__img {
+      width: 50%;
+    }
+
+    &__text {
+      width: 50%;
+    }
+
+    &.two {
+      .tutorial__img {
+        width: 40%;
+      }
+
+      .tutorial__text {
+        width: 60%;
+      }
+    }
+  }
+}

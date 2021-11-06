@@ -13478,6 +13478,63 @@ a .btn-discord img {
     padding-left: 40px;
   }
 }
+.tutorial,
+.tutorial-header {
+  background-color: rgba(255, 253, 253, 0.7);
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tutorial {
+  display: flex;
+  flex-direction: column;
+}
+.tutorial__text {
+  padding: 1rem;
+  width: 100%;
+}
+.tutorial__text p {
+  text-align: justify;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.tutorial__text img {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+}
+.tutorial__text ul {
+  list-style-type: disc;
+}
+.tutorial__text a:hover {
+  text-decoration: underline;
+}
+.tutorial__img {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.tutorial__img img {
+  max-width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .tutorial {
+    flex-direction: row;
+  }
+  .tutorial__img {
+    width: 50%;
+  }
+  .tutorial__text {
+    width: 50%;
+  }
+  .tutorial.two .tutorial__img {
+    width: 40%;
+  }
+  .tutorial.two .tutorial__text {
+    width: 60%;
+  }
+}
 /* Help components */
 .leagueWinnersHistory {
   margin-top: 2rem;
@@ -14099,6 +14156,8 @@ a .btn-discord img {
 .standings-content .standings-content-placeholder p {
   font-size: 1.3em;
   font-weight: 600;
+  width: 65%;
+  text-align: center;
 }
 
 /* Central components:*/

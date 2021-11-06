@@ -1,6 +1,6 @@
-@extends('layouts.homeLayout')
 
-@section('content')
+
+<?php $__env->startSection('content'); ?>
     <div class="container">
         <div class="tutorial-header">
             <h1 class="col text-center"> Jak zdobyć licencję trenerską? </h1>
@@ -23,13 +23,13 @@
                 </p>
             </div>
             <div class="tutorial__img">
-                <img src="{{ asset('storage/tutorial/tutorial1.png') }}">
+                <img src="<?php echo e(asset('storage/tutorial/tutorial1.png')); ?>">
             </div>
         </div>
 
         <div class="tutorial two">
             <div class="tutorial__img">
-                <img src="{{ asset('storage/tutorial/tutorial2.png') }}">
+                <img src="<?php echo e(asset('storage/tutorial/tutorial2.png')); ?>">
             </div>
             <div class="tutorial__text">
                 <p>
@@ -42,7 +42,7 @@
                     Wazne, by wysyłać zaproszenie zachowując ponizsze ustawienia:
                 </p>
 
-                <img src="{{ asset('storage/tutorial/settings.png') }}">
+                <img src="<?php echo e(asset('storage/tutorial/settings.png')); ?>">
 
                 <p>
                     Jeśli w połączeniu z przeciwnikiem wystąpią jakieś trudności, upewnijcie się, że wasz tryb translacji
@@ -77,5 +77,7 @@
         </div>
     </div>
 
-    {{-- <p> budowanie druzyny w grze fifa <a href="https://www.youtube.com/watch?v=skcLsskPkA8&t=11s">Tutaj</a></p> --}}
-@endsection
+    
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.homeLayout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\Bartek\Desktop\KURS\Menagoleague.pl\resources\views/help/tutorial.blade.php ENDPATH**/ ?>
