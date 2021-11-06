@@ -50,6 +50,9 @@ return [
 
     'tutorial'      => [
 
+        'discord'   => ' - discordowym kanale(link)',
+        'facebook'  => ' -grupie na facebooku(link)',
+
         'expired'   => 'Szefie, przykro mi to mówić, 
         ale Twoja licencja wygasła i należałoby ją odnowić.',
         'sparing'   => 'W tym celu powinniśmy zorganizować sparing. 
@@ -57,10 +60,10 @@ return [
         jak to się robi! Nie przejmuj się papierologią, od czego masz mnie.
          Proszę. Szczegóły zdobycia licencji znajdziesz',
 
-        'partner'    => 'Jeśli nie masz jeszcze sparing-partnera, znajdziesz go',
+        'partner'    => 'Jeśli nie masz jeszcze sparing-partnera, mozesz znaleźć go na naszym:',
         'invite'     => 'zaproś',
         'inviteSend' => 'Brawo Szefie! Przekazałem Twoje zaproszenie rywalowi.',
-        'iviteSend2' => 'Teraz musi je przyjąć, by następnie rozegrać mecz sparingowy zgodnie z wytycznymi
+        'inviteSend2' => 'Teraz musi je przyjąć, by następnie rozegrać mecz sparingowy zgodnie z wytycznymi
         opisanymi',
 
         'application'   => 'Przygotowałem dla Ciebie wniosek o przyznanie licencji trenerskiej.',
