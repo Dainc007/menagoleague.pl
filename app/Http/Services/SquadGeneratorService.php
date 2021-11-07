@@ -8,6 +8,7 @@ class SquadGeneratorService
 {
     private const MIN_OVR = 76;
     private const MAX_OVR = 82;
+    private const NUM_OF_TRIALS = 1000;
     private const POSITIONS = [
         'GK', 'LB', 'CB', 'CB', 'RB', 'LM', 'CM', 'CM', 'RM', 'ST', 'ST'
     ];
@@ -22,19 +23,26 @@ class SquadGeneratorService
 
     public function getFirst11()
     {
+        $x = ($this->players->count());
         foreach (self::POSITIONS as $position) {
-            $this->squad->push(($this->findPlayer(($this->checkPosition($position)))));
-            /* $this->checkSquadOverall(); */
+            $positions  = $this->checkPosition($position);
+            $player     = $this->findPlayer($positions);
+
+            $this->players = $this->players->reject(fn ($remove) => $remove->is($player));
+
+            $this->squad->push($player);
         }
 
-        return $this->squad;
+        $y = ($this->players->count());
 
+        return $this->squad;
     }
 
-    public function generateTeams()
+    public function generateTeams(int $numOfTeams)
     {
+
         $this->squads = collect([]);
-        foreach (self::POSITIONS as $position) {
+        for ($i = 1; $i < $numOfTeams; $i++) {
             $this->squad = $this->getFirst11();
             $this->squads->push($this->squad);
             $this->squad = collect();
@@ -45,12 +53,23 @@ class SquadGeneratorService
 
     private function findPlayer($positions)
     {
-        return $this->players->whereIn('bestPosition', [...$positions])->random();
-    }
+        $player      =  $this->players->whereIn('bestPosition', [...$positions])->random();
+        $squadOvrAvg =  $this->squad->avg('overall');
+        $paceOvr     =  $this->squad->avg('paceTotal');
 
-    private function checkSquadOverall()
-    {
-        //
+        for ($i = 1; $i < self::NUM_OF_TRIALS; $i++) {
+            if ($squadOvrAvg > self::MIN_OVR / self::MAX_OVR) {
+                $player =  $this->players->whereIn('bestPosition', [...$positions])->random();
+            }
+
+            if ($paceOvr > $this->avgPace) {
+                if ($player->paceTotal > $this->avgPace) {
+                    return $player =  $this->players->whereIn('bestPosition', [...$positions])->random();
+                }
+            }
+            break;
+        }
+        return $player;
     }
 
     private function checkPosition($position)

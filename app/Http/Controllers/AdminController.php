@@ -96,7 +96,7 @@ class AdminController extends Controller
     {
         $service = (new SquadGeneratorService());
 
-        $squads = $service->generateTeams();
+        $squads = $service->generateTeams(61);
 
         return view('admin.squadGenerator', ['squads' => $squads]);
     }
