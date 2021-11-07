@@ -59,12 +59,15 @@ class SquadGeneratorService
 
         for ($i = 1; $i < self::NUM_OF_TRIALS; $i++) {
             if ($squadOvrAvg > self::MIN_OVR / self::MAX_OVR) {
-                $player =  $this->players->whereIn('bestPosition', [...$positions])->random();
+                if ($player->overall > self::MIN_OVR / self::MAX_OVR) {
+                    continue;
+                }
             }
 
             if ($paceOvr > $this->avgPace) {
                 if ($player->paceTotal > $this->avgPace) {
-                    return $player =  $this->players->whereIn('bestPosition', [...$positions])->random();
+
+                    continue;
                 }
             }
             break;
