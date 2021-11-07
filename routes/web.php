@@ -225,7 +225,7 @@ Route::prefix('/admin')->group(function () {
         ->name('admin.jobApplication.respond')->middleware('administrator');
 
     Route::get('/squadGenerator', [App\Http\Controllers\AdminController::class, 'squadGenerator'])
-        ->name('admin.squadGenerator')->middleware('administrator');
+        ->name('admin.squadGenerator')/* ->middleware('administrator') */;
 });
 
 /* Notifications */
