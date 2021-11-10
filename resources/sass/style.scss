@@ -195,6 +195,18 @@ a {
   }
 }
 
+// Login
+
+.login-btn {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .login-btn {
+    width: 74%;
+  }
+}
+
 // Styling Tabs is on sass/components/players/_tabs
 
 /* Navbar and footer */

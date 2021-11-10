@@ -7,14 +7,10 @@
                 <option>League</option>
 
             </select>
+            <input type="submit" class="btn" value="Pokaz">
         </div>
 
-        <div class="team">
-            <select name="Team" id="">
-                <option value="">Team Of The Week</option>
-                <option value="" disabled>Team Of The Season</option>
-            </select>
-        </div>
+       
     </div>
 
     <div class="formation">

@@ -40,7 +40,7 @@ unset($__errorArgs, $__bag); ?>
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <div class="form-group row mb-0">
                             <label for="password"
                                 class="col-md-4 col-form-label text-md-right"><?php echo e(__('auth.pass')); ?></label>
 
@@ -72,8 +72,16 @@ unset($__errorArgs, $__bag); ?>
                         </div>
 
                         <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
+                            <div class="col-md-6 offset-md-4 d-flex flex-column">
+                                <?php if(Route::has('password.request')): ?>
+                                    <a href="<?php echo e(route('password.request')); ?>" class="text-right">
+                                        <?php echo e(__('auth.forgot')); ?>
+
+                                    </a>
+                                <?php endif; ?>
+
                                 <div class="form-check">
+
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember"
                                         <?php echo e(old('remember') ? 'checked' : ''); ?>>
 
@@ -87,17 +95,10 @@ unset($__errorArgs, $__bag); ?>
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button name="login" type="submit" class="btn btn-success bshadow">
+                                <button name="login" type="submit" class="btn btn-success bshadow login-btn">
                                     <?php echo e(__('auth.signIn')); ?>
 
                                 </button>
-
-                                <?php if(Route::has('password.request')): ?>
-                                    <a class="btn btn-info btn-link bshadow" href="<?php echo e(route('password.request')); ?>">
-                                        <?php echo e(__('auth.forgot')); ?>
-
-                                    </a>
-                                <?php endif; ?>
                             </div>
                         </div>
                     </form>

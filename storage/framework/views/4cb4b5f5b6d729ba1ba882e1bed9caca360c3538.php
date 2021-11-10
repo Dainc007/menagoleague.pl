@@ -4,7 +4,11 @@
 
 <?php $__env->startSection('content'); ?>
 <div class="messages-tabs">
-    <div class="messages-player active">
+<div class="messages-notifications active">
+        <a href="#">Notifications</a>
+         <span class="notification">2</span>
+     </div>
+    <div class="messages-player">
        <a href="#">Player chat</a>
         <span class="notification">2</span>
     </div>
@@ -12,10 +16,6 @@
         <a href="#">Inbox</a>
         <span class="notification">2</span>
     </div>
-    <div class="messages-notifications">
-        <a href="#">Notifications</a>
-         <span class="notification">2</span>
-     </div>
 </div>
 <div class="messages-content">
     <?php echo $__env->make('office.messages.list', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>

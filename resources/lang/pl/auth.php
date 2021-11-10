@@ -8,7 +8,7 @@ return [
 
     'signIn' => 'Zaloguj',
     'pass' => 'Hasło',
-    'remember' => 'chcę być stale zalogowany',
+    'remember' => 'Nie wylogowuj mnie',
     'forgot' => 'Zapomniałeś hasła?',
 
     'register' => 'Rejestracja',

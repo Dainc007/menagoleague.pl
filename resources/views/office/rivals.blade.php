@@ -22,7 +22,7 @@
             @endforeach
         </select>
 
-        <input class="btn btn-sm btn-info" type="submit" value="{{ __('office.rivals.invite') }}">
+        <input class="btn btn-sm btn-info bshadow" type="submit" value="{{ __('office.rivals.invite') }}">
         @csrf
         @method('POST')
     </form>

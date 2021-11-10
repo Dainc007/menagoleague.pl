@@ -1,10 +1,10 @@
-<?php for($i = 1; $i < 10; $i++): ?>
-    <div class="text-full <?php echo e($i === 1 ? 'active' : ''); ?>" message-id="<?php echo e($i); ?>">
-        <p>Good Morning, Boss <?php echo e($i); ?></p>
+<?php if($user->notifications): ?>
+<?php $__currentLoopData = $user->notifications; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $message): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+<div class="text-full " message-id="<?php echo e($message->id); ?>">
+        <p><?php echo e($message->title); ?></p>
 
-        <p>Lionel Messi has arrived to your stadium.</p>
-
-        <p>We are so happy for this success, I wish you and this footballer the best!</p>
+        <p><?php echo e($message->content); ?></p>
     </div>
-<?php endfor; ?>
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+<?php endif; ?>
 <?php /**PATH C:\Users\Bartek\Desktop\KURS\Menagoleague.pl\resources\views/office/messages/inc/notifications/notificationsMessages.blade.php ENDPATH**/ ?>
