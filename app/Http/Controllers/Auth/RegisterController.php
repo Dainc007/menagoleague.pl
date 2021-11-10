@@ -53,6 +53,8 @@ class RegisterController extends Controller
     {
         $user = User::where('name', $data['recommendation'])->first();
 
+        $data['facebook'] = str_replace("https://www.facebook.com/", "", $data['facebook']);
+
         return Validator::make($data, [
             'name'     => ['required', 'string', 'min:3', 'max:255', 'unique:users'],
             'email'    => ['required', 'string', 'email', 'min:3', 'max:255', 'unique:users'],
