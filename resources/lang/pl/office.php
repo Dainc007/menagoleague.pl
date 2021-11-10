@@ -17,6 +17,7 @@ return [
             'income'    => 'Przychody',
             'outgo'     => 'Wydatki',
         ],
+        'noTeam'    => 'Tutaj pojawią się sprawozdania finansowe Twojego klubu, gdy znajdziesz zatrudnienie.',
         'col'   => [
             'title' => 'Tytuł',
             'price' => 'Kwota',

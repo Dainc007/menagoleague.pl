@@ -33,7 +33,7 @@
                                 <img src="{{ url('/images/shields/' . rand(1, 8) . '.png') }}">
                             </div>
                             <div class="data-club">
-                                <p><b>{{__('office.job.club')}}</b>: {{$job->name}}</p>
+                                <p> {{$job->name}}</p>
                             </div>
                         </a>
                         <div class="data-league">
@@ -65,7 +65,7 @@
                                 <img src="{{ url('/images/shields/' . rand(1, 8) . '.png') }}">
                             </div>
                             <div class="data-club">
-                                <p><b>{{__('office.job.club')}}</b>: {{$job->name}}</p>
+                                <p>{{$job->name}}</p>
                             </div>
                         </a>
                         <div class="data-league">
@@ -98,7 +98,7 @@
                                 <img src="{{ url('/images/shields/' . rand(1, 8) . '.png') }}">
                             </div>
                             <div class="data-club">
-                                <p><b>{{__('office.job.club')}}</b>: {{$job->name}}</p>
+                                <p>{{$job->name}}</p>
                             </div>
                         </a>
                         <div class="data-league">
