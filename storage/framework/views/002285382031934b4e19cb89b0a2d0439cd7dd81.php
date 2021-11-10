@@ -12,8 +12,11 @@
 <?php endif; ?>
 
 <?php if($user->isManager()): ?>
-<h6> <?php echo e(__('team.noJob')); ?> <a href="<?php echo e(route('help.tutorial')); ?>"><?php echo e(__('team.here')); ?></a>
-</h6>
+<div class="alert alert-info" role="alert">
+    <h6> <?php echo e(__('team.noJob')); ?> <a href="<?php echo e(route('help.tutorial')); ?>">
+    </h6>
+  </div>
+
 <?php else: ?>
 <h6><?php echo e(__('team.noLicence')); ?>
 

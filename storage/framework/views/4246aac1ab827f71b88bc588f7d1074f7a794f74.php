@@ -36,7 +36,7 @@
                                 <img src="<?php echo e(url('/images/shields/' . rand(1, 8) . '.png')); ?>">
                             </div>
                             <div class="data-club">
-                                <p><b><?php echo e(__('office.job.club')); ?></b>: <?php echo e($job->name); ?></p>
+                                <p> <?php echo e($job->name); ?></p>
                             </div>
                         </a>
                         <div class="data-league">
@@ -68,7 +68,7 @@
                                 <img src="<?php echo e(url('/images/shields/' . rand(1, 8) . '.png')); ?>">
                             </div>
                             <div class="data-club">
-                                <p><b><?php echo e(__('office.job.club')); ?></b>: <?php echo e($job->name); ?></p>
+                                <p><?php echo e($job->name); ?></p>
                             </div>
                         </a>
                         <div class="data-league">
@@ -101,7 +101,7 @@
                                 <img src="<?php echo e(url('/images/shields/' . rand(1, 8) . '.png')); ?>">
                             </div>
                             <div class="data-club">
-                                <p><b><?php echo e(__('office.job.club')); ?></b>: <?php echo e($job->name); ?></p>
+                                <p><?php echo e($job->name); ?></p>
                             </div>
                         </a>
                         <div class="data-league">

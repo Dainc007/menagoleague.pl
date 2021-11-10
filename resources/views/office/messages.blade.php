@@ -1,4 +1,4 @@
-<section class="office-messages">
+<section class="office-messages disabled-section">
     <h2 class="office-title">{{ __('office.messages.title') }}</h2>
     <span class="material-icons">email</span>
 

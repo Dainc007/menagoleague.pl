@@ -35,12 +35,7 @@
                         </tr>
 
                         @foreach ($user->team->finances->sortByDesc('id') as $row)
-                            <tr
-                                class="text-white 
-                   @if ($row->type == 'income') bg-success 
-                   @else bg-danger 
-                   @endif
-                   ">
+                            <tr class="@if ($row->type == 'income') alert alert-success @else alert alert-danger @endif">
                                 <td style="max-width:100px">
                                     {{ Str::limit($row->title, 15, '...') }}
                                     <span>
@@ -66,7 +61,7 @@
                         </tr>
 
                         @foreach ($user->team->finances->where('type', 'income')->sortByDesc('id') as $row)
-                            <tr class="bg-success text-white">
+                            <tr class="alert alert-success">
                                 <td style="max-width:100px">
                                     {{ Str::limit($row->title, 15, '...') }}
                                     <span>
@@ -91,7 +86,7 @@
                             <th>{{ __('office.finances.col.date') }}</th>
                         </tr>
                         @foreach ($user->team->finances->where('type', 'outgo')->sortByDesc('id') as $row)
-                            <tr class="bg-danger text-white">
+                            <tr class="alert alert-danger">
                                 <td style="max-width:100px">
                                     {{ Str::limit($row->title, 15, '...') }}
                                     <span>
@@ -109,8 +104,8 @@
             </div>
         </div>
     @else
-    <div class="alert alert-success" role="alert">
-        <p>{{__('office.finances.noTeam')}}</p>
-      </div>
+        <div class="alert alert-success" role="alert">
+            <p>{{ __('office.finances.noTeam') }}</p>
+        </div>
     @endif
 </section>
