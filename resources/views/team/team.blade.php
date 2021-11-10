@@ -12,8 +12,11 @@
 @endif
 
 @if ($user->isManager())
-<h6> {{__('team.noJob')}} <a href="{{route('help.tutorial') }}">{{__('team.here')}}</a>
-</h6>
+<div class="alert alert-info" role="alert">
+    <h6> {{__('team.noJob')}} <a href="{{route('help.tutorial') }}">
+    </h6>
+  </div>
+
 @else
 <h6>{{__('team.noLicence')}}
      <a href="{{route('help.tutorial') }}">{{__('team.here')}}</a></h6>

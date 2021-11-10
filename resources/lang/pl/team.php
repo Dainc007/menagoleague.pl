@@ -17,7 +17,8 @@ return [
     'empty' => 'W Twojej Druzynie nie ma obecnie piłkarzy.',
     'here'  => 'TUTAJ',
     'noLicence' => 'Nie jesteś licencjonowanym trenerem. O tym jak zdobyć licencję i przejąć druzyne przeczytasz',
-    'noJob'    => 'Obecnie nie jesteś zatrudniony. Przejąć klub lub złozyc wniosek o zalozenie nowego mozesz',
+    'noJob'    => 'Obecnie nie jesteś zatrudniony.
+     Aby Przejąć klub przejdź do zakładki "Biuro" i zerknij na oferty pracy.',
 
     'apply' => [
         'denied'    => 'Nie mozesz przejąć druzyny',
