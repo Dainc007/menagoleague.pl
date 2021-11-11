@@ -17,5 +17,7 @@ class DeviceSeeder extends Seeder
         foreach (Device::AVAILABLE_DEVICES as $device) {
             Device::insert(['device' => $device]);
         }
+
+         Device::insert(['device'  => 'all']);
     }
 }

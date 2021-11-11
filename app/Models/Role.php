@@ -15,7 +15,7 @@ class Role extends Model
     ];
 
     public const AVAILABLE_ROLES = [
-        'User', 'Manager', 'Moderator', 'Administrator'
+        'User', 'Manager', 'Staff', 'Supporter', 'Administrator'
     ];
 
     public function user()

@@ -30,13 +30,13 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             LeagueSeeder::class,
             TeamSeeder::class,
-            CompetitionSeeder::class,
+/*          CompetitionSeeder::class,
             LeagueTableSeeder::class,
-            FixtureSeeder::class,
+            FixtureSeeder::class, */
             PlayerSeeder::class,
             /* GameStatsSeeder::class, */
             ArticleSeeder::class,
-            FinanceSeeder::class,
+            /* FinanceSeeder::class, */
         ]);
     }
 }

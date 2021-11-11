@@ -16,18 +16,6 @@ class LeagueSeeder extends Seeder
      */
     public function run()
     {
-/*         for ($level = 1; $level <= 90; $level++) {
-            foreach (League::AVAILABLE_REGIONS as $region) {
-                foreach (League::AVAILABLE_TYPES as $type) {
-                    League::insert([
-                        'region' => $region,
-                        'level' => $level,
-                        'type' => $type,
-                    ]);
-                }
-            }
-        } */
-
         Excel::import(new LeaguesImport, Storage::path('public/CSV/teams_fifa22.csv'));
     }
 }

@@ -15,7 +15,7 @@ class Article extends Model
 
     public const ARTICLES = [
         [
-            'title'     =>  'Menago League Ruszy już w październiku?',
+            'title'     =>  'Menago League Przygotowuje Się do Startu',
             'content'   =>  'Wiele wskazuje na to, że po ponad rocznej przerwie w rozgrywkach fani wreszcie doczekają się sezonu 4.„Projekt jest na zaawansowanym etapie, zwłaszcza pod kątem graficznym” - przyznał jeden z autorów.W przeszłości premiera sezonu 4 była wielokrotnie zapowiadana jak i przekładana. Miejmy nadzieję, że tym razem nie dojdzie do kolejnych opóźnień.',
             'img'       => '5',
 
@@ -24,7 +24,7 @@ class Article extends Model
 
         [
             'title'     =>  'Menago League z nagrodami rzeczowymi już od FIFY 2022?',
-            'content'   =>  'Wiele wskazuje na to, że po ponad rocznej przerwie w rozgrywkach fani wreszcie doczekają się sezonu 4.„Projekt jest na zaawansowanym etapie, zwłaszcza pod kątem graficznym” - przyznał jeden z autorów.W przeszłości premiera sezonu 4 była wielokrotnie zapowiadana jak i przekładana. Miejmy nadzieję, że tym razem nie dojdzie do kolejnych opóźnień.',
+            'content'   =>  'W budowie',
             'img'       => '5',
 
             'device'    => 1

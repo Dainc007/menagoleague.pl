@@ -14,8 +14,6 @@ class ArticleSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\Article::factory(10)->create();
-
         foreach (Article::ARTICLES as $array) {
             Article::create([
                 'title'     => $array['title'],
