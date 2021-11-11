@@ -32,6 +32,9 @@ class RivalController extends Controller
         } catch (Throwable $e) {
             report($e);
 
+            if ($e->getCode() == '23000') {
+                return Alert::error('Błąd!', 'Ten gracz odrzucił juz Twoją prośbę');
+            }
             Alert::error('Błąd!', 'Coś poszło nie tak!!');
         } finally {
             return back()->with(session()->flash('message', 'Udalo Sie'));

@@ -16,19 +16,18 @@ class JobApplicationService
     public static function notifyUser($application)
     {
         $params = [
-            'user_id'  => $application->user_id
+            'user_id'    => $application->user_id,
+            'created_at' => now()
         ];
 
         if ($application->status == 'accepted') {
-            $params += [
-                'message_path' => 'team.apply.response.accepted'
-            ];
+            $params['content'] = 'team.apply.response.accepted';
+            $params['updated_at'] = now();
         }
 
         if ($application->status == 'rejected') {
-            $params += [
-                'message_path' => 'team.apply.response.rejected'
-            ];
+            $params['content'] = 'team.apply.response.rejected';
+            $params['updated_at'] = now();
         }
 
         Notification::insert([$params]);

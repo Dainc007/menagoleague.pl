@@ -62,7 +62,7 @@
                     {{ __('central.tutorial.results.' . $user->tutorial->status) }}
                 </i></b>
         </p>
-        @if ($user->tutorial->status == 'rejected')
+        @if ($user->tutorial->status == 'failed')
             <p> {{ __('central.tutorial.reason') }} {{ $user->tutorial->message }}</p>
         @endif
 

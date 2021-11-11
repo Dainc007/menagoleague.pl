@@ -14,6 +14,7 @@ class UserObserver
             'title'   => 'notification.accountCreated.title',
             'content' => 'notification.accountCreated.content',
             'user_id' => $user->id,
+            'created_at'    => now(),
         ]);
     }
 
