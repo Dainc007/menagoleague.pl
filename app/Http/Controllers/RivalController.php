@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Notification;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -25,6 +26,7 @@ class RivalController extends Controller
 
         try {
             Auth::user()->rivals()->attach($request['rivalId']);
+            $this->sendNotificationsToUsers(Auth::user()->id, $request['rivalId']);
 
             Alert::success('Udało się!', 'Zaproszenie zostało wysłane');
         } catch (Throwable $e) {
@@ -46,5 +48,21 @@ class RivalController extends Controller
         } finally {
             return back();
         }
+    }
+
+    private function sendNotificationsToUsers(int $userId, $rivalId)
+    {
+        (new Notification([
+            'user_id'  => $userId,
+            'title'    => "notification.rivals.invitationSend",
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]))->save();
+        (new Notification([
+            'user_id'  => $rivalId,
+            'title'    => "notification.rivals.invitationRecived",
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]))->save();
     }
 }
