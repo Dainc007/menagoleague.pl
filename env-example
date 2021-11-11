@@ -1,5 +1,3 @@
-RENEME ME to .env
-
 APP_NAME=Menagoleague
 APP_ENV=local
 APP_KEY=
