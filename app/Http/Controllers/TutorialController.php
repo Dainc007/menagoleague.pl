@@ -2,19 +2,23 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\TutorialRequest;
 use App\Models\Tutorial;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class TutorialController extends Controller
 {
 
-    public function invite(Request $request)
+    public function invite(TutorialRequest $request)
     {
         if (Auth::user()->tutorial != null) {
             Alert::error('Wysłałeś juz zaproszenie innemu uzytkownikowi!');
+            return back();
+        }
+
+        if ($request['rival'] == Auth::user()->id) {
+            Alert::error('Błąd!', 'Nie mozesz wyzwać samego siebie!');
             return back();
         }
 
@@ -27,7 +31,7 @@ class TutorialController extends Controller
         return back();
     }
 
-    public function respond(Request $request, int $id)
+    public function respond(TutorialRequest $request, int $id)
     {
         $tutorial = Tutorial::where('id', $id)->where('status', 'sent')->first();
 
@@ -53,7 +57,7 @@ class TutorialController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, int $id)
+    public function store(TutorialRequest $request, int $id)
     {
         $tutorial = Tutorial::find($id);
 
@@ -70,40 +74,6 @@ class TutorialController extends Controller
 
         Alert::success('Wniosek został wysłany!', 'Czekaj na akceptację!');
             return back();
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
     }
 
     /**

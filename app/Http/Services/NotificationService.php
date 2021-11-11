@@ -12,8 +12,9 @@ class NotificationService
     {
         Notification::insert([
             'data'         => ['name' => $data->name],
-            'message_path' => 'messages.boardMessages.accountCreated.content',
-            'user_id' => $data->id
+            'content' => 'messages.boardMessages.accountCreated.content',
+            'user_id' => $data->id,
+            'created_at' => now(),
         ]);
     }
 }

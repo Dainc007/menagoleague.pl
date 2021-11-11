@@ -11,19 +11,23 @@ class TutorialService
     public static function notifyUser($tutorial)
     {
         $params = [
-            'user_id'  => $tutorial->user_id
+            'user_id'    => $tutorial->user_id,
+            'created_at' => now(),
         ];
 
         if ($tutorial->status == 'passed') {
-            $params += [
-                'content' => 'central.tutorial.response.accepted'
-            ];
+            $params['title']      = 'central.tutorial.response.accepted';
+            $params['updated_at'] = now();
         }
 
-        if ($tutorial->status == 'rejected') {
-            $params += [
-                'content' => 'central.tutorial.response.rejected'
-            ];
+        if ($tutorial->status == 'failed') {
+            $params['content'] = 'central.tutorial.response.rejected';
+            $params['updated_at'] = now();
+        }
+
+        if ($tutorial->status == 'pending') {
+            $params['title'] = 'central.tutorial.response.pending';
+            $params['updated_at'] = now();
         }
 
         Notification::insert([$params]);

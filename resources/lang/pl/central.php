@@ -74,12 +74,13 @@ return [
         'results'       => [
             'pending'   => 'W trakcie weryfikacji',
             'passed'    => 'Zdana',
-            'rejected'  => 'Odrzucona',
+            'failed'  => 'Odrzucona',
         ],
 
         'response'  => [
-            'accepted'  => 'Zaakceptowano: message',
-            'rejected'  => 'Odrzucono: message',
+            'accepted'  => 'Twoja aplikacja została Zaakceptowana. Uzyskujesz licencję trenerską!',
+            'rejected'  => 'Twój wniosek o przyznanie licencji trenerskiej został odrzucony.',
+            'pending'   => 'Twoje podanie oczekuje w kolejce do rozpatrzenia.'
         ],
 
         'reason'        => 'Powód: ',

@@ -30,13 +30,14 @@
                 <div class="message-item">
                     @if ($user->notifications)
                         @foreach ($user->getNewNotifications as $message)
-                            <div class="team-mailbox-date">{{ now() }}</div>
-
-                            <div class="message" id="message{{ $message->id }}">
+                            <div class="team-mailbox-date"></div>
+                            
+                            <div class="message shadow mb-3" id="message{{ $message->id }}">
+                                {{ $message->created_at }}
                                 <p class="text-center mb-3"><b>{{ __($message->title, ['name' => $user->name]) }}</b>
                                 </p>
                                 <p class="text-center mb-3">
-                                    {{ __($message->content, ['name' => $user->name]) }}</p>
+                                    {{ __($message->content, ['name' => $user->name, 'message' => $message->message]) }}</p>
                                 <button class="confirm btn w-100" style="border: 1px solid #558c47"
                                     data-id="{{ $message->id }}">Oznacz jako
                                     przeczytane</button>
