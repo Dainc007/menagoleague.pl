@@ -30,7 +30,8 @@
                     <div class="offers-data @if($i == 1) active @endif">
                         <a href="{{route('teams.show',['team' => $job])}}">
                             <div class="data-logo">
-                                <img src="{{ url('/images/shields/' . rand(1, 8) . '.png') }}">
+                                
+                                <img src="{{ env('TEAM_SRC') }}{{ $job->sofifa_id ?? '111592' }}.png">
                             </div>
                             <div class="data-club">
                                 <p> {{$job->name}}</p>
@@ -62,7 +63,7 @@
                     <div class="offers-data  @if($i == 1) active @endif">
                         <a href="{{route('teams.show',['team' => $job])}}">
                             <div class="data-logo">
-                                <img src="{{ url('/images/shields/' . rand(1, 8) . '.png') }}">
+                                <img src="{{ env('TEAM_SRC') }}{{ $job->sofifa_id ?? '111592' }}.png">
                             </div>
                             <div class="data-club">
                                 <p>{{$job->name}}</p>
@@ -95,7 +96,7 @@
                     <div class="offers-data  @if($i == 1) active @endif">
                         <a href="{{route('teams.show',['team' => $job])}}">
                             <div class="data-logo">
-                                <img src="{{ url('/images/shields/' . rand(1, 8) . '.png') }}">
+                                <img src="{{ env('TEAM_SRC') }}{{ $job->sofifa_id ?? '111592' }}.png">
                             </div>
                             <div class="data-club">
                                 <p>{{$job->name}}</p>

@@ -101,6 +101,9 @@ Route::prefix('/teams')->group(function () {
 
     Route::post('/application/{id}', [App\Http\Controllers\TeamController::class, 'apply'])
         ->name('team.application');
+
+    Route::post('/application/sign', [App\Http\Controllers\TeamController::class, 'sign'])
+        ->name('team.sign');
 });
 
 Route::prefix('/transfers')->group(function () {

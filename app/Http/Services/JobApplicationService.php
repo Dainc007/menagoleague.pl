@@ -61,6 +61,11 @@ class JobApplicationService
         $this->storeApplication($teamId, $request['message']);
     }
 
+    public function signContract()
+    {
+        
+    }
+
     private function storeApplication($teamId, $message)
     {
         (new JobApplication([

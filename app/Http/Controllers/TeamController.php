@@ -41,6 +41,11 @@ class TeamController extends Controller
         );
     }
 
+    public function sign(int $id)
+    {
+        dd($id);
+    }
+
     /**
      * Store a newly created resource in storage.
      *

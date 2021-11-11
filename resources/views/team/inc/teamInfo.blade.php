@@ -41,7 +41,7 @@
 
     <div class="content">
         <div class="player">
-            <img src="/images/placeholder-person.svg" alt="">
+            <img src="{{ env('TEAM_SRC') }}{{ $team->sofifa_id ?? '111592' }}.png">
             <div class="info">
                 <div class="trophies">
                     @for ($i = 1; $i <= $how; $i++)
