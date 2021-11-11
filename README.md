@@ -27,17 +27,15 @@ To run this project, install it locally using via composer:
 
 ```
 $ git clone https://github.com/Dainc007/Menagoleague.pl.git
-$ composer install
-
-$ php artisan serve
 
 1. clone repository
 2. rename env-example file to .env and set your local database name, password etc.
-3. php artisan key:generate
-4. php artisan storage:link
-5. php artisan migrate:fresh --seed
+3. composer install
+4. php artisan key:generate
+5. php artisan storage:link
+6. php artisan migrate:fresh --seed
 
-5. You're good to go!
+ You're good to go!
 
 ```
 
