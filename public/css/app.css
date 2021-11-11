@@ -10992,11 +10992,17 @@ a .btn-discord img {
 .gameplay-overview-item:last-of-type {
   margin-right: 0;
 }
-.gameplay-overview-item img {
+.gameplay-overview-item > img {
   width: 300px;
   -o-object-fit: cover;
      object-fit: cover;
   height: 150px;
+  cursor: pointer;
+}
+.gameplay-overview-item .modal-content .modal-body img {
+  height: unset;
+  -o-object-fit: unset;
+     object-fit: unset;
 }
 .gameplay-overview-item h3 {
   margin: 10px 0;
@@ -11417,6 +11423,7 @@ a .btn-discord img {
     display: flex;
   }
   .menagoleague-stats .stats-image {
+    width: 40%;
     display: block;
     -o-object-fit: contain;
        object-fit: contain;
