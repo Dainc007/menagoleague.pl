@@ -26,15 +26,17 @@
         @csrf
         @method('POST')
     </form>
-
+    
     @if ($user->rivalsInvitations && $user->rivalsInvitations->count() > 0)
         <h6 class="carrer-invites">{{ __('office.rivals.invitations') }}</h6>
         @foreach ($user->rivalsInvitations as $invitation)
+            
             <form action="{{ route('rival.respond', ['id' => $invitation->pivot->id]) }}" method="POST">
-                <button class="btn btn-success" name="status"
+               <p> {{$invitation->name}}
+                <button class="btn-sm btn-success" name="status"
                     value="accepted">{{ __('office.rivals.accept') }}</button>
-                <button class="btn btn-danger" name="status"
-                    value="rejected">{{ __('office.rivals.reject') }}</button>
+                <button class="btn-sm btn-danger" name="status"
+                    value="rejected">{{ __('office.rivals.reject') }}</button></p>
                 @csrf
                 @method('POST')
             </form>
