@@ -46,5 +46,9 @@ a {
     &:first-of-type {
       display: flex;
     }
+
+    &:last-of-type {
+      display: none;
+    }
   }
 }

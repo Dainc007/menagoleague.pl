@@ -10955,6 +10955,9 @@ a .btn-discord img {
   .discord:first-of-type {
     display: flex;
   }
+  .discord:last-of-type {
+    display: none;
+  }
 }
 .gameplay-overview {
   width: 100%;
@@ -11315,6 +11318,9 @@ a .btn-discord img {
   flex-direction: column;
   margin-bottom: 35px;
 }
+.menagoleague-stats .stats-image {
+  display: none;
+}
 
 .menagoleague-stats-content-item {
   width: 100%;
@@ -11341,6 +11347,7 @@ a .btn-discord img {
 }
 
 .menagoleague-stats-p {
+  margin-top: 1rem;
   width: 100%;
   text-align: center;
   font-size: 1.2em;
@@ -11399,11 +11406,20 @@ a .btn-discord img {
   }
 
   .menagoleague-stats {
-    width: calc(50% - 4rem);
+    width: calc(70% - 1rem);
+    margin: 0;
   }
   .menagoleague-stats h2 {
     font-size: 1.5em;
     margin-bottom: 30px;
+  }
+  .menagoleague-stats > div {
+    display: flex;
+  }
+  .menagoleague-stats .stats-image {
+    display: block;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 
   .menagoleague-stats-content-item-number {
@@ -11415,7 +11431,7 @@ a .btn-discord img {
     align-items: unset;
     flex-wrap: wrap;
     flex-direction: row !important;
-    margin-bottom: 35px !important;
+    width: 60%;
   }
 
   .menagoleague-stats-content-item {

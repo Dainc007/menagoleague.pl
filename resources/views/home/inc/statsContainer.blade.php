@@ -6,37 +6,42 @@
     </aside>
 
     <div class="menagoleague-stats">
-        <h2>{{__('home.stats.title')}}</h2>
+        <h2>{{ __('home.stats.title') }}</h2>
 
-        <div class="menagoleague-stats-container">
+        <div>
+            <div class="menagoleague-stats-container">
 
-            <div class="menagoleague-stats-content-item">
-                <p class="menagoleague-stats-content-item-number">{{$numOfTeams ?? '0'}}</p>
-                <p class="menagoleague-stats-content-item-desc">{{__('home.stats.teams')}}</p>
+                <div class="menagoleague-stats-content-item">
+                    <p class="menagoleague-stats-content-item-number">{{ $numOfTeams ?? '0' }}</p>
+                    <p class="menagoleague-stats-content-item-desc">{{ __('home.stats.teams') }}</p>
+                </div>
+
+                <div class="menagoleague-stats-content-item">
+                    <p class="menagoleague-stats-content-item-number">{{ $numOfUsers ?? '0' }}</p>
+                    <p class="menagoleague-stats-content-item-desc">{{ __('home.stats.users') }}</p>
+                </div>
+
+                <div class="menagoleague-stats-content-item">
+                    <p class="menagoleague-stats-content-item-number">{{ $numOfGames ?? '0' }}</p>
+                    <p class="menagoleague-stats-content-item-desc">{{ __('home.stats.games') }}</p>
+                </div>
+
+                <div class="menagoleague-stats-content-item">
+                    <p class="menagoleague-stats-content-item-number">{{ $numOfGoals ?? '0' }}</p>
+                    <p class="menagoleague-stats-content-item-desc">{{ __('home.stats.goals') }}</p>
+                </div>
+
+                <div class="menagoleague-stats-content-item menagoleague-stats-content-item-large">
+                    <p class="menagoleague-stats-content-item-number">{{ $sumOfTransferFees ?? '0' }} M$</p>
+                    <p class="menagoleague-stats-content-item-desc">{{ __('home.stats.transfers') }}</p>
+                </div>
+
+                <p class="menagoleague-stats-p">{{ __('home.stats.since') }} <b>2018</b></p>
             </div>
 
-            <div class="menagoleague-stats-content-item">
-                <p class="menagoleague-stats-content-item-number">{{$numOfUsers ?? '0'}}</p>
-                <p class="menagoleague-stats-content-item-desc">{{__('home.stats.users')}}</p>
-            </div>
-
-            <div class="menagoleague-stats-content-item">
-                <p class="menagoleague-stats-content-item-number">{{$numOfGames ?? '0'}}</p>
-                <p class="menagoleague-stats-content-item-desc">{{__('home.stats.games')}}</p>
-            </div>
-
-            <div class="menagoleague-stats-content-item">
-                <p class="menagoleague-stats-content-item-number">{{$numOfGoals ?? '0'}}</p>
-                <p class="menagoleague-stats-content-item-desc">{{__('home.stats.goals')}}</p>
-            </div>
-
-            <div class="menagoleague-stats-content-item menagoleague-stats-content-item-large">
-                <p class="menagoleague-stats-content-item-number">{{$sumOfTransferFees ?? '0'}} M$</p>
-                <p class="menagoleague-stats-content-item-desc">{{__('home.stats.transfers')}}</p>
-            </div>
-
+            <img src="/images/tshirt-menago.png" alt="" class="stats-image">
         </div>
-        <p class="menagoleague-stats-p">{{__('home.stats.since')}} <b>2018</b></p>
+
     </div>
 
     <aside class="discord">
