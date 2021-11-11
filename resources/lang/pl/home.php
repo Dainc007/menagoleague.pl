@@ -49,8 +49,7 @@ return [
         ],
         '2' => [
             'header'    => 'Zarzadzaj Zespołem',
-            'body'      => 'Stronę wyposażyliśmy w przejrzysty interfejs zarzadzania zespołem, oferujący szereg możliwości. To od Ciebie zależy, w jaki sposób poprowadzisz drużynę. Bądź dla swoich piłkarzy niczym ojciec i pomagaj im w rozwoju kariery albo kieruj się w pierwszej kolejności interesem klubu lub własnymi korzyściami. Rozmawiaj z piłkarzami, negocjuj warunki kontraktów, udoskonalaj infrastrukturę klubu – rozwijaj się tak, jak chcesz i tak, jak lubisz.
-            ',
+            'body'      => 'Stronę wyposażyliśmy w przejrzysty interfejs zarzadzania zespołem, oferujący szereg możliwości. To od Ciebie zależy, w jaki sposób poprowadzisz drużynę. Bądź dla swoich piłkarzy niczym ojciec i pomagaj im w rozwoju kariery albo kieruj się w pierwszej kolejności interesem klubu lub własnymi korzyściami. Rozmawiaj z piłkarzami, negocjuj warunki kontraktów, udoskonalaj infrastrukturę klubu – rozwijaj się tak, jak chcesz i tak, jak lubisz.',
         ],
         '3' => [
             'header'    => 'Przeglądaj Pozostałe Ligi',

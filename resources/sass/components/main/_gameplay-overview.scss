@@ -37,10 +37,16 @@
     margin-right: 0;
   }
 
-  img {
+  > img {
     width: 300px;
     object-fit: cover;
     height: 150px;
+    cursor: pointer;
+  }
+
+  .modal-content .modal-body img {
+    height: unset;
+    object-fit: unset;
   }
 
   h3 {
