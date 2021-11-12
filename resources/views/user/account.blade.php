@@ -10,10 +10,10 @@
                 @else
                 <div class="card-header d-flex justify-content-between">
                     {{$personal_data->name}}
-                    <form method="GET">
-                        <input type="submit" name="editMode" class="btn btn-primary btn-sm" value="Tryb edycji danych">
-                        @csrf
-                    </form>
+{{--                    <form method="GET">--}}
+{{--                        <input type="submit" name="editMode" class="btn btn-primary btn-sm" value="Tryb edycji danych">--}}
+{{--                        @csrf--}}
+{{--                    </form>--}}
                 </div>
 
                 <div class="card-body justify-content-around">

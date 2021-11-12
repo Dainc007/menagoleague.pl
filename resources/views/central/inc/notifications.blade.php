@@ -66,7 +66,7 @@
                     @endforeach
                 @else
                     <div class="notifications-content-placeholder">
-                        <p>Chwilowo brak danych do wyświetlenia.</p>
+                        <p>{{__('central.noData')}}</p>
                     </div>
                 @endif
 

@@ -1,4 +1,4 @@
-<section class="office-carrer">
+<section class="office-carrer disabled-section">
     <h2 class="office-title">Kariera</h2>
     <div class="carrer-summary">
         <div class="summary-statistics">

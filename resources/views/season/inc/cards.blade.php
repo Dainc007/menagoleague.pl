@@ -11,7 +11,7 @@
     </div>
 
     <div class="topsAndCards-container">
-        @for ($i = 1; $i <= 10; $i++)
+        {{--@for ($i = 1; $i <= 10; $i++)
             <div class="topAndCards-item">
                 <p class="id">{{ $i }}</p>
                 <div class="name">
@@ -21,6 +21,8 @@
                 <p class="score">{{ rand(1, 100) }}</p>
                 <p class="score">{{ rand(1, 100) }}</p>
             </div>
-        @endfor
+        @endfor--}}      <div class="alert alert-info" role="alert">
+            {{__('central.noData')}}
+        </div>
     </div>
 </div>

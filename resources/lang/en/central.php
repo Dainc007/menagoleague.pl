@@ -1,6 +1,9 @@
 <?php
 
 return [
+
+    'noData' => 'Chwilowo brak danych do wyświetlenia.',
+
     'calendar'  => [
         'title' => 'SCHEDULE',
     ],

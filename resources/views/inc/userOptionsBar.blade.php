@@ -1,7 +1,7 @@
 <user-options 
-  :lvl="2137"
-  :exp="213700"
-  :cash="213769"
+  :lvl="1"
+  :exp="0"
+  :cash="0"
   :cartimage="'{{ asset('/images/icons/shopping-cart.svg') }}'"
   :profileimage="'{{ asset('/images/icons/profile.svg') }}'"
 />
