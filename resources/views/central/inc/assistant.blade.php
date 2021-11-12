@@ -54,8 +54,7 @@
                                     {{ __($message->content, ['name' => $user->name, 'message' => $message->message]) }}
                                 </p>
                                 <button class="confirm btn w-100" style="border: 1px solid #558c47"
-                                    data-id="{{ $message->id }}">Oznacz jako
-                                    przeczytane</button>
+                                    data-id="{{ $message->id }}">Zrozumiałem!</button>
                             </div>
 
                         @endforeach

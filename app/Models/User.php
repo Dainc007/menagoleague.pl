@@ -109,7 +109,7 @@ class User extends Authenticatable
 
     public function getNewNotifications()
     {
-        return $this->notifications()->where('seen', '=', false);
+        return $this->notifications()->where('seen', '=', false)->orderBy('updated_at', 'DESC');
     }
 
     public function getNumOfNotifications()

@@ -32,7 +32,7 @@ return [
 
         'response' => [
           'accepted' => 'Dziękujemy za zainteresowanie pracą w naszym klubie.
-          Chcemy, aby to właśnie Pan poprowadził klub :team w najbliższych latach.
+          Chcemy, aby to właśnie Pan poprowadził klub w najbliższych latach.
           Z niecierpliwością oczekujemy na odpowiedź.',
 
           'rejected' => 'Dziękujemy za zainteresowanie pracą w naszym klubie. Na tą chwilę nie jesteśmy

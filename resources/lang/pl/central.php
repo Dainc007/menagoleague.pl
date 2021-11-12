@@ -94,4 +94,12 @@ return [
 
     ],
 
+    'jobs' => [
+        'accepted' => 'Poniższe kluby zgodziły się zaoferować Ci posadę Managera. Czy zechcesz przejąć ster w jednym z nich?',
+        'warning'  => [
+            'header' => 'Uwaga!',
+            'body'   => 'Podpisanie kontraktu z klubem spowoduje zerwanie rozmów z pozostałymi pracowdawcami.',
+        ]
+    ]
+
 ];
