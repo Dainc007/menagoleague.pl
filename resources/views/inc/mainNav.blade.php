@@ -6,9 +6,15 @@
 
         <div class="menu">
             <div class="dropdown">
-                <a href="/#about" class="dropdown-link">
-                    {{ __('nav.mainNav.whatAreWe') }}
-                </a>
+                @if(!Auth::user())
+                    <a href="/#about" class="dropdown-link">
+                        {{ __('nav.mainNav.whatAreWe') }}
+                    </a>
+                    @else
+                    <a href="{{route('central')}}" class="dropdown-link">
+                        Centrala
+                    </a>
+                    @endif
             </div>
             <div class="dropdown">
 
@@ -96,9 +102,15 @@
 
                     <div class="r-menu">
                         <div class="r-dropdown">
-                            <a href="/#about" class="r-dropdown-link">
-                                {{ __('nav.mainNav.whatAreWe') }}
-                            </a>
+                            @if(!Auth::user())
+                                <a href="/#about" class="dropdown-link">
+                                    {{ __('nav.mainNav.whatAreWe') }}
+                                </a>
+                            @else
+                                <a href="{{route('central')}}" class="dropdown-link">
+                                    Centrala
+                                </a>
+                            @endif
                         </div>
 
                         <div class="r-dropdown">

@@ -15,7 +15,7 @@
             <div class="track-team-mailbox-messages">
 
                 <!-- jobApplications -->
-                @if ($user->jobApplications->where('status', 'accepted'))
+                @if ($user->jobApplications->where('status', 'accepted') && $user->jobApplications->where('status', 'accepted')->count() > 0)
                     <div class="message-item">
                         
                         <div class="team-mailbox-date">{{ now() }}</div>
@@ -54,9 +54,8 @@
                                     {{ __($message->content, ['name' => $user->name, 'message' => $message->message]) }}
                                 </p>
                                 <button class="confirm btn w-100" style="border: 1px solid #558c47"
-                                    data-id="{{ $message->id }}">Zrozumiałem!</button>
+                                        data-id="{{ $message->id }}">X</button>
                             </div>
-
                         @endforeach
                     @endif
                 </div>

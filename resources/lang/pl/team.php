@@ -37,6 +37,9 @@ return [
 
           'rejected' => 'Dziękujemy za zainteresowanie pracą w naszym klubie. Na tą chwilę nie jesteśmy
           zainteresowani oferowanymi przez Pana usługami. Postanowiliśmy poszukać innego kandydata.',
+
+            'signed'    => 'Podpisałeś Kontrakt z klubem.',
+            'canceled'  => 'Aplikacja Została Wycofana',
         ],
     ]
 ];

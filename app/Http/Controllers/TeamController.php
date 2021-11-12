@@ -41,9 +41,15 @@ class TeamController extends Controller
         );
     }
 
-    public function sign(int $id)
+    public function sign(Request $request)
     {
-        dd($id);
+        //confirm Job
+
+        $job = JobApplication::find($request['jobId']);
+        $job->status = 'signed';
+        $job->save();
+
+        return back();
     }
 
     /**

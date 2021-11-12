@@ -13,7 +13,7 @@ class JobApplication extends Model
     public const NUM_OF_DAYS = 7;
 
     public const AVAILABLE_STATUSES = [
-       'pending', 'accepted', 'rejected'
+       'pending', 'accepted', 'rejected', 'signed', 'canceled'
     ];
 
     protected $fillable = [

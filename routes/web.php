@@ -34,11 +34,19 @@ Route::prefix('/central')->group(function () {
 /* HELP */
 Route::prefix('/help')->group(function () {
 
+
+    Route::get('/', [App\Http\Controllers\HelpController::class, 'index'])
+        ->name('help.index');
+
+
+    Route::get('/tutorial', [App\Http\Controllers\HelpController::class, 'tutorial'])
+        ->name('help.tutorial');
+
+    Route::get('/statute', [App\Http\Controllers\HelpController::class, 'statute'])
+        ->name('help.statute');
+
     Route::get('/help', [App\Http\Controllers\HomeController::class, 'help'])
         ->name('help');
-
-    Route::get('/tutorial', [App\Http\Controllers\HomeController::class, 'tutorial'])
-        ->name('tutorial');
 
     Route::get('/rules', [App\Http\Controllers\HomeController::class, 'rules'])
         ->name('rules');
@@ -77,20 +85,6 @@ Route::prefix('/users')->group(function () {
     });
 });
 
-/* HELP */
-Route::prefix('/help')->group(function () {
-
-
-    Route::get('/', [App\Http\Controllers\HelpController::class, 'index'])
-        ->name('help');
-
-    Route::get('/tutorial', [App\Http\Controllers\HelpController::class, 'tutorial'])
-        ->name('help.tutorial');
-
-    Route::get('/statute', [App\Http\Controllers\HelpController::class, 'statute'])
-        ->name('help.statute');
-});
-
 Route::prefix('/teams')->group(function () {
 
     Route::get('/', [App\Http\Controllers\TeamController::class, 'index'])
@@ -99,11 +93,11 @@ Route::prefix('/teams')->group(function () {
     Route::get('/{team}', [App\Http\Controllers\TeamController::class, 'show'])
         ->name('teams.show');
 
-    Route::post('/application/{id}', [App\Http\Controllers\TeamController::class, 'apply'])
-        ->name('team.application');
-
     Route::post('/application/sign', [App\Http\Controllers\TeamController::class, 'sign'])
         ->name('team.sign');
+
+    Route::post('/application/{id}', [App\Http\Controllers\TeamController::class, 'apply'])
+        ->name('team.application');
 });
 
 Route::prefix('/transfers')->group(function () {
@@ -228,7 +222,7 @@ Route::prefix('/admin')->group(function () {
         ->name('admin.jobApplication.respond')->middleware('administrator');
 
     Route::get('/squadGenerator', [App\Http\Controllers\AdminController::class, 'squadGenerator'])
-        ->name('admin.squadGenerator')/* ->middleware('administrator') */;
+        ->name('admin.squadGenerator')->middleware('administrator');
 });
 
 /* Notifications */

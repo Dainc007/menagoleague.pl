@@ -16,7 +16,7 @@ class JobApplicationService
     public static function notifyUser($application)
     {
         $params = [
-            'user_id'    => $application->user_id,
+            'user_id' => $application->user_id,
             'created_at' => now()
         ];
 
@@ -27,6 +27,20 @@ class JobApplicationService
 
         if ($application->status == 'rejected') {
             $params['content'] = 'team.apply.response.rejected';
+            $params['updated_at'] = now();
+        }
+
+        if ($application->status == 'signed') {
+            $params['content'] = 'team.apply.response.signed';
+            $params['updated_at'] = now();
+
+            self::setUserAsTeamManager($application);
+            self::cancelOtherApplications($application);
+            self::rejectOtherCandidates($application);
+        }
+
+        if ($application->status == 'canceled') {
+            $params['content'] = 'team.apply.response.canceled';
             $params['updated_at'] = now();
         }
 
@@ -54,24 +68,19 @@ class JobApplicationService
         $lastResponse = $this->wasLatelyRejected($teamId);
 
         if ($lastResponse) {
-            Alert::error(__('team.apply.alreadyDone'), __('team.apply.nextApp')  . $lastResponse);
+            Alert::error(__('team.apply.alreadyDone'), __('team.apply.nextApp') . $lastResponse);
             return redirect()->route('office');
         }
 
         $this->storeApplication($teamId, $request['message']);
     }
 
-    public function signContract()
-    {
-        
-    }
-
     private function storeApplication($teamId, $message)
     {
         (new JobApplication([
-            'user_id'   => Auth::user()->id,
-            'team_id'   => $teamId,
-            'message'   => $message ?? '',
+            'user_id' => Auth::user()->id,
+            'team_id' => $teamId,
+            'message' => $message ?? '',
         ]))->save();
 
         Alert::success(__('team.apply.send'), __('team.apply.waitForResponse'));
@@ -104,14 +113,34 @@ class JobApplicationService
 
     private function getApplication(int $teamId)
     {
-        $result =  JobApplication::where('team_id', $teamId)
+        $result = JobApplication::where('team_id', $teamId)
             ->where('user_id', Auth::user()->id)->where('status', 'pending')->value('id');
 
         return $result;
     }
 
-    private function checkUserLicense(int $id)
+    private static function checkUserLicense(int $id)
     {
         return (User::find($id))->isManager();
+    }
+
+    private static function setUserAsTeamManager($application)
+    {
+        $team = Team::find($application['team_id']);
+        $team->user_id = $application->user_id;
+        $team->save();
+    }
+
+    private static function cancelOtherApplications($application)
+    {
+        JobApplication::where('user_id', $application->user_id)
+            ->whereIn('status', ['accepted', 'pending'])->update(['status' => 'canceled']);
+    }
+
+    private static function rejectOtherCandidates($application)
+    {
+        JobApplication::where('team_id', $application->team_id)
+            ->whereIn('status', ['accepted', 'pending'])
+            ->update(['status' => 'rejected']);
     }
 }

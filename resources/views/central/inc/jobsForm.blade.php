@@ -3,7 +3,7 @@
         {{__('central.jobs.accepted')}}
     </p>
 
-    <select name="job" class="custom-select mb-3">
+    <select name="jobId" class="custom-select mb-3">
         @foreach ($user->jobApplications->where('status', 'accepted') as $job)
             <option value="{{ $job->id }}">{{ $job->team->name }}</option>
         @endforeach
