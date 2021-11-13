@@ -113,7 +113,7 @@
             <div class="tutorial__text">
                 <div class="alert alert-success" role="alert">
                     Po rozegraniu pierwszej połowy przejdź do odpowiedniej sekcji i nagraj statystyki spotkania.
-                    Interesuje nas podsumowanie obu drużyn, oraz statystyki piłkarzy obu drużyn, którzy pojawili się już na boisko.
+                    Interesuje nas podsumowanie obu drużyn, oraz statystyki piłkarzy obu drużyn, którzy pojawili się już na boisku.
                 </div>
                 <div class="alert alert-danger" role="alert">
                     <b>UWAGA!</b> Statystyki po 1 połowie wrzucamy wraz z wynikiem meczu tylko i wyłacznie, jeśli wystąpił problem
