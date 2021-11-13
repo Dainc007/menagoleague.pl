@@ -4,7 +4,7 @@
     </div>
 
     <div class="central-team-mailbox-content">
-<!--        <div class="team-mailbox-sender">
+        <!--        <div class="team-mailbox-sender">
             <img src="{{ url('/images/placeholder-person.svg') }}" alt="" />
             <div>
                 <p class="team-mailbox-sender-name">Stefcio Drążyskała</p>
@@ -17,13 +17,13 @@
                 <!-- jobApplications -->
                 @if ($user->jobApplications->where('status', 'accepted') && $user->jobApplications->where('status', 'accepted')->count() > 0)
                     <div class="message-item">
-                        
+
                         <div class="team-mailbox-date">{{ now() }}</div>
 
                         <div class="message">
                             @include('central.inc.jobsForm')
                         </div>
-                        
+
                     </div>
                 @endif
                 <!-- END -->
@@ -44,17 +44,30 @@
                 <div class="message-item">
                     @if ($user->notifications)
                         @foreach ($user->getNewNotifications as $message)
-                            <div class="team-mailbox-date"></div>
+                            {{-- Menago toast --}}
+                            <div class="menago-toast">
+                                <div class="menago-toast-header">
+                                    <div class="header">
+                                        <p>
+                                            {{ __($message->title, ['name' => $user->name]) }}
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi aut numquam
+                                            deleniti et voluptas enim, sint pariatur ipsum maiores sequi?
+                                        </p>
+                                    </div>
 
-                            <div class="message shadow mb-3" id="message{{ $message->id }}">
-                                {{ $message->created_at }}
-                                <p class="text-center mb-3"><b>{{ __($message->title, ['name' => $user->name]) }}</b>
-                                </p>
-                                <p class="text-center mb-3">
-                                    {{ __($message->content, ['name' => $user->name, 'message' => $message->message]) }}
-                                </p>
-                                <button class="confirm btn w-100" style="border: 1px solid #558c47"
-                                        data-id="{{ $message->id }}">X</button>
+                                    <div class="date-close">
+                                        <div class="date">{{ $message->created_at }}</div>
+                                        <button class="close" data-id="{{ $message->id }}"> &times; </button>
+                                    </div>
+                                </div>
+
+                                <div class="menago-toast-body">
+                                    <p>
+                                        {{ __($message->content, ['name' => $user->name, 'message' => $message->message]) }}
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat aut at
+                                        accusamus sapiente, voluptates necessitatibus dolore officia eius omnis saepe.
+                                    </p>
+                                </div>
                             </div>
                         @endforeach
                     @endif

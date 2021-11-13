@@ -103,9 +103,51 @@
   padding-bottom: 4px;
 
   h2 {
+    font-size: 1.1em;
     width: 80%;
     margin: unset;
     border-bottom: unset;
     padding-bottom: unset;
+    line-height: 130%;
+  }
+}
+
+.menago-toast {
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  &-header {
+    padding: 5px 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    font-weight: 600;
+    font-size: 1.1em;
+
+    .date-close {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      .date {
+        font-weight: normal;
+        font-size: 0.8em;
+        text-align: right;
+        min-width: 60px;
+      }
+
+      .close {
+        padding: 0 5px;
+        line-height: 100%;
+        color: $moral-bad;
+        font-size: 2em;
+      }
+    }
+  }
+
+  &-body {
+    padding: 0.5rem;
+    background-color: #ebebeb;
   }
 }

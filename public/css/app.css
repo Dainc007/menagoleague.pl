@@ -11327,6 +11327,10 @@ a .btn-discord img {
 .menagoleague-stats .stats-image {
   display: none;
 }
+.menagoleague-stats .stats-image-mobile {
+  width: 100%;
+  margin: 0 0 2rem 0;
+}
 
 .menagoleague-stats-content-item {
   width: 100%;
@@ -11363,6 +11367,12 @@ a .btn-discord img {
   flex-direction: column;
 }
 
+@media (min-width: 450px) {
+  .menagoleague-stats .stats-image-mobile {
+    width: 80%;
+    margin: 0 10% 2rem 10%;
+  }
+}
 @media (min-width: 768px) {
   .menagoleague-stats-p {
     font-size: 1em;
@@ -11377,7 +11387,20 @@ a .btn-discord img {
     font-size: 1.1em;
   }
   .menagoleague-stats .menagoleague-stats-container {
+    width: 60%;
     margin-bottom: 0;
+  }
+  .menagoleague-stats .stats-image-mobile {
+    display: none;
+  }
+  .menagoleague-stats > div {
+    display: flex;
+  }
+  .menagoleague-stats .stats-image {
+    width: 40%;
+    display: block;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 
   .content-mobile {
@@ -11412,21 +11435,11 @@ a .btn-discord img {
   }
 
   .menagoleague-stats {
-    width: calc(70% - 1rem);
     margin: 0;
   }
   .menagoleague-stats h2 {
     font-size: 1.5em;
     margin-bottom: 30px;
-  }
-  .menagoleague-stats > div {
-    display: flex;
-  }
-  .menagoleague-stats .stats-image {
-    width: 40%;
-    display: block;
-    -o-object-fit: contain;
-       object-fit: contain;
   }
 
   .menagoleague-stats-content-item-number {
@@ -11438,7 +11451,6 @@ a .btn-discord img {
     align-items: unset;
     flex-wrap: wrap;
     flex-direction: row !important;
-    width: 60%;
   }
 
   .menagoleague-stats-content-item {
@@ -14087,10 +14099,47 @@ a .btn-discord img {
   padding-bottom: 4px;
 }
 .header-w-tab h2 {
+  font-size: 1.1em;
   width: 80%;
   margin: unset;
   border-bottom: unset;
   padding-bottom: unset;
+  line-height: 130%;
+}
+
+.menago-toast {
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.menago-toast-header {
+  padding: 5px 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  font-weight: 600;
+  font-size: 1.1em;
+}
+.menago-toast-header .date-close {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.menago-toast-header .date-close .date {
+  font-weight: normal;
+  font-size: 0.8em;
+  text-align: right;
+  min-width: 60px;
+}
+.menago-toast-header .date-close .close {
+  padding: 0 5px;
+  line-height: 100%;
+  color: #ff4a42;
+  font-size: 2em;
+}
+.menago-toast-body {
+  padding: 0.5rem;
+  background-color: #ebebeb;
 }
 
 .central-standings {

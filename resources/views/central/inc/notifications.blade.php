@@ -66,7 +66,7 @@
                     @endforeach
                 @else
                     <div class="notifications-content-placeholder">
-                        <p>{{__('central.noData')}}</p>
+                        <p>{{ __('central.noData') }}</p>
                     </div>
                 @endif
 
@@ -95,7 +95,7 @@
                     @endforeach
                 @else
                     <div class="notifications-content-placeholder">
-                        <p>Chwilowo brak danych do wyświetlenia.</p>
+                        <p>{{ __('central.noData') }}</p>
                     </div>
                 @endif
             </div>

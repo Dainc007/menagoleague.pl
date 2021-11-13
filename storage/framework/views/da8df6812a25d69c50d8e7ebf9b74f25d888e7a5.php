@@ -66,7 +66,7 @@
 
                 </i></b>
         </p>
-        <?php if($user->tutorial->status == 'rejected'): ?>
+        <?php if($user->tutorial->status == 'failed'): ?>
             <p> <?php echo e(__('central.tutorial.reason')); ?> <?php echo e($user->tutorial->message); ?></p>
         <?php endif; ?>
 

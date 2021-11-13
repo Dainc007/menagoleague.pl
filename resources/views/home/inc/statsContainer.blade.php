@@ -6,6 +6,8 @@
     </aside>
 
     <div class="menagoleague-stats">
+        <img src="/images/tshirt-menago.png" alt="" class="stats-image-mobile">
+
         <h2>{{ __('home.stats.title') }}</h2>
 
         <div>

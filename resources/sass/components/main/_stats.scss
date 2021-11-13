@@ -23,6 +23,11 @@
   .stats-image {
     display: none;
   }
+
+  .stats-image-mobile {
+    width: 100%;
+    margin: 0 0 2rem 0;
+  }
 }
 
 .menagoleague-stats-content-item {
@@ -60,6 +65,15 @@
   flex-direction: column;
 }
 
+@media (min-width: 450px) {
+  .menagoleague-stats {
+    .stats-image-mobile {
+      width: 80%;
+      margin: 0 10% 2rem 10%;
+    }
+  }
+}
+
 @media (min-width: 768px) {
   .menagoleague-stats-p {
     font-size: 1em;
@@ -75,7 +89,22 @@
     }
 
     .menagoleague-stats-container {
+      width: 60%;
       margin-bottom: 0;
+    }
+
+    .stats-image-mobile {
+      display: none;
+    }
+
+    > div {
+      display: flex;
+    }
+
+    .stats-image {
+      width: 40%;
+      display: block;
+      object-fit: contain;
     }
   }
 
@@ -114,22 +143,11 @@
   }
 
   .menagoleague-stats {
-    width: calc(70% - 1rem);
     margin: 0;
 
     h2 {
       font-size: 1.5em;
       margin-bottom: 30px;
-    }
-
-    > div {
-      display: flex;
-    }
-
-    .stats-image {
-      width: 40%;
-      display: block;
-      object-fit: contain;
     }
   }
 
@@ -142,7 +160,6 @@
     align-items: unset;
     flex-wrap: wrap;
     flex-direction: row !important;
-    width: 60%;
   }
 
   .menagoleague-stats-content-item {

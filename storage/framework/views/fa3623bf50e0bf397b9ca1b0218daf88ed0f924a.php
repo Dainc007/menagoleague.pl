@@ -44,7 +44,7 @@
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 <?php else: ?>
                     <div class="notifications-content-placeholder">
-                        <p>Chwilowo brak danych do wyświetlenia.</p>
+                        <p><?php echo e(__('central.noData')); ?></p>
                     </div>
                 <?php endif; ?>
 
@@ -73,7 +73,7 @@
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 <?php else: ?>
                     <div class="notifications-content-placeholder">
-                        <p>Chwilowo brak danych do wyświetlenia.</p>
+                        <p><?php echo e(__('central.noData')); ?></p>
                     </div>
                 <?php endif; ?>
             </div>

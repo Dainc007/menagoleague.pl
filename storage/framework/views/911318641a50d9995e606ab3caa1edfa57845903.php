@@ -6,10 +6,16 @@
 
         <div class="menu">
             <div class="dropdown">
-                <a href="/#about" class="dropdown-link">
-                    <?php echo e(__('nav.mainNav.whatAreWe')); ?>
+                <?php if(!Auth::user()): ?>
+                    <a href="/#about" class="dropdown-link">
+                        <?php echo e(__('nav.mainNav.whatAreWe')); ?>
 
-                </a>
+                    </a>
+                    <?php else: ?>
+                    <a href="<?php echo e(route('central')); ?>" class="dropdown-link">
+                        Centrala
+                    </a>
+                    <?php endif; ?>
             </div>
             <div class="dropdown">
 
@@ -101,10 +107,16 @@
 
                     <div class="r-menu">
                         <div class="r-dropdown">
-                            <a href="/#about" class="r-dropdown-link">
-                                <?php echo e(__('nav.mainNav.whatAreWe')); ?>
+                            <?php if(!Auth::user()): ?>
+                                <a href="/#about" class="dropdown-link">
+                                    <?php echo e(__('nav.mainNav.whatAreWe')); ?>
 
-                            </a>
+                                </a>
+                            <?php else: ?>
+                                <a href="<?php echo e(route('central')); ?>" class="dropdown-link">
+                                    Centrala
+                                </a>
+                            <?php endif; ?>
                         </div>
 
                         <div class="r-dropdown">
