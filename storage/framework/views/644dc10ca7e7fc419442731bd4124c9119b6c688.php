@@ -51,8 +51,6 @@
                                         <p>
                                             <?php echo e(__($message->title, ['name' => $user->name])); ?>
 
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi aut numquam
-                                            deleniti et voluptas enim, sint pariatur ipsum maiores sequi?
                                         </p>
                                     </div>
 
@@ -66,8 +64,6 @@
                                     <p>
                                         <?php echo e(__($message->content, ['name' => $user->name, 'message' => $message->message])); ?>
 
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat aut at
-                                        accusamus sapiente, voluptates necessitatibus dolore officia eius omnis saepe.
                                     </p>
                                 </div>
                             </div>

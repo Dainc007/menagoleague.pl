@@ -14099,12 +14099,10 @@ a .btn-discord img {
   padding-bottom: 4px;
 }
 .header-w-tab h2 {
-  font-size: 1.1em;
   width: 80%;
   margin: unset;
   border-bottom: unset;
   padding-bottom: unset;
-  line-height: 130%;
 }
 
 .menago-toast {
