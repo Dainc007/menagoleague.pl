@@ -4,13 +4,13 @@
     </div>
 
     <div class="central-team-mailbox-content">
-        <div class="team-mailbox-sender">
+<!--        <div class="team-mailbox-sender">
             <img src="{{ url('/images/placeholder-person.svg') }}" alt="" />
             <div>
                 <p class="team-mailbox-sender-name">Stefcio Drążyskała</p>
                 <p class="team-mailbox-sender-proffesion">{{ __('central.assistant.job') }}</p>
             </div>
-        </div>
+        </div>-->
         <div class="central-team-mailbox-messages">
             <div class="track-team-mailbox-messages">
 

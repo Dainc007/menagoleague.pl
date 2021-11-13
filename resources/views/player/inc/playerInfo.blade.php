@@ -1,17 +1,12 @@
 <div class="playerInfo">
     <div class="r-content">
-        <div class="trophies">
-            @php
-                $how = rand(1, 8);
-            @endphp
-            @for ($i = 1; $i <= $how; $i++)
+<!--        <div class="trophies">
                 <div class="trophy" data-toggle="tooltip" data-placement="top"
                     title='Gets {{ rand(1, 10) }} trophies!'>
                     <img src="/images/trophy.svg" alt="">
                     <p class="number">{{ rand(1, 10) }}</p>
                 </div>
-            @endfor
-        </div>
+        </div>-->
         <div class="player">
             <img src="{{env('PLAYER_SRC') . $player->playerDetails->id}}.png" alt="">
             <div class="info">
@@ -34,15 +29,13 @@
         <div class="player">
             <img src="{{env('PLAYER_SRC') . $player->playerDetails->id}}.png" alt="">
             <div class="info">
-                <div class="trophies">
-                    @for ($i = 1; $i <= $how; $i++)
+<!--                <div class="trophies">
                         <div class="trophy" data-toggle="tooltip" data-placement="top"
                             title='Gets {{ rand(1, 10) }} trophies!'>
                             <img src="/images/trophy.svg" alt="">
                             <p class="number">{{ rand(1, 10) }}</p>
                         </div>
-                    @endfor
-                </div>
+                </div>-->
                 <p class="name">{{ $player->name }}</p>
                 <div class="about">
                     <div class="squareNum">{{ $player->playerDetails->overall }}</div>
@@ -60,7 +53,7 @@
 
     <div class="team">
         <div class="cost">
-            <p class="price"><span>10,00</span> <small>mln €</small></p>
+            <p class="price"><span>0</span> <small>M$</small></p>
             <p class="last-change"><small>Ostatnia zmiana: 26 maj 2021</small></p>
         </div>
         <img src="{{env('TEAM_SRC')}}{{$player->team->sofifa_id ?? '111592'}}.png" alt="">

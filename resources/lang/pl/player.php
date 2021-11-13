@@ -1,6 +1,9 @@
 <?php
 
 return [
+
+    'years' => 'lat',
+
     'positions' => [
         'GK'    => 'BR',
         'LB'    => 'LO',

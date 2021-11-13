@@ -104,7 +104,7 @@
             </div>
         </div>
     @else
-        <div class="alert alert-success" role="alert">
+        <div class="alert alert-info" role="alert">
             <p>{{ __('office.finances.noTeam') }}</p>
         </div>
     @endif
