@@ -26,7 +26,7 @@
 @section('javascript')
     $(function() {
 
-    $('.confirm').click(function() {
+    $('.close').click(function() {
 
     var notificationId = $(this).data("id");
 

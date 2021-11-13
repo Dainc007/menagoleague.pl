@@ -45,7 +45,7 @@
                     @if ($user->notifications)
                         @foreach ($user->getNewNotifications as $message)
                             {{-- Menago toast --}}
-                            <div class="menago-toast">
+                            <div class="menago-toast" id="message{{ $message->id }}">
                                 <div class="menago-toast-header">
                                     <div class="header">
                                         <p>
