@@ -30,7 +30,7 @@ return [
     ],
 
     'lastTransfers' => 'OSTATNIE TRANSFERY',
-    'bigTransfers'  => 'NAJWIĘKSZE TRANSFERY',
+    'bigTransfers'  => 'HITOWE TRANSFERY',
     'notifications' => [
         'title'     => 'POWIADOMIENIA',
         'new'       => 'Nowa wiadomość od',

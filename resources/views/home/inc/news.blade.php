@@ -31,10 +31,9 @@
               </div>
               <div class="modal-body">
                 <img src="{{url('/images/'. rand(1,8) .'.png')}}" alt="" />
-                <h5><span>Source: <small>Sky Sports Menago </small></span>
-                    <small>{{$article->created_at->format('d-m-Y')}}</small></h5>
-
                 <p> {{$article->content}}</p>
+                <h5 class="pt-3 pb-1 mb-1"><span> <small> Source: Sky Sports Menago </small></span>
+                  <small>{{$article->created_at->format('d-m-Y')}}</small></h5>
               </div>
             </div>
           </div>
