@@ -192,16 +192,32 @@
             <h1 class="col text-center"> Przenoszenie składu Menago League do gry FIFA </h1>
         </div>
 
-        <div class="tutorial one">
+        <div class="tutorial two">
+        <div class="tutorial__img">
+            <img class="img mx-auto" src="{{ asset('storage/tutorial/druzyna.png') }}">
+        </div>
             <div class="tutorial__text">
                 <div class="alert alert-success" role="alert">
                     W tej kwestii nie zmieniło się absolutnie nic. W związku z czym odsyłamy do naszego krótkiego
                     poradnika na Youtube jeszcze z gry FIFA18
                 </div>
+                <div class="alert alert-info" role="alert">
+                    <b>Pamiętaj!</b> W twojej drużynie powinni się znaleźć tylko Ci piłkarze, którzy rzeczywiście wyświetlają
+                    się w zakładce "DRUŻYNA" na Twoim koncie Menago League.
+                </div>
 
+
+                <div class="alert alert-danger" role="alert">
+                    <b>UWAGA!</b>Jeśli grasz zarówno w wersję nowej jak i starej generacji, bedziesz zmuszony przenosić
+                    swoich zawodników w obu tych wersjach.
+                </div>
 
             </div>
-            <div class="tutorial__img">
+        </div>
+
+        <div class="tutorial one">
+
+            <div class="tutorial__img mx-auto">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/skcLsskPkA8"
                         title="YouTube video player"
                         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -211,5 +227,4 @@
 
     </div>
 
-    {{-- <p> budowanie druzyny w grze fifa <a href="https://www.youtube.com/watch?v=skcLsskPkA8&t=11s">Tutaj</a></p> --}}
-@endsection
+    @endsection

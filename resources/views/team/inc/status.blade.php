@@ -25,7 +25,7 @@
 
                         <p class="overall">{{ $player->playerDetails->overall }}</p>
 
-                        <p class="role">Rotating</p>
+                        <p class="role">Nd.</p>
 
                         <div class="dropdown player-actions-container">
                             <button class="btn w-100 h-100 dropdown-toggle material-icons" type="button"
