@@ -19,6 +19,7 @@ return [
         'LW'    => 'LS',
         'RW'    => 'PS',
         'ST'    => 'N',
+        'CF'    => 'ŚN',
     ],
 
     'actions'   => [
@@ -73,7 +74,7 @@ return [
         'reactions' => 'Reakcje',
         'balance'   => 'Równowaga',
 
-        'power'     => 'POWER',
+        'power'     => 'SIŁA',
         'shotPower' => 'Siła Strzału',
         'jumping'   => 'Skoczność',
         'stamina'   => 'Wytrzymałość',

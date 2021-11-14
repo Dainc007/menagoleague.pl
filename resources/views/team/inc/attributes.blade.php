@@ -6,11 +6,14 @@
 
             <p class="name">{{__('team.table.name')}}</p>
 
+            <p class="overall">{{__('team.table.age')}}</p>
+
             <p class="overall">{{__('team.table.ovr')}}</p>
 
-            <p class="role">{{__('team.table.role')}}</p>
+            <p class="overall">{{__('team.table.nationality')}}</p>
 
-            <p class="action">{{__('team.table.act')}}</p>
+
+
         </div>
 
         <div class="player-attributes-content">
@@ -18,18 +21,18 @@
             @foreach ($user->team->players as $player)
 
             <div class="player-attributes-item">
-                <p class="pos">{{-- {{ $player->position }} --}} LM CM CAM</p>
+                <p class="pos">{{ __('player.positions.' . $player->playerDetails->bestPosition) }}</p>
 
                 <a class="name" href="{{ route('players.show', ['player' => $player]) }}">
-                    <img class="player-image" src="https://picsum.photos/50/50" alt="">
+                    <img class="player-image" src="{{env('PLAYER_SRC') . $player->playerDetails->id}}.png" alt="">
                     {{ $player->name }}
                 </a>
 
-                <p class="age">{{ $player->age }}</p>
+                <p class="age">{{ $player->playerDetails->age }}</p>
 
-                <p class="overall">{{ $player->overall }}</p>
+                <p class="overall">{{ $player->playerDetails->overall }}</p>
 
-                <p class="nationality">{{ $player->nationality }}</p>
+                <p class="nationality">{{ $player->playerDetails->nationality }}</p>
             </div>
 
             @endforeach

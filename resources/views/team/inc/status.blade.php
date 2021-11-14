@@ -15,15 +15,15 @@
             @if ($user->team->players !== null)
                 @foreach ($user->team->players as $player)
                     <div class="player-status-item">
-                        <p class="pos">{{ $player->position }}</p>
+                        <p class="pos">{{ __('player.positions.' . $player->playerDetails->bestPosition) }}</p>
 
                         <a class="name" href="{{ route('players.show', ['player' => $player]) }}">
                             <img class="player-image"
-                                src="https://fifastatic.fifaindex.com/FIFA21/images/players/5/158023.png" alt="">
+                                 src="{{env('PLAYER_SRC') . $player->playerDetails->id}}.png" alt="">
                             {{ $player->name }}
                         </a>
 
-                        <p class="overall">{{ $player->overall }}</p>
+                        <p class="overall">{{ $player->playerDetails->overall }}</p>
 
                         <p class="role">Rotating</p>
 

@@ -12,6 +12,8 @@ return [
         'ovr'        => 'OVR',
         'role'       => 'ROLA',
         'act'        => 'AKCJA',
+        'age'        => 'WIEK',
+        'nationality' => 'NARODOWOŚĆ',
     ],
 
     'empty' => 'W Twojej Druzynie nie ma obecnie piłkarzy.',

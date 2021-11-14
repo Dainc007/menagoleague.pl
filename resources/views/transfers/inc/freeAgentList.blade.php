@@ -12,16 +12,16 @@
             <div class="item">
                 <div class="position">{{ $player->position }}</div>
                 <div class="name">
-                    <img src="/images/placeholder-person.svg" alt="">
+                    <img src="{{env('PLAYER_SRC') . $player->playerDetails->id}}.png" alt="">
                     <p>{{ $player->name }}</p>
                 </div>
                 <div class="team">
-                    <p>Ready to hire</p>
+                    <p>Wolny zawodnik</p>
                 </div>
                 <div class="ovr">{{ $player->overall }}</div>
                 <div class="price">{{ rand(10000000, 100000000) }} $</div>
                 <div class="action dropdown">
-                    <button class="dropdown-toggle" type="button" id="dropdown{{ $player->id }}"
+                    <button disabled class="dropdown-toggle" type="button" id="dropdown{{ $player->id }}"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     </button>
                     @include('transfers.forms.actions')
@@ -33,16 +33,16 @@
             <div class="ritem">
                 <div class="position">{{ $player->position }}</div>
                 <div class="name">
-                    <img src="/images/placeholder-person.svg" alt="">
+                    <img src="{{env('PLAYER_SRC') . $player->playerDetails->id}}.png" alt="">
                     <p>{{ $player->name }}</p>
                 </div>
                 <div class="team">
-                    <p>Ready to hire</p>
+                    <p>Wolny Zawodnik</p>
                 </div>
                 <div class="ovr">{{ $player->overall }}</div>
                 <div class="price">{{ rand(10000000, 100000000) }} $</div>
                 <div class="action">
-                    <button class="dropdown-toggle" type="button" id="dropdown{{ $player->id }}"
+                    <button disabled class="dropdown-toggle" type="button" id="dropdown{{ $player->id }}"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     </button>
                     @include('transfers.forms.actions')
