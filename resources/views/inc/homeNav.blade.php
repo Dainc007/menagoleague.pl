@@ -26,17 +26,18 @@
 
         <div class="r-menu">
             <a class="btn {{ request()->segment(1) == 'central' ? 'active' : '' }}"
-                href="{{ route('login') }}">CENTRAL</a>
+               href="{{ route('central') }}">{{ __('nav.homeNav.central') }}</a>
             <a class="btn {{ request()->segment(1) == 'teams' ? 'active' : '' }}"
-                href="{{ route('team') }}">SQUAD</a>
+               href="{{ route('team') }}">{{ __('nav.homeNav.team') }}</a>
             <a class="btn {{ request()->segment(1) == 'transfers' ? 'active' : '' }}"
-                href="{{ route('transfers', 'transferListed') }}">TRANSFERS</a>
-            <div class="r-central-menu-item-alert">
-                <a class="btn {{ request()->segment(1) == 'office' ? 'active' : '' }}" href="">OFFICE</a>
+               href="{{ route('transfers', 'transferListed') }}">{{ __('nav.homeNav.transfers') }}</a>
+            <div class="central-menu-item-alert">
+                <a class="btn {{ request()->segment(1) == 'office' ? 'active' : '' }}"
+                   href="{{ route('office') }}">{{ __('nav.homeNav.office') }}</a>
                 <span class="notification">2</span>
             </div>
             <a class="btn {{ request()->segment(1) == 'seasons' ? 'active' : '' }}"
-                href="{{ route('season') }}">SEASON</a>
+               href="{{ route('season') }}">{{ __('nav.homeNav.season') }}</a>
         </div>
     </div>
 </div>
