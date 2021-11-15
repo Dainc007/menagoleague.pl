@@ -14,7 +14,7 @@
       @if($articles !== null)
       @foreach ($articles as $article)
       <div class="league-news-item" data-toggle="modal" data-target="#exampleModalLong{{$article->id}}">
-        <img class="league-news-item-img" src="{{url('/images/'. rand(1,8) .'.png')}}" alt="" />
+        <img class="league-news-item-img" src="{{url('/images/'. rand(1,2) .'.webp')}}" alt="" />
         <div class="league-news-item-shadow">
           <p class="league-news-item-p">{{$article->title}}</p>
         </div>
@@ -30,7 +30,7 @@
                 </button>
               </div>
               <div class="modal-body">
-                <img src="{{url('/images/'. rand(1,8) .'.png')}}" alt="" />
+                <img src="{{url('/images/'. rand(1,2) .'.webp')}}" alt="" />
                 <p> {{$article->content}}</p>
                 <h5 class="pt-3 pb-1 mb-1"><span> <small> Source: Sky Sports Menago </small></span>
                   <small>{{$article->created_at->format('d-m-Y')}}</small></h5>
@@ -50,7 +50,7 @@
 
     <div class="read-more-container">
       @foreach ($oldArticles as $article) <div class="read-more-item">
-        <img class="read-more-item-img" src="{{url('/images/'. rand(1,8) .'.png')}}" alt="" />
+        <img class="read-more-item-img" src="{{url('/images/'. rand(1,2) .'.webp')}}" alt="" />
         <div class="read-more-item-text">
           <p>{{$article->created_at->format('d-m-Y')}}</p>
 

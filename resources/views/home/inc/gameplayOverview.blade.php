@@ -5,7 +5,7 @@
         <div class="gameplay-overview-track">
             <!-- 1 -->
             <div class="gameplay-overview-item">
-                <img src="{{ asset('storage/gameplay/central.png') }}" alt="central" data-toggle="modal"
+                <img src="{{ asset('storage/gameplay/central.webp') }}" alt="central" data-toggle="modal"
                     data-target="#gameplay-1" />
                 <h3>{{ __('home.gameplay.1.header') }}</h3>
                 <p>
@@ -24,7 +24,7 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <img src="{{ asset('storage/gameplay/central.png') }}" alt="central" />
+                                <img src="{{ asset('storage/gameplay/central.webp') }}" alt="central" />
                             </div>
                         </div>
                     </div>
@@ -34,7 +34,7 @@
 
             <!-- 1 -->
             <div class="gameplay-overview-item">
-                <img src="{{ asset('storage/gameplay/team.png') }}" alt="team" data-toggle="modal"
+                <img src="{{ asset('storage/gameplay/team.webp') }}" alt="team" data-toggle="modal"
                     data-target="#gameplay-2" />
                 <h3>{{ __('home.gameplay.2.header') }}</h3>
                 <p>
@@ -53,7 +53,7 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <img src="{{ asset('storage/gameplay/team.png') }}" alt="team" />
+                                <img src="{{ asset('storage/gameplay/team.webp') }}" alt="team" />
                             </div>
                         </div>
                     </div>
@@ -61,7 +61,7 @@
             </div>
 
             <div class="gameplay-overview-item">
-                <img src="{{ asset('storage/gameplay/season.png') }}" alt="season" data-toggle="modal"
+                <img src="{{ asset('storage/gameplay/season.webp') }}" alt="season" data-toggle="modal"
                     data-target="#gameplay-3" />
                 <h3>{{ __('home.gameplay.3.header') }}</h3>
                 <p>
@@ -80,7 +80,7 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <img src="{{ asset('storage/gameplay/season.png') }}" alt="season" />
+                                <img src="{{ asset('storage/gameplay/season.webp') }}" alt="season" />
                             </div>
                         </div>
                     </div>
@@ -88,7 +88,7 @@
             </div>
 
             <div class="gameplay-overview-item">
-                <img src="{{ asset('storage/gameplay/office.png') }}" alt="office" data-toggle="modal"
+                <img src="{{ asset('storage/gameplay/office.webp') }}" alt="office" data-toggle="modal"
                     data-target="#gameplay-4" />
                 <h3>{{ __('home.gameplay.4.header') }}</h3>
                 <p>
@@ -107,7 +107,7 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <img src="{{ asset('storage/gameplay/office.png') }}" alt="office" />
+                                <img src="{{ asset('storage/gameplay/office.webp') }}" alt="office" />
                             </div>
                         </div>
                     </div>
@@ -115,7 +115,7 @@
             </div>
 
             <div class="gameplay-overview-item">
-                <img src="{{ asset('storage/gameplay/calendar.png') }}" alt="callendar" data-toggle="modal"
+                <img src="{{ asset('storage/gameplay/calendar.webp') }}" alt="callendar" data-toggle="modal"
                     data-target="#gameplay-5" />
                 <h3>{{ __('home.gameplay.5.header') }}</h3>
                 <p>
@@ -134,7 +134,7 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <img src="{{ asset('storage/gameplay/calendar.png') }}" alt="calendar" />
+                                <img src="{{ asset('storage/gameplay/calendar.webp') }}" alt="calendar" />
                             </div>
                         </div>
                     </div>
@@ -142,7 +142,7 @@
             </div>
 
             <div class="gameplay-overview-item">
-                <img src="{{ asset('storage/gameplay/playerView.png') }}" alt="playerView" data-toggle="modal"
+                <img src="{{ asset('storage/gameplay/playerView.webp') }}" alt="playerView" data-toggle="modal"
                     data-target="#gameplay-6" />
                 <h3>{{ __('home.gameplay.6.header') }}</h3>
                 <p>
@@ -161,7 +161,7 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <img src="{{ asset('storage/gameplay/playerView.png') }}" alt="player view" />
+                                <img src="{{ asset('storage/gameplay/playerView.webp') }}" alt="player view" />
                             </div>
                         </div>
                     </div>
