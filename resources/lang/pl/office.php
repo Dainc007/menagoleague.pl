@@ -49,6 +49,9 @@ return [
         'invitations'   => 'OTRZYMANE ZAPROSZENIA',
         'accept'    => 'AKCEPTUJ',
         'reject'    => 'ODRZUĆ',
+        'tooltip'   => 'Odwiecznym Rywalem zostaje się na całe życie. Maksymalna liczba rywali wynosi 5 osób.',
+        'acceptTooltip' => 'Odwiecznym Rywalem zostaje się na całe życie. Decyzji nie można cofnąć.',
+        'rejectTooltip' => 'Zastanów się. Decyzji nie można cofnąć!',
     ],
 
 ];

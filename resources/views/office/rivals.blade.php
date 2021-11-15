@@ -22,7 +22,7 @@
             @endforeach
         </select>
 
-        <input class="btn btn-sm btn-info bshadow" type="submit" value="{{ __('office.rivals.invite') }}">
+        <input class="btn btn-sm btn-info bshadow" type="submit" value="{{ __('office.rivals.invite') }}" data-toggle="tooltip" data-placement="bottom" title="{{__('office.rivals.tooltip')}}">
         @csrf
         @method('POST')
     </form>
@@ -33,9 +33,9 @@
             
             <form action="{{ route('rival.respond', ['id' => $invitation->pivot->id]) }}" method="POST">
                <p> {{$invitation->name}}
-                <button class="btn-sm btn-success" name="status"
+                <button class="btn-sm btn-success" name="status" data-toggle="tooltip" data-placement="bottom" title="{{__('office.rivals.acceptTooltip')}}"
                     value="accepted">{{ __('office.rivals.accept') }}</button>
-                <button class="btn-sm btn-danger" name="status"
+                <button class="btn-sm btn-danger" name="status" data-toggle="tooltip" data-placement="bottom" title="{{__('office.rivals.rejectTooltip')}}"
                     value="rejected">{{ __('office.rivals.reject') }}</button></p>
                 @csrf
                 @method('POST')
