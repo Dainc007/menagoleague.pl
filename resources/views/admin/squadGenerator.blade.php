@@ -5,14 +5,16 @@
         <div class="row">
             @foreach ($squads as $squad)
                 @php
-                    $avg = $squad->avg('overall');
-                    $pace = $squad->avg('paceTotal');
+                    $avg  = $squad->avg('overall');
+                    $pace = $squad->where('bestPostition', '!=', 'GK')->avg('paceTotal');
+                    $age  = $squad->avg('age');
                 @endphp
                 <div class="col-4 shadow bg-white">
                     <div class="row mb-3">
                         <div class="col text-center">
                             <h6> sredni ovr:{{ Str::limit($avg, 4, '') }}</h6>
                             <h6> srednie tempo:{{ Str::limit($pace, 4, '') }}</h6>
+                            <h6> srednia wieku:{{ Str::limit($age, 4, '') }}</h6>
                         </div>
                     </div>
 

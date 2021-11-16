@@ -63,7 +63,7 @@ return [
         'partner'    => 'Jeśli nie masz jeszcze sparing-partnera, mozesz znaleźć go na naszym:',
         'invite'     => 'Zaproś',
         'inviteSend' => 'Brawo Szefie! Przekazałem Twoje zaproszenie rywalowi.',
-        'inviteSend2' => 'Teraz musi je przyjąć, by następnie rozegrać mecz sparingowy zgodnie z wytycznymi
+        'inviteSend2' => 'Teraz Ty i Twój rywal musicie rozegrać mecz sparingowy zgodnie z wytycznymi
         opisanymi',
 
         'application'   => 'Przygotowałem dla Ciebie wniosek o przyznanie licencji trenerskiej.',
