@@ -14,7 +14,14 @@
       @if($articles !== null)
       @foreach ($articles as $article)
       <div class="league-news-item" data-toggle="modal" data-target="#exampleModalLong{{$article->id}}">
-        <img class="league-news-item-img" src="{{url('/images/'. rand(1,2) .'.webp')}}" alt="" />
+        <img class="league-news-item-img"
+             @if($article->id == 5)
+             src="{{url('/images/managers.png')}}"
+             @else
+             src="{{url('/images/'. rand(1,2) .'.webp')}}"
+             @endif
+             alt="" />
+
         <div class="league-news-item-shadow">
           <p class="league-news-item-p">{{$article->title}}</p>
         </div>
@@ -30,7 +37,12 @@
                 </button>
               </div>
               <div class="modal-body">
-                <img src="{{url('/images/'. rand(1,2) .'.webp')}}" alt="" />
+                <img
+                        @if($article->id == 5)
+                        src="{{url('/images/managers.png')}}"
+                        @else
+                        src="{{url('/images/'. rand(1,2) .'.webp')}}"
+                        @endif alt="" />
                 <p> {{$article->content}}</p>
                 <h5 class="pt-3 pb-1 mb-1"><span> <small> Source: Sky Sports Menago </small></span>
                   <small>{{$article->created_at->format('d-m-Y')}}</small></h5>
