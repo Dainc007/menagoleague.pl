@@ -16,9 +16,9 @@
       <div class="league-news-item" data-toggle="modal" data-target="#exampleModalLong{{$article->id}}">
         <img class="league-news-item-img"
              @if($article->id == 5)
-             src="{{url('/images/managers.png')}}"
+             src="{{url('/images/managers.webp')}}"
              @else
-             src="{{url('/images/'. rand(1,2) .'.webp')}}"
+             src="{{url('/images/'. rand(1,8) .'.webp')}}"
              @endif
              alt="" />
 
@@ -41,7 +41,7 @@
                         @if($article->id == 5)
                         src="{{url('/images/managers.png')}}"
                         @else
-                        src="{{url('/images/'. rand(1,2) .'.webp')}}"
+                        src="{{url('/images/'. rand(1,8) .'.webp')}}"
                         @endif alt="" />
                 <p> {{$article->content}}</p>
                 <h5 class="pt-3 pb-1 mb-1"><span> <small> Source: Sky Sports Menago </small></span>
@@ -62,7 +62,7 @@
 
     <div class="read-more-container">
       @foreach ($oldArticles as $article) <div class="read-more-item">
-        <img class="read-more-item-img" src="{{url('/images/'. rand(1,2) .'.webp')}}" alt="" />
+        <img class="read-more-item-img" src="{{url('/images/'. rand(1,8) .'.webp')}}" alt="" />
         <div class="read-more-item-text">
           <p>{{$article->created_at->format('d-m-Y')}}</p>
 
