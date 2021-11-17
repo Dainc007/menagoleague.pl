@@ -16,7 +16,7 @@ class HomeController extends Controller
     {
         return view('home.home', [
             'articles'         => Article::limit(4)->OrderByDesc('id')->get(),
-            'oldArticles'      => Article::skip(4)->take(6)->get(),
+            'oldArticles'      => Article::OrderByDesc('id')->skip(4)->take(6)->get(),
             'user'             => Auth::user(),
             'numOfUsers'       => User::max('id'),
             'numOfTeams'       => Team::where('is_active', true)->count(),
