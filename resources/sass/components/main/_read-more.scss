@@ -17,6 +17,7 @@
   display: flex;
   border-bottom: 1px solid black;
   padding: 15px 0 20px 0;
+  position: relative;
 }
 
 .read-more-item-img {
@@ -39,7 +40,14 @@
 
   p {
     font-size: 0.9em;
-    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+      width: 17px;
+      aspect-ratio: 1/1;
+    }
   }
 }
 

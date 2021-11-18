@@ -147,6 +147,22 @@
   .name {
     border-right: none;
     font-size: 1.1em;
+    display: block;
+    line-height: 265%;
+  }
+}
+
+.player-status-desc {
+  p {
+    text-align: center;
+  }
+}
+
+.player-attributes-desc {
+  p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 

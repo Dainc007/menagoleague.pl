@@ -10105,7 +10105,7 @@ h3 {
 }
 body {
   font-family: "BW Modelica";
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.882) 71.99%, rgba(206, 234, 211, 0.855) 87.12%, rgba(62, 73, 64, 0.9) 98.93%), url(/images/background.jpg);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.882) 71.99%, rgba(206, 234, 211, 0.855) 87.12%, rgba(62, 73, 64, 0.9) 98.93%), url(/images/background.webp);
   background-size: cover;
   min-height: 100vh;
 }
@@ -10871,6 +10871,7 @@ input[type=time] {
   display: flex;
   border-bottom: 1px solid black;
   padding: 15px 0 20px 0;
+  position: relative;
 }
 
 .read-more-item-img {
@@ -10892,7 +10893,13 @@ input[type=time] {
 }
 .read-more-item-text p {
   font-size: 0.9em;
-  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.read-more-item-text p img {
+  width: 17px;
+  aspect-ratio: 1/1;
 }
 
 .read-more-item-text-a {
@@ -11232,6 +11239,18 @@ a .btn-discord img {
 }
 .content .league-news-item:hover .league-news-item-img {
   transform: scale(1.1);
+}
+.content .league-news-item .device-img {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 0px 2px 2px 2px;
+}
+.content .league-news-item .device-img img {
+  width: 20px;
+  aspect-ratio: 1/1;
 }
 .content .league-news-item-img {
   width: 100%;
@@ -14596,6 +14615,18 @@ a .btn-discord img {
 .player-attributes-desc .name {
   border-right: none;
   font-size: 1.1em;
+  display: block;
+  line-height: 265%;
+}
+
+.player-status-desc p {
+  text-align: center;
+}
+
+.player-attributes-desc p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .player-image {
