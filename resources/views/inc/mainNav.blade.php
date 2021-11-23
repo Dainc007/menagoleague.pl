@@ -151,8 +151,9 @@
                                 {{ __('nav.mainNav.help') }} <span class="material-icons">arrow_right
                                 </span></button>
                             <div class="r-dropdown-menu">
-                                <a class="dropdown-item" href="#"> {{ __('nav.mainNav.rules') }}</a>
-                                <a class="dropdown-item" href="#"> {{ __('nav.mainNav.FAQ') }}</a>
+                                <a class="dropdown-item" href="{{ route('rules') }}"> {{ __('nav.mainNav.rules') }}</a>
+                                <a class="dropdown-item" href="{{ route('faq') }}"> {{ __('nav.mainNav.FAQ') }}</a>
+                                <a class="dropdown-item" href="{{ route('help.tutorial') }}">Poradnik</a>
                             </div>
                         </div>
 

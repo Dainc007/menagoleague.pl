@@ -8,6 +8,7 @@ use App\Models\Fixture;
 use App\Models\League;
 use App\Models\Team;
 use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
@@ -54,4 +55,5 @@ class HomeController extends Controller
     {
         return view('help.privacy');
     }
+
 }

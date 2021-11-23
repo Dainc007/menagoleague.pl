@@ -14,7 +14,7 @@ use RealRashid\SweetAlert\Facades\Alert;
 class AdminController extends Controller
 {
     public function __construct()
-    {
+    {       //todo
 /*         $this->middleware('auth');
         $this->middleware('administrator'); */
     }
@@ -96,7 +96,7 @@ class AdminController extends Controller
     {
         $service = (new SquadGeneratorService());
 
-        $squads = $service->generateTeams(61);
+        $squads = $service->generateTeams(4);
 
         return view('admin.squadGenerator', ['squads' => $squads]);
     }

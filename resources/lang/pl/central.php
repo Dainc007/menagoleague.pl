@@ -88,7 +88,7 @@ return [
 
         'raport'    => [
             'afterGame'     => 'Raport Pomeczowy',
-            'after1stHalf'  => 'Po Pierwsej Połowie',
+            'after1stHalf'  => 'Po Pierwszsej Połowie',
             'fair-play'     => 'Dowód Uczciwej Gry',
         ],
 
