@@ -1,0 +1,26 @@
+.squad {
+  width: 100%;
+  background-color: rgba(255, 253, 253, 0.7);
+  border-top: 3px solid $text-hippieGreen;
+  border-top-right-radius: 5px;
+
+  .legend,
+  .info {
+    padding: 0 15px;
+  }
+
+  .legend {
+    font-size: 1.1em;
+    background-color: $text-paleLeaf;
+    font-weight: 600;
+    height: 30px;
+    display: flex;
+    align-items: center;
+  }
+
+  .info {
+    .item {
+      padding: 4px 0;
+    }
+  }
+}

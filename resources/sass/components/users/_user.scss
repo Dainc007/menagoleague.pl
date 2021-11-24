@@ -1,0 +1,83 @@
+.user-info {
+  &__general {
+    background-color: $sectionColor;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    flex-direction: column;
+    gap: 30px;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+
+    .general {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+
+        > div {
+          padding-left: 15px;
+        }
+      }
+
+      > img {
+        width: 130px;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+      }
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .name {
+        font-size: 2em;
+        font-weight: 700;
+      }
+    }
+
+    .device {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+
+      img {
+        width: 25px;
+      }
+
+      p {
+        font-weight: 600;
+      }
+    }
+
+    .team {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2em;
+      font-weight: 600;
+
+      img {
+        width: 64px;
+        aspect-ratio: 1/1;
+        object-fit: contain;
+      }
+
+      p {
+        text-align: center;
+      }
+    }
+  }
+}

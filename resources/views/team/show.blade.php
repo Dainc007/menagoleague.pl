@@ -4,7 +4,11 @@
 
 @section('content')
 
-    @include('team.inc.teamInfo')
+    <section class="general-team-info">
+        @include('team.inc.teamInfo')
+
+        @include('team.inc.table')
+    </section>
 
 @endsection
 

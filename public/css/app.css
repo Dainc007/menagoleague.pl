@@ -11846,21 +11846,24 @@ a .btn-discord img {
 .transfer-forms .nav-tabs,
 .squad-team-management .nav-tabs,
 .ranking-content .nav-tabs,
-.internationalCup-content .nav-tabs {
+.internationalCup-content .nav-tabs,
+.general-team-info .nav-tabs {
   position: relative;
 }
 .players .nav-tabs .nav-item,
 .transfer-forms .nav-tabs .nav-item,
 .squad-team-management .nav-tabs .nav-item,
 .ranking-content .nav-tabs .nav-item,
-.internationalCup-content .nav-tabs .nav-item {
+.internationalCup-content .nav-tabs .nav-item,
+.general-team-info .nav-tabs .nav-item {
   margin-right: 2px;
 }
 .players .nav-tabs .nav-item .nav-link,
 .transfer-forms .nav-tabs .nav-item .nav-link,
 .squad-team-management .nav-tabs .nav-item .nav-link,
 .ranking-content .nav-tabs .nav-item .nav-link,
-.internationalCup-content .nav-tabs .nav-item .nav-link {
+.internationalCup-content .nav-tabs .nav-item .nav-link,
+.general-team-info .nav-tabs .nav-item .nav-link {
   margin-bottom: -2px;
   border: 1px solid transparent;
   color: #494949;
@@ -11872,7 +11875,8 @@ a .btn-discord img {
 .transfer-forms .nav-tabs .nav-item .nav-link:hover,
 .squad-team-management .nav-tabs .nav-item .nav-link:hover,
 .ranking-content .nav-tabs .nav-item .nav-link:hover,
-.internationalCup-content .nav-tabs .nav-item .nav-link:hover {
+.internationalCup-content .nav-tabs .nav-item .nav-link:hover,
+.general-team-info .nav-tabs .nav-item .nav-link:hover {
   background-color: #558c47;
   border-color: #558c47;
   color: whitesmoke;
@@ -11881,7 +11885,8 @@ a .btn-discord img {
 .transfer-forms .nav-tabs .responsive-tab-menu,
 .squad-team-management .nav-tabs .responsive-tab-menu,
 .ranking-content .nav-tabs .responsive-tab-menu,
-.internationalCup-content .nav-tabs .responsive-tab-menu {
+.internationalCup-content .nav-tabs .responsive-tab-menu,
+.general-team-info .nav-tabs .responsive-tab-menu {
   position: absolute;
   right: 5px;
   top: 5px;
@@ -11896,7 +11901,9 @@ a .btn-discord img {
 .ranking-content .nav-tabs .nav-link.active,
 .ranking-content .nav-tabs .nav-item.show .nav-link,
 .internationalCup-content .nav-tabs .nav-link.active,
-.internationalCup-content .nav-tabs .nav-item.show .nav-link {
+.internationalCup-content .nav-tabs .nav-item.show .nav-link,
+.general-team-info .nav-tabs .nav-link.active,
+.general-team-info .nav-tabs .nav-item.show .nav-link {
   color: white;
   background-color: #558c47;
   border-color: #558c47;
@@ -12646,6 +12653,28 @@ a .btn-discord img {
     margin: 1rem;
   }
 }
+.squad {
+  width: 100%;
+  background-color: rgba(255, 253, 253, 0.7);
+  border-top: 3px solid #558c47;
+  border-top-right-radius: 5px;
+}
+.squad .legend,
+.squad .info {
+  padding: 0 15px;
+}
+.squad .legend {
+  font-size: 1.1em;
+  background-color: #bcd4b6;
+  font-weight: 600;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+.squad .info .item {
+  padding: 4px 0;
+}
+
 /* Teams components*/
 .ranking-content h1 {
   font-size: 4.5em;
@@ -13666,6 +13695,82 @@ a .btn-discord img {
     font-size: 4em;
   }
 }
+/* League Winners History components */
+.user-info__general {
+  background-color: rgba(255, 253, 253, 0.7);
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  flex-direction: column;
+  gap: 30px;
+}
+@media (min-width: 768px) {
+  .user-info__general {
+    flex-direction: row;
+  }
+}
+.user-info__general .general {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+@media (min-width: 768px) {
+  .user-info__general .general {
+    flex-direction: row;
+  }
+  .user-info__general .general > div {
+    padding-left: 15px;
+  }
+}
+.user-info__general .general > img {
+  width: 130px;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.user-info__general .general > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.user-info__general .general .name {
+  font-size: 2em;
+  font-weight: 700;
+}
+.user-info__general .device {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.user-info__general .device img {
+  width: 25px;
+}
+.user-info__general .device p {
+  font-weight: 600;
+}
+.user-info__general .team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+.user-info__general .team img {
+  width: 64px;
+  aspect-ratio: 1/1;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.user-info__general .team p {
+  text-align: center;
+}
+
 /* League Winners History components */
 /* Game components */
 .central-advance {
