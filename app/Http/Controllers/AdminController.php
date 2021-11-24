@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Services\SquadGeneratorService;
 use App\Models\JobApplication;
 use App\Models\PlayerDetails;
+use File;
 use App\Models\Role;
 use App\Models\Tutorial;
 use Illuminate\Http\Request;
@@ -14,9 +15,9 @@ use RealRashid\SweetAlert\Facades\Alert;
 class AdminController extends Controller
 {
     public function __construct()
-    {       //todo
-/*         $this->middleware('auth');
-        $this->middleware('administrator'); */
+    {
+        $this->middleware('auth');
+        $this->middleware('administrator');
     }
 
     public function index()
@@ -94,10 +95,24 @@ class AdminController extends Controller
 
     public function squadGenerator()
     {
+        if(DB::table('squads')->find(1))
+        {
+            return;
+        }
+
         $service = (new SquadGeneratorService());
+        $squads = $service->generateTeams(61);
 
-        $squads = $service->generateTeams(4);
+        foreach($squads as $squad)
+        {   $string = '';
+            $squad = $squad->pluck('id')->toArray();
+            foreach($squad as $key => $value)
+            {
+                $string .= "$value,";
+            }
 
-        return view('admin.squadGenerator', ['squads' => $squads]);
+            DB::table('squads')->insert(['squad' => $string, 'created_at' => now(), 'updated_at' => now()]);
+        }
     }
+
 }

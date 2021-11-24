@@ -98,6 +98,9 @@ Route::prefix('/teams')->group(function () {
 
     Route::post('/application/{id}', [App\Http\Controllers\TeamController::class, 'apply'])
         ->name('team.application');
+
+    Route::post('/squadGenerator', [App\Http\Controllers\TeamController::class, 'squadGenerator'])
+        ->name('team.squadGenerator');
 });
 
 Route::prefix('/transfers')->group(function () {
@@ -220,9 +223,9 @@ Route::prefix('/admin')->group(function () {
 
     Route::post('/jobApplications/respond/{id}', [App\Http\Controllers\AdminController::class, 'JobApplicationRespond'])
         ->name('admin.jobApplication.respond')->middleware('administrator');
-    //todo
+
     Route::get('/squadGenerator', [App\Http\Controllers\AdminController::class, 'squadGenerator'])
-        ->name('admin.squadGenerator')/*->middleware('administrator')*/;
+        ->name('admin.squadGenerator')->middleware('administrator');
 });
 
 /* Notifications */

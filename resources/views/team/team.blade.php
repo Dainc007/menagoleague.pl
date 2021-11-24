@@ -6,8 +6,11 @@
 
     @if ($user->team)
         <div class="squad-content">
-            @include('team.inc.teamManagement')
-
+            @if($user->team->players->count() > 0)
+                @include('team.inc.teamManagement')
+                @else
+                @include('team.inc.generateFirstSquadForm')
+                @endif
         </div>
     @endif
 
