@@ -12,7 +12,7 @@
             <div class="info">
                 <p class="name">{{ $player->name }}</p>
                 <div class="about">
-                    <div class="squareNum">{{ rand(80, 100) }}</div>
+                    <div class="squareNum">{{ $player->playerDetails->overall }}</div>
                     <div>
                         <p>{{ __('player.positions.' . $player->playerDetails->bestPosition) }}
                             ({{ $player->team->name ?? 'Wolny Zawodnik' }})</p>

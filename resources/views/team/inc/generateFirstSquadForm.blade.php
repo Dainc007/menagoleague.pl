@@ -1,19 +1,6 @@
 @if($squads->count() != null)
 
     <div class="container">
-
-        <div class="row">
-            <form method="POST" action="{{route('team.squadGenerator')}}">
-                <select class="custom-select" name="squad">
-                    <option value="0" selected>Skład 1</option>
-                    <option value="1">Skład 2</option>
-                    <option value="2">Skład 3</option>
-                </select>
-                <button type="submit" class="btn btn-success" name="generate">Wybieram Skład</button>
-                @csrf
-            </form>
-        </div>
-
         <div class="row">
             @php($i =1)
             @foreach($squads as $squad)
@@ -30,6 +17,20 @@
             @endforeach
         </div>
 
+
+        <div class="row mt-3">
+            <div class="col-sm col-lg-6 mx-auto">
+                <form method="POST" action="{{route('team.squadGenerator')}}">
+                    <select class="custom-select" name="squad">
+                        <option value="0" selected>Skład 1</option>
+                        <option value="1">Skład 2</option>
+                        <option value="2">Skład 3</option>
+                    </select>
+                    <button type="submit" class="btn btn-success w-100" name="generate">Wybieram Skład</button>
+                    @csrf
+                </form>
+            </div>
+        </div>
     </div>
 
 @else

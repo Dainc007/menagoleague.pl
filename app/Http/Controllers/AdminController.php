@@ -97,7 +97,7 @@ class AdminController extends Controller
     {
         if(DB::table('squads')->find(1))
         {
-            return;
+            return back();
         }
 
         $service = (new SquadGeneratorService());

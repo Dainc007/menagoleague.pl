@@ -83,18 +83,10 @@ class TeamController extends Controller
 
     public function squadGenerator(Request $request)
     {
-        if($request['squad'])
+        if(isset($request['squad']))
         {
-            $ids = DB::table('squads')->where('user_id', Auth::user()->id)->pluck('id')->toArray();
-            unset($ids[$request['squad']]);
-            DB::table('squads')->whereIn('id', $ids)->update(['user_id' => null]);
-
-            $playerDetailIds = DB::table('squads')->where('user_id', Auth::user()->id)->first();
-            $playerDetailIds = explode(',' , $playerDetailIds->squad);
-            unset($playerDetailIds[18]);
-            $playersIds = Player::where('device_id', Auth::user()->device_id)->whereIn('playerDetails_id', $playerDetailIds)->pluck('id')->toArray();
-
-            Player::whereIn('id', $playersIds)->update(['team_id' => Auth::user()->team->id]);
+            $this->pickSquad($request['squad']);
+            $this->setPlayersToTeam();
 
             return back();
         }
@@ -115,6 +107,26 @@ class TeamController extends Controller
         $squads = DB::table('squads')->whereIn('id', $ids->toArray())->get();
 
         return back();
+    }
+
+
+    private function pickSquad(int $key)
+    {
+        $ids = DB::table('squads')->where('user_id', Auth::user()->id)->pluck('id')->toArray();
+        unset($ids[$key]);
+        DB::table('squads')->whereIn('id', $ids)->update(['user_id' => null]);
+    }
+
+    private function setPlayersToTeam()
+    {
+
+        $playerDetailIds = DB::table('squads')->where('user_id', Auth::user()->id)->first();
+        $playerDetailIds = explode(',' , $playerDetailIds->squad);
+        unset($playerDetailIds[18]);
+        $playersIds = Player::where('device_id', Auth::user()->device_id)
+            ->whereIn('playerDetails_id', $playerDetailIds)
+            ->where('team_id', null)->pluck('id')->toArray();
+        Player::whereIn('id', $playersIds)->update(['team_id' => Auth::user()->team->id]);
     }
 
     private function getSquads()
