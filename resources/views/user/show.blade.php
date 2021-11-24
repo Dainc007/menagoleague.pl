@@ -1,7 +1,15 @@
-{{$user->name}}
+{{-- {{$user->name}}
 {{$user->email}}
 {{$user->device}}
-@foreach($user->teams as $team)
+@foreach ($user->teams as $team)
 {{$team->name}}
 {{$team->pivot->contract_sign_at}} - {{$team->pivot->contract_expires}}
-@endforeach
+@endforeach --}}
+
+@extends('layouts.homeLayout')
+
+@section('content')
+
+
+
+@endsection

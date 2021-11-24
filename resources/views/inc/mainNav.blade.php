@@ -6,15 +6,15 @@
 
         <div class="menu">
             <div class="dropdown">
-                @if(!Auth::user())
+                @if (!Auth::user())
                     <a href="/#about" class="dropdown-link">
                         {{ __('nav.mainNav.whatAreWe') }}
                     </a>
-                    @else
-                    <a href="{{route('central')}}" class="dropdown-link">
+                @else
+                    <a href="{{ route('central') }}" class="dropdown-link">
                         Centrala
                     </a>
-                    @endif
+                @endif
             </div>
             <div class="dropdown">
 
@@ -103,12 +103,12 @@
 
                     <div class="r-menu">
                         <div class="r-dropdown">
-                            @if(!Auth::user())
+                            @if (!Auth::user())
                                 <a href="/#about" class="dropdown-link">
                                     {{ __('nav.mainNav.whatAreWe') }}
                                 </a>
                             @else
-                                <a href="{{route('central')}}" class="dropdown-link">
+                                <a href="{{ route('central') }}" class="dropdown-link">
                                     Centrala
                                 </a>
                             @endif
@@ -151,8 +151,10 @@
                                 {{ __('nav.mainNav.help') }} <span class="material-icons">arrow_right
                                 </span></button>
                             <div class="r-dropdown-menu">
-                                <a class="dropdown-item" href="{{ route('rules') }}"> {{ __('nav.mainNav.rules') }}</a>
-                                <a class="dropdown-item" href="{{ route('faq') }}"> {{ __('nav.mainNav.FAQ') }}</a>
+                                <a class="dropdown-item" href="{{ route('rules') }}">
+                                    {{ __('nav.mainNav.rules') }}</a>
+                                <a class="dropdown-item" href="{{ route('faq') }}">
+                                    {{ __('nav.mainNav.FAQ') }}</a>
                                 <a class="dropdown-item" href="{{ route('help.tutorial') }}">Poradnik</a>
                             </div>
                         </div>

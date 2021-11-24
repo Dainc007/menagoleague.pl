@@ -51,6 +51,7 @@ nav {
     display: flex;
     align-items: center;
     transition: all 1s;
+    height: 100%;
     .show {
       flex-direction: column !important;
     }
@@ -73,6 +74,10 @@ nav {
     border: none;
     transition: color 0.3s;
     width: 100%;
+
+    span {
+      font-size: 1.5em;
+    }
   }
   .dropdown-menu {
     opacity: 0;

@@ -10355,6 +10355,7 @@ nav ul {
   display: flex;
   align-items: center;
   transition: all 1s;
+  height: 100%;
 }
 .menu .dropdown .show {
   flex-direction: column !important;
@@ -10375,6 +10376,9 @@ nav ul {
   border: none;
   transition: color 0.3s;
   width: 100%;
+}
+.menu .dropdown-link span {
+  font-size: 1.5em;
 }
 .menu .dropdown-menu {
   opacity: 0;
