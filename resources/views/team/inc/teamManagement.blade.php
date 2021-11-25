@@ -1,5 +1,9 @@
 <div class="squad-team-management">
-    
+
+    <div class="alert alert-info" role="alert">
+        <b>Podpowiedź:</b> Jeśli nie wiesz jak przenieść swój skład do gry FIFA, zerknij <a href="https://menagoleague.pl/help/tutorial#squadBuilder" class="alert-link">TUTAJ</a>.
+    </div>
+
     <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">
             <a class="nav-link active" id="status-tab" data-toggle="tab" href="#status" role="tab"

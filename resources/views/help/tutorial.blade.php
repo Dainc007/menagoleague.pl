@@ -215,7 +215,7 @@
             </div>
         </div>
 
-        <div class="tutorial one">
+        <div class="tutorial one" id="squadBuilder">
 
             <div class="tutorial__img mx-auto">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/skcLsskPkA8"

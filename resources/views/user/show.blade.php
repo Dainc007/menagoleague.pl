@@ -8,22 +8,26 @@
                 <img src="/images/placeholder-person.svg" alt="">
                 <div>
                     <div>
-                        <p class="name">Fronikuniu</p>
+                        <p class="name">{{$user->name}}</p>
                         <div class="device">
                             <img src="/images/xbox-icon.svg" alt="">
                             {{-- <img src="/images/pc-icon.svg" alt=""> --}}
                             {{-- <img src="/images/playstation-icon.svg" alt=""> --}}
-                            <p class="version">Old-gen</p>
+                            <p class="version">{{$user->version}}</p>
                         </div>
                     </div>
 
-                    <p class="reg-data">Data rejestracji: 24.11.2021r.</p>
+                    <p class="reg-data">{{$user->created_at}}</p>
                 </div>
             </div>
 
             <div class="team">
-                <img src="/images/shield.png" alt="">
-                <p class="team">Arsenal</p>
+                @if($user->team)
+                    <a href="{{route('teams.show', $user->team->id)}}">
+                        <img src="{{ env('TEAM_SRC') }}{{ $user->team->sofifa_id ?? '111592' }}.png">
+                        <p class="team">{{$user->team->name}}</p>
+                    </a>
+                    @endif
             </div>
         </div>
 

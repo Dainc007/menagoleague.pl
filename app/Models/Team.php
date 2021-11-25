@@ -67,4 +67,17 @@ class Team extends Model
     {
         return $this->fixtures = $this->fixturesAsHost->merge($this->fixturesAsVisitor);
     }
+
+    public function getTeamPlayersAvg($column)
+    {/*
+        $array = [];
+        foreach($this->players() as $player)
+        {
+            $age = $player->playerDetails->age;
+            $array[] = $age;
+        }
+        $collection = collect($age);
+        return avg($collection);*/
+        return 10;
+    }
 }

@@ -77,6 +77,11 @@ class User extends Authenticatable
         return $this->hasOne(Team::class);
     }
 
+    public function device()
+    {
+        return $this->belongsTo(Device::class);
+    }
+
     public function teams()
     {
         return $this->belongsToMany(Team::class)->withPivot('contract_sign_at', 'contract_expires');
@@ -139,7 +144,7 @@ class User extends Authenticatable
 
     public function getRecommendedUsers()
     {
-        return User::where('recommendation_id', Auth::user()->id)->count();
+        return User::where('recommendation_id', Auth::user()->id)->get();
     }
 
     /* Rivals */

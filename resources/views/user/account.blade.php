@@ -39,9 +39,36 @@
 
                                 @else
                                 <td>Konsola:</td>
-                                <td>{{$personal_data->device}}</td>
+                                <td>{{$personal_data->device->device}}</td>
                                 @endif
                             </tr>
+
+
+                            <tr>
+                                <td>Wersja Fify:</td>
+                                <td>{{$personal_data->version}}</td>
+                            </tr>
+
+                            <tr>
+                                <td>Poleceni gracze:</td>
+                                <td>
+                                    @foreach($personal_data->getRecommendedUsers() as $user)
+                                        <a href="{{route('user.show', $user->id)}}">{{$user->name}}, </a>
+                                    @endforeach
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Odwieczni Rywale:</td>
+                                <td>
+                                    @foreach($personal_data->rivals as $rival)
+                                        <a href="{{route('user.show', $rival->id)}}">{{$rival->name}}, </a>
+                                    @endforeach
+                                </td>
+                            </tr>
+
+
+
                         </tbody>
                     </table>
                 </div>

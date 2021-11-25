@@ -1,12 +1,13 @@
 <div class="teamInfo">
-    <div class="r-content">
-<!--        <div class="trophies">
+    <div class="r-content">@if(1>2)
+            <div class="trophies">
                 <div class="trophy" data-toggle="tooltip" data-placement="top"
-                    title='Gets {{ rand(1, 10) }} trophies!'>
+                     title='Gets {{ rand(1, 10) }} trophies!'>
                     <img src="/images/trophy.svg" alt="">
                     <p class="number">{{ rand(1, 10) }}</p>
                 </div>
-        </div>-->
+            </div>
+        @endif
         <div class="player">
             <img src="{{ env('TEAM_SRC') }}{{ $team->sofifa_id ?? '111592' }}.png">
             <div class="info">
@@ -14,16 +15,23 @@
                 <div>
                     <table>
                         <tr>
-                            <td>Lista zawodników: <span>{{ $team->players->count() }}</span>
+                            <td>Liczba zawodników: <span>{{ $team->players->count() }}</span>
                         </tr>
                         <tr>
-                            <td>Średnia wieku: <span>Nieznana</span></td>
+                            <td>Średnia wieku: <span>{{$team->getTeamPlayersAvg('age')}}</span></td>
                         </tr>
                         <tr>
                             <td>Stadion: <span> W budowie </span><small> (0 miejsc)</small></td>
                         </tr>
                         <tr>
                             <td colspan="2">Aktualny bilans transferowy: <span>{{$team->budget}}</span></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Manager: <span>
+                                    <a href="{{route('user.show', $team->user->id)}}">
+                                        {{$team->user->name ?? 'Brak'}}
+                                    </a>
+                                </span></td>
                         </tr>
                     </table>
                 </div>
@@ -35,18 +43,20 @@
         <div class="player">
             <img src="{{ env('TEAM_SRC') }}{{ $team->sofifa_id ?? '111592' }}.png">
             <div class="info">
-<!--                <div class="trophies">
+                @if(1>2)
+                    <div class="trophies">
                         <div class="trophy" data-toggle="tooltip" data-placement="top"
-                            title='Gets {{ rand(1, 10) }} trophies!'>
+                             title='Gets {{ rand(1, 10) }} trophies!'>
                             <img src="/images/trophy.svg" alt="">
                             <p class="number">{{ rand(1, 10) }}</p>
                         </div>
-                </div>-->
+                    </div>
+                    @endif
                 <p class="name">{{ $team->name }}</p>
                 <div>
                     <table>
                         <tr>
-                            <td>Lista zawodników: <span>{{ $team->players->count() }}</span>
+                            <td>Liczba zawodników: <span>{{ $team->players->count() }}</span>
                         </tr>
                         <tr>
                             <td>Średnia wieku: <span>Nieznana</span></td>
@@ -56,6 +66,14 @@
                         </tr>
                         <tr>
                             <td colspan="2">Aktualny bilans transferowy: <span>{{$team->budget ?? 0}}</span></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2">Manager: <span>
+                                    <a href="{{route('user.show', $team->user->id)}}">
+                                        {{$team->user->name ?? 'Brak'}}
+                                    </a>
+                                </span></td>
                         </tr>
                     </table>
                 </div>

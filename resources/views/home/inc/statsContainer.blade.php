@@ -14,13 +14,13 @@
             <div class="menagoleague-stats-container">
 
                 <div class="menagoleague-stats-content-item">
-                    <p class="menagoleague-stats-content-item-number">{{ $numOfTeams ?? '0' }}</p>
-                    <p class="menagoleague-stats-content-item-desc">{{ __('home.stats.teams') }}</p>
+                    <p class="menagoleague-stats-content-item-number">{{ $numOfUsers ?? '0' }}</p>
+                    <p class="menagoleague-stats-content-item-desc">{{ __('home.stats.users') }}</p>
                 </div>
 
                 <div class="menagoleague-stats-content-item">
-                    <p class="menagoleague-stats-content-item-number">{{ $numOfUsers ?? '0' }}</p>
-                    <p class="menagoleague-stats-content-item-desc">{{ __('home.stats.users') }}</p>
+                    <p class="menagoleague-stats-content-item-number">{{ $numOfTeams ?? '0' }}</p>
+                    <p class="menagoleague-stats-content-item-desc">{{ __('home.stats.teams') }}</p>
                 </div>
 
                 <div class="menagoleague-stats-content-item">

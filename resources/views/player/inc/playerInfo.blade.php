@@ -15,7 +15,8 @@
                     <div class="squareNum">{{ $player->playerDetails->overall }}</div>
                     <div>
                         <p>{{ __('player.positions.' . $player->playerDetails->bestPosition) }}
-                            ({{ $player->team->name ?? 'Wolny Zawodnik' }})</p>
+                            <a href="{{route('teams.show', $player->team->id)}}">({{ $player->team->name ?? 'Wolny Zawodnik' }})</a>
+                        </p>
                         <p>{{ __('player.age') }}: {{ $player->playerDetails->age }} {{ __('player.years') }} <span>
                                 {{ __('player.height') }}: {{ $player->playerDetails->height }}cm
                                 {{ __('player.weight') }}: {{ $player->playerDetails->weight }}kg</span></p>
@@ -41,7 +42,8 @@
                     <div class="squareNum">{{ $player->playerDetails->overall }}</div>
                     <div>
                         <p>{{ __('player.positions.' . $player->playerDetails->bestPosition) }}
-                            ({{ $player->team->name ?? 'Wolny Zawodnik' }})</p>
+                            <a href="{{route('teams.show', $player->team->id)}}">({{ $player->team->name ?? 'Wolny Zawodnik' }})</a>
+                        </p>
                         <p>{{ __('player.age') }}: {{ $player->playerDetails->age }} {{ __('player.years') }} <span>
                                 {{ __('player.height') }}: {{ $player->playerDetails->height }}cm
                                 {{ __('player.weight') }}: {{ $player->playerDetails->weight }}kg</span></p>

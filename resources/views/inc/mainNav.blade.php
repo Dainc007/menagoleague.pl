@@ -120,12 +120,9 @@
                                 aria-expanded="false">{{ __('nav.mainNav.tablesAndFixtures') }}<span
                                     class="material-icons"> arrow_right</span></button>
                             <div class="r-dropdown-menu">
-                                <a href="{{ route('competition.show', 1) }}">{{ __('nav.mainNav.england') }}</a>
-                                <a href="{{ route('competition.show', 1) }}">{{ __('nav.mainNav.spain') }}</a>
-                                <a href="{{ route('competition.show', 1) }}">{{ __('nav.mainNav.poland') }}</a>
-                                <a href="{{ route('competition.show', 1) }}">{{ __('nav.mainNav.italy') }}</a>
-                                <a href="{{ route('competition.show', 1) }}">{{ __('nav.mainNav.champions') }}</a>
-                                <a href="{{ route('competition.show', 1) }}">{{ __('nav.mainNav.europe') }}</a>
+                                @foreach ($activeCompetitions as $key => $value)
+                                    <a href="{{ route('competition.show', $value ?? '0') }}">{{ __('nav.mainNav.' . $key) }}</a>
+                                @endforeach
                             </div>
                         </div>
                         <div class="r-dropdown">
