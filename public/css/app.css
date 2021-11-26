@@ -11601,6 +11601,9 @@ a .btn-discord img {
 .leagueInfo .table .team-info {
   width: 50%;
 }
+.leagueInfo .table .team-info a {
+  color: #494949;
+}
 .leagueInfo .table .team-info .legend .ID {
   width: 20%;
 }

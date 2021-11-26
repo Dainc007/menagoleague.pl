@@ -15,6 +15,7 @@
                         <a href="{{ route('teams.show', $row->team->id) }}">
                             <img class="shield" src="{{ env('TEAM_SRC') }}{{ $row->team->sofifa_id }}.png">
                             {{ $row->team->name }}
+                            aaaaaaaaaaaaaaaaaaaa
                         </a>
                     </div>
                 </div>

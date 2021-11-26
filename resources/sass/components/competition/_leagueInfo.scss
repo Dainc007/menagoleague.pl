@@ -47,6 +47,10 @@
     .team-info {
       width: 50%;
 
+      a {
+        color: $text-gray;
+      }
+
       .legend {
         .ID {
           width: 20%;

@@ -6,17 +6,17 @@
 @section('content')
     <div class="competition-content">
 
-        @if ($competition->league && $competition->league->type == 'league')
-            @include('competition.inc.leagueInfo')
+        {{-- @if ($competition->league && $competition->league->type == 'league') --}}
+        @include('competition.inc.leagueInfo')
 
-            @include('season.inc.topScorers')
+        @include('season.inc.topScorers')
 
-            @include('season.inc.topAsists')
+        @include('season.inc.topAsists')
 
-            @include('season.inc.cleanSheets')
+        @include('season.inc.cleanSheets')
 
-            @include('season.inc.cards')
-        @endif
+        @include('season.inc.cards')
+        {{-- @endif --}}
     </div>
 @endsection
 
