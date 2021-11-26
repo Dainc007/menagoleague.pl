@@ -4,20 +4,20 @@
 
 
 @section('content')
-<div class="competition-content">
-    
-    @if($competition->league && $competition->league->type == 'league')
-    @include('competition.inc.leagueInfo')
+    <div class="competition-content">
 
-    @include('season.inc.topScorers')
+        @if ($competition->league && $competition->league->type == 'league')
+            @include('competition.inc.leagueInfo')
 
-    @include('season.inc.topAsists')
+            @include('season.inc.topScorers')
 
-    @include('season.inc.cleanSheets')
+            @include('season.inc.topAsists')
 
-    @include('season.inc.cards')
-    @endif
-</div>
+            @include('season.inc.cleanSheets')
+
+            @include('season.inc.cards')
+        @endif
+    </div>
 @endsection
 
 

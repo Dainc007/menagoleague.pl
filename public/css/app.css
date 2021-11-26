@@ -11624,10 +11624,6 @@ a .btn-discord img {
   background-color: #0092c1;
   color: white;
 }
-.leagueInfo .table .team-info .item:nth-of-type(6) .ID {
-  background-color: #32b726;
-  color: white;
-}
 .leagueInfo .table .team-info .item .ID,
 .leagueInfo .table .team-info .item .name {
   height: 100%;
@@ -11651,6 +11647,12 @@ a .btn-discord img {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+}
+.leagueInfo .table .team-info .item .shield {
+  width: 25px;
+  aspect-ratio: 1/1;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .leagueInfo .table .team-stats {
   width: 50%;

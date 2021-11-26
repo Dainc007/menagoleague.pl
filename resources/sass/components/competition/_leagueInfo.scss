@@ -68,12 +68,12 @@
           }
         }
 
-        &:nth-of-type(6) {
-          .ID {
-            background-color: #32b726;
-            color: white;
-          }
-        }
+        // &:nth-of-type(6) {
+        //   .ID {
+        //     background-color: #32b726;
+        //     color: white;
+        //   }
+        // }
 
         .ID,
         .name {
@@ -98,6 +98,12 @@
           text-overflow: ellipsis;
           display: block;
           height: max-content;
+        }
+
+        .shield {
+          width: 25px;
+          aspect-ratio: 1/1;
+          object-fit: contain;
         }
       }
     }
