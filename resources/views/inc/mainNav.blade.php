@@ -7,7 +7,7 @@
         <div class="menu">
             <div class="dropdown">
                 @if (!Auth::user())
-                    <a href="/#about" class="dropdown-link">
+                    <a href="#about" class="dropdown-link">
                         {{ __('nav.mainNav.whatAreWe') }}
                     </a>
                 @else
@@ -104,7 +104,7 @@
                     <div class="r-menu">
                         <div class="r-dropdown">
                             @if (!Auth::user())
-                                <a href="/#about" class="dropdown-link">
+                                <a href="#about" class="dropdown-link">
                                     {{ __('nav.mainNav.whatAreWe') }}
                                 </a>
                             @else
@@ -136,7 +136,7 @@
                                 <a class="dropdown-item" href="https://www.facebook.com/MenagoLeague"
                                     target="_blank">{{ __('nav.mainNav.fbFanPage') }}</a>
                                 <a class="dropdown-item"
-                                    href="https://discord.com/invite/3Jkp3YcU?utm_source=Discord%20Widget&utm_medium=Connect"
+                                    href="https://discord.gg/w73uDUjse8"
                                     target="_blank">{{ __('nav.mainNav.discord') }} </a>
                                 <a class="dropdown-item" href="#admin">{{ __('nav.mainNav.admin') }}</a>
                             </div>
