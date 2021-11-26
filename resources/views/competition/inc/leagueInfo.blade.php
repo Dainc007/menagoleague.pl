@@ -11,7 +11,12 @@
             @foreach ($competition->leagueTables as $row)
                 <div class="item">
                     <div class="ID">{{ $i }}</div>
-                    <div class="name">{{ $row->team->name }}Manchester City</div>
+                    <div class="name">
+                        <a href="{{route('teams.show', $row->team->id)}}">
+<!--                            <img class="img img-fluid" src="{{env('TEAM_SRC')}}{{$row->team->sofifa_id}}.png">-->
+                            {{ $row->team->name }}
+                        </a>
+                    </div>
                 </div>
                 @php($i++)
             @endforeach
