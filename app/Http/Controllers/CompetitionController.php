@@ -68,7 +68,7 @@ class CompetitionController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Competition $competition)
-    {   dd($competition);
+    {
         return view('competition.show', [
             'competition' => $competition,
             'competitions'  => Competition::getActiveCompetitions(),

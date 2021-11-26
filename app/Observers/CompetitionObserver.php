@@ -11,7 +11,7 @@ class CompetitionObserver
     public function created(Competition $competition)
     {
         if ($competition->league->type === 'league') {
-            $teams = Team::where('league_id', $competition->league_id)->pluck('id');
+            $teams = Team::where('league_id', $competition->league_id)->where('is_active', true)->pluck('id');
 
             foreach ($teams as $team) {
                 (new LeagueTable([
