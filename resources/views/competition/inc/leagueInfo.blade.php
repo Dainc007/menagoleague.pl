@@ -9,15 +9,18 @@
             </div>
             @php($i = 1)
             @foreach ($competition->leagueTables as $row)
-                <div class="item">
-                    <div class="ID">{{ $i }}</div>
-                    <div class="name">
-                        <a href="{{ route('teams.show', $row->team->id) }}">
-                            <img class="shield" src="{{ env('TEAM_SRC') }}{{ $row->team->sofifa_id }}.png">
-                            {{ $row->team->name }}
-                        </a>
+
+               @if($row->team->user)
+                    <div class="item">
+                        <div class="ID">1</div>
+                        <div class="name">
+                            <a href="{{ route('teams.show', $row->team->id) }}">
+                                <img class="shield" src="{{ env('TEAM_SRC') }}{{ $row->team->sofifa_id }}.png">
+                                {{ $row->team->name }}
+                            </a>
+                        </div>
                     </div>
-                </div>
+                   @endif
                 @php($i++)
             @endforeach
         </div>
