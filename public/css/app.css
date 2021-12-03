@@ -13798,7 +13798,7 @@ a .btn-discord img {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: auto;
-  grid-template-areas: "advance" "mailbox" "notifications" "standings";
+  grid-template-areas: "mailbox" "advance" "notifications" "standings";
   gap: 2rem;
 }
 
@@ -14028,7 +14028,6 @@ a .btn-discord img {
   border-radius: 5px;
   padding: 20px;
   box-shadow: inset 0px -4px 5px rgba(176, 176, 176, 0.25);
-  height: 588px;
 }
 
 .team-mailbox-date {
@@ -14071,7 +14070,6 @@ a .btn-discord img {
 }
 
 .track-team-mailbox-messages {
-  height: 416px;
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
