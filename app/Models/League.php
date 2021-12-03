@@ -37,6 +37,18 @@ class League extends Model
         'league&cup' => 'league&cup',
     ];
 
+    public const AVAILABLE_LEAGUE_GOALS = [
+      'title', 'qualify', 'avoid_relegation'
+    ];
+
+    public const AVAILABLE_DOMESTIC_CUP_GOALS = [
+        'title', 'final', 'semi-final', '1/8', '1/16', '1/32', 'qualify'
+    ];
+
+    public const AVAILABLE_INTERNATIONAL_CUP_GOALS = [
+        'title', 'final', 'semi-final', '1/8', '1/16', '1/32', 'knockout-stage', 'group-stage'
+    ];
+
     public function teams()
     {
         return $this->hasMany(Team::class);
