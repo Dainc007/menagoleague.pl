@@ -56,4 +56,9 @@ class HomeController extends Controller
         return view('help.privacy');
     }
 
+    public function mg()
+    {
+
+    }
+
 }

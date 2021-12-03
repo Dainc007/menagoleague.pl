@@ -18,7 +18,7 @@
                             <td>Liczba zawodników: <span>{{ $team->players->count() }}</span>
                         </tr>
                         <tr>
-                            <td>Średnia wieku: <span>{{$team->getTeamPlayersAvg('age')}}</span></td>
+                            <td>Średnia wieku: <span>{{$team->getTeamPlayersAvg($team->id, 'age')}}</span></td>
                         </tr>
                         <tr>
                             <td>Stadion: <span> W budowie </span><small> (0 miejsc)</small></td>
@@ -59,7 +59,7 @@
                             <td>Liczba zawodników: <span>{{ $team->players->count() }}</span>
                         </tr>
                         <tr>
-                            <td>Średnia wieku: <span>Nieznana</span></td>
+                            <td>Średnia wieku: <span>{{$team->getTeamPlayersAvg($team->id, 'age')}}</span></td>
                         </tr>
                         <tr>
                             <td>Stadion: <span> W budowie </span><small> (0 miejsc)</small></td>

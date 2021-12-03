@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 class Team extends Model
 {
@@ -68,16 +69,15 @@ class Team extends Model
         return $this->fixtures = $this->fixturesAsHost->merge($this->fixturesAsVisitor);
     }
 
-    public function getTeamPlayersAvg($column)
-    {/*
+    public function getTeamPlayersAvg($id, $column)
+    {
         $array = [];
-        foreach($this->players() as $player)
+        foreach((Team::find($id))->players as $player)
         {
             $age = $player->playerDetails->age;
             $array[] = $age;
         }
-        $collection = collect($age);
-        return avg($collection);*/
-        return 10;
+        $collection = collect($array);
+        return round($collection->avg(), 1);
     }
 }
