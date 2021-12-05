@@ -14,6 +14,7 @@ class Sponsor extends Model
         'team_id',
         'company_id',
         'wage',
+        'sign_bonus',
         'league_bonus',
         'domestic_cup_bonus',
         'international_cup_bonus',
@@ -21,6 +22,29 @@ class Sponsor extends Model
         'domestic_cup_goal',
         'international_cup_goal',
         'expiration date',
-        'is_signed',
+        'status',
     ];
+
+    public const AVAILABLE_STATUSES = [
+        'pending', 'signed', 'rejected', 'expired'
+    ];
+
+    public const PARAMS = [
+        'minWage'     => 10000,
+        'signBonus'   => 50000,
+        'leagueBonus' => 100000,
+        'leagueGoal'  => 'avoid_relegation'
+    ];
+
+
+    public function company()
+    {
+        return $this->belongsTo(Company::class);
+    }
+
+
+    public function team()
+    {
+        return $this->belongsTo(Team::class);
+    }
 }

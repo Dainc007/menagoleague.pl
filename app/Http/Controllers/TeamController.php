@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Http\Services\JobApplicationService;
+use App\Http\Services\SponsorService;
 use App\Models\JobApplication;
 use App\Models\Player;
+use App\Models\Sponsor;
 use App\Models\Team;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -150,4 +152,17 @@ class TeamController extends Controller
         }
 
     }
+
+    public function sponsors()
+    {
+        return view('sponsor.index', [
+           'offers' => Auth::user()->team->sponsors->where('status', '=', 'pending')
+        ]);
+    }
+
+    public function signSponsorship()
+    {
+        return 'sponsorship';
+    }
+
 }

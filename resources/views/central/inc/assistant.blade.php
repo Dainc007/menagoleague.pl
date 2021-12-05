@@ -14,6 +14,23 @@
         <div class="central-team-mailbox-messages">
             <div class="track-team-mailbox-messages">
 
+
+                <!-- Sponsors -->
+                @if ($user->team && $user->team->players->count() > 0 && $user->team->hasActiveSponsor() == null)
+                    <div class="message-item">
+
+                        <div class="team-mailbox-date">{{ now() }}</div>
+
+                        <div class="message">
+                            Nasz klub nie ma aktywnej umowy sponsorskiej. Powinniśmy jak najszybciej podpisać umowę
+                            z którąś z dostępnych firm. Przygotowaliśmy dla Ciebie raport dostępnych ofert. Znajdziesz go
+                            <a href="{{route('team.sponsors')}}">TUTAJ</a>
+                        </div>
+
+                    </div>
+                @endif
+                <!-- Sponsor END -->
+
                 <!-- jobApplications -->
                 @if ($user->jobApplications->where('status', 'accepted') && $user->jobApplications->where('status', 'accepted')->count() > 0)
                     <div class="message-item">

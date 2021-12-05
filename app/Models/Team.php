@@ -80,4 +80,20 @@ class Team extends Model
         $collection = collect($array);
         return round($collection->avg(), 1);
     }
+
+
+    public function sponsors()
+    {
+        return $this->hasMany(Sponsor::class);
+    }
+
+    public function sponsorshipOffers()
+    {
+        return $this->sponsors()->where('status', 'pending')->get();
+    }
+
+    public function hasActiveSponsor()
+    {
+        return $this->sponsors()->where('status', 'active')->first();
+    }
 }

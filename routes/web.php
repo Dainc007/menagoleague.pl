@@ -87,6 +87,16 @@ Route::prefix('/users')->group(function () {
     });
 });
 
+//sponsors
+Route::prefix('teams')->group(function () {
+
+    Route::get('/sponsors', [App\Http\Controllers\TeamController::class, 'sponsors'])
+        ->name('team.sponsors');
+
+    Route::post('/sponsors/sign', [App\Http\Controllers\TeamController::class, 'signSponsorship'])
+        ->name('team.sponsors.sign');
+});
+
 Route::prefix('/teams')->group(function () {
 
     Route::get('/', [App\Http\Controllers\TeamController::class, 'index'])

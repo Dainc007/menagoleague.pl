@@ -18,4 +18,9 @@ class Company extends Model
     ];
 
     public const MIN_BUDGET = 1000000;
+
+    public function sponsors()
+    {
+        return $this->hasMany(Sponsor::class);
+    }
 }
