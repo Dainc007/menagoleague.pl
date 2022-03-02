@@ -243,3 +243,16 @@ Route::prefix('/admin')->group(function () {
 /* Notifications */
 Route::post('/notifications', [App\Http\Controllers\NotificationController::class, 'markAsSeen'])
     ->name('notifications.markAsSeen');
+
+/* VPG */
+Route::prefix('/vpg')->group(function () {
+    Route::get('/', [App\Http\Controllers\VpgController::class, 'index'])->name('vpg');
+    Route::get('/admin', [App\Http\Controllers\VpgController::class, 'admin'])->name('vpg.admin');
+    Route::post('/storeTyper', [App\Http\Controllers\VpgController::class, 'storeTyper'])->name('vpg.storeTyper');
+    Route::post('/storePrediction', [App\Http\Controllers\VpgController::class, 'storePrediction'])->name('vpg.storePrediction');
+
+});
+
+Route::post('/vpg/compare', [App\Http\Controllers\VpgController::class, 'compare'])->name('vpg.compare');
+
+
