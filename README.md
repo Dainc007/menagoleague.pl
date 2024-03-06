@@ -1,5 +1,6 @@
-# Welcome to www.Menagoleague.pl
-Menagoleague new version based on Laravel framework
+# Welcome to Menagoleague
+Menagoleague new version based on Laravel framework.
+Live version here http://www.menagoleague.heinze.com.pl/
 
 ## Table of contents
 * [General info](#general-info)
